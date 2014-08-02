@@ -21,13 +21,26 @@ import com.watabou.utils.Bundle;
 
 public class Statistics {
 	
+	/**Amount of gold collected */
 	public static int goldCollected;
+	
+	/**Deepest floor reached */
 	public static int deepestFloor;
+	
+	/**Total amount of enemies slained */
 	public static int enemiesSlain;
+	
+	/**Total food eaten */
 	public static int foodEaten;
+	
+	/**Total potions made */
 	public static int potionsCooked;
+	
+	/**Total piranhas killed */
 	public static int piranhasKilled;
+	
 	public static int nightHunt;
+	
 	public static int ankhsUsed;
 	
 	public static float duration;
@@ -37,21 +50,23 @@ public class Statistics {
 	
 	public static boolean amuletObtained = false;
 	
+	/**Resets the stats */
 	public static void reset() {
 		
+		//Resetting stats to 0
 		goldCollected	= 0;
 		deepestFloor	= 0;
 		enemiesSlain	= 0;
-		foodEaten		= 0;
+		foodEaten	= 0;
 		potionsCooked	= 0;
 		piranhasKilled	= 0;
-		nightHunt		= 0;	
-		ankhsUsed		= 0;
-		
+		nightHunt	= 0;	
+		ankhsUsed	= 0;
 		duration	= 0;
 		
 		qualifiedForNoKilling = false;
 		
+		//Set amuletObtained to false
 		amuletObtained = false;
 		
 	}
@@ -61,12 +76,13 @@ public class Statistics {
 	private static final String SLAIN		= "enemiesSlain";
 	private static final String FOOD		= "foodEaten";
 	private static final String ALCHEMY		= "potionsCooked";
-	private static final String PIRANHAS	= "priranhas";
+	private static final String PIRANHAS		= "priranhas";
 	private static final String NIGHT		= "nightHunt";
 	private static final String ANKHS		= "ankhsUsed";
-	private static final String DURATION	= "duration";
+	private static final String DURATION		= "duration";
 	private static final String AMULET		= "amuletObtained";
 	
+	/**Store in bundle */
 	public static void storeInBundle( Bundle bundle ) {
 		bundle.put( GOLD,		goldCollected );
 		bundle.put( DEEPEST,	deepestFloor );
@@ -80,6 +96,7 @@ public class Statistics {
 		bundle.put( AMULET,		amuletObtained );
 	}
 	
+	/**Restore from bundle */
 	public static void restoreFromBundle( Bundle bundle ) {
 		goldCollected	= bundle.getInt( GOLD );
 		deepestFloor	= bundle.getInt( DEEPEST );
