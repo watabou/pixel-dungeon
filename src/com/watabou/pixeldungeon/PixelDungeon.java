@@ -195,6 +195,17 @@ public class PixelDungeon extends Game {
 	public static boolean intro() {
 		return Preferences.INSTANCE.getBoolean( Preferences.KEY_INTRO, true );
 	}
+
+	public static void joystick( boolean value ) {
+		Preferences.INSTANCE.put( Preferences.KEY_JOYSTICK, value );
+		if (scene() instanceof GameScene) {
+			((GameScene)scene()).joystick( value );
+		}
+	}
+
+	public static boolean joystick () {
+		return Preferences.INSTANCE.getBoolean( Preferences.KEY_JOYSTICK, true );
+	}
 	
 	/*
 	 * <--- Preferences

@@ -40,6 +40,8 @@ public class WndSettings extends Window {
 	
 	private static final String TXT_BRIGHTNESS	= "Brightness";
 	
+	private static final String TXT_JOYSTICK	= "Joystick";
+
 	private static final String TXT_SWITCH_PORT	= "Switch to portrait";
 	private static final String TXT_SWITCH_LAND	= "Switch to landscape";
 	
@@ -119,6 +121,18 @@ public class WndSettings extends Window {
 		btnSound.setRect( 0, btnMusic.bottom() + GAP, WIDTH, BTN_HEIGHT );
 		btnSound.checked( PixelDungeon.soundFx() );
 		add( btnSound );
+
+		CheckBox btnJoystick = new CheckBox( TXT_JOYSTICK ) {
+			@Override
+			protected void onClick() {
+				super.onClick();
+				PixelDungeon.joystick( checked() );
+				Sample.INSTANCE.play( Assets.SND_CLICK );
+			}
+		};
+		btnJoystick.setRect( 0, btnSound.bottom() + GAP, WIDTH, BTN_HEIGHT );
+		btnJoystick.checked( PixelDungeon.joystick() );
+		add( btnJoystick );
 		
 		if (!inGame) {
 			
@@ -128,7 +142,7 @@ public class WndSettings extends Window {
 					PixelDungeon.landscape( !PixelDungeon.landscape() );
 				}
 			};
-			btnOrientation.setRect( 0, btnSound.bottom() + GAP, WIDTH, BTN_HEIGHT );
+			btnOrientation.setRect( 0, btnJoystick.bottom() + GAP, WIDTH, BTN_HEIGHT );
 			add( btnOrientation );
 			
 			resize( WIDTH, (int)btnOrientation.bottom() );
@@ -142,7 +156,7 @@ public class WndSettings extends Window {
 					PixelDungeon.brightness( checked() );
 				}
 			};
-			btnBrightness.setRect( 0, btnSound.bottom() + GAP, WIDTH, BTN_HEIGHT );
+			btnBrightness.setRect( 0, btnJoystick.bottom() + GAP, WIDTH, BTN_HEIGHT );
 			btnBrightness.checked( PixelDungeon.brightness() );
 			add( btnBrightness );
 			
