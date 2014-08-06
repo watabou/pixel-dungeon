@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.ui;
 
+import com.watabou.utils.PathFinder;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Gizmo;
 import com.watabou.noosa.Image;
@@ -30,6 +31,7 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -49,6 +51,7 @@ public class Toolbar extends Component {
 	private Tool btnWait;
 	private Tool btnSearch;
 	private Tool btnInfo;
+	private Tool btnExplore;
 	private Tool btnResume;
 	private Tool btnInventory;
 	private Tool btnQuick;
@@ -91,6 +94,54 @@ public class Toolbar extends Component {
 			}
 		} );
 		
+		add( btnExplore = new Tool( 127, 7, 21, 24 ) {
+			@Override
+			protected void onClick() {
+				Level level = Dungeon.level;
+				int cell = -1;
+				int dst = -1;
+				for (int i = 0; i < Level.LENGTH; i++) {
+					int type = Terrain.flags[level.map[i]];
+					if (!level.visited[i]
+						&& (type == Terrain.LOCKED_DOOR || (type & Terrain.PASSABLE) != 0 || (type & Terrain.AVOID) != 0)) {
+						for (int n : Level.NEIGHBOURS8) {
+							if (i+n < 0 || i+n >= Level.LENGTH)
+								continue;
+
+							if (level.visited[i+n] && (Terrain.flags[level.map[i+n]] & Terrain.PASSABLE) != 0) {
+								int size = PathFinder.find( Dungeon.hero.pos, i+n, level.passable ).size();
+								if (size < dst || dst == -1) {
+									cell = i+n;
+									dst = size;
+								}
+							}
+						}
+					}
+				}
+
+				if (cell == -1) {
+					for (int i = 0; i < Level.LENGTH; i++) {
+					if (!level.visited[i] && (Terrain.flags[level.map[i]] & Terrain.PASSABLE) != 0) {
+						for (int n : Level.NEIGHBOURS8) {
+							if (i+n < 0 || i+n >= Level.LENGTH)
+								continue;
+
+							if (level.visited[i+n] && level.map[i+n] == Terrain.LOCKED_DOOR) {
+								int size = PathFinder.find( Dungeon.hero.pos, i+n, level.passable ).size();
+								if (size < dst || dst == -1) {
+									cell = i+n;
+									dst = size;
+								}
+							}
+						}
+					}
+				}
+				}
+
+				GameScene.handleCell( cell );
+			}
+		} );
+
 		add( btnResume = new Tool( 61, 7, 21, 24 ) {
 			@Override
 			protected void onClick() {
@@ -131,6 +182,7 @@ public class Toolbar extends Component {
 		btnWait.setPos( x, y );
 		btnSearch.setPos( btnWait.right(), y );
 		btnInfo.setPos( btnSearch.right(), y );
+		btnExplore.setPos( btnInfo.right(), y );
 		btnResume.setPos( btnInfo.right(), y );
 		btnQuick.setPos( width - btnQuick.width(), y );
 		btnInventory.setPos( btnQuick.left() - btnInventory.width(), y );
@@ -151,6 +203,7 @@ public class Toolbar extends Component {
 		}
 		
 		btnResume.visible = Dungeon.hero.lastAction != null;
+		btnExplore.visible = !btnResume.visible;
 		
 		if (!Dungeon.hero.isAlive()) {
 			btnInventory.enable( true );
