@@ -98,47 +98,69 @@ public class Toolbar extends Component {
 			@Override
 			protected void onClick() {
 				Level level = Dungeon.level;
-				int cell = -1;
-				int dst = -1;
+				int[] cells = {-1, -1, -1};
+				int[] dst = {-1, -1, -1};
 				for (int i = 0; i < Level.LENGTH; i++) {
+					if (level.visited[i])
+						continue;
+
 					int type = Terrain.flags[level.map[i]];
-					if (!level.visited[i]
-						&& (type == Terrain.LOCKED_DOOR || (type & Terrain.PASSABLE) != 0 || (type & Terrain.AVOID) != 0)) {
+					if (type == Terrain.LOCKED_DOOR || (type & Terrain.PASSABLE) != 0) {
 						for (int n : Level.NEIGHBOURS8) {
-							if (i+n < 0 || i+n >= Level.LENGTH)
+							if (i+n < 0 || i+n >= Level.LENGTH || !level.visited[i+n])
 								continue;
 
-							if (level.visited[i+n] && (Terrain.flags[level.map[i+n]] & Terrain.PASSABLE) != 0) {
-								int size = PathFinder.find( Dungeon.hero.pos, i+n, level.passable ).size();
-								if (size < dst || dst == -1) {
-									cell = i+n;
-									dst = size;
+							if ((Terrain.flags[level.map[i+n]] & Terrain.PASSABLE) != 0) {
+								PathFinder.Path p = PathFinder.find( Dungeon.hero.pos, i+n, level.passable );
+								if (p == null)
+									continue;
+
+								int size = p.size();
+
+								if (size < dst[0] || dst[0] == -1) {
+									cells[0] = i+n;
+									dst[0] = size;
 								}
+							} else if (level.map[i+n] == Terrain.LOCKED_DOOR) {
+								PathFinder.Path p = PathFinder.find( Dungeon.hero.pos, i+n, level.passable );
+								if (p == null)
+									continue;
+
+								int size = p.size();
+
+								if (size < dst[1] || dst[1] == -1) {
+									cells[1] = i+n;
+									dst[1] = size;
+								}
+							}
+						}
+					} else if ((type & Terrain.AVOID) != 0) {
+						for (int n : Level.NEIGHBOURS8) {
+							if (i+n < 0 || i+n >= Level.LENGTH
+								|| !(level.visited[i+n] && (Terrain.flags[level.map[i+n]] & Terrain.PASSABLE) != 0))
+								continue;
+
+							PathFinder.Path p = PathFinder.find( Dungeon.hero.pos, i+n, level.passable );
+							if (p == null)
+								continue;
+
+							int size = p.size();
+
+							if (size < dst[2] || dst[2] == -1) {
+								cells[2] = i+n;
+								dst[2] = size;
 							}
 						}
 					}
 				}
 
-				if (cell == -1) {
-					for (int i = 0; i < Level.LENGTH; i++) {
-					if (!level.visited[i] && (Terrain.flags[level.map[i]] & Terrain.PASSABLE) != 0) {
-						for (int n : Level.NEIGHBOURS8) {
-							if (i+n < 0 || i+n >= Level.LENGTH)
-								continue;
+				for (int cell : cells) {
+					if (cell == -1)
+						continue;
 
-							if (level.visited[i+n] && level.map[i+n] == Terrain.LOCKED_DOOR) {
-								int size = PathFinder.find( Dungeon.hero.pos, i+n, level.passable ).size();
-								if (size < dst || dst == -1) {
-									cell = i+n;
-									dst = size;
-								}
-							}
-						}
-					}
+					GameScene.handleCell( cell );
+					break;
 				}
-				}
-
-				GameScene.handleCell( cell );
 			}
 		} );
 
