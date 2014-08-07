@@ -18,13 +18,21 @@
 package com.watabou.pixeldungeon.ui;
 
 import java.util.regex.Pattern;
+import java.util.List;
+import java.util.ArrayList;
 
 import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.ui.Component;
+import com.watabou.noosa.Gizmo;
+import com.watabou.input.Touchscreen.Touch;
+import com.watabou.noosa.TouchArea;
+import com.watabou.pixeldungeon.windows.WndLog;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.scenes.GameScene;
+
 import com.watabou.utils.Signal;
 
 public class GameLog extends Component implements Signal.Listener<String> {
@@ -34,7 +42,10 @@ public class GameLog extends Component implements Signal.Listener<String> {
 	private static final Pattern PUNCTUATION = Pattern.compile( ".*[.,;?! ]$" );
 	
 	private BitmapTextMultiline lastEntry;
+	private List<BitmapTextMultiline> entries = new ArrayList<BitmapTextMultiline> ();
 	private int lastColor;
+	private WndLog window;
+	private TouchArea hotArea;
 	
 	public GameLog() {
 		super();
@@ -46,6 +57,16 @@ public class GameLog extends Component implements Signal.Listener<String> {
 	public void newLine() {
 		lastEntry = null;
 	}
+
+	@Override
+	protected void createChildren() {
+		hotArea = new TouchArea( 0, 0, 0, 0 ) {
+			protected void onTouchUp( Touch touch ) {
+				GameScene.show( new WndLog (entries) );
+			}
+		};
+		add( hotArea );
+	}	
 
 	@Override
 	public void onSignal( String text ) {
@@ -84,12 +105,12 @@ public class GameLog extends Component implements Signal.Listener<String> {
 			lastEntry.measure();
 			lastEntry.hardlight( color );
 			lastColor = color;
+			entries.add ( lastEntry );
 			add( lastEntry );
-			
 		}
 		
 		if (length > MAX_MESSAGES) {
-			remove( members.get( 0 ) );
+			remove( entries.get(entries.size()-MAX_MESSAGES) );
 		}
 		
 		layout();
@@ -97,13 +118,26 @@ public class GameLog extends Component implements Signal.Listener<String> {
 	
 	@Override
 	protected void layout() {	
-		float pos = y;
+		float pos = bottom();
 		for (int i=length-1; i >= 0; i--) {
-			BitmapTextMultiline entry = (BitmapTextMultiline)members.get( i );
+			Gizmo item = members.get( i );
+			if (item == hotArea)
+				continue;
+
+			BitmapTextMultiline entry = (BitmapTextMultiline)item;
 			entry.x = x;
 			entry.y = pos - entry.height();
 			pos -= entry.height();
 		}
+
+		height = bottom ()-pos;
+		y = pos;
+
+		hotArea.active = visible;
+		hotArea.x = x;
+		hotArea.y = y;
+		hotArea.width = width;
+		hotArea.height = height;
 	}
 	
 	@Override

@@ -66,6 +66,7 @@ import com.watabou.pixeldungeon.ui.StatusPane;
 import com.watabou.pixeldungeon.ui.Toast;
 import com.watabou.pixeldungeon.ui.Toolbar;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.ui.Joystick;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndBag.Mode;
 import com.watabou.pixeldungeon.windows.WndGame;
@@ -109,6 +110,7 @@ public class GameScene extends PixelScene {
 	private Group statuses;
 	private Group emoicons;
 	
+	private Joystick joystick;
 	private Toolbar toolbar;
 	private Toast prompt;
 	
@@ -136,7 +138,7 @@ public class GameScene extends PixelScene {
 		
 		ripples = new Group();
 		terrain.add( ripples );
-		
+
 		tiles = new DungeonTilemap();
 		terrain.add( tiles );
 		
@@ -228,6 +230,12 @@ public class GameScene extends PixelScene {
 		log.camera = uiCamera;
 		log.setRect( 0, toolbar.top(), attack.left(),  0 );
 		add( log );
+
+		joystick = new Joystick ();
+		joystick.camera = uiCamera;
+		joystick.setPos(5, toolbar.top()-60);
+		joystick (PixelDungeon.joystick ());
+		add (joystick);
 		
 		if (Dungeon.depth < Statistics.deepestFloor) {
 			GLog.i( TXT_WELCOME_BACK, Dungeon.depth );
@@ -363,6 +371,10 @@ public class GameScene extends PixelScene {
 			fog.am = +1f;
 			fog.aa =  0f;
 		}
+	}
+
+	public void joystick( boolean value ) {
+		joystick.visible = value;
 	}
 	
 	private void addHeapSprite( Heap heap ) {

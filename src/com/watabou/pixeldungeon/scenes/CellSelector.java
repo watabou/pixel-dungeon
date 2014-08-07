@@ -19,10 +19,14 @@ package com.watabou.pixeldungeon.scenes;
 
 import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.TouchArea;
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.utils.GameMath;
 import com.watabou.utils.PointF;
+import com.watabou.utils.Point;
 
 public class CellSelector extends TouchArea {
 
@@ -31,6 +35,11 @@ public class CellSelector extends TouchArea {
 	public boolean enabled;
 	
 	private float dragThreshold;
+
+	private boolean pressed;
+	private float pressTime;
+	private boolean continuous;
+	private float continuousThreshold = 0.2f;
 	
 	public CellSelector( DungeonTilemap map ) {
 		super( map );
@@ -73,6 +82,7 @@ public class CellSelector extends TouchArea {
 	
 	@Override
 	protected void onTouchDown( Touch t ) {
+		continuous = false;
 
 		if (t != touch && another == null) {
 					
@@ -89,11 +99,80 @@ public class CellSelector extends TouchArea {
 			startZoom = camera.zoom;
 
 			dragging = false;
+		} else {
+			pressed = true;
 		}
+	}
+
+	@Override
+	public void update () {
+		if (!pressed || dragging || pinching)
+			return;
+
+		if (!(pressTime >= continuousThreshold)) {
+			pressTime += Game.elapsed;
+			return;
+		}
+
+		continuous = PixelDungeon.continuous();
+		if (!continuous)
+			return;
+
+		float size = DungeonTilemap.SIZE*camera.zoom;
+		PointF p = Dungeon.hero.sprite.worldToCamera( Dungeon.hero.pos );
+		Point hero = camera.cameraToScreen (p.x, p.y);
+		hero.x += size/2;
+		hero.y += size/2;
+		float x = Math.abs( touch.current.x - hero.x );
+		float y = Math.abs( touch.current.y - hero.y );
+		float x2 = 0, y2 = 0;
+		if (Math.abs(x) > Math.abs(y)) {
+			x2 += size;
+			y2 += (y*(x2/x));
+		} else {
+			y2 += size;
+			x2 += (x*(y2/y));
+		}
+
+		if (touch.current.x < hero.x)
+			x2 *= -1;
+
+		if (touch.current.y < hero.y)
+			y2 *= -1;
+
+		int cell = ((DungeonTilemap)target).screenToTile( hero.x + (int)x2, hero.y + (int)y2 );
+		if (!Dungeon.level.passable[cell]) {
+			int[] neighbours = {Dungeon.hero.pos+1,
+					Dungeon.hero.pos+1+Level.WIDTH,
+					Dungeon.hero.pos+Level.WIDTH,
+					Dungeon.hero.pos-1+Level.WIDTH,
+					Dungeon.hero.pos-1,
+					Dungeon.hero.pos-1-Level.WIDTH,
+					Dungeon.hero.pos-Level.WIDTH,
+					Dungeon.hero.pos+1-Level.WIDTH};
+
+			for (int i = 0; i < 8; i++) {
+				if (neighbours[i] != cell)
+					continue;
+
+				int next = (i+1 >= 8) ? 0 : i+1;
+				int prv = (i-1 < 0) ? 7 : i-1;
+
+				if (Dungeon.level.passable[neighbours[next]])
+					cell = neighbours[next];
+			
+				if (Dungeon.level.passable[neighbours[prv]])
+					cell = neighbours[prv];
+			}
+		}
+
+		select( cell );
 	}
 	
 	@Override
 	protected void onTouchUp( Touch t ) {
+		pressed = false;
+		pressTime = 0;
 		if (pinching && (t == touch || t == another)) {
 			
 			pinching = false;
@@ -117,6 +196,9 @@ public class CellSelector extends TouchArea {
 	@Override
 	protected void onDrag( Touch t ) {
 		 
+		if (continuous)
+			return;
+
 		camera.target = null;
 
 		if (pinching) {
