@@ -40,15 +40,12 @@ public class Affection extends Glyph {
 
 		int level = (int)GameMath.gate( 0, armor.level, 6 );
 		
-		if (Level.adjacent( attacker.pos, defender.pos ) && Random.Int( level / 2 + 5 ) >= 4) {
+		if (Level.adjacent( attacker.pos, defender.pos ) && Random.Int(10) + level >= 8) {
 			
-			int duration = Random.IntRange( 2, 5 );
+			int duration = Random.IntRange( 1, 3 );
 			
 			Buff.affect( attacker, Charm.class, Charm.durationFactor( attacker ) * duration );
 			attacker.sprite.centerEmitter().start( Speck.factory( Speck.HEART ), 0.2f, 5 );
-			
-			Buff.affect( defender, Charm.class, Random.Float( Charm.durationFactor( defender ) * duration / 2, duration ) );
-			defender.sprite.centerEmitter().start( Speck.factory( Speck.HEART ), 0.2f, 5 );
 		}
 		
 		return damage;

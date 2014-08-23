@@ -36,7 +36,7 @@ public class Bounce extends Glyph {
 
 		int level = Math.max( 0, armor.level );
 		
-		if (Level.adjacent( attacker.pos, defender.pos ) && Random.Int( level + 5) >= 4) {
+		if (Level.adjacent( attacker.pos, defender.pos ) && Random.Int( 10 ) + level >= 8) {
 			
 			for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
 				int ofs = Level.NEIGHBOURS8[i];
@@ -47,7 +47,7 @@ public class Bounce extends Glyph {
 						Actor.addDelayed( new Pushing( attacker, attacker.pos, newPos ), -1 );
 						
 						attacker.pos = newPos;
-						// Вот это вот криво :(
+						// пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ :(
 						if (attacker instanceof Mob) {
 							Dungeon.level.mobPress( (Mob)attacker );
 						} else {

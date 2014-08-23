@@ -27,6 +27,7 @@ import com.watabou.pixeldungeon.effects.particles.SnowParticle;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.armor.Armor.Glyph;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 import com.watabou.utils.Random;
@@ -42,14 +43,12 @@ public class AntiEntropy extends Glyph {
 
 		int level = Math.max( 0, armor.level );
 		
-		if (Level.adjacent( attacker.pos, defender.pos ) && Random.Int( level + 6 ) >= 5) {
+		if (Level.adjacent( attacker.pos, defender.pos ) && Random.Int( 10 ) + level >= 8) {
 			
 			Buff.prolong( attacker, Frost.class, Frost.duration( attacker ) * Random.Float( 1f, 1.5f ));
 			CellEmitter.get( attacker.pos ).start( SnowParticle.FACTORY, 0.2f, 6 );
 			
-			Buff.affect( defender, Burning.class ).reignite( defender );
-			defender.sprite.emitter().burst( FlameParticle.FACTORY, 5 );
-
+			defender.damage( Random.IntRange( 1, defender.HT / 10 ), this );
 		}
 		
 		return damage;
