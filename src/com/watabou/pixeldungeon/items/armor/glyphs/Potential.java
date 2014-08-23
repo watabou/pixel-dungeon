@@ -40,11 +40,11 @@ public class Potential extends Glyph {
 
 		int level = Math.max( 0, armor.level );
 		
-		if (Level.adjacent( attacker.pos, defender.pos ) && Random.Int( level + 7 ) >= 6) {
+		if (Level.adjacent( attacker.pos, defender.pos ) && Random.Int( 10 ) + level >= 9 ) {
 			
 			int dmg = Random.IntRange( 1, damage );
 			attacker.damage( dmg, LightningTrap.LIGHTNING );
-			dmg = Random.IntRange( 1, dmg );
+			dmg = Random.IntRange( 1, dmg / 2 );
 			defender.damage( dmg, LightningTrap.LIGHTNING );
 			
 			checkOwner( defender );

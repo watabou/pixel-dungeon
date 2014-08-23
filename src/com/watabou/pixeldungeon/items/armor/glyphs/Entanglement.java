@@ -41,7 +41,7 @@ public class Entanglement extends Glyph {
 
 		int level = Math.max( 0, armor.level );
 		
-		if (Random.Int( 4 ) == 0) {
+		if (Random.Int( 10 ) + level >= 8) {
 			
 			Buff.prolong( defender, Roots.class, 5 - level / 5 );
 			Buff.affect( defender, Earthroot.Armor.class ).level( 5 * (level + 1) );

@@ -43,7 +43,7 @@ public class Multiplicity extends Glyph {
 
 		int level = Math.max( 0, armor.level );
 		
-		if (Random.Int( level / 2 + 6 ) >= 5) {
+		if (Random.Int( 10 ) + level >= 8) {
 			
 			ArrayList<Integer> respawnPoints = new ArrayList<Integer>();
 			
@@ -60,7 +60,7 @@ public class Multiplicity extends Glyph {
 				GameScene.add( mob );
 				WandOfBlink.appear( mob, Random.element( respawnPoints ) );
 				
-				defender.damage( Random.IntRange( 1, defender.HT / 6 ), /*attacker*/ this );
+				defender.damage( Random.IntRange( 1, defender.HT / 10 ), /*attacker*/ this );
 				checkOwner( defender );
 			}
 			

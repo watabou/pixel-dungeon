@@ -38,25 +38,17 @@ public class Metabolism extends Glyph {
 	public int proc( Armor armor, Char attacker, Char defender, int damage) {
 
 		int level = Math.max( 0, armor.level );
-		if (Random.Int( level / 2 + 5 ) >= 4) {
+		if (Random.Int( 10 ) + level >= 8) {
+				
+			Hunger hunger = defender.buff( Hunger.class );
 			
-			int healing = Math.min( defender.HT - defender.HP, Random.Int( 1, defender.HT / 5 ) );
+			if (hunger != null) {
+				
+				hunger.satisfy( Hunger.STARVING / 6 );
+				BuffIndicator.refreshHero();
 
-			if (healing > 0) {
-				
-				Hunger hunger = defender.buff( Hunger.class );
-				
-				if (hunger != null && !hunger.isStarving()) {
-					
-					hunger.satisfy( -Hunger.STARVING / 10 );
-					BuffIndicator.refreshHero();
-					
-					defender.HP += healing;
-					defender.sprite.emitter().burst( Speck.factory( Speck.HEALING ), 1 );
-					defender.sprite.showStatus( CharSprite.POSITIVE, Integer.toString( healing ) );
-				}
+				defender.sprite.showStatus( CharSprite.POSITIVE, "sated" );
 			}
-
 		}
 		
 		return damage;

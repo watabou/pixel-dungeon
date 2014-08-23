@@ -48,7 +48,7 @@ public class Viscosity extends Glyph {
 		
 		int level = Math.max( 0, armor.level );
 		
-		if (Random.Int( level + 7 ) >= 6) {
+		if (Random.Int( 10 ) + level >= 9) {
 			
 			DeferedDamage debuff = defender.buff( DeferedDamage.class );
 			if (debuff == null) {
