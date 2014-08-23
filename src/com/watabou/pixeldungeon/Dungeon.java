@@ -118,7 +118,7 @@ public class Dungeon {
 	public static Hero hero;
 	public static Level level;
 	
-	// Eitherî Item or Class<? extends Item>
+	// Eitherï¿½ Item or Class<? extends Item>
 	public static Object quickslot;
 	
 	public static int depth;
@@ -298,7 +298,9 @@ public class Dungeon {
 	@SuppressWarnings("deprecation")
 	public static void switchLevel( final Level level, int pos ) {
 		
-		nightMode = new Date().getHours() < 7;
+		int hour = new Date().getHours();
+		nightMode = ( hour > 20 ) || ( hour < 7 );
+		//nightMode = true;
 		
 		Dungeon.level = level;
 		Actor.init();
