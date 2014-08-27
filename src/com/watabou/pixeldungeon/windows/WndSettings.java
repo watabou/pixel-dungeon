@@ -18,9 +18,11 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.CheckBox;
 import com.watabou.pixeldungeon.ui.RedButton;
@@ -28,20 +30,20 @@ import com.watabou.pixeldungeon.ui.Window;
 
 public class WndSettings extends Window {
 	
-	private static final String TXT_ZOOM_IN			= "+";
-	private static final String TXT_ZOOM_OUT		= "-";
-	private static final String TXT_ZOOM_DEFAULT	= "Default Zoom";
+	private static final String TXT_ZOOM_IN      = Game.getVar(R.string.WndSettings_ZoomIn);
+	private static final String TXT_ZOOM_OUT     = Game.getVar(R.string.WndSettings_ZoomOut);
+	private static final String TXT_ZOOM_DEFAULT = Game.getVar(R.string.WndSettings_ZoomDef);
 
-	private static final String TXT_SCALE_UP		= "Scale up UI";
+	private static final String TXT_SCALE_UP     = Game.getVar(R.string.WndSettings_ScaleUp);
 	
-	private static final String TXT_MUSIC	= "Music";
+	private static final String TXT_MUSIC        = Game.getVar(R.string.WndSettings_Music);
 	
-	private static final String TXT_SOUND	= "Sound FX";
+	private static final String TXT_SOUND        = Game.getVar(R.string.WndSettings_Sound);
 	
-	private static final String TXT_BRIGHTNESS	= "Brightness";
+	private static final String TXT_BRIGHTNESS   = Game.getVar(R.string.WndSettings_Brightness);
 	
-	private static final String TXT_SWITCH_PORT	= "Switch to portrait";
-	private static final String TXT_SWITCH_LAND	= "Switch to landscape";
+	private static final String TXT_SWITCH_PORT  = Game.getVar(R.string.WndSettings_SwitchPort);
+	private static final String TXT_SWITCH_LAND  = Game.getVar(R.string.WndSettings_SwitchLand);
 	
 	private static final int WIDTH		= 112;
 	private static final int BTN_HEIGHT	= 20;

@@ -18,7 +18,9 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Wandmaker;
 import com.watabou.pixeldungeon.items.Item;
@@ -32,13 +34,11 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndWandmaker extends Window {
 	
-	private static final String TXT_MESSAGE	= 
-		"Oh, I see you have succeeded! I do hope it hasn't troubled you too much. " +
-		"As I promised, you can choose one of my high quality wands.";
-	private static final String TXT_BATTLE		= "Battle wand";
-	private static final String TXT_NON_BATTLE	= "Non-battle wand";
-	
-	private static final String TXT_FARAWELL	= "Good luck in your quest, %s!";
+	private static final String TXT_MESSAGE	   = Game.getVar(R.string.WndWandmaker_Message);
+	private static final String TXT_BATTLE     = Game.getVar(R.string.WndWandmaker_Battle);
+	private static final String TXT_NON_BATTLE = Game.getVar(R.string.WndWandmaker_NonBattle);
+
+	private static final String TXT_FARAWELL   = Game.getVar(R.string.WndWandmaker_Farawell);
 	
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 18;

@@ -54,9 +54,9 @@ public class SurfaceScene extends PixelScene {
 	
 	private Camera viewport;
 	@Override
-	public void create() {
+	public void create(Game game) {
 		
-		super.create();
+		super.create(game);
 		
 		Music.INSTANCE.play( Assets.HAPPY, true );
 		Music.INSTANCE.volume( 1f );

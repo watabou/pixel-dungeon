@@ -18,9 +18,11 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -33,7 +35,7 @@ public class WndInfoCell extends Window {
 	
 	private static final int WIDTH = 120;
 	
-	private static final String TXT_NOTHING	= "There is nothing here.";
+	private static final String TXT_NOTHING	= Game.getVar(R.string.WndInfoCell_Nothing);
 	
 	public WndInfoCell( int cell ) {
 		

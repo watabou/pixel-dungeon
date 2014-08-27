@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.plants;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
@@ -28,12 +30,12 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Sorrowmoss extends Plant {
 
-	private static final String TXT_DESC = 
-		"A Sorrowmoss is a flower (not a moss) with razor-sharp petals, coated with a deadly venom.";
+	private static final String TXT_NAME = Game.getVar(R.string.Sorrowmoss_Name);
+	private static final String TXT_DESC = Game.getVar(R.string.Sorrowmoss_Desc);
 	
 	{
 		image = 2;
-		plantName = "Sorrowmoss";
+		plantName = TXT_NAME;
 	}
 	
 	@Override
@@ -56,9 +58,9 @@ public class Sorrowmoss extends Plant {
 	
 	public static class Seed extends Plant.Seed {
 		{
-			plantName = "Sorrowmoss";
+			plantName = TXT_NAME;
 			
-			name = "seed of " + plantName;
+			name = String.format(TXT_SEED, plantName);
 			image = ItemSpriteSheet.SEED_SORROWMOSS;
 			
 			plantClass = Sorrowmoss.class;

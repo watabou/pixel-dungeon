@@ -19,8 +19,10 @@ package com.watabou.pixeldungeon.items;
 
 import java.util.ArrayList;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.armor.Armor;
@@ -33,15 +35,15 @@ import com.watabou.pixeldungeon.windows.WndBag;
 
 public class ArmorKit extends Item {
 	
-	private static final String TXT_SELECT_ARMOR	= "Select an armor to upgrade";
-	private static final String TXT_UPGRADED		= "you applied the armor kit to upgrade your %s";
+	private static final String TXT_SELECT_ARMOR = Game.getVar(R.string.ArmorKit_SelectArmor);
+	private static final String TXT_UPGRADED     = Game.getVar(R.string.ArmorKit_Upgraded);
 	
 	private static final float TIME_TO_UPGRADE = 2;
 	
-	private static final String AC_APPLY = "APPLY";
+	private static final String AC_APPLY = Game.getVar(R.string.ArmorKit_ACAplly);
 	
 	{
-		name = "armor kit";
+		name = Game.getVar(R.string.ArmorKit_Name);
 		image = ItemSpriteSheet.KIT;
 		
 		unique = true;
@@ -107,10 +109,7 @@ public class ArmorKit extends Item {
 	
 	@Override
 	public String info() {
-		return
-			"Using this kit of small tools and materials anybody can transform any armor into an \"epic armor\", " +
-			"which will keep all properties of the original armor, but will also provide its wearer a special ability " +
-			"depending on his class. No skills in tailoring, leatherworking or blacksmithing are required.";
+		return Game.getVar(R.string.ArmorKit_Info);
 	}
 	
 	private final WndBag.Listener itemSelector = new WndBag.Listener() {

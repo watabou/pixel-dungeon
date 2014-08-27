@@ -19,6 +19,8 @@ package com.watabou.pixeldungeon.scenes;
 
 import java.util.HashMap;
 
+//import android.R;
+
 import com.watabou.input.Touchscreen;
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.BitmapTextMultiline;
@@ -50,26 +52,27 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndList;
 import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.pixeldungeon.windows.WndTitledMessage;
+import com.watabou.pixeldungeon.R;
 
 public class StartScene extends PixelScene {
 
 	private static final float BUTTON_HEIGHT	= 24;
 	private static final float GAP				= 2;
 	
-	private static final String TXT_TITLE	= "Select Your Hero";
+	private static String TXT_TITLE;
 	
-	private static final String TXT_LOAD	= "Load Game";
-	private static final String TXT_NEW		= "New Game";
+	private static String TXT_LOAD;
+	private static String TXT_NEW;
 	
-	private static final String TXT_ERASE		= "Erase current game";
-	private static final String TXT_DPTH_LVL	= "Depth: %d, level: %d";
+	private static String TXT_ERASE;
+	private static String TXT_DPTH_LVL;
 	
-	private static final String TXT_REALLY	= "Do you really want to start new game?";
-	private static final String TXT_WARNING	= "Your current game progress will be erased.";
-	private static final String TXT_YES		= "Yes, start new game";
-	private static final String TXT_NO		= "No, return to main menu";
+	private static String TXT_REALLY;
+	private static String TXT_WARNING;
+	private static String TXT_YES;
+	private static String TXT_NO;
 	
-	private static final String TXT_UNLOCK	= "To unlock this character class, slay the 3rd boss with any other class";
+	private static String TXT_UNLOCK;
 	
 	private float width;
 	private float height;
@@ -93,9 +96,19 @@ public class StartScene extends PixelScene {
 	public static HeroClass curClass;
 	
 	@Override
-	public void create() {
+	public void create(Game game) {
 		
-		super.create();
+		super.create(game);
+		TXT_TITLE    = game.getVar(R.string.StartScene_Title);
+		TXT_LOAD     = game.getVar(R.string.StartScene_Load);
+		TXT_NEW      = game.getVar(R.string.StartScene_New);
+		TXT_ERASE    = game.getVar(R.string.StartScene_Erase);
+		TXT_DPTH_LVL = game.getVar(R.string.StartScene_Depth);
+		TXT_REALLY   = game.getVar(R.string.StartScene_Really);
+		TXT_WARNING  = game.getVar(R.string.StartScene_Warning);
+		TXT_YES      = game.getVar(R.string.StartScene_Yes);
+		TXT_NO       = game.getVar(R.string.StartScene_No);
+		TXT_UNLOCK   = game.getVar(R.string.StartScene_Unlock);
 		
 		Badges.loadGlobal();
 		

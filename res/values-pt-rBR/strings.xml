@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+   <!--  GENERAL STRINGS VARIABLES  -->
+   <string name="app_name">Pixel Dungeon</string>
+
+
+   <!--  STRINGS OF TitleScene CLASS  -->
+   <string name="TitleScene_Play">Jogar</string>
+   <string name="TitleScene_Highscores">Rankings</string>
+   <string name="TitleScene_Badges">Conquistas</string>
+   <string name="TitleScene_About">Sobre</string>
+
+
+   <!--  STRINGS OF AboutScene CLASS  -->
+   <string name="AboutScene_Txt">Código &amp; Gráficos: Watabou\nMúsica: Cube_Code\n\nEste jogo foi inspirado por Brian Walker\'s Brogue. \nTente também em Windows, Mac OS ou Linux - é incrível! ;)\n\nPor Favor visite o site oficial para mais informações:</string>
+   <string name="AboutScene_Lnk">pixeldungeon.watabou.ru</string>
+   <string name="AboutScene_Translate">Tradução: rodriformiga</string>
+   <string name="AboutScene_TranslateLnk">rodriformiga@gmail.com</string>
+   <string name="AboutScene_TranslateSnd">Enviar E-Mail</string>
+
+
+   <!--  STRINGS OF RankingsScene CLASS  -->
+   <string name="RankingsScene_Title">Melhores Rankings</string>
+   <string name="RankingsScene_Total">Total jogos iniciados: %d</string>
+   <string name="RankingsScene_NoGames">Nenhum jogo iniciado.</string>
+   <string name="RankingsScene_NoInfo">Sem informações adicionais!</string>
+
+
+   <!--  STRINGS OF BadgesScene CLASS  -->
+   <string name="BadgesScene_TxtTitle">Conquistas</string>
+
+
+   <!--  STRINGS OF StartScene CLASS  -->
+   <string name="StartScene_Title">Escolha seu Heroi</string>
+   <string name="StartScene_Load">Carregar Jogo</string>
+   <string name="StartScene_New">Novo Jogo</string>
+   <string name="StartScene_Erase">Apagar jogo atual</string>
+   <string name="StartScene_Depth">Profundidade: %1$d, level: %2$d</string>
+   <string name="StartScene_Really">Você realmente quer começar um novo jogo?</string>
+   <string name="StartScene_Warning">O seu progresso no jogo atual será apagado.</string>
+   <string name="StartScene_Yes">Sim, iniciar novo jogo</string>
+   <string name="StartScene_No">Não, voltar ao menu principal</string>
+   <string name="StartScene_Unlock">Para desbloquear esta classe de personagem, mate o terceiro chefe com qualquer outra classe</string>
+
+
+   <!--  STRINGS OF InterLevelScene CLASS  -->
+   <string name="InterLevelScene_Descending">Descendo...</string>
+   <string name="InterLevelScene_Ascending">Subindo...</string>
+   <string name="InterLevelScene_Loading">Carregando...</string>
+   <string name="InterLevelScene_Resurrecting">Ressucitanco...</string>
+   <string name="InterLevelScene_Returning">Retornando...</string>
+   <string name="InterLevelScene_Falling">Caindo...</string>
+   <string name="InterLevelScene_FileNotFound">Arquivo não existe. Por alguma razão...</string>
+   <string name="InterLevelScene_ErrorGeneric">Algo está errado...</string>
+
+
+   <!--  STRINGS OF IntroScene CLASS  -->
+   <string name="IntroScene_Txt">Muitos heróis de todos os tipos se aventuraram na caverna antes de você. Alguns deles voltaram com tesouros e artefatos mágicos, mas nunca mais se ouviu falar na maioria deles. E nenhum deles conseguiu recuperar o Amuleto de Yendor, que dizem estar escondido nas profundezas do calabouço.\n\nVocê se considera pronto para o desafio? Mas o mais importante, você sente que a sorte sorri para você? Está na hora de iniciar a sua própria aventura!</string>
+
+
+   <!--  STRINGS OF AmuletScene CLASS  -->
+   <string name="AmuletScene_Exit">Vamos chamá-lo um dia</string>
+   <string name="AmuletScene_Stay">Eu não acabei ainda</string>
+   <string name="AmuletScene_Txt">Você finalmente segurou em suas mãos o Amuleto de Yendor. Usando o seu poder, você pode dominar o mundo ou trazer paz e prosperidade para as pessoas ou o que quiser. De qualquer forma, sua vida vai mudar para sempre e este jogo vai terminar aqui. Ou você pode continuar um mero mortal um pouco mais.</string>
+
+
+   <!--  STRINGS OF GameScene CLASS  -->
+   <string name="GameScene_Welcome">Bem-vindo ao nível %d de Pixel Dungeon!</string>
+   <string name="GameScene_WelcomeBack">Bem-vindo de volta ao nível %d de Pixel Dungeon!</string>
+   <string name="GameScene_NightMode">Seja cauteloso, pois o calabouço é ainda mais perigoso à noite!</string>
+   <string name="GameScene_Chasm">Seus passos ecoam através do calabouço.</string>
+   <string name="GameScene_Water">Você ouve o respingos de água ao seu redor.</string>
+   <string name="GameScene_Grass">O cheiro da vegetação está forte no ar.</string>
+   <string name="GameScene_Secrets">O ambiente sugere que este piso esconde muitos segredos.</string>
+
+
+   <!--  STRINGS OF Char CLASS  -->
+   <string name="Char_Name">mob</string>
+   <string name="Char_Hit">%1$s bateu em %2$s</string>
+   <string name="Char_Kill">%s matou você...</string>
+   <string name="Char_Defeat">%1$s derrotou %2$s</string>
+   <string name="Char_YouMissed">%1$s %2$s de seu ataque</string>
+   <string name="Char_SmbMissed">%1$s %2$s do ataque de %3$s</string>
+   <string name="Char_OutParalysis">A dor de %s causou paralisia</string>
+   <string name="Char_Dodged">esquivou-se</string>
+
+
+   <!--  STRINGS OF Hero CLASS  -->
+   <string name="Hero_Name">você</string>
+   <string name="Hero_Leave">Não é tão simples deixar Pixel Dungeon</string>
+   <string name="Hero_LevelUp">subiu de nível!</string>
+   <string name="Hero_NewLevel">Bem-vindo ao nível %d! Agora você está mais saudável e focado. É mais fácil para você acertar os inimigos e desviar de seus ataques.</string>
+   <string name="Hero_YouNowHave">Você agora tem %s</string>
+   <string name="Hero_SomethingElse">Há algo mais aqui</string>
+   <string name="Hero_LockedChest">Este baú está bloqueado e você não tem a chave para abri-lo</string>
+   <string name="Hero_LockedDoor">Você não tem uma chave correspondente</string>
+   <string name="Hero_NoticedSmth">Você notou algo</string>
+   <string name="Hero_Wait">...</string>
+   <string name="Hero_Search">procurar</string>
+   <string name="Hero_StaBurning">Você pegou Fogo!</string>
+   <string name="Hero_StaParalysis">Você foi paralisado!</string>
+   <string name="Hero_StaPoison">Você foi envenenado!</string>
+   <string name="Hero_StaOoze">Lodo tóxico queima a sua pele. Lave-se!</string>
+   <string name="Hero_StaRoots">Você não pode se mover!</string>
+   <string name="Hero_StaWeakness">Você está fraco!</string>
+   <string name="Hero_StaBlindness">Você está cego!</string>
+   <string name="Hero_StaFury">Você ficou furioso!</string>
+   <string name="Hero_StaCharm">Você foi encantado!</string>
+   <string name="Hero_StaCripple">Você está incapacitado!</string>
+   <string name="Hero_StaBleeding">Você está sangrando!</string>
+
+
+   <!--  STRINGS OF HeroClass CLASS  -->
+   <string name="HeroClass_War">guerreiro</string>
+   <string name="HeroClass_Mag">mago</string>
+   <string name="HeroClass_Rog">trapaceiro</string>
+   <string name="HeroClass_Hun">caçadora</string>
+   <string name="HeroClass_Class">classe</string>
+   <string-array name="HeroClass_WarPerks">
+       <item >Guerreiros começam com 11 pontos de força.</item>
+       <item >Guerreiros começam com uma única Espada Curta. Esta espada pode ser \"reforjada\" para se tranformar em outra arma.</item>
+       <item >Guerreiros são menos hábeis com armas de arremesso.</item>
+       <item >Qualquer pedaço de comida recupera um pouco de vida quando comidos.</item>
+       <item >Poções de Força são identificadas desde o início.</item>
+   </string-array>
+   <string-array name="HeroClass_MagPerks">
+       <item >Magos começam com uma única Varinha Míssel Mágico. Esta varinha pode ser \"desencantada\" para se tranformar em outra varinha.</item>
+       <item >Magos recarregam suas varinhas mais rápido.</item>
+       <item >Quando ingerido, qualquer pedaço de comida recupera 1 carga de todas as varinhas no inventário.</item>
+       <item >Magos podem usar varinhas como uma arma de combate.</item>
+       <item >Pergaminhos de Identificação são identificados desde o início.</item>
+   </string-array>
+   <string-array name="HeroClass_RogPerks">
+       <item >Trapaceiros começam com um Anel de Sombras +1.</item>
+       <item >Trapaceiros são identificados por um tipo de anel que usam.</item>
+       <item >Trapaceiros estão acostumados com armaduras leves, esquivando-se melhor, quando vestem armadura.</item>
+       <item >Trapaceiros são peritos na detecção de portas e armadilhas escondidas.</item>
+       <item >Trapaceiros podem ficar sem comida por mais tempo.</item>
+       <item >Pergaminhos de Mapeamento de Magia são identificados desde o início.</item>
+   </string-array>
+   <string-array name="HeroClass_HunPerks">
+       <item >Caçadoras começam com 15 pontos de vida.</item>
+       <item >Caçadoras começam com um único Bumerangue, mas ele é atualizável.</item>
+       <item >Caçadoras são peritas em armas de aremesso, e tem bonus de ataque quando usadas.</item>
+       <item >Caçadoras ganham mais vida a partir de gotas de orvalho.</item>
+       <item >Caçadoras podem sentir monstros por perto, mesmo que eles estejam escondidos atrás de obstáculos.</item>
+   </string-array>
+
+
+   <!--  STRINGS OF HeroSubClass CLASS  -->
+   <string name="HeroSubClass_NameGlad">gladiador</string>
+   <string name="HeroSubClass_DescGlad">Um ataque bem sucedido com arma branca permite que o _Gladiador_ inicie um combo, onde no próximo ataque causa mais danos</string>
+   <string name="HeroSubClass_NameBers">furia</string>
+   <string name="HeroSubClass_DescBers">Quando gravemente ferido, o _Furia_ entra em um estado de fúria selvagem aumentando significativamente seu potencial de dano.</string>
+   <string name="HeroSubClass_NameWarL">bruxo</string>
+   <string name="HeroSubClass_DescWarL">Depois de matar um inimigo o _Bruxo_ consome a sua alma. Ele cura as feridas e preenche sua fome.</string>
+   <string name="HeroSubClass_NameBatM">mago</string>
+   <string name="HeroSubClass_DescBatM">Ao lutar com uma varinha, o _Mago_ causa dano adicional, dependendo do número atual de cargas. Cada ataque bem sucedido restaura 1 carga para esta varinha.</string>
+   <string name="HeroSubClass_NameAssa">assassino</string>
+   <string name="HeroSubClass_DescAssa">Ao realizar um ataque surpresa, o _Assassino_ inflige danos adicionais ao seu alvo.</string>
+   <string name="HeroSubClass_NameFreR">corredor</string>
+   <string name="HeroSubClass_DescFreR">O _Corredor_ pode se mover quase duas vezes mais rápido do que a maioria dos monstros. Quando ele estiver em correndo, é muito mais difícil de acertá-lo. Para isso, ele deve estar livre e não ficar com fome.</string>
+   <string name="HeroSubClass_NameSnip">atirador</string>
+   <string name="HeroSubClass_DescSnip">_Atirador_ é capaz de detectar pontos fracos na armadura de um inimigo mais efetivamente quando estiver usando uma arma de mísseis.</string>
+   <string name="HeroSubClass_NameWard">guarda</string>
+   <string name="HeroSubClass_DescWard">Tendo uma forte ligação com as forças da natureza o _Guarda_ tem uma capacidade de conseguir gotas de orvalho e sementes de plantas. Também, pisar em grama alta concede um escudo temporário.</string>
+   <string name="HeroSubClass_SubClass">subClasse</string>
+
+
+   <!--  STRINGS OF Dungeon CLASS  -->
+   <string name="Dungeon_NoTips">O texto está indecifrável...</string>
+   <string name="Dungeon_DeadEnd">O que você está fazendo aqui?!</string>
+   <string-array name="Dungeon_Tips">
+       <item >Não superestime sua força, use armas e armaduras que você pode manipular.</item>
+       <item >Nem todas as portas do calabouço são visíveis à primeira vista. Se você está preso, procure por portas escondidas.</item>
+       <item >Lembre-se, que o aumento a sua força não é a única maneira de conseguir um equipamento melhor, você pode, para o outro lado diminuir a sua exigência de força com Pergaminhos de Atualização.</item>
+       <item >Você pode gastar o seu ouro em lojas em níveis mais profundos do calabouço. O primeiro fica no nível 6.</item>
+       <item >Cuidado... Váá!</item>
+       <item >Pixel-Mart - tudo que você precisa para a aventura de sucesso!</item>
+       <item >Identifique suas poções e pergaminhos assim que possível. Mas use-os apenas quando realmente precisar deles.</item>
+       <item >Estar com fome não faz mal, mas morrendo de fome, dói.</item>
+       <item >Um ataque surpresa tem uma melhor chance de acerto. Por exemplo, você pode emboscar o inimigo por trás de uma porta fechada quando você sabe que ele está te seguindo.</item>
+       <item >Não deixe que o Tengu saia!</item>
+       <item >Pixel-Mart. Gaste o dinheiro. Viva mais...</item>
+       <item >Quando você é atacado por vários monstros ao mesmo tempo, tente recuar para trás de uma porta.</item>
+       <item >Se você está queimando, você não pode apagar o fogo com água quando estiver levitando.</item>
+       <item >Não há sentido em possuir mais de um Ankh ao mesmo tempo, porque você vai perdê-los caso ressuscitar.</item>
+       <item >Perigo! Máquinas pesadas podem causar lesões, perda de membros ou morte!</item>
+       <item >Pixel-Mart. A vida mais segura no calabouço.</item>
+       <item >Quando você atualiza uma arma encantada, há uma chance de destruir esse encantamento.</item>
+       <item >Em um poço de Transmutação você pode obter um item que não pode ser obtido de outra forma.</item>
+       <item >A única maneira de encantar a arma é atualizá-la com um upgrade de Pergaminho de Arma.</item>
+       <item >Nenhuma arma é permitida na presença de Vossa Majestade!</item>
+       <item >Pixel-Mart. Preços especiais para caçadores de demônios!</item>
+       <item >O texto está escrito em linguagem demoníaca.</item>
+       <item >O texto está escrito em linguagem demoníaca.</item>
+       <item >O texto está escrito em linguagem demoníaca.</item>
+   </string-array>
+
+
+   <!--  STRINGS OF Badges CLASS  -->
+   <string name="Badges_MonsterSlain1">10 inimigos mortos</string>
+   <string name="Badges_MonsterSlain2">50 inimigos mortos</string>
+   <string name="Badges_MonsterSlain3">150 inimigos mortos</string>
+   <string name="Badges_MonsterSlain4">250 inimigos mortos</string>
+   <string name="Badges_GoldColleted1">100 ouro coletado</string>
+   <string name="Badges_GoldColleted2">500 ouro coletado</string>
+   <string name="Badges_GoldColleted3">2500 ouro coletado</string>
+   <string name="Badges_GoldColleted4">7500 ouro coletado</string>
+   <string name="Badges_LevelReached1">Level 6 conquistado</string>
+   <string name="Badges_LevelReached2">Level 12 conquistado</string>
+   <string name="Badges_LevelReached3">Level 18 conquistado</string>
+   <string name="Badges_LevelReached4">Level 24 conquistado</string>
+   <string name="Badges_AllPotions">Todas as Poções identificadas</string>
+   <string name="Badges_AllScrolls">Todos os Pergaminhos identificados</string>
+   <string name="Badges_AllRings">Todos os anéis identificados</string>
+   <string name="Badges_AllWands">Todas as varinhas identificadas</string>
+   <string name="Badges_AllItems">Todas as Poções, Pergaminhos, Anéis &amp; Varinhas Identificados</string>
+   <!-- <string name="Badges_BagSeed"></string> -->
+   <!-- <string name="Badges_BagSroll"></string> -->
+   <!-- <string name="Badges_BagWand"></string> -->
+   <string name="Badges_AllBags">Todos os sacos comprados</string>
+   <string name="Badges_DeathFire">Morto pelo Fogo</string>
+   <string name="Badges_DeathPoison">Morto por Envenenamento</string>
+   <string name="Badges_DeathGas">Morto por Gás Tóxico</string>
+   <string name="Badges_DeathHunger">Morto de Fome</string>
+   <string name="Badges_DeathGlyph">Morto por Glyph</string>
+   <string name="Badges_DeathFalling">Morto por Cair</string>
+   <string name="Badges_Yasd">Morto por Fogo, Envenenamento, Gás Tóxico &amp; Fome</string>
+   <!-- <string name="Badges_BossSlain1War"></string> -->
+   <!-- <string name="Badges_BossSlain1Mag"></string> -->
+   <!-- <string name="Badges_BossSlain1Rog"></string> -->
+   <!-- <string name="Badges_BossSlain1Hun"></string> -->
+   <string name="Badges_BossSlain1">1º chefe morto</string>
+   <string name="Badges_BossSlain2">2º chefe morto</string>
+   <string name="Badges_BossSlain3">3º chefe morto</string>
+   <string name="Badges_BossSlain4">4º chefe morto</string>
+   <string name="Badges_BossSlain1All">1º chefe morto por Guerreiro, Mago, Trapaceiro &amp; Caçadoras</string>
+   <!-- <string name="Badges_BossSlain3Glad"></string> -->
+   <!-- <string name="Badges_BossSlain3Bers"></string> -->
+   <!-- <string name="Badges_BossSlain3WarL"></string> -->
+   <!-- <string name="Badges_BossSlain3BatM"></string> -->
+   <!-- <string name="Badges_BossSlain3FreR"></string> -->
+   <!-- <string name="Badges_BossSlain3Assa"></string> -->
+   <!-- <string name="Badges_BossSlain3Snip"></string> -->
+   <!-- <string name="Badges_BossSlain3Ward"></string> -->
+   <string name="Badges_BossSlain3All">3º chefe morto por Guerreiro, Fúria, Bruxo, Mago, Corredor, Atirador &amp; Guarda.</string>
+   <string name="Badges_RingHaggler">Anel de Haggler adquirido</string>
+   <string name="Badges_RingThorns">Anel de Thorns adquirido</string>
+   <string name="Badges_StrengthAttained1">13 pontos de Força adquirido</string>
+   <string name="Badges_StrengthAttained2">15 pontos de Força adquirido</string>
+   <string name="Badges_StrengthAttained3">17 pontos de Força adquirido</string>
+   <string name="Badges_StrengthAttained4">19 pontos de Força adquirido</string>
+   <string name="Badges_FoodEaten1">10 pedaços de comida comidos</string>
+   <string name="Badges_FoodEaten2">20 pedaços de comida comidos</string>
+   <string name="Badges_FoodEaten3">30 pedaços de comida comidos</string>
+   <string name="Badges_FoodEaten4">40 pedaços de comida comidos</string>
+   <!-- <string name="Badges_MasteryWar"></string> -->
+   <!-- <string name="Badges_MasteryMag"></string> -->
+   <!-- <string name="Badges_MasteryRog"></string> -->
+   <!-- <string name="Badges_MasteryHun"></string> -->
+   <string name="Badges_ItemLvl1">Item de Level 3 adquirido</string>
+   <string name="Badges_ItemLvl2">Item de Level 6 adquirido</string>
+   <string name="Badges_ItemLvl3">Item de Level 9 adquirido</string>
+   <string name="Badges_ItemLvl4">Item de Level 12 adquirido</string>
+   <!-- <string name="Badges_RareAlbino"></string> -->
+   <!-- <string name="Badges_RareBandit"></string> -->
+   <!-- <string name="Badges_RareShielded"></string> -->
+   <!-- <string name="Badges_RareSenior"></string> -->
+   <!-- <string name="Badges_RareAcidid"></string> -->
+   <string name="Badges_RareAll">Todos os monstros raros foram mortos</string>
+   <!-- <string name="Badges_VictoryWar"></string> -->
+   <!-- <string name="Badges_VictoryMag"></string> -->
+   <!-- <string name="Badges_VictoryRog"></string> -->
+   <!-- <string name="Badges_VictoryHun"></string> -->
+   <string name="Badges_Victory">Amuleto de Yendor adquirido</string>
+   <string name="Badges_VictoryAll">Amuleto de Yendor obtido por Guerreiro, Mago, Trapaceiro &amp; Caçadoras</string>
+   <string name="Badges_MasteryCombo">7-hit combo</string>
+   <string name="Badges_PotionsCooked1">3 poções realizadas</string>
+   <string name="Badges_PotionsCooked2">6 poções realizadas</string>
+   <string name="Badges_PotionsCooked3">9 poções realizadas</string>
+   <string name="Badges_PotionsCooked4">12 poções realizadas</string>
+   <string name="Badges_NoMonsterSlain">Level concluído sem matar nenhum mostro</string>
+   <string name="Badges_GrimWepon">Monstro morto por uma arma Grim</string>
+   <string name="Badges_Piranhas">6 piranhas mortas</string>
+   <string name="Badges_NightHunter">5 monstros mortos durante a noite</string>
+   <string name="Badges_GamesPlayed1">10 jogos iniciados</string>
+   <string name="Badges_GamesPlayed2">100 jogos iniciados</string>
+   <string name="Badges_GamesPlayed3">500 jogos iniciados</string>
+   <string name="Badges_GamesPlayed4">2000 jogos iniciados</string>
+   <string name="Badges_HappyEnd">Final Feliz</string>
+   <string name="Badges_Supporter">Obrigado pelo seu apoio!</string>
+
+
+   <!--  STRINGS OF Journal CLASS  -->
+   <string name="Journal_WellHealt">Bem de Vida</string>
+   <string name="Journal_WellAwareness">Bem de Consciência</string>
+   <string name="Journal_WellTransmut">Bem de transmutação</string>
+   <string name="Journal_Alchemy">Pote de Alquimia</string>
+   <string name="Journal_Garden">Jardin</string>
+   <string name="Journal_Statue">Estátua Animada</string>
+   <string name="Journal_Ghost">Fantasma Triste</string>
+   <string name="Journal_Wandmaker">Velho Fabricante de Varinhas</string>
+   <string name="Journal_Troll">Troll Ferreiro</string>
+   <string name="Journal_Imp">Ambicioso imp</string>
+
+
+   <!--  STRINGS OF ResultDescriptions CLASS  -->
+   <string name="ResultDescriptions_Mob">Morto por %1$s no nível %2$d</string>
+   <string name="ResultDescriptions_Boss">Morto pelo %1$s no nível %2$d</string>
+   <string name="ResultDescriptions_Wand">Morto por você mesmo %1$s no nível %2$d</string>
+   <string name="ResultDescriptions_Glyph">Morto Pelo %1$s no nível %2$d</string>
+   <string name="ResultDescriptions_Trap">Morto por descarga de %1$s no nível %2$d</string>
+   <string name="ResultDescriptions_Burning">Queimou até a morte no nível %d</string>
+   <string name="ResultDescriptions_Hunger">Passou fome até a morte no nível %d</string>
+   <string name="ResultDescriptions_Poison">Morreu por envenenamento no nível %d</string>
+   <string name="ResultDescriptions_Gas">Morreu por gás tóxico no nível %d</string>
+   <string name="ResultDescriptions_Bleeding">Sangrou até a morte no nível %d</string>
+   <string name="ResultDescriptions_Ooze">Morreu com lodo tóxico no nível %d</string>
+   <string name="ResultDescriptions_Fall">Morreu caindo no nível %d</string>
+   <string name="ResultDescriptions_Win">Você consquistou o Amuleto de Yendor</string>
+
+
+   <!--  STRINGS OF WndBlacksmith CLASS  -->
+   <string name="WndBlacksmith_Prompt">Ok, negócios são negócios, então o que eu posso fazer por você é reforjar 2 itens e transformá-los em um de melhor qualidade.</string>
+   <string name="WndBlacksmith_Select">Selecione um item para reforjar</string>
+   <string name="WndBlacksmith_Reforge">Reforjar</string>
+
+
+   <!--  STRINGS OF WndCatalogus CLASS  -->
+   <string name="WndCatalogus_Potions">Poções</string>
+   <string name="WndCatalogus_Scrolls">Pergaminhos</string>
+   <string name="WndCatalogus_Title">Catálogo</string>
+
+
+   <!--  STRINGS OF WndChooseWay CLASS  -->
+   <string name="WndChooseWay_Message">Qual caminho você vai seguir?</string>
+   <string name="WndChooseWay_Cancel">Vou decidir mais tarde</string>
+
+
+   <!--  STRINGS OF WndError CLASS  -->
+   <string name="WndError_Title">ERRO</string>
+
+
+   <!--  STRINGS OF WndGame CLASS  -->
+   <string name="WndGame_Settings">Configurações</string>
+   <string name="WndGame_Ranking">Rankings</string>
+   <string name="WndGame_Start">Iniciar Novo Jogo</string>
+   <string name="WndGame_menu">Menu Principal</string>
+   <string name="WndGame_Exit">Sair de Pixel Dungeon</string>
+   <string name="WndGame_Return">Voltar ao Jogo</string>
+
+
+   <!--  STRINGS OF WndHero CLASS  -->
+   <string name="WndHero_Stats">Stats</string>
+   <string name="WndHero_Buffs">Buffs</string>
+   <string name="WndHero_Exp">Experiência</string>
+   <string name="WndHero_Str">Força</string>
+   <string name="WndHero_Health">Vida</string>
+   <string name="WndHero_Gold">Ouro Coletado</string>
+   <string name="WndHero_Depth">Profund. máxima</string>
+   <string name="WndHero_StaTitle">Level %1$d %2$s</string>
+   <string name="WndHero_StaCatalogus">Catálogo</string>
+   <string name="WndHero_StaJournal">Jornal</string>
+
+
+   <!--  STRINGS OF WndImp CLASS  -->
+   <string name="WndImp_Message">Ah, Ohhh! Você é meu herói!\nVou te dar uma recompensa, mas eu não tenho dinheiro comigo agora.\n\nEspere!! Eu tenho algo melhor para você. Este meu anel é herança de família: meu avô tirou-o do dedo de um paladino morto.</string>
+   <string name="WndImp_Reward">Pegue o Anel</string>
+
+
+   <!--  STRINGS OF WndInfoCell CLASS  -->
+   <string name="WndInfoCell_Nothing">Não há nada aqui!</string>
+
+
+   <!--  STRINGS OF WndInfoItem CLASS  -->
+   <string name="WndInfoItem_Chest">Baú</string>
+   <string name="WndInfoItem_LockedChest">Baú Trancado</string>
+   <string name="WndInfoItem_CrystalChest">Baú de Cristal</string>
+   <string name="WndInfoItem_Tomb">Tumba</string>
+   <string name="WndInfoItem_Skeleton">Restos de Esqueletos</string>
+   <string name="WndInfoItem_WontKnow">Você não vai saber o que há dentro até abri-lo!</string>
+   <string name="WndInfoItem_NeedKey"> Mas, para abri-lo você precisa de uma chave de ouro.</string>
+   <string name="WndInfoItem_Inside">Você pode ver dentro do %s, mas para abrir o baú você precisa de uma chave de ouro.</string>
+   <string name="WndInfoItem_Owner">Esta antiga tumba pode conter algo de útil, mas seu dono certamente vai opor-se à verificação.</string>
+   <string name="WndInfoItem_Remains">Isso é tudo o que resta de um de seus antecessores. Talvez vale a pena verificar se há algo.</string>
+
+
+   <!--  STRINGS OF WndInfoMob CLASS  -->
+   <string name="WndInfoMob_Sleeping">\n\nEste %s está dormindo.</string>
+   <string name="WndInfoMob_Hunting">\n\nEste %s está caçando.</string>
+   <string name="WndInfoMob_Wandering">\n\nEste %s está distraído.</string>
+   <string name="WndInfoMob_Fleeing">\n\nEste %s está fugindo.</string>
+   <string name="WndInfoMob_Passive">\n\nO %s é passivo.</string>
+
+
+   <!--  STRINGS OF WndJournal CLASS  -->
+   <string name="WndJournal_Title">Jornal</string>
+
+
+   <!--  STRINGS OF WndRanking CLASS  -->
+   <string name="WndRanking_Error">Não foi possível carregar informações adicionais</string>
+   <string name="WndRanking_Stats">@string/WndHero_Stats</string>
+   <string name="WndRanking_Items">Itens</string>
+   <string name="WndRanking_Badges">Troféus</string>
+   <string name="WndRanking_StaTitle">@string/WndHero_StaTitle</string>
+   <string name="WndRanking_StaHealth">@string/WndHero_Health</string>
+   <string name="WndRanking_StaStr">@string/WndHero_Str</string>
+   <string name="WndRanking_StaDuration">Duração Jogo</string>
+   <string name="WndRanking_StaDepth">@string/WndHero_Depth</string>
+   <string name="WndRanking_StaEnemies">Mobs Mortos</string>
+   <string name="WndRanking_StaGold">@string/WndHero_Gold</string>
+   <string name="WndRanking_StaFood">Comida Usada</string>
+   <string name="WndRanking_StaAlchemy">Poções Feitas</string>
+   <string name="WndRanking_StaAnkhs">Ankhs Usados</string>
+
+
+   <!--  STRINGS OF WndResurrect CLASS  -->
+   <string name="WndResurrect_Message">Você morreu, porém ainda há esperanças e você recebeu uma nova chance de continuar. Deseja Continuar?</string>
+   <string name="WndResurrect_Yes">Sim, eu vou lutar!</string>
+   <string name="WndResurrect_No">Não, eu desisto.</string>
+
+
+   <!--  STRINGS OF WndSadGhost CLASS  -->
+   <string name="WndSadGhost_Rose">Sim! Sim!!! É isso aí! Por favor, dê-me! E você pode levar um desses itens, talvez eles serão úteis para você na sua jornada...</string>
+   <string name="WndSadGhost_Rat">Sim! Sou uma criatura feia e morta, mas finalmente posso descansar... Por favor, pegue um desses itens, talvez eles serão úteis para você na sua jornada ...</string>
+   <string name="WndSadGhost_Wepon">Arma do Fantasma</string>
+   <string name="WndSadGhost_Armor">Armadura do Fantasma</string>
+
+
+   <!--  STRINGS OF WndSettings CLASS  -->
+   <string name="WndSettings_ZoomIn">+</string>
+   <string name="WndSettings_ZoomOut">-</string>
+   <string name="WndSettings_ZoomDef">Zoom Default</string>
+   <string name="WndSettings_ScaleUp">Scale up UI</string>
+   <string name="WndSettings_Music">Musica</string>
+   <string name="WndSettings_Sound">Efeitos Sonoros</string>
+   <string name="WndSettings_Brightness">Brilho</string>
+   <string name="WndSettings_SwitchPort">Mudar para Retrato</string>
+   <string name="WndSettings_SwitchLand">Mudar para Paisagem</string>
+
+
+   <!--  STRINGS OF WndStory CLASS  -->
+   <string name="WndStory_Sewers">O Calabouço situa-se abaixo da cidade e seus níveis superiores constituem, na verdade, o sistema de esgoto da cidade. Sendo teoricamente uma parte da cidade, estes níveis não são perigosos. Ninguém vai chamá-lo de um lugar seguro, mas pelo menos você não vai precisar lidar com magia negra aqui.</string>
+   <string name="WndStory_Prision">Muitos anos atrás, uma prisão subterrânea foi construída aqui para os criminosos mais perigosos. Na época parecia uma idéia muito inteligente já que era praticamente impossível fugir. Mas logo veio a Peste Negra, deixando os prisioneiros e guardas Loucos. No final, a prisão foi abandonada, apesar de alguns presos ficaram trancados aqui.</string>
+   <string name="WndStory_Caves">As cavernas que se estendem para baixo da prisão abandonada são pouco povoadas. Eles foram muito fundo para explorar recursos para a cidade, pois eram muito pobres em minerais. No passado havia um posto avançado de comércio em algum lugar por aqui, na rota entre estes dois estados, mas desapareceu desde o declínio da Dwarven Metropolis. Somente gnolls onipresentes e animais subterrâneos moram aqui agora.</string>
+   <string name="WndStory_Metropolis">Dwarven Metropolis já foi a maior cidades-estado dos anões. Em seu auge o exército mecanizado de anões repeliu com sucesso a invasão dos antigos deuses e seu exército de demônios. Mas dizem que os guerreiros que retornam trouxeram sementes de corrupção com eles, e que a vitória foi o começo do fim para o reino subterrâneo.</string>
+   <string name="WndStory_Halls">No passado, estes níveis eram os arredores de Metropolis. Após a vitória cara da guerra com os antigos deuses, os anões estavam muito fracos para eliminá-los dos demônios restantes. Aos poucos, os demônios aumentaram seu controle sobre esse lugar e agora é chamado Demon Halls.\n\nMuitos poucos aventureiros já desceram até aqui...</string>
+
+
+   <!--  STRINGS OF WndTradeItem CLASS  -->
+   <string name="WndTradeItem_Sale">PARA VENDA: %1$s - %2$dg</string>
+   <string name="WndTradeItem_Buy">Compre por %dg</string>
+   <string name="WndTradeItem_Sell">Venda por %dg</string>
+   <string name="WndTradeItem_Sell1">Venda 1 por %dg</string>
+   <string name="WndTradeItem_SellAll">Venda rudo por %dg</string>
+   <string name="WndTradeItem_Cancel">Deixa pra lá</string>
+   <string name="WndTradeItem_Sold">Você vendeu seu %1$s por %2$dg</string>
+   <string name="WndTradeItem_Bought">Você comprou %1$s por %2$dg</string>
+
+
+   <!--  STRINGS OF WndWandmaker CLASS  -->
+   <string name="WndWandmaker_Message">Oh, eu vejo que você conseguiu! Eu espero que não tenha incomodado muito. Como eu prometi, você pode escolher uma das minhas varinhas de alta qualidade.</string>
+   <string name="WndWandmaker_Battle">Batalha de Varinha</string>
+   <string name="WndWandmaker_NonBattle">Sem Bataha de Varinhas</string>
+   <string name="WndWandmaker_Farawell">Boa sorte em sua busca, %s!</string>
+
+
+   <!--  STRINGS OF QuickSlot CLASS  -->
+   <string name="QuickSlot_SelectedItem">Selecione um item para o QuickSlot</string>
+
+
+   <!--  STRINGS OF Item CLASS  -->
+   <string name="Item_Name">smth</string>
+   <string name="Item_ACDrop">LARGAR</string>
+   <string name="Item_ACThrow">JOGAR</string>
+   <string name="Item_PackFull">Sua mochila está muito cheia para %s</string>
+   <string name="Item_DirThrow">Escoha a direção para jogar</string>
+
+
+   <!--  STRINGS OF EquipableItem CLASS  -->
+   <string name="EquipableItem_ACEquip">EQUIPAR</string>
+   <string name="EquipableItem_ACUnequip">DESEQUIPAR</string>
+
+
+   <!--  STRINGS OF KindOfWeapon CLASS  -->
+   <string name="KindOfWeapon_EquipCursed">você estremece com a aderencia involuntária reforçando seu %s</string>
+   <string name="KindOfWeapon_UnequipCursed">Você não pode remover %s amaldiçoado!</string>
+
+   <!--  STRINGS OF Gold CLASS  -->
+   <string name="Gold_Name">ouro</string>
+   <string name="Gold_Collect">Colete moedas de ouro para gastá-las mais tarde em uma loja.</string>
+   <string name="Gold_Info">Uma pilha de %d moedas de ouro.</string>
+   <string name="Gold_Info1">Uma moeda de ouro.</string>
+
+
+   <!--  STRINGS OF Amulet CLASS  -->
+   <string name="Amulet_Name">Amuleto de Yendor</string>
+   <string name="Amulet_ACEnd">FIM DO JOGO</string>
+   <string name="Amulet_Info">O Amuleto de Yendor é o mais poderoso artefato conhecido de origem desconhecida. Diz-se que o amuleto é capaz de cumprir qualquer desejo se a força de vontade do seu dono é forte o suficiente para \"convencer\" a fazê-lo.</string>
+
+
+   <!--  STRINGS OF Ankh CLASS  -->
+   <string name="Ankh_Name">Ankh</string>
+   <string name="Ankh_Info">O antigo símbolo da imortalidade concede uma capacidade de voltar à vida após a morte. Após a ressurreição todos os itens não equipados são perdidos.</string>
+
+
+   <!--  STRINGS OF ArmorKit CLASS  -->
+   <string name="ArmorKit_Name">kit armadura</string>
+   <string name="ArmorKit_ACAplly">APLICAR</string>
+   <string name="ArmorKit_Info">Usando este kit de pequenas ferramentas e materiais qualquer um pode transformar qualquer armadura em uma "Armadura Épica", que irá manter todas as propriedades da armadura original e também irá fornecer seu portador uma habilidade especial conforme sua classe. Nenhuma habilidade em costura, trabalho do couro ou de ferreiro são necessárias.</string>
+   <string name="ArmorKit_SelectArmor">Selecione uma armadura para atualizar</string>
+   <string name="ArmorKit_Upgraded">você aplicou o kit armadura para atualizar seu %s</string>
+
+
+   <!--  STRINGS OF Dewdrop CLASS  -->
+   <string name="Dewdrop_Name">gota de orvalho</string>
+   <string name="Dewdrop_Info">Uma gota cristalina.</string>
+
+
+   <!--  STRINGS OF DewVial CLASS  -->
+   <string name="DewVial_Name">frasco de orvalho</string>
+   <string name="DewVial_ACDRINK">TOMAR</string>
+   <string name="DewVial_Info">Você pode armazenar o excesso de orvalho neste pequeno vaso para beber mais tarde. Se o frasco estiver cheio, em um momento de perigo mortal o orvalho será consumido automaticamente.</string>
+   <string name="DewVial_AutoDrink">O frasco de orvalho foi esvaziado para curar suas feridas.</string>
+   <string name="DewVial_Collected">Você coletou uma gota de orvalho em seu frasco de orvalho.</string>
+   <string name="DewVial_Full">Seu frasco de orvalho está cheio!</string>
+   <string name="DewVial_Empty">Seu frasco de orvalho está vazio!</string>
+
+
+   <!--  STRINGS OF LloidsBeacon CLASS  -->
+   <string name="LloidsBeacon_Name">Farol Lloyd</string>
+   <string name="LloidsBeacon_ACSet">DEFINIR</string>
+   <string name="LloidsBeacon_ACReturn">RETORNAR</string>
+   <string name="LloidsBeacon_Info">O Farol Lloyd é um dispositivo mágico complicado, que lhe permite voltar a um lugar que você já esteve.</string>
+   <string name="LloidsBeacon_Preventing">Uma forte aura de magia impede voce de usar o Farol Lloyd.</string>
+   <string name="LloidsBeacon_Creatures">A aura psíquica de criaturas vizinhas imprede você de usar o Farol Lloyd.</string>
+   <string name="LloidsBeacon_Return">O Farol Lloyd definiu com sucesso sua posição atual, agora você poderá retornar aqui a qualquer momento.</string>
+   <string name="LloidsBeacon_Set">\n\nEste Farol foi definido em algum lugar do nível %d de Pixel Dungeon.</string>
+
+
+   <!--  STRINGS OF Stylus CLASS  -->
+   <string name="Stylus_Name">caneta arcano</string>
+   <string name="Stylus_ACInscribe">ESCREVER</string>
+   <string name="Stylus_Info">Esta caneta arcana é feita de uma pedra muito escura e dura. Através dela você pode escrever um hieróglifo mágico na sua armadura, porém não poderá determinar qual o poder do hieróglifo. A predra irá escolher o poder por você!</string>
+   <string name="Stylus_SelectArmor">Selecione a armadura que deseja escrever</string>
+   <string name="Stylus_Inscribed">você escreveu o %1$s em seu %2$s</string>
+
+
+   <!--  STRINGS OF TomeOfMastery CLASS  -->
+   <string name="TomeOfMastery_Name">Tome of Mastery</string>
+   <string name="TomeOfMastery_ACRead">LER</string>
+   <string name="TomeOfMastery_Info">Este livro de couro desgastado não é tão grosso, mas você se sente de alguma forma, que você pode descobrir muito, lendo ele. Lembre-se que a leitura deste livro pode exigir algum tempo.</string>
+   <string name="TomeOfMastery_Blinded">Você não pode ler enquanto estiver cego</string>
+
+
+   <!--  STRINGS OF Torch CLASS  -->
+   <string name="Torch_Name">tocha</string>
+   <string name="Torch_ACLight">LUZ</string>
+   <string name="Torch_Info">É um item indispensável no The Demon Halls, que são notórios por sua falta de iluminação ambiente.</string>
+
+
+   <!--  STRINGS OF Plant CLASS  -->
+   <string name="Plant_ACPlant">PLANTAR</string>
+   <string name="Plant_Info">Jogue a semente de %1$s no lugar que você deseja planta-la.\n\n%2$s</string>
+   <string name="Plant_Seed">semente de %s</string>
+
+
+   <!--  STRINGS OF Blindweed CLASS  -->
+   <string name="Blindweed_Name">Blindweed</string>
+   <string name="Blindweed_Desc">Ao tocar uma Blindweed aparece um flash de luz cegante.</string>
+
+
+   <!--  STRINGS OF Earthroot CLASS  -->
+   <string name="Earthroot_Name">Earthroot</string>
+   <string name="Earthroot_Desc">Quando uma criatura toca uma Earthroot, suas raízes criam uma espécie de armadura natural ao seu redor.</string>
+   <string name="Earthroot_Buff">Armadura de Ervas</string>
+
+
+   <!--  STRINGS OF Fadeleaf CLASS  -->
+   <string name="Fadeleaf_Name">Fadeleaf</string>
+   <string name="Fadeleaf_Desc">Tocar uma Fadeleaf irá teleportar qualquer criatura para um lugar aleatório no nível atual.</string>
+
+
+   <!--  STRINGS OF Firebloom CLASS  -->
+   <string name="Firebloom_Name">Firebloom</string>
+   <string name="Firebloom_Desc">Quando algo toca uma Firebloom, ele explode em chamas.</string>
+
+
+   <!--  STRINGS OF Icecap CLASS  -->
+   <string name="Icecap_Name">Icecap</string>
+   <string name="Icecap_Desc">Ao tocar uma Icecap, ela excreta um pólen, que congela tudo em sua vizinhança.</string>
+
+
+   <!--  STRINGS OF Sorrowmoss CLASS  -->
+   <string name="Sorrowmoss_Name">Sorrowmoss</string>
+   <string name="Sorrowmoss_Desc">A Sorrowmoss é uma flor (não é um musgo) com afiadas pétalas, revestidas com um veneno mortal.</string>
+
+
+   <!--  STRINGS OF Sungrass CLASS  -->
+   <string name="Sungrass_Name">Sungrass</string>
+   <string name="Sungrass_Desc">Sungrass é conhecida por propriedades curativas da sua seiva.</string>
+   <string name="Sungrass_Buff">Cura de Ervas</string>
+
+</resources>

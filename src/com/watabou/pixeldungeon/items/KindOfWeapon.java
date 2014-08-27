@@ -19,7 +19,9 @@ package com.watabou.pixeldungeon.items;
 
 import java.util.ArrayList;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.ui.QuickSlot;
@@ -28,8 +30,8 @@ import com.watabou.utils.Random;
 
 public class KindOfWeapon extends EquipableItem {
 
-	private static final String TXT_EQUIP_CURSED	= "you wince as your grip involuntarily tightens around your %s";
-	private static final String TXT_UNEQUIP_CURSED	= "you can't remove cursed %s!";
+	private static final String TXT_EQUIP_CURSED	= Game.getVar(R.string.KindOfWeapon_EquipCursed);
+	private static final String TXT_UNEQUIP_CURSED	= Game.getVar(R.string.KindOfWeapon_UnequipCursed);
 	
 	protected static final float TIME_TO_EQUIP = 1f;
 	

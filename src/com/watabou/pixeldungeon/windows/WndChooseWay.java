@@ -18,6 +18,8 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -28,8 +30,8 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndChooseWay extends Window {
 	
-	private static final String TXT_MESSAGE	= "Which way will you follow?";
-	private static final String TXT_CANCEL	= "I'll decide later";
+	private static final String TXT_MESSAGE	= Game.getVar(R.string.WndChooseWay_Message);
+	private static final String TXT_CANCEL	= Game.getVar(R.string.WndChooseWay_Cancel);
 	
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 18;

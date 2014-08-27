@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.plants;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -31,12 +33,12 @@ import com.watabou.utils.Random;
 
 public class Blindweed extends Plant {
 
-	private static final String TXT_DESC = 
-		"Upon touching a Blindweed it perishes in a blinding flash of light.";
+	private static final String TXT_NAME = Game.getVar(R.string.Blindweed_Name);
+	private static final String TXT_DESC = Game.getVar(R.string.Blindweed_Desc);
 	
 	{
 		image = 3;
-		plantName = "Blindweed";
+		plantName = TXT_NAME;
 	}
 	
 	@Override
@@ -63,9 +65,9 @@ public class Blindweed extends Plant {
 	
 	public static class Seed extends Plant.Seed {
 		{
-			plantName = "Blindweed";
+			plantName = TXT_NAME;
 			
-			name = "seed of " + plantName;
+			name = String.format(TXT_SEED, plantName);
 			image = ItemSpriteSheet.SEED_BLINDWEED;
 			
 			plantClass = Blindweed.class;

@@ -18,7 +18,9 @@
 package com.watabou.pixeldungeon.plants;
 
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.effects.CellEmitter;
@@ -30,13 +32,12 @@ import com.watabou.utils.Bundle;
 
 public class Earthroot extends Plant {
 
-	private static final String TXT_DESC = 
-		"When a creature touches an Earthroot, its roots " +
-		"create a kind of natural armor around it.";
+	private static final String TXT_NAME = Game.getVar(R.string.Earthroot_Name);
+	private static final String TXT_DESC = Game.getVar(R.string.Earthroot_Desc);
 	
 	{
 		image = 5;
-		plantName = "Earthroot";
+		plantName = TXT_NAME;
 	}
 	
 	@Override
@@ -60,9 +61,9 @@ public class Earthroot extends Plant {
 	
 	public static class Seed extends Plant.Seed {
 		{
-			plantName = "Earthroot";
+			plantName = TXT_NAME;
 			
-			name = "seed of " + plantName;
+			name = String.format(TXT_SEED, plantName);
 			image = ItemSpriteSheet.SEED_EARTHROOT;
 			
 			plantClass = Earthroot.class;
@@ -120,7 +121,7 @@ public class Earthroot extends Plant {
 		
 		@Override
 		public String toString() {
-			return "Herbal armor";
+			return Game.getVar(R.string.Earthroot_Buff);
 		}
 		
 		private static final String POS		= "pos";

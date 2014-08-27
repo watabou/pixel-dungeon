@@ -17,15 +17,17 @@
  */
 package com.watabou.pixeldungeon.items;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 
 public abstract class EquipableItem extends Item {
 
-	public static final String AC_EQUIP		= "EQUIP";
-	public static final String AC_UNEQUIP	= "UNEQUIP";
+	public static final String AC_EQUIP		= Game.getVar(R.string.EquipableItem_ACEquip);
+	public static final String AC_UNEQUIP	= Game.getVar(R.string.EquipableItem_ACUnequip);
 	
 	@Override
 	public void execute( Hero hero, String action ) {

@@ -57,9 +57,9 @@ public class PixelScene extends Scene {
 	public static BitmapText.Font font3x;
 	
 	@Override
-	public void create() {
+	public void create(Game game) {
 		
-		super.create();
+		super.create(game);
 		
 		GameScene.scene = null;
 		

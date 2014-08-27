@@ -18,6 +18,8 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Heap.Type;
 import com.watabou.pixeldungeon.items.Item;
@@ -28,22 +30,18 @@ import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndInfoItem extends Window {
-	
-	private static final String TXT_CHEST			= "Chest";
-	private static final String TXT_LOCKED_CHEST	= "Locked chest";
-	private static final String TXT_CRYSTAL_CHEST	= "Crystal chest";
-	private static final String TXT_TOMB			= "Tomb";
-	private static final String TXT_SKELETON		= "Skeletal remains";
-	private static final String TXT_WONT_KNOW		= "You won't know what's inside until you open it!";
-	private static final String TXT_NEED_KEY		= TXT_WONT_KNOW + " But to open it you need a golden key.";
-	private static final String TXT_INSIDE			= "You can see %s inside, but to open the chest you need a golden key.";
-	private static final String TXT_OWNER	= 
-		"This ancient tomb may contain something useful, " +
-		"but its owner will most certainly object to checking.";
-	private static final String TXT_REMAINS	= 
-		"This is all that's left from one of your predecessors. " +
-		"Maybe it's worth checking for any valuables.";
-	
+
+	private static final String TXT_CHEST			= Game.getVar(R.string.WndInfoItem_Chest);
+	private static final String TXT_LOCKED_CHEST	= Game.getVar(R.string.WndInfoItem_LockedChest);
+	private static final String TXT_CRYSTAL_CHEST	= Game.getVar(R.string.WndInfoItem_CrystalChest);
+	private static final String TXT_TOMB			= Game.getVar(R.string.WndInfoItem_Tomb);
+	private static final String TXT_SKELETON		= Game.getVar(R.string.WndInfoItem_Skeleton);
+	private static final String TXT_WONT_KNOW		= Game.getVar(R.string.WndInfoItem_WontKnow);
+	private static final String TXT_NEED_KEY		= TXT_WONT_KNOW + Game.getVar(R.string.WndInfoItem_NeedKey);;
+	private static final String TXT_INSIDE			= Game.getVar(R.string.WndInfoItem_Inside);;
+	private static final String TXT_OWNER           = Game.getVar(R.string.WndInfoItem_Owner);
+	private static final String TXT_REMAINS	        = Game.getVar(R.string.WndInfoItem_Remains);
+
 	private static final float GAP	= 2;
 	
 	private static final int WIDTH = 120;
@@ -106,20 +104,19 @@ public class WndInfoItem extends Window {
 	}
 	
 	private void fillFields( int image, ItemSprite.Glowing glowing, int titleColor, String title, String info ) {
-		
 		IconTitle titlebar = new IconTitle();
 		titlebar.icon( new ItemSprite( image, glowing ) );
 		titlebar.label( Utils.capitalize( title ), titleColor );
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
-		
+
 		BitmapTextMultiline txtInfo = PixelScene.createMultiline( info, 6 );
 		txtInfo.maxWidth = WIDTH;
 		txtInfo.measure();
 		txtInfo.x = titlebar.left();
 		txtInfo.y = titlebar.bottom() + GAP;
 		add( txtInfo );
-		
+
 		resize( WIDTH, (int)(txtInfo.y + txtInfo.height()) );
 	}
 }

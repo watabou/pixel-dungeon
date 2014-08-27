@@ -25,6 +25,7 @@ import com.watabou.noosa.audio.Music;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Chrome;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.BadgesList;
 import com.watabou.pixeldungeon.ui.ScrollPane;
@@ -32,12 +33,13 @@ import com.watabou.pixeldungeon.ui.Window;
 
 public class BadgesScene extends PixelScene {
 	
-	private static final String TXT_TITLE = "Your Badges";
+	private static String TXT_TITLE;
 	
 	@Override
-	public void create() {
+	public void create(Game game) {
 		
-		super.create();
+		super.create(game);
+		TXT_TITLE = game.getVar(R.string.BadgesScene_TxtTitle);
 		
 		Music.INSTANCE.play( Assets.THEME, true );
 		Music.INSTANCE.volume( 1f );

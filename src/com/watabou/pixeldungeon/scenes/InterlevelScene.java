@@ -32,20 +32,21 @@ import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.windows.WndError;
 import com.watabou.pixeldungeon.windows.WndStory;
+import com.watabou.pixeldungeon.R;
 
 public class InterlevelScene extends PixelScene {
 
 	private static final float TIME_TO_FADE = 0.3f;
 	
-	private static final String TXT_DESCENDING	= "Descending...";
-	private static final String TXT_ASCENDING	= "Ascending...";
-	private static final String TXT_LOADING		= "Loading...";
-	private static final String TXT_RESURRECTING= "Resurrecting...";
-	private static final String TXT_RETURNING	= "Returning...";
-	private static final String TXT_FALLING		= "Falling...";
+	private static String TXT_DESCENDING;
+	private static String TXT_ASCENDING;
+	private static String TXT_LOADING;
+	private static String TXT_RESURRECTING;
+	private static String TXT_RETURNING;
+	private static String TXT_FALLING;
 	
-	private static final String ERR_FILE_NOT_FOUND	= "File not found. For some reason.";
-	private static final String ERR_GENERIC			= "Something went wrong..."	;	
+	private static String ERR_FILE_NOT_FOUND;
+	private static String ERR_GENERIC;	
 	
 	public static enum Mode {
 		DESCEND, ASCEND, CONTINUE, RESURRECT, RETURN, FALL
@@ -71,8 +72,16 @@ public class InterlevelScene extends PixelScene {
 	private String error = null;
 	
 	@Override
-	public void create() {
-		super.create();
+	public void create(Game game) {
+		super.create(game);
+		TXT_DESCENDING     = game.getVar(R.string.InterLevelScene_Descending);
+		TXT_ASCENDING      = game.getVar(R.string.InterLevelScene_Ascending);
+		TXT_LOADING        = game.getVar(R.string.InterLevelScene_Loading);
+		TXT_RESURRECTING   = game.getVar(R.string.InterLevelScene_Resurrecting);
+		TXT_RETURNING      = game.getVar(R.string.InterLevelScene_Returning);
+		TXT_FALLING        = game.getVar(R.string.InterLevelScene_Falling);
+		ERR_FILE_NOT_FOUND = game.getVar(R.string.InterLevelScene_FileNotFound);
+		ERR_GENERIC        = game.getVar(R.string.InterLevelScene_ErrorGeneric);
 		
 		String text = "";
 		switch (mode) {

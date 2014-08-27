@@ -19,8 +19,10 @@ package com.watabou.pixeldungeon.items;
 
 import java.util.ArrayList;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.ShaftParticle;
@@ -35,20 +37,20 @@ public class DewVial extends Item {
 
 	private static final int MAX_VOLUME	= 10;
 	
-	private static final String AC_DRINK	= "DRINK";
+	private static final String AC_DRINK	= Game.getVar(R.string.DewVial_ACDRINK);
 	
 	private static final float TIME_TO_DRINK = 1f;
 	
 	private static final String TXT_VALUE	= "%+dHP";
 	private static final String TXT_STATUS	= "%d/%d";
 	
-	private static final String TXT_AUTO_DRINK	= "The dew vial was emptied to heal your wounds.";
-	private static final String TXT_COLLECTED	= "You collected a dewdrop into your dew vial.";
-	private static final String TXT_FULL		= "Your dew vial is full!";
-	private static final String TXT_EMPTY		= "Your dew vial is empty!";
+	private static final String TXT_AUTO_DRINK	= Game.getVar(R.string.DewVial_AutoDrink);
+	private static final String TXT_COLLECTED	= Game.getVar(R.string.DewVial_Collected);
+	private static final String TXT_FULL		= Game.getVar(R.string.DewVial_Full);
+	private static final String TXT_EMPTY		= Game.getVar(R.string.DewVial_Empty);
 	
 	{
-		name = "dew vial";
+		name = Game.getVar(R.string.DewVial_Name);
 		image = ItemSpriteSheet.VIAL;
 		
 		defaultAction = AC_DRINK;
@@ -174,10 +176,7 @@ public class DewVial extends Item {
 	
 	@Override
 	public String info() {
-		return 
-			"You can store excess dew in this tiny vessel for drinking it later. " +
-			"If the vial is full, in a moment of deadly peril the dew will be " +
-			"consumed automatically.";
+		return Game.getVar(R.string.DewVial_Info);
 	}
 	
 	@Override

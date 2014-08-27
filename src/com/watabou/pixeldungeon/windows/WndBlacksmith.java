@@ -18,11 +18,13 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Chrome;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
 import com.watabou.pixeldungeon.items.Item;
@@ -46,13 +48,9 @@ public class WndBlacksmith extends Window {
 	private ItemButton btnItem2;
 	private RedButton btnReforge;
 	
-	private static final String TXT_PROMPT =
-		"Ok, a deal is a deal, dat's what I can do for you: I can reforge " +
-		"2 items and turn them into one of a better quality.";
-	private static final String TXT_SELECT =
-		"Select an item to reforge";
-	private static final String TXT_REFORGE =
-		"Reforge them";
+	private static final String TXT_PROMPT  = Game.getVar(R.string.WndBlacksmith_Prompt);
+	private static final String TXT_SELECT  = Game.getVar(R.string.WndBlacksmith_Select);
+	private static final String TXT_REFORGE = Game.getVar(R.string.WndBlacksmith_Reforge);
 	
 	public WndBlacksmith( Blacksmith troll, Hero hero ) {
 		

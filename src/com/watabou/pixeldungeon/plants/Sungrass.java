@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.plants;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.effects.CellEmitter;
@@ -30,11 +32,12 @@ import com.watabou.utils.Bundle;
 
 public class Sungrass extends Plant {
 
-	private static final String TXT_DESC = "Sungrass is renowned for its sap's healing properties.";
+	private static final String TXT_NAME = Game.getVar(R.string.Sungrass_Name);
+	private static final String TXT_DESC = Game.getVar(R.string.Sungrass_Desc);
 	
 	{
 		image = 4;
-		plantName = "Sungrass";
+		plantName = TXT_NAME;
 	}
 	
 	@Override
@@ -57,9 +60,9 @@ public class Sungrass extends Plant {
 	
 	public static class Seed extends Plant.Seed {
 		{
-			plantName = "Sungrass";
+			plantName = TXT_NAME;
 			
-			name = "seed of " + plantName;
+			name = String.format(TXT_SEED, plantName);
 			image = ItemSpriteSheet.SEED_SUNGRASS;
 			
 			plantClass = Sungrass.class;
@@ -103,7 +106,7 @@ public class Sungrass extends Plant {
 		
 		@Override
 		public String toString() {
-			return "Herbal healing";
+			return Game.getVar(R.string.Sungrass_Buff);
 		}
 		
 		private static final String POS	= "pos";

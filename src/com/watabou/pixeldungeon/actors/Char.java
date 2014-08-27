@@ -19,9 +19,11 @@ package com.watabou.pixeldungeon.actors;
 
 import java.util.HashSet;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
@@ -58,20 +60,20 @@ import com.watabou.utils.Random;
 
 public abstract class Char extends Actor {
 
-	protected static final String TXT_HIT		= "%s hit %s";
-	protected static final String TXT_KILL		= "%s killed you...";
-	protected static final String TXT_DEFEAT	= "%s defeated %s";
+	protected static final String TXT_HIT		= Game.getVar(R.string.Char_Hit);
+	protected static final String TXT_KILL		= Game.getVar(R.string.Char_Kill);
+	protected static final String TXT_DEFEAT	= Game.getVar(R.string.Char_Defeat);
 	
-	private static final String TXT_YOU_MISSED	= "%s %s your attack";
-	private static final String TXT_SMB_MISSED	= "%s %s %s's attack";
+	private static final String TXT_YOU_MISSED	= Game.getVar(R.string.Char_YouMissed);
+	private static final String TXT_SMB_MISSED	= Game.getVar(R.string.Char_SmbMissed);
 	
-	private static final String TXT_OUT_OF_PARALYSIS	= "The pain snapped %s out of paralysis";
+	private static final String TXT_OUT_OF_PARALYSIS = Game.getVar(R.string.Char_OutParalysis);
 	
 	public int pos = 0;
 	
 	public CharSprite sprite;
 	
-	public String name = "mob";
+	public String name = Game.getVar(R.string.Char_Name);
 	
 	public int HT;
 	public int HP;
@@ -218,7 +220,7 @@ public abstract class Char extends Actor {
 	}
 	
 	public String defenseVerb() {
-		return "dodged";
+		return Game.getVar(R.string.Char_Dodged);
 	}
 	
 	public int dr() {

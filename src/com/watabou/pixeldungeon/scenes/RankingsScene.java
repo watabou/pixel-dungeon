@@ -25,6 +25,7 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.Rankings;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
@@ -38,11 +39,11 @@ import com.watabou.pixeldungeon.windows.WndRanking;
 
 public class RankingsScene extends PixelScene {
 	
-	private static final String TXT_TITLE		= "Top Rankings";
-	private static final String TXT_TOTAL		= "Total games played: %d";
-	private static final String TXT_NO_GAMES	= "No games have been played yet.";
+	private static String TXT_TITLE;
+	private static String TXT_TOTAL;
+	private static String TXT_NO_GAMES;
 	
-	private static final String TXT_NO_INFO	= "No additional information";
+	private static String TXT_NO_INFO;
 	
 	private static final float ROW_HEIGHT	= 30;
 	private static final float GAP	= 4;
@@ -50,9 +51,13 @@ public class RankingsScene extends PixelScene {
 	private Archs archs;
 	
 	@Override
-	public void create() {
+	public void create(Game game) {
 		
-		super.create();
+		super.create(game);
+		TXT_TITLE    = game.getVar(R.string.RankingsScene_Title);
+		TXT_TOTAL    = game.getVar(R.string.RankingsScene_Total);
+		TXT_NO_GAMES = game.getVar(R.string.RankingsScene_NoGames);
+		TXT_NO_INFO  = game.getVar(R.string.RankingsScene_NoInfo);
 		
 		Music.INSTANCE.play( Assets.THEME, true );
 		Music.INSTANCE.volume( 1f );

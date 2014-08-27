@@ -33,6 +33,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.FogOfWar;
 import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -75,14 +76,14 @@ import com.watabou.utils.Random;
 
 public class GameScene extends PixelScene {
 	
-	private static final String TXT_WELCOME			= "Welcome to the level %d of Pixel Dungeon!";
-	private static final String TXT_WELCOME_BACK	= "Welcome back to the level %d of Pixel Dungeon!";
-	private static final String TXT_NIGHT_MODE		= "Be cautious, since the dungeon is even more dangerous at night!";
+	private static String TXT_WELCOME;
+	private static String TXT_WELCOME_BACK;
+	private static String TXT_NIGHT_MODE;
 	
-	private static final String TXT_CHASM	= "Your steps echo across the dungeon.";
-	private static final String TXT_WATER	= "You hear the water splashing around you.";
-	private static final String TXT_GRASS	= "The smell of vegetation is thick in the air.";
-	private static final String TXT_SECRETS	= "The atmosphere hints that this floor hides many secrets.";
+	private static String TXT_CHASM;
+	private static String TXT_WATER;
+	private static String TXT_GRASS;
+	private static String TXT_SECRETS;
 	
 	static GameScene scene;
 	
@@ -113,14 +114,23 @@ public class GameScene extends PixelScene {
 	private Toast prompt;
 	
 	@Override
-	public void create() {
+	public void create(Game game) {
 		
 		Music.INSTANCE.play( Assets.TUNE, true );
 		Music.INSTANCE.volume( 1f );
 		
 		PixelDungeon.lastClass( Dungeon.hero.heroClass.ordinal() );
 		
-		super.create();
+		super.create(game);
+		TXT_WELCOME      = game.getVar(R.string.GameScene_Welcome);
+		TXT_WELCOME_BACK = game.getVar(R.string.GameScene_WelcomeBack);
+		TXT_NIGHT_MODE   = game.getVar(R.string.GameScene_NightMode);
+		TXT_CHASM        = game.getVar(R.string.GameScene_Chasm);
+		TXT_WATER        = game.getVar(R.string.GameScene_Water);
+		TXT_GRASS        = game.getVar(R.string.GameScene_Grass);
+		TXT_SECRETS      = game.getVar(R.string.GameScene_Secrets);
+		
+		
 		Camera.main.zoom( defaultZoom + PixelDungeon.zoom() );
 		
 		scene = this;

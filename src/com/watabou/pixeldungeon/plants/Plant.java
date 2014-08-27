@@ -19,9 +19,11 @@ package com.watabou.pixeldungeon.plants;
 
 import java.util.ArrayList;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Barkskin;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -94,9 +96,9 @@ public class Plant implements Bundlable {
 	
 	public static class Seed extends Item {
 		
-		public static final String AC_PLANT	= "PLANT";
-		
-		private static final String TXT_INFO = "Throw this seed to the place where you want to grow %s.\n\n%s";
+		public static final String AC_PLANT	 = Game.getVar(R.string.Plant_ACPlant);
+		private static final String TXT_INFO = Game.getVar(R.string.Plant_Info);
+		protected static final String TXT_SEED = Game.getVar(R.string.Plant_Seed);
 		
 		private static final float TIME_TO_PLANT = 1f;
 		

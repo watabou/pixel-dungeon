@@ -19,7 +19,9 @@ package com.watabou.pixeldungeon.items;
 
 import java.util.ArrayList;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.particles.Emitter;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Light;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -28,12 +30,12 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Torch extends Item {
 
-	public static final String AC_LIGHT	= "LIGHT";
+	public static final String AC_LIGHT	= Game.getVar(R.string.Torch_ACLight);
 	
 	public static final float TIME_TO_LIGHT = 1;
 	
 	{
-		name = "torch";
+		name = Game.getVar(R.string.Torch_Name);
 		image = ItemSpriteSheet.TORCH;
 		
 		stackable = true;
@@ -88,7 +90,6 @@ public class Torch extends Item {
 	
 	@Override
 	public String info() {
-		return
-			"It's an indispensable item in The Demon Halls, which are notorious for their poor ambient lighting.";
+		return Game.getVar(R.string.Torch_Info);
 	}
 }

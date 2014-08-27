@@ -19,10 +19,12 @@ package com.watabou.pixeldungeon.items;
 
 import java.util.ArrayList;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -34,13 +36,13 @@ import com.watabou.utils.Random;
 
 public class Gold extends Item {
 
-	private static final String TXT_COLLECT	= "Collect gold coins to spend them later in a shop.";
-	private static final String TXT_INFO	= "A pile of %d gold coins. " + TXT_COLLECT;
-	private static final String TXT_INFO_1	= "One gold coin. " + TXT_COLLECT;
+	private static final String TXT_COLLECT	= Game.getVar(R.string.Gold_Collect);
+	private static final String TXT_INFO	= Game.getVar(R.string.Gold_Info)+" "+TXT_COLLECT;
+	private static final String TXT_INFO_1	= Game.getVar(R.string.Gold_Info1)+" "+TXT_COLLECT;
 	private static final String TXT_VALUE	= "%+d";
 	
 	{
-		name = "gold";
+		name = Game.getVar(R.string.Gold_Name);
 		image = ItemSpriteSheet.GOLD;
 		stackable = true;
 	}

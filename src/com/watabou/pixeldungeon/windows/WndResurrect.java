@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.windows;
 
 import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.Rankings;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -31,9 +32,9 @@ import com.watabou.pixeldungeon.ui.Window;
 
 public class WndResurrect extends Window {
 	
-	private static final String TXT_MESSAGE	= "You died, but you were given another chance to win this dungeon. Will you take it?";
-	private static final String TXT_YES		= "Yes, I will fight!";
-	private static final String TXT_NO		= "No, I give up";
+	private static final String TXT_MESSAGE	= Game.getVar(R.string.WndResurrect_Message);
+	private static final String TXT_YES		= Game.getVar(R.string.WndResurrect_Yes);
+	private static final String TXT_NO		= Game.getVar(R.string.WndResurrect_No);
 	
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 18;

@@ -17,13 +17,15 @@
  */
 package com.watabou.pixeldungeon.items;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Ankh extends Item {
 
 	{
 		stackable = true;
-		name = "Ankh";
+		name = Game.getVar(R.string.Ankh_Name);
 		image = ItemSpriteSheet.ANKH;
 	}
 	
@@ -39,9 +41,7 @@ public class Ankh extends Item {
 	
 	@Override
 	public String info() {
-		return 
-			"The ancient symbol of immortality grants an ability to return to life after death. " +
-			"Upon resurrection all non-equipped items are lost.";
+		return Game.getVar(R.string.Ankh_Info);
 	}
 	
 	@Override

@@ -17,9 +17,11 @@
  */
 package com.watabou.pixeldungeon.items;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -31,7 +33,7 @@ public class Dewdrop extends Item {
 	private static final String TXT_VALUE	= "%+dHP";
 	
 	{
-		name = "dewdrop";
+		name = Game.getVar(R.string.Dewdrop_Name);
 		image = ItemSpriteSheet.DEWDROP;
 		
 		stackable = true;
@@ -70,6 +72,6 @@ public class Dewdrop extends Item {
 	
 	@Override
 	public String info() {
-		return "A crystal clear dewdrop.";
+		return Game.getVar(R.string.Dewdrop_Info);
 	}
 }
