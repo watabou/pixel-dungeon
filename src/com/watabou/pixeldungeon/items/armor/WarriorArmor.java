@@ -18,8 +18,10 @@
 package com.watabou.pixeldungeon.items.armor;
 
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.tweeners.PosTweener;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -44,12 +46,12 @@ public class WarriorArmor extends ClassArmor {
 	private static int LEAP_TIME	= 1;
 	private static int SHOCK_TIME	= 3;
 	
-	private static final String AC_SPECIAL = "HEROIC LEAP"; 
+	private static final String AC_SPECIAL = Game.getVar(R.string.WarriorArmor_ACSpecial); 
 	
-	private static final String TXT_NOT_WARRIOR	= "Only warriors can use this armor!";
+	private static final String TXT_NOT_WARRIOR	= Game.getVar(R.string.WarriorArmor_NotWarrior);
 	
 	{
-		name = "warrior suit of armor";
+		name = Game.getVar(R.string.WarriorArmor_Name);
 		image = ItemSpriteSheet.ARMOR_WARRIOR;
 	}
 	
@@ -75,9 +77,7 @@ public class WarriorArmor extends ClassArmor {
 	
 	@Override
 	public String desc() {
-		return
-			"While this armor looks heavy, it allows a warrior to perform heroic leap towards " +
-			"a targeted location, slamming down to stun all neighbouring enemies.";
+		return Game.getVar(R.string.WarriorArmor_Desc);
 	}
 	
 	protected static CellSelector.Listener leaper = new  CellSelector.Listener() {
@@ -123,7 +123,7 @@ public class WarriorArmor extends ClassArmor {
 		
 		@Override
 		public String prompt() {
-			return "Choose direction to leap";
+			return Game.getVar(R.string.WarriorArmor_Prompt);
 		}
 	};
 }

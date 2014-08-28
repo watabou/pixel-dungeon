@@ -604,11 +604,85 @@
    <string name="Sungrass_Buff">Herbal healing</string>
 
 
-   
-   
-   
-   
-   
+   <!--  STRINGS OF Armor CLASS  -->
+   <string name="Armor_EquipCursed">your %s constricts around you painfully</string>
+   <string name="Armor_UnequipCursed">You can\'t remove cursed %s!</string>
+   <string name="Armor_Identify">you are now familiar enough with your %1$s to identify it. It is %2$s.</string>
+   <string name="Armor_ToString">%1$s :%2$d</string>
+   <string name="Armor_Incompatible">Interaction of different types of magic has erased the glyph on this armor!</string>
+   <string name="Armor_Info1">\n\nThis %1$s provides damage absorption up to \"%2$d\"  points per attack.</string>
+   <string name="Armor_Info2">\n\nBecause of your inadequate strength your movement speed and defense skill is decreased. </string>
+   <string name="Armor_Info3">\n\nBecause of your inadequate strength wearing this armor will decrease your movement speed and defense skill.</string>
+   <string name="Armor_Info4">\n\nTypical %1$s provides damage absorption up to %2$d points per attack and requires %3$d points of strength.</string>
+   <string name="Armor_Info5">Probably this armor is too heavy for you.</string>
+   <string name="Armor_Info6">It is inscribed.</string>
+   <string name="Armor_Info7a">\n\nYou are wearing the %1$s%2$s.</string>
+   <string name="Armor_Info7b">, and because it is cursed, you are powerless to remove it</string>
+   <string name="Armor_Info8">\n\nYou can feel a malevolent magic lurking within the %s.</string>
+
+
+   <!--  STRINGS OF ClassArmor CLASS  -->
+   <string name="ClassArmor_Desc">The thing looks awesome!</string>
+   <string name="ClassArmor_LowHealt">Your health is too low!</string>
+   <string name="ClassArmor_NotEquipped">You need to be wearing this armor to use its special power!</string>
+
+
+   <!--  STRINGS OF ClothArmor CLASS  -->
+   <string name="ClothArmor_Name">cloth armor</string>
+   <string name="ClothArmor_Desc">This lightweight armor offers basic protection.</string>
+
+
+   <!--  STRINGS OF HuntressArmor CLASS  -->
+   <string name="HuntressArmor_Name">huntress cloak</string>
+   <string name="HuntressArmor_Desc">A huntress in such cloak can create a fan of spectral blades. Each of these blades will target a single enemy in the huntress\'s field of view, inflicting damage depending on her currently equipped melee weapon.</string>
+   <string name="HuntressArmor_ACSpecial">SPECTRAL BLADES</string>
+   <string name="HuntressArmor_NoEnemies">No enemies in sight</string>
+   <string name="HuntressArmor_NotHuntress">Only huntresses can use this armor!</string>
+
+
+   <!--  STRINGS OF LeatherArmor CLASS  -->
+   <string name="LeatherArmor_Name">leather armor</string>
+   <string name="LeatherArmor_Desc">Armor made from tanned monster hide. Not as light as cloth armor but provides better protection.</string>
+
+
+   <!--  STRINGS OF MageArmor CLASS  -->
+   <string name="MageArmor_Name">mage robe</string>
+   <string name="MageArmor_Desc">Wearing this gorgeous robe, a mage can cast a spell of molten earth: all the enemies in his field of view will be set on fire and unable to move at the same time.</string>
+   <string name="MageArmor_ACSpecial">MOLTEN EARTH</string>
+   <string name="MageArmor_NotMage">Only mages can use this armor!</string>
+
+
+   <!--  STRINGS OF MailArmor CLASS  -->
+   <string name="MailArmor_Name">mail armor</string>
+   <string name="MailArmor_Desc">Interlocking metal links make for a tough but flexible suit of armor.</string>
+
+
+   <!--  STRINGS OF PlateArmor CLASS  -->
+   <string name="PlateArmor_Name">plate armor</string>
+   <string name="PlateArmor_Desc">Enormous plates of metal are joined together into a suit that provides unmatched protection to any adventurer strong enough to bear its staggering weight.</string>
+
+
+   <!--  STRINGS OF RogueArmor CLASS  -->
+   <string name="RogueArmor_Name">rogue garb</string>
+   <string name="RogueArmor_Desc">Wearing this dark garb, a rogue can perform a trick, that is called \"smoke bomb\" (though no real explosives are used): he blinds enemies who could see him and jumps aside.</string>
+   <string name="RogueArmor_ACSpecial">SMOKE BOMB</string>
+   <string name="RogueArmor_NotRogue">Only rogues can use this armor!</string>
+   <string name="RogueArmor_Fov">You can only jump to an empty location in your field of view</string>
+   <string name="RogueArmor_Prompt">Choose a location to jump to</string>
+
+
+   <!--  STRINGS OF ScaleArmor CLASS  -->
+   <string name="ScaleArmor_Name">scale armor</string>
+   <string name="ScaleArmor_Desc">The metal scales sewn onto a leather vest create a flexible, yet protective armor.</string>
+
+
+   <!--  STRINGS OF WarriorArmor CLASS  -->
+   <string name="WarriorArmor_Name">warrior suit of armor</string>
+   <string name="WarriorArmor_Desc">While this armor looks heavy, it allows a warrior to perform heroic leap towards a targeted location, slamming down to stun all neighbouring enemies.</string>
+   <string name="WarriorArmor_ACSpecial">HEROIC LEAP</string>
+   <string name="WarriorArmor_NotWarrior">Only warriors can use this armor!</string>
+   <string name="WarriorArmor_Prompt">Choose direction to leap</string>
+
    
    
    

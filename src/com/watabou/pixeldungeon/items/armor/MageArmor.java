@@ -17,9 +17,11 @@
  */
 package com.watabou.pixeldungeon.items.armor;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
@@ -34,12 +36,12 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class MageArmor extends ClassArmor {	
 	
-	private static final String AC_SPECIAL = "MOLTEN EARTH"; 
+	private static final String AC_SPECIAL = Game.getVar(R.string.MageArmor_ACSpecial); 
 	
-	private static final String TXT_NOT_MAGE	= "Only mages can use this armor!";
+	private static final String TXT_NOT_MAGE = Game.getVar(R.string.MageArmor_NotMage);
 	
 	{
-		name = "mage robe";
+		name = Game.getVar(R.string.MageArmor_Name);
 		image = ItemSpriteSheet.ARMOR_MAGE;
 	}
 	
@@ -50,9 +52,7 @@ public class MageArmor extends ClassArmor {
 	
 	@Override
 	public String desc() {
-		return
-			"Wearing this gorgeous robe, a mage can cast a spell of molten earth: all the enemies " +
-			"in his field of view will be set on fire and unable to move at the same time.";
+		return Game.getVar(R.string.MageArmor_Desc);
 	}
 	
 	@Override

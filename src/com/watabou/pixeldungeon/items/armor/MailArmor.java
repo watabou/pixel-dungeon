@@ -17,13 +17,15 @@
  */
 package com.watabou.pixeldungeon.items.armor;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 
 public class MailArmor extends Armor {
 
 	{
-		name = "mail armor";
+		name = Game.getVar(R.string.MailArmor_Name);
 		image = ItemSpriteSheet.ARMOR_MAIL;
 	}
 	
@@ -33,7 +35,6 @@ public class MailArmor extends Armor {
 
 	@Override
 	public String desc() {
-		return 
-			"Interlocking metal links make for a tough but flexible suit of armor.";
+		return Game.getVar(R.string.MailArmor_Desc);
 	}
 }

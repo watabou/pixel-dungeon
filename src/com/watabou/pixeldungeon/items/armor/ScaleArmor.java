@@ -17,13 +17,15 @@
  */
 package com.watabou.pixeldungeon.items.armor;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 
 public class ScaleArmor extends Armor {
 
 	{
-		name = "scale armor";
+		name = Game.getVar(R.string.ScaleArmor_Name);
 		image = ItemSpriteSheet.ARMOR_SCALE;
 	}
 	
@@ -33,7 +35,6 @@ public class ScaleArmor extends Armor {
 	
 	@Override
 	public String desc() {
-		return 
-			"The metal scales sewn onto a leather vest create a flexible, yet protective armor.";
+		return Game.getVar(R.string.ScaleArmor_Desc);
 	}
 }
