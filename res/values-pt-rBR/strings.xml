@@ -681,4 +681,29 @@
    <string name="WarriorArmor_ACSpecial">SALTO HERÓICO</string>
    <string name="WarriorArmor_NotWarrior">Apenas os guerreiros podem usar essa armadura!</string>
    <string name="WarriorArmor_Prompt">Escolha a direção para saltar</string>
+
+
+   <!--  STRINGS OF /armor/Gyphs PACKAGE  -->
+   <!--  STRINGS OF Affection CLASS  -->
+   <string name="Affection_Txt">%s de afeição</string>
+   <!--  STRINGS OF AntiEntropy CLASS  -->
+   <string name="AntiEntropy_Txt">%s de anti-entropia</string>
+   <!--  STRINGS OF Bounce CLASS  -->
+   <string name="Bounce_Txt">%s de salto</string>
+   <!--  STRINGS OF Displacement CLASS  -->
+   <string name="Displacement_Txt">%s de deslocamento</string>
+   <!--  STRINGS OF Entanglement CLASS  -->
+   <string name="Entanglement_Txt">%s de emaranhamento</string>
+   <!--  STRINGS OF Metabolism CLASS  -->
+   <string name="Metabolism_Txt">%s de metabolismo</string>
+   <!--  STRINGS OF Multiplicity CLASS  -->
+   <string name="Multiplicity_Txt">%s de multiplicidade</string>
+   <!--  STRINGS OF Potential CLASS  -->
+   <string name="Potential_Txt">%s de potencial</string>
+   <!--  STRINGS OF Stench CLASS  -->
+   <string name="Stench_Txt">%s de mau cheiro</string>
+   <!--  STRINGS OF Viscosity CLASS  -->
+   <string name="Viscosity_Txt">%s de viscosidade</string>
+   <string name="Viscosity_Status">deferido %d</string>
+
 </resources>

@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -29,7 +31,7 @@ import com.watabou.utils.Random;
 
 public class Bounce extends Glyph {
 
-	private static final String TXT_BOUNCE	= "%s of bounce";
+	private static final String TXT_BOUNCE = Game.getVar(R.string.Bounce_Txt);
 	
 	@Override
 	public int proc( Armor armor, Char attacker, Char defender, int damage) {

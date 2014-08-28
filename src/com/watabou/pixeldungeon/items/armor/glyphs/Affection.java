@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Charm;
@@ -31,7 +33,7 @@ import com.watabou.utils.Random;
 
 public class Affection extends Glyph {
 
-	private static final String TXT_AFFECTION	= "%s of affection";
+	private static final String TXT_AFFECTION = Game.getVar(R.string.Affection_Txt);
 	
 	private static ItemSprite.Glowing PINK = new ItemSprite.Glowing( 0xFF4488 );
 	

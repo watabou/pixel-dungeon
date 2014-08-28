@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -30,7 +32,7 @@ import com.watabou.utils.Random;
 
 public class Metabolism extends Glyph {
 
-	private static final String TXT_METABOLISM	= "%s of metabolism";
+	private static final String TXT_METABOLISM = Game.getVar(R.string.Metabolism_Txt);
 	
 	private static ItemSprite.Glowing RED = new ItemSprite.Glowing( 0xCC0000 );
 	

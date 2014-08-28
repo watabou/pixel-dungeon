@@ -17,8 +17,10 @@
  */
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -35,7 +37,7 @@ import com.watabou.utils.Random;
 
 public class Viscosity extends Glyph {
 
-	private static final String TXT_VISCOSITY	= "%s of viscosity";
+	private static final String TXT_VISCOSITY = Game.getVar(R.string.Viscosity_Txt);
 	
 	private static ItemSprite.Glowing PURPLE = new ItemSprite.Glowing( 0x8844CC );
 	
@@ -57,7 +59,7 @@ public class Viscosity extends Glyph {
 			}
 			debuff.prolong( damage );
 			
-			defender.sprite.showStatus( CharSprite.WARNING, "deferred %d", damage );
+			defender.sprite.showStatus( CharSprite.WARNING, Game.getVar(R.string.Viscosity_Status), damage );
 			
 			return 0;
 			

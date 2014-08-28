@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
@@ -33,7 +35,7 @@ import com.watabou.utils.Random;
 
 public class AntiEntropy extends Glyph {
 
-	private static final String TXT_ANTI_ENTROPY	= "%s of anti-entropy";
+	private static final String TXT_ANTI_ENTROPY = Game.getVar(R.string.AntiEntropy_Txt);
 	
 	private static ItemSprite.Glowing BLUE = new ItemSprite.Glowing( 0x0000FF );
 	

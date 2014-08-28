@@ -19,6 +19,8 @@ package com.watabou.pixeldungeon.items.armor.glyphs;
 
 import java.util.ArrayList;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -34,7 +36,7 @@ import com.watabou.utils.Random;
 
 public class Multiplicity extends Glyph {
 
-	private static final String TXT_MULTIPLICITY	= "%s of multiplicity";
+	private static final String TXT_MULTIPLICITY = Game.getVar(R.string.Multiplicity_Txt);
 	
 	private static ItemSprite.Glowing PINK = new ItemSprite.Glowing( 0xCCAA88 );
 	
