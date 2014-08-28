@@ -20,7 +20,9 @@ package com.watabou.pixeldungeon.items.bags;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
@@ -31,7 +33,7 @@ import com.watabou.utils.Bundle;
 
 public class Bag extends Item implements Iterable<Item> {
 
-	public static final String AC_OPEN	= "OPEN";
+	public static final String AC_OPEN = Game.getVar(R.string.Bag_ACOpen);
 	
 	{
 		image = 11;

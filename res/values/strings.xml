@@ -707,6 +707,26 @@
    <string name="Viscosity_Txt">%s of viscosity</string>
    <string name="Viscosity_Status">deferred %d</string>
 
+
+   <!--  STRINGS OF /items/bags PACKAGE  -->
+   <!--  STRINGS OF Bag CLASS  -->
+   <string name="Bag_ACOpen">OPEN</string>
+
+
+   <!--  STRINGS OF ScrollHolder CLASS  -->
+   <string name="ScrollHolder_Name">scroll holder</string>
+   <string name="ScrollHolder_Info">You can place any number of scrolls into this tubular container. It saves room in your backpack and protects scrolls from fire.</string>
+
+
+   <!--  STRINGS OF SeedPouch CLASS  -->
+   <string name="SeedPouch_Name">seed pouch</string>
+   <string name="SeedPouch_Info">This small velvet pouch allows you to store any number of seeds in it. Very convenient.</string>   
+
+
+   <!--  STRINGS OF WandHolster CLASS  -->
+   <string name="WandHolster_Name">wand holster</string>
+   <string name="WandHolster_Info">This slim holder is made of leather of some exotic animal. It allows to compactly carry up to " + size + " wands.</string>  
+
    
    
    

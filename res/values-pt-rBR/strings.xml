@@ -706,4 +706,24 @@
    <string name="Viscosity_Txt">%s de viscosidade</string>
    <string name="Viscosity_Status">deferido %d</string>
 
+
+   <!--  STRINGS OF /items/bags PACKAGE  -->
+   <!--  STRINGS OF Bag CLASS  -->
+   <string name="Bag_ACOpen">ABRIR</string>
+
+
+   <!--  STRINGS OF ScrollHolder CLASS  -->
+   <string name="ScrollHolder_Name">suporte de pergaminho</string>
+   <string name="ScrollHolder_Info">Você pode colocar qualquer número de pergaminhos neste recipiente tubular. Ele economiza espaço em sua mochila e protege pergaminhos do fogo.</string>
+
+
+   <!--  STRINGS OF SeedPouch CLASS  -->
+   <string name="SeedPouch_Name">bolsa de sementes</string>
+   <string name="SeedPouch_Info">Esta pequena bolsa de veludo permite armazenar qualquer quantidade de sementes dentro. É muito conveniente.</string>   
+
+
+   <!--  STRINGS OF WandHolster CLASS  -->
+   <string name="WandHolster_Name">estojo de varinhas</string>
+   <string name="WandHolster_Info">Este suporte fino é feito de couro de algum animal exótico. Ele permite levar de forma compacta até %d varinhas.</string>  
+
 </resources>
