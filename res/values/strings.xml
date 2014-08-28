@@ -727,6 +727,54 @@
    <string name="WandHolster_Name">wand holster</string>
    <string name="WandHolster_Info">This slim holder is made of leather of some exotic animal. It allows to compactly carry up to " + size + " wands.</string>  
 
+
+   <!--  STRINGS OF /items/food PACKAGE  -->
+   <!--  STRINGS OF Food CLASS  -->
+   <string name="Food_Name">ration of food</string>
+   <string name="Food_Info">Nothing fancy here: dried meat, some biscuits - things like that.</string>
+   <string name="Food_ACEat">EAT</string>
+   <string name="Food_Message">That food tasted delicious!</string>
+
+
+   <!--  STRINGS OF ChargrilledMeat CLASS  -->
+   <string name="ChargrilledMeat_Name">chargrilled meat</string>
+   <string name="ChargrilledMeat_Info">It looks like a decent steak.</string>
+
+
+   <!--  STRINGS OF FrozenCarpaccio CLASS  -->
+   <string name="FrozenCarpaccio_Name">frozen carpaccio</string>
+   <string name="FrozenCarpaccio_Info">It\'s a piece of frozen raw meat. The only way to eat it is by cutting thin slices of it. And this way it\'s suprisingly good.</string>
+   <string name="FrozenCarpaccio_Info1">You see your hands turn invisible!</string>
+   <string name="FrozenCarpaccio_Info2">You feel your skin hardens!</string>
+   <string name="FrozenCarpaccio_Info3">Refreshing!</string>
+   <string name="FrozenCarpaccio_Info4">You feel better!</string>
+
+
+   <!--  STRINGS OF MysteryMeat CLASS  -->
+   <string name="MysteryMeat_Name">mystery meat</string>
+   <string name="MysteryMeat_Info">Eat at your own risk!</string>
+   <string name="MysteryMeat_Info1">Oh it\'s hot!</string>
+   <string name="MysteryMeat_Info2">You can\'t feel your legs!</string>
+   <string name="MysteryMeat_Info3">You are not feeling well.</string>
+   <string name="MysteryMeat_Info4">You are stuffed.</string>
+   <string name="MysteryMeat_Message">That food tasted... strange.</string>
+
+
+   <!--  STRINGS OF OverpricedRation CLASS  -->
+   <string name="OverpricedRation_Name">overpriced food ration</string>
+   <string name="OverpricedRation_Info">It looks exactly like a standard ration of food but smaller.</string>
+   <string name="OverpricedRation_Message">That food tasted ok.</string>
+
+
+   <!--  STRINGS OF Pasty CLASS  -->
+   <string name="Pasty_Name">pasty</string>
+   <string name="Pasty_Info">This is authentic Cornish pasty with traditional filling of beef and potato.</string>
+
+   
+   
+   
+   
+   
    
    
    

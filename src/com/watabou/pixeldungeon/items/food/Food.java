@@ -19,9 +19,11 @@ package com.watabou.pixeldungeon.items.food;
 
 import java.util.ArrayList;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -36,14 +38,14 @@ public class Food extends Item {
 
 	private static final float TIME_TO_EAT	= 3f;
 	
-	public static final String AC_EAT	= "EAT";
+	public static final String AC_EAT = Game.getVar(R.string.Food_ACEat);
 	
 	public float energy = Hunger.HUNGRY;
-	public String message = "That food tasted delicious!";
+	public String message = Game.getVar(R.string.Food_Message);
 	
 	{
 		stackable = true;
-		name = "ration of food";
+		name = Game.getVar(R.string.Food_Name);
 		image = ItemSpriteSheet.RATION;
 	}
 	
@@ -98,9 +100,7 @@ public class Food extends Item {
 	
 	@Override
 	public String info() {
-		return 
-			"Nothing fancy here: dried meat, " +
-			"some biscuits - things like that.";
+		return Game.getVar(R.string.Food_Info);
 	}
 	
 	@Override

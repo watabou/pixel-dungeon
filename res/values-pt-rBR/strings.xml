@@ -726,4 +726,46 @@
    <string name="WandHolster_Name">estojo de varinhas</string>
    <string name="WandHolster_Info">Este suporte fino é feito de couro de algum animal exótico. Ele permite levar de forma compacta até %d varinhas.</string>  
 
+
+   <!--  STRINGS OF /items/food PACKAGE  -->
+   <!--  STRINGS OF Food CLASS  -->
+   <string name="Food_Name">comida em ração</string>
+   <string name="Food_Info">Nada extravagante aqui: carne seca, alguns biscoitos - coisas assim.</string>
+   <string name="Food_ACEat">COMER</string>
+   <string name="Food_Message">Essa comida tinha um sabor delicioso!</string>
+
+
+   <!--  STRINGS OF ChargrilledMeat CLASS  -->
+   <string name="ChargrilledMeat_Name">carne grelhada</string>
+   <string name="ChargrilledMeat_Info">Parece um bife decente.</string>
+
+
+   <!--  STRINGS OF FrozenCarpaccio CLASS  -->
+   <string name="FrozenCarpaccio_Name">carpaccio congelado</string>
+   <string name="FrozenCarpaccio_Info">É um pedaço de carne crua congelada. A única maneira de comer é cortando fatias finas da mesma. E mesmo dessa forma é surpreendentemente bom.</string>
+   <string name="FrozenCarpaccio_Info1">Você vê suas mãos ficarem invisíveis!</string>
+   <string name="FrozenCarpaccio_Info2">Você sente sua pele endurecer!</string>
+   <string name="FrozenCarpaccio_Info3">Refrescante!</string>
+   <string name="FrozenCarpaccio_Info4">Você se sente melhor!</string>
+
+
+   <!--  STRINGS OF MysteryMeat CLASS  -->
+   <string name="MysteryMeat_Name">carne misteriosa</string>
+   <string name="MysteryMeat_Info">Coma por seu próprio risco!</string>
+   <string name="MysteryMeat_Info1">Ohhh, é quente!</string>
+   <string name="MysteryMeat_Info2">Você não pode sentir suas pernas!</string>
+   <string name="MysteryMeat_Info3">Você não está se sentindo bem.</string>
+   <string name="MysteryMeat_Info4">Está recheado.</string>
+   <string name="MysteryMeat_Message">Experimentei essa comida... Estranha</string>
+
+
+   <!--  STRINGS OF OverpricedRation CLASS  -->
+   <string name="OverpricedRation_Name">comida em ração superfaturada</string>
+   <string name="OverpricedRation_Info">Parece exatamente como a dieta padrão de comida, mas menor.</string>
+   <string name="OverpricedRation_Message">Provei e está Ok.</string>
+
+
+   <!--  STRINGS OF Pasty CLASS  -->
+   <string name="Pasty_Name">pastel</string>
+   <string name="Pasty_Info">Este é autêntico pastel Cornish com recheio tradicional de carne e batata.</string>
 </resources>

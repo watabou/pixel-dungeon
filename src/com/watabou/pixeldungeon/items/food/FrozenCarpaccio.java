@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.food;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.buffs.Barkskin;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -34,7 +36,7 @@ import com.watabou.utils.Random;
 public class FrozenCarpaccio extends Food {
 
 	{
-		name = "frozen carpaccio";
+		name = Game.getVar(R.string.FrozenCarpaccio_Name);
 		image = ItemSpriteSheet.CARPACCIO;
 		energy = Hunger.STARVING - Hunger.HUNGRY;
 	}
@@ -48,22 +50,22 @@ public class FrozenCarpaccio extends Food {
 			
 			switch (Random.Int( 5 )) {
 			case 0:
-				GLog.i( "You see your hands turn invisible!" );
+				GLog.i(Game.getVar(R.string.FrozenCarpaccio_Info1));
 				Buff.affect( hero, Invisibility.class, Invisibility.DURATION );
 				break;
 			case 1:
-				GLog.i( "You feel your skin hardens!" );
+				GLog.i(Game.getVar(R.string.FrozenCarpaccio_Info2));
 				Buff.affect( hero, Barkskin.class ).level( hero.HT / 4 );
 				break;
 			case 2:
-				GLog.i( "Refreshing!" );
+				GLog.i(Game.getVar(R.string.FrozenCarpaccio_Info3));
 				Buff.detach( hero, Poison.class );
 				Buff.detach( hero, Cripple.class );
 				Buff.detach( hero, Weakness.class );
 				Buff.detach( hero, Bleeding.class );
 				break;
 			case 3:
-				GLog.i( "You feel better!" );
+				GLog.i(Game.getVar(R.string.FrozenCarpaccio_Info4));
 				if (hero.HP < hero.HT) {
 					hero.HP = Math.min( hero.HP + hero.HT / 4, hero.HT );
 					hero.sprite.emitter().burst( Speck.factory( Speck.HEALING ), 1 );
@@ -75,9 +77,7 @@ public class FrozenCarpaccio extends Food {
 	
 	@Override
 	public String info() {
-		return 
-			"It's a piece of frozen raw meat. The only way to eat it is " +
-			"by cutting thin slices of it. And this way it's suprisingly good.";
+		return Game.getVar(R.string.FrozenCarpaccio_Info);
 	}
 	
 	public int price() {
