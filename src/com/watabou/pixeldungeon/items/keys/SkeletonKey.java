@@ -17,13 +17,15 @@
  */
 package com.watabou.pixeldungeon.items.keys;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class SkeletonKey extends Key {
 	
 	{
-		name = "skeleton key";
+		name = Game.getVar(R.string.SkeletonKey_Name);
 		image = ItemSpriteSheet.SKELETON_KEY;
 		stackable = false;
 	}
@@ -44,7 +46,6 @@ public class SkeletonKey extends Key {
 	
 	@Override
 	public String info() {
-		return 
-			"This key looks serious: its head is shaped like a skull. Probably it can open some serious door.";
+		return Game.getVar(R.string.SkeletonKey_Info);
 	}
 }

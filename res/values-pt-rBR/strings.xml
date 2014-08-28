@@ -602,7 +602,8 @@
    <string name="Sungrass_Desc">Sungrass é conhecida por propriedades curativas da sua seiva.</string>
    <string name="Sungrass_Buff">Cura de Ervas</string>
 
-
+   
+<!--  PACKAGE items/armor  -->
    <!--  STRINGS OF Armor CLASS  -->
    <string name="Armor_EquipCursed">seu %s se contrai em torno de você dolorosamente</string>
    <string name="Armor_UnequipCursed">Você não pode remover %s amaldiçoado!</string>
@@ -683,7 +684,7 @@
    <string name="WarriorArmor_Prompt">Escolha a direção para saltar</string>
 
 
-   <!--  STRINGS OF /armor/Gyphs PACKAGE  -->
+<!--  PACKAGE /armor/Gyphs  -->
    <!--  STRINGS OF Affection CLASS  -->
    <string name="Affection_Txt">%s de afeição</string>
    <!--  STRINGS OF AntiEntropy CLASS  -->
@@ -707,7 +708,7 @@
    <string name="Viscosity_Status">deferido %d</string>
 
 
-   <!--  STRINGS OF /items/bags PACKAGE  -->
+<!--  PACKAGE /items/bags  -->
    <!--  STRINGS OF Bag CLASS  -->
    <string name="Bag_ACOpen">ABRIR</string>
 
@@ -727,7 +728,7 @@
    <string name="WandHolster_Info">Este suporte fino é feito de couro de algum animal exótico. Ele permite levar de forma compacta até %d varinhas.</string>  
 
 
-   <!--  STRINGS OF /items/food PACKAGE  -->
+<!--  PACKAGE /items/food  -->
    <!--  STRINGS OF Food CLASS  -->
    <string name="Food_Name">comida em ração</string>
    <string name="Food_Info">Nada extravagante aqui: carne seca, alguns biscoitos - coisas assim.</string>
@@ -768,4 +769,22 @@
    <!--  STRINGS OF Pasty CLASS  -->
    <string name="Pasty_Name">pastel</string>
    <string name="Pasty_Info">Este é autêntico pastel Cornish com recheio tradicional de carne e batata.</string>
+
+
+<!--  PACKAGE /items/keys  -->
+   <!--  STRINGS OF GoldemKey CLASS  -->
+   <string name="GoldemKey_Name">golden key</string>
+   <string name="GoldemKey_Info">The notches on this golden key are tiny and intricate. Maybe it can open some chest lock?</string>
+
+
+   <!--  STRINGS OF IronKey CLASS  -->
+   <string name="IronKey_Name">iron key</string>
+   <string name="IronKey_Info">The notches on this ancient iron key are well worn; its leather lanyard is battered by age. What door might it open?</string>
+   <string name="IronKey_FromDepth">iron key from depth %d</string>
+
+
+   <!--  STRINGS OF SkeletonKey CLASS  -->
+   <string name="SkeletonKey_Name">skeleton key</string>
+   <string name="SkeletonKey_Info">This key looks serious: its head is shaped like a skull. Probably it can open some serious door.</string>
+
 </resources>

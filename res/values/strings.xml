@@ -604,6 +604,7 @@
    <string name="Sungrass_Buff">Herbal healing</string>
 
 
+<!--  PACKAGE items/armor  -->
    <!--  STRINGS OF Armor CLASS  -->
    <string name="Armor_EquipCursed">your %s constricts around you painfully</string>
    <string name="Armor_UnequipCursed">You can\'t remove cursed %s!</string>
@@ -684,7 +685,7 @@
    <string name="WarriorArmor_Prompt">Choose direction to leap</string>
 
 
-   <!--  STRINGS OF /armor/Gyphs PACKAGE  -->
+<!--  PACKAGE /armor/Gyphs  -->
    <!--  STRINGS OF Affection CLASS  -->
    <string name="Affection_Txt">%s of affection</string>
    <!--  STRINGS OF AntiEntropy CLASS  -->
@@ -708,7 +709,7 @@
    <string name="Viscosity_Status">deferred %d</string>
 
 
-   <!--  STRINGS OF /items/bags PACKAGE  -->
+<!--  PACKAGE /items/bags  -->
    <!--  STRINGS OF Bag CLASS  -->
    <string name="Bag_ACOpen">OPEN</string>
 
@@ -728,7 +729,7 @@
    <string name="WandHolster_Info">This slim holder is made of leather of some exotic animal. It allows to compactly carry up to " + size + " wands.</string>  
 
 
-   <!--  STRINGS OF /items/food PACKAGE  -->
+<!--  PACKAGE /items/food  -->
    <!--  STRINGS OF Food CLASS  -->
    <string name="Food_Name">ration of food</string>
    <string name="Food_Info">Nothing fancy here: dried meat, some biscuits - things like that.</string>
@@ -770,9 +771,23 @@
    <string name="Pasty_Name">pasty</string>
    <string name="Pasty_Info">This is authentic Cornish pasty with traditional filling of beef and potato.</string>
 
-   
-   
-   
+
+<!--  PACKAGE /items/keys  -->
+   <!--  STRINGS OF GoldemKey CLASS  -->
+   <string name="GoldemKey_Name">chave de ouro</string>
+   <string name="GoldemKey_Info">Os entalhes nesta chave de ouro são minúsculos e intrincados. Talvez ele pode abrir alguns cofres fechados!?</string>
+
+
+   <!--  STRINGS OF IronKey CLASS  -->
+   <string name="IronKey_Name">chave de ferro</string>
+   <string name="IronKey_Info">Os entalhes nesta chave de ferro antiga estão bem gastos​​; seu cordão de couro está danificada pelo tempo. Pode abrir portas!?</string>
+   <string name="IronKey_FromDepth">chave do nível %d</string>
+
+
+   <!--  STRINGS OF SkeletonKey CLASS  -->
+   <string name="SkeletonKey_Name">chave mestra</string>
+   <string name="SkeletonKey_Info">Esta chave parece importante: sua cabeça tem a forma de uma caveira. Provavelmente, ele pode abrir alguma porta importante.</string>
+
    
    
    
