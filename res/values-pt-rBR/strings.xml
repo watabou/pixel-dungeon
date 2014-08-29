@@ -768,23 +768,120 @@
 
    <!--  STRINGS OF Pasty CLASS  -->
    <string name="Pasty_Name">pastel</string>
-   <string name="Pasty_Info">Este é autêntico pastel Cornish com recheio tradicional de carne e batata.</string>
+   <string name="Pasty_Info">Este é o autêntico pastel Cornish com recheio tradicional de carne e batata.</string>
 
 
 <!--  PACKAGE /items/keys  -->
    <!--  STRINGS OF GoldemKey CLASS  -->
-   <string name="GoldemKey_Name">golden key</string>
-   <string name="GoldemKey_Info">The notches on this golden key are tiny and intricate. Maybe it can open some chest lock?</string>
+   <string name="GoldemKey_Name">chave de ouro</string>
+   <string name="GoldemKey_Info">Os entalhes nesta chave de ouro são minúsculos e intrincados. Talvez ele pode abrir alguns cofres fechados!?</string>
 
 
    <!--  STRINGS OF IronKey CLASS  -->
-   <string name="IronKey_Name">iron key</string>
-   <string name="IronKey_Info">The notches on this ancient iron key are well worn; its leather lanyard is battered by age. What door might it open?</string>
-   <string name="IronKey_FromDepth">iron key from depth %d</string>
+   <string name="IronKey_Name">chave de ferro</string>
+   <string name="IronKey_Info">Os entalhes nesta chave de ferro antiga estão bem gastos​​; seu cordão de couro está danificada pelo tempo. Pode abrir portas!?</string>
+   <string name="IronKey_FromDepth">chave do nível %d</string>
 
 
    <!--  STRINGS OF SkeletonKey CLASS  -->
-   <string name="SkeletonKey_Name">skeleton key</string>
-   <string name="SkeletonKey_Info">This key looks serious: its head is shaped like a skull. Probably it can open some serious door.</string>
+   <string name="SkeletonKey_Name">chave mestra</string>
+   <string name="SkeletonKey_Info">Esta chave parece importante: sua cabeça tem a forma de uma caveira. Provavelmente, ele pode abrir alguma porta importante.</string>
+   
+
+<!--  PACKAGE /items/potions  -->
+   <!--  STRINGS OF Potion CLASS  -->
+   <string name="Potion_Name">poção %s</string>
+   <string name="Potion_Info">Este frasco contém um turbilhão de líquido %s. Quem sabe o que vai fazer quando bebido ou jogado?</string>
+   <string name="Potion_ACDrink">TOMAR</string>
+   <string name="Potion_Harmfull">Poção prejudicial!</string>
+   <string name="Potion_Beneficial">Poção Benéfica</string>
+   <string name="Potion_Yes">Sim, eu sei o que estou fazendo</string>
+   <string name="Potion_No">Não, eu mudei de idéia</string>
+   <string name="Potion_SureDrink">Tem certeza de que quer beber? Na maioria dos casos você deve jogar tais poções em seus inimigos.</string>
+   <string name="Potion_SureThrow">Tem certeza de que quer jogá-lo? Na maioria dos casos, faz sentido para beber.</string>
+   <string name="Potion_Shatter">Ao quebrar o frasco o líquido %s espirrará sem causar danos</string>
+   <string-array name="Potion_Colors">
+       <item >turquesa</item>
+       <item >carmin</item>
+       <item >azul</item>
+       <item >jade</item>
+       <item >dourado</item>
+       <item >magenta</item>
+       <item >cinza</item>
+       <item >marfin</item>
+       <item >âmbar</item>
+       <item >marron escuro</item>
+       <item >azul escuro</item>
+       <item >prata</item>
+   </string-array>
+
+
+   <!--  STRINGS OF PotionOfExperience CLASS  -->
+   <string name="PotionOfExperience_Name">Poção de Experiência</string>
+   <string name="PotionOfExperience_Info">As experiências célebres de multidões em batalha reduzidos à forma líquida, este gole vai aumentar instantaneamente o seu nível de experiência.</string>
+
+
+   <!--  STRINGS OF PotionOfFrost CLASS  -->
+   <string name="PotionOfFrost_Name">Poção de Congelamento</string>
+   <string name="PotionOfFrost_Info">Após a exposição ao ar este produto químico vai evaporar em uma nuvem de congelamento, fazendo com que qualquer criatura em contato com ele seja congelado no lugar incapaz de agir e se movimentar.</string>
+
+
+   <!--  STRINGS OF PotionOfHealing CLASS  -->
+   <string name="PotionOfHealing_Name">Poção de Cura</string>
+   <string name="PotionOfHealing_Info">Um elixir que irá imediatamente te dar plena saúde e cura de venenos.</string>
+   <string name="PotionOfHealing_Apply">Suas feridas cicatrizam completamente.</string>
+
+
+   <!--  STRINGS OF PotionOfInvisibility CLASS  -->
+   <string name="PotionOfInvisibility_Name">Poção da Invisibilidade</string>
+   <string name="PotionOfInvisibility_Info">Beber esta poção irá torná-lo temporariamente invisível. Enquanto invisível, os inimigos não serão capazes de vê-lo. Atacar um inimigo, bem como a utilização de uma varinha ou um pergaminho diante dos olhos do inimigo, irá dissipar o efeito.</string>
+   <string name="PotionOfInvisibility_Apply">Você vê suas mãos ficarem invisíveis!</string>
+
+
+   <!--  STRINGS OF PotionOfLevitation CLASS  -->
+   <string name="PotionOfLevitation_Name">Poção da Levitação</string>
+   <string name="PotionOfLevitation_Info">Beber este curioso líquido fará com que você paire no ar, podend flutuar sem esforço sobre armadilhas. Chamas e gases no entanto estão no ar, e não pode ser ignorados.</string>
+   <string name="PotionOfLevitation_Apply">Você flutua no ar!</string>
+
+
+   <!--  STRINGS OF PotionOfLiquidFlame CLASS  -->
+   <string name="PotionOfLiquidFlame_Name">Poção de Chama Líquida</string>
+   <string name="PotionOfLiquidFlame_Info">Este frasco contém um composto instável que irá explodir violentamente em chamas, por exposição ao ar livre.</string>
+
+
+   <!--  STRINGS OF PotionOfMight CLASS  -->
+   <string name="PotionOfMight_Name">Poção de Poder</string>
+   <string name="PotionOfMight_Info">Este líquido poderoso flui naturalmente através de seus músculos, aumentando permanentemente a sua força em um ponto e vida em cinco pontos.</string>
+   <string name="PotionOfMight_Apply"></string>
+
+
+   <!--  STRINGS OF PotionOfMindVision CLASS  -->
+   <string name="PotionOfMindVision_Name">Poção de Visão</string>
+   <string name="PotionOfMindVision_Info">Depois de beber essa poção, sua mente vai entrar em sintonia com a assinatura psíquica das criaturas distantes, permitindo que você senta as presenças biológicas através das paredes. Esta poção também permitirá que você veja através de paredes e portas próximas.</string>
+   <string name="PotionOfMindVision_Apply1">Você pode de alguma forma sentir a presença de espíritos de outras criaturas!</string>
+   <string name="PotionOfMindVision_Apply2">Você pode de alguma forma sentir que está sozinho neste nível no momento.</string>
+
+
+   <!--  STRINGS OF PotionOfParalyticGas CLASS  -->
+   <string name="PotionOfParalyticGas_Name">Poção de Gás paralítico</string>
+   <string name="PotionOfParalyticGas_Info">Após a exposição ao ar, o líquido neste frasco irá vaporizar em uma névoa amarela entorpecente. Qualquer pessoa que inala a nuvem será paralisado imediatamente, incapaz de se mover por algum tempo. Este item pode ser jogado em inimigos distantes para pegá-los dentro do efeito do gás.</string>
+
+
+   <!--  STRINGS OF PotionOfPurity CLASS  -->
+   <string name="PotionOfPurity_Name">Poção da Purificação</string>
+   <string name="PotionOfPurity_Info">Este reagente vai rapidamente neutralizar todos os gases nocivos na área de efeito. Beber ele vai te dar uma imunidade temporária para esses gases.</string>
+   <string name="PotionOfPurity_Freshness">Você sente um frescor incomum no ar.</string>
+   <string name="PotionOfPurity_NoSmell">Você parou sentindo odores!</string>
+
+
+   <!--  STRINGS OF PotionOfStrength CLASS  -->
+   <string name="PotionOfStrength_Name">Poção da Força</string>
+   <string name="PotionOfStrength_Info">Este líquido poderoso flui naturalmente através de seus músculos, aumentando permanentemente a sua força por um ponto.</string>
+   <string name="PotionOfStrength_Apply">Uma nova força surge através de seu corpo.</string>
+
+
+   <!--  STRINGS OF PotionOfToxicGas CLASS  -->
+   <string name="PotionOfToxicGas_Name">Poção de Gás Tóxico</string>
+   <string name="PotionOfToxicGas_Info">Abrir ou quebrar esse vidro pressurizado fará com que o seu conteúdo exploda em uma nuvem mortal de gás tóxico verde. Você pode optar por lançar esta poção em inimigos distantes ao invés de abri-lo com a mão.</string>
 
 </resources>

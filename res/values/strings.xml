@@ -774,35 +774,126 @@
 
 <!--  PACKAGE /items/keys  -->
    <!--  STRINGS OF GoldemKey CLASS  -->
-   <string name="GoldemKey_Name">chave de ouro</string>
-   <string name="GoldemKey_Info">Os entalhes nesta chave de ouro são minúsculos e intrincados. Talvez ele pode abrir alguns cofres fechados!?</string>
+   <string name="GoldemKey_Name">golden key</string>
+   <string name="GoldemKey_Info">The notches on this golden key are tiny and intricate. Maybe it can open some chest lock?</string>
 
 
    <!--  STRINGS OF IronKey CLASS  -->
-   <string name="IronKey_Name">chave de ferro</string>
-   <string name="IronKey_Info">Os entalhes nesta chave de ferro antiga estão bem gastos​​; seu cordão de couro está danificada pelo tempo. Pode abrir portas!?</string>
-   <string name="IronKey_FromDepth">chave do nível %d</string>
+   <string name="IronKey_Name">iron key</string>
+   <string name="IronKey_Info">The notches on this ancient iron key are well worn; its leather lanyard is battered by age. What door might it open?</string>
+   <string name="IronKey_FromDepth">iron key from depth %d</string>
 
 
    <!--  STRINGS OF SkeletonKey CLASS  -->
-   <string name="SkeletonKey_Name">chave mestra</string>
-   <string name="SkeletonKey_Info">Esta chave parece importante: sua cabeça tem a forma de uma caveira. Provavelmente, ele pode abrir alguma porta importante.</string>
+   <string name="SkeletonKey_Name">skeleton key</string>
+   <string name="SkeletonKey_Info">This key looks serious: its head is shaped like a skull. Probably it can open some serious door.</string>
+   
+
+<!--  PACKAGE /items/potions  -->
+   <!--  STRINGS OF Potion CLASS  -->
+   <string name="Potion_Name">%s potion</string>
+   <string name="Potion_Info">This flask contains a swirling %s liquid. Who knows what it will do when drunk or thrown?</string>
+   <string name="Potion_ACDrink">DRINK</string>
+   <string name="Potion_Harmfull">Harmful potion!</string>
+   <string name="Potion_Beneficial">Beneficial potion</string>
+   <string name="Potion_Yes">Yes, I know what I\'m doing</string>
+   <string name="Potion_No">No, I changed my mind</string>
+   <string name="Potion_SureDrink">Are you sure you want to drink it? In most cases you should throw such potions at your enemies.</string>
+   <string name="Potion_SureThrow">Are you sure you want to throw it? In most cases it makes sense to drink it.</string>
+   <string name="Potion_Shatter">The flask shatters and %s liquid splashes harmlessly</string>
+   <string-array name="Potion_Colors">
+       <item >turquoise</item>
+       <item >crimson</item>
+       <item >azure</item>
+       <item >jade</item>
+       <item >golden</item>
+       <item >magenta</item>
+       <item >charcoal</item>
+       <item >ivory</item>
+       <item >amber</item>
+       <item >bistre</item>
+       <item >indigo</item>
+       <item >silver</item>
+   </string-array>
+
+
+   <!--  STRINGS OF PotionOfExperience CLASS  -->
+   <string name="PotionOfExperience_Name">Potion of Experience</string>
+   <string name="PotionOfExperience_Info">The storied experiences of multitudes of battles reduced to liquid form, this draught will instantly raise your experience level.</string>
+
+
+   <!--  STRINGS OF PotionOfFrost CLASS  -->
+   <string name="PotionOfFrost_Name">Potion of Frost</string>
+   <string name="PotionOfFrost_Info">Upon exposure to open air this chemical will evaporate into a freezing cloud, causing any creature that contacts it to be frozen in place unable to act and move.</string>
+
+
+   <!--  STRINGS OF PotionOfHealing CLASS  -->
+   <string name="PotionOfHealing_Name">Potion of Healing</string>
+   <string name="PotionOfHealing_Info">An elixir that will instantly return you to full health and cure poison.</string>
+   <string name="PotionOfHealing_Apply">Your wounds heal completely.</string>
+
+
+   <!--  STRINGS OF PotionOfInvisibility CLASS  -->
+   <string name="PotionOfInvisibility_Name">Potion of Invisibility</string>
+   <string name="PotionOfInvisibility_Info">Drinking this potion will render you temporarily invisible. While invisible, enemies will be unable to see you. Attacking an enemy, as well as using a wand or a scroll before enemy\'s eyes, will dispel the effect.</string>
+   <string name="PotionOfInvisibility_Apply">You see your hands turn invisible!</string>
+
+
+   <!--  STRINGS OF PotionOfLevitation CLASS  -->
+   <string name="PotionOfLevitation_Name">Potion of Levitation</string>
+   <string name="PotionOfLevitation_Info">Drinking this curious liquid will cause you to hover in the air, able to drift effortlessly over traps. Flames and gases fill the air, however, and cannot be bypassed while airborne.</string>
+   <string name="PotionOfLevitation_Apply">You float into the air!</string>
+
+
+   <!--  STRINGS OF PotionOfLiquidFlame CLASS  -->
+   <string name="PotionOfLiquidFlame_Name">Potion of Liquid Flame</string>
+   <string name="PotionOfLiquidFlame_Info">This flask contains an unstable compound which will burst violently into flame upon exposure to open air.</string>
+
+
+   <!--  STRINGS OF PotionOfMight CLASS  -->
+   <string name="PotionOfMight_Name">Potion of Might</string>
+   <string name="PotionOfMight_Info">This powerful liquid will course through your muscles, permanently increasing your strength by one point and health by five points.</string>
+   <string name="PotionOfMight_Apply">Newfound strength surges through your body.</string>
+
+
+   <!--  STRINGS OF PotionOfMindVision CLASS  -->
+   <string name="PotionOfMindVision_Name">Potion of Mind Vision</string>
+   <string name="PotionOfMindVision_Info">After drinking this, your mind will become attuned to the psychic signature of distant creatures, enabling you to sense biological presences through walls. Also this potion will permit you to see through nearby walls and doors.</string>
+   <string name="PotionOfMindVision_Apply1">You can somehow feel the presence of other creatures\' minds!</string>
+   <string name="PotionOfMindVision_Apply2">You can somehow tell that you are alone on this level at the moment.</string>
+
+
+   <!--  STRINGS OF PotionOfParalyticGas CLASS  -->
+   <string name="PotionOfParalyticGas_Name">Potion of Paralytic Gas</string>
+   <string name="PotionOfParalyticGas_Info">Upon exposure to open air, the liquid in this flask will vaporize into a numbing yellow haze. Anyone who inhales the cloud will be paralyzed instantly, unable to move for some time after the cloud dissipates. This item can be thrown at distant enemies to catch them within the effect of the gas.</string>
+
+
+   <!--  STRINGS OF PotionOfPurity CLASS  -->
+   <string name="PotionOfPurity_Name">Potion of Purification</string>
+   <string name="PotionOfPurity_Info">This reagent will quickly neutralize all harmful gases in the area of effect. Drinking it will give you a temporary immunity to such gases.</string>
+   <string name="PotionOfPurity_Freshness">You feel uncommon freshness in the air.</string>
+   <string name="PotionOfPurity_NoSmell">You\'ve stopped sensing any smells!</string>
+
+
+   <!--  STRINGS OF PotionOfStrength CLASS  -->
+   <string name="PotionOfStrength_Name">Potion of Strength</string>
+   <string name="PotionOfStrength_Info">This powerful liquid will course through your muscles, permanently increasing your strength by one point.</string>
+   <string name="PotionOfStrength_Apply">Newfound strength surges through your body.</string>
+
+
+   <!--  STRINGS OF PotionOfToxicGas CLASS  -->
+   <string name="PotionOfToxicGas_Name">Potion of Toxic Gas</string>
+   <string name="PotionOfToxicGas_Info">Uncorking or shattering this pressurized glass will cause its contents to explode into a deadly cloud of toxic green gas. You might choose to fling this potion at distant enemies instead of uncorking it by hand.</string>
+
 
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+
+
+
+
+
+
+
    
    <!--  STRINGS OF AlarmTrap CLASS  -->
    <string name="AlarmTrap_Desc">The trap emits a piercing sound that echoes throughout the dungeon!</string>

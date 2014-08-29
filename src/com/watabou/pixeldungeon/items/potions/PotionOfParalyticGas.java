@@ -17,8 +17,10 @@
  */
 package com.watabou.pixeldungeon.items.potions;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -26,7 +28,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 public class PotionOfParalyticGas extends Potion {
 
 	{
-		name = "Potion of Paralytic Gas";
+		name = Game.getVar(R.string.PotionOfToxicGas_Name);
 	}
 	
 	@Override
@@ -42,11 +44,7 @@ public class PotionOfParalyticGas extends Potion {
 	
 	@Override
 	public String desc() {
-		return
-			"Upon exposure to open air, the liquid in this flask will vaporize " +
-			"into a numbing yellow haze. Anyone who inhales the cloud will be paralyzed " +
-			"instantly, unable to move for some time after the cloud dissipates. This " +
-			"item can be thrown at distant enemies to catch them within the effect of the gas.";
+		return Game.getVar(R.string.PotionOfToxicGas_Info);
 	}
 	
 	@Override

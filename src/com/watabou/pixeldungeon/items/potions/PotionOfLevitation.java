@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.potions;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Levitation;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -25,22 +27,19 @@ import com.watabou.pixeldungeon.utils.GLog;
 public class PotionOfLevitation extends Potion {
 
 	{
-		name = "Potion of Levitation";
+		name = Game.getVar(R.string.PotionOfLevitation_Name);
 	}
 	
 	@Override
 	protected void apply( Hero hero ) {
 		setKnown();
 		Buff.affect( hero, Levitation.class, Levitation.DURATION );
-		GLog.i( "You float into the air!" );
+		GLog.i(Game.getVar(R.string.PotionOfLevitation_Apply));
 	}
 	
 	@Override
 	public String desc() {
-		return
-			"Drinking this curious liquid will cause you to hover in the air, " +
-			"able to drift effortlessly over traps. Flames and gases " +
-			"fill the air, however, and cannot be bypassed while airborne.";
+		return Game.getVar(R.string.PotionOfLevitation_Info);
 	}
 	
 	@Override
