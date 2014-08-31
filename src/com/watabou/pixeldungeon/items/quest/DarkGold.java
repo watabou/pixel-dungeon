@@ -17,13 +17,15 @@
  */
 package com.watabou.pixeldungeon.items.quest;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class DarkGold extends Item {
 	
 	{
-		name = "dark gold ore";
+		name = Game.getVar(R.string.DarkGold_Name);
 		image = ItemSpriteSheet.ORE;
 		
 		stackable = true;
@@ -42,9 +44,7 @@ public class DarkGold extends Item {
 	
 	@Override
 	public String info() {
-		return
-			"This metal is called dark not because of its color (it doesn't differ from the normal gold), " +
-			"but because it melts under the daylight, making it useless on the surface.";
+		return Game.getVar(R.string.DarkGold_Info);
 	}
 	
 	@Override

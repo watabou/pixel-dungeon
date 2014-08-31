@@ -2,6 +2,7 @@
 .project
 project.properties
 proguard.cfg
+lint.xml
 
 # Built application files
 *.apk

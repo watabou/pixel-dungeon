@@ -884,4 +884,37 @@
    <string name="PotionOfToxicGas_Name">Poção de Gás Tóxico</string>
    <string name="PotionOfToxicGas_Info">Abrir ou quebrar esse vidro pressurizado fará com que o seu conteúdo exploda em uma nuvem mortal de gás tóxico verde. Você pode optar por lançar esta poção em inimigos distantes ao invés de abri-lo com a mão.</string>
 
+
+<!--  PACKAGE /items/quest  -->
+   <!--  STRINGS OF CorpseDust CLASS  -->
+   <string name="CorpseDust_Name">poeira de cadáver</string>
+   <string name="CorpseDust_Info">Por fora a bola de poeira cadáver não e diferente de uma bola de poeira normal. No entanto, você sabe de alguma forma que é melhor se livrar dela o mais rápido possível.</string>
+
+
+   <!--  STRINGS OF DarkGold CLASS  -->
+   <string name="DarkGold_Name">minério de ouro escuro</string>
+   <string name="DarkGold_Info">Este metal é chamado de escuro não por causa da sua cor(que é igual à cor normal do ouro), mas porque derrete sob a luz do dia, tornando-se inútil na superfície.</string>
+
+
+   <!--  STRINGS OF DriedRose CLASS  -->
+   <string name="DriedRose_Name">rosa seca</string>
+   <string name="DriedRose_Info">A rosa secou há muito tempo, mas manteve todas as suas pétalas de alguma forma.</string>
+
+
+   <!--  STRINGS OF DwarfToken CLASS  -->
+   <string name="DwarfToken_Name">token de anão</string>
+   <string name="DwarfToken_Info">Muitos anões e algumas de suas criações maiores carregam esses pequenos pedaços de metal de propósito desconhecido. Talvez eles sejam jóias ou algum tipo de identificação. Anões são pessoas estranhas.</string>
+
+
+   <!--  STRINGS OF Pickaxe CLASS  -->
+   <string name="Pickaxe_Name">picareta</string>
+   <string name="Pickaxe_Info">Esta é uma ferramenta grande e resistente para quebrar rochas. Provavelmente isto pode ser usado como uma arma.</string>
+   <string name="Pickaxe_ACMine">MINERAR</string>
+   <string name="Pickaxe_NoVein">Não há nenhum veio de ouro escuro perto de você para minerar</string>
+
+
+   <!--  STRINGS OF RatSkull CLASS  -->
+   <string name="RatSkull_Name">crânio de rato gigante</string>
+   <string name="RatSkull_Info">Poderia ser um bom troféu de caça, mas cheira muito mal para colocá-lo em uma parede.</string>
+   
 </resources>

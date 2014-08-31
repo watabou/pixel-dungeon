@@ -17,13 +17,15 @@
  */
 package com.watabou.pixeldungeon.items.quest;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class DriedRose extends Item {
 	
 	{
-		name = "dried rose";
+		name = Game.getVar(R.string.DriedRose_Name);
 		image = ItemSpriteSheet.ROSE;
 		
 		unique = true;
@@ -41,7 +43,6 @@ public class DriedRose extends Item {
 	
 	@Override
 	public String info() {
-		return
-			"The rose has dried long ago, but it has kept all its petals somehow.";
+		return Game.getVar(R.string.DriedRose_Info);
 	}
 }

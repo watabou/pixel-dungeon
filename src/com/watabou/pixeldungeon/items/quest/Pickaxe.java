@@ -19,9 +19,11 @@ package com.watabou.pixeldungeon.items.quest;
 
 import java.util.ArrayList;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -41,16 +43,16 @@ import com.watabou.utils.Callback;
 
 public class Pickaxe extends Weapon {
 	
-	public static final String AC_MINE	= "MINE";
+	public static final String AC_MINE	= Game.getVar(R.string.Pickaxe_ACMine);
 	
 	public static final float TIME_TO_MINE = 2;
 	
-	private static final String TXT_NO_VEIN = "There is no dark gold vein near you to mine";
+	private static final String TXT_NO_VEIN = Game.getVar(R.string.Pickaxe_NoVein);
 	
 	private static final Glowing BLOODY = new Glowing( 0x550000 );
 	
 	{
-		name = "pickaxe";
+		name = Game.getVar(R.string.Pickaxe_Name);
 		image = ItemSpriteSheet.PICKAXE;
 		
 		unique = true;
@@ -171,7 +173,6 @@ public class Pickaxe extends Weapon {
 	
 	@Override
 	public String info() {
-		return
-			"This is a large and sturdy tool for breaking rocks. Probably it can be used as a weapon.";
+		return Game.getVar(R.string.Pickaxe_Info);
 	}
 }
