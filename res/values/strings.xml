@@ -919,6 +919,93 @@
    <string name="RatSkull_Info">It could be a nice hunting trophy, but it smells too bad to place it on a wall.</string>
 
 
+<!--  PACKAGE /items/rings  -->
+   <!--  STRINGS OF Ring CLASS  -->
+   <string name="Ring_Name">%s ring</string>
+   <string name="Ring_Info">This metal band is adorned with a large %s gem that glitters in the darkness. Who knows what effect it has when worn?</string>
+   <string name="Ring_Identify">you are now familiar enough with your %1$s to identify it. It is %2$s.</string>
+   <string-array name="Ring_Gems">
+       <item >diamond</item>
+       <item >opal</item>
+       <item >garnet</item>
+       <item >ruby</item>
+       <item >amethyst</item>
+       <item >topaz</item>
+       <item >onyx</item>
+       <item >tourmaline</item>
+       <item >emerald</item>
+       <item >sapphire</item>
+       <item >quartz</item>
+       <item >agate</item>
+   </string-array>
+   <string name="Ring_Info1">You can only wear 2 rings at a time</string>
+   <string name="Ring_Info2">Your %s tightens around your finger painfully</string>
+   <string name="Ring_Info3">You can\'t remove cursed %s!"</string>
+   <string name="Ring_Info4a">%1$s\n\nThe %2$s is on your finger %3$s.</string>
+   <string name="Ring_Info4b">, and because it is cursed, you are powerless to remove it</string>
+   <string name="Ring_Info5">%1$s\n\nYou can feel a malevolent magic lurking within the %2$s.</string>
+   <string name="Ring_BuffKnown">This is a %s</string>
+
+
+   <!--  STRINGS OF RingOfAccuracy CLASS  -->
+   <string name="RingOfAccuracy_Name">Ring of Accuracy</string>
+   <string name="RingOfAccuracy_Info">This ring increases your chance to hit the enemy.</string>
+
+
+   <!--  STRINGS OF RingOfDetection CLASS  -->
+   <string name="RingOfDetection_Name">Ring of Detection</string>
+   <string name="RingOfDetection_Info">Wearing this ring will allow the wearer to notice hidden secrets - traps and secret doors - without taking time to search. Degraded rings of detection will dull your senses, making it harder to notice secrets even when actively searching for them.</string>
+
+
+   <!--  STRINGS OF RingOfElements CLASS  -->
+   <string name="RingOfElements_Name">Ring of Elements</string>
+   <string name="RingOfElements_Info">This ring provides resistance to different elements, such as fire, electricity, gases etc. Also it decreases duration of negative effects.</string>
+
+
+   <!--  STRINGS OF RingOfEvasion CLASS  -->
+   <string name="RingOfEvasion_Name">Ring of Evasion</string>
+   <string name="RingOfEvasion_Info">This ring increases your chance to dodge enemy attack.</string>
+
+
+   <!--  STRINGS OF RingOfHaggler CLASS  -->
+   <string name="RingOfHaggler_Name">Ring of Haggler</string>
+   <string name="RingOfHaggler_Info">In fact this ring doesn\'t provide any magic effect, but it demonstrates to shopkeepers and vendors, that the owner of the ring is a member of The Thieves\' Guild. Usually they are glad to give a discount in exchange for temporary immunity guarantee. Upgrading this ring won\'t give any additional bonuses.</string>
+
+
+   <!--  STRINGS OF RingOfHaste CLASS  -->
+   <string name="RingOfHaste_Name">Ring of Haste</string>
+   <string name="RingOfHaste_Info">This ring accelerates the wearer\'s flow of time, allowing one to perform all actions a little faster.</string>
+
+
+   <!--  STRINGS OF RingOfHerbalism CLASS  -->
+   <string name="RingOfHerbalism_Name">Ring of Herbalism</string>
+   <string name="RingOfHerbalism_Info">This ring increases your chance to gather dew and seeds from trampled grass.</string>
+
+
+   <!--  STRINGS OF RingOfMending CLASS  -->
+   <string name="RingOfMending_Name">Ring of Mending</string>
+   <string name="RingOfMending_Info">This ring increases the body\'s regenerative properties, allowing one to recover lost health at an accelerated rate. Degraded rings will decrease or even halt one\'s natural regeneration.</string>
+
+
+   <!--  STRINGS OF RingOfPower CLASS  -->
+   <string name="RingOfPower_Name">Ring of Power</string>
+   <string name="RingOfPower_Info">Your wands will become more powerful in the energy field that radiates from this ring. Degraded rings of power will instead weaken your wands.</string>
+
+
+   <!--  STRINGS OF RingOfSatiety CLASS  -->
+   <string name="RingOfSatiety_Name">Ring of Satiety</string>
+   <string name="RingOfSatiety_Info">Wearing this ring you can go without food longer. Degraded rings of satiety will cause the opposite effect.</string>
+
+
+   <!--  STRINGS OF RingOfShadows CLASS  -->
+   <string name="RingOfShadows_Name">Ring of Shadows</string>
+   <string name="RingOfShadows_Info">Enemies will be less likely to notice you if you wear this ring. Degraded rings of shadows will alert enemies who might otherwise not have noticed your presence.</string>
+   
+
+   <!--  STRINGS OF RingOfThorns CLASS  -->
+   <string name="RingOfThorns_Name">Ring of Thorns</string>
+   <string name="RingOfThorns_Info">Though this ring doesn\'t provide real thorns, an enemy that attacks you will itself be wounded by a fraction of the damage that it inflicts. Upgrading this ring won\'t give any additional bonuses.</string>
+
 
 
 

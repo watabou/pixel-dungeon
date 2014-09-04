@@ -17,13 +17,14 @@
  */
 package com.watabou.pixeldungeon.items.rings;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 
 public class RingOfDetection extends Ring {
-
 	{
-		name = "Ring of Detection";
+		name = Game.getVar(R.string.RingOfDetection_Name);
 	}
 	
 	@Override
@@ -43,11 +44,7 @@ public class RingOfDetection extends Ring {
 	
 	@Override
 	public String desc() {
-		return isKnown() ?
-			"Wearing this ring will allow the wearer to notice hidden secrets - " +
-			"traps and secret doors - without taking time to search. Degraded rings of detection " +
-			"will dull your senses, making it harder to notice secrets even when actively searching for them." :
-			super.desc();
+		return isKnown() ? Game.getVar(R.string.RingOfDetection_Info) : super.desc();
 	}
 	
 	public class Detection extends RingBuff {

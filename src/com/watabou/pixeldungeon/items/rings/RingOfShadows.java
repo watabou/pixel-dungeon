@@ -17,10 +17,12 @@
  */
 package com.watabou.pixeldungeon.items.rings;
 
-public class RingOfShadows extends Ring {
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 
+public class RingOfShadows extends Ring {
 	{
-		name = "Ring of Shadows";
+		name = Game.getVar(R.string.RingOfShadows_Name);
 	}
 	
 	@Override
@@ -30,10 +32,7 @@ public class RingOfShadows extends Ring {
 	
 	@Override
 	public String desc() {
-		return isKnown() ?
-			"Enemies will be less likely to notice you if you wear this ring. Degraded rings " +
-			"of shadows will alert enemies who might otherwise not have noticed your presence." :
-			super.desc();
+		return isKnown() ? Game.getVar(R.string.RingOfShadows_Info) : super.desc();
 	}
 	
 	public class Shadows extends RingBuff {

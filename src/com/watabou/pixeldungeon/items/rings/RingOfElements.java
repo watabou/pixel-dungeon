@@ -19,6 +19,8 @@ package com.watabou.pixeldungeon.items.rings;
 
 import java.util.HashSet;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
@@ -29,9 +31,8 @@ import com.watabou.pixeldungeon.levels.traps.LightningTrap;
 import com.watabou.utils.Random;
 
 public class RingOfElements extends Ring {
-
 	{
-		name = "Ring of Elements";
+		name = Game.getVar(R.string.RingOfElements_Name);
 	}
 	
 	@Override
@@ -41,10 +42,7 @@ public class RingOfElements extends Ring {
 	
 	@Override
 	public String desc() {
-		return isKnown() ?
-			"This ring provides resistance to different elements, such as fire, " +
-			"electricity, gases etc. Also it decreases duration of negative effects." :
-			super.desc();
+		return isKnown() ? Game.getVar(R.string.RingOfElements_Info) : super.desc();
 	}
 
 	private static final HashSet<Class<?>> EMPTY = new HashSet<Class<?>>();

@@ -607,7 +607,7 @@
    <!--  STRINGS OF Armor CLASS  -->
    <string name="Armor_EquipCursed">seu %s se contrai em torno de você dolorosamente</string>
    <string name="Armor_UnequipCursed">Você não pode remover %s amaldiçoado!</string>
-   <string name="Armor_Identify">agora você está bastante familiarizado com seu %1$s e pode identificalo como %2$s.</string>
+   <string name="Armor_Identify">agora você está bastante familiarizado com seu %1$s e pode identificá-lo como %2$s.</string>
    <string name="Armor_ToString">%1$s :%2$d</string>
    <string name="Armor_Incompatible">Interação de diferentes tipos de magia apagaram o hieróglifo desta armadura!</string>
    <string name="Armor_Info1">\n\nEste %1$s concede até \"%2$d\" pontos de absorção de danos por ataque</string>
@@ -916,5 +916,93 @@
    <!--  STRINGS OF RatSkull CLASS  -->
    <string name="RatSkull_Name">crânio de rato gigante</string>
    <string name="RatSkull_Info">Poderia ser um bom troféu de caça, mas cheira muito mal para colocá-lo em uma parede.</string>
+
+
+<!--  PACKAGE /items/rings  -->
+   <!--  STRINGS OF Ring CLASS  -->
+   <string name="Ring_Name">anel de %s</string>
+   <string name="Ring_Info">Esta tira de metal é adornada com uma grande jóia de %s que brilha na escuridão. Quem sabe o efeito que tem quando usado?</string>
+   <string name="Ring_Identify">agora você está bastante familiarizado com seu %1$s e pode identificá-lo como %2$s.</string>
+   <string-array name="Ring_Gems">
+       <item >diamante</item>
+       <item >opala</item>
+       <item >granada</item>
+       <item >rubi</item>
+       <item >ametista</item>
+       <item >topázio</item>
+       <item >ônix</item>
+       <item >turmalina</item>
+       <item >esmeralda</item>
+       <item >safira</item>
+       <item >quartzo</item>
+       <item >ágata</item>
+   </string-array>
+   <string name="Ring_Info1">Você só pode usar dois anéis ao mesmo tempo</string>
+   <string name="Ring_Info2">Seu %s aperta em torno de seu dedo dolorosamente.</string>
+   <string name="Ring_Info3">Você não pode remover %s amaldiçoado!</string>
+   <string name="Ring_Info4a">%1$s\n\nO %2$s está em seu dedo %3$s.</string>
+   <string name="Ring_Info4b">, e porque ele é amaldiçoado, você não tem como removê-lo</string>
+   <string name="Ring_Info5">%1$s\n\nVocê pode sentir a magia maléfica escondida dentro do %2$s.</string>
+   <string name="Ring_BuffKnown">Into é um %s</string>
    
+
+   <!--  STRINGS OF RingOfAccuracy CLASS  -->
+   <string name="RingOfAccuracy_Name">Anel da Precisão</string>
+   <string name="RingOfAccuracy_Info">Este anel aumenta a sua chance de acertar o inimigo.</string>
+
+
+   <!--  STRINGS OF RingOfDetection CLASS  -->
+   <string name="RingOfDetection_Name">Anel de Detecção</string>
+   <string name="RingOfDetection_Info">Usar este anel permitirá que o usuário note segredos escondidos -armadilhas e portas secretas- sem perder tempo para pesquisar. Anéis de Detecção degradados são maçantes para seus sentidos, tornando-o mais difícil de encontrar segredos mesmo quando busca ativamente por eles.</string>
+
+
+   <!--  STRINGS OF RingOfElements CLASS  -->
+   <string name="RingOfElements_Name">Anel dos Elementos</string>
+   <string name="RingOfElements_Info">Este anel proporciona resistência a diferentes elementos, como fogo, eletricidade, gases, etc. Além disso, diminui a duração dos efeitos negativos.</string>
+
+
+   <!--  STRINGS OF RingOfEvasion CLASS  -->
+   <string name="RingOfEvasion_Name">Anel da Evasão</string>
+   <string name="RingOfEvasion_Info">Este anel aumenta a sua chance de se esquivar de um ataque inimigo.</string>
+
+
+   <!--  STRINGS OF RingOfHaggler CLASS  -->
+   <string name="RingOfHaggler_Name">Anel da Barganha</string>
+   <string name="RingOfHaggler_Info">Na verdade, este anel não fornece qualquer efeito mágico, mas demonstra a comerciantes e vendedores que o dono do anel é um membro da Guild dos Ladrões. Normalmente, eles tem o prazer de dar um desconto em troca de garantia de imunidade temporária. Atualizar este anel não vai dar nenhum bônus adicional.</string>
+
+
+   <!--  STRINGS OF RingOfHaste CLASS  -->
+   <string name="RingOfHaste_Name">Anel da Pressa</string>
+   <string name="RingOfHaste_Info">Este anel acelera o fluxo de tempo de seu portador, permitindo que se possa executar todas as ações um pouco mais rápido.</string>
+
+
+   <!--  STRINGS OF RingOfHerbalism CLASS  -->
+   <string name="RingOfHerbalism_Name">Anel das Ervas</string>
+   <string name="RingOfHerbalism_Info">Este anel aumenta a sua chance de coletar orvalho e sementes sobre a grama.</string>
+
+
+   <!--  STRINGS OF RingOfMending CLASS  -->
+   <string name="RingOfMending_Name">Anel da Recomposição</string>
+   <string name="RingOfMending_Info">Este anel aumenta propriedades regenerativas do corpo, permitindo que se possa recuperar a vida perdida em um ritmo acelerado. Anéis degradadas vão diminuir ou mesmo interromper sua regeneração natural.</string>
+
+
+   <!--  STRINGS OF RingOfPower CLASS  -->
+   <string name="RingOfPower_Name">Anel do Poder</string>
+   <string name="RingOfPower_Info">Suas varinhas se tornarão mais poderosas no campo de energia que irradia a partir deste anel. Anéis de Poder degradados, enfraquecem suas varinhas.</string>
+
+
+   <!--  STRINGS OF RingOfSatiety CLASS  -->
+   <string name="RingOfSatiety_Name">Anel de Saciedade</string>
+   <string name="RingOfSatiety_Info">Ao usar este anel, você pode ficar sem comida por mais tempo. Anéis de Saciedade degradados terão o efeito oposto.</string>
+
+
+   <!--  STRINGS OF RingOfShadows CLASS  -->
+   <string name="RingOfShadows_Name">Anel das Sombras</string>
+   <string name="RingOfShadows_Info">Inimigos serão menos propensos a notar você se você usar este anel. Anéis das Sobras degradados irão alertar os inimigos que poderiam não ter notado sua presença.</string>
+   
+
+   <!--  STRINGS OF RingOfThorns CLASS  -->
+   <string name="RingOfThorns_Name">Anel de Espinhos</string>
+   <string name="RingOfThorns_Info">Embora este anel não conjure espinhos reais, um inimigo que atacar você vai se ser ferido por uma fração do dano que ele infligiu. Atualizar este anel não vai dar nenhum bônus adicional.</string>
+
 </resources>

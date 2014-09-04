@@ -17,10 +17,12 @@
  */
 package com.watabou.pixeldungeon.items.rings;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
+
 public class RingOfPower extends Ring {
-	
 	{
-		name = "Ring of Power";
+		name = Game.getVar(R.string.RingOfPower_Name);
 	}
 	
 	@Override
@@ -30,10 +32,7 @@ public class RingOfPower extends Ring {
 	
 	@Override
 	public String desc() {
-		return isKnown() ?
-			"Your wands will become more powerful in the energy field " +
-			"that radiates from this ring. Degraded rings of power will instead weaken your wands." :
-			super.desc();
+		return isKnown() ? Game.getVar(R.string.RingOfPower_Info) : super.desc();
 	}
 	
 	public class Power extends RingBuff {

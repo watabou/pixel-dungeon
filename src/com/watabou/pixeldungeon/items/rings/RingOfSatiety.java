@@ -17,10 +17,12 @@
  */
 package com.watabou.pixeldungeon.items.rings;
 
-public class RingOfSatiety extends Ring {
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 
+public class RingOfSatiety extends Ring {
 	{
-		name = "Ring of Satiety";
+		name = Game.getVar(R.string.RingOfSatiety_Name);
 	}
 	
 	@Override
@@ -30,9 +32,7 @@ public class RingOfSatiety extends Ring {
 	
 	@Override
 	public String desc() {
-		return isKnown() ?
-			"Wearing this ring you can go without food longer. Degraded rings of satiety will cause the opposite effect." :
-			super.desc();
+		return isKnown() ? Game.getVar(R.string.RingOfSatiety_Info) : super.desc();
 	}
 	
 	public class Satiety extends RingBuff {
