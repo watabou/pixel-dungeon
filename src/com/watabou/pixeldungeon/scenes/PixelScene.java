@@ -119,7 +119,7 @@ public class PixelScene extends Scene {
 			
 			// 9x15 (18)
 			font3x = Font.colorMarked( 
-				BitmapCache.get( Assets.FONTS3X ), 22, 0x00000000, BitmapText.Font.LATIN_FULL );
+				BitmapCache.get( Assets.FONTS3X ), 22, 0x00000000, BitmapText.Font.LATIN_FULL+"ó" );
 			font3x.baseLine = 17;
 			font3x.tracking = -2;
 		}

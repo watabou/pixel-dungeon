@@ -17,9 +17,11 @@
  */
 package com.watabou.pixeldungeon.items.scrolls;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
@@ -31,7 +33,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 public class ScrollOfLullaby extends Scroll {
 
 	{
-		name = "Scroll of Lullaby";
+		name = Game.getVar(R.string.ScrollOfLullaby_Name);
 	}
 	
 	@Override
@@ -55,13 +57,13 @@ public class ScrollOfLullaby extends Scroll {
 		
 		switch (count) {
 		case 0:
-			GLog.i( "The scroll utters a soothing melody." );
+			GLog.i(Game.getVar(R.string.ScrollOfLullaby_Info1));
 			break;
 		case 1:
-			GLog.i( "The scroll utters a soothing melody and the " + affected.name + " falls asleep!" );
+			GLog.i(String.format(Game.getVar(R.string.ScrollOfLullaby_Info2), affected.name));
 			break;
 		default:
-			GLog.i( "The scroll utters a soothing melody and the monsters fall asleep!" );
+			GLog.i(Game.getVar(R.string.ScrollOfLullaby_Info3));
 		}
 		setKnown();
 		
@@ -70,9 +72,7 @@ public class ScrollOfLullaby extends Scroll {
 	
 	@Override
 	public String desc() {
-		return
-			"A soothing melody will put all creatures in your field of view into a deep sleep, " +
-			"giving you a chance to flee or make a surprise attack on them.";
+		return Game.getVar(R.string.ScrollOfLullaby_Info);
 	}
 	
 	@Override

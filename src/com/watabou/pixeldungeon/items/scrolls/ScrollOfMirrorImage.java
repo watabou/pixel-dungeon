@@ -19,8 +19,10 @@ package com.watabou.pixeldungeon.items.scrolls;
 
 import java.util.ArrayList;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.mobs.npcs.MirrorImage;
@@ -34,7 +36,7 @@ public class ScrollOfMirrorImage extends Scroll {
 	private static final int NIMAGES	= 3;
 	
 	{
-		name = "Scroll of Mirror Image";
+		name = Game.getVar(R.string.ScrollOfMirrorImage_Name);
 	}
 	
 	@Override
@@ -74,7 +76,6 @@ public class ScrollOfMirrorImage extends Scroll {
 	
 	@Override
 	public String desc() {
-		return 
-			"The incantation on this scroll will create illusionary twins of the reader, which will chase his enemies.";
+		return Game.getVar(R.string.ScrollOfMirrorImage_Info);
 	}
 }

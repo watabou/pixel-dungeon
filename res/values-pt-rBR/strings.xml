@@ -1005,4 +1005,114 @@
    <string name="RingOfThorns_Name">Anel de Espinhos</string>
    <string name="RingOfThorns_Info">Embora este anel não conjure espinhos reais, um inimigo que atacar você vai se ser ferido por uma fração do dano que ele infligiu. Atualizar este anel não vai dar nenhum bônus adicional.</string>
 
+
+<!--  PACKAGE /items/scrolls  -->
+   <!--  STRINGS OF Scroll CLASS  -->
+   <string name="Scroll_Name">pergaminho \"%s\"</string>
+   <string name="Scroll_Info">Este pergaminho é tem uma escrita indecifrável, e tem um título de runa %s. Quem sabe o que vai acontecer quando lido em voz alta?</string>
+   <string name="Scroll_ACRead">LER</string>
+   <string name="Scroll_Blinded">Você não pode ler um pergaminho enquanto cego</string>
+   <string-array name="Scroll_Runes">
+       <item >KAUNAN</item>
+       <item >SOWILO</item>
+       <item >LAGUZ</item>
+       <item >YNGVI</item>
+       <item >GYFU</item>
+       <item >RAIDO</item>
+       <item >ISAZ</item>
+       <item >MANNAZ</item>
+       <item >NAUDIZ</item>
+       <item >BERKANAN</item>
+       <item >ODAL</item>
+       <item >TIWAZ</item>
+   </string-array>
+
+
+   <!--  STRINGS OF InventoryScroll CLASS  -->
+   <string name="InventoryScroll_Title">Escolha um item</string>
+   <string name="InventoryScroll_Warning">Você realmente deseja cancelar o uso d prgaminho? Ele será descartado de qualquer forma!</string>
+   <string name="InventoryScroll_Yes">Sim, tenho certeza</string>
+   <string name="InventoryScroll_No">Não, eu mudei de idéia</string>
+
+
+   <!--  STRINGS OF ScrollOfChallenge CLASS  -->
+   <string name="ScrollOfChallenge_Name">Pergaminho do Desafio</string>
+   <string name="ScrollOfChallenge_Info">Ao ler em voz alta, este pergaminho irá desencadear um rugido desafiador que vai despertar todos os monstros e alertá-los para a localização do leitor.</string>
+   <string name="ScrollOfChallenge_Info1">O pergaminho emite um rugido desafiador que ecoa em todo o calabouço!</string>
+
+
+   <!--  STRINGS OF ScrollOfIdentify CLASS  -->
+   <string name="ScrollOfIdentify_Name">Pergaminho da Identificação</string>
+   <string name="ScrollOfIdentify_Info">Revela permanentemente durante o jogo todos os segredos de determinado item</string>
+   <string name="ScrollOfIdentify_InvTitle">Escolha um item para identificar</string>
+   <string name="ScrollOfIdentify_Info1">Isto é %s</string>
+
+
+   <!--  STRINGS OF ScrollOfLullaby CLASS  -->
+   <string name="ScrollOfLullaby_Name">Pergaminho Canção de Ninar</string>
+   <string name="ScrollOfLullaby_Info">A melodia suave vai colocar todas as criaturas em seu campo de visão em um sono profundo, dando-lhe a chance de fugir ou fazer um ataque surpresa sobre eles.</string>
+   <string name="ScrollOfLullaby_Info1">O pergaminho emite uma melodia suave.</string>
+   <string name="ScrollOfLullaby_Info2">O pergaminho emite uma melodia suave e o %s adormece!</string>
+   <string name="ScrollOfLullaby_Info3">O pergaminho emite uma melodia suave e os monstros adormecem!</string>
+
+
+   <!--  STRINGS OF ScrollOfMagicMapping CLASS  -->
+   <string name="ScrollOfMagicMapping_Name">Pergaminho de Mapeamento</string>
+   <string name="ScrollOfMagicMapping_Info">Quando este pergaminho é lido, uma imagem de clareza cristalina será gravada em sua memória, mostrando o layout preciso do nível e revelando todos os segredos ocultos. As localizações dos itens e criaturas permanecerão desconhecidos.</string>
+   <string name="ScrollOfMagicMapping_Layout">Agora você conhece todo o nivel atual.</string>
+
+
+   <!--  STRINGS OF ScrollOfMirrorImage CLASS  -->
+   <string name="ScrollOfMirrorImage_Name">Permaminho da Imagem espelhada</string>
+   <string name="ScrollOfMirrorImage_Info">O encantamento deste pergaminho irá criar imagens ilusórias de seu leitor. Essas imagens irão perseguir seus inimigos.</string>
+
+
+   <!--  STRINGS OF ScrollOfPsionicBlast CLASS  -->
+   <string name="ScrollOfPsionicBlast_Name">Pergaminho de Explosão Psiônica</string>
+   <string name="ScrollOfPsionicBlast_Info">Este pergaminho contém energia destrutiva que pode ser psionicamente canalizados para infligir um grande dano a todas as criaturas dentro do campo de visão. Um flash de luz acompanhada de cegueira temporaria afetará todos na área de efeito, incluindo o leitor de pergaminho.</string>
+
+
+   <!--  STRINGS OF ScrollOfRecharging CLASS  -->
+   <string name="ScrollOfRecharging_Name">Pergaminho da Recarga</string>
+   <string name="ScrollOfRecharging_Info">O poder mágico bruto ligado neste pergaminho irá, quando lançado, recarregar todas as varinhas do leitor para a carga máxima.</string>
+   <string name="ScrollOfRecharging_Info1a">uma onda de energia através de seu pacote, recarrega sua varinha</string>
+   <string name="ScrollOfRecharging_Info1b">uma onda de energia através de seu pacote, recarrega suas varinhas</string>
+   <string name="ScrollOfRecharging_Info2">uma onda de energia através de seu pacote, mas nada acontece</string>
+
+
+   <!--  STRINGS OF ScrollOfRemoveCurse CLASS  -->
+   <string name="ScrollOfRemoveCurse_Name">Pergaminho de Remoção de Maldição</string>
+   <string name="ScrollOfRemoveCurse_Info">O encantamento deste pergaminho irá remover imediatamente qualquer encantamento maligno que impede a remoção de suas armas, arrmaduras, anéis e qualquer item carregado pelo leitor.</string>
+   <string name="ScrollOfRemoveCurse_Proced">Sua mochila brilha com uma luz pura, e uma energia maléfica se dispersa.</string>
+   <string name="ScrollOfRemoveCurse_NoProced">Sua mochila brilha com uma luz pura, mas nada acontece.</string>
+
+
+   <!--  STRINGS OF ScrollOfTeleportation CLASS  -->
+   <string name="ScrollOfTeleportation_Name">Pergaminho do Teletransporte</string>
+   <string name="ScrollOfTeleportation_Info">O feitiço neste pergaminho transporta instantaneamente o leitor para um local aleatório no nível atual. Ele pode ser usado para escapar de uma situação perigosa, mas um leitor azarado pode acabar em um lugar ainda mais perigoso.</string>
+   <string name="ScrollOfTeleportation_Teleport">Em um piscar de olhos você foi teletransportado para outro local do nível.</string>
+   <string name="ScrollOfTeleportation_NoTeleport">A forte aura magia deste lugar impede seu teletransporte!</string>
+
+
+   <!--  STRINGS OF ScrollOfTerror CLASS  -->
+   <string name="ScrollOfTerror_Name">Pergaminho do Terror</string>
+   <string name="ScrollOfTerror_Info">Um flash de luz vermelha irá causar terror a todas as criaturas em seu campo de visão, fazendo com que fujam de você. Atacar um inimigo em fuga irá dissipar o efeito.</string>
+   <string name="ScrollOfTerror_Info1">O pergaminho emite um flash brilhante de luz vermelha</string>
+   <string name="ScrollOfTerror_Info2">O pergaminho emite um flash brilhante de luz vermelha e o %s foge!</string>
+   <string name="ScrollOfTerror_Info3">O pergaminho emite um flash brilhante de luz vermelha e os monstros fogem!</string>
+
+
+   <!--  STRINGS OF ScrollOfUpgrade CLASS  -->
+   <string name="ScrollOfUpgrade_Name">Pergaminho de Atualização</string>
+   <string name="ScrollOfUpgrade_Info">Este pergaminho irá atualizar um único item, melhorando sua qualidade. Varinhas irão aumentar em poder em em número de cargas; Uma arma vai causar mais dano ou encontra sua marca com mais frequencia; Uma armadura irá desviar golpes adicionais; O efeito de um anel será intensificado. Armas e armaduras também exigirã menos força para sua utilização, e qualquer encantamento sobre o item será removida.</string>
+   <string name="ScrollOfUpgrade_InvTitle">Escolha um item para atualizar</string>
+   <string name="ScrollOfUpgrade_LooksBetter">seu %s certamente está melhor agora.</string>
+
+
+   <!--  STRINGS OF ScrollOfWeaponUpgrade CLASS  -->
+   <string name="ScrollOfWeaponUpgrade_Name">Pergaminho de Atualização de Armas</string>
+   <string name="ScrollOfWeaponUpgrade_Info">Este pergaminho irá atualizar armas brancas, melhorando sua qualidade. A contrário do Pergaminho de Atualização normal este pergaminho especializado nunca irá destruir encantamentos em uma arma. Pelo contrário, ele é capaz de atribuir em uma arma desencantada um encantamento aleatório.</string>
+   <string name="ScrollOfWeaponUpgrade_InvTitle">Escolha uma arma para atualizar</string>
+   <string name="ScrollOfWeaponUpgrade_LooksBetter">seu %s certamente está melhor agora.</string>
+   
 </resources>

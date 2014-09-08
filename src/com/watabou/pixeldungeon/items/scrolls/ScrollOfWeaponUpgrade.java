@@ -17,8 +17,10 @@
  */
 package com.watabou.pixeldungeon.items.scrolls;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
@@ -27,11 +29,11 @@ import com.watabou.pixeldungeon.windows.WndBag;
 
 public class ScrollOfWeaponUpgrade extends InventoryScroll {
 
-	private static final String TXT_LOOKS_BETTER	= "your %s certainly looks better now";
+	private static final String TXT_LOOKS_BETTER = Game.getVar(R.string.ScrollOfWeaponUpgrade_LooksBetter);
 	
 	{
-		name = "Scroll of Weapon Upgrade";
-		inventoryTitle = "Select a weapon to upgrade";
+		name = Game.getVar(R.string.ScrollOfWeaponUpgrade_Name);
+		inventoryTitle = Game.getVar(R.string.ScrollOfWeaponUpgrade_InvTitle);
 		mode = WndBag.Mode.WEAPON;
 	}
 	
@@ -52,9 +54,6 @@ public class ScrollOfWeaponUpgrade extends InventoryScroll {
 	
 	@Override
 	public String desc() {
-		return
-			"This scroll will upgrade a melee weapon, improving its quality. In contrast to a regular Scroll of Upgrade, " +
-			"this specialized version will never destroy an enchantment on a weapon. On the contrary, it is able to imbue " +
-			"an unenchanted weapon with a random enchantment.";
+		return Game.getVar(R.string.ScrollOfWeaponUpgrade_Info);
 	}
 }
