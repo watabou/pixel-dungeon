@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -83,6 +82,9 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 	// Char owner
 	public Char ch;
 	
+	// The sprite is currently in motion
+	public boolean isMoving = false;
+	
 	public CharSprite() {
 		super();
 		listener = this;
@@ -135,12 +137,16 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 		motion = new PosTweener( this, worldToCamera( to ), MOVE_INTERVAL );
 		motion.listener = this;
 		parent.add( motion );
+
+		isMoving = true;
 		
 		turnTo( from , to );
 		
 		if (visible && Level.water[from] && !ch.flying) {
 			GameScene.ripple( from );
 		}
+		
+		ch.onMotionComplete();
 	}
 	
 	public void interruptMotion() {
@@ -376,9 +382,11 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 	@Override
 	public void onComplete( Tweener tweener ) {
 		if (tweener == motion) {
+			
+			isMoving = false;
+			
 			motion.killAndErase();
 			motion = null;
-			ch.onMotionComplete();
 		}
 	}
 

@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -80,7 +79,7 @@ public class Boomerang extends MissileWeapon {
 	@Override
 	public void proc( Char attacker, Char defender, int damage ) {
 		super.proc( attacker, defender, damage );
-		if (attacker instanceof Hero && ((Hero)attacker).usingRanged) {
+		if (attacker instanceof Hero && ((Hero)attacker).rangedWeapon == this) {
 			circleBack( defender.pos, (Hero)attacker );
 		}
 	}
@@ -91,11 +90,25 @@ public class Boomerang extends MissileWeapon {
 	}
 	
 	private void circleBack( int from, Hero owner ) {
+		
+		((MissileSprite)curUser.sprite.parent.recycle( MissileSprite.class )).
+			reset( from, curUser.pos, curItem, null );
+		
+		if (throwEquiped) {
+			owner.belongings.weapon = this;
+			owner.spend( -TIME_TO_EQUIP );
+		} else 
 		if (!collect( curUser.belongings.backpack )) {
 			Dungeon.level.drop( this, owner.pos ).sprite.drop();
 		}
-		((MissileSprite)curUser.sprite.parent.recycle( MissileSprite.class )).
-			reset( from, curUser.pos, curItem, null );
+	}
+	
+	private boolean throwEquiped;
+	
+	@Override
+	public void cast( Hero user, int dst ) {
+		throwEquiped = isEquipped( user );
+		super.cast( user, dst );
 	}
 	
 	@Override

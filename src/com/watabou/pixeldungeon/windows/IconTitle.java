@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -20,8 +19,11 @@ package com.watabou.pixeldungeon.windows;
 import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.ui.Component;
+import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.utils.Utils;
 
 public class IconTitle extends Component {
 
@@ -34,6 +36,12 @@ public class IconTitle extends Component {
 	
 	public IconTitle() {
 		super();
+	}
+	
+	public IconTitle( Item item ) {
+		this( 
+			new ItemSprite( item.image(), item.glowing() ), 
+			Utils.capitalize( item.toString() ) );
 	}
 	
 	public IconTitle( Image icon, String label ) {

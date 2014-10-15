@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -60,9 +59,13 @@ public class TenguSprite extends MobSprite {
 		play( run );
 		turnTo( from , to );
 		
+		isMoving = true;
+		
 		if (Level.water[to]) {
 			GameScene.ripple( to );
 		}
+		
+		ch.onMotionComplete();
 	}
 	
 	@Override
@@ -90,8 +93,8 @@ public class TenguSprite extends MobSprite {
 	@Override
 	public void onComplete( Animation anim ) {
 		if (anim == run) {
+			isMoving = false;
 			idle();
-			ch.onMotionComplete();
 		} else {
 			super.onComplete( anim );
 		}

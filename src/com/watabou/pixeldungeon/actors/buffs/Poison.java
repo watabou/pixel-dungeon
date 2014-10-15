@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -29,8 +28,6 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
 public class Poison extends Buff implements Hero.Doom {
-	
-	public static final int DOT	= 2;
 	
 	protected float left;
 	
@@ -67,7 +64,7 @@ public class Poison extends Buff implements Hero.Doom {
 	public boolean act() {
 		if (target.isAlive()) {
 			
-			target.damage( DOT, this );
+			target.damage( (int)(left / 3) + 1, this );
 			spend( TICK );
 			
 			if ((left -= TICK) <= 0) {

@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -34,7 +33,7 @@ public class Slow extends FlavourBuff {
 	public String toString() {
 		return "Slowed";
 	}
-
+	
 	public static float duration( Char ch ) {
 		Resistance r = ch.buff( Resistance.class );
 		return r != null ? r.durationFactor() * DURATION : DURATION;

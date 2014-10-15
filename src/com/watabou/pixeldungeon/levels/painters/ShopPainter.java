@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -28,6 +27,7 @@ import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.Torch;
+import com.watabou.pixeldungeon.items.Weightstone;
 import com.watabou.pixeldungeon.items.armor.*;
 import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
@@ -95,18 +95,21 @@ public class ShopPainter extends Painter {
 			items.add( (Random.Int( 2 ) == 0 ? new Quarterstaff() : new Spear()).identify() );
 			items.add( new LeatherArmor().identify() );
 			items.add( new SeedPouch() );
+			items.add( new Weightstone() );
 			break;
 			
 		case 11:
 			items.add( (Random.Int( 2 ) == 0 ? new Sword() : new Mace()).identify() );
 			items.add( new MailArmor().identify() );
 			items.add( new ScrollHolder() );
+			items.add( new Weightstone() );
 			break;
 			
 		case 16:
 			items.add( (Random.Int( 2 ) == 0 ? new Longsword() : new BattleAxe()).identify() );
 			items.add( new ScaleArmor().identify() );
 			items.add( new WandHolster() );
+			items.add( new Weightstone() );
 			break;
 			
 		case 21:

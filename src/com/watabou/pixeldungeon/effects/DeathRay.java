@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -28,7 +27,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.utils.PointF;
 
 public class DeathRay extends Image {
-	
+
 	private static final double A = 180 / Math.PI;
 	
 	private static final float DURATION	= 0.5f;

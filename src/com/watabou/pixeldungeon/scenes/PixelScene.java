@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -239,8 +238,13 @@ public class PixelScene extends Scene {
 		v.y = align( c, v.y );
 	}
 	
+	public static boolean noFade = false;
 	protected void fadeIn() {
-		fadeIn( 0xFF000000, false );
+		if (noFade) {
+			noFade = false;
+		} else {
+			fadeIn( 0xFF000000, false );
+		}
 	}
 	
 	protected void fadeIn( int color, boolean light ) {

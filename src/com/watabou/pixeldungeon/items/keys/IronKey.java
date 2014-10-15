@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -18,7 +17,6 @@
 package com.watabou.pixeldungeon.items.keys;
 
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -27,20 +25,11 @@ public class IronKey extends Key {
 
 	private static final String TXT_FROM_DEPTH = "iron key from depth %d";
 
-	public static int curDepthQunatity = 0;
+	public static int curDethQuantity = 0;
 	
 	{
 		name = "iron key";
 		image = ItemSpriteSheet.IRON_KEY;
-	}
-	
-	public IronKey() {
-		this( 0 );
-	}
-	
-	public IronKey( int depth ) {
-		super();
-		this.depth = depth;
 	}
 	
 	@Override
@@ -53,12 +42,10 @@ public class IronKey extends Key {
 	}
 	
 	@Override
-	public Item detach( Bag  bag ) {
-		Item result = super.detach( bag );
-		if (result != null && depth == Dungeon.depth) {
+	public void onDetach( ) {
+		if (depth == Dungeon.depth) {
 			Dungeon.hero.belongings.countIronKeys();
 		}
-		return result;
 	}
 	
 	@Override

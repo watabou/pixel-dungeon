@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -37,6 +36,7 @@ import com.watabou.pixeldungeon.sprites.HeroSprite;
 import com.watabou.pixeldungeon.ui.BadgesList;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.ItemSlot;
+import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.utils.Utils;
 
@@ -141,7 +141,9 @@ public class WndRanking extends WndTabbed {
 		
 		private static final int GAP	= 4;
 		
-		private static final String TXT_TITLE		= "Level %d %s";
+		private static final String TXT_TITLE	= "Level %d %s";
+		
+		private static final String TXT_CHALLENGES	= "Challenges";
 		
 		private static final String TXT_HEALTH	= "Health";
 		private static final String TXT_STR		= "Strength";
@@ -167,7 +169,22 @@ public class WndRanking extends WndTabbed {
 			title.setRect( 0, 0, WIDTH, 0 );
 			add( title );
 			
-			float pos = title.bottom() + GAP + GAP;
+			float pos = title.bottom();
+			
+			if (Dungeon.challenges > 0) {
+				RedButton btnCatalogus = new RedButton( TXT_CHALLENGES ) {
+					@Override
+					protected void onClick() {
+						Game.scene().add( new WndChallenges( Dungeon.challenges, false ) );
+					}
+				};
+				btnCatalogus.setRect( 0, pos + GAP, btnCatalogus.reqWidth() + 2, btnCatalogus.reqHeight() + 2 );
+				add( btnCatalogus );
+				
+				pos = btnCatalogus.bottom();
+			}
+			
+			pos += GAP + GAP;
 			
 			pos = statSlot( this, TXT_STR, Integer.toString( Dungeon.hero.STR ), pos );
 			pos = statSlot( this, TXT_HEALTH, Integer.toString( Dungeon.hero.HT ), pos );

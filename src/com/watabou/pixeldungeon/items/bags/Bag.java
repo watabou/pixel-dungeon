@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -86,9 +85,8 @@ public class Bag extends Item implements Iterable<Item> {
 	}
 	
 	@Override
-	public Item detach( Bag container ) {
-		owner = null;
-		return super.detach( container );
+	public void onDetach( ) {
+		this.owner = null;
 	}
 	
 	@Override

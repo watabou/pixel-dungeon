@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -62,7 +61,7 @@ public class Yog extends Mob {
 		
 		EXP = 50;
 		
-		state = State.PASSIVE;
+		state = PASSIVE;
 	}
 	
 	private static final String TXT_DESC =
@@ -144,7 +143,7 @@ public class Yog extends Mob {
 		}
 		
 		GameScene.bossSlain();
-		Dungeon.level.drop( new SkeletonKey( Dungeon.depth ), pos ).sprite.drop();
+		Dungeon.level.drop( new SkeletonKey(), pos ).sprite.drop();
 		super.die( cause );
 		
 		yell( "..." );
@@ -193,7 +192,7 @@ public class Yog extends Mob {
 			
 			EXP = 0;
 			
-			state = State.WANDERING;
+			state = WANDERING;
 		}
 		
 		public RottingFist() {
@@ -286,7 +285,7 @@ public class Yog extends Mob {
 			
 			EXP = 0;
 			
-			state = State.WANDERING;
+			state = WANDERING;
 		}
 		
 		public BurningFist() {
@@ -403,7 +402,7 @@ public class Yog extends Mob {
 			
 			EXP = 0;
 			
-			state = State.HUNTING;
+			state = HUNTING;
 		}
 		
 		@Override

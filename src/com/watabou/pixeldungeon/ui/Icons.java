@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -26,11 +25,9 @@ public enum Icons {
 	SKULL,
 	BUSY,
 	COMPASS,
-	INFO, 
 	PREFS,
 	WARNING,
 	TARGET,
-	MASTERY,
 	WATA,
 	WARRIOR,
 	MAGE,
@@ -47,7 +44,10 @@ public enum Icons {
 	SCROLL_HOLDER,
 	WAND_HOLSTER,
 	CHECKED,
-	UNCHECKED;
+	UNCHECKED,
+	EXIT,
+	CHALLENGE_OFF,
+	CHALLENGE_ON;
 	
 	public Image get() {
 		return get( this );
@@ -65,9 +65,6 @@ public enum Icons {
 		case COMPASS:
 			icon.frame( icon.texture.uvRect( 0, 8, 7, 13 ) );
 			break;
-		case INFO:
-			icon.frame( icon.texture.uvRect( 16, 0, 30, 14 ) );
-			break;
 		case PREFS:
 			icon.frame( icon.texture.uvRect( 30, 0, 46, 16 ) );
 			break;
@@ -76,9 +73,6 @@ public enum Icons {
 			break;
 		case TARGET:
 			icon.frame( icon.texture.uvRect( 0, 13, 16, 29 ) );
-			break;
-		case MASTERY:
-			icon.frame( icon.texture.uvRect( 16, 14, 30, 28 ) );
 			break;
 		case WATA:
 			icon.frame( icon.texture.uvRect( 30, 16, 45, 26 ) );
@@ -130,6 +124,15 @@ public enum Icons {
 			break;
 		case UNCHECKED:
 			icon.frame( icon.texture.uvRect( 66, 12, 78, 24 ) );
+			break;
+		case EXIT:
+			icon.frame( icon.texture.uvRect( 98, 0, 114, 16 ) );
+			break;
+		case CHALLENGE_OFF:
+			icon.frame( icon.texture.uvRect( 78, 16, 102, 40 ) );
+			break;
+		case CHALLENGE_ON:
+			icon.frame( icon.texture.uvRect( 102, 16, 126, 40 ) );
 			break;
 		}
 		return icon;

@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -81,7 +80,7 @@ public class HuntressArmor extends ClassArmor {
 			return;
 		}
 		
-		curUser.HP /= 2;
+		curUser.HP -= (curUser.HP / 3);
 		
 		curUser.sprite.zap( curUser.pos );
 		curUser.busy();

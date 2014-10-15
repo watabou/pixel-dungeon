@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -45,9 +44,9 @@ public class Metabolism extends Glyph {
 			if (healing > 0) {
 				
 				Hunger hunger = defender.buff( Hunger.class );
-				
+
 				if (hunger != null && !hunger.isStarving()) {
-					
+
 					hunger.satisfy( -Hunger.STARVING / 10 );
 					BuffIndicator.refreshHero();
 					

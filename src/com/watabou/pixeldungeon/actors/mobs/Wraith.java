@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -86,7 +85,7 @@ public class Wraith extends Mob {
 	
 	@Override
 	public boolean reset() {
-		state = State.WANDERING;
+		state = WANDERING;
 		return true;
 	}
 
@@ -112,7 +111,7 @@ public class Wraith extends Mob {
 			Wraith w = new Wraith();
 			w.adjustStats( Dungeon.depth );
 			w.pos = pos;
-			w.state = State.HUNTING;
+			w.state = w.HUNTING;
 			GameScene.add( w, SPAWN_DELAY );
 			
 			w.sprite.alpha( 0 );

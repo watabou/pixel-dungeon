@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -76,11 +75,11 @@ public class DangerIndicator extends Tag {
 			int v =  Dungeon.hero.visibleEnemies();
 			if (v != lastNumber) {
 				lastNumber = v;
-				if (visible = (lastNumber > 0)) {
+				if (visible = lastNumber > 0) {
 					number.text( Integer.toString( lastNumber ) );
 					number.measure();
 					placeNumber();
-
+					
 					flash();
 				}
 			}

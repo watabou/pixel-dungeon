@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -208,6 +207,9 @@ public class BadgeBanner extends Image {
 			break;
 		case 38:
 			p.offset( 5, 5 );
+			break;
+		case 39:
+			p.offset( 5, 4 );
 			break;
 		case 40:
 		case 41:

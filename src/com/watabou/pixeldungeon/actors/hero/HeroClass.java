@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -82,6 +81,8 @@ public enum HeroClass {
 		
 		hero.heroClass = this;
 		
+		initCommon( hero );
+		
 		switch (this) {
 		case WARRIOR:
 			initWarrior( hero );
@@ -100,20 +101,37 @@ public enum HeroClass {
 			break;
 		}
 		
+		if (Badges.isUnlocked( masteryBadge() )) {
+			new TomeOfMastery().collect();
+		}
+		
 		hero.updateAwareness();
+	}
+	
+	private static void initCommon( Hero hero ) {
+		(hero.belongings.armor = new ClothArmor()).identify();
+		new Food().identify().collect();
+	}
+	
+	public Badges.Badge masteryBadge() {
+		switch (this) {
+		case WARRIOR:
+			return Badges.Badge.MASTERY_WARRIOR;
+		case MAGE:
+			return Badges.Badge.MASTERY_MAGE;
+		case ROGUE:
+			return Badges.Badge.MASTERY_ROGUE;
+		case HUNTRESS:
+			return Badges.Badge.MASTERY_HUNTRESS;
+		}
+		return null;
 	}
 	
 	private static void initWarrior( Hero hero ) {
 		hero.STR = hero.STR + 1;
 		
 		(hero.belongings.weapon = new ShortSword()).identify();
-		(hero.belongings.armor = new ClothArmor()).identify();
 		new Dart( 8 ).identify().collect();
-		new Food().identify().collect();
-		
-		if (Badges.isUnlocked( Badges.Badge.MASTERY_WARRIOR )) {
-			new TomeOfMastery().collect();
-		}
 		
 		Dungeon.quickslot = Dart.class;
 		
@@ -122,15 +140,9 @@ public enum HeroClass {
 	
 	private static void initMage( Hero hero ) {	
 		(hero.belongings.weapon = new Knuckles()).identify();
-		(hero.belongings.armor = new ClothArmor()).identify();
-		new Food().identify().collect();
 		
 		WandOfMagicMissile wand = new WandOfMagicMissile();
 		wand.identify().collect();
-		
-		if (Badges.isUnlocked( Badges.Badge.MASTERY_MAGE )) {
-			new TomeOfMastery().collect();
-		}
 		
 		Dungeon.quickslot = wand;
 		
@@ -139,16 +151,10 @@ public enum HeroClass {
 	
 	private static void initRogue( Hero hero ) {
 		(hero.belongings.weapon = new Dagger()).identify();
-		(hero.belongings.armor = new ClothArmor()).identify();
 		(hero.belongings.ring1 = new RingOfShadows()).upgrade().identify();
 		new Dart( 8 ).identify().collect();
-		new Food().identify().collect();
 		
 		hero.belongings.ring1.activate( hero );
-		
-		if (Badges.isUnlocked( Badges.Badge.MASTERY_ROGUE )) {
-			new TomeOfMastery().collect();
-		}
 		
 		Dungeon.quickslot = Dart.class;
 		
@@ -160,14 +166,8 @@ public enum HeroClass {
 		hero.HP = (hero.HT -= 5);
 		
 		(hero.belongings.weapon = new Dagger()).identify();
-		(hero.belongings.armor = new ClothArmor()).identify();
 		Boomerang boomerang = new Boomerang();
 		boomerang.identify().collect();
-		new Food().identify().collect();
-		
-		if (Badges.isUnlocked( Badges.Badge.MASTERY_HUNTRESS )) {
-			new TomeOfMastery().collect();
-		}
 		
 		Dungeon.quickslot = boomerang;
 	}

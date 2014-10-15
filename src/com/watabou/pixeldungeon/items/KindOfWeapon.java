@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -19,7 +18,6 @@ package com.watabou.pixeldungeon.items;
 
 import java.util.ArrayList;
 
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.ui.QuickSlot;
@@ -29,7 +27,6 @@ import com.watabou.utils.Random;
 public class KindOfWeapon extends EquipableItem {
 
 	private static final String TXT_EQUIP_CURSED	= "you wince as your grip involuntarily tightens around your %s";
-	private static final String TXT_UNEQUIP_CURSED	= "you can't remove cursed %s!";
 	
 	protected static final float TIME_TO_EQUIP = 1f;
 	
@@ -77,21 +74,17 @@ public class KindOfWeapon extends EquipableItem {
 	}
 	
 	@Override
-	public boolean doUnequip( Hero hero, boolean collect ) {
-		
-		if (cursed) {
-			GLog.w( TXT_UNEQUIP_CURSED, name() );
+	public boolean doUnequip( Hero hero, boolean collect, boolean single ) {
+		if (super.doUnequip( hero, collect, single )) {
+			
+			hero.belongings.weapon = null;
+			return true;
+			
+		} else {
+			
 			return false;
+			
 		}
-		
-		hero.belongings.weapon = null;
-		hero.spendAndNext( TIME_TO_EQUIP );
-		
-		if (collect && !collect( hero.belongings.backpack )) {
-			Dungeon.level.drop( this, hero.pos );
-		}
-					
-		return true;
 	}
 	
 	public void activate( Hero hero ) {

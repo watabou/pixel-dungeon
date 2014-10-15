@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -81,7 +80,7 @@ public class Scorpio extends Mob {
 	
 	@Override
 	protected boolean getCloser( int target ) {
-		if (state == State.HUNTING) {
+		if (state == HUNTING) {
 			return enemySeen && getFurther( target );
 		} else {
 			return super.getCloser( target );

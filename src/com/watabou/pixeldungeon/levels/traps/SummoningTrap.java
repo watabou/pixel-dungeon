@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -80,7 +79,7 @@ public class SummoningTrap {
 		
 		for (Integer point : respawnPoints) {
 			Mob mob = Bestiary.mob( Dungeon.depth );
-			mob.state = Mob.State.WANDERING;
+			mob.state = mob.WANDERING;
 			GameScene.add( mob, DELAY );
 			WandOfBlink.appear( mob, point );
 		}

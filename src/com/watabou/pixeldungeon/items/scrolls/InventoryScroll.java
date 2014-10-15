@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -30,9 +29,7 @@ public abstract class InventoryScroll extends Scroll {
 	protected String inventoryTitle = "Select an item";
 	protected WndBag.Mode mode = WndBag.Mode.ALL;
 	
-	private static final String TXT_WARNING	= 
-		"Do you really want to cancel this scroll usage? " +
-		"It will be consumed anyway.";
+	private static final String TXT_WARNING	= "Do you really want to cancel this scroll usage? It will be consumed anyway.";
 	private static final String TXT_YES		= "Yes, I'm positive";
 	private static final String TXT_NO		= "No, I changed my mind";
 	

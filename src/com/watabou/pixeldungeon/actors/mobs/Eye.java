@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -71,6 +70,7 @@ public class Eye extends Mob {
 		
 		hitCell = Ballistica.cast( pos, enemy.pos, true, false );
 		
+		// Проверяем с 1й клетки, потому что 0-я - это сам бихолдер
 		for (int i=1; i < Ballistica.distance; i++) {
 			if (Ballistica.trace[i] == enemy.pos) {
 				return true;

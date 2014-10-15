@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -62,7 +61,7 @@ import com.watabou.pixeldungeon.windows.WndWandmaker;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-public class Wandmaker extends Mob.NPC {
+public class Wandmaker extends NPC {
 
 	{	
 		name = "old wandmaker";

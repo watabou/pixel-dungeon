@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -101,7 +100,7 @@ public class CellSelector extends TouchArea {
 			int zoom = Math.round( camera.zoom );
 			camera.zoom( zoom );
 			PixelDungeon.zoom( (int)(zoom - PixelScene.defaultZoom) );
-			
+
 			dragging = true;
 			if (t == touch) {
 				touch = another;

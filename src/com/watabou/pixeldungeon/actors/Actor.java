@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -130,8 +129,10 @@ public abstract class Actor implements Bundlable {
 		chars[pos] = null;
 	}
 	
-	protected static void next() {
-		current = null;
+	/*protected*/public void next() {
+		if (current == this) {
+			current = null;
+		}
 	}
 	
 	public static void process() {
@@ -160,7 +161,15 @@ public abstract class Actor implements Bundlable {
 				}
 			}
 
-			if  (current != null) {
+			if (current != null) {
+				
+				if (current instanceof Char && ((Char)current).sprite.isMoving) {
+					// If it's character's turn to act, but its sprite 
+					// is moving, wait till the movement is over
+					current = null;
+					break;
+				}
+				
 				doNext = current.act();
 				if (doNext && !Dungeon.hero.isAlive()) {
 					doNext = false;

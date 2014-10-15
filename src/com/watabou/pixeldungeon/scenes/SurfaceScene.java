@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -29,6 +28,7 @@ import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
+import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.NoosaScript;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.TouchArea;
@@ -38,7 +38,6 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
-import com.watabou.pixeldungeon.sprites.RatSprite;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.utils.Point;
@@ -114,8 +113,6 @@ public class SurfaceScene extends PixelScene {
 		}
 		
 		Avatar a = new Avatar( Dungeon.hero.heroClass );
-		// Removing semitransparent contour
-		a.am = 2; a.aa = -1;
 		a.x = PixelScene.align( (WIDTH - a.width) / 2 );
 		a.y = HEIGHT - a.height + 1;
 		window.add( a );
@@ -295,7 +292,7 @@ public class SurfaceScene extends PixelScene {
 	private static class Avatar extends Image {
 		
 		private static final int WIDTH	= 24;
-		private static final int HEIGHT	= 32;
+		private static final int HEIGHT	= 28;
 		
 		public Avatar( HeroClass cl ) {
 			super( Assets.AVATARS );
@@ -303,16 +300,35 @@ public class SurfaceScene extends PixelScene {
 		}
 	}
 	
-	private static class Pet extends RatSprite {
+	private static class Pet extends MovieClip implements MovieClip.Listener {
+		
+		private Animation idle;
+		private Animation jump;
+		
+		public Pet() {
+			super( Assets.PET );
+			
+			TextureFilm frames = new TextureFilm( texture, 16, 16 );
+			
+			idle = new Animation( 2, true );
+			idle.frames( frames, 0, 0, 0, 0, 0, 0, 1 );
+			
+			jump = new Animation( 10, false );
+			jump.frames( frames, 2, 3, 4, 5, 6 );
+			
+			listener = this;
+			
+			play( idle );
+		}
 		
 		public void jump() {
-			play( run );
+			play( jump );
 		}
 		
 		@Override
 		public void onComplete( Animation anim ) {
-			if (anim == run) {
-				idle();
+			if (anim == jump) {
+				play( idle );
 			}
 		}
 	}

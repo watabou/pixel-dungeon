@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -17,7 +16,7 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
-import com.watabou.pixeldungeon.Dungeon;
+
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.Heap.Type;
@@ -55,7 +54,7 @@ public class PitPainter extends Painter {
 			remains = room.random();
 		}
 		
-		level.drop( new IronKey( Dungeon.depth ), remains ).type = Type.SKELETON;
+		level.drop( new IronKey(), remains ).type = Type.SKELETON;
 		
 		if (Random.Int( 5 ) == 0) {
 			level.drop( Generator.random( Generator.Category.RING ), remains );

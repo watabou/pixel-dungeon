@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -178,7 +177,7 @@ public class CityBossLevel extends Level {
 			enteredArena = true;
 			
 			Mob boss = Bestiary.mob( Dungeon.depth );
-			boss.state = Mob.State.HUNTING;
+			boss.state = boss.HUNTING;
 			do {
 				boss.pos = Random.Int( LENGTH );
 			} while (

@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -23,7 +22,6 @@ import java.util.ArrayList;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
-import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.AmuletScene;
@@ -66,7 +64,6 @@ public class Amulet extends Item {
 			
 			if (!Statistics.amuletObtained) {
 				Statistics.amuletObtained = true;
-				Dungeon.win( ResultDescriptions.WIN );
 				Badges.validateVictory();
 
 				showAmuletScene( true );

@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -50,6 +49,8 @@ public class Thief extends Mob {
 		
 		loot = RingOfHaggler.class;
 		lootChance = 0.01f;
+		
+		FLEEING = new Fleeing();
 	}
 	
 	private static final String ITEM = "item";
@@ -77,16 +78,6 @@ public class Thief extends Mob {
 	}
 	
 	@Override
-	protected void nowhereToRun() {
-		if (buff( Terror.class ) == null) {
-			sprite.showStatus( CharSprite.NEGATIVE, TXT_RAGE );
-			state = State.HUNTING;
-		} else {
-			super.nowhereToRun();
-		}
-	}
-	
-	@Override
 	public void die( Object cause ) {
 
 		super.die( cause );
@@ -109,7 +100,7 @@ public class Thief extends Mob {
 	@Override
 	public int attackProc( Char enemy, int damage ) {
 		if (item == null && enemy instanceof Hero && steal( (Hero)enemy )) {
-			state = State.FLEEING;
+			state = FLEEING;
 		}
 		
 		return damage;
@@ -117,7 +108,7 @@ public class Thief extends Mob {
 	
 	@Override
 	public int defenseProc(Char enemy, int damage) {
-		if (state == State.FLEEING) {
+		if (state == FLEEING) {
 			Dungeon.level.drop( new Gold(), pos ).sprite.drop();
 		}
 		
@@ -152,5 +143,17 @@ public class Thief extends Mob {
 		}
 		
 		return desc;
+	}
+	
+	private class Fleeing extends Mob.Fleeing {
+		@Override
+		protected void nowhereToRun() {
+			if (buff( Terror.class ) == null) {
+				sprite.showStatus( CharSprite.NEGATIVE, TXT_RAGE );
+				state = HUNTING;
+			} else {
+				super.nowhereToRun();
+			}
+		}
 	}
 }

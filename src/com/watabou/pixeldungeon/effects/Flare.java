@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -53,6 +52,7 @@ public class Flare extends Visual {
 		
 		super( 0, 0, 0, 0 );
 		
+		// FIXME
 		// Texture is incorrectly created every time we need
 		// to show the effect, it must be refactored
 		

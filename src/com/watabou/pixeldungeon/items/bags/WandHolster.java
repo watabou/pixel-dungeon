@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -50,13 +49,10 @@ public class WandHolster extends Bag {
 	}
 	
 	@Override
-	public Item detach( Bag container ) {
-		
+	public void onDetach( ) {
 		for (Item item : items) {
 			((Wand)item).stopCharging();
 		}
-		
-		return super.detach( container );
 	}
 	
 	@Override

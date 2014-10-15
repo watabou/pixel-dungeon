@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -125,7 +124,7 @@ public class Viscosity extends Glyph {
 				
 				target.damage( 1, this );
 				if (target == Dungeon.hero && !target.isAlive()) {
-					// Refactoring needed!
+					// FIXME
 					Glyph glyph = new Viscosity();
 					Dungeon.fail( Utils.format( ResultDescriptions.GLYPH, glyph.name(), Dungeon.depth ) );
 					GLog.n( "%s killed you...", glyph.name() );

@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -35,7 +34,7 @@ public class StoragePainter extends Painter {
 		fill( level, room, 1, floor );
 		
 		int n = Random.IntRange( 3, 4 );
-		for (int i=0; i < n; i++) {
+		for (int i=0; i < n; i++) { 
 			int pos;
 			do {
 				pos = room.random();

@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -124,7 +123,7 @@ public class ItemSpriteSheet {
 	public static final int SEED_FIREBLOOM	= 88;
 	public static final int SEED_ICECAP		= 89;
 	public static final int SEED_SORROWMOSS	= 90;
-	public static final int SEED_BLINDWEED	= 91;
+	public static final int SEED_DREAMWEED	= 91;
 	public static final int SEED_SUNGRASS	= 92;
 	public static final int SEED_EARTHROOT	= 93;
 	public static final int SEED_FADELEAF	= 94;
@@ -169,4 +168,5 @@ public class ItemSpriteSheet {
 	public static final int KIT		= 86;
 	public static final int AMULET	= 87;
 	public static final int VIAL	= 120;
+	public static final int WEIGHT	= 123;
 }

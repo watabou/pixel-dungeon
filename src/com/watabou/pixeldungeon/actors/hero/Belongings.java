@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -120,12 +119,11 @@ public class Belongings implements Iterable<Item> {
 	
 	public void countIronKeys() {
 		
-		IronKey.curDepthQunatity = 0;
+		IronKey.curDethQuantity = 0;
 		
 		for (Item item : backpack) {
 			if (item instanceof IronKey && ((IronKey)item).depth == Dungeon.depth) {
-				IronKey.curDepthQunatity = item.quantity();
-				return;
+				IronKey.curDethQuantity++;
 			}
 		}
 	}
@@ -174,7 +172,7 @@ public class Belongings implements Iterable<Item> {
 					item.detachAll( backpack );
 				}
 			} else if (item.unique) {
-				
+
 			} else if (!item.isEquipped( owner )) {
 				item.detachAll( backpack );
 			}

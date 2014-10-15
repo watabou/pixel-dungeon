@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -26,6 +25,7 @@ import java.util.HashSet;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
@@ -45,9 +45,13 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.particles.FlowParticle;
 import com.watabou.pixeldungeon.effects.particles.WindParticle;
 import com.watabou.pixeldungeon.items.Generator;
+import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.Stylus;
+import com.watabou.pixeldungeon.items.armor.Armor;
+import com.watabou.pixeldungeon.items.food.Food;
+import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.levels.features.Chasm;
@@ -94,7 +98,7 @@ public abstract class Level implements Bundlable {
 	public boolean[] visited;
 	public boolean[] mapped;
 	
-	public int viewDistance = 8;
+	public int viewDistance = Dungeon.isChallenged( Challenges.DARKNESS ) ? 3: 8;
 	
 	public static boolean[] fieldOfView = new boolean[LENGTH];
 	
@@ -359,7 +363,7 @@ public abstract class Level implements Bundlable {
 				if (mobs.size() < nMobs()) {
 
 					Mob mob = Bestiary.mutable( Dungeon.depth );
-					mob.state = Mob.State.WANDERING;
+					mob.state = mob.WANDERING;
 					mob.pos = randomRespawnCell();
 					if (Dungeon.hero.isAlive() && mob.pos != -1) {
 						GameScene.add( mob );
@@ -503,6 +507,16 @@ public abstract class Level implements Bundlable {
 	}
 	
 	public Heap drop( Item item, int cell ) {
+		
+		if (Dungeon.isChallenged( Challenges.NO_FOOD ) && item instanceof Food) {
+			item = new Gold( item.price() );
+		} else
+		if (Dungeon.isChallenged( Challenges.NO_ARMOR ) && item instanceof Armor) {
+			item = new Gold( item.price() );
+		} else
+		if (Dungeon.isChallenged( Challenges.NO_HEALING ) && item instanceof PotionOfHealing) {
+			item = new Gold( item.price() );
+		}
 		
 		if ((map[cell] == Terrain.ALCHEMY) && !(item instanceof Plant.Seed)) {
 			int n;
@@ -799,7 +813,6 @@ public abstract class Level implements Bundlable {
 				}
 			}
 			if (c.buff( Awareness.class ) != null) {
-
 				for (Heap heap : heaps.values()) {
 					int p = heap.pos;
 					fieldOfView[p] = true;

@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -29,8 +28,7 @@ import com.watabou.utils.PathFinder;
 
 public class Icecap extends Plant {
 
-	private static final String TXT_DESC = 
-		"Upon touching an Icecap excretes a pollen, which freezes everything in its vicinity.";
+	private static final String TXT_DESC = "Upon touching an Icecap excretes a pollen, which freezes everything in its vicinity.";
 	
 	{
 		image = 1;
@@ -47,7 +45,7 @@ public class Icecap extends Plant {
 		
 		for (int i=0; i < Level.LENGTH; i++) {
 			if (PathFinder.distance[i] < Integer.MAX_VALUE) {
-				
+
 				Freezing.affect( i, fire );
 			}
 		}

@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -20,6 +19,11 @@ package com.watabou.pixeldungeon.actors.buffs;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.rings.RingOfMending;
 
+/**
+ * Этот буф увеличивает здоровье цели на единицу с указанной частотой.
+ * Регенерация изначально есть у героя, так же регенерацию добавляют
+ * (непроклятые) кольца регенерации
+ */
 public class Regeneration extends Buff {
 	
 	private static final float REGENERATION_DELAY = 10;
@@ -44,7 +48,7 @@ public class Regeneration extends Buff {
 			diactivate();
 			
 		}
-		
+
 		return true;
 	}
 }

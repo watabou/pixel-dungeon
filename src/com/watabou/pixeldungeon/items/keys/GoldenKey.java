@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -24,15 +23,6 @@ public class GoldenKey extends Key {
 	{
 		name = "golden key";
 		image = ItemSpriteSheet.GOLDEN_KEY;
-	}
-	
-	public GoldenKey() {
-		this( 0 );
-	}
-	
-	public GoldenKey( int depth ) {
-		super();
-		this.depth = depth;
 	}
 	
 	@Override

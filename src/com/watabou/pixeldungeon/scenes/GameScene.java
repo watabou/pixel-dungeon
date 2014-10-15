@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -606,8 +605,9 @@ public class GameScene extends PixelScene {
 	private static final CellSelector.Listener defaultCellListener = new CellSelector.Listener() {
 		@Override
 		public void onSelect( Integer cell ) {
-			if (cell != -1) {
-				Dungeon.hero.handle( cell );
+			if (Dungeon.hero.handle( cell )) {
+			//	Actor.next();
+				Dungeon.hero.next();
 			}
 		}
 		@Override

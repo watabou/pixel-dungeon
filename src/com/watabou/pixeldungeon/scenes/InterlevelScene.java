@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -221,7 +220,7 @@ public class InterlevelScene extends PixelScene {
 			
 		case FADE_OUT:
 			message.alpha( p );
-
+			
 			if (mode == Mode.CONTINUE || (mode == Mode.DESCEND && Dungeon.depth == 1)) {
 				Music.INSTANCE.volume( p );
 			}
@@ -238,6 +237,7 @@ public class InterlevelScene extends PixelScene {
 						Game.switchScene( StartScene.class );
 					};
 				} );
+				error = null;
 			}
 			break;
 		}

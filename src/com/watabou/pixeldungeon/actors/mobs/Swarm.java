@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -91,7 +90,7 @@ public class Swarm extends Mob {
 				Swarm clone = split();
 				clone.HP = (HP - damage) / 2;
 				clone.pos = Random.element( candidates );
-				clone.state = State.HUNTING;
+				clone.state = clone.HUNTING;
 				
 				if (Dungeon.level.map[clone.pos] == Terrain.DOOR) {
 					Door.enter( clone.pos );

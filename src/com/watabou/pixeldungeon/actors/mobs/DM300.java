@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -75,7 +74,7 @@ public class DM300 extends Mob {
 	
 	@Override
 	public boolean act() {
-		
+
 		GameScene.add( Blob.seed( pos, 30, ToxicGas.class ) );
 		
 		return super.act();
@@ -84,7 +83,7 @@ public class DM300 extends Mob {
 	@Override
 	public void move( int step ) {
 		super.move( step );
-		
+
 		if (Dungeon.level.map[step] == Terrain.INACTIVE_TRAP && HP < HT) {
 			
 			HP += Random.Int( 1, HT - HP );
@@ -94,7 +93,7 @@ public class DM300 extends Mob {
 				GLog.n( "DM-300 repairs itself!" );
 			}
 		}
-		
+
 		int[] cells = {
 			step-1, step+1, step-Level.WIDTH, step+Level.WIDTH, 
 			step-1-Level.WIDTH, 
@@ -108,7 +107,7 @@ public class DM300 extends Mob {
 			CellEmitter.get( cell ).start( Speck.factory( Speck.ROCK ), 0.07f, 10 );
 			Camera.main.shake( 3, 0.7f );
 			Sample.INSTANCE.play( Assets.SND_ROCKS );
-			
+
 			if (Level.water[cell]) {
 				GameScene.ripple( cell );
 			} else if (Dungeon.level.map[cell] == Terrain.EMPTY) {
@@ -129,7 +128,7 @@ public class DM300 extends Mob {
 		super.die( cause );
 		
 		GameScene.bossSlain();
-		Dungeon.level.drop( new SkeletonKey( Dungeon.depth  ), pos ).sprite.drop();
+		Dungeon.level.drop( new SkeletonKey(), pos ).sprite.drop();
 		
 		Badges.validateBossSlain();
 		

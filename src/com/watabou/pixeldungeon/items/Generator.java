@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -180,7 +179,7 @@ public class Generator {
 			Firebloom.Seed.class,
 			Icecap.Seed.class,
 			Sorrowmoss.Seed.class,
-			Blindweed.Seed.class,
+			Dreamweed.Seed.class,
 			Sungrass.Seed.class,
 			Earthroot.Seed.class,
 			Fadeleaf.Seed.class,

@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -41,7 +40,7 @@ public class Sorrowmoss extends Plant {
 		super.activate( ch );
 		
 		if (ch != null) {
-			Buff.affect( ch, Poison.class ).set( 5 + Math.min( Dungeon.depth, 15 ) );
+			Buff.affect( ch, Poison.class ).set( Poison.durationFactor( ch ) * (4 + Dungeon.depth / 2) );
 		}
 		
 		if (Dungeon.visible[pos]) {

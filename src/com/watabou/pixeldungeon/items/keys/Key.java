@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -17,8 +16,8 @@
  */
 package com.watabou.pixeldungeon.items.keys;
 
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.utils.Bundle;
 
 public class Key extends Item {
@@ -26,21 +25,14 @@ public class Key extends Item {
 	public static final float TIME_TO_UNLOCK = 1f;
 	
 	{
-		stackable = true;
+		stackable = false;
 	}
 	
 	public int depth;
 	
-	@Override
-	public boolean isSimilar( Item item ) {
-		return item.getClass() == getClass() && ((Key)item).depth == depth;
-	}
-	
-	@Override
-	public Item detach( Bag container ) {
-		Key key = (Key)super.detach( container );
-		key.depth = depth;
-		return key;
+	public Key() {
+		super();
+		depth = Dungeon.depth;
 	}
 	
 	private static final String DEPTH = "depth";
@@ -65,5 +57,10 @@ public class Key extends Item {
 	@Override
 	public boolean isIdentified() {
 		return true;
+	}
+	
+	@Override
+	public String status() {
+		return depth + "*";
 	}
 }

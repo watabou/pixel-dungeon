@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -57,7 +56,7 @@ public class DungeonTilemap extends Tilemap {
 		
 		final Image tile = tile( oldValue );
 		tile.point( tileToWorld( pos ) );
-
+		
 		// For bright mode
 		tile.rm = tile.gm = tile.bm = rm;
 		tile.ra = tile.ga = tile.ba = ra;

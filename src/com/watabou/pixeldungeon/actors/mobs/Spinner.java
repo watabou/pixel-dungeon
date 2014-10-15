@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -45,20 +44,13 @@ public class Spinner extends Mob {
 		
 		loot = new MysteryMeat();
 		lootChance = 0.125f;
+		
+		FLEEING = new Fleeing();
 	}
 	
 	@Override
 	public int damageRoll() {
 		return Random.NormalIntRange( 12, 16 );
-	}
-	
-	@Override
-	protected void nowhereToRun() {
-		if (buff( Terror.class ) == null) {
-			state = State.HUNTING;
-		} else {
-			super.nowhereToRun();
-		}
 	}
 	
 	@Override
@@ -75,10 +67,10 @@ public class Spinner extends Mob {
 	protected boolean act() {
 		boolean result = super.act();
 		
-		if (state == State.FLEEING  && buff( Terror.class ) == null && 
+		if (state == FLEEING  && buff( Terror.class ) == null && 
 			enemySeen && enemy.buff( Poison.class ) == null) {
 			
-			state = State.HUNTING;
+			state = HUNTING;
 		}
 		return result;
 	}
@@ -86,8 +78,8 @@ public class Spinner extends Mob {
 	@Override
 	public int attackProc( Char enemy, int damage ) {
 		if (Random.Int( 2 ) == 0) {
-			Buff.affect( enemy, Poison.class ).set( Random.Int( 5, 7 ) * Poison.durationFactor( enemy ) );
-			state = State.FLEEING;
+			Buff.affect( enemy, Poison.class ).set( Random.Int( 7, 9 ) * Poison.durationFactor( enemy ) );
+			state = FLEEING;
 		}
 		
 		return damage;
@@ -95,7 +87,7 @@ public class Spinner extends Mob {
 	
 	@Override
 	public void move( int step ) {
-		if (state == State.FLEEING) {
+		if (state == FLEEING) {
 			GameScene.add( Blob.seed( pos, Random.Int( 5, 7 ), Web.class ) );
 		}
 		super.move( step );
@@ -126,5 +118,16 @@ public class Spinner extends Mob {
 	@Override
 	public HashSet<Class<?>> immunities() {
 		return IMMUNITIES;
+	}
+	
+	private class Fleeing extends Mob.Fleeing {
+		@Override
+		protected void nowhereToRun() {
+			if (buff( Terror.class ) == null) {
+				state = HUNTING;
+			} else {
+				super.nowhereToRun();
+			}
+		}
 	}
 }

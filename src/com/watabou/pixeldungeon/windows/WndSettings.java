@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -33,6 +32,7 @@ public class WndSettings extends Window {
 	private static final String TXT_ZOOM_DEFAULT	= "Default Zoom";
 
 	private static final String TXT_SCALE_UP		= "Scale up UI";
+	private static final String TXT_IMMERSIVE		= "Immersive mode";
 	
 	private static final String TXT_MUSIC	= "Music";
 	
@@ -53,10 +53,11 @@ public class WndSettings extends Window {
 	public WndSettings( boolean inGame ) {
 		super();
 		
+		CheckBox btnImmersive = null;
+		
 		if (inGame) {
 			int w = BTN_HEIGHT;
 			
-			// Zoom out
 			btnZoomOut = new RedButton( TXT_ZOOM_OUT ) {
 				@Override
 				protected void onClick() {
@@ -65,7 +66,6 @@ public class WndSettings extends Window {
 			};
 			add( btnZoomOut.setRect( 0, 0, w, BTN_HEIGHT) );
 			
-			// Zoom in
 			btnZoomIn = new RedButton( TXT_ZOOM_IN ) {
 				@Override
 				protected void onClick() {
@@ -74,7 +74,6 @@ public class WndSettings extends Window {
 			};
 			add( btnZoomIn.setRect( WIDTH - w, 0, w, BTN_HEIGHT) );
 			
-			// Default zoom
 			add( new RedButton( TXT_ZOOM_DEFAULT ) {
 				@Override
 				protected void onClick() {
@@ -95,6 +94,18 @@ public class WndSettings extends Window {
 			btnScaleUp.checked( PixelDungeon.scaleUp() );
 			add( btnScaleUp );
 			
+			btnImmersive = new CheckBox( TXT_IMMERSIVE ) {
+				@Override
+				protected void onClick() {
+					super.onClick();
+					PixelDungeon.immerse( checked() );
+				}
+			};
+			btnImmersive.setRect( 0, btnScaleUp.bottom() + GAP, WIDTH, BTN_HEIGHT );
+			btnImmersive.checked( PixelDungeon.immersed() );
+			btnImmersive.enable( android.os.Build.VERSION.SDK_INT >= 19 );
+			add( btnImmersive );
+			
 		}
 		
 		CheckBox btnMusic = new CheckBox( TXT_MUSIC ) {
@@ -104,7 +115,7 @@ public class WndSettings extends Window {
 				PixelDungeon.music( checked() );
 			}
 		};
-		btnMusic.setRect( 0, BTN_HEIGHT + GAP, WIDTH, BTN_HEIGHT );
+		btnMusic.setRect( 0, (btnImmersive != null ? btnImmersive.bottom() : BTN_HEIGHT) + GAP, WIDTH, BTN_HEIGHT );
 		btnMusic.checked( PixelDungeon.music() );
 		add( btnMusic );
 		

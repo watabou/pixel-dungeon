@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -27,13 +26,7 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndInfoMob extends WndTitledMessage {
-	
-	private static final String TXT_SLEEPNIG	= "\n\nThis %s is sleeping.";
-	private static final String TXT_HUNTING		= "\n\nThis %s is hunting.";
-	private static final String TXT_WANDERING	= "\n\nThis %s is wandering.";
-	private static final String TXT_FLEEING		= "\n\nThis %s is fleeing.";
-	private static final String TXT_PASSIVE		= "\n\nThe %s is passive.";
-	
+
 	public WndInfoMob( Mob mob ) {
 		
 		super( new MobTitle( mob ), desc( mob ) );
@@ -44,23 +37,7 @@ public class WndInfoMob extends WndTitledMessage {
 		
 		StringBuilder builder = new StringBuilder( mob.description() );
 		
-		switch (mob.state) {
-		case SLEEPING:
-			builder.append( String.format( TXT_SLEEPNIG, mob.name ) );
-			break;
-		case HUNTING:
-			builder.append( String.format( TXT_HUNTING, mob.name ) );
-			break;
-		case WANDERING:
-			builder.append( String.format( TXT_WANDERING, mob.name ) );
-			break;
-		case FLEEING:
-			builder.append( String.format( TXT_FLEEING, mob.name ) );
-			break;
-		case PASSIVE:
-			builder.append( String.format( TXT_PASSIVE, mob.name ) );
-			break;
-		}
+		builder.append( "\n\n" + mob.state.status() + "." );
 		
 		return builder.toString();
 	}

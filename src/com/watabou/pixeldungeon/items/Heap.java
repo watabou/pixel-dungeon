@@ -1,5 +1,4 @@
 /*
- * Pixel Dungeon
  * Copyright (C) 2012-2014  Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
@@ -138,8 +137,9 @@ public class Heap implements Bundlable {
 		
 		if (item.stackable) {
 			
+			Class<?> c = item.getClass();
 			for (Item i : items) {
-				if (i.isSimilar( item )) {
+				if (i.getClass() == c) {
 					i.quantity += item.quantity;
 					item = i;
 					break;
