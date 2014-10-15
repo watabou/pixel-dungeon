@@ -26,7 +26,7 @@ public class IronKey extends Key {
 
 	private static final String TXT_FROM_DEPTH = "iron key from depth %d";
 
-	public static int curDethQuantity = 0;
+	public static int curDepthQuantity = 0;
 	
 	{
 		name = "iron key";

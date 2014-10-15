@@ -71,7 +71,6 @@ public class Eye extends Mob {
 		
 		hitCell = Ballistica.cast( pos, enemy.pos, true, false );
 		
-		// Проверяем с 1й клетки, потому что 0-я - это сам бихолдер
 		for (int i=1; i < Ballistica.distance; i++) {
 			if (Ballistica.trace[i] == enemy.pos) {
 				return true;

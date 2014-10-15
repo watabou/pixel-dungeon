@@ -192,7 +192,7 @@ public class StatusPane extends Component {
 			level.y = PixelScene.align( 27.5f - level.baseLine() / 2 );
 		}
 		
-		int k = IronKey.curDethQuantity;
+		int k = IronKey.curDepthQuantity;
 		if (k != lastKeys) {
 			lastKeys = k;
 			keys.text( Integer.toString( lastKeys ) );

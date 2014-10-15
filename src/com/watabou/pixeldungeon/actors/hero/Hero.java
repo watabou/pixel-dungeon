@@ -152,7 +152,6 @@ public class Hero extends Char {
 	public int STR;
 	public boolean weakened = false;
 	
-	/** Вероятность того, что*/
 	public float awareness;
 	
 	public int lvl = 1;
@@ -1157,7 +1156,6 @@ public class Hero extends Char {
 	
 	public static void reallyDie( Object cause ) {
 		
-		// Открываем всю карту
 		int length = Level.LENGTH;
 		int[] map = Dungeon.level.map;
 		boolean[] visited = Dungeon.level.visited;
