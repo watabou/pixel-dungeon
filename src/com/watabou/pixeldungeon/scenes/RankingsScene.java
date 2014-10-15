@@ -20,16 +20,17 @@ package com.watabou.pixeldungeon.scenes;
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Camera;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Rankings;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.Archs;
+import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -110,12 +111,16 @@ public class RankingsScene extends PixelScene {
 			
 		}
 		
+		ExitButton btnExit = new ExitButton();
+		btnExit.setPos( Camera.main.width - btnExit.width(), 0 );
+		add( btnExit );
+		
 		fadeIn();
 	}
 	
 	@Override
 	protected void onBackPressed() {
-		Game.switchScene( TitleScene.class );
+		PixelDungeon.switchNoFade( TitleScene.class );
 	}
 	
 	public static class Record extends Button {

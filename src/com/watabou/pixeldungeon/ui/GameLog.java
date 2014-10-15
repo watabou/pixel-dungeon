@@ -96,7 +96,7 @@ public class GameLog extends Component implements Signal.Listener<String> {
 	}
 	
 	@Override
-	protected void layout() {	
+	protected void layout() {
 		float pos = y;
 		for (int i=length-1; i >= 0; i--) {
 			BitmapTextMultiline entry = (BitmapTextMultiline)members.get( i );

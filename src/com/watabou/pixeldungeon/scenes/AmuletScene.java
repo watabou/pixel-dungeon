@@ -23,6 +23,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.ui.RedButton;
@@ -66,6 +67,7 @@ public class AmuletScene extends PixelScene {
 		RedButton btnExit = new RedButton( TXT_EXIT ) {
 			@Override
 			protected void onClick() {
+				Dungeon.win( ResultDescriptions.WIN );
 				Dungeon.deleteGame( Dungeon.hero.heroClass, true );
 				Game.switchScene( noText ? TitleScene.class : RankingsScene.class );
 			}

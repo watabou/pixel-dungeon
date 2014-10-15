@@ -146,31 +146,27 @@ public class Ring extends EquipableItem {
 		buff = buff();
 		buff.attachTo( ch );
 	}
-	
+
 	@Override
-	public boolean doUnequip( Hero hero, boolean collect ) {
-		
-		if (cursed) {
-			GLog.w( "You can't remove cursed " + name() + "!" );
-			return false;
-		}
-		
-		if (hero.belongings.ring1 == this) {
-			hero.belongings.ring1 = null;
+	public boolean doUnequip( Hero hero, boolean collect, boolean single ) {
+		if (super.doUnequip( hero, collect, single )) {
+			
+			if (hero.belongings.ring1 == this) {
+				hero.belongings.ring1 = null;
+			} else {
+				hero.belongings.ring2 = null;
+			}
+			
+			hero.remove( buff );
+			buff = null;
+			
+			return true;
+			
 		} else {
-			hero.belongings.ring2 = null;
+			
+			return false;
+			
 		}
-		
-		hero.remove( buff );
-		buff = null;
-		
-		hero.spendAndNext( TIME_TO_EQUIP );
-		
-		if (collect && !collect( hero.belongings.backpack )) {
-			Dungeon.level.drop( this, hero.pos );
-		}
-				
-		return true;
 	}
 	
 	@Override

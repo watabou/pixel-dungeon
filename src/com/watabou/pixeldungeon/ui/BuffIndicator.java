@@ -62,6 +62,7 @@ public class BuffIndicator extends Component {
 	public static final int BLEEDING	= 26;
 	public static final int MARK		= 27;
 	public static final int DEFERRED	= 28;
+	public static final int VERTIGO		= 29;
 	
 	public static final int SIZE	= 7;
 	

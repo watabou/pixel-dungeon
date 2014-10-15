@@ -58,7 +58,7 @@ public class SewerBossLevel extends RegularLevel {
 	protected boolean build() {
 		
 		initRooms();
-
+	
 		int distance;
 		int retry = 0;
 		int minDistance = (int)Math.sqrt( rooms.size() );

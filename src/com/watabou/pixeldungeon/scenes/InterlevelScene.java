@@ -221,7 +221,7 @@ public class InterlevelScene extends PixelScene {
 			
 		case FADE_OUT:
 			message.alpha( p );
-
+			
 			if (mode == Mode.CONTINUE || (mode == Mode.DESCEND && Dungeon.depth == 1)) {
 				Music.INSTANCE.volume( p );
 			}
@@ -238,6 +238,7 @@ public class InterlevelScene extends PixelScene {
 						Game.switchScene( StartScene.class );
 					};
 				} );
+				error = null;
 			}
 			break;
 		}

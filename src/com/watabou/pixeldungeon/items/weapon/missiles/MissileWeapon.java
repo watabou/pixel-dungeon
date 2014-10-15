@@ -75,9 +75,9 @@ public class MissileWeapon extends Weapon {
 		super.proc( attacker, defender, damage );
 		
 		Hero hero = (Hero)attacker;
-		if (!hero.usingRanged && stackable) {
+		if (hero.rangedWeapon == null && stackable) {
 			if (quantity == 1) {
-				doUnequip( hero, false );
+				doUnequip( hero, false, false );
 			} else {
 				detach( null );
 			}

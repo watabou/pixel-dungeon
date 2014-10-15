@@ -22,7 +22,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -104,7 +104,7 @@ public class WandOfFlock extends Wand {
 			"A flick of this wand summons a flock of magic sheep, creating temporary impenetrable obstacle.";
 	}
 	
-	public static class Sheep extends Mob.NPC {
+	public static class Sheep extends NPC {
 		
 		private static final String[] QUOTES = {"Baa!", "Baa?", "Baa.", "Baa..."};
 		

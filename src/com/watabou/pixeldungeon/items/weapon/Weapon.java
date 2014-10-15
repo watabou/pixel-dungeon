@@ -41,8 +41,13 @@ public class Weapon extends KindOfWeapon {
 	private static final String TXT_TO_STRING		= "%s :%d";
 	
 	public int		STR	= 10;
-	public float	ACU	= 1;	// Accuracy modifier
-	public float	DLY	= 1f;	// Speed modifier
+	public float	ACU	= 1;
+	public float	DLY	= 1f;
+	
+	public enum Imbue {
+		NONE, SPEED, ACCURACY
+	}
+	public Imbue imbue = Imbue.NONE;
 	
 	private int hitsToKnow = 20;
 	
@@ -65,17 +70,20 @@ public class Weapon extends KindOfWeapon {
 	}
 	
 	private static final String ENCHANTMENT	= "enchantment";
+	private static final String IMBUE		= "imbue";
 	
 	@Override
 	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle( bundle );
 		bundle.put( ENCHANTMENT, enchantment );
+		bundle.put( IMBUE, imbue );
 	}
 	
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
 		enchantment = (Enchantment)bundle.get( ENCHANTMENT );
+		imbue = bundle.getEnum( IMBUE, Imbue.class );
 	}
 	
 	@Override
@@ -95,7 +103,9 @@ public class Weapon extends KindOfWeapon {
 			}
 		}
 		
-		return encumbrance > 0 ? (float)(ACU / Math.pow( 1.5, encumbrance )) : ACU;
+		return 
+			(encumbrance > 0 ? (float)(ACU / Math.pow( 1.5, encumbrance )) : ACU) *
+			(imbue == Imbue.ACCURACY ? 1.5f : 1.0f);
 	}
 	
 	@Override
@@ -106,7 +116,9 @@ public class Weapon extends KindOfWeapon {
 			encumrance -= 2;
 		}
 		
-		return encumrance > 0 ? (float)(DLY * Math.pow( 1.2, encumrance )) : DLY;
+		return 
+			(encumrance > 0 ? (float)(DLY * Math.pow( 1.2, encumrance )) : DLY) * 
+			(imbue == Imbue.SPEED ? 0.6f : 1.0f);
 	}
 	
 	@Override
@@ -114,7 +126,7 @@ public class Weapon extends KindOfWeapon {
 		
 		int damage = super.damageRoll( hero );
 		
-		if (hero.usingRanged == (hero.heroClass == HeroClass.HUNTRESS)) {
+		if ((hero.rangedWeapon != null) == (hero.heroClass == HeroClass.HUNTRESS)) {
 			int exStr = hero.STR() - STR;
 			if (exStr > 0) {
 				damage += Random.IntRange( 0, exStr );

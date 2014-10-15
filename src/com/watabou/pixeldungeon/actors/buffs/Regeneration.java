@@ -44,7 +44,7 @@ public class Regeneration extends Buff {
 			diactivate();
 			
 		}
-		
+
 		return true;
 	}
 }

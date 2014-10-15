@@ -62,7 +62,7 @@ import com.watabou.pixeldungeon.windows.WndWandmaker;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-public class Wandmaker extends Mob.NPC {
+public class Wandmaker extends NPC {
 
 	{	
 		name = "old wandmaker";

@@ -96,8 +96,7 @@ public class Badges {
 		BOSS_SLAIN_3_SNIPER,
 		BOSS_SLAIN_3_WARDEN,
 		BOSS_SLAIN_3_ALL_SUBCLASSES( 
-			"3rd boss slain by Gladiator, Berserker, Warlock, Battlemage, " +
-			"Freerunner, Assassin, Sniper & Warden", 33, true ),
+			"3rd boss slain by Gladiator, Berserker, Warlock, Battlemage, Freerunner, Assassin, Sniper & Warden", 33, true ),
 		RING_OF_HAGGLER( "Ring of Haggler obtained", 20 ),
 		RING_OF_THORNS( "Ring of Thorns obtained", 21 ),
 		STRENGTH_ATTAINED_1( "13 points of Strength attained", 40 ),
@@ -142,6 +141,7 @@ public class Badges {
 		GAMES_PLAYED_3( "500 games played", 62, true ),
 		GAMES_PLAYED_4( "2000 games played", 63, true ),
 		HAPPY_END( "Happy end", 38 ),
+		CHAMPION( "Challenge won", 39, true ),
 		SUPPORTER( "Thanks for your support!", 31, true );
 		
 		public boolean meta;
@@ -840,6 +840,10 @@ public class Badges {
 	
 	public static void validateHappyEnd() {
 		displayBadge( Badge.HAPPY_END );
+	}
+	
+	public static void validateChampion() {
+		displayBadge( Badge.CHAMPION );
 	}
 	
 	private static void displayBadge( Badge badge ) {

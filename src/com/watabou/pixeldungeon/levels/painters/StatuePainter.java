@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Statue;
 import com.watabou.pixeldungeon.items.keys.IronKey;
@@ -40,7 +39,7 @@ public class StatuePainter extends Painter {
 		Room.Door door = room.entrance();
 		
 		door.set( Room.Door.Type.LOCKED );
-		level.addItemToSpawn( new IronKey( Dungeon.depth ) );
+		level.addItemToSpawn( new IronKey() );
 		
 		if (door.x == room.left) {
 			

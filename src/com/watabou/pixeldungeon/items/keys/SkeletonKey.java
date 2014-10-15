@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.items.keys;
 
-import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class SkeletonKey extends Key {
@@ -25,26 +24,12 @@ public class SkeletonKey extends Key {
 	{
 		name = "skeleton key";
 		image = ItemSpriteSheet.SKELETON_KEY;
-		stackable = false;
-	}
-	
-	public SkeletonKey() {
-		this( 0 );
-	}
-	
-	public SkeletonKey( int depth ) {
-		super();
-		this.depth = depth;
-	}
-	
-	@Override
-	public boolean isSimilar( Item item ) {
-		return false;
 	}
 	
 	@Override
 	public String info() {
 		return 
-			"This key looks serious: its head is shaped like a skull. Probably it can open some serious door.";
+			"This key looks serious: its head is shaped like a skull. " +
+			"Probably it can open some serious door.";
 	}
 }

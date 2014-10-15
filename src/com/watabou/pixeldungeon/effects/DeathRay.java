@@ -28,7 +28,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.utils.PointF;
 
 public class DeathRay extends Image {
-	
+
 	private static final double A = 180 / Math.PI;
 	
 	private static final float DURATION	= 0.5f;

@@ -21,7 +21,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class Blindness extends FlavourBuff {
-	
+
 	@Override
 	public void detach() {
 		super.detach();

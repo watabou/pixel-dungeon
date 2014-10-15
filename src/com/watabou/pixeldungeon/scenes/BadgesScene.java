@@ -19,14 +19,15 @@ package com.watabou.pixeldungeon.scenes;
 
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Camera;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.audio.Music;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Chrome;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.BadgesList;
+import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
 
@@ -51,8 +52,8 @@ public class BadgesScene extends PixelScene {
 		archs.setSize( w, h );
 		add( archs );
 		
-		int pw = Math.min( 160, w - 10 );
-		int ph = h - 24;
+		int pw = Math.min( 160, w - 6 );
+		int ph = h - 30;
 		
 		NinePatch panel = Chrome.get( Chrome.Type.WINDOW );
 		panel.size( pw, ph );
@@ -78,11 +79,15 @@ public class BadgesScene extends PixelScene {
 			panel.innerWidth(), 
 			panel.innerHeight() );
 		
+		ExitButton btnExit = new ExitButton();
+		btnExit.setPos( Camera.main.width - btnExit.width(), 0 );
+		add( btnExit );
+		
 		fadeIn();
 	}
 	
 	@Override
 	protected void onBackPressed() {
-		Game.switchScene( TitleScene.class );
+		PixelDungeon.switchNoFade( TitleScene.class );
 	}
 }

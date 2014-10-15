@@ -138,8 +138,9 @@ public class Heap implements Bundlable {
 		
 		if (item.stackable) {
 			
+			Class<?> c = item.getClass();
 			for (Item i : items) {
-				if (i.isSimilar( item )) {
+				if (i.getClass() == c) {
 					i.quantity += item.quantity;
 					item = i;
 					break;

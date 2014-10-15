@@ -37,7 +37,7 @@ public class Barkskin extends Buff {
 			detach();
 			
 		}
-		
+
 		return true;
 	}
 	

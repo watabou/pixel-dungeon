@@ -21,6 +21,7 @@ import java.io.IOException;
 
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
 import com.watabou.pixeldungeon.scenes.RankingsScene;
@@ -32,6 +33,7 @@ import com.watabou.pixeldungeon.ui.Window;
 public class WndGame extends Window {
 	
 	private static final String TXT_SETTINGS	= "Settings";
+	private static final String TXT_CHALLEGES	= "Challenges";
 	private static final String TXT_RANKINGS	= "Rankings";
 	private static final String TXT_START		= "Start New Game";
 	private static final String TXT_MENU		= "Main Menu";
@@ -56,7 +58,16 @@ public class WndGame extends Window {
 			}
 		} );
 		
-		// Restart
+		if (Dungeon.challenges > 0) {
+			addButton( new RedButton( TXT_CHALLEGES ) {
+				@Override
+				protected void onClick() {
+					hide();
+					GameScene.show( new WndChallenges( Dungeon.challenges, false ) );
+				}
+			} );
+		}
+		
 		if (!Dungeon.hero.isAlive()) {
 			
 			RedButton btnStart;
@@ -64,6 +75,7 @@ public class WndGame extends Window {
 				@Override
 				protected void onClick() {
 					Dungeon.hero = null;
+					PixelDungeon.challenges( Dungeon.challenges );
 					InterlevelScene.mode = InterlevelScene.Mode.DESCEND;
 					InterlevelScene.noStory = true;
 					Game.switchScene( InterlevelScene.class );
@@ -80,7 +92,6 @@ public class WndGame extends Window {
 			} );
 		}
 				
-		// Main menu
 		addButton( new RedButton( TXT_MENU ) {
 			@Override
 			protected void onClick() {
@@ -93,7 +104,6 @@ public class WndGame extends Window {
 			}
 		} );
 		
-		// Exit
 		addButton( new RedButton( TXT_EXIT ) {
 			@Override
 			protected void onClick() {
@@ -101,7 +111,6 @@ public class WndGame extends Window {
 			}
 		} );
 		
-		// Cancel
 		addButton( new RedButton( TXT_RETURN ) {
 			@Override
 			protected void onClick() {

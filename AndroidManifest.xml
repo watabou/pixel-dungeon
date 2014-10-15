@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	package="com.watabou.pixeldungeon"
-	android:versionCode="59"
-	android:versionName="1.7.1c"
+	android:versionCode="61"
+	android:versionName="1.7.2a"
 	android:installLocation="auto">
 
     <uses-permission android:name="android.permission.VIBRATE"/>
-    <uses-permission android:name="com.android.vending.BILLING" />
     
 	<uses-sdk 
 	    android:minSdkVersion="8"
-	    android:targetSdkVersion="18"/>
+	    android:targetSdkVersion="19"/>
 	
 	<uses-feature 
 	    android:glEsVersion="0x00020000"/>
