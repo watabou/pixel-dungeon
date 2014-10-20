@@ -17,12 +17,13 @@
  */
 package com.watabou.pixeldungeon.items.weapon.melee;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Sword extends MeleeWeapon {
-	
 	{
-		name = "sword";
+		name = Game.getVar(R.string.Sword_Name);
 		image = ItemSpriteSheet.SWORD;
 	}
 	
@@ -32,6 +33,6 @@ public class Sword extends MeleeWeapon {
 	
 	@Override
 	public String desc() {
-		return "The razor-sharp length of steel blade shines reassuringly.";
+		return Game.getVar(R.string.Sword_Info);
 	}
 }

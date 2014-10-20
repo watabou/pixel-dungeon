@@ -19,9 +19,11 @@ package com.watabou.pixeldungeon.items.weapon.melee;
 
 import java.util.ArrayList;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
@@ -33,21 +35,17 @@ import com.watabou.pixeldungeon.windows.WndBag;
 
 public class ShortSword extends MeleeWeapon {
 	
-	public static final String AC_REFORGE	= "REFORGE";
+	public static final String AC_REFORGE = Game.getVar(R.string.ShortSword_ACReforge);
 	
-	private static final String TXT_SELECT_WEAPON	= "Select a weapon to upgrade";
-	
-	private static final String TXT_REFORGED = 
-		"you reforged the short sword to upgrade your %s";
-	private static final String TXT_NOT_BOOMERANG = 
-		"you can't upgrade a boomerang this way";
+	private static final String TXT_SELECT_WEAPON = Game.getVar(R.string.ShortSword_Select);
+	private static final String TXT_REFORGED      = Game.getVar(R.string.ShortSword_Reforged);
+	private static final String TXT_NOT_BOOMERANG = Game.getVar(R.string.ShortSword_NotBoomerang);
 	
 	private static final float TIME_TO_REFORGE	= 2f;
 	
 	private boolean  equipped;
-	
 	{
-		name = "short sword";
+		name = Game.getVar(R.string.ShortSword_Name);
 		image = ItemSpriteSheet.SHORT_SWORD;
 	}
 	
@@ -92,8 +90,7 @@ public class ShortSword extends MeleeWeapon {
 	
 	@Override
 	public String desc() {
-		return 
-			"It is indeed quite short, just a few inches longer, than a dagger.";
+		return Game.getVar(R.string.ShortSword_Info);
 	}
 	
 	private final WndBag.Listener itemSelector = new WndBag.Listener() {

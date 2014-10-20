@@ -18,9 +18,11 @@
 package com.watabou.pixeldungeon.items.wands;
 
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -39,9 +41,8 @@ import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
 public class WandOfAvalanche extends Wand {
-
 	{
-		name = "Wand of Avalanche";
+		name = Game.getVar(R.string.WandOfAvalanche_Name);
 		hitChars = false;
 	}
 	
@@ -82,7 +83,7 @@ public class WandOfAvalanche extends Wand {
 		
 		if (!curUser.isAlive()) {
 			Dungeon.fail( Utils.format( ResultDescriptions.WAND, name, Dungeon.depth ) );
-			GLog.n( "You killed yourself with your own Wand of Avalanche..." );
+			GLog.n(Game.getVar(R.string.WandOfAvalanche_Info1));
 		}
 	}
 	
@@ -93,8 +94,6 @@ public class WandOfAvalanche extends Wand {
 	
 	@Override
 	public String desc() {
-		return
-			"When a discharge of this wand hits a wall (or any other solid obstacle) it causes " +
-			"an avalanche of stones, damaging and stunning all creatures in the affected area.";
+		return Game.getVar(R.string.WandOfAvalanche_Info);
 	}
 }

@@ -17,12 +17,13 @@
  */
 package com.watabou.pixeldungeon.items.weapon.melee;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Dagger extends MeleeWeapon {
-	
 	{
-		name = "dagger";
+		name = Game.getVar(R.string.Dagger_Name);
 		image = ItemSpriteSheet.DAGGER;
 	}
 	
@@ -32,6 +33,6 @@ public class Dagger extends MeleeWeapon {
 	
 	@Override
 	public String desc() {
-		return "A simple iron dagger with a well worn wooden handle.";
+		return Game.getVar(R.string.Dagger_Info);
 	}
 }

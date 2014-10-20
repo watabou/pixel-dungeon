@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.items.weapon;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -34,11 +36,9 @@ import com.watabou.utils.Random;
 
 public class Weapon extends KindOfWeapon {
 
-	private static final String TXT_IDENTIFY		= 
-		"You are now familiar enough with your %s to identify it. It is %s.";
-	private static final String TXT_INCOMPATIBLE	= 
-		"Interaction of different types of magic has negated the enchantment on this weapon!";
-	private static final String TXT_TO_STRING		= "%s :%d";
+	private static final String TXT_IDENTIFY     = Game.getVar(R.string.Weapon_Identify);
+	private static final String TXT_INCOMPATIBLE = Game.getVar(R.string.Weapon_Incompatible);
+	private static final String TXT_TO_STRING    = "%s :%d";
 	
 	public int		STR	= 10;
 	public float	ACU	= 1;	// Accuracy modifier

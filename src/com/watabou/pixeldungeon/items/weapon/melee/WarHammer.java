@@ -17,12 +17,13 @@
  */
 package com.watabou.pixeldungeon.items.weapon.melee;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class WarHammer extends MeleeWeapon {
-
 	{
-		name = "war hammer";
+		name = Game.getVar(R.string.WarHammer_Name);
 		image = ItemSpriteSheet.WAR_HAMMER;
 	}
 	
@@ -32,8 +33,6 @@ public class WarHammer extends MeleeWeapon {
 	
 	@Override
 	public String desc() {
-		return 
-			"Few creatures can withstand the crushing blow of this towering mass of lead and steel, " +
-			"but only the strongest of adventurers can use it effectively.";
+		return Game.getVar(R.string.WarHammer_Info);
 	}
 }

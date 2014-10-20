@@ -17,9 +17,11 @@
  */
 package com.watabou.pixeldungeon.items.wands;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.MagicMissile;
@@ -28,9 +30,8 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
 
 public class WandOfTeleportation extends Wand {
-
 	{
-		name = "Wand of Teleportation";
+		name = Game.getVar(R.string.WandOfTeleportation_Name);
 	}
 
 	@Override
@@ -55,22 +56,15 @@ public class WandOfTeleportation extends Wand {
 			} while (pos == -1);
 			
 			if (pos == -1) {
-				
 				GLog.w( ScrollOfTeleportation.TXT_NO_TELEPORT );
-				
 			} else {
-			
 				ch.pos = pos;
 				ch.sprite.place( ch.pos );
 				ch.sprite.visible = Dungeon.visible[pos];
-				GLog.i( curUser.name + " teleported " + ch.name + " to somewhere" );
-				
+				GLog.i(String.format(Game.getVar(R.string.WandOfTeleportation_Info1), curUser.name, ch.name));
 			}
-
 		} else {
-			
-			GLog.i( "nothing happened" );
-			
+			GLog.i(Game.getVar(R.string.WandOfTeleportation_Info2));
 		}
 	}
 	
@@ -81,8 +75,6 @@ public class WandOfTeleportation extends Wand {
 	
 	@Override
 	public String desc() {
-		return
-			"A blast from this wand will teleport a creature against " +
-			"its will to a random place on the current level.";
+		return Game.getVar(R.string.WandOfTeleportation_Info);
 	}
 }

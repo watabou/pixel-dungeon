@@ -19,10 +19,12 @@ package com.watabou.pixeldungeon.items.wands;
 
 import java.util.ArrayList;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -47,14 +49,14 @@ import com.watabou.utils.Random;
 
 public abstract class Wand extends KindOfWeapon {
 
-	public static final String AC_ZAP	= "ZAP";
+	public static final String AC_ZAP	= Game.getVar(R.string.Wand_ACZap);
 	
-	private static final String TXT_WOOD	= "This thin %s wand is warm to the touch. Who knows what it will do when used?";
-	private static final String TXT_DAMAGE	= "When this wand is used as a melee weapon, its average damage is %d points per hit.";
-	private static final String TXT_WEAPON	= "You can use this wand as a melee weapon.";
+	private static final String TXT_WOOD	= Game.getVar(R.string.Wand_Wood);
+	private static final String TXT_DAMAGE	= Game.getVar(R.string.Wand_Damage);
+	private static final String TXT_WEAPON	= Game.getVar(R.string.Wand_Weapon);
 			
-	private static final String TXT_FIZZLES		= "your wand fizzles; it must be out of charges for now";
-	private static final String TXT_SELF_TARGET	= "You can't target yourself";
+	private static final String TXT_FIZZLES		= Game.getVar(R.string.Wand_Fizzles);
+	private static final String TXT_SELF_TARGET	= Game.getVar(R.string.Wand_SelfTarget);
 	
 	private static final float TIME_TO_ZAP	= 1f;
 	
@@ -81,8 +83,7 @@ public abstract class Wand extends KindOfWeapon {
 		WandOfDisintegration.class,
 		WandOfAvalanche.class
 	};
-	private static final String[] woods = 
-		{"holly", "yew", "ebony", "cherry", "teak", "rowan", "willow", "mahogany", "bamboo", "purpleheart", "oak", "birch"};
+	private static final String[] woods = Game.getVars(R.array.Wand_Wood);
 	private static final Integer[] images = {
 		ItemSpriteSheet.WAND_HOLLY, 
 		ItemSpriteSheet.WAND_YEW, 
@@ -250,7 +251,7 @@ public abstract class Wand extends KindOfWeapon {
 	
 	@Override
 	public String name() {
-		return isKnown() ? name : wood + " wand";
+		return isKnown() ? name : String.format(Game.getVar(R.string.Wand_Name), wood);
 	}
 	
 	@Override
@@ -436,7 +437,7 @@ public abstract class Wand extends KindOfWeapon {
 		
 		@Override
 		public String prompt() {
-			return "Choose direction to zap";
+			return Game.getVar(R.string.Wand_Prompt);
 		}
 	};
 	

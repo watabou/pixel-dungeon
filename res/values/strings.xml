@@ -1116,12 +1116,210 @@
    <string name="ScrollOfWeaponUpgrade_InvTitle">Select an weapon to upgrade</string>
    <string name="ScrollOfWeaponUpgrade_LooksBetter">your %s certainly looks better now</string>
 
-   
-   
-   
-   
-   
-   
+
+<!--  PACKAGE /items/Wands  -->
+   <!--  STRINGS OF Wand CLASS  -->
+   <string name="Wand_Name">%s wand</string>
+   <string name="Wand_ACZap">ZAP</string>
+   <string name="Wand_Wood">This thin %s wand is warm to the touch. Who knows what it will do when used?</string>
+   <string name="Wand_Damage">When this wand is used as a melee weapon, its average damage is %d points per hit.</string>
+   <string name="Wand_Weapon">You can use this wand as a melee weapon.</string>
+   <string name="Wand_Fizzles">your wand fizzles; it must be out of charges for now</string>
+   <string name="Wand_SelfTarget">You can\'t target yourself</string>
+   <string name="Wand_Prompt">Choose direction to zap</string>
+   <string-array name="Wand_Wood">
+       <item >holly</item>
+       <item >yew</item>
+       <item >ebony</item>
+       <item >cherry</item>
+       <item >teak</item>
+       <item >rowan</item>
+       <item >willow</item>
+       <item >mahogany</item>
+       <item >bamboo</item>
+       <item >purpleheart</item>
+       <item >oak</item>
+       <item >birch</item>
+   </string-array> 
+
+
+   <!--  STRINGS OF WandOfAmok CLASS  -->
+   <string name="WandOfAmok_Name">Wand of Amok</string>
+   <string name="WandOfAmok_Info">The purple light from this wand will make the target run amok attacking random creatures in its vicinity.</string>
+   <string name="WandOfAmok_Info1">nothing happened</string>
+
+
+   <!--  STRINGS OF WandOfAvalanche CLASS  -->
+   <string name="WandOfAvalanche_Name">Wand of Avalanche</string>
+   <string name="WandOfAvalanche_Info">When a discharge of this wand hits a wall (or any other solid obstacle) it causes an avalanche of stones, damaging and stunning all creatures in the affected area.</string>
+   <string name="WandOfAvalanche_Info1">You killed yourself with your own Wand of Avalanche...</string>
+
+
+   <!--  STRINGS OF WandOfBlink CLASS  -->
+   <string name="WandOfBlink_Name">Wand of Blink</string>
+   <string name="WandOfBlink_Info">This wand will allow you to teleport in the chosen direction. Creatures and inanimate obstructions will block the teleportation.</string>
+
+
+   <!--  STRINGS OF WandOfDisintegration CLASS  -->
+   <string name="WandOfDisintegration_Name">Wand of Disintegration</string>
+   <string name="WandOfDisintegration_Info">This wand emits a beam of destructive energy, which pierces all creatures in its way. The more targets it hits, the more damage it inflicts to each of them.</string>
+
+
+   <!--  STRINGS OF WandOfFirebolt CLASS  -->
+   <string name="WandOfFirebolt_Name">Wand of Firebolt</string>
+   <string name="WandOfFirebolt_Info">This wand unleashes bursts of magical fire. It will ignite flammable terrain, and will damage and burn a creature it hits.</string>
+   <string name="WandOfFirebolt_Info1">You killed yourself with your own Wand of Firebolt...</string>
+
+
+   <!--  STRINGS OF WandOfFlock CLASS  -->
+   <string name="WandOfFlock_Name">Wand of Flock</string>
+   <string name="WandOfFlock_Info">A flick of this wand summons a flock of magic sheep, creating temporary impenetrable obstacle.</string>
+   <string name="WandOfFlock_SheepName">sheep</string>
+   <string name="WandOfFlock_SheepInfo">This is a magic sheep. What\'s so magical about it? You can\'t kill it. It will stand there until it magcially fades away, all the while chewing cud with a blank stare.</string>
+   <string-array name="WandOfFlock_SheepBaa">
+       <item >Baa!</item>
+       <item >Baa?</item>
+       <item >Baa.</item>
+       <item >Baa...</item>
+   </string-array> 
+
+
+   <!--  STRINGS OF WandOfLightning CLASS  -->
+   <string name="WandOfLightning_Name">Wand of Lightning</string>
+   <string name="WandOfLightning_Info">This wand conjures forth deadly arcs of electricity, which deal damage to several creatures standing close to each other.</string>
+   <string name="WandOfLightning_Info1">You killed yourself with your own Wand of Lightning...</string>
+
+
+   <!--  STRINGS OF WandOfMagicMissile CLASS  -->
+   <string name="WandOfMagicMissile_Name">Wand of Magic Missile</string>
+   <string name="WandOfMagicMissile_Info">This wand launches missiles of pure magical energy, dealing moderate damage to a target creature.</string>
+   <string name="WandOfMagicMissile_ACDisenchant">DISENCHANT</string>
+   <string name="WandOfMagicMissile_Info1">You killed yourself with your own Wand of Magic Missile...</string>
+   <string name="WandOfMagicMissile_SelectWand">Select a wand to upgrade</string>
+   <string name="WandOfMagicMissile_Desinchanted">you disenchanted the Wand of Magic Missile and used its essence to upgrade your %s</string>
+
+
+   <!--  STRINGS OF WandOfPoison CLASS  -->
+   <string name="WandOfPoison_Name">Wand of Poison</string>
+   <string name="WandOfPoison_Info">The vile blast of this twisted bit of wood will imbue its target with a deadly venom. A creature that is poisoned will suffer periodic damage until the effect ends. The duration of the effect increases with the level of the staff.</string>
+   <string name="WandOfPoison_Info1">nothing happened</string>
+
+
+   <!--  STRINGS OF WandOfRegrowth CLASS  -->
+   <string name="WandOfRegrowth_Name">Wand of Regrowth</string>
+   <string name="WandOfRegrowth_Info">\"When life ceases new life always begins to grow... The eternal cycle always remains!\"</string>
+   <string name="WandOfRegrowth_Info1">nothing happened</string>
+
+
+   <!--  STRINGS OF WandOfSlowness CLASS  -->
+   <string name="WandOfSlowness_Name">Wand of Slowness</string>
+   <string name="WandOfSlowness_Info">This wand will cause a creature to move and attack at half its ordinary speed until the effect ends</string>
+   <string name="WandOfSlowness_Info1">nothing happened</string>
+
+
+   <!--  STRINGS OF WandOfTelekinesis CLASS  -->
+   <string name="WandOfTelekinesis_Name">Wand of Telekinesis</string>
+   <string name="WandOfTelekinesis_Info">Waves of magic force from this wand will affect all cells on their way triggering traps, trampling high vegetation, opening closed doors and closing open ones. They also push back monsters.</string>
+   <string name="WandOfTelekinesis_YouNowHave">You have magically transported %s into your backpack</string>
+
+
+   <!--  STRINGS OF WandOfTeleportation CLASS  -->
+   <string name="WandOfTeleportation_Name">Wand of Teleportation</string>
+   <string name="WandOfTeleportation_Info">A blast from this wand will teleport a creature against its will to a random place on the current level.</string>
+   <string name="WandOfTeleportation_Info1">%1$s teleported %2$s to somewhere</string>
+   <string name="WandOfTeleportation_Info2">nothing happened</string>
+
+
+<!--  PACKAGE /items/weapon  -->
+   <!--  STRINGS OF Weapon CLASS  -->
+   <string name="Weapon_Identify">You are now familiar enough with your %1$s to identify it. It is %2$s.</string>
+   <string name="Weapon_Incompatible">Interaction of different types of magic has negated the enchantment on this weapon!</string>
+
+
+<!--  PACKAGE /weapon/melee  -->
+   <!--  STRINGS OF MeleeWeapon CLASS  -->
+   <string name="MeleeWeapon_Info1a">This %1$s is %2$s tier-%3$d melee weapon.</string>
+   <string name="MeleeWeapon_Info1b">a</string>
+   <string name="MeleeWeapon_Info1c">a upgraded</string>
+   <string name="MeleeWeapon_Info1d">an degraded</string>
+   <string name="MeleeWeapon_Info2a">Its average damage is %d points per hit.</string>
+   <string name="MeleeWeapon_Info2b">Its typical average damage is %1$d points per hit and usually it requires %2$d points of strength.</string>
+   <string name="MeleeWeapon_Info2c">Probably this weapon is too heavy for you.</string>
+   <string name="MeleeWeapon_Info3a">This is a rather %s weapon.</string>
+   <string name="MeleeWeapon_Info3b">fast</string>
+   <string name="MeleeWeapon_Info3c">slow</string>
+   <string name="MeleeWeapon_Info3d">and</string>
+   <string name="MeleeWeapon_Info3e">but</string>
+   <string name="MeleeWeapon_Info3f">accurate</string>
+   <string name="MeleeWeapon_Info3g">inaccurate</string>
+   <string name="MeleeWeapon_Info4">It is enchanted.</string>
+   <string name="MeleeWeapon_Info5a">Because of your inadequate strength the accuracy and speed of your attack with this %s is decreased.</string>
+   <string name="MeleeWeapon_Info5b">Because of your excess strength the damage of your attack with this %s is increased.</string>
+   <string name="MeleeWeapon_Info6a">You hold the %1$s at the ready%2$s.</string>
+   <string name="MeleeWeapon_Info6b">, and because it is cursed, you are powerless to let go</string>
+   <string name="MeleeWeapon_Info6c">You can feel a malevolent magic lurking within %s.</string>
+
+
+   <!--  STRINGS OF BattleAxe CLASS  -->
+   <string name="BattleAxe_Name">battle axe</string>
+   <string name="BattleAxe_Info">The enormous steel head of this battle axe puts considerable heft behind each stroke.</string>
+
+
+   <!--  STRINGS OF Dagger CLASS  -->
+   <string name="Dagger_Name">dagger</string>
+   <string name="Dagger_Info">A simple iron dagger with a well worn wooden handle.</string>
+
+
+   <!--  STRINGS OF Glaive CLASS  -->
+   <string name="Glaive_Name">glaive</string>
+   <string name="Glaive_Info">A polearm consisting of a sword blade on the end of a pole.</string>
+
+
+   <!--  STRINGS OF Knuckles CLASS  -->
+   <string name="Knuckles_Name">knuckleduster</string>
+   <string name="Knuckles_Info">A piece of iron shaped to fit around the knuckles.</string>
+
+
+   <!--  STRINGS OF Longsword CLASS  -->
+   <string name="Longsword_Name">longsword</string>
+   <string name="Longsword_Info">This towering blade inflicts heavy damage by investing its heft into every cut.</string>
+
+
+   <!--  STRINGS OF Mace CLASS  -->
+   <string name="Mace_Name">mace</string>
+   <string name="Mace_Info">The iron head of this weapon inflicts substantial damage.</string>
+
+
+   <!--  STRINGS OF Quarterstaff CLASS  -->
+   <string name="Quarterstaff_Name">quarterstaff</string>
+   <string name="Quarterstaff_Info">A staff of hardwood, its ends are shod with iron.</string>
+
+
+   <!--  STRINGS OF ShortSword CLASS  -->
+   <string name="ShortSword_Name">short sword</string>
+   <string name="ShortSword_Info">It is indeed quite short, just a few inches longer, than a dagger.</string>
+   <string name="ShortSword_ACReforge">REFORGE</string>
+   <string name="ShortSword_Select">Select a weapon to upgrade</string>
+   <string name="ShortSword_Reforged">you reforged the short sword to upgrade your %s</string>
+   <string name="ShortSword_NotBoomerang">you can\'t upgrade a boomerang this way</string>
+
+
+
+   <!--  STRINGS OF Spear CLASS  -->
+   <string name="Spear_Name">spear</string>
+   <string name="Spear_Info">A slender wooden rod tipped with sharpened iron.</string>
+
+
+   <!--  STRINGS OF Sword CLASS  -->
+   <string name="Sword_Name">sword</string>
+   <string name="Sword_Info">The razor-sharp length of steel blade shines reassuringly.</string>
+
+
+   <!--  STRINGS OF WarHammer CLASS  -->
+   <string name="WarHammer_Name">war hammer</string>
+   <string name="WarHammer_Info">Few creatures can withstand the crushing blow of this towering mass of lead and steel, but only the strongest of adventurers can use it effectively.</string>
+
+
    <!--  STRINGS OF AlarmTrap CLASS  -->
    <string name="AlarmTrap_Desc">The trap emits a piercing sound that echoes throughout the dungeon!</string>
 

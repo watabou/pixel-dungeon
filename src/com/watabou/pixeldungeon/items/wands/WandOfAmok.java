@@ -17,8 +17,10 @@
  */
 package com.watabou.pixeldungeon.items.wands;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
@@ -28,22 +30,17 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
 
 public class WandOfAmok extends Wand {
-
 	{
-		name = "Wand of Amok";
+		name = Game.getVar(R.string.WandOfAmok_Name);
 	}
 
 	@Override
 	protected void onZap( int cell ) {
 		Char ch = Actor.findChar( cell );
 		if (ch != null) {
-			
 			Buff.affect( ch, Amok.class, 3f + level() );
-
 		} else {
-			
-			GLog.i( "nothing happened" );
-			
+			GLog.i(Game.getVar(R.string.WandOfAmok_Info1));
 		}
 	}
 	
@@ -54,8 +51,6 @@ public class WandOfAmok extends Wand {
 	
 	@Override
 	public String desc() {
-		return
-			"The purple light from this wand will make the target run amok " +
-			"attacking random creatures in its vicinity.";
+		return Game.getVar(R.string.WandOfAmok_Info);
 	}
 }

@@ -1114,5 +1114,210 @@
    <string name="ScrollOfWeaponUpgrade_Info">Este pergaminho irá atualizar armas brancas, melhorando sua qualidade. A contrário do Pergaminho de Atualização normal este pergaminho especializado nunca irá destruir encantamentos em uma arma. Pelo contrário, ele é capaz de atribuir em uma arma desencantada um encantamento aleatório.</string>
    <string name="ScrollOfWeaponUpgrade_InvTitle">Escolha uma arma para atualizar</string>
    <string name="ScrollOfWeaponUpgrade_LooksBetter">seu %s certamente está melhor agora.</string>
+
+
+<!--  PACKAGE /items/Wands  -->
+   <!--  STRINGS OF Wand CLASS  -->
+   <string name="Wand_Name">varinha de %s</string>
+   <string name="Wand_ACZap">ZAP</string>
+   <string name="Wand_Wood">Esta fina varinha de %s é quente ao seu toque. Quem sabe o que vai fazer quando usada?</string>
+   <string name="Wand_Damage">Quando esta varinha é usada como uma arma branca, seu dano médio é de %d pontos por acerto.</string>
+   <string name="Wand_Weapon">Você pode usar esta varinha como uma arma branca.</string>
+   <string name="Wand_Fizzles">sua varinha chiou; ele deve estar sem cargas por enquanto</string>
+   <string name="Wand_SelfTarget">Você não pode acertar a si mesmo.</string>
+   <string name="Wand_Prompt">Escolha uma direção para atirar</string>
+   <string-array name="Wand_Wood">
+       <item >azevinho</item>
+       <item >teixo</item>
+       <item >ébano</item>
+       <item >cerejeira</item>
+       <item >teca</item>
+       <item >sorveira</item>
+       <item >salgueiro</item>
+       <item >mogno</item>
+       <item >bambu</item>
+       <item >roxinho</item>
+       <item >carvalho</item>
+       <item >bétula</item>
+   </string-array> 
+
+
+   <!--  STRINGS OF WandOfAmok CLASS  -->
+   <string name="WandOfAmok_Name">Varinha de Fúria</string>
+   <string name="WandOfAmok_Info">A luz roxa desta varinha irá causar um ataque de fúria no alvo, que atacará criaturas aleatórias nas suas proximidades.</string>
+   <string name="WandOfAmok_Info1">nada aconteceu</string>
+
+
+   <!--  STRINGS OF WandOfAvalanche CLASS  -->
+   <string name="WandOfAvalanche_Name">Varinha de Avalanche</string>
+   <string name="WandOfAvalanche_Info">Quando uma descarga desta varinha atinge uma parede(ou qualquer outro obstáculo sólido) provoca uma avalanche de pedras, causando danos e atordoando de todas as criaturas na área afetada.</string>
+   <string name="WandOfAvalanche_Info1">Você matou a si mesmo com a Varinha de Avalanche...</string>
+
+
+   <!--  STRINGS OF WandOfBlink CLASS  -->
+   <string name="WandOfBlink_Name">Varinha de Clarão</string>
+   <string name="WandOfBlink_Info">Esta varinha permitirá que você se teletransporte na direção escolhida. Criaturas e obstáculos inanimados irão bloquear o teletransporte.</string>
+
+
+   <!--  STRINGS OF WandOfDisintegration CLASS  -->
+   <string name="WandOfDisintegration_Name">Varinha de Desintegração</string>
+   <string name="WandOfDisintegration_Info">Esta varinha emite um feixe de energia destrutiva, que penetra em todas as criaturas no seu caminho. Quanto mais alvos ela atinge, mais dano causará a cada um deles.</string>
+
+
+   <!--  STRINGS OF WandOfFirebolt CLASS  -->
+   <string name="WandOfFirebolt_Name">Varinha de Fogo</string>
+   <string name="WandOfFirebolt_Info">Esta varinha solta rajadas de fogo mágico. Ela pode incendiar terrenos inflamáveis, e causar danos ou queimar uma criatura.</string>
+   <string name="WandOfFirebolt_Info1">Você matou a si mesmo com a Varinha de Fogo...</string>
+
+
+   <!--  STRINGS OF WandOfFlock CLASS  -->
+   <string name="WandOfFlock_Name">Varinha do Rebanho</string>
+   <string name="WandOfFlock_Info">Um movimento desta varinha invoca um rebanho de ovelhas mágicas, criando obstáculos temporariamente impenetráveis</string>
+   <string name="WandOfFlock_SheepName">ovelha</string>
+   <string name="WandOfFlock_SheepInfo">Esta é uma ovelha mágica. O que há de tão mágico sobre ela? Você não pode matá-las. Ela vai ficar lá até que magicamente desapareça, e ficará o tempo todo ruminando com um olhar vazio.</string>
+   <string-array name="WandOfFlock_SheepBaa">
+       <item >Bee!</item>
+       <item >Bee?</item>
+       <item >Bee.</item>
+       <item >Beeee...</item>
+       <item >Baa...</item>
+       <item >Blee...</item>
+   </string-array> 
+
+
+   <!--  STRINGS OF WandOfLightning CLASS  -->
+   <string name="WandOfLightning_Name">Varinha do Relâmpago</string>
+   <string name="WandOfLightning_Info">Esta varinha evoca arcos mortais de energia elétrica, que causam dano a várias criaturas que estiverem próximas.</string>
+   <string name="WandOfLightning_Info1">Você matou a si mesmo com a Varinha de Relâmpago...</string>
+
+
+   <!--  STRINGS OF WandOfMagicMissile CLASS  -->
+   <string name="WandOfMagicMissile_Name">Varinha de Mísseis Mágicos</string>
+   <string name="WandOfMagicMissile_Info">Esta varinha lança mísseis de pura energia mágica, causando dano moderado a uma criatura alvo.</string>
+   <string name="WandOfMagicMissile_ACDisenchant">DESENCANTAR</string>
+   <string name="WandOfMagicMissile_Info1">Você matou a si mesmo com a Varinha de Mísseis Mágicos...</string>
+   <string name="WandOfMagicMissile_SelectWand">Selecione uma varinha para atualizar</string>
+   <string name="WandOfMagicMissile_Desinchanted">você desencantou a Varinha de Mísseis Mágicos e usou a sua essência para atualizar %s</string>
+
+
+   <!--  STRINGS OF WandOfPoison CLASS  -->
+   <string name="WandOfPoison_Name">Varinha de Veneno</string>
+   <string name="WandOfPoison_Info">A explosão vil desta pequena madeira torcida vai impregnar seu alvo com um veneno mortal. Uma criatura que está envenenada sofrerá dano periódico até que o efeito termine. A duração de seu efeito aumenta conforme seu level.</string>
+   <string name="WandOfPoison_Info1">nada aconteceu</string>
+
+
+   <!--  STRINGS OF WandOfRegrowth CLASS  -->
+   <string name="WandOfRegrowth_Name">Varinha dos Brotos</string>
+   <string name="WandOfRegrowth_Info">\"Quando a vida cessa, uma nova vida começa a crescer ... O eterno ciclo permanece sempre!\"</string>
+   <string name="WandOfRegrowth_Info1">nada aconteceu</string>
+
+
+   <!--  STRINGS OF WandOfSlowness CLASS  -->
+   <string name="WandOfSlowness_Name">Varinha da Lentidão</string>
+   <string name="WandOfSlowness_Info">Esta varinha fará com que uma criatura se mova ou ataque com a metade de sua velocidade normal até o fim de seu efeito</string>
+   <string name="WandOfSlowness_Info1">nada aconteceu</string>
+
+
+   <!--  STRINGS OF WandOfTelekinesis CLASS  -->
+   <string name="WandOfTelekinesis_Name">Varinha de Telecinésia</string>
+   <string name="WandOfTelekinesis_Info">Ondas de força mágica desta varinha vão afetar todas as armadilhas no caminho desarmando-as; pisará a vegetação alta; abrirá portas fechadas e fechará as abertas. Esta onda também empurará os monstros.</string>
+   <string name="WandOfTelekinesis_YouNowHave">Você magicamente transportou %s para a sua mochila</string>
+
+
+   <!--  STRINGS OF WandOfTeleportation CLASS  -->
+   <string name="WandOfTeleportation_Name">Varinha do Teleporte</string>
+   <string name="WandOfTeleportation_Info">Uma explosão desta varinha teleportará uma criatura contra a sua vontade para um lugar aleatório no nível atual.</string>
+   <string name="WandOfTeleportation_Info1">%1$s teleportou %2$s para algum lugar</string>
+   <string name="WandOfTeleportation_Info2">nada aconteceu</string>
+
+
+<!--  PACKAGE /items/weapon  -->
+   <!--  STRINGS OF Weapon CLASS  -->
+   <string name="Weapon_Identify">Você agora está bastante familiarizado com sua %1$s e pode indentificá-la como %2$s.</string>
+   <string name="Weapon_Incompatible">Interação de diferentes tipos de magia negou o encantamento sobre essa arma!</string>
+
+
+<!--  PACKAGE /weapon/melee  -->
+   <!--  STRINGS OF MeleeWeapon CLASS  -->
+   <string name="MeleeWeapon_Info1a">%1$s: Uma arma corpo a corpo nível %3$d %2$s.</string>
+   <string name="MeleeWeapon_Info1b"></string>
+   <string name="MeleeWeapon_Info1c">aprimorada</string>
+   <string name="MeleeWeapon_Info1d">degradada</string>
+   <string name="MeleeWeapon_Info2a">O dano médio é de %d pontos por acerto.</string>
+   <string name="MeleeWeapon_Info2b">O dano médio normal é de %1$d pontos por acerto e, geralmente, requer %2$d pontos de força.</string>
+   <string name="MeleeWeapon_Info2c">Provavelmente, esta arma é muito pesada para você.</string>
+   <string name="MeleeWeapon_Info3a">Esta arma é bastante %s.</string>
+   <string name="MeleeWeapon_Info3b">rápida</string>
+   <string name="MeleeWeapon_Info3c">lenta</string>
+   <string name="MeleeWeapon_Info3d">e</string>
+   <string name="MeleeWeapon_Info3e">mas</string>
+   <string name="MeleeWeapon_Info3f">precisa</string>
+   <string name="MeleeWeapon_Info3g">imprecisa</string>
+   <string name="MeleeWeapon_Info4">Está Encantada</string>
+   <string name="MeleeWeapon_Info5a">Por causa de sua força inadequada a precisão e velocidade do seu ataque com %s é menor.</string>
+   <string name="MeleeWeapon_Info5b">Por causa de seu excesso de força o dano de seu ataque com %s é aumentada.</string>
+   <string name="MeleeWeapon_Info6a">Você empunha a(o) %1$s%2$s.</string>
+   <string name="MeleeWeapon_Info6b">, mas por estar amaldiçoado, você não conseguirá soltar</string>
+   <string name="MeleeWeapon_Info6c">Você pode sentir uma magia maléfica oculta na(o) %s.</string>
+
+
+   <!--  STRINGS OF BattleAxe CLASS  -->
+   <string name="BattleAxe_Name">Machado de Batalha</string>
+   <string name="BattleAxe_Info">A enorme cabeça de ferro deste Machado de Batalha causa danos a cada golpe por causa do grande peso.</string>
+
+
+   <!--  STRINGS OF Dagger CLASS  -->
+   <string name="Dagger_Name">Adaga</string>
+   <string name="Dagger_Info">Uma adaga de ferro simples, com um cabo de madeira bem desgastado.</string>
+
+
+   <!--  STRINGS OF Glaive CLASS  -->
+   <string name="Glaive_Name">Glaive</string>
+   <string name="Glaive_Info">Uma arma de haste que consiste numa lâmina de espada na extremidade de uma vara.</string>
+
+
+   <!--  STRINGS OF Knuckles CLASS  -->
+   <string name="Knuckles_Name">Soqueira</string>
+   <string name="Knuckles_Info">Uma peça de ferro com formato específico para colocar em seus dedos.</string>
+
+
+   <!--  STRINGS OF Longsword CLASS  -->
+   <string name="Longsword_Name">Espada Grande</string>
+   <string name="Longsword_Info">Esta lâmina imponente causa danos graves​​, ao investir seu peso em cada corte.</string>
+
+
+   <!--  STRINGS OF Mace CLASS  -->
+   <string name="Mace_Name">Bastão</string>
+   <string name="Mace_Info">A cabeça de ferro desta arma causa danos substanciais.</string>
+
+
+   <!--  STRINGS OF Quarterstaff CLASS  -->
+   <string name="Quarterstaff_Name">Cajado</string>
+   <string name="Quarterstaff_Info">Um composto de madeira com entalhe de ferro nas extremidades.</string>
+
+
+   <!--  STRINGS OF ShortSword CLASS  -->
+   <string name="ShortSword_Name">Espada Curta</string>
+   <string name="ShortSword_Info">Na verdade, é bastante curta, apenas alguns centímetros mais longo do que um punhal.</string>
+   <string name="ShortSword_ACReforge">REFORJAR</string>
+   <string name="ShortSword_Select">Selecione uma arma para aprimorar</string>
+   <string name="ShortSword_Reforged">Você reforjou sua espada curta para atualizar %s</string>
+   <string name="ShortSword_NotBoomerang">você não pode atualizar um bumerangue dessa forma</string>
+
+
+
+   <!--  STRINGS OF Spear CLASS  -->
+   <string name="Spear_Name">Lança</string>
+   <string name="Spear_Info">A haste de madeira com ponta delgada com ferro afiada.</string>
+
+
+   <!--  STRINGS OF Sword CLASS  -->
+   <string name="Sword_Name">Espada</string>
+   <string name="Sword_Info">O comprimento desta afiada lâmina de aço tem um brilho tranqüilizador.</string>
+
+
+   <!--  STRINGS OF WarHammer CLASS  -->
+   <string name="WarHammer_Name">Martelo de Guerra</string>
+   <string name="WarHammer_Info">Poucas criaturas podem suportar o golpe esmagador desta grande massa de chumbo e aço, mas só os mais fortes e aventureiros pode usá-lo de forma eficaz.</string>
    
 </resources>
