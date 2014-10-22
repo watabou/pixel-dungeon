@@ -31,7 +31,6 @@
 
 
    <!--  STRINGS OF StartScene CLASS  -->
-   <string name="StartScene_Title">Select Your Hero</string>
    <string name="StartScene_Load">Load Game</string>
    <string name="StartScene_New">New Game</string>
    <string name="StartScene_Erase">Erase current game</string>
@@ -41,6 +40,7 @@
    <string name="StartScene_Yes">Yes, start new game</string>
    <string name="StartScene_No">No, return to main menu</string>
    <string name="StartScene_Unlock">To unlock this character class, slay the 3rd boss with any other class</string>
+   <string name="StartScene_WinGame">To unlock \"Challenges\", win the game with any character class.</string>
 
 
    <!--  STRINGS OF InterLevelScene CLASS  -->
@@ -108,6 +108,7 @@
    <string name="Hero_StaCharm">You are charmed!</string>
    <string name="Hero_StaCripple">You are crippled!</string>
    <string name="Hero_StaBleeding">You are bleeding!</string>
+   <string name="Hero_StaVertigo">Everything is spinning around you!</string>
 
 
    <!--  STRINGS OF HeroClass CLASS  -->
@@ -115,7 +116,6 @@
    <string name="HeroClass_Mag">mage</string>
    <string name="HeroClass_Rog">rogue</string>
    <string name="HeroClass_Hun">huntress</string>
-   <string name="HeroClass_Class">class</string>
    <string-array name="HeroClass_WarPerks">
        <item >Warriors start with 11 points of Strength.</item>
        <item >Warriors start with a unique short sword. This sword can be later \"reforged\" to upgrade another melee weapon.</item>
@@ -289,6 +289,7 @@
    <string name="Badges_GamesPlayed3">500 games played</string>
    <string name="Badges_GamesPlayed4">2000 games played</string>
    <string name="Badges_HappyEnd">Happy end</string>
+   <string name="Badges_Champion">Challenge won</string>
    <string name="Badges_Supporter">Thanks for your support!</string>
 
 
@@ -344,6 +345,7 @@
 
    <!--  STRINGS OF WndGame CLASS  -->
    <string name="WndGame_Settings">Settings</string>
+   <string name="WndGame_Challenges">Challenges</string>
    <string name="WndGame_Ranking">Rankings</string>
    <string name="WndGame_Start">Start New Game</string>
    <string name="WndGame_menu">Main Menu</string>
@@ -386,14 +388,6 @@
    <string name="WndInfoItem_Remains">This is all that\'s left from one of your predecessors. Maybe it\'s worth checking for any valuables.</string>
 
 
-   <!--  STRINGS OF WndInfoMob CLASS  -->
-   <string name="WndInfoMob_Sleeping">\n\nThis %s is sleeping.</string>
-   <string name="WndInfoMob_Hunting">\n\nThis %s is hunting.</string>
-   <string name="WndInfoMob_Wandering">\n\nThis %s is wandering.</string>
-   <string name="WndInfoMob_Fleeing">\n\nThis %s is fleeing.</string>
-   <string name="WndInfoMob_Passive">\n\nThe %s is passive.</string>
-
-
    <!--  STRINGS OF WndJournal CLASS  -->
    <string name="WndJournal_Title">Journal</string>
 
@@ -404,6 +398,7 @@
    <string name="WndRanking_Items">Items</string>
    <string name="WndRanking_Badges">Badges</string>
    <string name="WndRanking_StaTitle">Level %1$d %2$s</string>
+   <string name="WndRanking_StaChallenges">Challenges</string>
    <string name="WndRanking_StaHealth">Health</string>
    <string name="WndRanking_StaStr">Strength</string>
    <string name="WndRanking_StaDuration">Game Duration</string>
@@ -433,6 +428,7 @@
    <string name="WndSettings_ZoomOut">-</string>
    <string name="WndSettings_ZoomDef">Default Zoom</string>
    <string name="WndSettings_ScaleUp">Scale up UI</string>
+   <string name="WndSettings_Immersive">Immersive mode</string>
    <string name="WndSettings_Music">Music</string>
    <string name="WndSettings_Sound">Sound FX</string>
    <string name="WndSettings_Brightness">Brightness</string>
@@ -481,11 +477,11 @@
    <!--  STRINGS OF EquipableItem CLASS  -->
    <string name="EquipableItem_ACEquip">EQUIP</string>
    <string name="EquipableItem_ACUnequip">UNEQUIP</string>
+   <string name="EquipableItem_Unequip">You can\'t remove cursed %s!</string>
 
 
    <!--  STRINGS OF KindOfWeapon CLASS  -->
    <string name="KindOfWeapon_EquipCursed">you wince as your grip involuntarily tightens around your %s</string>
-   <string name="KindOfWeapon_UnequipCursed">you can\'t remove cursed %s!</string>
 
 
    <!--  STRINGS OF Gold CLASS  -->
@@ -567,9 +563,9 @@
    <string name="Plant_Seed">seed of %s</string>
 
 
-   <!--  STRINGS OF Blindweed CLASS  -->
-   <string name="Blindweed_Name">Blindweed</string>
-   <string name="Blindweed_Desc">Upon touching a Blindweed it perishes in a blinding flash of light.</string>
+   <!--  STRINGS OF Dreamweed CLASS  -->
+   <string name="Dreamweed_Name">Dreamweed</string>
+   <string name="Dreamweed_Desc">Upon touching a Dreamweed it secretes a glittering cloud of confusing gas.</string>
 
 
    <!--  STRINGS OF Earthroot CLASS  -->
@@ -607,7 +603,6 @@
 <!--  PACKAGE items/armor  -->
    <!--  STRINGS OF Armor CLASS  -->
    <string name="Armor_EquipCursed">your %s constricts around you painfully</string>
-   <string name="Armor_UnequipCursed">You can\'t remove cursed %s!</string>
    <string name="Armor_Identify">you are now familiar enough with your %1$s to identify it. It is %2$s.</string>
    <string name="Armor_ToString">%1$s :%2$d</string>
    <string name="Armor_Incompatible">Interaction of different types of magic has erased the glyph on this armor!</string>
@@ -1304,7 +1299,6 @@
    <string name="ShortSword_NotBoomerang">you can\'t upgrade a boomerang this way</string>
 
 
-
    <!--  STRINGS OF Spear CLASS  -->
    <string name="Spear_Name">spear</string>
    <string name="Spear_Info">A slender wooden rod tipped with sharpened iron.</string>
@@ -1319,6 +1313,63 @@
    <string name="WarHammer_Name">war hammer</string>
    <string name="WarHammer_Info">Few creatures can withstand the crushing blow of this towering mass of lead and steel, but only the strongest of adventurers can use it effectively.</string>
 
+<!--  PACKAGE /weapon/missiles  -->
+   <!--  STRINGS OF MissileWeapon CLASS  -->
+   <string name="MissileWeapon_Missiles">Missile weapon</string>
+   <string name="MissileWeapon_Yes">Yes, I know what I\'m doing</string>
+   <string name="MissileWeapon_No">No, I changed my mind</string>
+   <string name="MissileWeapon_Sure">Do you really want to equip it as a melee weapon?</string>
+   <string name="MissileWeapon_Info1">\n\nAverage damage of this weapon equals to %d points per hit.</string>
+   <string name="MissileWeapon_Info2">Because of your inadequate strength the accuracy and speed of your attack with this %s is decreased.</string>
+   <string name="MissileWeapon_Info3">Because of your excess strength the damage of your attack with this %s is increased.</string>
+   <string name="MissileWeapon_Info4">\n\nYou hold the %s at the ready.</string>
+
+
+   <!--  STRINGS OF Boomerang CLASS  -->
+   <string name="Boomerang_Name">boomerang</string>
+   <string name="Boomerang_Info">Thrown to the enemy this flat curved wooden missile will return to the hands of its thrower.</string>
+
+
+   <!--  STRINGS OF CurareDart CLASS  -->
+   <string name="CurareDart_Name">curare dart</string>
+   <string name="CurareDart_Info">These little evil darts don\'t do much damage but they can paralyze the target leaving it helpless and motionless for some time.</string>
+
+
+   <!--  STRINGS OF Dart CLASS  -->
+   <string name="Dart_Name">dart</string>
+   <string name="Dart_Info">These simple metal spikes are weighted to fly true and sting their prey with a flick of the wrist.</string>
+
+
+   <!--  STRINGS OF IncendiaryDart CLASS  -->
+   <string name="IncendiaryDart_Name">incendiary dart</string>
+   <string name="IncendiaryDart_Info">The spike on each of these darts is designed to pin it to its target while the unstable compounds strapped to its length burst into brilliant flames.</string>
+
+
+   <!--  STRINGS OF Javelin CLASS  -->
+   <string name="Javelin_Name">javelin</string>
+   <string name="Javelin_Info">This length of metal is weighted to keep the spike at its tip foremost as it sails through the air.</string>
+
+
+   <!--  STRINGS OF Shuriken CLASS  -->
+   <string name="Shuriken_Name">shuriken</string>
+   <string name="Shuriken_Info">Star-shaped pieces of metal with razor-sharp blades do significant damage when they hit a target. They can be thrown at very high rate.</string>
+
+
+   <!--  STRINGS OF Tamahawk CLASS  -->
+   <string name="Tamahawk_Name">tomahawk</string>
+   <string name="Tamahawk_Info">This throwing axe is not that heavy, but it still requires significant strength to be used effectively.</string>
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
 
    <!--  STRINGS OF AlarmTrap CLASS  -->
    <string name="AlarmTrap_Desc">The trap emits a piercing sound that echoes throughout the dungeon!</string>

@@ -31,7 +31,7 @@ public abstract class InventoryScroll extends Scroll {
 
 	protected String inventoryTitle = Game.getVar(R.string.InventoryScroll_Title);
 	protected WndBag.Mode mode = WndBag.Mode.ALL;
-	
+
 	private static final String TXT_WARNING	= Game.getVar(R.string.InventoryScroll_Warning);
 	private static final String TXT_YES		= Game.getVar(R.string.InventoryScroll_Yes);
 	private static final String TXT_NO		= Game.getVar(R.string.InventoryScroll_No);

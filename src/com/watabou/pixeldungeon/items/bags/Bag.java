@@ -88,9 +88,8 @@ public class Bag extends Item implements Iterable<Item> {
 	}
 	
 	@Override
-	public Item detach( Bag container ) {
-		owner = null;
-		return super.detach( container );
+	public void onDetach( ) {
+		this.owner = null;
 	}
 	
 	@Override

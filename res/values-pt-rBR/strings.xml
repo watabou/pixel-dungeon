@@ -31,7 +31,6 @@
 
 
    <!--  STRINGS OF StartScene CLASS  -->
-   <string name="StartScene_Title">Escolha seu Heroi</string>
    <string name="StartScene_Load">Carregar Jogo</string>
    <string name="StartScene_New">Novo Jogo</string>
    <string name="StartScene_Erase">Apagar jogo atual</string>
@@ -40,7 +39,8 @@
    <string name="StartScene_Warning">O seu progresso no jogo atual será apagado.</string>
    <string name="StartScene_Yes">Sim, iniciar novo jogo</string>
    <string name="StartScene_No">Não, voltar ao menu principal</string>
-   <string name="StartScene_Unlock">Para desbloquear esta classe de personagem, mate o terceiro chefe com qualquer outra classe</string>
+   <string name="StartScene_Unlock">Para desbloquear esta classe de personagem, mate o terceiro chefe com qualquer classe de jogador</string>
+   <string name="StartScene_WinGame">Para desbloquear \"Desafios\", ganhe o jogo com pelo menus uma classe de jogador.</string>
 
 
    <!--  STRINGS OF InterLevelScene CLASS  -->
@@ -108,6 +108,7 @@
    <string name="Hero_StaCharm">Você foi encantado!</string>
    <string name="Hero_StaCripple">Você está incapacitado!</string>
    <string name="Hero_StaBleeding">Você está sangrando!</string>
+   <string name="Hero_StaVertigo">Tudo está girando em torno de você!</string>
 
 
    <!--  STRINGS OF HeroClass CLASS  -->
@@ -115,7 +116,6 @@
    <string name="HeroClass_Mag">mago</string>
    <string name="HeroClass_Rog">trapaceiro</string>
    <string name="HeroClass_Hun">caçadora</string>
-   <string name="HeroClass_Class">classe</string>
    <string-array name="HeroClass_WarPerks">
        <item >Guerreiros começam com 11 pontos de força.</item>
        <item >Guerreiros começam com uma única Espada Curta. Esta espada pode ser \"reforjada\" para se tranformar em outra arma.</item>
@@ -289,6 +289,7 @@
    <string name="Badges_GamesPlayed3">500 jogos iniciados</string>
    <string name="Badges_GamesPlayed4">2000 jogos iniciados</string>
    <string name="Badges_HappyEnd">Final Feliz</string>
+   <string name="Badges_Champion">Desafio Vencido</string>
    <string name="Badges_Supporter">Obrigado pelo seu apoio!</string>
 
 
@@ -384,14 +385,6 @@
    <string name="WndInfoItem_Inside">Você pode ver dentro do %s, mas para abrir o baú você precisa de uma chave de ouro.</string>
    <string name="WndInfoItem_Owner">Esta antiga tumba pode conter algo de útil, mas seu dono certamente vai opor-se à verificação.</string>
    <string name="WndInfoItem_Remains">Isso é tudo o que resta de um de seus antecessores. Talvez vale a pena verificar se há algo.</string>
-
-
-   <!--  STRINGS OF WndInfoMob CLASS  -->
-   <string name="WndInfoMob_Sleeping">\n\nEste %s está dormindo.</string>
-   <string name="WndInfoMob_Hunting">\n\nEste %s está caçando.</string>
-   <string name="WndInfoMob_Wandering">\n\nEste %s está distraído.</string>
-   <string name="WndInfoMob_Fleeing">\n\nEste %s está fugindo.</string>
-   <string name="WndInfoMob_Passive">\n\nO %s é passivo.</string>
 
 
    <!--  STRINGS OF WndJournal CLASS  -->
@@ -568,7 +561,7 @@
 
    <!--  STRINGS OF Blindweed CLASS  -->
    <string name="Blindweed_Name">Blindweed</string>
-   <string name="Blindweed_Desc">Ao tocar uma Blindweed aparece um flash de luz cegante.</string>
+   <string name="Blindweed_Desc">ele secreta uma nuvem brilhante de gás da confusão.</string>
 
 
    <!--  STRINGS OF Earthroot CLASS  -->
@@ -1305,7 +1298,6 @@
    <string name="ShortSword_NotBoomerang">você não pode atualizar um bumerangue dessa forma</string>
 
 
-
    <!--  STRINGS OF Spear CLASS  -->
    <string name="Spear_Name">Lança</string>
    <string name="Spear_Info">A haste de madeira com ponta delgada com ferro afiada.</string>
@@ -1319,5 +1311,52 @@
    <!--  STRINGS OF WarHammer CLASS  -->
    <string name="WarHammer_Name">Martelo de Guerra</string>
    <string name="WarHammer_Info">Poucas criaturas podem suportar o golpe esmagador desta grande massa de chumbo e aço, mas só os mais fortes e aventureiros pode usá-lo de forma eficaz.</string>
-   
+
+
+<!--  PACKAGE /weapon/missiles  -->
+   <!--  STRINGS OF MissileWeapon CLASS  -->
+   <string name="MissileWeapon_Missiles">Arma de Misseis</string>
+   <string name="MissileWeapon_Yes">Sim, tenho certeza</string>
+   <string name="MissileWeapon_No">Não, eu mudei de idéia</string>
+   <string name="MissileWeapon_Sure">Você realmente quer equipar isto como uma arma?</string>
+   <string name="MissileWeapon_Info1">\n\nA média de dano desta arma é igual a %d pontos por acerto.</string>
+   <string name="MissileWeapon_Info2">Por causa de sua força inadequada a precisão e velocidade do seu ataque com %s é diminuída.</string>
+   <string name="MissileWeapon_Info3">Por causa de seu excesso de força o dano de seu ataque com %s é aumentado.</string>
+   <string name="MissileWeapon_Info4">\n\nVocê mantém o %s pronto.</string>
+
+
+   <!--  STRINGS OF Boomerang CLASS  -->
+   <string name="Boomerang_Name">bumerangue</string>
+   <string name="Boomerang_Info">Lançada para o inimigo esse míssil liso de madeira curvada voltará para as mãos de seu lançador.</string>
+
+
+   <!--  STRINGS OF CurareDart CLASS  -->
+   <string name="CurareDart_Name">dardo envenenado</string>
+   <string name="CurareDart_Info">Estes pequenos dardos malignos não fazer muito dano, mas eles podem paralisar o alvo deixando-o indefeso e imóvel por algum tempo.</string>
+
+
+   <!--  STRINGS OF Dart CLASS  -->
+   <string name="Dart_Name">dardo</string>
+   <string name="Dart_Info">Estas simples pontas de metal são pesados mas voam e picam suas presas com um golpe rápido.</string>
+
+
+   <!--  STRINGS OF IncendiaryDart CLASS  -->
+   <string name="IncendiaryDart_Name">dardo incendiário</string>
+   <string name="IncendiaryDart_Info">A ponta de cada um desses dardos é projetada para fixar-se no alvo, enquanto os compostos instáveis ​​amarrados em sua extensão explodem em chamas brilhantes.</string>
+
+
+   <!--  STRINGS OF Javelin CLASS  -->
+   <string name="Javelin_Name">lança</string>
+   <string name="Javelin_Info">Este pesado metal comprido tem uma ponta em sua extremidade, cortando o ar em seu caminho.</string>
+
+
+   <!--  STRINGS OF Shuriken CLASS  -->
+   <string name="Shuriken_Name">shuriken</string>
+   <string name="Shuriken_Info">Peças de metal em forma de estrela com lâminas afiadas podem causar danos significativos quando atingem o alvo. Eles podem ser jogados em altas velocidades.</string>
+
+
+   <!--  STRINGS OF Tamahawk CLASS  -->
+   <string name="Tamahawk_Name">machadinha</string>
+   <string name="Tamahawk_Info">Este machado de arremesso não é tão pesado, mas ainda exige força significativa para ser usado de forma eficaz.</string>
+
 </resources>

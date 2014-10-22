@@ -22,7 +22,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
-import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 public class MeleeWeapon extends Weapon {
@@ -121,6 +120,17 @@ public class MeleeWeapon extends Weapon {
 		} else if (ACU != 1f) {
 			quality += ACU > 1f ? Game.getVar(R.string.MeleeWeapon_Info3e) : Game.getVar(R.string.MeleeWeapon_Info3f);
 			info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info3a), quality));
+		}
+
+		info.append(" ");
+		switch (imbue) {
+		case SPEED:
+			info.append( "It was balanced to make it faster." );
+			break;
+		case ACCURACY:
+			info.append( "It was balanced to make it more accurate." );
+			break;
+		case NONE:
 		}
 
 		info.append(" ");

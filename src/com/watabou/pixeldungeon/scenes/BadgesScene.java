@@ -26,20 +26,20 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Chrome;
 import com.watabou.pixeldungeon.R;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.BadgesList;
+import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.ScrollPane;
 import com.watabou.pixeldungeon.ui.Window;
 
 public class BadgesScene extends PixelScene {
 	
-	private static String TXT_TITLE;
+	private static final String TXT_TITLE = Game.getVar(R.string.BadgesScene_TxtTitle);
 	
 	@Override
-	public void create(Game game) {
-		
-		super.create(game);
-		TXT_TITLE = game.getVar(R.string.BadgesScene_TxtTitle);
+	public void create() {
+		super.create();
 		
 		Music.INSTANCE.play( Assets.THEME, true );
 		Music.INSTANCE.volume( 1f );
@@ -53,8 +53,8 @@ public class BadgesScene extends PixelScene {
 		archs.setSize( w, h );
 		add( archs );
 		
-		int pw = Math.min( 160, w - 10 );
-		int ph = h - 24;
+		int pw = Math.min( 160, w - 6 );
+		int ph = h - 30;
 		
 		NinePatch panel = Chrome.get( Chrome.Type.WINDOW );
 		panel.size( pw, ph );
@@ -80,11 +80,15 @@ public class BadgesScene extends PixelScene {
 			panel.innerWidth(), 
 			panel.innerHeight() );
 		
+		ExitButton btnExit = new ExitButton();
+		btnExit.setPos( Camera.main.width - btnExit.width(), 0 );
+		add( btnExit );
+		
 		fadeIn();
 	}
 	
 	@Override
 	protected void onBackPressed() {
-		Game.switchScene( TitleScene.class );
+		PixelDungeon.switchNoFade( TitleScene.class );
 	}
 }

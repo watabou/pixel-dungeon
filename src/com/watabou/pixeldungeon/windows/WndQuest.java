@@ -17,12 +17,12 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndQuest extends WndTitledMessage {
 	
-	public WndQuest( Mob.NPC questgiver, String text ) {
+	public WndQuest( NPC questgiver, String text ) {
 		super( questgiver.sprite(), Utils.capitalize( questgiver.name ), text );
 	}
 }

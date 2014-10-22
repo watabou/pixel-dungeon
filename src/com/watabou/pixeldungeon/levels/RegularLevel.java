@@ -82,29 +82,29 @@ public abstract class RegularLevel extends Level {
 		
 		HashSet<Room> connected = new HashSet<Room>();
 		connected.add( roomEntrance );
-
+		
 		Graph.buildDistanceMap( rooms, roomExit );
 		List<Room> path = Graph.buildPath( rooms, roomEntrance, roomExit );
-
+		
 		Room room = roomEntrance;
 		for (Room next : path) {
 			room.connect( next );
 			room = next;
 			connected.add( room );
 		}
-
+		
 		Graph.setPrice( path, roomEntrance.distance );
-
+		
 		Graph.buildDistanceMap( rooms, roomExit );
 		path = Graph.buildPath( rooms, roomEntrance, roomExit );
-
+		
 		room = roomEntrance;
 		for (Room next : path) {
 			room.connect( next );
 			room = next;
 			connected.add( room );
 		}
-
+		
 		int nConnected = (int)(rooms.size() * Random.Float( 0.5f, 0.7f ));
 		while (connected.size() < nConnected) {
 
@@ -152,7 +152,7 @@ public abstract class RegularLevel extends Level {
 
 		rooms = new HashSet<Room>();
 		split( new Rect( 0, 0, WIDTH - 1, HEIGHT - 1 ) );
-		
+
 		if (rooms.size() < 8) {
 			return false;
 		}
@@ -355,7 +355,7 @@ public abstract class RegularLevel extends Level {
 		int h = rect.height();
 		
 		if (w > maxRoomSize && h < minRoomSize) {
-
+			
 			int vw = Random.Int( rect.left + 3, rect.right - 3 );
 			split( new Rect( rect.left, rect.top, vw, rect.bottom ) );
 			split( new Rect( vw, rect.top, rect.right, rect.bottom ) );
@@ -615,10 +615,12 @@ public abstract class RegularLevel extends Level {
 		for (Item item : itemsToSpawn) {
 			int cell = randomDropCell();
 			if (item instanceof ScrollOfUpgrade) {
+
 				while (map[cell] == Terrain.FIRE_TRAP || map[cell] == Terrain.SECRET_FIRE_TRAP) {
 					cell = randomDropCell();
 				}
 			}
+
 			drop( item, cell ).type = Heap.Type.HEAP;
 		}
 		
@@ -681,7 +683,7 @@ public abstract class RegularLevel extends Level {
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
-
+		
 		rooms = new HashSet<Room>( (Collection<? extends Room>) bundle.getCollection( "rooms" ) );
 		for (Room r : rooms) {
 			if (r.type == Type.WEAK_FLOOR) {

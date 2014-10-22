@@ -38,15 +38,15 @@ public class InterlevelScene extends PixelScene {
 
 	private static final float TIME_TO_FADE = 0.3f;
 	
-	private static String TXT_DESCENDING;
-	private static String TXT_ASCENDING;
-	private static String TXT_LOADING;
-	private static String TXT_RESURRECTING;
-	private static String TXT_RETURNING;
-	private static String TXT_FALLING;
+	private static final String TXT_DESCENDING     = Game.getVar(R.string.InterLevelScene_Descending);
+	private static final String TXT_ASCENDING      = Game.getVar(R.string.InterLevelScene_Ascending);
+	private static final String TXT_LOADING        = Game.getVar(R.string.InterLevelScene_Loading);
+	private static final String TXT_RESURRECTING   = Game.getVar(R.string.InterLevelScene_Resurrecting);
+	private static final String TXT_RETURNING      = Game.getVar(R.string.InterLevelScene_Returning);
+	private static final String TXT_FALLING        = Game.getVar(R.string.InterLevelScene_Falling);
 	
-	private static String ERR_FILE_NOT_FOUND;
-	private static String ERR_GENERIC;	
+	private static final String ERR_FILE_NOT_FOUND = Game.getVar(R.string.InterLevelScene_FileNotFound);
+	private static final String ERR_GENERIC        = Game.getVar(R.string.InterLevelScene_ErrorGeneric);	
 	
 	public static enum Mode {
 		DESCEND, ASCEND, CONTINUE, RESURRECT, RETURN, FALL
@@ -72,16 +72,8 @@ public class InterlevelScene extends PixelScene {
 	private String error = null;
 	
 	@Override
-	public void create(Game game) {
-		super.create(game);
-		TXT_DESCENDING     = game.getVar(R.string.InterLevelScene_Descending);
-		TXT_ASCENDING      = game.getVar(R.string.InterLevelScene_Ascending);
-		TXT_LOADING        = game.getVar(R.string.InterLevelScene_Loading);
-		TXT_RESURRECTING   = game.getVar(R.string.InterLevelScene_Resurrecting);
-		TXT_RETURNING      = game.getVar(R.string.InterLevelScene_Returning);
-		TXT_FALLING        = game.getVar(R.string.InterLevelScene_Falling);
-		ERR_FILE_NOT_FOUND = game.getVar(R.string.InterLevelScene_FileNotFound);
-		ERR_GENERIC        = game.getVar(R.string.InterLevelScene_ErrorGeneric);
+	public void create() {
+		super.create();
 		
 		String text = "";
 		switch (mode) {
@@ -230,7 +222,7 @@ public class InterlevelScene extends PixelScene {
 			
 		case FADE_OUT:
 			message.alpha( p );
-
+			
 			if (mode == Mode.CONTINUE || (mode == Mode.DESCEND && Dungeon.depth == 1)) {
 				Music.INSTANCE.volume( p );
 			}
@@ -247,6 +239,7 @@ public class InterlevelScene extends PixelScene {
 						Game.switchScene( StartScene.class );
 					};
 				} );
+				error = null;
 			}
 			break;
 		}

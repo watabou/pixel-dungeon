@@ -26,11 +26,13 @@ import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.R;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Rankings;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.Archs;
+import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
@@ -39,11 +41,11 @@ import com.watabou.pixeldungeon.windows.WndRanking;
 
 public class RankingsScene extends PixelScene {
 	
-	private static String TXT_TITLE;
-	private static String TXT_TOTAL;
-	private static String TXT_NO_GAMES;
+	private static String TXT_TITLE    = Game.getVar(R.string.RankingsScene_Title);
+	private static String TXT_TOTAL    = Game.getVar(R.string.RankingsScene_Total);
+	private static String TXT_NO_GAMES = Game.getVar(R.string.RankingsScene_NoGames);
 	
-	private static String TXT_NO_INFO;
+	private static String TXT_NO_INFO  = Game.getVar(R.string.RankingsScene_NoInfo);
 	
 	private static final float ROW_HEIGHT	= 30;
 	private static final float GAP	= 4;
@@ -51,13 +53,8 @@ public class RankingsScene extends PixelScene {
 	private Archs archs;
 	
 	@Override
-	public void create(Game game) {
-		
-		super.create(game);
-		TXT_TITLE    = game.getVar(R.string.RankingsScene_Title);
-		TXT_TOTAL    = game.getVar(R.string.RankingsScene_Total);
-		TXT_NO_GAMES = game.getVar(R.string.RankingsScene_NoGames);
-		TXT_NO_INFO  = game.getVar(R.string.RankingsScene_NoInfo);
+	public void create() {
+		super.create();
 		
 		Music.INSTANCE.play( Assets.THEME, true );
 		Music.INSTANCE.volume( 1f );
@@ -115,12 +112,16 @@ public class RankingsScene extends PixelScene {
 			
 		}
 		
+		ExitButton btnExit = new ExitButton();
+		btnExit.setPos( Camera.main.width - btnExit.width(), 0 );
+		add( btnExit );
+		
 		fadeIn();
 	}
 	
 	@Override
 	protected void onBackPressed() {
-		Game.switchScene( TitleScene.class );
+		PixelDungeon.switchNoFade( TitleScene.class );
 	}
 	
 	public static class Record extends Button {

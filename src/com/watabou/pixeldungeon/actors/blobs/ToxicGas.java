@@ -27,6 +27,7 @@ import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.utils.Random;
 
 public class ToxicGas extends Blob implements Hero.Doom {
 	
@@ -41,8 +42,8 @@ public class ToxicGas extends Blob implements Hero.Doom {
 			if (cur[i] > 0 && (ch = Actor.findChar( i )) != null) {
 				
 				int damage = (ch.HT + levelDamage) / 40;
-				if (damage < 1) {
-					damage = 1;
+				if (Random.Int( 40 ) < (ch.HT + levelDamage) % 40) {
+					damage++;
 				}
 				
 				ch.damage( damage, this );

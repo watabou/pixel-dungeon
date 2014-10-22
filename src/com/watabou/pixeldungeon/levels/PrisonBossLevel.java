@@ -135,7 +135,7 @@ public class PrisonBossLevel extends RegularLevel {
 		
 		anteroom = path.get( path.size() - 2 );
 		anteroom.type = Type.STANDARD;
-
+		
 		Room room = roomEntrance;
 		for (Room next : path) {
 			room.connect( next );
@@ -289,7 +289,7 @@ public class PrisonBossLevel extends RegularLevel {
 		while (!passable[keyPos]) {
 			keyPos = anteroom.random();
 		}
-		drop( new IronKey( Dungeon.depth ), keyPos ).type = Heap.Type.CHEST;
+		drop( new IronKey(), keyPos ).type = Heap.Type.CHEST;
 		
 		Item item = Bones.get();
 		if (item != null) {
@@ -316,7 +316,7 @@ public class PrisonBossLevel extends RegularLevel {
 			} while (pos == cell || Actor.findChar( pos ) != null);
 			
 			Mob boss = Bestiary.mob( Dungeon.depth );
-			boss.state = Mob.State.HUNTING;
+			boss.state = boss.HUNTING;
 			boss.pos = pos;
 			GameScene.add( boss );
 			boss.notice();

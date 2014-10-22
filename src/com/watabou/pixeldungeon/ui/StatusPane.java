@@ -23,7 +23,9 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.TouchArea;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
+import com.watabou.noosa.ui.Button;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
@@ -33,6 +35,7 @@ import com.watabou.pixeldungeon.items.keys.IronKey;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.HeroSprite;
+import com.watabou.pixeldungeon.windows.WndGame;
 import com.watabou.pixeldungeon.windows.WndHero;
 
 public class StatusPane extends Component {
@@ -58,10 +61,12 @@ public class StatusPane extends Component {
 	private BuffIndicator buffs;
 	private Compass compass;
 	
+	private MenuButton btnMenu;
+	
 	@Override
 	protected void createChildren() {
 		
-		shield = new NinePatch( Assets.STATUS, 80, 0, 30, 0 );
+		shield = new NinePatch( Assets.STATUS, 80, 0, 30   + 18, 0 );
 		add( shield );
 		
 		add( new TouchArea( 0, 1, 30, 30 ) {
@@ -74,6 +79,9 @@ public class StatusPane extends Component {
 				GameScene.show( new WndHero() );
 			};			
 		} );
+		
+		btnMenu = new MenuButton();
+		add( btnMenu );
 		
 		avatar = HeroSprite.avatar( Dungeon.hero.heroClass, lastTier );
 		add( avatar );
@@ -134,7 +142,7 @@ public class StatusPane extends Component {
 		hp.x = 30;
 		hp.y = 3;
 		
-		depth.x = width - 24 - depth.width();
+		depth.x = width - 24 - depth.width()    - 18;
 		depth.y = 6;
 		
 		keys.y = 6;
@@ -144,6 +152,8 @@ public class StatusPane extends Component {
 		loot.setPos( width - loot.width(),  danger.bottom() + 2 );
 		
 		buffs.setPos( 32, 11 );
+		
+		btnMenu.setPos( width - btnMenu.width(), 1 );
 	}
 	
 	@Override
@@ -182,18 +192,62 @@ public class StatusPane extends Component {
 			level.y = PixelScene.align( 27.5f - level.baseLine() / 2 );
 		}
 		
-		int k = IronKey.curDepthQunatity;
+		int k = IronKey.curDepthQuantity;
 		if (k != lastKeys) {
 			lastKeys = k;
 			keys.text( Integer.toString( lastKeys ) );
 			keys.measure();
-			keys.x = width - 8 - keys.width();
+			keys.x = width - 8 - keys.width()    - 18;
 		}
 		
 		int tier = Dungeon.hero.tier();
 		if (tier != lastTier) {
 			lastTier = tier;
 			avatar.copy( HeroSprite.avatar( Dungeon.hero.heroClass, tier ) );
+		}
+	}
+	
+	private static class MenuButton extends Button {
+		
+		private Image image;
+		
+		public MenuButton() {
+			super();
+			
+			width = image.width + 4;
+			height = image.height + 4;
+		}
+		
+		@Override
+		protected void createChildren() {
+			super.createChildren();
+			
+			image = new Image( Assets.STATUS, 114, 3, 12, 11 );
+			add( image );
+		}
+		
+		@Override
+		protected void layout() {
+			super.layout();
+			
+			image.x = x + 2;
+			image.y = y + 2;
+		}
+		
+		@Override
+		protected void onTouchDown() {
+			image.brightness( 1.5f );
+			Sample.INSTANCE.play( Assets.SND_CLICK );
+		}
+		
+		@Override
+		protected void onTouchUp() {
+			image.resetColor();
+		}
+		
+		@Override
+		protected void onClick() {
+			GameScene.show( new WndGame() );
 		}
 	}
 }

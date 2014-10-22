@@ -19,7 +19,6 @@ package com.watabou.pixeldungeon.items.keys;
 
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.R;
-import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class SkeletonKey extends Key {
@@ -27,21 +26,6 @@ public class SkeletonKey extends Key {
 	{
 		name = Game.getVar(R.string.SkeletonKey_Name);
 		image = ItemSpriteSheet.SKELETON_KEY;
-		stackable = false;
-	}
-	
-	public SkeletonKey() {
-		this( 0 );
-	}
-	
-	public SkeletonKey( int depth ) {
-		super();
-		this.depth = depth;
-	}
-	
-	@Override
-	public boolean isSimilar( Item item ) {
-		return false;
 	}
 	
 	@Override

@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
@@ -27,7 +29,7 @@ import com.watabou.utils.Random;
 public class Javelin extends MissileWeapon {
 
 	{
-		name = "javelin";
+		name = Game.getVar(R.string.Javelin_Name);
 		image = ItemSpriteSheet.JAVELIN;
 		
 		STR = 15;
@@ -53,9 +55,7 @@ public class Javelin extends MissileWeapon {
 	
 	@Override
 	public String desc() {
-		return 
-			"This length of metal is weighted to keep the spike " +
-			"at its tip foremost as it sails through the air.";
+		return Game.getVar(R.string.Javelin_Info);
 	}
 	
 	@Override

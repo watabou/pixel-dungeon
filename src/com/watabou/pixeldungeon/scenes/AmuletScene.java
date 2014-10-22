@@ -24,6 +24,7 @@ import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.R;
+import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.ui.RedButton;
@@ -31,9 +32,9 @@ import com.watabou.utils.Random;
 
 public class AmuletScene extends PixelScene {
 
-	private static String TXT_EXIT;
-	private static String TXT_STAY;
-	private static String TXT;
+	private static final String TXT_EXIT = Game.getVar(R.string.AmuletScene_Exit);
+	private static final String TXT_STAY = Game.getVar(R.string.AmuletScene_Stay);;
+	private static final String TXT      = Game.getVar(R.string.AmuletScene_Txt);
 	
 	private static final int WIDTH			= 120;
 	private static final int BTN_HEIGHT		= 18;
@@ -47,11 +48,8 @@ public class AmuletScene extends PixelScene {
 	private Image amulet;
 	
 	@Override
-	public void create(Game game) {
-		super.create(game);
-		TXT_EXIT = game.getVar(R.string.AmuletScene_Exit);
-		TXT_STAY = game.getVar(R.string.AmuletScene_Stay);
-		TXT      = game.getVar(R.string.AmuletScene_Txt);
+	public void create() {
+		super.create();
 		
 		BitmapTextMultiline text = null;
 		if (!noText) {
@@ -67,6 +65,7 @@ public class AmuletScene extends PixelScene {
 		RedButton btnExit = new RedButton( TXT_EXIT ) {
 			@Override
 			protected void onClick() {
+				Dungeon.win( ResultDescriptions.WIN );
 				Dungeon.deleteGame( Dungeon.hero.heroClass, true );
 				Game.switchScene( noText ? TitleScene.class : RankingsScene.class );
 			}

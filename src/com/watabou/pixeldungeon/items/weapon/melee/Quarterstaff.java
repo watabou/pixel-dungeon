@@ -33,7 +33,6 @@ public class Quarterstaff extends MeleeWeapon {
 	
 	@Override
 	public String desc() {
-		// TODO Auto-generated method stub
 		return Game.getVar(R.string.Quarterstaff_Info);
 	}
 }

@@ -21,20 +21,16 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.buffs.Blindness;
-import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.actors.mobs.Mob.State;
-import com.watabou.pixeldungeon.effects.CellEmitter;
-import com.watabou.pixeldungeon.effects.Speck;
+import com.watabou.pixeldungeon.actors.blobs.Blob;
+import com.watabou.pixeldungeon.actors.blobs.ConfusionGas;
 import com.watabou.pixeldungeon.items.potions.PotionOfInvisibility;
+import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
-import com.watabou.utils.Random;
 
-public class Blindweed extends Plant {
+public class Dreamweed extends Plant {
 
-	private static final String TXT_NAME = Game.getVar(R.string.Blindweed_Name);
-	private static final String TXT_DESC = Game.getVar(R.string.Blindweed_Desc);
+	private static final String TXT_NAME = Game.getVar(R.string.Dreamweed_Name);
+	private static final String TXT_DESC = Game.getVar(R.string.Dreamweed_Desc);
 	
 	{
 		image = 3;
@@ -46,15 +42,7 @@ public class Blindweed extends Plant {
 		super.activate( ch );
 		
 		if (ch != null) {
-			Buff.prolong( ch, Blindness.class, Random.Int( 5, 10 ) );
-			if (ch instanceof Mob) {
-				((Mob)ch).state = State.WANDERING;
-				((Mob)ch).beckon( Dungeon.level.randomDestination() );
-			}
-		}
-		
-		if (Dungeon.visible[pos]) {
-			CellEmitter.get( pos ).burst( Speck.factory( Speck.LIGHT ), 4 );
+			GameScene.add( Blob.seed( pos, 300 + 20 * Dungeon.depth, ConfusionGas.class ) );
 		}
 	}
 	
@@ -68,9 +56,9 @@ public class Blindweed extends Plant {
 			plantName = TXT_NAME;
 			
 			name = String.format(TXT_SEED, plantName);
-			image = ItemSpriteSheet.SEED_BLINDWEED;
+			image = ItemSpriteSheet.SEED_DREAMWEED;
 			
-			plantClass = Blindweed.class;
+			plantClass = Dreamweed.class;
 			alchemyClass = PotionOfInvisibility.class;
 		}
 		

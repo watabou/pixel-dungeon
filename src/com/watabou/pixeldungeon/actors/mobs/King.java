@@ -134,10 +134,9 @@ public class King extends Mob {
 	
 	@Override
 	public void die( Object cause ) {
-
 		GameScene.bossSlain();
 		Dungeon.level.drop( new ArmorKit(), pos ).sprite.drop();
-		Dungeon.level.drop( new SkeletonKey( Dungeon.depth ), pos ).sprite.drop();
+		Dungeon.level.drop( new SkeletonKey(), pos ).sprite.drop();
 		
 		super.die( cause );
 		
@@ -246,7 +245,7 @@ public class King extends Mob {
 			
 			EXP = 0;
 			
-			state = State.WANDERING;
+			state = WANDERING;
 		}
 		
 		@Override

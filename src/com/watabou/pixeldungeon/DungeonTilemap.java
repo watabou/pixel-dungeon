@@ -57,7 +57,7 @@ public class DungeonTilemap extends Tilemap {
 		
 		final Image tile = tile( oldValue );
 		tile.point( tileToWorld( pos ) );
-
+		
 		// For bright mode
 		tile.rm = tile.gm = tile.bm = rm;
 		tile.ra = tile.ga = tile.ba = ra;

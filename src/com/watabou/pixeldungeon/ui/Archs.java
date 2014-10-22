@@ -29,14 +29,19 @@ public class Archs extends Component {
 	private SkinnedBlock arcsBg;
 	private SkinnedBlock arcsFg;
 	
+	private static float offsB = 0;
+	private static float offsF = 0;
+	
 	public boolean reversed = false;
 	
 	@Override
 	protected void createChildren() {
 		arcsBg = new SkinnedBlock( 1, 1, Assets.ARCS_BG );
+		arcsBg.offsetTo( 0,  offsB );
 		add( arcsBg );
 		
 		arcsFg = new SkinnedBlock( 1, 1, Assets.ARCS_FG );
+		arcsFg.offsetTo( 0,  offsF );
 		add( arcsFg );
 	}
 	
@@ -61,5 +66,8 @@ public class Archs extends Component {
 		
 		arcsBg.offset( 0, shift );
 		arcsFg.offset( 0, shift * 2 );
+		
+		offsB = arcsBg.offsetY();
+		offsF = arcsFg.offsetY();
 	}
 }

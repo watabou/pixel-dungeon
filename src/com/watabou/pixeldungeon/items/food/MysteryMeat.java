@@ -58,7 +58,7 @@ public class MysteryMeat extends Food {
 				break;
 			case 2:
 				GLog.w(Game.getVar(R.string.MysteryMeat_Info3));
-				Buff.affect( hero, Poison.class ).set( Poison.durationFactor( hero ) * hero.HT / 2 / Poison.DOT );
+				Buff.affect( hero, Poison.class ).set( Poison.durationFactor( hero ) * hero.HT / 5 );
 				break;
 			case 3:
 				GLog.w(Game.getVar(R.string.MysteryMeat_Info4));

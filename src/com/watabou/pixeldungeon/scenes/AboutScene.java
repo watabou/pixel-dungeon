@@ -26,9 +26,11 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TouchArea;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.ui.Archs;
+import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.Window;
 
@@ -41,8 +43,8 @@ public class AboutScene extends PixelScene {
 	private static final String TRANSLATE_SND = Game.getVar(R.string.AboutScene_TranslateSnd);
 	
 	@Override
-	public void create(Game game) {
-		super.create(game);
+	public void create() {
+		super.create();
 		
 		BitmapTextMultiline text = createMultiline( TXT, 8 );
 		text.maxWidth = Math.min( Camera.main.width, 120 );
@@ -112,11 +114,15 @@ public class AboutScene extends PixelScene {
 		archs.setSize( Camera.main.width, Camera.main.height );
 		addToBack( archs );
 		
+		ExitButton btnExit = new ExitButton();
+		btnExit.setPos( Camera.main.width - btnExit.width(), 0 );
+		add( btnExit );
+		
 		fadeIn();
 	}
 	
 	@Override
 	protected void onBackPressed() {
-		Game.switchScene( TitleScene.class );
+		PixelDungeon.switchNoFade( TitleScene.class );
 	}
 }

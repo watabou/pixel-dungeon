@@ -76,14 +76,14 @@ import com.watabou.utils.Random;
 
 public class GameScene extends PixelScene {
 	
-	private static String TXT_WELCOME;
-	private static String TXT_WELCOME_BACK;
-	private static String TXT_NIGHT_MODE;
+	private static final String TXT_WELCOME = Game.getVar(R.string.GameScene_Welcome);
+	private static final String TXT_WELCOME_BACK = Game.getVar(R.string.GameScene_WelcomeBack);
+	private static final String TXT_NIGHT_MODE = Game.getVar(R.string.GameScene_NightMode);
 	
-	private static String TXT_CHASM;
-	private static String TXT_WATER;
-	private static String TXT_GRASS;
-	private static String TXT_SECRETS;
+	private static final String TXT_CHASM = Game.getVar(R.string.GameScene_Chasm);
+	private static final String TXT_WATER = Game.getVar(R.string.GameScene_Water);
+	private static final String TXT_GRASS = Game.getVar(R.string.GameScene_Grass);
+	private static final String TXT_SECRETS = Game.getVar(R.string.GameScene_Secrets);
 	
 	static GameScene scene;
 	
@@ -114,22 +114,14 @@ public class GameScene extends PixelScene {
 	private Toast prompt;
 	
 	@Override
-	public void create(Game game) {
+	public void create() {
 		
 		Music.INSTANCE.play( Assets.TUNE, true );
 		Music.INSTANCE.volume( 1f );
 		
 		PixelDungeon.lastClass( Dungeon.hero.heroClass.ordinal() );
 		
-		super.create(game);
-		TXT_WELCOME      = game.getVar(R.string.GameScene_Welcome);
-		TXT_WELCOME_BACK = game.getVar(R.string.GameScene_WelcomeBack);
-		TXT_NIGHT_MODE   = game.getVar(R.string.GameScene_NightMode);
-		TXT_CHASM        = game.getVar(R.string.GameScene_Chasm);
-		TXT_WATER        = game.getVar(R.string.GameScene_Water);
-		TXT_GRASS        = game.getVar(R.string.GameScene_Grass);
-		TXT_SECRETS      = game.getVar(R.string.GameScene_Secrets);
-		
+		super.create();		
 		
 		Camera.main.zoom( defaultZoom + PixelDungeon.zoom() );
 		
@@ -616,8 +608,9 @@ public class GameScene extends PixelScene {
 	private static final CellSelector.Listener defaultCellListener = new CellSelector.Listener() {
 		@Override
 		public void onSelect( Integer cell ) {
-			if (cell != -1) {
-				Dungeon.hero.handle( cell );
+			if (Dungeon.hero.handle( cell )) {
+			//	Actor.next();
+				Dungeon.hero.next();
 			}
 		}
 		@Override

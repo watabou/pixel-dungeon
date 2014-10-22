@@ -24,7 +24,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
+import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.MagicMissile;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -103,8 +103,7 @@ public class WandOfFlock extends Wand {
 		return Game.getVar(R.string.WandOfFlock_Info);
 	}
 
-	public static class Sheep extends Mob.NPC {
-		
+	public static class Sheep extends NPC {
 		private static final String[] QUOTES = Game.getVars(R.array.WandOfFlock_SheepBaa);
 		
 		{

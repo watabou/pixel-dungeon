@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.Heap.Type;
@@ -41,7 +40,7 @@ public class CryptPainter extends Painter {
 		Room.Door entrance = room.entrance();
 		
 		entrance.set( Room.Door.Type.LOCKED );
-		level.addItemToSpawn( new IronKey( Dungeon.depth ) );
+		level.addItemToSpawn( new IronKey() );
 		
 		if (entrance.x == room.left) {
 			set( level, new Point( room.right-1, room.top+1 ), Terrain.STATUE );

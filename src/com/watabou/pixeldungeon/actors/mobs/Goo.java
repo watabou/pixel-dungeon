@@ -154,7 +154,7 @@ public class Goo extends Mob {
 		((SewerBossLevel)Dungeon.level).unseal();
 		
 		GameScene.bossSlain();
-		Dungeon.level.drop( new SkeletonKey( Dungeon.depth ), pos ).sprite.drop();
+		Dungeon.level.drop( new SkeletonKey(), pos ).sprite.drop();
 		
 		Badges.validateBossSlain();
 		

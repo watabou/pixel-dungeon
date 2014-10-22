@@ -20,7 +20,6 @@ package com.watabou.pixeldungeon.items;
 import java.util.ArrayList;
 
 import com.watabou.noosa.Game;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -30,8 +29,7 @@ import com.watabou.utils.Random;
 
 public class KindOfWeapon extends EquipableItem {
 
-	private static final String TXT_EQUIP_CURSED	= Game.getVar(R.string.KindOfWeapon_EquipCursed);
-	private static final String TXT_UNEQUIP_CURSED	= Game.getVar(R.string.KindOfWeapon_UnequipCursed);
+	private static final String TXT_EQUIP_CURSED = Game.getVar(R.string.KindOfWeapon_EquipCursed);
 	
 	protected static final float TIME_TO_EQUIP = 1f;
 	
@@ -79,21 +77,17 @@ public class KindOfWeapon extends EquipableItem {
 	}
 	
 	@Override
-	public boolean doUnequip( Hero hero, boolean collect ) {
-		
-		if (cursed) {
-			GLog.w( TXT_UNEQUIP_CURSED, name() );
+	public boolean doUnequip( Hero hero, boolean collect, boolean single ) {
+		if (super.doUnequip( hero, collect, single )) {
+			
+			hero.belongings.weapon = null;
+			return true;
+			
+		} else {
+			
 			return false;
+			
 		}
-		
-		hero.belongings.weapon = null;
-		hero.spendAndNext( TIME_TO_EQUIP );
-		
-		if (collect && !collect( hero.belongings.backpack )) {
-			Dungeon.level.drop( this, hero.pos );
-		}
-					
-		return true;
 	}
 	
 	public void activate( Hero hero ) {

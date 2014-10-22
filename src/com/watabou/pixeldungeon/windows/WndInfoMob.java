@@ -19,9 +19,7 @@ package com.watabou.pixeldungeon.windows;
 
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.ColorBlock;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.ui.Component;
-import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
@@ -29,13 +27,7 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndInfoMob extends WndTitledMessage {
-	
-	private static final String TXT_SLEEPNIG	= Game.getVar(R.string.WndInfoMob_Sleeping);
-	private static final String TXT_HUNTING		= Game.getVar(R.string.WndInfoMob_Hunting);
-	private static final String TXT_WANDERING	= Game.getVar(R.string.WndInfoMob_Wandering);
-	private static final String TXT_FLEEING		= Game.getVar(R.string.WndInfoMob_Fleeing);
-	private static final String TXT_PASSIVE		= Game.getVar(R.string.WndInfoMob_Passive);
-	
+
 	public WndInfoMob( Mob mob ) {
 		
 		super( new MobTitle( mob ), desc( mob ) );
@@ -46,23 +38,7 @@ public class WndInfoMob extends WndTitledMessage {
 		
 		StringBuilder builder = new StringBuilder( mob.description() );
 		
-		switch (mob.state) {
-		case SLEEPING:
-			builder.append( String.format( TXT_SLEEPNIG, mob.name ) );
-			break;
-		case HUNTING:
-			builder.append( String.format( TXT_HUNTING, mob.name ) );
-			break;
-		case WANDERING:
-			builder.append( String.format( TXT_WANDERING, mob.name ) );
-			break;
-		case FLEEING:
-			builder.append( String.format( TXT_FLEEING, mob.name ) );
-			break;
-		case PASSIVE:
-			builder.append( String.format( TXT_PASSIVE, mob.name ) );
-			break;
-		}
+		builder.append( "\n\n" + mob.state.status() + "." );
 		
 		return builder.toString();
 	}

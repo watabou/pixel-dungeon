@@ -16,7 +16,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 package com.watabou.pixeldungeon.items.weapon.missiles;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
@@ -29,7 +31,7 @@ import com.watabou.pixeldungeon.sprites.MissileSprite;
 public class Boomerang extends MissileWeapon {
 
 	{
-		name = "boomerang";
+		name = Game.getVar(R.string.Boomerang_Name);
 		image = ItemSpriteSheet.BOOMERANG;
 		
 		STR = 10;
@@ -80,7 +82,7 @@ public class Boomerang extends MissileWeapon {
 	@Override
 	public void proc( Char attacker, Char defender, int damage ) {
 		super.proc( attacker, defender, damage );
-		if (attacker instanceof Hero && ((Hero)attacker).usingRanged) {
+		if (attacker instanceof Hero && ((Hero)attacker).rangedWeapon == this) {
 			circleBack( defender.pos, (Hero)attacker );
 		}
 	}
@@ -91,16 +93,29 @@ public class Boomerang extends MissileWeapon {
 	}
 	
 	private void circleBack( int from, Hero owner ) {
+		
+		((MissileSprite)curUser.sprite.parent.recycle( MissileSprite.class )).
+			reset( from, curUser.pos, curItem, null );
+		
+		if (throwEquiped) {
+			owner.belongings.weapon = this;
+			owner.spend( -TIME_TO_EQUIP );
+		} else 
 		if (!collect( curUser.belongings.backpack )) {
 			Dungeon.level.drop( this, owner.pos ).sprite.drop();
 		}
-		((MissileSprite)curUser.sprite.parent.recycle( MissileSprite.class )).
-			reset( from, curUser.pos, curItem, null );
+	}
+	
+	private boolean throwEquiped;
+	
+	@Override
+	public void cast( Hero user, int dst ) {
+		throwEquiped = isEquipped( user );
+		super.cast( user, dst );
 	}
 	
 	@Override
 	public String desc() {
-		return 
-			"Thrown to the enemy this flat curved wooden missile will return to the hands of its thrower.";
+		return Game.getVar(R.string.Boomerang_Info);
 	}
 }

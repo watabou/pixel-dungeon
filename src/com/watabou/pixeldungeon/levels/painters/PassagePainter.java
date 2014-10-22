@@ -76,11 +76,11 @@ public class PassagePainter extends Painter {
 			return (xy.x - room.left - 1);
 			
 		} else if (xy.x == room.right) {
-			
+
 			return (xy.y - room.top - 1) + pasWidth;
 			
 		} else if (xy.y == room.bottom) {
-			
+
 			return (room.right - xy.x - 1) + pasWidth + pasHeight;
 			
 		} else {

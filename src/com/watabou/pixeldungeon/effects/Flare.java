@@ -53,6 +53,7 @@ public class Flare extends Visual {
 		
 		super( 0, 0, 0, 0 );
 		
+		// FIXME
 		// Texture is incorrectly created every time we need
 		// to show the effect, it must be refactored
 		

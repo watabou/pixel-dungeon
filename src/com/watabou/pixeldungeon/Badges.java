@@ -140,6 +140,7 @@ public class Badges {
 		GAMES_PLAYED_3(Game.getVar(R.string.Badges_GamesPlayed3), 62, true ),
 		GAMES_PLAYED_4(Game.getVar(R.string.Badges_GamesPlayed4), 63, true ),
 		HAPPY_END(Game.getVar(R.string.Badges_HappyEnd), 38 ),
+		CHAMPION(Game.getVar(R.string.Badges_Champion), 39, true ),
 		SUPPORTER(Game.getVar(R.string.Badges_Supporter), 31, true );
 		
 		public boolean meta;
@@ -838,6 +839,10 @@ public class Badges {
 	
 	public static void validateHappyEnd() {
 		displayBadge( Badge.HAPPY_END );
+	}
+	
+	public static void validateChampion() {
+		displayBadge( Badge.CHAMPION );
 	}
 	
 	private static void displayBadge( Badge badge ) {
