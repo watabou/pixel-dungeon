@@ -199,6 +199,9 @@
 
 
    <!--  STRINGS OF Badges CLASS  -->
+   <string name="Badges_Info1">Badge endorsed: %s</string>
+   <string name="Badges_Info2">New super badge: %s</string>
+   <string name="Badges_Info3">New badge: %s</string>
    <string name="Badges_MonsterSlain1">10 enemies slain</string>
    <string name="Badges_MonsterSlain2">50 enemies slain</string>
    <string name="Badges_MonsterSlain3">150 enemies slain</string>
@@ -292,6 +295,17 @@
    <string name="Badges_Champion">Challenge won</string>
    <string name="Badges_Supporter">Thanks for your support!</string>
 
+
+   <!--  STRINGS OF Challenges CLASS  -->
+   <string-array name="Challenges_Names">
+       <item >No food</item>
+       <item >No armors</item>
+       <item >No healing potions</item>
+       <item >No dew, no seeds</item>
+       <item >Swarm intelligence</item>
+       <item >Darkness</item>
+   </string-array>
+ 
 
    <!--  STRINGS OF Journal CLASS  -->
    <string name="Journal_WellHealt">Well of Health</string>
@@ -1176,6 +1190,8 @@
        <item >Baa?</item>
        <item >Baa.</item>
        <item >Baa...</item>
+       <item >Bee...</item>
+       <item >Ble...</item>
    </string-array> 
 
 

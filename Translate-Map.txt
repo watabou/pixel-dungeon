@@ -1,0 +1,39 @@
+This is a file with the control of the packages already translated game.
+
+com
++──watabou
+   +──pixeldungeon                  OK
+      +──actors                     Verify Char
+      │  +──blobs                   *****
+      │  +──buffs                   *****
+      │  +──hero                    *****
+      │  +──mobs                    *****
+      │     +──npcs                 *****
+      +──effects                    OK(confirm!?)
+      │  +──particles               OK(confirm!?)
+      +──items                      Verify Weightstone|TomeOfMastery
+      │  +──armor                   OK
+      │  │   +──glyphs              OK
+      │  +──bags                    OK
+      │  +──food                    OK
+      │  +──keys                    OK
+      │  +──potions                 OK
+      │  +──quest                   OK
+      │  +──rings                   OK
+      │  +──scrolls                 OK
+      │  +──wands                   OK
+      │  +──weapon                  OK
+      │      +──enchantments        *****
+      │      +──melee               Verify MeleeWeapon
+      │      +──missiles            OK
+      +──levels                     *****
+      │  +──features                *****
+      │  +──painters                *****
+      │  +──traps                   Verify LightningTrap
+      +──mechanics                  OK
+      +──plants                     OK
+      +──scenes                     AboutScene - Implements credits to translator | Verify SurfaceScene
+      +──sprites                    Verify ItemSprite
+      +──ui                         Verify Toolbar
+      +──utils                      OK
+      +──windows                    Verify WndChallenges|WndClass

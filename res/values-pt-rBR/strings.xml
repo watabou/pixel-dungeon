@@ -7,7 +7,7 @@
    <!--  STRINGS OF TitleScene CLASS  -->
    <string name="TitleScene_Play">Jogar</string>
    <string name="TitleScene_Highscores">Rankings</string>
-   <string name="TitleScene_Badges">Conquistas</string>
+   <string name="TitleScene_Badges">Medalhas</string>
    <string name="TitleScene_About">Sobre</string>
 
 
@@ -27,7 +27,7 @@
 
 
    <!--  STRINGS OF BadgesScene CLASS  -->
-   <string name="BadgesScene_TxtTitle">Conquistas</string>
+   <string name="BadgesScene_TxtTitle">Medalhas</string>
 
 
    <!--  STRINGS OF StartScene CLASS  -->
@@ -199,6 +199,9 @@
 
 
    <!--  STRINGS OF Badges CLASS  -->
+   <string name="Badges_Info1">Medalha aprovada: %s</string>
+   <string name="Badges_Info2">Nova super medalha: %s</string>
+   <string name="Badges_Info3">Nova medalha: %s</string>
    <string name="Badges_MonsterSlain1">10 inimigos mortos</string>
    <string name="Badges_MonsterSlain2">50 inimigos mortos</string>
    <string name="Badges_MonsterSlain3">150 inimigos mortos</string>
@@ -293,6 +296,17 @@
    <string name="Badges_Supporter">Obrigado pelo seu apoio!</string>
 
 
+   <!--  STRINGS OF Challenges CLASS  -->
+   <string-array name="Challenges_Names">
+       <item >Sem comida</item>
+       <item >Sem armadura</item>
+       <item >Sem poçoes de cura</item>
+       <item >Sem orvalho, sem sementes</item>
+       <item >Inteligência coletiva</item>
+       <item >Trevas</item>
+   </string-array>
+   
+
    <!--  STRINGS OF Journal CLASS  -->
    <string name="Journal_WellHealt">Bem de Vida</string>
    <string name="Journal_WellAwareness">Bem de Consciência</string>
@@ -345,6 +359,7 @@
 
    <!--  STRINGS OF WndGame CLASS  -->
    <string name="WndGame_Settings">Configurações</string>
+   <string name="WndGame_Challenges">Desafios</string>
    <string name="WndGame_Ranking">Rankings</string>
    <string name="WndGame_Start">Iniciar Novo Jogo</string>
    <string name="WndGame_menu">Menu Principal</string>
@@ -395,9 +410,10 @@
    <string name="WndRanking_Error">Não foi possível carregar informações adicionais</string>
    <string name="WndRanking_Stats">@string/WndHero_Stats</string>
    <string name="WndRanking_Items">Itens</string>
-   <string name="WndRanking_Badges">Troféus</string>
+   <string name="WndRanking_Badges">Medalhas</string>
    <string name="WndRanking_StaTitle">@string/WndHero_StaTitle</string>
    <string name="WndRanking_StaHealth">@string/WndHero_Health</string>
+   <string name="WndRanking_StaChallenges">Desafios</string>
    <string name="WndRanking_StaStr">@string/WndHero_Str</string>
    <string name="WndRanking_StaDuration">Duração Jogo</string>
    <string name="WndRanking_StaDepth">@string/WndHero_Depth</string>
@@ -426,6 +442,7 @@
    <string name="WndSettings_ZoomOut">-</string>
    <string name="WndSettings_ZoomDef">Zoom Default</string>
    <string name="WndSettings_ScaleUp">Scale up UI</string>
+   <string name="WndSettings_Immersive">Modo Imersivo</string>
    <string name="WndSettings_Music">Musica</string>
    <string name="WndSettings_Sound">Efeitos Sonoros</string>
    <string name="WndSettings_Brightness">Brilho</string>
@@ -474,11 +491,12 @@
    <!--  STRINGS OF EquipableItem CLASS  -->
    <string name="EquipableItem_ACEquip">EQUIPAR</string>
    <string name="EquipableItem_ACUnequip">DESEQUIPAR</string>
+   <string name="EquipableItem_Unequip">Você não pode remover %s amaldiçoado!</string>
 
 
    <!--  STRINGS OF KindOfWeapon CLASS  -->
    <string name="KindOfWeapon_EquipCursed">você estremece com a aderencia involuntária reforçando seu %s</string>
-   <string name="KindOfWeapon_UnequipCursed">Você não pode remover %s amaldiçoado!</string>
+
 
    <!--  STRINGS OF Gold CLASS  -->
    <string name="Gold_Name">ouro</string>
@@ -599,7 +617,6 @@
 <!--  PACKAGE items/armor  -->
    <!--  STRINGS OF Armor CLASS  -->
    <string name="Armor_EquipCursed">seu %s se contrai em torno de você dolorosamente</string>
-   <string name="Armor_UnequipCursed">Você não pode remover %s amaldiçoado!</string>
    <string name="Armor_Identify">agora você está bastante familiarizado com seu %1$s e pode identificá-lo como %2$s.</string>
    <string name="Armor_ToString">%1$s :%2$d</string>
    <string name="Armor_Incompatible">Interação de diferentes tipos de magia apagaram o hieróglifo desta armadura!</string>

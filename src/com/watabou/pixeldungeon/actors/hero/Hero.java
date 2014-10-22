@@ -20,8 +20,6 @@ package com.watabou.pixeldungeon.actors.hero;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-import android.view.ContextThemeWrapper;
-
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;

@@ -854,7 +854,7 @@ public class Badges {
 		if (global.contains( badge )) {
 			
 			if (!badge.meta) {
-				GLog.h( "Badge endorsed: %s", badge.description );
+				GLog.h(Game.getVar(R.string.Badges_Info1), badge.description );
 			}
 			
 		} else {
@@ -863,9 +863,9 @@ public class Badges {
 			saveNeeded = true;
 			
 			if (badge.meta) {
-				GLog.h( "New super badge: %s", badge.description );
+				GLog.h(Game.getVar(R.string.Badges_Info2), badge.description );
 			} else {
-				GLog.h( "New badge: %s", badge.description );
+				GLog.h(Game.getVar(R.string.Badges_Info3), badge.description );
 			}	
 			PixelScene.showBadge( badge );
 		}
