@@ -25,6 +25,7 @@ import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
@@ -172,7 +173,7 @@ public class Toolbar extends Component {
 			}
 			
 			if (cell < 0 || cell > Level.LENGTH || (!Dungeon.level.visited[cell] && !Dungeon.level.mapped[cell])) {
-				GameScene.show( new WndMessage( "You don't know what is there." ) ) ;
+				GameScene.show( new WndMessage(Game.getVar(R.string.Toolbar_Info1)) ) ;
 				return;
 			}
 			
@@ -212,7 +213,7 @@ public class Toolbar extends Component {
 		}	
 		@Override
 		public String prompt() {
-			return "Select a cell to examine";
+			return Game.getVar(R.string.Toolbar_Info2);
 		}
 	};
 	

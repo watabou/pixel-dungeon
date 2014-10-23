@@ -28,6 +28,7 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Gold;
@@ -142,7 +143,7 @@ public class ItemSprite extends MovieClip {
 			speed.offset( (px-x) / DROP_INTERVAL, (py-y) / DROP_INTERVAL );
 			
 			Log.d( "GAME", toString() );
-			Log.d( "GAME", String.format( "drop aside: %.1f %.1f", speed.x, speed.y ) );
+			Log.d( "GAME", String.format(Game.getVar(R.string.ItemSprite_Info1), speed.x, speed.y ) );
 		}
 	}
 	

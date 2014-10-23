@@ -34,7 +34,7 @@ import com.watabou.utils.Random;
 
 public class LightningTrap {
 
-	private static final String name	= "lightning trap";
+	private static final String name = Game.getVar(R.string.LightningTrap_Name);
 	
 	// 00x66CCEE
 	

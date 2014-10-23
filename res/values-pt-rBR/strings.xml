@@ -199,7 +199,7 @@
 
 
    <!--  STRINGS OF Badges CLASS  -->
-   <string name="Badges_Info1">Medalha aprovada: %s</string>
+   <string name="Badges_Info1">Medalha: %s</string>
    <string name="Badges_Info2">Nova super medalha: %s</string>
    <string name="Badges_Info3">Nova medalha: %s</string>
    <string name="Badges_MonsterSlain1">10 inimigos mortos</string>
@@ -218,7 +218,7 @@
    <string name="Badges_AllScrolls">Todos os Pergaminhos identificados</string>
    <string name="Badges_AllRings">Todos os anéis identificados</string>
    <string name="Badges_AllWands">Todas as varinhas identificadas</string>
-   <string name="Badges_AllItems">Todas as Poções, Pergaminhos, Anéis &amp; Varinhas Identificados</string>
+   <string name="Badges_AllItems">Todas as Poções, Pergaminhos, Anéis &amp; Varinhas identificados</string>
    <!-- <string name="Badges_BagSeed"></string> -->
    <!-- <string name="Badges_BagSroll"></string> -->
    <!-- <string name="Badges_BagWand"></string> -->
@@ -348,10 +348,18 @@
    <string name="WndCatalogus_Title">Catálogo</string>
 
 
+   <!--  STRINGS OF WndChallenges CLASS  -->
+   <string name="WndChallenges_Title">Desafios</string>
+   
+
    <!--  STRINGS OF WndChooseWay CLASS  -->
    <string name="WndChooseWay_Message">Qual caminho você vai seguir?</string>
    <string name="WndChooseWay_Cancel">Vou decidir mais tarde</string>
 
+
+   <!--  STRINGS OF WndClass CLASS  -->
+   <string name="WndClass_Mastery">Mestre</string>
+   
 
    <!--  STRINGS OF WndError CLASS  -->
    <string name="WndError_Title">ERRO</string>
@@ -559,10 +567,11 @@
 
 
    <!--  STRINGS OF TomeOfMastery CLASS  -->
-   <string name="TomeOfMastery_Name">Tome of Mastery</string>
+   <string name="TomeOfMastery_Name">Livro Mestre</string>
    <string name="TomeOfMastery_ACRead">LER</string>
-   <string name="TomeOfMastery_Info">Este livro de couro desgastado não é tão grosso, mas você se sente de alguma forma, que você pode descobrir muito, lendo ele. Lembre-se que a leitura deste livro pode exigir algum tempo.</string>
+   <string name="TomeOfMastery_Info">Este livro de couro desgastado é muito grosso, mas você se sente de alguma forma, que você pode descobrir muito, lendo ele. Lembre-se que a leitura deste livro pode exigir algum tempo.</string>
    <string name="TomeOfMastery_Blinded">Você não pode ler enquanto estiver cego</string>
+   <string name="TomeOfMastery_Choose">Você escolheu o caminho do %s!</string>
 
 
    <!--  STRINGS OF Torch CLASS  -->
@@ -571,6 +580,20 @@
    <string name="Torch_Info">É um item indispensável no The Demon Halls, que são notórios por sua falta de iluminação ambiente.</string>
 
 
+   <!--  STRINGS OF Weightstone CLASS  -->
+   <string name="Weightstone_Name">pedra pesada</string>
+   <string name="Weightstone_ACApply">APLICAR</string>
+   <string name="Weightstone_Info">Usando uma pedra de peso, você pode balancear uma arma corpo a corpo para aumentar sua velocidade ou precisão.</string>
+   <string name="Weightstone_Select">Escolha uma arma para balancear</string>
+   <string name="Weightstone_Fast">você balanceou %s para torná-la mais rápida</string>
+   <string name="Weightstone_Accurate">você balanceou %s para torná-la mais precisa</string>
+   <string name="Weightstone_WndChoice">Como você gostaria de balancear a %s?</string>
+   <string name="Weightstone_WndSpeed">Para velocidade</string>
+   <string name="Weightstone_WndAccuracy">Para precisão</string>
+   <string name="Weightstone_WndCancel">Não importa</string>
+
+
+<!--  PACKAGE pixeldungeon/plants  -->
    <!--  STRINGS OF Plant CLASS  -->
    <string name="Plant_ACPlant">PLANTAR</string>
    <string name="Plant_Info">Jogue a semente de %1$s no lugar que você deseja planta-la.\n\n%2$s</string>
@@ -623,7 +646,7 @@
    <string name="Armor_Info1">\n\nEste %1$s concede até \"%2$d\" pontos de absorção de danos por ataque</string>
    <string name="Armor_Info2">\n\nPor causa de sua força inadequada, sua velocidade de movimento e habilidade de defesa será diminuída.</string>
    <string name="Armor_Info3">\n\nPor causa de sua força inadequada, vestindo esta armadura irá diminuir a sua velocidade de movimento e habilidade de defesa.</string>
-   <string name="Armor_Info4">\n\Um típico %1$s fornece absorção de danos de até %2$d pontos por ataque e precisa de %3$d pontos de força.</string>
+   <string name="Armor_Info4">\n\nUm típico %1$s fornece absorção de danos de até %2$d pontos por ataque e precisa de %3$d pontos de força.</string>
    <string name="Armor_Info5">Provavelmente, esta armadura é pesada demais para você.</string>
    <string name="Armor_Info6">Está escrito.</string>
    <string name="Armor_Info7a">\n\nVocê está vestindo o %1$s%2$s.</string>
@@ -850,7 +873,7 @@
 
    <!--  STRINGS OF PotionOfLevitation CLASS  -->
    <string name="PotionOfLevitation_Name">Poção da Levitação</string>
-   <string name="PotionOfLevitation_Info">Beber este curioso líquido fará com que você paire no ar, podend flutuar sem esforço sobre armadilhas. Chamas e gases no entanto estão no ar, e não pode ser ignorados.</string>
+   <string name="PotionOfLevitation_Info">Beber este curioso líquido fará com que você paire no ar, podendo flutuar sem esforço sobre armadilhas. Chamas e gases no entanto estão no ar, e não pode ser ignorados.</string>
    <string name="PotionOfLevitation_Apply">Você flutua no ar!</string>
 
 
@@ -1263,12 +1286,14 @@
    <string name="MeleeWeapon_Info3e">mas</string>
    <string name="MeleeWeapon_Info3f">precisa</string>
    <string name="MeleeWeapon_Info3g">imprecisa</string>
-   <string name="MeleeWeapon_Info4">Está Encantada</string>
-   <string name="MeleeWeapon_Info5a">Por causa de sua força inadequada a precisão e velocidade do seu ataque com %s é menor.</string>
-   <string name="MeleeWeapon_Info5b">Por causa de seu excesso de força o dano de seu ataque com %s é aumentada.</string>
-   <string name="MeleeWeapon_Info6a">Você empunha a(o) %1$s%2$s.</string>
-   <string name="MeleeWeapon_Info6b">, mas por estar amaldiçoado, você não conseguirá soltar</string>
-   <string name="MeleeWeapon_Info6c">Você pode sentir uma magia maléfica oculta na(o) %s.</string>
+   <string name="MeleeWeapon_Info4a">Foi balanceada para deixa-la mais rápida.</string>
+   <string name="MeleeWeapon_Info4b">Foi balanceada para deixa-la mais precisa.</string>
+   <string name="MeleeWeapon_Info5">Está Encantada</string>
+   <string name="MeleeWeapon_Info6a">Por causa de sua força inadequada a precisão e velocidade do seu ataque com %s é menor.</string>
+   <string name="MeleeWeapon_Info6b">Por causa de seu excesso de força o dano de seu ataque com %s é aumentada.</string>
+   <string name="MeleeWeapon_Info7a">Você empunha a(o) %1$s%2$s.</string>
+   <string name="MeleeWeapon_Info7b">, mas por estar amaldiçoado, você não conseguirá soltar</string>
+   <string name="MeleeWeapon_Info7c">Você pode sentir uma magia maléfica oculta na(o) %s.</string>
 
 
    <!--  STRINGS OF BattleAxe CLASS  -->

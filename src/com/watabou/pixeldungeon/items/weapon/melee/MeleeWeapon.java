@@ -114,47 +114,47 @@ public class MeleeWeapon extends Weapon {
 					quality += Game.getVar(R.string.MeleeWeapon_Info3e);
 				}
 				quality += " ";
-				quality += ACU > 1f ? Game.getVar(R.string.MeleeWeapon_Info3e) : Game.getVar(R.string.MeleeWeapon_Info3f);
+				quality += ACU > 1f ? Game.getVar(R.string.MeleeWeapon_Info3f) : Game.getVar(R.string.MeleeWeapon_Info3g);
 			}
 			info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info3a), quality));
 		} else if (ACU != 1f) {
-			quality += ACU > 1f ? Game.getVar(R.string.MeleeWeapon_Info3e) : Game.getVar(R.string.MeleeWeapon_Info3f);
+			quality += ACU > 1f ? Game.getVar(R.string.MeleeWeapon_Info3f) : Game.getVar(R.string.MeleeWeapon_Info3g);
 			info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info3a), quality));
 		}
 
 		info.append(" ");
 		switch (imbue) {
 		case SPEED:
-			info.append( "It was balanced to make it faster." );
+			info.append(Game.getVar(R.string.MeleeWeapon_Info4a));
 			break;
 		case ACCURACY:
-			info.append( "It was balanced to make it more accurate." );
+			info.append(Game.getVar(R.string.MeleeWeapon_Info4b));
 			break;
 		case NONE:
 		}
 
 		info.append(" ");
 		if (enchantment != null) {
-			info.append(Game.getVar(R.string.MeleeWeapon_Info4));
+			info.append(Game.getVar(R.string.MeleeWeapon_Info5));
 		}
-		
+
 		if (levelKnown && Dungeon.hero.belongings.backpack.items.contains( this )) {
 			info.append(p);
 			if (STR > Dungeon.hero.STR()) {
-				info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info5a), name));
+				info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info6a), name));
 			}
 			if (STR < Dungeon.hero.STR()) {
-				info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info5b), name));
+				info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info6b), name));
 			}
 		}
 		
 		if (isEquipped( Dungeon.hero )) {
 			info.append(p);
-			info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info6a), name, (cursed ? Game.getVar(R.string.MeleeWeapon_Info6b) : "")) ); 
+			info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info7a), name, (cursed ? Game.getVar(R.string.MeleeWeapon_Info7b) : "")) ); 
 		} else {
 			if (cursedKnown && cursed) {
 				info.append(p);
-				info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info6c), name));
+				info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info7c), name));
 			}
 		}
 		

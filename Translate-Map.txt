@@ -9,9 +9,9 @@ com
       │  +──hero                    *****
       │  +──mobs                    *****
       │     +──npcs                 *****
-      +──effects                    OK(confirm!?)
-      │  +──particles               OK(confirm!?)
-      +──items                      Verify Weightstone|TomeOfMastery
+      +──effects                    OK
+      │  +──particles               OK
+      +──items                      OK
       │  +──armor                   OK
       │  │   +──glyphs              OK
       │  +──bags                    OK
@@ -24,16 +24,16 @@ com
       │  +──wands                   OK
       │  +──weapon                  OK
       │      +──enchantments        *****
-      │      +──melee               Verify MeleeWeapon
+      │      +──melee               OK
       │      +──missiles            OK
       +──levels                     *****
       │  +──features                *****
       │  +──painters                *****
-      │  +──traps                   Verify LightningTrap
+      │  +──traps                   OK
       +──mechanics                  OK
       +──plants                     OK
-      +──scenes                     AboutScene - Implements credits to translator | Verify SurfaceScene
-      +──sprites                    Verify ItemSprite
-      +──ui                         Verify Toolbar
+      +──scenes                     AboutScene - Implements credits to translator
+      +──sprites                    OK
+      +──ui                         OK
       +──utils                      OK
-      +──windows                    Verify WndChallenges|WndClass
+      +──windows                    OK

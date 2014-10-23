@@ -348,9 +348,17 @@
    <string name="WndCatalogus_Title">Catalogus</string>
 
 
+   <!--  STRINGS OF WndChallenges CLASS  -->
+   <string name="WndChallenges_Title">Challenges</string>
+
+
    <!--  STRINGS OF WndChooseWay CLASS  -->
    <string name="WndChooseWay_Message">Which way will you follow?</string>
    <string name="WndChooseWay_Cancel">I\'ll decide later</string>
+
+
+   <!--  STRINGS OF WndClass CLASS  -->
+   <string name="WndClass_Mastery">Mastery</string>
 
 
    <!--  STRINGS OF WndError CLASS  -->
@@ -563,6 +571,7 @@
    <string name="TomeOfMastery_ACRead">READ</string>
    <string name="TomeOfMastery_Info">This worn leather book is not that thick, but you feel somehow, that you can gather a lot from it. Remember though that reading this tome may require some time.</string>
    <string name="TomeOfMastery_Blinded">You can\'t read while blinded</string>
+   <string name="TomeOfMastery_Choose">You have chosen the way of the %s!</string>
 
 
    <!--  STRINGS OF Torch CLASS  -->
@@ -571,6 +580,20 @@
    <string name="Torch_Info">It\'s an indispensable item in The Demon Halls, which are notorious for their poor ambient lighting.</string>
 
 
+   <!--  STRINGS OF Weightstone CLASS  -->
+   <string name="Weightstone_Name">weightstone</string>
+   <string name="Weightstone_ACApply">APPLY</string>
+   <string name="Weightstone_Info">Using a weightstone, you can balance your melee weapon to increase its speed or accuracy.</string>
+   <string name="Weightstone_Select">Select a weapon to balance</string>
+   <string name="Weightstone_Fast">you balanced your %s to make it faster</string>
+   <string name="Weightstone_Accurate">you balanced your %s to make it more accurate</string>
+   <string name="Weightstone_WndChoice">How would you like to balance your %s?</string>
+   <string name="Weightstone_WndSpeed">For speed</string>
+   <string name="Weightstone_WndAccuracy">For accuracy</string>
+   <string name="Weightstone_WndCancel">Never mind</string>
+
+
+<!--  PACKAGE pixeldungeon/plants  -->
    <!--  STRINGS OF Plant CLASS  -->
    <string name="Plant_ACPlant">PLANT</string>
    <string name="Plant_Info">Throw this seed to the place where you want to grow %1$s.\n\n%2$s</string>
@@ -1263,12 +1286,14 @@
    <string name="MeleeWeapon_Info3e">but</string>
    <string name="MeleeWeapon_Info3f">accurate</string>
    <string name="MeleeWeapon_Info3g">inaccurate</string>
-   <string name="MeleeWeapon_Info4">It is enchanted.</string>
-   <string name="MeleeWeapon_Info5a">Because of your inadequate strength the accuracy and speed of your attack with this %s is decreased.</string>
-   <string name="MeleeWeapon_Info5b">Because of your excess strength the damage of your attack with this %s is increased.</string>
-   <string name="MeleeWeapon_Info6a">You hold the %1$s at the ready%2$s.</string>
-   <string name="MeleeWeapon_Info6b">, and because it is cursed, you are powerless to let go</string>
-   <string name="MeleeWeapon_Info6c">You can feel a malevolent magic lurking within %s.</string>
+   <string name="MeleeWeapon_Info4a">It was balanced to make it faster.</string>
+   <string name="MeleeWeapon_Info4b">It was balanced to make it more accurate.</string>
+   <string name="MeleeWeapon_Info5">It is enchanted.</string>
+   <string name="MeleeWeapon_Info6a">Because of your inadequate strength the accuracy and speed of your attack with this %s is decreased.</string>
+   <string name="MeleeWeapon_Info6b">Because of your excess strength the damage of your attack with this %s is increased.</string>
+   <string name="MeleeWeapon_Info7a">You hold the %1$s at the ready%2$s.</string>
+   <string name="MeleeWeapon_Info7b">, and because it is cursed, you are powerless to let go</string>
+   <string name="MeleeWeapon_Info7c">You can feel a malevolent magic lurking within %s.</string>
 
 
    <!--  STRINGS OF BattleAxe CLASS  -->
@@ -1392,7 +1417,15 @@
 
 
    <!--  STRINGS OF LightningTrap CLASS  -->
+   <string name="LightningTrap_Name">lightning trap</string>
    <string name="LightningTrap_Desc">You were killed by a discharge of a lightning trap...</string>   
-    
+
+   <!--  STRINGS OF ItemSprite CLASS  -->
+   <string name="ItemSprite_Info1">drop aside: %1$.1f %2$.1f</string>
+
+
+   <!--  STRINGS OF Toolbar CLASS  -->
+   <string name="Toolbar_Info1">You don\'t know what is there.</string>
+   <string name="Toolbar_Info2">Select a cell to examine</string>
 
 </resources>
