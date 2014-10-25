@@ -19,10 +19,12 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -50,7 +52,7 @@ public class King extends Mob {
 	private static final int MAX_ARMY_SIZE	= 5;
 	
 	{
-		name = "King of Dwarves";
+		name = Game.getVar(R.string.King_Name);
 		spriteClass = KingSprite.class;
 		
 		HP = HT = 300;
@@ -93,7 +95,7 @@ public class King extends Mob {
 	
 	@Override
 	public String defenseVerb() {
-		return "parried";
+		return Game.getVar(R.string.King_Defense);
 	}
 	
 	@Override
@@ -142,7 +144,7 @@ public class King extends Mob {
 		
 		Badges.validateBossSlain();
 		
-		yell( "You cannot kill me, " + Dungeon.hero.heroClass.title() + "... I am... immortal..." );
+		yell(String.format(Game.getVar(R.string.King_Info1), Dungeon.hero.heroClass.title()));
 	}
 	
 	private int maxArmySize() {
@@ -191,22 +193,18 @@ public class King extends Mob {
 			} while (dist < undeadsToSummon);
 		}
 		
-		yell( "Arise, slaves!" );
+		yell(Game.getVar(R.string.King_Info2));
 	}
 	
 	@Override
 	public void notice() {
 		super.notice();
-		yell( "How dare you!" );
+		yell(Game.getVar(R.string.King_Info3));
 	}
 	
 	@Override
 	public String description() {
-		return
-			"The last king of dwarves was known for his deep understanding of processes of life and death. " +
-			"He has persuaded members of his court to participate in a ritual, that should have granted them " +
-			"eternal youthfulness. In the end he was the only one, who got it - and an army of undead " +
-			"as a bonus.";
+		return Game.getVar(R.string.King_Desc);
 	}
 	
 	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
@@ -237,7 +235,7 @@ public class King extends Mob {
 		public static int count = 0;
 		
 		{
-			name = "undead dwarf";
+			name = Game.getVar(R.string.King_UndeadName);
 			spriteClass = UndeadSprite.class;
 			
 			HP = HT = 28;
@@ -303,14 +301,12 @@ public class King extends Mob {
 		
 		@Override
 		public String defenseVerb() {
-			return "blocked";
+			return Game.getVar(R.string.King_UndeadDefense);
 		}
 		
 		@Override
 		public String description() {
-			return
-				"These undead dwarves, risen by the will of the King of Dwarves, were members of his court. " +
-				"They appear as skeletons with a stunning amount of facial hair.";
+			return Game.getVar(R.string.King_UndeadDesc);
 		}
 		
 		private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();

@@ -19,9 +19,11 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.Generator;
@@ -35,10 +37,10 @@ import com.watabou.utils.Random;
 
 public class Skeleton extends Mob {
 
-	private static final String TXT_HERO_KILLED = "You were killed by the explosion of bones...";
+	private static final String TXT_HERO_KILLED = Game.getVar(R.string.Skeleton_Killed);
 	
 	{
-		name = "skeleton";
+		name = Game.getVar(R.string.Skeleton_Name);
 		spriteClass = SkeletonSprite.class;
 		
 		HP = HT = 25;
@@ -106,15 +108,12 @@ public class Skeleton extends Mob {
 	
 	@Override
 	public String defenseVerb() {
-		return "blocked";
+		return Game.getVar(R.string.Skeleton_Defense);
 	}
 	
 	@Override
 	public String description() {
-		return
-			"Skeletons are composed of corpses bones from unlucky adventurers and inhabitants of the dungeon, " +
-			"animated by emanations of evil magic from the depths below. After they have been " +
-			"damaged enough, they disintegrate in an explosion of bones.";
+		return Game.getVar(R.string.Skeleton_Desc);
 	}
 	
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();

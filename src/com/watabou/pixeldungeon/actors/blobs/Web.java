@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.blobs;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -63,6 +65,6 @@ public class Web extends Blob {
 	
 	@Override
 	public String tileDesc() {
-		return "Everything is covered with a thick web here.";
+		return Game.getVar(R.string.Web_Info);
 	}
 }

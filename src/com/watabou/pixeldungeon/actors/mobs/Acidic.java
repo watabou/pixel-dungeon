@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.sprites.AcidicSprite;
 import com.watabou.utils.Random;
@@ -25,7 +27,7 @@ import com.watabou.utils.Random;
 public class Acidic extends Scorpio {
 
 	{
-		name = "acidic scorpio";
+		name = Game.getVar(R.string.Acidic_Name);
 		spriteClass = AcidicSprite.class;
 	}
 	

@@ -51,9 +51,9 @@ public class Badges {
 	
 	public static enum Badge {
 		MONSTERS_SLAIN_1(Game.getVar(R.string.Badges_MonsterSlain1), 0 ),
-		MONSTERS_SLAIN_2(Game.getVar(R.string.Badges_GoldColleted2), 1 ),
-		MONSTERS_SLAIN_3(Game.getVar(R.string.Badges_GoldColleted3), 2 ),
-		MONSTERS_SLAIN_4(Game.getVar(R.string.Badges_GoldColleted4), 3 ),
+		MONSTERS_SLAIN_2(Game.getVar(R.string.Badges_MonsterSlain2), 1 ),
+		MONSTERS_SLAIN_3(Game.getVar(R.string.Badges_MonsterSlain3), 2 ),
+		MONSTERS_SLAIN_4(Game.getVar(R.string.Badges_MonsterSlain4), 3 ),
 		GOLD_COLLECTED_1(Game.getVar(R.string.Badges_GoldColleted1), 4 ),
 		GOLD_COLLECTED_2(Game.getVar(R.string.Badges_GoldColleted2), 5 ),
 		GOLD_COLLECTED_3(Game.getVar(R.string.Badges_GoldColleted3), 6 ),

@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class Cripple extends FlavourBuff {
@@ -30,6 +32,6 @@ public class Cripple extends FlavourBuff {
 	
 	@Override
 	public String toString() {
-		return "Crippled";
+		return Game.getVar(R.string.Cripple_Info);
 	}
 }

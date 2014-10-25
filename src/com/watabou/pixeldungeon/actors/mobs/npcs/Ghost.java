@@ -19,11 +19,13 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import java.util.HashSet;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -54,7 +56,7 @@ import com.watabou.utils.Random;
 public class Ghost extends NPC {
 
 	{
-		name = "sad ghost";
+		name = Game.getVar(R.string.Ghost_Name);
 		spriteClass = GhostSprite.class;
 		
 		flying = true;
@@ -62,21 +64,10 @@ public class Ghost extends NPC {
 		state = WANDERING;
 	}
 	
-	private static final String TXT_ROSE1	=
-		"Hello adventurer... Once I was like you - strong and confident... " +
-		"And now I'm dead... But I can't leave this place... Not until I have my _dried rose_... " +
-		"It's very important to me... Some monster stole it from my body...";
-	
-	private static final String TXT_ROSE2	=
-		"Please... Help me... Find the rose...";
-	
-	private static final String TXT_RAT1	=
-		"Hello adventurer... Once I was like you - strong and confident... " +
-		"And now I'm dead... But I can't leave this place... Not until I have my revenge... " +
-		"Slay the _fetid rat_, that has taken my life...";
-		
-	private static final String TXT_RAT2	=
-		"Please... Help me... Slay the abomination...";
+	private static final String TXT_ROSE1 = Game.getVar(R.string.Ghost_Rose1);
+	private static final String TXT_ROSE2 = Game.getVar(R.string.Ghost_Rose2);
+	private static final String TXT_RAT1  = Game.getVar(R.string.Ghost_Rat1);
+	private static final String TXT_RAT2  = Game.getVar(R.string.Ghost_Rat2);
 
 	
 	public Ghost() {
@@ -92,7 +83,7 @@ public class Ghost extends NPC {
 	
 	@Override
 	public String defenseVerb() {
-		return "evaded";
+		return Game.getVar(R.string.Ghost_Defense);
 	}
 	
 	@Override
@@ -162,9 +153,7 @@ public class Ghost extends NPC {
 	
 	@Override
 	public String description() {
-		return 
-			"The ghost is barely visible. It looks like a shapeless " +
-			"spot of faint light with a sorrowful face.";
+		return Game.getVar(R.string.Ghost_Desc);
 	}
 	
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
@@ -342,7 +331,7 @@ public class Ghost extends NPC {
 	public static class FetidRat extends Mob {
 
 		{
-			name = "fetid rat";
+			name = Game.getVar(R.string.Ghost_FetidRatName);
 			spriteClass = FetidRatSprite.class;
 			
 			HP = HT = 15;
@@ -386,8 +375,7 @@ public class Ghost extends NPC {
 		
 		@Override
 		public String description() {
-			return
-				"This marsupial rat is much larger, than a regular one. It is surrounded by a foul cloud.";
+			return Game.getVar(R.string.Ghost_FetidRatDesc);
 		}
 		
 		private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();

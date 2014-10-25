@@ -20,8 +20,10 @@ package com.watabou.pixeldungeon.actors.mobs;
 import java.util.HashSet;
 
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -44,7 +46,7 @@ public class Goo extends Mob {
 	private static final float PUMP_UP_DELAY	= 2f;
 	
 	{
-		name = "Goo";
+		name = Game.getVar(R.string.Goo_Name);
 		HP = HT = 80;
 		EXP = 10;
 		defenseSkill = 12;
@@ -120,7 +122,7 @@ public class Goo extends Mob {
 			
 			if (Dungeon.visible[pos]) {
 				sprite.showStatus( CharSprite.NEGATIVE, "!!!" );
-				GLog.n( "Goo is pumping itself up!" );
+				GLog.n(Game.getVar(R.string.Goo_Info1));
 			}
 				
 			return true;
@@ -158,20 +160,18 @@ public class Goo extends Mob {
 		
 		Badges.validateBossSlain();
 		
-		yell( "glurp... glurp..." );
+		yell(Game.getVar(R.string.Goo_Info2));
 	}
 	
 	@Override
 	public void notice() {
 		super.notice();
-		yell( "GLURP-GLURP!" );
+		yell(Game.getVar(R.string.Goo_Info3));
 	}
 	
 	@Override
 	public String description() {
-		return
-			"Little known about The Goo. It's quite possible that it is not even a creature, but rather a " +
-			"conglomerate of substances from the sewers that gained rudiments of free will.";
+		return Game.getVar(R.string.Goo_Desc);
 	}
 	
 	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();

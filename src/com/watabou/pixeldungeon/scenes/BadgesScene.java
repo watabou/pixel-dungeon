@@ -35,7 +35,7 @@ import com.watabou.pixeldungeon.ui.Window;
 
 public class BadgesScene extends PixelScene {
 	
-	private static final String TXT_TITLE = Game.getVar(R.string.BadgesScene_TxtTitle);
+	private static final String TXT_TITLE = Game.getVar(R.string.BadgesScene_Title);
 	
 	@Override
 	public void create() {

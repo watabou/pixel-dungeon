@@ -337,7 +337,7 @@
 
 
    <!--  STRINGS OF WndBlacksmith CLASS  -->
-   <string name="WndBlacksmith_Prompt">Ok, a deal is a deal, dat\'s what I can do for you: I can reforge 2 items and turn them into one of a better quality.</string>
+   <string name="WndBlacksmith_Prompt">OK, a deal is a deal, dat\'s what I can do for you: I can reforge 2 items and turn them into one of a better quality.</string>
    <string name="WndBlacksmith_Select">Select an item to reforge</string>
    <string name="WndBlacksmith_Reforge">Reforge them</string>
 
@@ -776,7 +776,7 @@
 
    <!--  STRINGS OF FrozenCarpaccio CLASS  -->
    <string name="FrozenCarpaccio_Name">frozen carpaccio</string>
-   <string name="FrozenCarpaccio_Info">It\'s a piece of frozen raw meat. The only way to eat it is by cutting thin slices of it. And this way it\'s suprisingly good.</string>
+   <string name="FrozenCarpaccio_Info">It\'s a piece of frozen raw meat. The only way to eat it is by cutting thin slices of it. And this way it\'s surprisingly good.</string>
    <string name="FrozenCarpaccio_Info1">You see your hands turn invisible!</string>
    <string name="FrozenCarpaccio_Info2">You feel your skin hardens!</string>
    <string name="FrozenCarpaccio_Info3">Refreshing!</string>
@@ -796,7 +796,7 @@
    <!--  STRINGS OF OverpricedRation CLASS  -->
    <string name="OverpricedRation_Name">overpriced food ration</string>
    <string name="OverpricedRation_Info">It looks exactly like a standard ration of food but smaller.</string>
-   <string name="OverpricedRation_Message">That food tasted ok.</string>
+   <string name="OverpricedRation_Message">That food tasted good.</string>
 
 
    <!--  STRINGS OF Pasty CLASS  -->
@@ -972,10 +972,9 @@
    </string-array>
    <string name="Ring_Info1">You can only wear 2 rings at a time</string>
    <string name="Ring_Info2">Your %s tightens around your finger painfully</string>
-   <string name="Ring_Info3">You can\'t remove cursed %s!"</string>
-   <string name="Ring_Info4a">%1$s\n\nThe %2$s is on your finger %3$s.</string>
-   <string name="Ring_Info4b">, and because it is cursed, you are powerless to remove it</string>
-   <string name="Ring_Info5">%1$s\n\nYou can feel a malevolent magic lurking within the %2$s.</string>
+   <string name="Ring_Info3a">%1$s\n\nThe %2$s is on your finger %3$s.</string>
+   <string name="Ring_Info3b">, and because it is cursed, you are powerless to remove it</string>
+   <string name="Ring_Info4">%1$s\n\nYou can feel a malevolent magic lurking within the %2$s.</string>
    <string name="Ring_BuffKnown">This is a %s</string>
 
 
@@ -1400,17 +1399,302 @@
    <string name="Tamahawk_Name">tomahawk</string>
    <string name="Tamahawk_Info">This throwing axe is not that heavy, but it still requires significant strength to be used effectively.</string>
 
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+
+<!--  PACKAGE /actors/blobs  -->
+   <!--  STRINGS OF MissileWeapon CLASS  -->
+   <string name="ConfusionGas_Info">A cloud of confusion gas is swirling here.</string>
+   <!--  STRINGS OF Fire CLASS  -->
+   <string name="Fire_Info">A fire is raging here.</string>
+   <!--  STRINGS OF Foliage CLASS  -->
+   <string name="Foliage_Info">Shafts of light pierce the gloom of the underground garden.</string>
+   <!--  STRINGS OF ParalyticGas CLASS  -->
+   <string name="ParalyticGas_Info">A cloud of paralytic gas is swirling here.</string>
+   <!--  STRINGS OF ToxicGas CLASS  -->
+   <string name="ToxicGas_Info">A greenish cloud of toxic gas is swirling here.</string>
+   <string name="ToxicGas_Info1">You died from a toxic gas..</string>
+   <!--  STRINGS OF WaterOfAwareness CLASS  -->
+   <string name="WaterOfAwareness_Info">As you take a sip, you feel the knowledge pours into your mind. Now you know everything about your equipped items. Also you sense all items on the level and know all its secrets.</string>
+   <string name="WaterOfAwareness_Procced">Power of knowledge radiates from the water of this well. Take a sip from it to reveal all secrets of equipped items.</string>
+   <!--  STRINGS OF WaterOfHealth CLASS  -->
+   <string name="WaterOfHealth_Info">Power of health radiates from the water of this well. Take a sip from it to heal your wounds and satisfy hunger.</string>
+   <string name="WaterOfHealth_Procced">As you take a sip, you feel your wounds heal completely.</string>
+   <!--  STRINGS OF WaterOfTransmutation CLASS  -->
+   <string name="WaterOfTransmutation_Info">Power of change radiates from the water of this well. Throw an item into the well to turn it into something else.</string>
+   <!--  STRINGS OF Web CLASS  -->
+   <string name="Web_Info">Everything is covered with a thick web here.</string>
+
+
+<!--  PACKAGE /actors/buffs  -->
+   <!--  STRINGS OF Amok CLASS  -->
+   <string name="Amok_Info">Amok</string>
+   <!--  STRINGS OF Barkskin CLASS  -->
+   <string name="Barkskin_Info">Barkskin</string>
+   <!--  STRINGS OF Bleeding CLASS  -->
+   <string name="Bleeding_Info">Bleeding</string>
+   <string name="Bleeding_Death">You bled to death...</string>
+   <!--  STRINGS OF Blindness CLASS  -->
+   <string name="Blindness_Info">Blinded</string>
+   <!--  STRINGS OF Burning CLASS  -->
+   <string name="Burning_Info">Burning</string>
+   <string name="Burning_Burns">%s burns up!</string>
+   <string name="Burning_Death">You burned to death...</string>
+   <!--  STRINGS OF Charm CLASS  -->
+   <string name="Charm_Info">Charmed</string>
+   <!--  STRINGS OF Combo CLASS  -->
+   <string name="Combo_Info">Combo</string>
+   <string name="Combo_Combo">%d hit combo!</string>
+   <!--  STRINGS OF Cripple CLASS  -->
+   <string name="Cripple_Info">Crippled</string>
+   <!--  STRINGS OF Frost CLASS  -->
+   <string name="Frost_Info">Frozen</string>
+   <!--  STRINGS OF Fury CLASS  -->
+   <string name="Fury_Info">Fury</string>
+   <!--  STRINGS OF GasesImmunity CLASS  -->
+   <string name="GasesImmunity_Info">Immune to gases</string>
+   <!--  STRINGS OF Hunger CLASS  -->
+   <string name="Hunger_Hungry">You are hungry.</string>
+   <string name="Hunger_Starving">You are starving!</string>
+   <string name="Hunger_Death">You starved to death...</string>
+   <string name="Hunger_Info1">Hungry</string>
+   <string name="Hunger_Info2">Starving</string>
+   <!--  STRINGS OF Invisibility CLASS  -->
+   <string name="Invisibility_Info">Invisible</string>
+   <!--  STRINGS OF Levitation CLASS  -->
+   <string name="Levitation_Info">Levitating</string>
+   <!--  STRINGS OF Light CLASS  -->
+   <string name="Light_Info">Illuminated</string>
+   <!--  STRINGS OF MindVision CLASS  -->
+   <string name="MindVision_Info">Mind vision</string>
+   <!--  STRINGS OF Ooze CLASS  -->
+   <string name="Ooze_Info">Caustic ooze</string>
+   <string name="Ooze_Death">%s killed you...</string>
+   <!--  STRINGS OF Paralysis CLASS  -->
+   <string name="Paralysis_Info">Paralysed</string>
+   <!--  STRINGS OF Poison CLASS  -->
+   <string name="Poison_Info">Poisoned</string>
+   <string name="Poison_Death">You died from poison...</string>
+   <!--  STRINGS OF Roots CLASS  -->
+   <string name="Roots_Info">Rooted</string>
+   <!--  STRINGS OF Shadows CLASS  -->
+   <string name="Shadows_Info">Shadowmelded</string>
+   <!--  STRINGS OF Slow CLASS  -->
+   <string name="Slow_Info">Slowed</string>
+   <!--  STRINGS OF SnipersMark CLASS  -->
+   <string name="SnipersMark_Info">Sniper\'s mark</string>
+   <!--  STRINGS OF Vertigo CLASS  -->
+   <string name="Vertigo_Info">Vertigo</string>
+   <!--  STRINGS OF Weakness CLASS  -->
+   <string name="Weakness_Info">Weakened</string>
+
+
+<!--  PACKAGE /actors/hero  -->
+   <!--  STRINGS OF Belongings CLASS  -->
+   <string name="Belongings_Name">backpack</string>
+
+
+<!--  PACKAGE /actors/mobs  -->
+   <!--  STRINGS OF Mob CLASS  -->
+   <string name="Mob_Desc">Real description is coming soon!</string>
+   <string name="Mob_Died">You hear something died in the distance</string>
+   <string name="Mob_Yell">%1$s: \"%2$s\"</string>
+   <string name="Mob_StaSleepingStatus">This %s is sleeping</string>
+   <string name="Mob_StaWanderingStatus">This %s is wandering</string>
+   <string name="Mob_StaHuntingStatus">This %s is hunting</string>
+   <string name="Mob_StaFleeingStatus">This %s is fleeing</string>
+   <string name="Mob_StaPassiveStatus">This %s is passive</string>
+   <!--  STRINGS OF Acidic CLASS  -->
+   <string name="Acidic_Name">acidic scorpio</string>
+   <!--  STRINGS OF Albino CLASS  -->
+   <string name="Albino_Name">albino rat</string>
+   <!--  STRINGS OF Bandit CLASS  -->
+   <string name="Bandit_Name">crazy bandit</string>
+   <!--  STRINGS OF Bat CLASS  -->
+   <string name="Bat_Name">vampire bat</string>
+   <string name="Bat_Desc">These brisk and tenacious inhabitants of cave domes may defeat much larger opponents by replenishing their health with each successful attack.</string>
+   <string name="Bat_Defense">evaded</string>
+   <!--  STRINGS OF Brute CLASS  -->
+   <string name="Brute_Name">gnoll brute</string>
+   <string name="Brute_Desc">Brutes are the largest, strongest and toughest of all gnolls. When severely wounded, they go berserk, inflicting even more damage to their enemies.</string>
+   <string name="Brute_Enraged">%s becomes enraged!</string>
+   <!--  STRINGS OF Crab CLASS  -->
+   <string name="Crab_Name">sewer crab</string>
+   <string name="Crab_Desc">These huge crabs are at the top of the food chain in the sewers. They are extremely fast and their thick exoskeleton can withstand heavy blows.</string>
+   <string name="Crab_Defense">parried</string>
+   <!--  STRINGS OF DM300 CLASS  -->
+   <string name="DM300_Name">DM-300</string>
+   <string name="DM300_Desc">This machine was created by the Dwarves several centuries ago. Later, Dwarves started to replace machines with golems, elementals and even demons. Eventually it led their civilization to the decline. The DM-300 and similar machines were typically used for construction and mining, and in some cases, for city defense.</string>
+   <string name="DM300_Info1">DM-300 repairs itself!</string>
+   <string name="DM300_Info2">Mission failed. Shutting down.</string>
+   <string name="DM300_Info3">Unauthorised personnel detected.</string>
+   <!--  STRINGS OF Elemental CLASS  -->
+   <string name="Elemental_Name">fire elemental</string>
+   <string name="Elemental_Desc">Wandering fire elementals are a byproduct of summoning greater entities. They are too chaotic in their nature to be controlled by even the most powerful demonologist.</string>
+   <!--  STRINGS OF Eye CLASS  -->
+   <string name="Eye_Name">evil eye</string>
+   <string name="Eye_Desc">One of this demon\'s other names is \"orb of hatred\", because when it sees an enemy, it uses its deathgaze recklessly, often ignoring its allies and wounding them.</string>
+   <string name="Eye_Kill">%s\'s deathgaze killed you...</string>
+   <!--  STRINGS OF Gnoll CLASS  -->
+   <string name="Gnoll_Name">gnoll scout</string>
+   <string name="Gnoll_Desc">Gnolls are hyena-like humanoids. They dwell in sewers and dungeons, venturing up to raid the surface from time to time. Gnoll scouts are regular members of their pack, they are not as strong as brutes and not as intelligent as shamans.</string>
+   <!--  STRINGS OF Golem CLASS  -->
+   <string name="Golem_Name">golem</string>
+   <string name="Golem_Desc">The Dwarves tried to combine their knowledge of mechanisms with their newfound power of elemental binding. They used spirits of earth as the \"soul\" for the mechanical bodies of golems, which were believed to be most controllable of all. Despite this, the tiniest mistake in the ritual could cause an outbreak.</string>
+   <string name="Golem_Defense">blocked</string>
+   <!--  STRINGS OF Goo CLASS  -->
+   <string name="Goo_Name">Goo</string>
+   <string name="Goo_Desc">Little known about The Goo. It\'s quite possible that it is not even a creature, but rather a conglomerate of substances from the sewers that gained rudiments of free will.</string>
+   <string name="Goo_Info1">Goo is pumping itself up!</string>
+   <string name="Goo_Info2">glurp... glurp...</string>
+   <string name="Goo_Info3">GLURP-GLURP!</string>
+   <!--  STRINGS OF King CLASS  -->
+   <string name="King_Name">King of Dwarves</string>
+   <string name="King_Desc">The last king of dwarves was known for his deep understanding of processes of life and death. He has persuaded members of his court to participate in a ritual, that should have granted them eternal youthfulness. In the end he was the only one, who got it - and an army of undead as a bonus.</string>
+   <string name="King_Defense">parried</string>
+   <string name="King_Info1">You cannot kill me, %s... I am... immortal...</string>
+   <string name="King_Info2">Arise, slaves!</string>
+   <string name="King_Info3">How dare you!</string>
+   <string name="King_UndeadName">undead dwarf</string>
+   <string name="King_UndeadDesc">These undead dwarves, risen by the will of the King of Dwarves, were members of his court. They appear as skeletons with a stunning amount of facial hair.</string>
+   <string name="King_UndeadDefense">blocked</string>
+   <!--  STRINGS OF Monk CLASS  -->
+   <string name="Monk_Name">dwarf monk</string>
+   <string name="Monk_Desc">These monks are fanatics, who devoted themselves to protecting their city\'s secrets from all aliens. They don\'t use any armor or weapons, relying solely on the art of hand-to-hand combat.</string>
+   <string name="Monk_Defense">parried</string>
+   <string name="Monk_Disarm">%1$s has knocked the %2$s from your hands!</string>
+   <!--  STRINGS OF Piranha CLASS  -->
+   <string name="Piranha_Name">giant piranha</string>
+   <string name="Piranha_Desc">These carnivorous fish are not natural inhabitants of underground pools. They were bred specifically to protect flooded treasure vaults.</string>
+   <!--  STRINGS OF Rat CLASS  -->
+   <string name="Rat_Name">marsupial rat</string>
+   <string name="Rat_Desc">Marsupial rats are aggressive, but rather weak denizens of the sewers. They can be dangerous only in big numbers.</string>
+   <!--  STRINGS OF Scorpio CLASS  -->
+   <string name="Scorpio_Name">scorpio</string>
+   <string name="Scorpio_Desc">These huge arachnid-like demonic creatures avoid close combat by all means, firing crippling serrated spikes from long distances.</string>
+   <!--  STRINGS OF Senior CLASS  -->
+   <string name="Senior_Name">senior monk</string>
+   <!--  STRINGS OF Shaman CLASS  -->
+   <string name="Shaman_Name">gnoll shaman</string>
+   <string name="Shaman_Desc">The most intelligent gnolls can master shamanistic magic. Gnoll shamans prefer battle spells to compensate for lack of might, not hesitating to use them on those who question their status in a tribe.</string>
+   <string name="Shaman_Killed">%s\'s lightning bolt killed you...</string>
+   <!--  STRINGS OF Shielded CLASS  -->
+   <string name="Shielded_Name">shielded brute</string>
+   <string name="Shielded_Defense">blocked</string>
+   <!--  STRINGS OF Skeleton CLASS  -->
+   <string name="Skeleton_Name">skeleton</string>
+   <string name="Skeleton_Desc">Skeletons are composed of corpses bones from unlucky adventurers and inhabitants of the dungeon, animated by emanations of evil magic from the depths below. After they have been damaged enough, they disintegrate in an explosion of bones.</string>
+   <string name="Skeleton_Defense">blocked</string>
+   <string name="Skeleton_Killed">You were killed by the explosion of bones...</string>
+   <!--  STRINGS OF Spinner CLASS  -->
+   <string name="Spinner_Name">cave spinner</string>
+   <string name="Spinner_Desc">These greenish furry cave spiders try to avoid direct combat, preferring to wait in the distance while their victim, entangled in the spinner\'s excreted cobweb, slowly dies from their poisonous bite.</string>
+   <!--  STRINGS OF Statue CLASS  -->
+   <string name="Statue_Name">animated statue</string>
+   <string name="Statue_Desc">You would think that it\'s just another ugly statue of this dungeon, but its red glowing eyes give itself away. While the statue itself is made of stone, the _%s_, it\'s wielding, looks real.</string>
+   <!--  STRINGS OF Succubus CLASS  -->
+   <string name="Succubus_Name">succubus</string>
+   <string name="Succubus_Desc">The succubi are demons that look like seductive (in a slightly gothic way) girls. Using its magic, the succubus can charm a hero, who will become unable to attack anything until the charm wears off.</string>
+   <!--  STRINGS OF Swarm CLASS  -->
+   <string name="Swarm_Name">swarm of flies</string>
+   <string name="Swarm_Desc">The deadly swarm of flies buzzes angrily. Every non-magical attack will split it into two smaller but equally dangerous swarms.</string>
+   <string name="Swarm_Defense">evaded</string>
+   <!--  STRINGS OF Tengu CLASS  -->
+   <string name="Tengu_Name">Tengu</string>
+   <string name="Tengu_Desc">Tengu are members of the ancient assassins clan, which is also called Tengu. These assassins are noted for extensive use of shuriken and traps.</string>
+   <string name="Tengu_Info1">Free at last...</string>
+   <string name="Tengu_Info2">Gotcha, %s!</string>
+   <!--  STRINGS OF Thief CLASS  -->
+   <string name="Thief_Name">crazy thief</string>
+   <string name="Thief_Desc">Deeper levels of the dungeon have always been a hiding place for all kinds of criminals. Not all of them could keep a clear mind during their extended periods so far from daylight. Long ago, these crazy thieves and bandits have forgotten who they are and why they steal.</string>
+   <string name="Thief_Stole">%1$s stole %2$s from you!</string>
+   <string name="Thief_Carries">\n\n%1$s is carrying a _%2$s_. Stolen obviously.</string>
+   <!--  STRINGS OF Warlock CLASS  -->
+   <string name="Warlock_Name">dwarf warlock</string>
+   <string name="Warlock_Desc">When dwarves\' interests have shifted from engineering to arcane arts, warlocks have come to power in the city. They started with elemental magic, but soon switched to demonology and necromancy.</string>
+   <string name="Warlock_Killed">%s\'s shadow bolt killed you...</string>
+   <!--  STRINGS OF Wraith CLASS  -->
+   <string name="Wraith_Name">wraith</string>
+   <string name="Wraith_Desc">A wraith is a vengeful spirit of a sinner, whose grave or tomb was disturbed. Being an ethereal entity, it is very hard to hit with a regular weapon.</string>
+   <string name="Wraith_Defense">evaded</string>
+   <!--  STRINGS OF Yog CLASS  -->
+   <string name="Yog_Name">Yog-Dzewa</string>
+   <string name="Yog_Desc">Yog-Dzewa is an Old God, a powerful entity from the realms of chaos. A century ago, the ancient dwarves barely won the war against its army of demons, but were unable to kill the god itself. Instead, they then imprisoned it in the halls below their city, believing it to be too weak to rise ever again.</string>
+   <string name="Yog_Info1">...</string>
+   <string name="Yog_Info2">Hope is an illusion...</string>
+   <string name="Yog_NameRottingFist">rotting fist</string>
+   <string name="Yog_NameBurningFist">burning fist</string>
+   <string name="Yog_NameLarva">god\'s larva</string>
+
+
+<!--  PACKAGE /mobs/npcs  -->
+   <!--  STRINGS OF Blacksmith CLASS  -->
+   <string name="Blacksmith_Name">troll blacksmith</string>
+   <string name="Blacksmith_Desc">This troll blacksmith looks like all trolls look: he is tall and lean, and his skin resembles stone in both color and texture. The troll blacksmith is tinkering with unproportionally small tools.</string>
+   <string name="Blacksmith_Gold1">Hey human! Wanna be useful, eh? Take dis pickaxe and mine me some _dark gold ore_, _15 pieces_ should be enough. What do you mean, how am I gonna pay? You greedy...\nOk, ok, I don\'t have money to pay, but I can do some smithin\' for you. Consider yourself lucky, I\'m the only blacksmith around.</string>
+   <string name="Blacksmith_Blood1">Hey human! Wanna be useful, eh? Take dis pickaxe and _kill a bat_ wit\' it, I need its blood on the head. What do you mean, how am I gonna pay? You greedy...\nOk, ok, I don\'t have money to pay, but I can do some smithin\' for you. Consider yourself lucky, I\'m the only blacksmith around.</string>
+   <string name="Blacksmith_Txt2">Are you kiddin\' me? Where is my pickaxe?!</string>
+   <string name="Blacksmith_Txt3">Dark gold ore. 15 pieces. Seriously, is it dat hard?</string>
+   <string name="Blacksmith_Txt4">I said I need bat blood on the pickaxe. Chop chop!</string>
+   <string name="Blacksmith_Completed">Oh, you have returned... Better late dan never.</string>
+   <string name="Blacksmith_GetLost">I\'m busy. Get lost!</string>
+   <string name="Blacksmith_LooksBetter">your %s certainly looks better now</string>
+   <string name="Blacksmith_Verify1">Select 2 different items, not the same item twice!</string>
+   <string name="Blacksmith_Verify2">Select 2 items of the same type!</string>
+   <string name="Blacksmith_Verify3">I need to know what I\'m working with, identify them first!</string>
+   <string name="Blacksmith_Verify4">I don\'t work with cursed items!</string>
+   <string name="Blacksmith_Verify5">It\'s a junk, the quality is too poor!</string>
+   <string name="Blacksmith_Verify6">I can\'t reforge these items!</string>
+   <!--  STRINGS OF Ghost CLASS  -->
+   <string name="Ghost_Name">sad ghost</string>
+   <string name="Ghost_Desc">The ghost is barely visible. It looks like a shapeless spot of faint light with a sorrowful face.</string>
+   <string name="Ghost_Rose1">Hello adventurer... Once I was like you - strong and confident... And now I\'m dead... But I can\'t leave this place... Not until I have my _dried rose_... It\'s very important to me... Some monster stole it from my body...</string>
+   <string name="Ghost_Rose2">Please... Help me... Find the rose...</string>
+   <string name="Ghost_Rat1">Hello adventurer... Once I was like you - strong and confident... And now I\'m dead... But I can\'t leave this place... Not until I have my revenge... Slay the _fetid rat_, that has taken my life...</string>
+   <string name="Ghost_Rat2">Please... Help me... Slay the abomination...</string>
+   <string name="Ghost_Defense">evaded</string>
+   <string name="Ghost_FetidRatName">fetid rat</string>
+   <string name="Ghost_FetidRatDesc">This marsupial rat is much larger, than a regular one. It is surrounded by a foul cloud.</string>
+   <!--  STRINGS OF Imp CLASS  -->
+   <string name="Imp_Name">ambitious imp</string>
+   <string name="Imp_Desc">Imps are lesser demons. They are notable for neither their strength nor their magic talent, but they are quite smart and sociable. Many imps prefer to live among non-demons.</string>
+   <string name="Imp_Defense">evaded</string>
+   <string name="Imp_Golems1">Are you an adventurer? I love adventurers! You can always rely on them if something needs to be killed. Am I right? For bounty of course ;)\nIn my case this is _golems_ who need to be killed. You see, I\'m going to start a little business here, but these stupid golems are bad for business! It\'s very hard to negotiate with wandering lumps of granite, damn them! So please, kill... let\'s say _6 of them_ and a reward is yours.</string>
+   <string name="Imp_Golems2">How is your golem safari going?</string>
+   <string name="Imp_Monks1">Are you an adventurer? I love adventurers! You can always rely on them if something needs to be killed. Am I right? For bounty of course ;)\nIn my case this is _monks_ who need to be killed. You see, I\'m going to start a little business here, but these lunatics don\'t buy anything themselves and will scare away other customers. So please, kill... let\'s say _8 of them_ and a reward is yours.</string>
+   <string name="Imp_Monks2">Oh, you are still alive! I knew that your kung-fu is stronger ;) Just don\'t forget to grab these monks\' tokens.</string>
+   <string name="Imp_Cya">See you, %s!</string>
+   <string name="Imp_Hey">Psst, %s!</string>
+   <!--  STRINGS OF ImpShopkeeper CLASS  -->
+   <string name="ImpShopkeeper_Name">ambitious imp</string>
+   <string name="ImpShopkeeper_Desc">Imps are lesser demons. They are notable for neither their strength nor their magic talent. But they are quite smart and sociable, and many of imps prefer to live and do business among non-demons.</string>
+   <string name="ImpShopkeeper_Greetings">Hello, friend!</string>
+   <!--  STRINGS OF MirrorImage CLASS  -->
+   <string name="MirrorImage_Name">mirror image</string>
+   <string name="MirrorImage_Desc">This illusion bears a close resemblance to you, but it\'s paler and twitches a little.</string>
+   <!--  STRINGS OF RatKing CLASS  -->
+   <string name="RatKing_Name">rat king</string>
+   <string name="RatKing_Desc">This rat is a little bigger than a regular marsupial rat and it\'s wearing a tiny crown on its head.</string>
+   <string name="RatKing_Info1">I\'m not sleeping!</string>
+   <string name="RatKing_Info2">What is it? I have no time for this nonsense. My kingdom won\'t rule itself!</string>
+   <!--  STRINGS OF Shopkeeper CLASS  -->
+   <string name="Shopkeeper_Name">shopkeeper</string>
+   <string name="Shopkeeper_Desc">This stout guy looks more appropriate for a trade district in some large city than for a dungeon. His prices explain why he prefers to do business here.</string>
+   <string name="Shopkeeper_Sell">Select an item to sell</string>
+   <!--  STRINGS OF WandMaker CLASS  -->
+   <string name="WandMaker_Name">old wandmaker</string>
+   <string name="WandMaker_Desc">This old but hale gentleman wears a slightly confused expression. He is protected by a magic shield.</string>
+   <string name="WandMaker_Defense">absorbed</string>
+   <string name="WandMaker_Berry1">Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient - a _Rotberry seed_. Being a magic user, I\'m quite able to defend myself against local monsters, but I\'m getting lost in no time, it\'s very embarrassing. Probably you could help me? I would be happy to pay for your service with one of my best wands.</string>
+   <string name="WandMaker_Berry2">Any luck with a Rotberry seed, %s? No? Don\'t worry, I\'m not in a hurry.</string>
+   <string name="WandMaker_Dust1">Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient - _corpse dust_. It can be gathered from skeletal remains and there is an ample number of them in the dungeon. Being a magic user, I\'m quite able to defend myself against local monsters, but I\'m getting lost in no time, it\'s very embarrassing. Probably you could help me? I would be happy to pay for your service with one of my best wands.</string>
+   <string name="WandMaker_Dust2">Any luck with corpse dust, %s? Bone piles are the most obvious places to look.</string>
+   <string name="WandMaker_RotberryName">Rotberry</string>
+   <string name="WandMaker_RotberryDesc">Berries of this shrub taste like sweet, sweet death.</string>
+   <string name="WandMaker_RotberryInfo">The seed emits a roar that echoes throughout the dungeon!</string>
+
+
+
+
+
 
    <!--  STRINGS OF AlarmTrap CLASS  -->
    <string name="AlarmTrap_Desc">The trap emits a piercing sound that echoes throughout the dungeon!</string>

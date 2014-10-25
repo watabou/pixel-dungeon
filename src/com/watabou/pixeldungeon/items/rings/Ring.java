@@ -213,9 +213,9 @@ public class Ring extends EquipableItem {
 	@Override
 	public String info() {
 		if (isEquipped( Dungeon.hero )) {
-			return String.format(Game.getVar(R.string.Ring_Info4a), desc(), name(), (cursed ? Game.getVar(R.string.Ring_Info4b) : ""));
+			return String.format(Game.getVar(R.string.Ring_Info3a), desc(), name(), (cursed ? Game.getVar(R.string.Ring_Info3b) : ""));
 		} else if (cursed && cursedKnown) {
-			return String.format(Game.getVar(R.string.Ring_Info5), desc(), name());
+			return String.format(Game.getVar(R.string.Ring_Info4), desc(), name());
 		} else {
 			return desc();
 		}

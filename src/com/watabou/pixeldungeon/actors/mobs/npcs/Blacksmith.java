@@ -19,11 +19,13 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import java.util.Collection;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -44,31 +46,17 @@ import com.watabou.utils.Random;
 
 public class Blacksmith extends NPC {
 
-	private static final String TXT_GOLD_1 =
-		"Hey human! Wanna be useful, eh? Take dis pickaxe and mine me some _dark gold ore_, _15 pieces_ should be enough. " +
-		"What do you mean, how am I gonna pay? You greedy...\n" +
-		"Ok, ok, I don't have money to pay, but I can do some smithin' for you. Consider yourself lucky, " +
-		"I'm the only blacksmith around.";
-	private static final String TXT_BLOOD_1 =
-		"Hey human! Wanna be useful, eh? Take dis pickaxe and _kill a bat_ wit' it, I need its blood on the head. " +
-		"What do you mean, how am I gonna pay? You greedy...\n" +
-		"Ok, ok, I don't have money to pay, but I can do some smithin' for you. Consider yourself lucky, " +
-		"I'm the only blacksmith around.";
-	private static final String TXT2 =
-		"Are you kiddin' me? Where is my pickaxe?!";
-	private static final String TXT3 =
-		"Dark gold ore. 15 pieces. Seriously, is it dat hard?";
-	private static final String TXT4 =
-		"I said I need bat blood on the pickaxe. Chop chop!";
-	private static final String TXT_COMPLETED =
-		"Oh, you have returned... Better late dan never.";
-	private static final String TXT_GET_LOST =
-		"I'm busy. Get lost!";
-	
-	private static final String TXT_LOOKS_BETTER	= "your %s certainly looks better now";
+	private static final String TXT_GOLD_1       = Game.getVar(R.string.Blacksmith_Gold1);
+	private static final String TXT_BLOOD_1      = Game.getVar(R.string.Blacksmith_Blood1);
+	private static final String TXT2             = Game.getVar(R.string.Blacksmith_Txt2);
+	private static final String TXT3             = Game.getVar(R.string.Blacksmith_Txt3);
+	private static final String TXT4             = Game.getVar(R.string.Blacksmith_Txt4);
+	private static final String TXT_COMPLETED    = Game.getVar(R.string.Blacksmith_Completed);
+	private static final String TXT_GET_LOST     = Game.getVar(R.string.Blacksmith_GetLost);
+	private static final String TXT_LOOKS_BETTER = Game.getVar(R.string.Blacksmith_LooksBetter);
 	
 	{
-		name = "troll blacksmith";
+		name = Game.getVar(R.string.Blacksmith_Name);
 		spriteClass = BlacksmithSprite.class;
 	}
 	
@@ -164,27 +152,27 @@ public class Blacksmith extends NPC {
 	public static String verify( Item item1, Item item2 ) {
 		
 		if (item1 == item2) {
-			return "Select 2 different items, not the same item twice!";
+			return Game.getVar(R.string.Blacksmith_Verify1);
 		}
 		
 		if (item1.getClass() != item2.getClass()) {
-			return "Select 2 items of the same type!";
+			return Game.getVar(R.string.Blacksmith_Verify2);
 		}
 		
 		if (!item1.isIdentified() || !item2.isIdentified()) {
-			return "I need to know what I'm working with, identify them first!";
+			return Game.getVar(R.string.Blacksmith_Verify3);
 		}
 		
 		if (item1.cursed || item2.cursed) {
-			return "I don't work with cursed items!";
+			return Game.getVar(R.string.Blacksmith_Verify4);
 		}
 		
 		if (item1.level < 0 || item2.level < 0) {
-			return "It's a junk, the quality is too poor!";
+			return Game.getVar(R.string.Blacksmith_Verify5);
 		}
 		
 		if (!item1.isUpgradable() || !item2.isUpgradable()) {
-			return "I can't reforge these items!";
+			return Game.getVar(R.string.Blacksmith_Verify6);
 		}
 		
 		return null;
@@ -243,9 +231,7 @@ public class Blacksmith extends NPC {
 	
 	@Override
 	public String description() {
-		return 
-			"This troll blacksmith looks like all trolls look: he is tall and lean, and his skin resembles stone " +
-			"in both color and texture. The troll blacksmith is tinkering with unproportionally small tools.";
+		return Game.getVar(R.string.Blacksmith_Desc);
 	}
 
 	public static class Quest {

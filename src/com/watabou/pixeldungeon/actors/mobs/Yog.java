@@ -20,7 +20,9 @@ package com.watabou.pixeldungeon.actors.mobs;
 import java.util.ArrayList;
 import java.util.HashSet;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -55,7 +57,7 @@ import com.watabou.utils.Random;
 public class Yog extends Mob {
 	
 	{
-		name = "Yog-Dzewa";
+		name = Game.getVar(R.string.Yog_Name);
 		spriteClass = YogSprite.class;
 		
 		HP = HT = 300;
@@ -65,10 +67,7 @@ public class Yog extends Mob {
 		state = PASSIVE;
 	}
 	
-	private static final String TXT_DESC =
-		"Yog-Dzewa is an Old God, a powerful entity from the realms of chaos. A century ago, the ancient dwarves " +
-		"barely won the war against its army of demons, but were unable to kill the god itself. Instead, they then " +
-		"imprisoned it in the halls below their city, believing it to be too weak to rise ever again.";	
+	private static final String TXT_DESC = Game.getVar(R.string.Yog_Desc);	
 	
 	private static int fistsCount = 0;
 	
@@ -147,13 +146,13 @@ public class Yog extends Mob {
 		Dungeon.level.drop( new SkeletonKey(), pos ).sprite.drop();
 		super.die( cause );
 		
-		yell( "..." );
+		yell(Game.getVar(R.string.Yog_Info1));
 	}
 	
 	@Override
 	public void notice() {
 		super.notice();
-		yell( "Hope is an illusion..." );
+		yell(Game.getVar(R.string.Yog_Info2));
 	}
 	
 	@Override
@@ -185,7 +184,7 @@ public class Yog extends Mob {
 		private static final int REGENERATION	= 4;
 		
 		{
-			name = "rotting fist";
+			name = Game.getVar(R.string.Yog_NameRottingFist);
 			spriteClass = RottingFistSprite.class;
 			
 			HP = HT = 300;
@@ -278,7 +277,7 @@ public class Yog extends Mob {
 	public static class BurningFist extends Mob {
 		
 		{
-			name = "burning fist";
+			name = Game.getVar(R.string.Yog_NameBurningFist);
 			spriteClass = BurningFistSprite.class;
 			
 			HP = HT = 200;
@@ -395,7 +394,7 @@ public class Yog extends Mob {
 	public static class Larva extends Mob {
 		
 		{
-			name = "god's larva";
+			name = Game.getVar(R.string.Yog_NameLarva);
 			spriteClass = LarvaSprite.class;
 			
 			HP = HT = 25;

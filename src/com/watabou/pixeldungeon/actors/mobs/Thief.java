@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -33,13 +35,13 @@ import com.watabou.utils.Random;
 
 public class Thief extends Mob {
 
-	protected static final String TXT_STOLE	= "%s stole %s from you!";
-	protected static final String TXT_CARRIES	= "\n\n%s is carrying a _%s_. Stolen obviously.";
+	protected static final String TXT_STOLE	  = Game.getVar(R.string.Thief_Stole);
+	protected static final String TXT_CARRIES = Game.getVar(R.string.Thief_Carries);
 	
 	public Item item;
 	
 	{
-		name = "crazy thief";
+		name = Game.getVar(R.string.Thief_Name);
 		spriteClass = ThiefSprite.class;
 		
 		HP = HT = 20;
@@ -134,10 +136,7 @@ public class Thief extends Mob {
 	
 	@Override
 	public String description() {
-		String desc =
-			"Deeper levels of the dungeon have always been a hiding place for all kinds of criminals. " +
-			"Not all of them could keep a clear mind during their extended periods so far from daylight. Long ago, " +
-			"these crazy thieves and bandits have forgotten who they are and why they steal.";
+		String desc = Game.getVar(R.string.Thief_Desc);
 		
 		if (item != null) {
 			desc += String.format( TXT_CARRIES, Utils.capitalize( this.name ), item.name() );

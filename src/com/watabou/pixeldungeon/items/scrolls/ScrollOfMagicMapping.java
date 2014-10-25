@@ -36,7 +36,7 @@ public class ScrollOfMagicMapping extends Scroll {
 	private static final String TXT_LAYOUT = Game.getVar(R.string.ScrollOfMagicMapping_Layout);
 	
 	{
-		name = Game.getVar(R.string.ScrollOfMirrorImage_Name);
+		name = Game.getVar(R.string.ScrollOfMagicMapping_Name);
 	}
 	
 	@Override
@@ -88,7 +88,7 @@ public class ScrollOfMagicMapping extends Scroll {
 	
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.ScrollOfMagicMapping_Layout);
+		return Game.getVar(R.string.ScrollOfMagicMapping_Info);
 	}
 	
 	@Override

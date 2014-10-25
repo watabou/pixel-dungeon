@@ -17,14 +17,16 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
 
 public class Combo extends Buff {
 	
-	private static String TXT_COMBO = "%d hit combo!";
+	private static String TXT_COMBO = Game.getVar(R.string.Combo_Combo);
 	
 	public int count = 0;
 	
@@ -35,7 +37,7 @@ public class Combo extends Buff {
 	
 	@Override
 	public String toString() {
-		return "Combo";
+		return Game.getVar(R.string.Combo_Info);
 	}
 	
 	public int hit( Char enemy, int damage ) {

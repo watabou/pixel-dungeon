@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 
@@ -26,7 +28,7 @@ import com.watabou.pixeldungeon.sprites.RatKingSprite;
 public class RatKing extends NPC {
 
 	{
-		name = "rat king";
+		name = Game.getVar(R.string.RatKing_Name);
 		spriteClass = RatKingSprite.class;
 		
 		state = SLEEPEING;
@@ -65,17 +67,15 @@ public class RatKing extends NPC {
 		sprite.turnTo( pos, Dungeon.hero.pos );
 		if (state == SLEEPEING) {
 			notice();
-			yell( "I'm not sleeping!" );
+			yell(Game.getVar(R.string.RatKing_Info1));
 			state = WANDERING;
 		} else {
-			yell( "What is it? I have no time for this nonsense. My kingdom won't rule itself!" );
+			yell(Game.getVar(R.string.RatKing_Info2));
 		}
 	}
 	
 	@Override
 	public String description() {
-		return 
-			"This rat is a little bigger than a regular marsupial rat " +
-			"and it's wearing a tiny crown on its head.";
+		return Game.getVar(R.string.RatKing_Desc);
 	}
 }

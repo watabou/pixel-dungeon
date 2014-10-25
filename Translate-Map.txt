@@ -3,12 +3,12 @@ This is a file with the control of the packages already translated game.
 com
 +──watabou
    +──pixeldungeon                  OK
-      +──actors                     Verify Char
-      │  +──blobs                   *****
-      │  +──buffs                   *****
-      │  +──hero                    *****
-      │  +──mobs                    *****
-      │     +──npcs                 *****
+      +──actors                     Verify Char(sprite status)
+      │  +──blobs                   OK
+      │  +──buffs                   OK
+      │  +──hero                    Verify Hero(line 1090 sprite furious)
+      │  +──mobs                    OK
+      │     +──npcs                 OK
       +──effects                    OK
       │  +──particles               OK
       +──items                      OK
@@ -32,7 +32,7 @@ com
       │  +──traps                   OK
       +──mechanics                  OK
       +──plants                     OK
-      +──scenes                     AboutScene - Implements credits to translator
+      +──scenes                     OK
       +──sprites                    OK
       +──ui                         OK
       +──utils                      OK

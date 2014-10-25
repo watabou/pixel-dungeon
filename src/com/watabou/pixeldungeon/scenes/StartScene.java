@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.scenes;
 
 import java.util.HashMap;
+import java.util.Locale;
 
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.BitmapTextMultiline;
@@ -322,7 +323,7 @@ public class StartScene extends PixelScene {
 			avatar.frame( cl.ordinal() * WIDTH, 0, WIDTH, HEIGHT );
 			avatar.scale.set( SCALE );
 			
-			name.text( cl.title().toUpperCase() );
+			name.text( cl.title().toUpperCase(Locale.getDefault()) );
 			name.measure();
 			
 			brightness = MIN_BRIGHTNESS;

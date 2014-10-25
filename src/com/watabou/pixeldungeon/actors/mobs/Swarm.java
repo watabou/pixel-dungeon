@@ -19,7 +19,9 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.ArrayList;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -38,7 +40,7 @@ import com.watabou.utils.Random;
 public class Swarm extends Mob {
 
 	{
-		name = "swarm of flies";
+		name = Game.getVar(R.string.Swarm_Name);
 		spriteClass = SwarmSprite.class;
 		
 		HP = HT = 80;
@@ -114,7 +116,7 @@ public class Swarm extends Mob {
 	
 	@Override
 	public String defenseVerb() {
-		return "evaded";
+		return Game.getVar(R.string.Swarm_Defense);
 	}
 	
 	private Swarm split() {
@@ -138,8 +140,6 @@ public class Swarm extends Mob {
 	
 	@Override
 	public String description() {
-		return
-			"The deadly swarm of flies buzzes angrily. Every non-magical attack " +
-			"will split it into two smaller but equally dangerous swarms.";
+		return Game.getVar(R.string.Swarm_Desc);
 	}
 }

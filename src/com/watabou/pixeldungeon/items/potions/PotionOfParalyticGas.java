@@ -28,7 +28,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 public class PotionOfParalyticGas extends Potion {
 
 	{
-		name = Game.getVar(R.string.PotionOfToxicGas_Name);
+		name = Game.getVar(R.string.PotionOfParalyticGas_Name);
 	}
 	
 	@Override
@@ -44,7 +44,7 @@ public class PotionOfParalyticGas extends Potion {
 	
 	@Override
 	public String desc() {
-		return Game.getVar(R.string.PotionOfToxicGas_Info);
+		return Game.getVar(R.string.PotionOfParalyticGas_Info);
 	}
 	
 	@Override
