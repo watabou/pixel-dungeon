@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.weapon.enchantments;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.items.weapon.Weapon.Enchantment;
@@ -24,7 +26,7 @@ import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
 
 public class Instability extends Weapon.Enchantment {
 
-	private static final String TXT_UNSTABLE	= "Unstable %s";
+	private static final String TXT_NAME = Game.getVar(R.string.Instability_Name);
 	
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {
@@ -39,7 +41,7 @@ public class Instability extends Weapon.Enchantment {
 	
 	@Override
 	public String name( String weaponName) {
-		return String.format( TXT_UNSTABLE, weaponName );
+		return String.format( TXT_NAME, weaponName );
 	}
 
 }

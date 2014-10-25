@@ -1269,6 +1269,31 @@
    <string name="Weapon_Incompatible">Interaction of different types of magic has negated the enchantment on this weapon!</string>
 
 
+<!--  PACKAGE /weapon/Enchantment  -->
+   <!--  STRINGS OF Death CLASS  -->
+   <string name="Death_Name">Grim %s</string>
+   <!--  STRINGS OF Fire CLASS  -->
+   <string name="Fire_Name">Blazing %s</string>
+   <!--  STRINGS OF Horror CLASS  -->
+   <string name="Horror_Name">Eldritch %s</string>
+   <!--  STRINGS OF Instability CLASS  -->
+   <string name="Instability_Name">Unstable %s</string>
+   <!--  STRINGS OF Leech CLASS  -->
+   <string name="Leech_Name">Vampiric %s</string>
+   <!--  STRINGS OF Luck CLASS  -->
+   <string name="Luck_Name">Lucky %s</string>
+   <!--  STRINGS OF Paralysis CLASS  -->
+   <string name="Paralysis_Name">Stunning %s</string>
+   <!--  STRINGS OF Piercing CLASS  -->
+   <string name="Piercing_Name">Piercing %s</string>
+   <!--  STRINGS OF Poison CLASS  -->
+   <string name="Poison_Name">Venomous %s</string>
+   <!--  STRINGS OF Slow CLASS  -->
+   <string name="Slow_Name">Chilling %s</string>
+   <!--  STRINGS OF Swing CLASS  -->
+   <string name="Swing_Name">Wild %s</string>
+
+
 <!--  PACKAGE /weapon/melee  -->
    <!--  STRINGS OF MeleeWeapon CLASS  -->
    <string name="MeleeWeapon_Info1a">This %1$s is %2$s tier-%3$d melee weapon.</string>

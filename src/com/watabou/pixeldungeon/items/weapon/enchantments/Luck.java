@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.weapon.enchantments;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
@@ -24,7 +26,7 @@ import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 
 public class Luck extends Weapon.Enchantment {
 
-	private static final String TXT_LUCKY	= "Lucky %s";
+	private static final String TXT_NAME = Game.getVar(R.string.Luck_Name);
 	
 	private static ItemSprite.Glowing GREEN = new ItemSprite.Glowing( 0x00FF00 );
 	
@@ -47,7 +49,7 @@ public class Luck extends Weapon.Enchantment {
 	
 	@Override
 	public String name( String weaponName) {
-		return String.format( TXT_LUCKY, weaponName );
+		return String.format( TXT_NAME, weaponName );
 	}
 
 	@Override

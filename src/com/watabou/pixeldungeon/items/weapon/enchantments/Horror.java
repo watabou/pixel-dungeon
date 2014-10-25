@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.items.weapon.enchantments;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
@@ -29,7 +31,7 @@ import com.watabou.utils.Random;
 
 public class Horror extends Weapon.Enchantment {
 
-	private static final String TXT_ELDRITCH	= "Eldritch %s";
+	private static final String TXT_NAME = Game.getVar(R.string.Horror_Name);
 	
 	private static ItemSprite.Glowing GREY = new ItemSprite.Glowing( 0x222222 );
 	
@@ -61,7 +63,7 @@ public class Horror extends Weapon.Enchantment {
 	
 	@Override
 	public String name( String weaponName) {
-		return String.format( TXT_ELDRITCH, weaponName );
+		return String.format( TXT_NAME, weaponName );
 	}
 
 }

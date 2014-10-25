@@ -79,10 +79,10 @@
    <string name="Char_Hit">%1$s bateu em %2$s</string>
    <string name="Char_Kill">%s matou você...</string>
    <string name="Char_Defeat">%1$s derrotou %2$s</string>
-   <string name="Char_YouMissed">%1$s %2$s de seu ataque</string>
-   <string name="Char_SmbMissed">%1$s %2$s do ataque de %3$s</string>
+   <string name="Char_YouMissed">%1$s %2$s seu ataque</string>
+   <string name="Char_SmbMissed">%1$s %2$s o ataque de %3$s</string>
    <string name="Char_OutParalysis">A dor de %s causou paralisia</string>
-   <string name="Char_Dodged">esquivou-se</string>
+   <string name="Char_Dodged">evitou</string>
 
 
    <!--  STRINGS OF Hero CLASS  -->
@@ -1267,6 +1267,31 @@
    <!--  STRINGS OF Weapon CLASS  -->
    <string name="Weapon_Identify">Você agora está bastante familiarizado com sua %1$s e pode indentificá-la como %2$s.</string>
    <string name="Weapon_Incompatible">Interação de diferentes tipos de magia negou o encantamento sobre essa arma!</string>
+
+
+<!--  PACKAGE /weapon/Enchantment  -->
+   <!--  STRINGS OF Death CLASS  -->
+   <string name="Death_Name">%s Cruel</string>
+   <!--  STRINGS OF Fire CLASS  -->
+   <string name="Fire_Name">%s Ardente</string>
+   <!--  STRINGS OF Horror CLASS  -->
+   <string name="Horror_Name">%s Sobrenatural</string>
+   <!--  STRINGS OF Instability CLASS  -->
+   <string name="Instability_Name">%s Instável</string>
+   <!--  STRINGS OF Leech CLASS  -->
+   <string name="Leech_Name">%s Vampírico(a)</string>
+   <!--  STRINGS OF Luck CLASS  -->
+   <string name="Luck_Name">%s da Sorte</string>
+   <!--  STRINGS OF Paralysis CLASS  -->
+   <string name="Paralysis_Name">%s do Atordoamento</string>
+   <!--  STRINGS OF Piercing CLASS  -->
+   <string name="Piercing_Name">%s Penetrante</string>
+   <!--  STRINGS OF Poison CLASS  -->
+   <string name="Poison_Name">%s Venenoso(a)</string>
+   <!--  STRINGS OF Slow CLASS  -->
+   <string name="Slow_Name">%s Arrepiante</string>
+   <!--  STRINGS OF Swing CLASS  -->
+   <string name="Swing_Name">%s Selvagem</string>
 
 
 <!--  PACKAGE /weapon/melee  -->

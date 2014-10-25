@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.weapon.enchantments;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
@@ -26,7 +28,7 @@ import com.watabou.utils.Random;
 
 public class Swing extends Enchantment {
 	
-	private static final String TXT_WILD	= "Wild %s";
+	private static final String TXT_NAME = Game.getVar(R.string.Swing_Name);
 	
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {
@@ -68,7 +70,7 @@ public class Swing extends Enchantment {
 	
 	@Override
 	public String name( String weaponName) {
-		return String.format( TXT_WILD, weaponName );
+		return String.format( TXT_NAME, weaponName );
 	}
 
 }

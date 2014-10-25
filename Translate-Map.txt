@@ -23,12 +23,12 @@ com
       │  +──scrolls                 OK
       │  +──wands                   OK
       │  +──weapon                  OK
-      │      +──enchantments        *****
+      │      +──enchantments        OK
       │      +──melee               OK
       │      +──missiles            OK
       +──levels                     *****
       │  +──features                *****
-      │  +──painters                *****
+      │  +──painters                OK
       │  +──traps                   OK
       +──mechanics                  OK
       +──plants                     OK

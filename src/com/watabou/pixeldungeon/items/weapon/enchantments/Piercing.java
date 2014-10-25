@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.weapon.enchantments;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
@@ -26,7 +28,7 @@ import com.watabou.utils.Random;
 
 public class Piercing extends Enchantment {
 	
-	private static final String TXT_PIERCING	= "Piercing %s";
+	private static final String TXT_NAME = Game.getVar(R.string.Piercing_Name);
 	
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {
@@ -69,7 +71,7 @@ public class Piercing extends Enchantment {
 	
 	@Override
 	public String name( String weaponName) {
-		return String.format( TXT_PIERCING, weaponName );
+		return String.format( TXT_NAME, weaponName );
 	}
 
 }
