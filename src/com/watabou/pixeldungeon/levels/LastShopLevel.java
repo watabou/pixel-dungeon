@@ -19,9 +19,11 @@ package com.watabou.pixeldungeon.levels;
 
 import java.util.List;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Bones;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.items.Heap;
@@ -183,9 +185,9 @@ public class LastShopLevel extends RegularLevel {
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.WATER:
-			return "Suspiciously colored water";
+			return Game.getVar(R.string.LastShopLevel_TileWater);
 		case Terrain.HIGH_GRASS:
-			return "High blooming flowers";
+			return Game.getVar(R.string.LastShopLevel_TileHighGrass);
 		default:
 			return super.tileName( tile );
 		}
@@ -195,14 +197,14 @@ public class LastShopLevel extends RegularLevel {
 	public String tileDesc(int tile) {
 		switch (tile) {
 		case Terrain.ENTRANCE:
-			return "A ramp leads up to the upper depth.";
+			return Game.getVar(R.string.LastShopLevel_TileDescEntrance);
 		case Terrain.EXIT:
-			return "A ramp leads down to the Inferno.";
+			return Game.getVar(R.string.LastShopLevel_TileDescExit);
 		case Terrain.WALL_DECO:
 		case Terrain.EMPTY_DECO:
-			return "Several tiles are missing here.";
+			return Game.getVar(R.string.LastShopLevel_TileDescDeco);
 		case Terrain.EMPTY_SP:
-			return "Thick carpet covers the floor.";
+			return Game.getVar(R.string.LastShopLevel_TileDescEmptySP);
 		default:
 			return super.tileDesc( tile );
 		}

@@ -1717,6 +1717,115 @@
    <string name="WandMaker_RotberryInfo">The seed emits a roar that echoes throughout the dungeon!</string>
 
 
+<!--  PACKAGE /levels  -->
+   <!--  STRINGS OF Level CLASS  -->
+   <string name="Level_HiddenPlate">A hidden pressure plate clicks!</string>
+   <string name="Level_TileChasm">Chasm</string>
+   <string name="Level_TileFloor">Floor</string>
+   <string name="Level_TileGrass">Grass</string>
+   <string name="Level_TileWater">Water</string>
+   <string name="Level_TileWall">Wall</string>
+   <string name="Level_TileClosedDoor">Closed door</string>
+   <string name="Level_TileOpenDoor">Open door</string>
+   <string name="Level_TileEntrance">Depth entrance</string>
+   <string name="Level_TileExit">Depth exit</string>
+   <string name="Level_TileEmbers">Embers</string>
+   <string name="Level_TileLockedDoor">Locked door</string>
+   <string name="Level_TilePedestal">Pedestal</string>
+   <string name="Level_TileBarricade">Barricade</string>
+   <string name="Level_TileHighGrass">High grass</string>
+   <string name="Level_TileLockedExit">Locked depth exit</string>
+   <string name="Level_TileUnlockedExit">Unlocked depth exit</string>
+   <string name="Level_TileSign">Sign</string>
+   <string name="Level_TileWell">Well</string>
+   <string name="Level_TileEmptyWell">Empty well</string>
+   <string name="Level_TileStatue">Statue</string>
+   <string name="Level_TileToxicTrap">Toxic gas trap</string>
+   <string name="Level_TileFireTrap">Fire trap</string>
+   <string name="Level_TileParalyticTrap">Paralytic gas trap</string>
+   <string name="Level_TilePoisonTrap">Poison dart trap</string>
+   <string name="Level_TileAlarmTrap">Alarm trap</string>
+   <string name="Level_TileLightningTrap">Lightning trap</string>
+   <string name="Level_TileGrippingTrap">Gripping trap</string>
+   <string name="Level_TileSummoningTrap">Summoning trap</string>
+   <string name="Level_TileInactiveTrap">Triggered trap</string>
+   <string name="Level_TileBookshelf">Bookshelf</string>
+   <string name="Level_TileAlchemy">Alchemy pot</string>
+   <string name="Level_TileDefault">\?\?\?</string>
+   <string name="Level_TileDescChasm">You can\'t see the bottom.</string>
+   <string name="Level_TileDescWater">In case of burning step into the water to extinguish the fire.</string>
+   <string name="Level_TileDescEntrance">Stairs lead up to the upper depth.</string>
+   <string name="Level_TileDescExit">Stairs lead down to the lower depth.</string>
+   <string name="Level_TileDescEmbers">Embers cover the floor.</string>
+   <string name="Level_TileDescHighGrass">Dense vegetation blocks the view.</string>
+   <string name="Level_TileDescLockedDoor">This door is locked, you need a matching key to unlock it.</string>
+   <string name="Level_TileDescLockedExit">Heavy bars block the stairs leading down.</string>
+   <string name="Level_TileDescBarricade">The wooden barricade is firmly set but has dried over the years. Might it burn?</string>
+   <string name="Level_TileDescSign">You can\'t read the text from here.</string>
+   <string name="Level_TileDescTrap">Stepping onto a hidden pressure plate will activate the trap.</string>
+   <string name="Level_TileDescInactiveTrap">The trap has been triggered before and it\'s not dangerous anymore.</string>
+   <string name="Level_TileDescStatue">Someone wanted to adorn this place, but failed, obviously.</string>
+   <string name="Level_TileDescAlchemy">Drop some seeds here to cook a potion.</string>
+   <string name="Level_TileDescEmptyWell">The well has run dry.</string>
+   <!--  STRINGS OF CavesLevel & CavesBossLevel CLASS  -->
+   <string name="Caves_TileGrass">Fluorescent moss</string>
+   <string name="Caves_TileHighGrass">Fluorescent mushrooms</string>
+   <string name="Caves_TileWater">Freezing cold water.</string>
+   <string name="Caves_TileDescEntrance">The ladder leads up to the upper depth.</string>
+   <string name="Caves_TileDescExit">The ladder leads down to the lower depth.</string>
+   <string name="Caves_TileDescHighGrass">Huge mushrooms block the view.</string>
+   <string name="Caves_TileDescDeco">A vein of some ore is visible on the wall. Gold?</string>
+   <string name="Caves_TileDescBookshelf">Who would need a bookshelf in a cave?</string>
+   <!--  STRINGS OF CityLevel & CityBossLevel CLASS  -->
+   <string name="City_TileWater">Suspiciously colored water</string>
+   <string name="City_TileHighGrass">High blooming flowers</string>
+   <string name="City_TileDescEntrance">A ramp leads up to the upper depth.</string>
+   <string name="City_TileDescExit">A ramp leads down to the lower depth.</string>
+   <string name="City_TileDescDeco">Several tiles are missing here.</string>
+   <string name="City_TileDescEmptySP">Thick carpet covers the floor.</string>
+   <string name="City_TileDescStatue">The statue depicts some dwarf standing in a heroic stance.</string>
+   <string name="City_TileDescBookshelf">The rows of books on different disciplines fill the bookshelf.</string>
+   <!--  STRINGS OF HallsLevel & HallsBossLevel CLASS  -->
+   <string name="Halls_TileWater">Cold lava</string>
+   <string name="Halls_TileGrass">Embermoss</string>
+   <string name="Halls_TileHighGrass">Emberfungi</string>
+   <string name="Halls_TileStatue">Pillar</string>
+   <string name="Halls_TileDescWater">It looks like lava, but it\'s cold and probably safe to touch.</string>
+   <string name="Halls_TileDescStatue">The pillar is made of real humanoid skulls. Awesome.</string>
+   <string name="Halls_TileDescBookshelf">Books in ancient languages smoulder in the bookshelf.</string>
+   <!--  STRINGS OF LastLevel CLASS  -->
+   <string name="LastLevel_TileWater">Cold lava</string>
+   <string name="LastLevel_TileGrass">Embermoss</string>
+   <string name="LastLevel_TileHighGrass">Emberfungi</string>
+   <string name="LastLevel_TileStatue">Pillar</string>
+   <string name="LastLevel_TileDescWater">It looks like lava, but it\'s cold and probably safe to touch.</string>
+   <string name="LastLevel_TileDescStatue">The pillar is made of real humanoid skulls. Awesome.</string>
+   <!--  STRINGS OF LastShopLevel CLASS  -->
+   <string name="LastShopLevel_TileWater">Suspiciously colored water</string>
+   <string name="LastShopLevel_TileHighGrass">High blooming flowers</string>
+   <string name="LastShopLevel_TileDescEntrance">A ramp leads up to the upper depth.</string>
+   <string name="LastShopLevel_TileDescExit">A ramp leads down to the Inferno.</string>
+   <string name="LastShopLevel_TileDescDeco">Several tiles are missing here.</string>
+   <string name="LastShopLevel_TileDescEmptySP">Thick carpet covers the floor.</string>
+   <!--  STRINGS OF PrisonLevel & PrisonBossLevel CLASS  -->
+   <string name="Prison_TileWater">Dark cold water.</string>
+   <string name="Prison_TileDescDeco">There are old blood stains on the floor.</string>
+   <string name="Prison_TileDescBookshelf">This is probably a vestige of a prison library. Might it burn?</string>
+   <!--  STRINGS OF SewerLevel & SewerBossLevel CLASS  -->
+   <string name="Sewer_TileWater">Murky water</string>
+   <string name="Sewer_TileDescDeco">Wet yellowish moss covers the floor.</string>
+   <string name="Sewer_TileDescBookshelf">The bookshelf is packed with cheap useless books. Might it burn?</string>
+
+
+<!--  PACKAGE /levels/features  -->
+   <!--  STRINGS OF AlchemyPot CLASS  -->
+   <string name="AlchemyPot_SelectSeed">Select a seed to throw</string>
+   <!--  STRINGS OF Chasm CLASS  -->
+   <string name="Chasm_Chasm">Chasm</string>
+   <string name="Chasm_Yes">Yes, I know what I\'m doing</string>
+   <string name="Chasm_No">No, I changed my mind</string>
+   <string name="Chasm_Jump">Do you really want to jump into the chasm? You can probably die.</string>
+   <string name="Chasm_Info">You fell to death...</string>
 
 
 

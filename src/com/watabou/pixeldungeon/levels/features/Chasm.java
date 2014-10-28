@@ -23,6 +23,7 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Cripple;
@@ -40,11 +41,10 @@ import com.watabou.utils.Random;
 
 public class Chasm {
 	
-	private static final String TXT_CHASM	= "Chasm";
-	private static final String TXT_YES		= "Yes, I know what I'm doing";
-	private static final String TXT_NO		= "No, I changed my mind";
-	private static final String TXT_JUMP 	= 
-		"Do you really want to jump into the chasm? You can probably die.";
+	private static final String TXT_CHASM = Game.getVar(R.string.Chasm_Chasm);
+	private static final String TXT_YES   = Game.getVar(R.string.Chasm_Yes);
+	private static final String TXT_NO    = Game.getVar(R.string.Chasm_No);
+	private static final String TXT_JUMP  = Game.getVar(R.string.Chasm_Jump);
 	
 	public static boolean jumpConfirmed = false;
 	
@@ -97,7 +97,7 @@ public class Chasm {
 				Badges.validateDeathFromFalling();
 				
 				Dungeon.fail( Utils.format( ResultDescriptions.FALL, Dungeon.depth ) );
-				GLog.n( "You fell to death..." );
+				GLog.n(Game.getVar(R.string.Chasm_Info));
 			}
 		} );
 	}

@@ -24,6 +24,7 @@ import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.pixeldungeon.levels.painters.Painter;
@@ -186,11 +187,11 @@ public class CavesLevel extends RegularLevel {
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.GRASS:
-			return "Fluorescent moss";
+			return Game.getVar(R.string.Caves_TileGrass);
 		case Terrain.HIGH_GRASS:
-			return "Fluorescent mushrooms";
+			return Game.getVar(R.string.Caves_TileHighGrass);
 		case Terrain.WATER:
-			return "Freezing cold water.";
+			return Game.getVar(R.string.Caves_TileWater);
 		default:
 			return super.tileName( tile );
 		}
@@ -200,15 +201,15 @@ public class CavesLevel extends RegularLevel {
 	public String tileDesc( int tile ) {
 		switch (tile) {
 		case Terrain.ENTRANCE:
-			return "The ladder leads up to the upper depth.";
+			return Game.getVar(R.string.Caves_TileDescEntrance);
 		case Terrain.EXIT:
-			return "The ladder leads down to the lower depth.";
+			return Game.getVar(R.string.Caves_TileDescExit);
 		case Terrain.HIGH_GRASS:
-			return "Huge mushrooms block the view.";
+			return Game.getVar(R.string.Caves_TileDescHighGrass);
 		case Terrain.WALL_DECO:
-			return "A vein of some ore is visible on the wall. Gold?";
+			return Game.getVar(R.string.Caves_TileDescDeco);
 		case Terrain.BOOKSHELF:
-			return "Who would need a bookshelf in a cave?";
+			return Game.getVar(R.string.Caves_TileDescBookshelf);
 		default:
 			return super.tileDesc( tile );
 		}

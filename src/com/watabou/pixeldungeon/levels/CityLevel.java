@@ -17,12 +17,14 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.utils.PointF;
@@ -95,9 +97,9 @@ public class CityLevel extends RegularLevel {
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.WATER:
-			return "Suspiciously colored water";
+			return Game.getVar(R.string.City_TileWater);
 		case Terrain.HIGH_GRASS:
-			return "High blooming flowers";
+			return Game.getVar(R.string.City_TileHighGrass);
 		default:
 			return super.tileName( tile );
 		}
@@ -107,19 +109,19 @@ public class CityLevel extends RegularLevel {
 	public String tileDesc(int tile) {
 		switch (tile) {
 		case Terrain.ENTRANCE:
-			return "A ramp leads up to the upper depth.";
+			return Game.getVar(R.string.City_TileDescEntrance);
 		case Terrain.EXIT:
-			return "A ramp leads down to the lower depth.";
+			return Game.getVar(R.string.City_TileDescExit);
 		case Terrain.WALL_DECO:
 		case Terrain.EMPTY_DECO:
-			return "Several tiles are missing here.";
+			return Game.getVar(R.string.City_TileDescDeco);
 		case Terrain.EMPTY_SP:
-			return "Thick carpet covers the floor.";
+			return Game.getVar(R.string.City_TileDescEmptySP);
 		case Terrain.STATUE:
 		case Terrain.STATUE_SP:
-			return "The statue depicts some dwarf standing in a heroic stance.";
+			return Game.getVar(R.string.City_TileDescStatue);
 		case Terrain.BOOKSHELF:
-			return "The rows of books on different disciplines fill the bookshelf.";
+			return Game.getVar(R.string.City_TileDescBookshelf);
 		default:
 			return super.tileDesc( tile );
 		}

@@ -18,11 +18,13 @@
 package com.watabou.pixeldungeon.levels;
 
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
@@ -266,11 +268,11 @@ public class CavesBossLevel extends Level {
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.GRASS:
-			return "Fluorescent moss";
+			return Game.getVar(R.string.Caves_TileGrass);
 		case Terrain.HIGH_GRASS:
-			return "Fluorescent mushrooms";
+			return Game.getVar(R.string.Caves_TileHighGrass);
 		case Terrain.WATER:
-			return "Freezing cold water.";
+			return Game.getVar(R.string.Caves_TileWater);
 		default:
 			return super.tileName( tile );
 		}
@@ -280,13 +282,13 @@ public class CavesBossLevel extends Level {
 	public String tileDesc( int tile ) {
 		switch (tile) {
 		case Terrain.ENTRANCE:
-			return "The ladder leads up to the upper depth.";
+			return Game.getVar(R.string.Caves_TileDescEntrance);
 		case Terrain.EXIT:
-			return "The ladder leads down to the lower depth.";
+			return Game.getVar(R.string.Caves_TileDescExit);
 		case Terrain.HIGH_GRASS:
-			return "Huge mushrooms block the view.";
+			return Game.getVar(R.string.Caves_TileDescHighGrass);
 		case Terrain.WALL_DECO:
-			return "A vein of some ore is visible on the wall. Gold?";
+			return Game.getVar(R.string.Caves_TileDescDeco);
 		default:
 			return super.tileDesc( tile );
 		}

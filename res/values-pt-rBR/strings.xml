@@ -1717,4 +1717,115 @@
    <string name="WandMaker_RotberryDesc">Berries deste arbusto tem gosto de doce, doce morte.</string>
    <string name="WandMaker_RotberryInfo">A semente emite um rugido que ecoa em todo o calabouço!</string>
 
+
+<!--  PACKAGE /levels  -->
+   <!--  STRINGS OF Level CLASS  -->
+   <string name="Level_HiddenPlate">Uma oculta placa de pressão faz Click!</string>
+   <string name="Level_TileChasm">Abismo</string>
+   <string name="Level_TileFloor">Piso</string>
+   <string name="Level_TileGrass">Grama</string>
+   <string name="Level_TileWater">Água</string>
+   <string name="Level_TileWall">Murro</string>
+   <string name="Level_TileClosedDoor">Porta fechada</string>
+   <string name="Level_TileOpenDoor">Porta aberta</string>
+   <string name="Level_TileEntrance">Entrada </string>
+   <string name="Level_TileExit">Saída</string>
+   <string name="Level_TileEmbers">Cinzas</string>
+   <string name="Level_TileLockedDoor">Porta trancada</string>
+   <string name="Level_TilePedestal">Pedestal</string>
+   <string name="Level_TileBarricade">Barricada</string>
+   <string name="Level_TileHighGrass">Grama alta</string>
+   <string name="Level_TileLockedExit">Saída trancada</string>
+   <string name="Level_TileUnlockedExit">Saída desbloqueada</string>
+   <string name="Level_TileSign">Indicação</string>
+   <string name="Level_TileWell">poço</string>
+   <string name="Level_TileEmptyWell">Poço vazio</string>
+   <string name="Level_TileStatue">Estatua</string>
+   <string name="Level_TileToxicTrap">Armadilha de gás tóxico</string>
+   <string name="Level_TileFireTrap">Armadilha de fogo</string>
+   <string name="Level_TileParalyticTrap">Armadílha de gás paralisante</string>
+   <string name="Level_TilePoisonTrap">Armadilha de dardo venenoso</string>
+   <string name="Level_TileAlarmTrap">Armadilha de alarme</string>
+   <string name="Level_TileLightningTrap">Armadilha de relâmpagos</string>
+   <string name="Level_TileGrippingTrap">Armadilha de agarar</string>
+   <string name="Level_TileSummoningTrap">Armadilha de invocação</string>
+   <string name="Level_TileInactiveTrap">Armadilha acionada</string>
+   <string name="Level_TileBookshelf">Prateleira de livros</string>
+   <string name="Level_TileAlchemy">Pote de Alquimia</string>
+   <string name="Level_TileDefault">\?\?\?</string>
+   <string name="Level_TileDescChasm">Você não pode ver o fundo.</string>
+   <string name="Level_TileDescWater">Caso você se queimar, pule na água para apagar o fogo.</string>
+   <string name="Level_TileDescEntrance">A escada te levará ao piso superior.</string>
+   <string name="Level_TileDescExit">A escada te levará a uma profundidade maior.</string>
+   <string name="Level_TileDescEmbers">Cinzas cobrem o chão.</string>
+   <string name="Level_TileDescHighGrass">Blocos de vegetação densa à frente.</string>
+   <string name="Level_TileDescLockedDoor">Esta porta está trancada e você precisa da chave correspondente para abri-la.</string>
+   <string name="Level_TileDescLockedExit">Barras pesadas bloqueiam as escadas que levam para baixo.</string>
+   <string name="Level_TileDescBarricade">A barricada de madeira está bem ajustada, mas secou ao longo dos anos. Será que pode queimar?</string>
+   <string name="Level_TileDescSign">Você não pode ler este texto.</string>
+   <string name="Level_TileDescTrap">Pisar em uma placa de pressão oculta irá ativar a armadilha.</string>
+   <string name="Level_TileDescInactiveTrap">A armadilha foi acionada antes e não é mais perigosa.</string>
+   <string name="Level_TileDescStatue">Alguém queria decoram este lugar, mas obviamente não conseguiu.</string>
+   <string name="Level_TileDescAlchemy">Solte algumas sementes aqui para preparar uma poção.</string>
+   <string name="Level_TileDescEmptyWell">O poço secou.</string>
+   <!--  STRINGS OF CavesLevel & CavesBossLevel CLASS  -->
+   <string name="Caves_TileGrass">Musgo fluorescente</string>
+   <string name="Caves_TileHighGrass">Cogumelos fluorescentes</string>
+   <string name="Caves_TileWater">Água gelada.</string>
+   <string name="Caves_TileDescEntrance">A escada te levará ao piso superior.</string>
+   <string name="Caves_TileDescExit">A escada te levará a uma profundidade maior.</string>
+   <string name="Caves_TileDescHighGrass">Cogumelos enormes bloqueiam a visão.</string>
+   <string name="Caves_TileDescDeco">Um veio de algum minério está visível na parede. Será Ouro?</string>
+   <string name="Caves_TileDescBookshelf">Quem precisa de uma estante de livros em uma caverna?</string>
+   <!--  STRINGS OF CityLevel & CityBossLevel CLASS  -->
+   <string name="City_TileWater">A cor da água é suspeita</string>
+   <string name="City_TileHighGrass">Altas flores desabrochando</string>
+   <string name="City_TileDescEntrance">A rampa te levará ao piso superior.</string>
+   <string name="City_TileDescExit">A rampa te levará a uma profundidade maior.</string>
+   <string name="City_TileDescDeco">Vários azulejos estão faltando aqui.</string>
+   <string name="City_TileDescEmptySP">O tapete grosso cobre o chão.</string>
+   <string name="City_TileDescStatue">A estátua mostra alguns anões de pé em uma postura heróica.</string>
+   <string name="City_TileDescBookshelf">Fileiras de livros de diferentes assuntos preenchem a estante.</string>
+   <!--  STRINGS OF HallsLevel & HallsBossLevel CLASS  -->
+   <string name="Halls_TileWater">Lava fria</string>
+   <string name="Halls_TileGrass">Musgo em brasas</string>
+   <string name="Halls_TileHighGrass">Fungo em brasas</string>
+   <string name="Halls_TileStatue">Pilar</string>
+   <string name="Halls_TileDescWater">Parece que é lava, mas fria e provavelmente segura para tocar.</string>
+   <string name="Halls_TileDescStatue">O pilar é feito de crânios humanóides reais. Impressionante.</string>
+   <string name="Halls_TileDescBookshelf">Livros em línguas antigas fumegam na estante.</string>
+   <!--  STRINGS OF LastLevel CLASS  -->
+   <string name="LastLevel_TileWater">@string/Halls_TileWater</string>
+   <string name="LastLevel_TileGrass">@string/Halls_TileGrass</string>
+   <string name="LastLevel_TileHighGrass">@string/Halls_TileHighGrass</string>
+   <string name="LastLevel_TileStatue">@string/Halls_TileStatue</string>
+   <string name="LastLevel_TileDescWater">@string/Halls_TileDescWater</string>
+   <string name="LastLevel_TileDescStatue">@string/Halls_TileDescStatue</string>
+   <!--  STRINGS OF LastShopLevel CLASS  -->
+   <string name="LastShopLevel_TileWater">@string/City_TileWater</string>
+   <string name="LastShopLevel_TileHighGrass">@string/City_TileHighGrass</string>
+   <string name="LastShopLevel_TileDescEntrance">@string/City_TileDescEntrance</string>
+   <string name="LastShopLevel_TileDescExit">@string/City_TileDescExit</string>
+   <string name="LastShopLevel_TileDescDeco">@string/City_TileDescDeco</string>
+   <string name="LastShopLevel_TileDescEmptySP">@string/City_TileDescEmptySP</string>
+   <!--  STRINGS OF PrisonLevel & PrisonBossLevel CLASS  -->
+   <string name="Prison_TileWater">Água fria e escura.</string>
+   <string name="Prison_TileDescDeco">Há manchas de sangue velho no chão.</string>
+   <string name="Prison_TileDescBookshelf">Este é provavelmente um vestígio de uma biblioteca da prisão. Será que pode queimar?</string>
+   <!--  STRINGS OF SewerLevel & SewerBossLevel CLASS  -->
+   <string name="Sewer_TileWater">Água turva</string>
+   <string name="Sewer_TileDescDeco">Um musgo amarelado e molhado cobre o chão.</string>
+   <string name="Sewer_TileDescBookshelf">A estante está repleta de livros inúteis e baratos. Será que pode queimar?</string>
+
+
+<!--  PACKAGE /levels/features  -->
+   <!--  STRINGS OF AlchemyPot CLASS  -->
+   <string name="AlchemyPot_SelectSeed">Escolha uma semente para jogar</string>
+   <!--  STRINGS OF Chasm CLASS  -->
+   <string name="Chasm_Chasm">Abismo</string>
+   <string name="Chasm_Yes">Sim, eu sei o que estou fazendo</string>
+   <string name="Chasm_No">Não, eu mudei de idéia</string>
+   <string name="Chasm_Jump">Você realmente quer pular no abismo? Provavelmente, você vai morrer.</string>
+   <string name="Chasm_Info">Você caiu para a morte...</string>
+
 </resources>

@@ -17,10 +17,12 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Yog;
@@ -218,14 +220,14 @@ public class HallsBossLevel extends Level {
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.WATER:
-			return "Cold lava";
+			return Game.getVar(R.string.Halls_TileWater);
 		case Terrain.GRASS:
-			return "Embermoss";
+			return Game.getVar(R.string.Halls_TileGrass);
 		case Terrain.HIGH_GRASS:
-			return "Emberfungi";
+			return Game.getVar(R.string.Halls_TileHighGrass);
 		case Terrain.STATUE:
 		case Terrain.STATUE_SP:
-			return "Pillar";
+			return Game.getVar(R.string.Halls_TileStatue);
 		default:
 			return super.tileName( tile );
 		}
@@ -235,10 +237,10 @@ public class HallsBossLevel extends Level {
 	public String tileDesc(int tile) {
 		switch (tile) {
 		case Terrain.WATER:
-			return "It looks like lava, but it's cold and probably safe to touch.";
+			return Game.getVar(R.string.Halls_TileDescStatue);
 		case Terrain.STATUE:
 		case Terrain.STATUE_SP:
-			return "The pillar is made of real humanoid skulls. Awesome."; 
+			return Game.getVar(R.string.Halls_TileDescStatue);
 		default:
 			return super.tileDesc( tile );
 		}
