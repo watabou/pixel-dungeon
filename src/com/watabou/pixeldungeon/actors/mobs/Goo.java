@@ -121,7 +121,7 @@ public class Goo extends Mob {
 			((GooSprite)sprite).pumpUp();
 			
 			if (Dungeon.visible[pos]) {
-				sprite.showStatus( CharSprite.NEGATIVE, "!!!" );
+				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Goo_StaInfo1));
 				GLog.n(Game.getVar(R.string.Goo_Info1));
 			}
 				

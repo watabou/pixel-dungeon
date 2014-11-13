@@ -222,7 +222,7 @@ public abstract class Char extends Actor {
 	}
 	
 	public String defenseVerb() {
-		return Game.getVar(R.string.Char_Dodged);
+		return Game.getVar(R.string.Char_StaDodged);
 	}
 	
 	public int dr() {
@@ -345,45 +345,45 @@ public abstract class Char extends Actor {
 			if (buff instanceof Poison) {
 				
 				CellEmitter.center( pos ).burst( PoisonParticle.SPLASH, 5 );
-				sprite.showStatus( CharSprite.NEGATIVE, "poisoned" );
+				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaPoisoned));
 				
 			} else if (buff instanceof Amok) {
 				
-				sprite.showStatus( CharSprite.NEGATIVE, "amok" );
+				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaAmok));
 
 			} else if (buff instanceof Slow) {
 
-				sprite.showStatus( CharSprite.NEGATIVE, "slowed" );
+				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaSlowed));
 				
 			} else if (buff instanceof MindVision) {
 				
-				sprite.showStatus( CharSprite.POSITIVE, "mind" );
-				sprite.showStatus( CharSprite.POSITIVE, "vision" );
+				sprite.showStatus( CharSprite.POSITIVE, Game.getVar(R.string.Char_StaMind));
+				sprite.showStatus( CharSprite.POSITIVE, Game.getVar(R.string.Char_StaVision));
 				
 			} else if (buff instanceof Paralysis) {
 
 				sprite.add( CharSprite.State.PARALYSED );
-				sprite.showStatus( CharSprite.NEGATIVE, "paralysed" );
+				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaParalysed));
 				
 			} else if (buff instanceof Terror) {
 				
-				sprite.showStatus( CharSprite.NEGATIVE, "frightened" );
+				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaFrightened));
 				
 			} else if (buff instanceof Roots) {
 				
-				sprite.showStatus( CharSprite.NEGATIVE, "rooted" );
+				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaRooted));
 				
 			} else if (buff instanceof Cripple) {
 
-				sprite.showStatus( CharSprite.NEGATIVE, "crippled" );
+				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaCrippled));
 				
 			} else if (buff instanceof Bleeding) {
 
-				sprite.showStatus( CharSprite.NEGATIVE, "bleeding" );
+				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaBleeding));
 				
 			} else if (buff instanceof Vertigo) {
 
-				sprite.showStatus( CharSprite.NEGATIVE, "dizzy" );
+				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaDizzy));
 				
 			} else if (buff instanceof Sleep) {
 				sprite.idle();
@@ -397,7 +397,7 @@ public abstract class Char extends Actor {
 				sprite.add( CharSprite.State.FROZEN );
 			} else if (buff instanceof Invisibility) {
 				if (!(buff instanceof Shadows)) {
-					sprite.showStatus( CharSprite.POSITIVE, "invisible" );
+					sprite.showStatus( CharSprite.POSITIVE, Game.getVar(R.string.Char_StaInvisible));
 				}
 				sprite.add( CharSprite.State.INVISIBLE );
 			}

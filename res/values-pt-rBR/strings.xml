@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <resources>
    <!--  GENERAL STRINGS VARIABLES  -->
    <string name="app_name">Pixel Dungeon</string>
@@ -82,7 +82,19 @@
    <string name="Char_YouMissed">%1$s %2$s seu ataque</string>
    <string name="Char_SmbMissed">%1$s %2$s o ataque de %3$s</string>
    <string name="Char_OutParalysis">A dor de %s causou paralisia</string>
-   <string name="Char_Dodged">evitou</string>
+   <string name="Char_StaDodged">evitou</string>
+   <string name="Char_StaPoisoned">envenenado</string>
+   <string name="Char_StaAmok">furia</string>
+   <string name="Char_StaSlowed">lento</string>
+   <string name="Char_StaMind">visão</string>
+   <string name="Char_StaVision">mental</string>
+   <string name="Char_StaParalysed">paralisado</string>
+   <string name="Char_StaFrightened">assustado</string>
+   <string name="Char_StaRooted">enraizado</string>
+   <string name="Char_StaCrippled">aleijado</string>
+   <string name="Char_StaBleeding">sangrando</string>
+   <string name="Char_StaDizzy">confuso</string>
+   <string name="Char_StaInvisible">invisível</string>
 
 
    <!--  STRINGS OF Hero CLASS  -->
@@ -105,6 +117,7 @@
    <string name="Hero_StaWeakness">Você está fraco!</string>
    <string name="Hero_StaBlindness">Você está cego!</string>
    <string name="Hero_StaFury">Você ficou furioso!</string>
+   <string name="Hero_StaFurious">furioso</string>
    <string name="Hero_StaCharm">Você foi encantado!</string>
    <string name="Hero_StaCripple">Você está incapacitado!</string>
    <string name="Hero_StaBleeding">Você está sangrando!</string>
@@ -886,6 +899,7 @@
    <string name="PotionOfMight_Name">Poção de Poder</string>
    <string name="PotionOfMight_Info">Este líquido poderoso flui naturalmente através de seus músculos, aumentando permanentemente a sua força em um ponto e vida em cinco pontos.</string>
    <string name="PotionOfMight_Apply"></string>
+   <string name="PotionOfMight_StaApply">+1 str, +5 ht</string>
 
 
    <!--  STRINGS OF PotionOfMindVision CLASS  -->
@@ -904,13 +918,14 @@
    <string name="PotionOfPurity_Name">Poção da Purificação</string>
    <string name="PotionOfPurity_Info">Este reagente vai rapidamente neutralizar todos os gases nocivos na área de efeito. Beber ele vai te dar uma imunidade temporária para esses gases.</string>
    <string name="PotionOfPurity_Freshness">Você sente um frescor incomum no ar.</string>
-   <string name="PotionOfPurity_NoSmell">Você parou sentindo odores!</string>
+   <string name="PotionOfPurity_NoSmell">Você não sente odores!</string>
 
 
    <!--  STRINGS OF PotionOfStrength CLASS  -->
    <string name="PotionOfStrength_Name">Poção da Força</string>
    <string name="PotionOfStrength_Info">Este líquido poderoso flui naturalmente através de seus músculos, aumentando permanentemente a sua força por um ponto.</string>
    <string name="PotionOfStrength_Apply">Uma nova força surge através de seu corpo.</string>
+   <string name="PotionOfStrength_StaApply">+1 str</string>
 
 
    <!--  STRINGS OF PotionOfToxicGas CLASS  -->
@@ -1542,6 +1557,7 @@
    <string name="Brute_Name">Gnoll Brutamonte</string>
    <string name="Brute_Desc">Brutamontes são os maiores, mais fortes e mais resistentes de todos os gnolls. Quando gravemente feridos, eles ficam furiosos, causando ainda mais danos aos seus inimigos.</string>
    <string name="Brute_Enraged">%s fica enfurecido!</string>
+   <string name="Brute_StaEnraged">irritado</string>
    <!--  STRINGS OF Crab CLASS  -->
    <string name="Crab_Name">Caranguejo do esgoto</string>
    <string name="Crab_Desc">Estes enormes caranguejos estão no topo da cadeia alimentar nos esgotos. Eles são extremamente rápidos e seu exoesqueleto grosso pode resistir a golpes pesados.</string>
@@ -1572,6 +1588,7 @@
    <string name="Goo_Info1">Goo está se bombeando para cima!</string>
    <string name="Goo_Info2">glurp... glurp...</string>
    <string name="Goo_Info3">GLURP-GLURP!</string>
+   <string name="Goo_StaInfo1">!!!</string>
    <!--  STRINGS OF King CLASS  -->
    <string name="King_Name">Rei dos Anões</string>
    <string name="King_Desc">O último rei dos anões era conhecido por sua profunda compreensão dos processos de vida e morte. Ele convenceu os membros de sua corte para participar de um ritual, que deveria ter lhes concedido juventude eterna. No final, ele foi o único que conseguiu... E um exército de zumbis como um bônus.</string>
@@ -1828,4 +1845,23 @@
    <string name="Chasm_Jump">Você realmente quer pular no abismo? Provavelmente, você vai morrer.</string>
    <string name="Chasm_Info">Você caiu para a morte...</string>
 
+
+<!--  PACKAGE /levels/traps  -->
+   <!--  STRINGS OF AlarmTrap CLASS  -->
+   <string name="AlarmTrap_Desc">A armadilha emite um som agudo que ecoa em todo o calabouço!</string>
+   <!--  STRINGS OF LightningTrap CLASS  -->
+   <string name="LightningTrap_Name">Armadilha de raios</string>
+   <string name="LightningTrap_Desc">Você foi morto por uma descarga de armadilha de raio...</string>   
+
+
+<!--  PACKAGE /sprites  -->
+   <!--  STRINGS OF ItemSprite CLASS  -->
+   <string name="ItemSprite_Info1">caiu: %1$.1f %2$.1f</string>
+
+
+<!--  PACKAGE /ui  -->
+   <!--  STRINGS OF Toolbar CLASS  -->
+   <string name="Toolbar_Info1">Você não sabe o que tem ali.</string>
+   <string name="Toolbar_Info2">Selecione uma célula para examinar</string>
+   
 </resources>

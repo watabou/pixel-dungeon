@@ -1087,7 +1087,7 @@ public class Hero extends Char {
 				GLog.w(Game.getVar(R.string.Hero_StaBlindness));
 			} else if (buff instanceof Fury) {
 				GLog.w(Game.getVar(R.string.Hero_StaFury));
-				sprite.showStatus( CharSprite.POSITIVE, "furious" );
+				sprite.showStatus( CharSprite.POSITIVE, Game.getVar(R.string.Hero_StaFurious));
 			} else if (buff instanceof Charm) {
 				GLog.w(Game.getVar(R.string.Hero_StaCharm));
 			}  else if (buff instanceof Cripple) {

@@ -82,7 +82,19 @@
    <string name="Char_YouMissed">%1$s %2$s your attack</string>
    <string name="Char_SmbMissed">%1$s %2$s %3$s\'s attack</string>
    <string name="Char_OutParalysis">The pain snapped %s out of paralysis</string>
-   <string name="Char_Dodged">dodged</string>
+   <string name="Char_StaDodged">dodged</string>
+   <string name="Char_StaPoisoned">poisoned</string>
+   <string name="Char_StaAmok">amok</string>
+   <string name="Char_StaSlowed">slowed</string>
+   <string name="Char_StaMind">mind</string>
+   <string name="Char_StaVision">vision</string>
+   <string name="Char_StaParalysed">paralysed</string>
+   <string name="Char_StaFrightened">frightened</string>
+   <string name="Char_StaRooted">rooted</string>
+   <string name="Char_StaCrippled">crippled</string>
+   <string name="Char_StaBleeding">bleeding</string>
+   <string name="Char_StaDizzy">dizzy</string>
+   <string name="Char_StaInvisible">invisible</string>
 
 
    <!--  STRINGS OF Hero CLASS  -->
@@ -105,6 +117,7 @@
    <string name="Hero_StaWeakness">You feel weakened!</string>
    <string name="Hero_StaBlindness">You are blinded!</string>
    <string name="Hero_StaFury">You become furious!</string>
+   <string name="Hero_StaFurious">furious</string>
    <string name="Hero_StaCharm">You are charmed!</string>
    <string name="Hero_StaCripple">You are crippled!</string>
    <string name="Hero_StaBleeding">You are bleeding!</string>
@@ -886,6 +899,7 @@
    <string name="PotionOfMight_Name">Potion of Might</string>
    <string name="PotionOfMight_Info">This powerful liquid will course through your muscles, permanently increasing your strength by one point and health by five points.</string>
    <string name="PotionOfMight_Apply">Newfound strength surges through your body.</string>
+   <string name="PotionOfMight_StaApply">+1 str, +5 ht</string>
 
 
    <!--  STRINGS OF PotionOfMindVision CLASS  -->
@@ -911,6 +925,7 @@
    <string name="PotionOfStrength_Name">Potion of Strength</string>
    <string name="PotionOfStrength_Info">This powerful liquid will course through your muscles, permanently increasing your strength by one point.</string>
    <string name="PotionOfStrength_Apply">Newfound strength surges through your body.</string>
+   <string name="PotionOfStrength_StaApply">+1 str</string>
 
 
    <!--  STRINGS OF PotionOfToxicGas CLASS  -->
@@ -1541,6 +1556,7 @@
    <string name="Brute_Name">gnoll brute</string>
    <string name="Brute_Desc">Brutes are the largest, strongest and toughest of all gnolls. When severely wounded, they go berserk, inflicting even more damage to their enemies.</string>
    <string name="Brute_Enraged">%s becomes enraged!</string>
+   <string name="Brute_StaEnraged">enraged</string>
    <!--  STRINGS OF Crab CLASS  -->
    <string name="Crab_Name">sewer crab</string>
    <string name="Crab_Desc">These huge crabs are at the top of the food chain in the sewers. They are extremely fast and their thick exoskeleton can withstand heavy blows.</string>
@@ -1571,6 +1587,7 @@
    <string name="Goo_Info1">Goo is pumping itself up!</string>
    <string name="Goo_Info2">glurp... glurp...</string>
    <string name="Goo_Info3">GLURP-GLURP!</string>
+   <string name="Goo_StaInfo1">!!!</string>
    <!--  STRINGS OF King CLASS  -->
    <string name="King_Name">King of Dwarves</string>
    <string name="King_Desc">The last king of dwarves was known for his deep understanding of processes of life and death. He has persuaded members of his court to participate in a ritual, that should have granted them eternal youthfulness. In the end he was the only one, who got it - and an army of undead as a bonus.</string>
@@ -1828,20 +1845,20 @@
    <string name="Chasm_Info">You fell to death...</string>
 
 
-
-
+<!--  PACKAGE /levels/traps  -->
    <!--  STRINGS OF AlarmTrap CLASS  -->
    <string name="AlarmTrap_Desc">The trap emits a piercing sound that echoes throughout the dungeon!</string>
-
-
    <!--  STRINGS OF LightningTrap CLASS  -->
    <string name="LightningTrap_Name">lightning trap</string>
    <string name="LightningTrap_Desc">You were killed by a discharge of a lightning trap...</string>   
 
+
+<!--  PACKAGE /sprites  -->
    <!--  STRINGS OF ItemSprite CLASS  -->
    <string name="ItemSprite_Info1">drop aside: %1$.1f %2$.1f</string>
 
 
+<!--  PACKAGE /ui  -->
    <!--  STRINGS OF Toolbar CLASS  -->
    <string name="Toolbar_Info1">You don\'t know what is there.</string>
    <string name="Toolbar_Info2">Select a cell to examine</string>

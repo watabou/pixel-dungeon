@@ -36,7 +36,7 @@ public class PotionOfMight extends PotionOfStrength {
 		hero.STR++;
 		hero.HT += 5;
 		hero.HP += 5;
-		hero.sprite.showStatus( CharSprite.POSITIVE, "+1 str, +5 ht" );
+		hero.sprite.showStatus( CharSprite.POSITIVE, Game.getVar(R.string.PotionOfMight_StaApply));
 		GLog.p(Game.getVar(R.string.PotionOfMight_Apply));
 	}
 	

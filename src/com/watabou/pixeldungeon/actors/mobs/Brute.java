@@ -83,7 +83,7 @@ public class Brute extends Mob {
 			spend( TICK );
 			if (Dungeon.visible[pos]) {
 				GLog.w( TXT_ENRAGED, name );
-				sprite.showStatus( CharSprite.NEGATIVE, "enraged" );
+				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Brute_StaEnraged));
 			}
 		}
 	}

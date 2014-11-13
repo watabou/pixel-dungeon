@@ -35,7 +35,7 @@ public class PotionOfStrength extends Potion {
 		setKnown();
 		
 		hero.STR++;
-		hero.sprite.showStatus( CharSprite.POSITIVE, "+1 str" );
+		hero.sprite.showStatus( CharSprite.POSITIVE, Game.getVar(R.string.PotionOfStrength_StaApply));
 		GLog.p(Game.getVar(R.string.PotionOfStrength_Apply));
 		
 		Badges.validateStrengthAttained();

@@ -115,10 +115,10 @@ public class LastLevel extends Level {
 	public String tileDesc(int tile) {
 		switch (tile) {
 		case Terrain.WATER:
-			return Game.getVar(R.string.LastLevel_TileWater);
+			return Game.getVar(R.string.LastLevel_TileDescWater);
 		case Terrain.STATUE:
 		case Terrain.STATUE_SP:
-			return Game.getVar(R.string.LastLevel_TileStatue);
+			return Game.getVar(R.string.LastLevel_TileDescStatue);
 		default:
 			return super.tileDesc( tile );
 		}
