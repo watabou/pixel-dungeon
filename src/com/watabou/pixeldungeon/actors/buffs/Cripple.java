@@ -21,7 +21,13 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class Cripple extends FlavourBuff {
 
+	protected static final String TXT_HERO = "You are crippled!";
 	public static final float DURATION	= 10f;
+
+	@Override
+	public String getHeroText() {
+		return TXT_HERO;
+	}
 	
 	@Override
 	public int icon() {

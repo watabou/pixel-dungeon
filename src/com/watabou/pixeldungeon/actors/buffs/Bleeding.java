@@ -30,9 +30,14 @@ import com.watabou.utils.Random;
 public class Bleeding extends Buff {
 	
 	protected int level;
-	
+	protected static final String TXT_HERO = "You are bleeding!";
 	private static final String LEVEL	= "level";
 	
+	@Override
+	public String getHeroText() {
+		return TXT_HERO;
+	}
+
 	@Override
 	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle( bundle );

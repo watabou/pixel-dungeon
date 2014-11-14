@@ -20,9 +20,14 @@ package com.watabou.pixeldungeon.actors.buffs;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class Fury extends Buff {
-	
+	protected static final String TXT_HERO = "You become furious!";
 	public static float LEVEL	= 0.4f;
-	
+
+	@Override
+	public String getHeroText() {
+		return TXT_HERO;
+	}
+
 	@Override
 	public boolean act() {
 		if (target.HP > target.HT * LEVEL) {

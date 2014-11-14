@@ -22,6 +22,13 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class Blindness extends FlavourBuff {
 
+	protected static final String TXT_HERO = "You are blinded!";
+
+	@Override
+	public String getHeroText() {
+		return TXT_HERO;
+	}
+
 	@Override
 	public void detach() {
 		super.detach();

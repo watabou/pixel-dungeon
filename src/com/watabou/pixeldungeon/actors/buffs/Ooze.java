@@ -27,9 +27,15 @@ import com.watabou.pixeldungeon.utils.Utils;
 public class Ooze extends Buff {
 	
 	private static final String TXT_HERO_KILLED = "%s killed you...";
-	
+	protected static final String TXT_HERO = "Caustic ooze eats your flesh. Wash away it!";
+
 	public int damage	= 1;
-	
+
+	@Override
+	public String getHeroText() {
+		return TXT_HERO;
+	}
+
 	@Override
 	public int icon() {
 		return BuffIndicator.OOZE;

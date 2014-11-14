@@ -22,6 +22,13 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class Roots extends FlavourBuff {
 	
+	protected static final String TXT_HERO = "You can't move!";
+
+	@Override
+	public String getHeroText() {
+		return TXT_HERO;
+	}
+
 	@Override
 	public boolean attachTo( Char target ) {
 		if (!target.flying && super.attachTo( target )) {

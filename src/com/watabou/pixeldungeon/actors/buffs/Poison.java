@@ -31,8 +31,14 @@ import com.watabou.utils.Bundle;
 public class Poison extends Buff implements Hero.Doom {
 	
 	protected float left;
-	
-	private static final String LEFT	= "left";
+	protected static final String TXT_HERO = "You are poisoned!";
+
+	private static final String LEFT = "left";
+
+	@Override
+	public String getHeroText() {
+		return TXT_HERO;
+	}
 	
 	@Override
 	public void storeInBundle( Bundle bundle ) {

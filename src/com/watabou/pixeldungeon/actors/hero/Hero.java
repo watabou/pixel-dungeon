@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.hero;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 
 import com.watabou.noosa.Camera;
@@ -114,7 +115,6 @@ public class Hero extends Char {
 		"It's easier for you to hit enemies and dodge their attacks.";
 	
 	public static final String TXT_YOU_NOW_HAVE	= "You now have %s";
-	
 	private static final String TXT_SOMETHING_ELSE	= "There is something else here";
 	private static final String TXT_LOCKED_CHEST	= "This chest is locked and you don't have matching key";
 	private static final String TXT_LOCKED_DOOR		= "You don't have a matching key";
@@ -122,6 +122,8 @@ public class Hero extends Char {
 	
 	private static final String TXT_WAIT	= "...";
 	private static final String TXT_SEARCH	= "search";
+
+	public static final String[] interruptingBuffs = new String[] {"Burning", "Paralysed", "Poisoned", "Fury", "Vertigo"};
 	
 	public static final int STARTING_STR = 10;
 	
@@ -1068,45 +1070,26 @@ public class Hero extends Char {
 		super.add( buff );
 		
 		if (sprite != null) {
-			if (buff instanceof Burning) {
-				GLog.w( "You catch fire!" );
-				interrupt();
-			} else if (buff instanceof Paralysis) {
-				GLog.w( "You are paralysed!" );
-				interrupt();
-			} else if (buff instanceof Poison) {
-				GLog.w( "You are poisoned!" );
-				interrupt();
-			} else if (buff instanceof Ooze) {
-				GLog.w( "Caustic ooze eats your flesh. Wash away it!" );
-			} else if (buff instanceof Roots) {
-				GLog.w( "You can't move!" );
-			} else if (buff instanceof Weakness) {
-				GLog.w( "You feel weakened!" );
-			} else if (buff instanceof Blindness) {
-				GLog.w( "You are blinded!" );
-			} else if (buff instanceof Fury) {
-				GLog.w( "You become furious!" );
-				sprite.showStatus( CharSprite.POSITIVE, "furious" );
-			} else if (buff instanceof Charm) {
-				GLog.w( "You are charmed!" );
-			}  else if (buff instanceof Cripple) {
-				GLog.w( "You are crippled!" );
-			} else if (buff instanceof Bleeding) {
-				GLog.w( "You are bleeding!" );
-			} else if (buff instanceof Vertigo) {
-				GLog.w( "Everything is spinning around you!" );
+			String heroText = buff.getHeroText();
+			if (heroText.length() > 0){
+				GLog.w(heroText);
+			}
+			String buffString = buff.toString();
+
+			if (Arrays.asList(Hero.interruptingBuffs).contains(buffString)) {
 				interrupt();
 			}
 			
-			else if (buff instanceof Light) {
+			if (buffString == "Fury") {
+				sprite.showStatus( CharSprite.POSITIVE, "furious" );
+			} else if (buffString == "Light") {
 				sprite.add( CharSprite.State.ILLUMINATED );
 			}
 		}
 		
 		BuffIndicator.refreshHero();
 	}
-	
+
 	@Override
 	public void remove( Buff buff ) {
 		super.remove( buff );
