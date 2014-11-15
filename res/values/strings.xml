@@ -177,7 +177,6 @@
    <string name="HeroSubClass_DescSnip">_Snipers_ are able to detect weak points in an enemy\'s armor, effectively ignoring it when using a missile weapon.</string>
    <string name="HeroSubClass_NameWard">warden</string>
    <string name="HeroSubClass_DescWard">Having a strong connection with forces of nature gives _Wardens_ an ability to gather dewdrops and seeds from plants. Also trampling a high grass grants them a temporary armor buff.</string>
-   <string name="HeroSubClass_SubClass">subClass</string>
 
 
    <!--  STRINGS OF Dungeon CLASS  -->

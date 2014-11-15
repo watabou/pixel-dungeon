@@ -49,7 +49,7 @@ public enum HeroSubClass {
 		return desc;
 	}
 	
-	private static final String SUBCLASS = Game.getVar(R.string.HeroSubClass_SubClass);
+	private static final String SUBCLASS = "subClass";
 	
 	public void storeInBundle( Bundle bundle ) {
 		bundle.put( SUBCLASS, toString() );

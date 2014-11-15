@@ -177,7 +177,6 @@
    <string name="HeroSubClass_DescSnip">_Atirador_ é capaz de detectar pontos fracos na armadura de um inimigo mais efetivamente quando estiver usando uma arma de mísseis.</string>
    <string name="HeroSubClass_NameWard">guarda</string>
    <string name="HeroSubClass_DescWard">Tendo uma forte ligação com as forças da natureza o _Guarda_ tem uma capacidade de conseguir gotas de orvalho e sementes de plantas. Também, pisar em grama alta concede um escudo temporário.</string>
-   <string name="HeroSubClass_SubClass">subClasse</string>
 
 
    <!--  STRINGS OF Dungeon CLASS  -->
@@ -1863,5 +1862,5 @@
    <!--  STRINGS OF Toolbar CLASS  -->
    <string name="Toolbar_Info1">Você não sabe o que tem ali.</string>
    <string name="Toolbar_Info2">Selecione uma célula para examinar</string>
-   
+
 </resources>
