@@ -131,13 +131,13 @@
    <string name="HeroClass_Hun">caçadora</string>
    <string-array name="HeroClass_WarPerks">
        <item >Guerreiros começam com 11 pontos de força.</item>
-       <item >Guerreiros começam com uma única Espada Curta. Esta espada pode ser \"reforjada\" para se tranformar em outra arma.</item>
+       <item >Guerreiros começam com uma Espada Curta. Esta espada pode ser \"reforjada\" para se tranformar em outra arma.</item>
        <item >Guerreiros são menos hábeis com armas de arremesso.</item>
        <item >Qualquer pedaço de comida recupera um pouco de vida quando comidos.</item>
        <item >Poções de Força são identificadas desde o início.</item>
    </string-array>
    <string-array name="HeroClass_MagPerks">
-       <item >Magos começam com uma única Varinha Míssel Mágico. Esta varinha pode ser \"desencantada\" para se tranformar em outra varinha.</item>
+       <item >Magos começam com uma Varinha Míssel Mágico. Esta varinha pode ser \"desencantada\" para se tranformar em outra varinha.</item>
        <item >Magos recarregam suas varinhas mais rápido.</item>
        <item >Quando ingerido, qualquer pedaço de comida recupera 1 carga de todas as varinhas no inventário.</item>
        <item >Magos podem usar varinhas como uma arma de combate.</item>
@@ -153,7 +153,7 @@
    </string-array>
    <string-array name="HeroClass_HunPerks">
        <item >Caçadoras começam com 15 pontos de vida.</item>
-       <item >Caçadoras começam com um único Bumerangue, mas ele é atualizável.</item>
+       <item >Caçadoras começam com um Bumerangue, mas ele é atualizável.</item>
        <item >Caçadoras são peritas em armas de aremesso, e tem bonus de ataque quando usadas.</item>
        <item >Caçadoras ganham mais vida a partir de gotas de orvalho.</item>
        <item >Caçadoras podem sentir monstros por perto, mesmo que eles estejam escondidos atrás de obstáculos.</item>
@@ -247,11 +247,11 @@
    <!-- <string name="Badges_BossSlain1Mag"></string> -->
    <!-- <string name="Badges_BossSlain1Rog"></string> -->
    <!-- <string name="Badges_BossSlain1Hun"></string> -->
-   <string name="Badges_BossSlain1">1º chefe morto</string>
-   <string name="Badges_BossSlain2">2º chefe morto</string>
-   <string name="Badges_BossSlain3">3º chefe morto</string>
-   <string name="Badges_BossSlain4">4º chefe morto</string>
-   <string name="Badges_BossSlain1All">1º chefe morto por Guerreiro, Mago, Trapaceiro &amp; Caçadoras</string>
+   <string name="Badges_BossSlain1">1º chefe foi morto</string>
+   <string name="Badges_BossSlain2">2º chefe foi morto</string>
+   <string name="Badges_BossSlain3">3º chefe foi morto</string>
+   <string name="Badges_BossSlain4">4º chefe foi morto</string>
+   <string name="Badges_BossSlain1All">1º chefe foi morto por Guerreiro, Mago, Trapaceiro &amp; Caçadora</string>
    <!-- <string name="Badges_BossSlain3Glad"></string> -->
    <!-- <string name="Badges_BossSlain3Bers"></string> -->
    <!-- <string name="Badges_BossSlain3WarL"></string> -->
@@ -260,13 +260,13 @@
    <!-- <string name="Badges_BossSlain3Assa"></string> -->
    <!-- <string name="Badges_BossSlain3Snip"></string> -->
    <!-- <string name="Badges_BossSlain3Ward"></string> -->
-   <string name="Badges_BossSlain3All">3º chefe morto por Guerreiro, Fúria, Bruxo, Mago, Corredor, Atirador &amp; Guarda.</string>
+   <string name="Badges_BossSlain3All">3º chefe foi morto por Guerreiro, Fúria, Bruxo, Mago, Corredor, Atirador &amp; Guarda.</string>
    <string name="Badges_RingHaggler">Anel de Haggler adquirido</string>
    <string name="Badges_RingThorns">Anel de Thorns adquirido</string>
-   <string name="Badges_StrengthAttained1">13 pontos de Força adquirido</string>
-   <string name="Badges_StrengthAttained2">15 pontos de Força adquirido</string>
-   <string name="Badges_StrengthAttained3">17 pontos de Força adquirido</string>
-   <string name="Badges_StrengthAttained4">19 pontos de Força adquirido</string>
+   <string name="Badges_StrengthAttained1">13 pontos de Força adquiridos</string>
+   <string name="Badges_StrengthAttained2">15 pontos de Força adquiridos</string>
+   <string name="Badges_StrengthAttained3">17 pontos de Força adquiridos</string>
+   <string name="Badges_StrengthAttained4">19 pontos de Força adquiridos</string>
    <string name="Badges_FoodEaten1">10 pedaços de comida comidos</string>
    <string name="Badges_FoodEaten2">20 pedaços de comida comidos</string>
    <string name="Badges_FoodEaten3">30 pedaços de comida comidos</string>
