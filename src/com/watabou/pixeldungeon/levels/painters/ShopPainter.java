@@ -30,7 +30,7 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.Torch;
 import com.watabou.pixeldungeon.items.Weightstone;
 import com.watabou.pixeldungeon.items.armor.*;
-import com.watabou.pixeldungeon.items.bags.PotionHolder;
+import com.watabou.pixeldungeon.items.bags.PotionBelt;
 import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
@@ -96,7 +96,7 @@ public class ShopPainter extends Painter {
 		case 6:
 			items.add( (Random.Int( 2 ) == 0 ? new Quarterstaff() : new Spear()).identify() );
 			items.add( new LeatherArmor().identify() );
-			items.add( new PotionHolder() );
+			items.add( new PotionBelt() );
 			items.add( new Weightstone() );
 			break;
 			

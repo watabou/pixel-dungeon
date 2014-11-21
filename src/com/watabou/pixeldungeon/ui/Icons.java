@@ -44,7 +44,7 @@ public enum Icons {
 	SEED_POUCH,
 	SCROLL_HOLDER,
 	WAND_HOLSTER,
-	POTIONS_HOLDER,
+	POTIONS_BELT,
 	CHECKED,
 	UNCHECKED,
 	EXIT,
@@ -121,7 +121,7 @@ public enum Icons {
 		case WAND_HOLSTER:
 			icon.frame( icon.texture.uvRect( 88, 0, 98, 10 ) );
 			break;
-		case POTIONS_HOLDER:
+		case POTIONS_BELT:
 			icon.frame( icon.texture.uvRect( 98, 0, 108, 10 ) );
 			break;
 		case CHECKED:

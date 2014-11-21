@@ -4,11 +4,11 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
-public class PotionHolder extends Bag {
+public class PotionBelt extends Bag {
 
 	{
-		name = "potion holder";
-		image = ItemSpriteSheet.PHOLDER;
+		name = "potion belt";
+		image = ItemSpriteSheet.BELT;
 		
 		size = 12;
 	}

@@ -150,8 +150,8 @@ public class Dungeon {
 		Statistics.reset();
 		Journal.reset();
 		
-		depth = 0;
-		gold = 0;
+		depth = 5;
+		gold = 10000;
 		
 		potionOfStrength = 0;
 		scrollsOfUpgrade = 0;
