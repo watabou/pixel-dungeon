@@ -32,6 +32,7 @@ import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.bags.Bag;
+import com.watabou.pixeldungeon.items.bags.PotionHolder;
 import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
@@ -66,7 +67,7 @@ public class WndBag extends WndTabbed {
 	protected static final int SLOT_SIZE	= 28;
 	protected static final int SLOT_MARGIN	= 1;
 	
-	protected static final int TAB_WIDTH	= 30;
+	protected static final int TAB_WIDTH	= 24;
 	
 	protected static final int TITLE_HEIGHT	= 12;
 	
@@ -113,6 +114,7 @@ public class WndBag extends WndTabbed {
 		Bag[] bags = {
 			stuff.backpack, 
 			stuff.getItem( SeedPouch.class ), 
+			stuff.getItem( PotionHolder.class ), 
 			stuff.getItem( ScrollHolder.class ),
 			stuff.getItem( WandHolster.class )};
 		
@@ -259,6 +261,8 @@ public class WndBag extends WndTabbed {
 				return Icons.get( Icons.SCROLL_HOLDER );
 			} else if (bag instanceof WandHolster) {
 				return Icons.get( Icons.WAND_HOLSTER );
+			} else if (bag instanceof PotionHolder) {
+				return Icons.get( Icons.POTIONS_HOLDER );
 			} else {
 				return Icons.get( Icons.BACKPACK );
 			}
