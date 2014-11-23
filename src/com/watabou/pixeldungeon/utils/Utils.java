@@ -18,6 +18,8 @@
 package com.watabou.pixeldungeon.utils;
 
 import java.util.Locale;
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 
 public class Utils {
 
@@ -32,6 +34,11 @@ public class Utils {
 	public static String VOWELS	= "aoeiu";
 	
 	public static String indefinite( String noun ) {
+		//In a pt_BR language(and another), there is no specific rule.
+		if (Game.getVar(R.string.Utils_IsIndefinte).equals("0") ) {
+		   return noun;
+		}
+
 		if (noun.length() == 0) {
 			return "a";
 		} else {

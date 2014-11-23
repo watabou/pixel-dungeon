@@ -664,6 +664,7 @@
    <string name="Armor_Info7a">\n\nYou are wearing the %1$s%2$s.</string>
    <string name="Armor_Info7b">, and because it is cursed, you are powerless to remove it</string>
    <string name="Armor_Info8">\n\nYou can feel a malevolent magic lurking within the %s.</string>
+   <string name="Armor_Glyph">glyph</string>
 
 
    <!--  STRINGS OF ClassArmor CLASS  -->
@@ -1392,6 +1393,7 @@
    <string name="WarHammer_Name">war hammer</string>
    <string name="WarHammer_Info">Few creatures can withstand the crushing blow of this towering mass of lead and steel, but only the strongest of adventurers can use it effectively.</string>
 
+
 <!--  PACKAGE /weapon/missiles  -->
    <!--  STRINGS OF MissileWeapon CLASS  -->
    <string name="MissileWeapon_Missiles">Missile weapon</string>
@@ -1862,4 +1864,10 @@
    <string name="Toolbar_Info1">You don\'t know what is there.</string>
    <string name="Toolbar_Info2">Select a cell to examine</string>
 
+
+<!--  PACKAGE /utils  -->
+   <!--  STRINGS OF Utils CLASS  -->
+   <!-- 1: Execute Indefinite Function to Language -->
+   <!-- 0: NO Execute Indefinite Function to Language -->
+   <string name="Utils_IsIndefinte">1</string>
 </resources>

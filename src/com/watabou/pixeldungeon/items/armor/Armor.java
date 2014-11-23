@@ -222,7 +222,7 @@ public class Armor extends EquipableItem {
 				info.append(Game.getVar(R.string.Armor_Info5));
 			}
 		}
-		
+		info.append(" ");
 		if (glyph != null) {
 			info.append(Game.getVar(R.string.Armor_Info6));
 		}
@@ -328,7 +328,7 @@ public class Armor extends EquipableItem {
 		public abstract int proc( Armor armor, Char attacker, Char defender, int damage );
 		
 		public String name() {
-			return name( "glyph" );
+			return name( Game.getVar(R.string.Armor_Glyph));
 		}
 		
 		public String name( String armorName ) {

@@ -127,7 +127,7 @@
    <!--  STRINGS OF HeroClass CLASS  -->
    <string name="HeroClass_War">guerreiro</string>
    <string name="HeroClass_Mag">mago</string>
-   <string name="HeroClass_Rog">trapaceiro</string>
+   <string name="HeroClass_Rog">ladrão</string>
    <string name="HeroClass_Hun">caçadora</string>
    <string-array name="HeroClass_WarPerks">
        <item >Guerreiros começam com 11 pontos de força.</item>
@@ -144,11 +144,11 @@
        <item >Pergaminhos de Identificação são identificados desde o início.</item>
    </string-array>
    <string-array name="HeroClass_RogPerks">
-       <item >Trapaceiros começam com um Anel de Sombras +1.</item>
-       <item >Trapaceiros são identificados por um tipo de anel que usam.</item>
-       <item >Trapaceiros estão acostumados com armaduras leves, esquivando-se melhor, quando vestem armadura.</item>
-       <item >Trapaceiros são peritos na detecção de portas e armadilhas escondidas.</item>
-       <item >Trapaceiros podem ficar sem comida por mais tempo.</item>
+       <item >Ladrões começam com um Anel de Sombras +1.</item>
+       <item >Ladrões podem identificar um anel ao equipa-lo.</item>
+       <item >Ladrões estão acostumados com armaduras leves, esquivando-se melhor, quando vestem armadura.</item>
+       <item >Ladrões são peritos na detecção de portas e armadilhas escondidas.</item>
+       <item >Ladrões podem ficar sem comida por mais tempo.</item>
        <item >Pergaminhos de Mapeamento de Magia são identificados desde o início.</item>
    </string-array>
    <string-array name="HeroClass_HunPerks">
@@ -188,7 +188,7 @@
        <item >Lembre-se, que o aumento a sua força não é a única maneira de conseguir um equipamento melhor, você pode, para o outro lado diminuir a sua exigência de força com Pergaminhos de Atualização.</item>
        <item >Você pode gastar o seu ouro em lojas em níveis mais profundos do calabouço. O primeiro fica no nível 6.</item>
        <item >Cuidado... Váá!</item>
-       <item >Pixel-Mart - tudo que você precisa para a aventura de sucesso!</item>
+       <item >Pixel-Mart - tudo que você precisa para uma aventura de sucesso!</item>
        <item >Identifique suas poções e pergaminhos assim que possível. Mas use-os apenas quando realmente precisar deles.</item>
        <item >Estar com fome não faz mal, mas morrendo de fome, dói.</item>
        <item >Um ataque surpresa tem uma melhor chance de acerto. Por exemplo, você pode emboscar o inimigo por trás de uma porta fechada quando você sabe que ele está te seguindo.</item>
@@ -234,7 +234,7 @@
    <!-- <string name="Badges_BagSeed"></string> -->
    <!-- <string name="Badges_BagSroll"></string> -->
    <!-- <string name="Badges_BagWand"></string> -->
-   <string name="Badges_AllBags">Todos os sacos comprados</string>
+   <string name="Badges_AllBags">Todos os compartimentos comprados</string>
    <string name="Badges_DeathFire">Morto pelo Fogo</string>
    <string name="Badges_DeathPoison">Morto por Envenenamento</string>
    <string name="Badges_DeathGas">Morto por Gás Tóxico</string>
@@ -250,7 +250,7 @@
    <string name="Badges_BossSlain2">2º chefe foi morto</string>
    <string name="Badges_BossSlain3">3º chefe foi morto</string>
    <string name="Badges_BossSlain4">4º chefe foi morto</string>
-   <string name="Badges_BossSlain1All">1º chefe foi morto por Guerreiro, Mago, Trapaceiro &amp; Caçadora</string>
+   <string name="Badges_BossSlain1All">1º chefe foi morto por Guerreiro, Mago, Ladrão &amp; Caçadora</string>
    <!-- <string name="Badges_BossSlain3Glad"></string> -->
    <!-- <string name="Badges_BossSlain3Bers"></string> -->
    <!-- <string name="Badges_BossSlain3WarL"></string> -->
@@ -289,7 +289,7 @@
    <!-- <string name="Badges_VictoryRog"></string> -->
    <!-- <string name="Badges_VictoryHun"></string> -->
    <string name="Badges_Victory">Amuleto de Yendor adquirido</string>
-   <string name="Badges_VictoryAll">Amuleto de Yendor obtido por Guerreiro, Mago, Trapaceiro &amp; Caçadoras</string>
+   <string name="Badges_VictoryAll">Amuleto de Yendor obtido por Guerreiro, Mago, Ladrão &amp; Caçadora</string>
    <string name="Badges_MasteryCombo">7-hit combo</string>
    <string name="Badges_PotionsCooked1">3 poções realizadas</string>
    <string name="Badges_PotionsCooked2">6 poções realizadas</string>
@@ -451,8 +451,8 @@
 
 
    <!--  STRINGS OF WndSadGhost CLASS  -->
-   <string name="WndSadGhost_Rose">Sim! Sim!!! É isso aí! Por favor, dê-me! E você pode levar um desses itens, talvez eles serão úteis para você na sua jornada...</string>
-   <string name="WndSadGhost_Rat">Sim! Sou uma criatura feia e morta, mas finalmente posso descansar... Por favor, pegue um desses itens, talvez eles serão úteis para você na sua jornada ...</string>
+   <string name="WndSadGhost_Rose">Sim! Sim!!! É isso aí! Por favor, dê-me! E você pode levar um desses itens, talvez eles sejam úteis para você em sua jornada...</string>
+   <string name="WndSadGhost_Rat">Sim! A criatura feia e grotesca está morta, mas finalmente posso descansar... Por favor, pegue um desses itens, talvez eles sejam úteis para você em sua jornada...</string>
    <string name="WndSadGhost_Wepon">Arma do Fantasma</string>
    <string name="WndSadGhost_Armor">Armadura do Fantasma</string>
 
@@ -483,7 +483,7 @@
    <string name="WndTradeItem_Buy">Compre por %dg</string>
    <string name="WndTradeItem_Sell">Venda por %dg</string>
    <string name="WndTradeItem_Sell1">Venda 1 por %dg</string>
-   <string name="WndTradeItem_SellAll">Venda rudo por %dg</string>
+   <string name="WndTradeItem_SellAll">Venda tudo por %dg</string>
    <string name="WndTradeItem_Cancel">Deixa pra lá</string>
    <string name="WndTradeItem_Sold">Você vendeu seu %1$s por %2$dg</string>
    <string name="WndTradeItem_Bought">Você comprou %1$s por %2$dg</string>
@@ -491,8 +491,8 @@
 
    <!--  STRINGS OF WndWandmaker CLASS  -->
    <string name="WndWandmaker_Message">Oh, eu vejo que você conseguiu! Eu espero que não tenha incomodado muito. Como eu prometi, você pode escolher uma das minhas varinhas de alta qualidade.</string>
-   <string name="WndWandmaker_Battle">Batalha de Varinha</string>
-   <string name="WndWandmaker_NonBattle">Sem Bataha de Varinhas</string>
+   <string name="WndWandmaker_Battle">Varinha de Batalha</string>
+   <string name="WndWandmaker_NonBattle">Varinha não de Batalha</string>
    <string name="WndWandmaker_Farawell">Boa sorte em sua busca, %s!</string>
 
 
@@ -571,11 +571,11 @@
 
 
    <!--  STRINGS OF Stylus CLASS  -->
-   <string name="Stylus_Name">caneta arcano</string>
+   <string name="Stylus_Name">caneta arcana</string>
    <string name="Stylus_ACInscribe">ESCREVER</string>
    <string name="Stylus_Info">Esta caneta arcana é feita de uma pedra muito escura e dura. Através dela você pode escrever um hieróglifo mágico na sua armadura, porém não poderá determinar qual o poder do hieróglifo. A predra irá escolher o poder por você!</string>
    <string name="Stylus_SelectArmor">Selecione a armadura que deseja escrever</string>
-   <string name="Stylus_Inscribed">você escreveu o %1$s em seu %2$s</string>
+   <string name="Stylus_Inscribed">você escreveu o %1$s em sua %2$s</string>
 
 
    <!--  STRINGS OF TomeOfMastery CLASS  -->
@@ -593,9 +593,9 @@
 
 
    <!--  STRINGS OF Weightstone CLASS  -->
-   <string name="Weightstone_Name">pedra pesada</string>
+   <string name="Weightstone_Name">pedra de amolar</string>
    <string name="Weightstone_ACApply">APLICAR</string>
-   <string name="Weightstone_Info">Usando uma pedra de peso, você pode balancear uma arma corpo a corpo para aumentar sua velocidade ou precisão.</string>
+   <string name="Weightstone_Info">Usando uma pedra de amolar você pode balancear uma arma corpo a corpo para aumentar sua velocidade ou precisão.</string>
    <string name="Weightstone_Select">Escolha uma arma para balancear</string>
    <string name="Weightstone_Fast">você balanceou %s para torná-la mais rápida</string>
    <string name="Weightstone_Accurate">você balanceou %s para torná-la mais precisa</string>
@@ -609,44 +609,44 @@
    <!--  STRINGS OF Plant CLASS  -->
    <string name="Plant_ACPlant">PLANTAR</string>
    <string name="Plant_Info">Jogue a semente de %1$s no lugar que você deseja planta-la.\n\n%2$s</string>
-   <string name="Plant_Seed">semente de %s</string>
+   <string name="Plant_Seed">Semente de %s</string>
 
 
    <!--  STRINGS OF Dreamweed CLASS  -->
-   <string name="Dreamweed_Name">Dreamweed</string>
-   <string name="Dreamweed_Desc">ele secreta uma nuvem brilhante de gás da confusão.</string>
+   <string name="Dreamweed_Name">planta da confusão</string>
+   <string name="Dreamweed_Desc">Ela secreta uma nuvem brilhante de gás da confusão.</string>
 
 
    <!--  STRINGS OF Earthroot CLASS  -->
-   <string name="Earthroot_Name">Earthroot</string>
-   <string name="Earthroot_Desc">Quando uma criatura toca uma Earthroot, suas raízes criam uma espécie de armadura natural ao seu redor.</string>
-   <string name="Earthroot_Buff">Armadura de Ervas</string>
+   <string name="Earthroot_Name">planta da armadura</string>
+   <string name="Earthroot_Desc">Quando uma criatura toca uma planta da armadura, suas raízes criam uma espécie de armadura natural ao seu redor.</string>
+   <string name="Earthroot_Buff">Armadura da Natureza</string>
 
 
    <!--  STRINGS OF Fadeleaf CLASS  -->
-   <string name="Fadeleaf_Name">Fadeleaf</string>
-   <string name="Fadeleaf_Desc">Tocar uma Fadeleaf irá teleportar qualquer criatura para um lugar aleatório no nível atual.</string>
+   <string name="Fadeleaf_Name">planta de teleporte</string>
+   <string name="Fadeleaf_Desc">Tocar uma planta de teleporte irá teleportar qualquer criatura para um lugar aleatório no nível atual.</string>
 
 
    <!--  STRINGS OF Firebloom CLASS  -->
-   <string name="Firebloom_Name">Firebloom</string>
-   <string name="Firebloom_Desc">Quando algo toca uma Firebloom, ele explode em chamas.</string>
+   <string name="Firebloom_Name">planta de fogo</string>
+   <string name="Firebloom_Desc">Quando algo toca uma planta de fogo, ele explode em chamas.</string>
 
 
    <!--  STRINGS OF Icecap CLASS  -->
-   <string name="Icecap_Name">Icecap</string>
-   <string name="Icecap_Desc">Ao tocar uma Icecap, ela excreta um pólen, que congela tudo em sua vizinhança.</string>
+   <string name="Icecap_Name">planta de gelo</string>
+   <string name="Icecap_Desc">Ao tocar uma planta de gelo, ela excreta um pólen, que congela tudo em sua vizinhança.</string>
 
 
    <!--  STRINGS OF Sorrowmoss CLASS  -->
-   <string name="Sorrowmoss_Name">Sorrowmoss</string>
-   <string name="Sorrowmoss_Desc">A Sorrowmoss é uma flor (não é um musgo) com afiadas pétalas, revestidas com um veneno mortal.</string>
+   <string name="Sorrowmoss_Name">planta do veneno</string>
+   <string name="Sorrowmoss_Desc">A planta do veneno é uma flor (não é um musgo) com afiadas pétalas, revestidas com um veneno mortal.</string>
 
 
    <!--  STRINGS OF Sungrass CLASS  -->
-   <string name="Sungrass_Name">Sungrass</string>
-   <string name="Sungrass_Desc">Sungrass é conhecida por propriedades curativas da sua seiva.</string>
-   <string name="Sungrass_Buff">Cura de Ervas</string>
+   <string name="Sungrass_Name">planta da vida</string>
+   <string name="Sungrass_Desc">A planta da vida é conhecida por propriedades curativas da sua seiva.</string>
+   <string name="Sungrass_Buff">Cura da Natureza</string>
 
    
 <!--  PACKAGE items/armor  -->
@@ -655,15 +655,16 @@
    <string name="Armor_Identify">agora você está bastante familiarizado com seu %1$s e pode identificá-lo como %2$s.</string>
    <string name="Armor_ToString">%1$s :%2$d</string>
    <string name="Armor_Incompatible">Interação de diferentes tipos de magia apagaram o hieróglifo desta armadura!</string>
-   <string name="Armor_Info1">\n\nEste %1$s concede até \"%2$d\" pontos de absorção de danos por ataque</string>
+   <string name="Armor_Info1">\n\nEsta %1$s concede até \"%2$d\" pontos de absorção de danos por ataque.</string>
    <string name="Armor_Info2">\n\nPor causa de sua força inadequada, sua velocidade de movimento e habilidade de defesa será diminuída.</string>
    <string name="Armor_Info3">\n\nPor causa de sua força inadequada, vestindo esta armadura irá diminuir a sua velocidade de movimento e habilidade de defesa.</string>
    <string name="Armor_Info4">\n\nUm típico %1$s fornece absorção de danos de até %2$d pontos por ataque e precisa de %3$d pontos de força.</string>
    <string name="Armor_Info5">Provavelmente, esta armadura é pesada demais para você.</string>
-   <string name="Armor_Info6">Está escrito.</string>
-   <string name="Armor_Info7a">\n\nVocê está vestindo o %1$s%2$s.</string>
+   <string name="Armor_Info6">Possui um hieróglifo.</string>
+   <string name="Armor_Info7a">\n\nVocê está vestindo a %1$s%2$s.</string>
    <string name="Armor_Info7b">, e porque ele é amaldiçoado, você não tem como removê-lo</string>
    <string name="Armor_Info8">\n\nVocê pode sentir a magia maléfica escondida dentro do %s.</string>
+   <string name="Armor_Glyph">hieróglifo</string>
 
 
    <!--  STRINGS OF ClassArmor CLASS  -->
@@ -687,7 +688,7 @@
 
    <!--  STRINGS OF LeatherArmor CLASS  -->
    <string name="LeatherArmor_Name">armadura de couro</string>
-   <string name="LeatherArmor_Desc">Armadura feita de couro de monstro. Não é tão leve como armadura de pano, mas ofereçe uma protecção melhor.</string>
+   <string name="LeatherArmor_Desc">Armadura feita de couro de monstro. Não é tão leve como armadura de pano, mas ofereçe uma proteção melhor.</string>
 
 
    <!--  STRINGS OF MageArmor CLASS  -->
@@ -708,10 +709,10 @@
 
 
    <!--  STRINGS OF RogueArmor CLASS  -->
-   <string name="RogueArmor_Name">traje do trapaceiro</string>
-   <string name="RogueArmor_Desc">Vestindo esta farda escura, um trapaceiro pode realizar um truque que é chamado de "bomba de fumaça"(mesmo sem usar explosivos reais): ele cega inimigos que podem vê-lo e pula para o lado.</string>
+   <string name="RogueArmor_Name">traje de ladrão</string>
+   <string name="RogueArmor_Desc">Vestindo esta farda escura, um ladrão pode realizar um truque que é chamado de "bomba de fumaça"(mesmo sem usar explosivos reais): ele cega inimigos que podem vê-lo e pula para o lado.</string>
    <string name="RogueArmor_ACSpecial">BOMBA DE FUMAÇA</string>
-   <string name="RogueArmor_NotRogue">Só trapaceiros pode usar esta armadura!</string>
+   <string name="RogueArmor_NotRogue">Só ladrões pode usar esta armadura!</string>
    <string name="RogueArmor_Fov">Você só pode pular para um lugar vazio no seu campo de visão</string>
    <string name="RogueArmor_Prompt">Escolha um lugar para pular</string>
 
@@ -847,7 +848,7 @@
    <string name="Potion_Shatter">Ao quebrar o frasco o líquido %s espirrará sem causar danos</string>
    <string-array name="Potion_Colors">
        <item >turquesa</item>
-       <item >carmin</item>
+       <item >carmim</item>
        <item >azul</item>
        <item >jade</item>
        <item >dourado</item>
@@ -1028,7 +1029,7 @@
 
 
    <!--  STRINGS OF RingOfMending CLASS  -->
-   <string name="RingOfMending_Name">Anel da Recomposição</string>
+   <string name="RingOfMending_Name">Anel da Regeneração</string>
    <string name="RingOfMending_Info">Este anel aumenta propriedades regenerativas do corpo, permitindo que se possa recuperar a vida perdida em um ritmo acelerado. Anéis degradadas vão diminuir ou mesmo interromper sua regeneração natural.</string>
 
 
@@ -1350,8 +1351,8 @@
 
 
    <!--  STRINGS OF Knuckles CLASS  -->
-   <string name="Knuckles_Name">Soqueira</string>
-   <string name="Knuckles_Info">Uma peça de ferro com formato específico para colocar em seus dedos.</string>
+   <string name="Knuckles_Name">Soco Inglês</string>
+   <string name="Knuckles_Info">Também conhecido por Soqueira, é uma peça de ferro com formato específico para colocar em seus dedos.</string>
 
 
    <!--  STRINGS OF Longsword CLASS  -->
@@ -1476,7 +1477,7 @@
    <string name="Blindness_Info">Cego</string>
    <!--  STRINGS OF Burning CLASS  -->
    <string name="Burning_Info">Queimando</string>
-   <string name="Burning_Burns">%s está queimand!</string>
+   <string name="Burning_Burns">%s está queimando!</string>
    <string name="Burning_Death">Você queimou até a morte ...</string>
    <!--  STRINGS OF Charm CLASS  -->
    <string name="Charm_Info">Encantado</string>
@@ -1490,7 +1491,7 @@
    <!--  STRINGS OF Fury CLASS  -->
    <string name="Fury_Info">Furioso</string>
    <!--  STRINGS OF GasesImmunity CLASS  -->
-   <string name="GasesImmunity_Info">imune a gases</string>
+   <string name="GasesImmunity_Info">Imune a gases</string>
    <!--  STRINGS OF Hunger CLASS  -->
    <string name="Hunger_Hungry">Você está com fome.</string>
    <string name="Hunger_Starving">Você está morrendo de fome!</string>
@@ -1520,7 +1521,7 @@
    <!--  STRINGS OF Slow CLASS  -->
    <string name="Slow_Info">Lento</string>
    <!--  STRINGS OF SnipersMark CLASS  -->
-   <string name="SnipersMark_Info">Sniper\'s mark</string>
+   <string name="SnipersMark_Info">Sniper\'s</string>
    <!--  STRINGS OF Vertigo CLASS  -->
    <string name="Vertigo_Info">Vertigem</string>
    <!--  STRINGS OF Weakness CLASS  -->
@@ -1642,8 +1643,8 @@
    <!--  STRINGS OF Tengu CLASS  -->
    <string name="Tengu_Name">Tengu</string>
    <string name="Tengu_Desc">Tengu são membros de um clã antigo de assassinos, que também é chamado de Tengu. Esses assassinos são conhecidos por uso extensivo de shuriken e armadilhas.</string>
-   <string name="Tengu_Info1">Livre afinal...</string>
-   <string name="Tengu_Info2">Gotcha, %s!</string>
+   <string name="Tengu_Info1">Finalmente livre...</string>
+   <string name="Tengu_Info2">Te peguei, %s!</string>
    <!--  STRINGS OF Thief CLASS  -->
    <string name="Thief_Name">Ladrão Maluco</string>
    <string name="Thief_Desc">Níveis mais profundos da masmorra sempre foram um esconderijo para todos os tipos de criminosos. Nem todos eles poderiam manter uma mente clara durante os longos períodos longe de luz do dia. Há muito tempo, esses ladrões loucos e bandidos se esqueceram quem são e por que eles roubam.</string>
@@ -1754,7 +1755,7 @@
    <string name="Level_TileLockedExit">Saída trancada</string>
    <string name="Level_TileUnlockedExit">Saída desbloqueada</string>
    <string name="Level_TileSign">Indicação</string>
-   <string name="Level_TileWell">poço</string>
+   <string name="Level_TileWell">Poço</string>
    <string name="Level_TileEmptyWell">Poço vazio</string>
    <string name="Level_TileStatue">Estatua</string>
    <string name="Level_TileToxicTrap">Armadilha de gás tóxico</string>
@@ -1863,4 +1864,10 @@
    <string name="Toolbar_Info1">Você não sabe o que tem ali.</string>
    <string name="Toolbar_Info2">Selecione uma célula para examinar</string>
 
+
+<!--  PACKAGE /utils  -->
+   <!--  STRINGS OF Utils CLASS  -->
+   <!-- 1: Execute Indefinite Function to Language -->
+   <!-- 0: NO Execute Indefinite Function to Language -->
+   <string name="Utils_IsIndefinte">0</string>
 </resources>
