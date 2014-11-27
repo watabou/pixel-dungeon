@@ -23,11 +23,14 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.food.FrozenCarpaccio;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
+import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
+import com.watabou.pixeldungeon.utils.GLog;
 
 public class Frost extends FlavourBuff {
 
+	private static final String TXT_SHATTERS = "The cold causes %s to shatter!";
 	private static final float DURATION	= 5f;
 	
 	@Override
@@ -47,6 +50,11 @@ public class Frost extends FlavourBuff {
 					if (!carpaccio.collect( hero.belongings.backpack )) {
 						Dungeon.level.drop( carpaccio, target.pos ).sprite.drop();
 					}
+				} else if(item instanceof Potion) {
+					
+					item = item.detach( hero.belongings.backpack );
+					GLog.w( TXT_SHATTERS, item.toString() );
+					((Potion) item).shatter( target.pos );
 				}
 			}
 
