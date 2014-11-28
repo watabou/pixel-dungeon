@@ -113,8 +113,8 @@ public class WndBag extends WndTabbed {
 		Belongings stuff = Dungeon.hero.belongings;
 		Bag[] bags = {
 			stuff.backpack, 
-			stuff.getItem( SeedPouch.class ), 
 			stuff.getItem( PotionBelt.class ), 
+			stuff.getItem( SeedPouch.class ), 
 			stuff.getItem( ScrollHolder.class ),
 			stuff.getItem( WandHolster.class )};
 		
