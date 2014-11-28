@@ -26,7 +26,7 @@ public class PotionBelt extends Bag {
 	@Override
 	public String info() {
 		return
-			"This storng lether belt allows you to store all your potions";
+			"This strong lether belt is capable of storing all your potions while protecting them from shattering due to frost";
 	}
 	
 }

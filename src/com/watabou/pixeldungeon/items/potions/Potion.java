@@ -178,6 +178,12 @@ public class Potion extends Item {
 		}
 	}
 	
+	public void shatter( int cell ) {
+		GLog.i( "The flask shatters and " + color() + " liquid splashes harmlessly" );
+		Sample.INSTANCE.play( Assets.SND_SHATTER );
+		splash( cell );
+	}
+	
 	protected void drink( Hero hero ) {
 		
 		detach( hero.belongings.backpack );
@@ -210,12 +216,6 @@ public class Potion extends Item {
 	
 	protected void apply( Hero hero ) {
 		shatter( hero.pos );
-	}
-	
-	protected void shatter( int cell ) {
-		GLog.i( "The flask shatters and " + color() + " liquid splashes harmlessly" );
-		Sample.INSTANCE.play( Assets.SND_SHATTER );
-		splash( cell );
 	}
 	
 	public boolean isKnown() {

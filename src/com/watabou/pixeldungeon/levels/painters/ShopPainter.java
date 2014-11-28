@@ -35,7 +35,10 @@ import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
 import com.watabou.pixeldungeon.items.food.OverpricedRation;
+import com.watabou.pixeldungeon.items.potions.PotionOfFrost;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
+import com.watabou.pixeldungeon.items.potions.PotionOfLiquidFlame;
+import com.watabou.pixeldungeon.items.potions.PotionOfToxicGas;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRemoveCurse;
@@ -97,6 +100,13 @@ public class ShopPainter extends Painter {
 			items.add( (Random.Int( 2 ) == 0 ? new Quarterstaff() : new Spear()).identify() );
 			items.add( new LeatherArmor().identify() );
 			items.add( new PotionBelt() );
+			items.add( new PotionOfFrost() );
+			items.add( new PotionOfFrost() );
+			items.add( new PotionOfFrost() );
+			items.add( new PotionOfLiquidFlame() );
+			items.add( new PotionOfLiquidFlame() );
+			items.add( new PotionOfToxicGas() );
+			items.add( new PotionOfToxicGas() );
 			items.add( new Weightstone() );
 			break;
 			
