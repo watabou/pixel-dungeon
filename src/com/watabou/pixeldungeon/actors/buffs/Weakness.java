@@ -23,8 +23,13 @@ import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class Weakness extends FlavourBuff {
-
+	protected static final String TXT_HERO = "You feel weakened!";
 	private static final float DURATION = 40f;
+
+	@Override
+	public String getHeroText() {
+		return TXT_HERO;
+	}
 
 	@Override
 	public int icon() {

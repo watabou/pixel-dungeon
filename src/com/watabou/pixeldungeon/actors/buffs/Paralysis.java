@@ -24,7 +24,16 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 public class Paralysis extends FlavourBuff {
 
 	private static final float DURATION	= 10f;
-	
+	protected static final String TXT_HERO = "You are paralysed!";
+
+	@Override
+	public String getHeroText() {
+		return TXT_HERO;
+	}
+
+	@Override
+	public boolean isInterrupting() { return true; }
+
 	@Override
 	public boolean attachTo( Char target ) {
 		if (super.attachTo( target )) {

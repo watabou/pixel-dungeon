@@ -44,12 +44,20 @@ public class Burning extends Buff implements Hero.Doom {
 
 	private static final String TXT_BURNS_UP		= "%s burns up!";
 	private static final String TXT_BURNED_TO_DEATH	= "You burned to death...";
-	
+	protected static final String TXT_HERO = "You catch fire!";
 	private static final float DURATION = 8f;
 	
 	private float left;
 	
 	private static final String LEFT	= "left";
+
+	@Override
+	public String getHeroText() {
+		return TXT_HERO;
+	}
+
+	@Override
+	public boolean isInterrupting() { return true; }
 	
 	@Override
 	public void storeInBundle( Bundle bundle ) {

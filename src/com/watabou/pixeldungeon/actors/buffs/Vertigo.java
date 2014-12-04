@@ -24,7 +24,16 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 public class Vertigo extends FlavourBuff {
 	
 	public static final float DURATION	= 10f;
-	
+	protected static final String TXT_HERO = "Everything is spinning around you!";
+
+	@Override
+	public String getHeroText() {
+		return TXT_HERO;
+	}
+
+	@Override
+	public boolean isInterrupting() { return true; }
+
 	@Override
 	public int icon() {
 		return BuffIndicator.VERTIGO;

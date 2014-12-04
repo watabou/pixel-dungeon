@@ -22,6 +22,13 @@ import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class Charm extends FlavourBuff {
+
+	protected static final String TXT_HERO = "You are charmed!";
+
+	@Override
+	public String getHeroText() {
+		return TXT_HERO;
+	}
 	
 	@Override
 	public boolean attachTo( Char target ) {

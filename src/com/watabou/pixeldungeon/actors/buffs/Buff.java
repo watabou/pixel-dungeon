@@ -24,7 +24,6 @@ import com.watabou.pixeldungeon.ui.BuffIndicator;
 public class Buff extends Actor {
 	
 	public Char target;
-	
 	public boolean attachTo( Char target ) {
 
 		if (target.immunities().contains( getClass() )) {
@@ -41,6 +40,9 @@ public class Buff extends Actor {
 		target.remove( this );
 	}
 	
+	public String getHeroText() { return "";};
+	public boolean isInterrupting() { return false; };
+
 	@Override
 	public boolean act() {
 		diactivate();
