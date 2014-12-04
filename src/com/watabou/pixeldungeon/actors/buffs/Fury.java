@@ -31,7 +31,7 @@ public class Fury extends Buff {
 	@Override
 	public boolean isInterrupting() { return true; }
 
-    @Override
+	@Override
 	public boolean act() {
 		if (target.HP > target.HT * LEVEL) {
 			detach();
