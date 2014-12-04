@@ -28,8 +28,8 @@ public class Fury extends Buff {
 		return TXT_HERO;
 	}
 
-    @Override
-    public boolean isInterrupting() { return true; }
+	@Override
+	public boolean isInterrupting() { return true; }
 
     @Override
 	public boolean act() {

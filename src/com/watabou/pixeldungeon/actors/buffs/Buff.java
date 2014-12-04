@@ -41,7 +41,7 @@ public class Buff extends Actor {
 	}
 	
 	public String getHeroText() { return "";};
-    public boolean isInterrupting() { return false; };
+	public boolean isInterrupting() { return false; };
 
 	@Override
 	public boolean act() {

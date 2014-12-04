@@ -31,8 +31,8 @@ public class Vertigo extends FlavourBuff {
 		return TXT_HERO;
 	}
 
-    @Override
-    public boolean isInterrupting() { return true; }
+	@Override
+	public boolean isInterrupting() { return true; }
 
 	@Override
 	public int icon() {
