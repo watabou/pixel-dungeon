@@ -39,8 +39,11 @@ public class Poison extends Buff implements Hero.Doom {
 	public String getHeroText() {
 		return TXT_HERO;
 	}
-	
-	@Override
+
+    @Override
+    public boolean isInterrupting() { return true; }
+
+    @Override
 	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle( bundle );
 		bundle.put( LEFT, left );

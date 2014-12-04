@@ -30,7 +30,10 @@ public class Paralysis extends FlavourBuff {
 	public String getHeroText() {
 		return TXT_HERO;
 	}
-	
+
+    @Override
+    public boolean isInterrupting() { return true; }
+
 	@Override
 	public boolean attachTo( Char target ) {
 		if (super.attachTo( target )) {

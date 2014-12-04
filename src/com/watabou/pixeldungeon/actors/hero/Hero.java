@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.actors.hero;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashSet;
 
 import com.watabou.noosa.Camera;
@@ -123,8 +122,6 @@ public class Hero extends Char {
 	private static final String TXT_WAIT	= "...";
 	private static final String TXT_SEARCH	= "search";
 
-	public static final String[] interruptingBuffs = new String[] {"Burning", "Paralysed", "Poisoned", "Fury", "Vertigo"};
-	
 	public static final int STARTING_STR = 10;
 	
 	private static final float TIME_TO_REST		= 1f;
@@ -1076,7 +1073,7 @@ public class Hero extends Char {
 			}
 			String buffString = buff.toString();
 
-			if (Arrays.asList(Hero.interruptingBuffs).contains(buffString)) {
+            if (buff.isInterrupting()) {
 				interrupt();
 			}
 			

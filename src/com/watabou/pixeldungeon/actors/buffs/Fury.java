@@ -28,7 +28,10 @@ public class Fury extends Buff {
 		return TXT_HERO;
 	}
 
-	@Override
+    @Override
+    public boolean isInterrupting() { return true; }
+
+    @Override
 	public boolean act() {
 		if (target.HP > target.HT * LEVEL) {
 			detach();

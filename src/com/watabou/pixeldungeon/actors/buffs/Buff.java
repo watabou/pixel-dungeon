@@ -21,7 +21,7 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
-public abstract class Buff extends Actor {
+public class Buff extends Actor {
 	
 	public Char target;
 	public boolean attachTo( Char target ) {
@@ -41,6 +41,7 @@ public abstract class Buff extends Actor {
 	}
 	
 	public String getHeroText() { return "";};
+    public boolean isInterrupting() { return false; };
 
 	@Override
 	public boolean act() {
