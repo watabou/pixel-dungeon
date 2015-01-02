@@ -157,6 +157,7 @@ public class ItemSpriteSheet {
 	public static final int POUCH	= 83;
 	public static final int HOLDER	= 104;
 	public static final int HOLSTER	= 111;
+	public static final int BELT = 124;
 	
 	// Misc
 	public static final int ANKH	= 1;

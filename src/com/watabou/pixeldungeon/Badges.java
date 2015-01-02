@@ -34,6 +34,7 @@ import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.actors.mobs.Senior;
 import com.watabou.pixeldungeon.actors.mobs.Shielded;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.bags.PotionBelt;
 import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
@@ -70,6 +71,7 @@ public class Badges {
 		BAG_BOUGHT_SEED_POUCH,
 		BAG_BOUGHT_SCROLL_HOLDER,
 		BAG_BOUGHT_WAND_HOLSTER,
+		BAG_BOUGHT_POTION_BELT,
 		ALL_BAGS_BOUGHT( "All bags bought", 23 ),
 		DEATH_FROM_FIRE( "Death from fire", 24 ),
 		DEATH_FROM_POISON( "Death from poison", 25 ),
@@ -479,6 +481,8 @@ public class Badges {
 			badge = Badge.BAG_BOUGHT_SCROLL_HOLDER;
 		} else if (bag instanceof WandHolster) {
 			badge = Badge.BAG_BOUGHT_WAND_HOLSTER;
+		} else if (bag instanceof PotionBelt) {
+			badge = Badge.BAG_BOUGHT_POTION_BELT;
 		}
 		
 		if (badge != null) {
@@ -488,7 +492,8 @@ public class Badges {
 			if (!local.contains( Badge.ALL_BAGS_BOUGHT ) &&
 				local.contains( Badge.BAG_BOUGHT_SCROLL_HOLDER ) &&
 				local.contains( Badge.BAG_BOUGHT_SEED_POUCH ) &&
-				local.contains( Badge.BAG_BOUGHT_WAND_HOLSTER )) {
+				local.contains( Badge.BAG_BOUGHT_WAND_HOLSTER ) &&
+				local.contains( Badge.BAG_BOUGHT_POTION_BELT)) {
 						
 					badge = Badge.ALL_BAGS_BOUGHT;
 					local.add( badge );

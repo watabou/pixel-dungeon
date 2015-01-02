@@ -30,6 +30,7 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.Torch;
 import com.watabou.pixeldungeon.items.Weightstone;
 import com.watabou.pixeldungeon.items.armor.*;
+import com.watabou.pixeldungeon.items.bags.PotionBelt;
 import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
@@ -95,21 +96,21 @@ public class ShopPainter extends Painter {
 		case 6:
 			items.add( (Random.Int( 2 ) == 0 ? new Quarterstaff() : new Spear()).identify() );
 			items.add( new LeatherArmor().identify() );
-			items.add( new SeedPouch() );
+			items.add( new PotionBelt() );
 			items.add( new Weightstone() );
 			break;
 			
 		case 11:
 			items.add( (Random.Int( 2 ) == 0 ? new Sword() : new Mace()).identify() );
 			items.add( new MailArmor().identify() );
-			items.add( new ScrollHolder() );
+			items.add( new SeedPouch() );
 			items.add( new Weightstone() );
 			break;
 			
 		case 16:
 			items.add( (Random.Int( 2 ) == 0 ? new Longsword() : new BattleAxe()).identify() );
 			items.add( new ScaleArmor().identify() );
-			items.add( new WandHolster() );
+			items.add( new ScrollHolder() );
 			items.add( new Weightstone() );
 			break;
 			
@@ -125,6 +126,7 @@ public class ShopPainter extends Painter {
 				items.add( new PlateArmor().identify() );
 				break;
 			}
+			items.add( new WandHolster() );
 			items.add( new Torch() );
 			items.add( new Torch() );
 			break;
