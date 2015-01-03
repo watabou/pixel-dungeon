@@ -14,9 +14,9 @@
    <!--  STRINGS OF AboutScene CLASS  -->
    <string name="AboutScene_Txt">Code &amp; graphics: Watabou\nMusic: Cube_Code\n\nThis game is inspired by Brian Walker\'s Brogue. Try it on Windows, Mac OS or Linux - it\'s awesome! ;)\n\nPlease visit official website for additional info:</string>
    <string name="AboutScene_Lnk">pixeldungeon.watabou.ru</string>
-   <string name="AboutScene_Translate">Languages Create: rodriformiga</string>
-   <string name="AboutScene_TranslateLnk">rodriformiga@gmail.com</string>
-   <string name="AboutScene_TranslateSnd">Send E-Mail</string>
+   <string name="AboutScene_Translate">Languages Create: rodriformiga</string><!-- Write here the translation credits. -->
+   <string name="AboutScene_TranslateLnk">rodriformiga@gmail.com</string><!-- Write here the e-mail to contat for translator -->
+   <string name="AboutScene_TranslateSnd">Send E-Mail</string><!-- Write here the "Send E-mail" title of the window -->
 
 
    <!--  STRINGS OF RankingsScene CLASS  -->
