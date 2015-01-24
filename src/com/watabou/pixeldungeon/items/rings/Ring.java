@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,6 +21,7 @@ import java.util.ArrayList;
 
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -30,15 +31,24 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.ItemStatusHandler;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public class Ring extends EquipableItem {
 
+	private static final int TICKS_TO_KNOW	= 200;
+	
 	private static final float TIME_TO_EQUIP = 1f;
 	
 	private static final String TXT_IDENTIFY = 
 		"you are now familiar enough with your %s to identify it. It is %s.";
+	
+	private static final String TXT_UNEQUIP_TITLE = "Unequip one ring";
+	private static final String TXT_UNEQUIP_MESSAGE = 
+		"You can only wear two rings at a time. " +
+		"Unequip one of your equipped rings.";
 	
 	protected Buff buff;
 	
@@ -76,7 +86,7 @@ public class Ring extends EquipableItem {
 	
 	private String gem;
 	
-	private int ticksToKnow = 200;
+	private int ticksToKnow = TICKS_TO_KNOW;
 	
 	@SuppressWarnings("unchecked")
 	public static void initGems() {
@@ -110,11 +120,32 @@ public class Ring extends EquipableItem {
 	}
 	
 	@Override
-	public boolean doEquip( Hero hero ) {
+	public boolean doEquip( final Hero hero ) {
 		
 		if (hero.belongings.ring1 != null && hero.belongings.ring2 != null) {
 			
-			GLog.w( "you can only wear 2 rings at a time" );
+			final Ring r1 = hero.belongings.ring1;
+			final Ring r2 = hero.belongings.ring2;
+			
+			PixelDungeon.scene().add( 
+				new WndOptions( TXT_UNEQUIP_TITLE, TXT_UNEQUIP_MESSAGE, 
+					Utils.capitalize( r1.toString() ), 
+					Utils.capitalize( r2.toString() ) ) {
+					
+					@Override
+					protected void onSelect( int index ) {
+						
+						detach( hero.belongings.backpack );
+						
+						Ring equipped = (index == 0 ? r1 : r2);
+						if (equipped.doUnequip( hero, true, false )) {
+							doEquip( hero );
+						} else {
+							collect( hero.belongings.backpack );
+						}
+					}
+				} );
+			
 			return false;
 			
 		} else {
@@ -191,6 +222,32 @@ public class Ring extends EquipableItem {
 		return this;
 	}
 	
+	@Override
+	public Item degrade() {
+		
+		super.degrade();
+		
+		if (buff != null) {
+			
+			Char owner = buff.target;
+			buff.detach();
+			if ((buff = buff()) != null) {
+				buff.attachTo( owner );
+			}
+		}
+		
+		return this;
+	}
+	
+	@Override
+	public int maxDurability( int lvl ) {
+		if (lvl <= 1) {
+			return Integer.MAX_VALUE;
+		} else {
+			return 80 * (lvl < 16 ? 16 - lvl : 1);
+		}
+	}
+	
 	public boolean isKnown() {
 		return handler.isKnown( this );
 	}
@@ -246,10 +303,12 @@ public class Ring extends EquipableItem {
 	
 	@Override
 	public Item random() {
-		level = Random.Int( 1, 3 );
+		int lvl = Random.Int( 1, 3 );
 		if (Random.Float() < 0.3f) {
-			level = -level;
+			degrade( lvl );
 			cursed = true;
+		} else {
+			upgrade( lvl );
 		}
 		return this;
 	}
@@ -279,6 +338,22 @@ public class Ring extends EquipableItem {
 	
 	protected RingBuff buff() {
 		return null;
+	}
+	
+	private static final String UNFAMILIRIARITY	= "unfamiliarity";
+	
+	@Override
+	public void storeInBundle( Bundle bundle ) {
+		super.storeInBundle( bundle );
+		bundle.put( UNFAMILIRIARITY, ticksToKnow );
+	}
+	
+	@Override
+	public void restoreFromBundle( Bundle bundle ) {
+		super.restoreFromBundle( bundle );
+		if ((ticksToKnow = bundle.getInt( UNFAMILIRIARITY )) == 0) {
+			ticksToKnow = TICKS_TO_KNOW;
+		}
 	}
 	
 	public class RingBuff extends Buff {
@@ -311,6 +386,8 @@ public class Ring extends EquipableItem {
 				GLog.w( TXT_IDENTIFY, gemName, Ring.this.toString() );
 				Badges.validateItemLevelAquired( Ring.this );
 			}
+			
+			use();
 			
 			spend( TICK );
 			

@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -27,7 +27,6 @@ public class Chrome {
 		WINDOW,
 		BUTTON,
 		TAG,
-		GEM,
 		SCROLL,
 		TAB_SET,
 		TAB_SELECTED,
@@ -46,8 +45,6 @@ public class Chrome {
 			return new NinePatch( Assets.CHROME, 58, 0, 4, 4, 1 );
 		case TAG:
 			return new NinePatch( Assets.CHROME, 22, 18, 16, 14, 3 );
-		case GEM:
-			return new NinePatch( Assets.CHROME, 0, 32, 32, 32, 13 );
 		case SCROLL:
 			return new NinePatch( Assets.CHROME, 32, 32, 32, 32, 5, 11, 5, 11 );
 		case TAB_SET:

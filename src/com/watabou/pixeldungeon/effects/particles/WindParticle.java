@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -36,7 +36,7 @@ public class WindParticle extends PixelParticle {
 		}
 	};
 	
-	private static float angle = Random.Float( PointF.PI * 2 );
+	private static float angle = Random.Float( PointF.PI2 );
 	private static PointF speed = new PointF().polar( angle, 5 );
 	
 	private float size;

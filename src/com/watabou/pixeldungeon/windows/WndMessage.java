@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,12 +18,15 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Window;
 
 public class WndMessage extends Window {
 	
-	private static final int WIDTH = 120;
+	private static final int WIDTH_P = 120;
+	private static final int WIDTH_L = 144;
+	
 	private static final int MARGIN = 4;
 	
 	public WndMessage( String text ) {
@@ -31,7 +34,7 @@ public class WndMessage extends Window {
 		super();
 		
 		BitmapTextMultiline info = PixelScene.createMultiline( text, 6 );
-		info.maxWidth = WIDTH - MARGIN * 2;
+		info.maxWidth = (PixelDungeon.landscape() ? WIDTH_L : WIDTH_P) - MARGIN * 2;
 		info.measure();
 		info.x = info.y = MARGIN;
 		add( info );

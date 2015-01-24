@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -41,7 +41,7 @@ public class WndWandmaker extends Window {
 	private static final String TXT_FARAWELL	= "Good luck in your quest, %s!";
 	
 	private static final int WIDTH		= 120;
-	private static final int BTN_HEIGHT	= 18;
+	private static final int BTN_HEIGHT	= 20;
 	private static final float GAP		= 2;
 	
 	public WndWandmaker( final Wandmaker wandmaker, final Item item ) {

@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -33,19 +33,24 @@ import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.Window;
-import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndError;
 import com.watabou.pixeldungeon.windows.WndRanking;
 
 public class RankingsScene extends PixelScene {
 	
+	private static final int DEFAULT_COLOR	= 0xCCCCCC;
+	
 	private static final String TXT_TITLE		= "Top Rankings";
-	private static final String TXT_TOTAL		= "Total games played: %d";
+	private static final String TXT_TOTAL		= "Games played: ";
 	private static final String TXT_NO_GAMES	= "No games have been played yet.";
 	
 	private static final String TXT_NO_INFO	= "No additional information";
 	
-	private static final float ROW_HEIGHT	= 30;
+	private static final float ROW_HEIGHT_L	= 22;
+	private static final float ROW_HEIGHT_P	= 28;
+	
+	private static final float MAX_ROW_WIDTH	= 180;
+	
 	private static final float GAP	= 4;
 	
 	private Archs archs;
@@ -71,8 +76,10 @@ public class RankingsScene extends PixelScene {
 		
 		if (Rankings.INSTANCE.records.size() > 0) {
 			
-			float left = (w - Math.min( 160, w )) / 2 + GAP;
-			float top = align( (h - ROW_HEIGHT  * Rankings.INSTANCE.records.size()) / 2 );
+			float rowHeight = PixelDungeon.landscape() ? ROW_HEIGHT_L : ROW_HEIGHT_P;
+			
+			float left = (w - Math.min( MAX_ROW_WIDTH, w )) / 2 + GAP;
+			float top = align( (h - rowHeight  * Rankings.INSTANCE.records.size()) / 2 );
 			
 			BitmapText title = PixelScene.createText( TXT_TITLE, 9 );
 			title.hardlight( Window.TITLE_COLOR );
@@ -85,25 +92,41 @@ public class RankingsScene extends PixelScene {
 			
 			for (Rankings.Record rec : Rankings.INSTANCE.records) {
 				Record row = new Record( pos, pos == Rankings.INSTANCE.lastRecord, rec );
-				row.setRect( left, top + pos * ROW_HEIGHT, w - left * 2, ROW_HEIGHT );
+				row.setRect( left, top + pos * rowHeight, w - left * 2, rowHeight );
 				add( row );
 				
 				pos++;
 			}
 			
 			if (Rankings.INSTANCE.totalNumber >= Rankings.TABLE_SIZE) {
-				BitmapText total = PixelScene.createText( Utils.format( TXT_TOTAL, Rankings.INSTANCE.totalNumber ), 8 );
-				total.hardlight( Window.TITLE_COLOR );
+				BitmapText label = PixelScene.createText( TXT_TOTAL, 8 );
+				label.hardlight( DEFAULT_COLOR );
+				label.measure();
+				add( label );
+				
+				BitmapText won = PixelScene.createText( Integer.toString( Rankings.INSTANCE.wonNumber ), 8 );
+				won.hardlight( Window.TITLE_COLOR );
+				won.measure();
+				add( won );
+				
+				BitmapText total = PixelScene.createText( "/" + Rankings.INSTANCE.totalNumber, 8 );
+				total.hardlight( DEFAULT_COLOR );
 				total.measure();
 				total.x = align( (w - total.width()) / 2 );
-				total.y = align( top + pos * ROW_HEIGHT + GAP );
+				total.y = align( top + pos * rowHeight + GAP );
 				add( total );
+				
+				float tw = label.width() + won.width() + total.width();
+				label.x = align( (w - tw) / 2 );
+				won.x = label.x + label.width();
+				total.x = won.x + won.width();
+				label.y = won.y = total.y = align( top + pos * rowHeight + GAP );
 			}
 			
 		} else {
 			
 			BitmapText title = PixelScene.createText( TXT_NO_GAMES, 8 );
-			title.hardlight( Window.TITLE_COLOR );
+			title.hardlight( DEFAULT_COLOR );
 			title.measure();
 			title.x = align( (w - title.width()) / 2 );
 			title.y = align( (h - title.height()) / 2 );

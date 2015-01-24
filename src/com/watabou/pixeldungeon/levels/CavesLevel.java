@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -156,7 +156,7 @@ public class CavesLevel extends RegularLevel {
 		for (Room r : rooms) {
 			if (r.type == Type.STANDARD) {
 				for (Room n : r.neigbours) {
-					if (n.type == Type.STANDARD && !r.connected.containsKey( n )/* && Random.Int( 2 ) == 0*/) {
+					if (n.type == Type.STANDARD && !r.connected.containsKey( n )) {
 						Rect w = r.intersect( n );
 						if (w.left == w.right && w.bottom - w.top >= 5) {
 							

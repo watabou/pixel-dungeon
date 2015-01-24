@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -71,7 +71,7 @@ public class Burning extends Buff implements Hero.Doom {
 			if (target instanceof Hero) {
 				Buff.prolong( target, Light.class, TICK * 1.01f );
 			}
-			
+
 			target.damage( Random.Int( 1, 5 ), this );
 			
 			if (target instanceof Hero) {
@@ -120,7 +120,7 @@ public class Burning extends Buff implements Hero.Doom {
 			
 			detach();
 		}
-		
+
 		return true;
 	}
 	

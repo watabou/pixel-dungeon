@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,12 +25,17 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Statistics;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.Burning;
+import com.watabou.pixeldungeon.actors.buffs.Frost;
 import com.watabou.pixeldungeon.actors.hero.Hero;
+import com.watabou.pixeldungeon.actors.mobs.Mimic;
 import com.watabou.pixeldungeon.actors.mobs.Wraith;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
+import com.watabou.pixeldungeon.effects.particles.FlameParticle;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.food.ChargrilledMeat;
 import com.watabou.pixeldungeon.items.food.FrozenCarpaccio;
@@ -39,12 +44,15 @@ import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.plants.Plant.Seed;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public class Heap implements Bundlable {
 
+	private static final String TXT_MIMIC = "This is a mimic!";
+	
 	private static final int SEEDS_TO_POTION = 3;
 	
 	public enum Type {
@@ -54,7 +62,8 @@ public class Heap implements Bundlable {
 		LOCKED_CHEST, 
 		CRYSTAL_CHEST,
 		TOMB, 
-		SKELETON
+		SKELETON,
+		MIMIC
 	}
 	public Type type = Type.HEAP;
 	
@@ -62,7 +71,7 @@ public class Heap implements Bundlable {
 	
 	public ItemSprite sprite;
 	
-	protected LinkedList<Item> items = new LinkedList<Item>();
+	public LinkedList<Item> items = new LinkedList<Item>();
 	
 	public int image() {
 		switch (type) {
@@ -70,6 +79,7 @@ public class Heap implements Bundlable {
 		case FOR_SALE:
 			return size() > 0 ? items.peek().image() : 0;
 		case CHEST:
+		case MIMIC:
 			return ItemSpriteSheet.CHEST;
 		case LOCKED_CHEST:
 			return ItemSpriteSheet.LOCKED_CHEST;
@@ -90,6 +100,14 @@ public class Heap implements Bundlable {
 	
 	public void open( Hero hero ) {
 		switch (type) {
+		case MIMIC:
+			if (Mimic.spawnAt( pos, items ) != null) {
+				GLog.n( TXT_MIMIC );
+				destroy();
+			} else {
+				type = Type.CHEST;
+			}
+			break;
 		case TOMB:
 			Wraith.spawnAround( hero.pos );
 			break;
@@ -109,9 +127,11 @@ public class Heap implements Bundlable {
 		default:
 		}
 		
-		type = Type.HEAP;
-		sprite.link();
-		sprite.drop();
+		if (type != Type.MIMIC) {
+			type = Type.HEAP;
+			sprite.link();
+			sprite.drop();
+		}
 	}
 	
 	public int size() {
@@ -171,6 +191,14 @@ public class Heap implements Bundlable {
 	
 	public void burn() {
 		
+		if (type == Type.MIMIC) {
+			Mimic m = Mimic.spawnAt( pos, items );
+			if (m != null) {
+				Buff.affect( m, Burning.class ).reignite( m );
+				m.sprite.emitter().burst( FlameParticle.FACTORY, 5 );
+				destroy();
+			}
+		}
 		if (type != Type.HEAP) {
 			return;
 		}
@@ -212,6 +240,13 @@ public class Heap implements Bundlable {
 	
 	public void freeze() {
 		
+		if (type == Type.MIMIC) {
+			Mimic m = Mimic.spawnAt( pos, items );
+			if (m != null) {
+				Buff.prolong( m, Frost.class, Frost.duration( m ) * Random.Float( 1.0f, 1.5f ) );
+				destroy();
+			}
+		}
 		if (type != Type.HEAP) {
 			return;
 		}

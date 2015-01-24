@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.actors.hero;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 
 import com.watabou.noosa.Camera;
@@ -70,6 +71,8 @@ import com.watabou.pixeldungeon.items.keys.GoldenKey;
 import com.watabou.pixeldungeon.items.keys.Key;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
 import com.watabou.pixeldungeon.items.keys.IronKey;
+import com.watabou.pixeldungeon.items.potions.Potion;
+import com.watabou.pixeldungeon.items.potions.PotionOfMight;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.RingOfAccuracy;
 import com.watabou.pixeldungeon.items.rings.RingOfDetection;
@@ -78,9 +81,11 @@ import com.watabou.pixeldungeon.items.rings.RingOfEvasion;
 import com.watabou.pixeldungeon.items.rings.RingOfHaste;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
 import com.watabou.pixeldungeon.items.rings.RingOfThorns;
+import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfRecharging;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfEnchantment;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.watabou.pixeldungeon.items.weapon.missiles.MissileWeapon;
@@ -88,6 +93,7 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.levels.features.AlchemyPot;
 import com.watabou.pixeldungeon.levels.features.Chasm;
+import com.watabou.pixeldungeon.levels.features.Sign;
 import com.watabou.pixeldungeon.plants.Earthroot;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.InterlevelScene;
@@ -96,7 +102,6 @@ import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.sprites.HeroSprite;
 import com.watabou.pixeldungeon.ui.AttackIndicator;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
-import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndResurrect;
@@ -134,7 +139,9 @@ public class Hero extends Char {
 	private int attackSkill = 10;
 	private int defenseSkill = 5;
 	
+
 	public boolean ready = false;
+
 	public HeroAction curAction = null;
 	public HeroAction lastAction = null;
 	
@@ -464,7 +471,7 @@ public class Hero extends Char {
 	}
 	
 	public void interrupt() {
-		if (curAction != null && curAction.dst != pos) {
+		if (isAlive() && curAction != null && curAction.dst != pos) {
 			lastAction = curAction;
 		}
 		curAction = null;
@@ -484,9 +491,10 @@ public class Hero extends Char {
 			
 		} else {
 			if (Dungeon.level.map[pos] == Terrain.SIGN) {
-				GameScene.show( new WndMessage( Dungeon.tip() ) );
+				Sign.read( pos );
 			}
 			ready();
+			
 			return false;
 		}
 	}
@@ -567,10 +575,12 @@ public class Hero extends Char {
 				if (item.doPickUp( this )) {
 					
 					if (item instanceof Dewdrop) {
-
+						// Do nothing
 					} else {
-						if ((item instanceof ScrollOfUpgrade && ((ScrollOfUpgrade)item).isKnown()) ||
-							(item instanceof PotionOfStrength && ((PotionOfStrength)item).isKnown())) {
+						boolean important = 
+							((item instanceof ScrollOfUpgrade || item instanceof ScrollOfEnchantment) && ((Scroll)item).isKnown()) ||
+							((item instanceof PotionOfStrength || item instanceof PotionOfMight) && ((Potion)item).isKnown());
+						if (important) {
 							GLog.p( TXT_YOU_NOW_HAVE, item.name() );
 						} else {
 							GLog.i( TXT_YOU_NOW_HAVE, item.name() );
@@ -606,9 +616,7 @@ public class Hero extends Char {
 		if (Level.adjacent( pos, dst ) || pos == dst) {
 			
 			Heap heap = Dungeon.level.heaps.get( dst );
-			if (heap != null && 
-				(heap.type == Type.CHEST || heap.type == Type.TOMB || heap.type == Type.SKELETON ||
-				heap.type == Type.LOCKED_CHEST || heap.type == Type.CRYSTAL_CHEST)) {
+			if (heap != null && (heap.type != Type.HEAP && heap.type != Type.FOR_SALE)) {
 				
 				theKey = null;
 				
@@ -764,7 +772,7 @@ public class Hero extends Char {
 
 		enemy = action.target;
 
-		if (Level.adjacent( pos, enemy.pos ) && enemy.isAlive() && !pacified) {
+		if (Level.adjacent( pos, enemy.pos ) && enemy.isAlive() && !isCharmedBy( enemy )) {
 			
 			spend( attackDelay() );
 			sprite.attack( enemy.pos );
@@ -809,12 +817,14 @@ public class Hero extends Char {
 			case BATTLEMAGE:
 				if (wep instanceof Wand) {
 					Wand wand = (Wand)wep;
-					if (wand.curCharges < wand.maxCharges && damage > 0) {
+					if (wand.curCharges >= wand.maxCharges) {
+						
+						wand.use();
+						
+					} else if (damage > 0) {
 						
 						wand.curCharges++;
-						if (Dungeon.quickslot == wand) {
-							QuickSlot.refresh();
-						}
+						wand.updateQuickslot();
 						
 						ScrollOfRecharging.charge( this );
 					}
@@ -822,7 +832,7 @@ public class Hero extends Char {
 				}
 			case SNIPER:
 				if (rangedWeapon != null) {
-					Buff.prolong( enemy, SnipersMark.class, attackDelay() * 1.1f );
+					Buff.prolong( this, SnipersMark.class, attackDelay() * 1.1f ).object = enemy.id();
 				}
 				break;
 			default:
@@ -898,6 +908,7 @@ public class Hero extends Char {
 	private boolean getCloser( final int target ) {
 		
 		if (rooted) {
+			Camera.main.shake( 1, 1f );
 			return false;
 		}
 		
@@ -960,8 +971,7 @@ public class Hero extends Char {
 			
 			curAction = new HeroAction.Cook( cell );
 			
-		} else
-		if (Level.fieldOfView[cell] && (ch = Actor.findChar( cell )) instanceof Mob) {
+		} else if (Level.fieldOfView[cell] && (ch = Actor.findChar( cell )) instanceof Mob) {
 			
 			if (ch instanceof NPC) {
 				curAction = new HeroAction.Interact( (NPC)ch );
@@ -969,7 +979,7 @@ public class Hero extends Char {
 				curAction = new HeroAction.Attack( ch );
 			}
 			
-		} else if ((heap = Dungeon.level.heaps.get( cell )) != null) {
+		} else if (Level.fieldOfView[cell] && (heap = Dungeon.level.heaps.get( cell )) != null) {
 
 			switch (heap.type) {
 			case HEAP:
@@ -1181,6 +1191,28 @@ public class Hero extends Char {
 				
 		Dungeon.hero.belongings.identify();
 		
+		int pos = Dungeon.hero.pos;
+		
+		ArrayList<Integer> passable = new ArrayList<Integer>();
+		for (Integer ofs : Level.NEIGHBOURS8) {
+			int cell = pos + ofs;
+			if ((Level.passable[cell] || Level.avoid[cell]) && Dungeon.level.heaps.get( cell ) == null) {
+				passable.add( cell );
+			}
+		}
+		Collections.shuffle( passable );
+		
+		ArrayList<Item> items = new ArrayList<Item>( Dungeon.hero.belongings.backpack.items );
+		for (Integer cell : passable) {
+			if (items.isEmpty()) {
+				break;
+			}
+			
+			Item item = Random.element( items );
+			Dungeon.level.drop( item, cell ).sprite.drop( pos );
+			items.remove( item );
+		}
+		
 		GameScene.gameOver();
 		
 		if (cause instanceof Hero.Doom) {
@@ -1315,11 +1347,11 @@ public class Hero extends Char {
 						int oldValue = Dungeon.level.map[p];
 						
 						GameScene.discoverTile( p, oldValue );
-
+						
 						Level.set( p, Terrain.discover( oldValue ) );	
-
+						
 						GameScene.updateMap( p );
-
+						
 						ScrollOfMagicMapping.discover( p );
 						
 						smthFound = true;
@@ -1370,6 +1402,11 @@ public class Hero extends Char {
 	public HashSet<Class<?>> immunities() {
 		GasesImmunity buff = buff( GasesImmunity.class );
 		return buff == null ? super.immunities() : GasesImmunity.IMMUNITIES;
+	}
+	
+	@Override
+	public void next() {
+		super.next();
 	}
 	
 	public static interface Doom {

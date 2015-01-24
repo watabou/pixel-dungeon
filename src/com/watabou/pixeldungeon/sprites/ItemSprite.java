@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,7 +18,6 @@
 package com.watabou.pixeldungeon.sprites;
 
 import android.graphics.Bitmap;
-import android.util.Log;
 
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Game;
@@ -34,6 +33,7 @@ import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
@@ -140,9 +140,6 @@ public class ItemSprite extends MovieClip {
 			place( from );
 	
 			speed.offset( (px-x) / DROP_INTERVAL, (py-y) / DROP_INTERVAL );
-			
-			Log.d( "GAME", toString() );
-			Log.d( "GAME", String.format( "drop aside: %.1f %.1f", speed.x, speed.y ) );
 		}
 	}
 	
@@ -158,22 +155,30 @@ public class ItemSprite extends MovieClip {
 	public void update() {
 		super.update();
 
-		// Visibility
-		visible = heap == null || Dungeon.visible[heap.pos];
+		visible = (heap == null || Dungeon.visible[heap.pos]);
 		
-		// Dropping
 		if (dropInterval > 0 && (dropInterval -= Game.elapsed) <= 0) {
 			
 			speed.set( 0 );
 			acc.set( 0 );
 			place( heap.pos );
 			
-			if (Level.water[heap.pos]) {
-				GameScene.ripple( heap.pos );
+			if (visible) {
+				boolean water = Level.water[heap.pos];
+				
+				if (water) {
+					GameScene.ripple( heap.pos );
+				} else {
+					int cell = Dungeon.level.map[heap.pos];
+					water = (cell == Terrain.WELL || cell == Terrain.ALCHEMY);
+				}
+				
+				if (!(heap.peek() instanceof Gold)) {
+					Sample.INSTANCE.play( water ? Assets.SND_WATER : Assets.SND_STEP, 0.8f, 0.8f, 1.2f );
+				}
 			}
 		}
 		
-		// Glowing
 		if (visible && glowing != null) {
 			if (glowUp && (phase += Game.elapsed) > glowing.period) {
 				

@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -52,10 +52,6 @@ public class Flare extends Visual {
 	public Flare( int nRays, float radius ) {
 		
 		super( 0, 0, 0, 0 );
-		
-		// FIXME
-		// Texture is incorrectly created every time we need
-		// to show the effect, it must be refactored
 		
 		int gradient[] = {0xFFFFFFFF, 0x00FFFFFF};
 		texture = new Gradient( gradient );

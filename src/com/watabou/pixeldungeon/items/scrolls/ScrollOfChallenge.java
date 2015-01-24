@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,8 +21,10 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
+import com.watabou.pixeldungeon.actors.mobs.Mimic;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Speck;
+import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.utils.GLog;
 
 public class ScrollOfChallenge extends Scroll {
@@ -36,6 +38,17 @@ public class ScrollOfChallenge extends Scroll {
 		
 		for (Mob mob : Dungeon.level.mobs) {
 			mob.beckon( curUser.pos );
+		}
+		
+		
+		for (Heap heap : Dungeon.level.heaps.values()) {
+			if (heap.type == Heap.Type.MIMIC) {
+				Mimic m = Mimic.spawnAt( heap.pos, heap.items );
+				if (m != null) {
+					m.beckon( curUser.pos );
+					heap.destroy();
+				}
+			}
 		}
 		
 		GLog.w( "The scroll emits a challenging roar that echoes throughout the dungeon!" );

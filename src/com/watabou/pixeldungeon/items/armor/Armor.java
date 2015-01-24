@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -36,6 +36,8 @@ import com.watabou.utils.Random;
 
 public class Armor extends EquipableItem {
 	
+	private static final int HITS_TO_KNOW	= 10;
+	
 	private static final String TXT_EQUIP_CURSED	= "your %s constricts around you painfully";
 		
 	private static final String TXT_IDENTIFY	= "you are now familiar enough with your %s to identify it. It is %s.";
@@ -50,7 +52,7 @@ public class Armor extends EquipableItem {
 	public int STR;
 	public int DR;
 	
-	private int hitsToKnow = 10;
+	private int hitsToKnow = HITS_TO_KNOW;
 	
 	public Glyph glyph;
 	
@@ -62,18 +64,23 @@ public class Armor extends EquipableItem {
 		DR = typicalDR();
 	}
 	
-	private static final String GLYPH	= "glyph";
+	private static final String UNFAMILIRIARITY	= "unfamiliarity";
+	private static final String GLYPH			= "glyph";
 	
 	@Override
 	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle( bundle );
+		bundle.put( UNFAMILIRIARITY, hitsToKnow );
 		bundle.put( GLYPH, glyph );
 	}
 	
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
-		glyph = (Glyph)bundle.get( GLYPH );
+		if ((hitsToKnow = bundle.getInt( UNFAMILIRIARITY )) == 0) {
+			hitsToKnow = HITS_TO_KNOW;
+		}
+		inscribe( (Glyph)bundle.get( GLYPH ) );
 	}
 	
 	@Override
@@ -100,7 +107,7 @@ public class Armor extends EquipableItem {
 			
 			((HeroSprite)hero.sprite).updateArmor();
 			
-			hero.spendAndNext( 2 * time2equip( hero ) );
+			hero.spendAndNext( time2equip( hero ) );
 			return true;
 			
 		} else {
@@ -113,7 +120,7 @@ public class Armor extends EquipableItem {
 	
 	@Override
 	protected float time2equip( Hero hero ) {
-		return hero.speed();
+		return 2 / hero.speed();
 	}
 	
 	@Override
@@ -151,7 +158,7 @@ public class Armor extends EquipableItem {
 			}
 		} else {
 			if (inscribe) {
-				inscribe( Glyph.random() );
+				inscribe();
 			}
 		};
 		
@@ -173,6 +180,11 @@ public class Armor extends EquipableItem {
 		return super.degrade();
 	}
 	
+	@Override
+	public int maxDurability( int lvl ) {
+		return 6 * (lvl < 16 ? 16 - lvl : 1);
+	}
+	
 	public int proc( Char attacker, Char defender, int damage ) {
 		
 		if (glyph != null) {
@@ -186,6 +198,8 @@ public class Armor extends EquipableItem {
 				Badges.validateItemLevelAquired( this );
 			}
 		}
+		
+		use();
 		
 		return damage;
 	}
@@ -233,7 +247,7 @@ public class Armor extends EquipableItem {
 		}
 		
 		if (glyph != null) {
-			info.append( "It is inscribed." );
+			info.append( "It is enchanted." );
 		}
 		
 		if (isEquipped( Dungeon.hero )) {
@@ -267,7 +281,7 @@ public class Armor extends EquipableItem {
 		}
 		
 		if (Random.Int( 10 ) == 0) {
-			inscribe( Glyph.random() );
+			inscribe();
 		}
 		
 		return this;
@@ -316,6 +330,17 @@ public class Armor extends EquipableItem {
 		return this;
 	}
 	
+	public Armor inscribe() {
+		
+		Class<? extends Glyph> oldGlyphClass = glyph != null ? glyph.getClass() : null;
+		Glyph gl = Glyph.random();
+		while (gl.getClass() == oldGlyphClass) {
+			gl = Armor.Glyph.random();
+		}
+		
+		return inscribe( gl );
+	}
+	
 	public boolean isInscribed() {
 		return glyph != null;
 	}
@@ -335,10 +360,6 @@ public class Armor extends EquipableItem {
 		private static final float[] chances= new float[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
 			
 		public abstract int proc( Armor armor, Char attacker, Char defender, int damage );
-		
-		public String name() {
-			return name( "glyph" );
-		}
 		
 		public String name( String armorName ) {
 			return armorName;

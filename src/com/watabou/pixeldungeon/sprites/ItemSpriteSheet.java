@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -43,7 +43,7 @@ public class ItemSpriteSheet {
 	public static final int SPEAR			= 29;
 	public static final int GLAIVE			= 30;
 	
-	// Missile weapons
+	// Missiles
 	public static final int SHURIKEN		= 15;
 	public static final int DART			= 31;
 	public static final int BOOMERANG		= 106;
@@ -138,7 +138,7 @@ public class ItemSpriteSheet {
 	public static final int DUST	= 121;
 	public static final int TOKEN	= 122;
 	
-	// Heaps (containers)
+	// Heaps
 	public static final int BONES			= 0;
 	public static final int CHEST			= 11;
 	public static final int LOCKED_CHEST	= 12;
@@ -157,6 +157,11 @@ public class ItemSpriteSheet {
 	public static final int POUCH	= 83;
 	public static final int HOLDER	= 104;
 	public static final int HOLSTER	= 111;
+	public static final int KEYRING	= 126;
+	
+	// UNUSED
+	public static final int SPARK_UPGRADE	= 117;
+	public static final int SPARK_ENCHANT	= 118;
 	
 	// Misc
 	public static final int ANKH	= 1;
@@ -170,4 +175,6 @@ public class ItemSpriteSheet {
 	public static final int AMULET	= 87;
 	public static final int VIAL	= 120;
 	public static final int WEIGHT	= 123;
+	public static final int BOMB	= 124;
+	public static final int HONEYPOT= 125;
 }

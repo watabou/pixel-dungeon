@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,8 +23,8 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.plants.Plant;
-import com.watabou.utils.PointF;
 
 public class PlantSprite extends Image {
 
@@ -44,11 +44,9 @@ public class PlantSprite extends Image {
 		super( Assets.PLANTS );
 		
 		if (frames == null) {
-			// Hardcoded size
 			frames = new TextureFilm( texture, 16, 16 );
 		}
 		
-		// Hardcoded origin
 		origin.set( 8, 12 );
 	}
 	
@@ -65,9 +63,8 @@ public class PlantSprite extends Image {
 		alpha( 1f );
 		
 		pos = plant.pos;
-		PointF p = DungeonTilemap.tileToWorld( plant.pos );
-		x = p.x;
-		y = p.y;
+		x = (pos % Level.WIDTH) * DungeonTilemap.SIZE;
+		y = (pos / Level.WIDTH) * DungeonTilemap.SIZE;
 		
 		state = State.GROWING;
 		time = DELAY;

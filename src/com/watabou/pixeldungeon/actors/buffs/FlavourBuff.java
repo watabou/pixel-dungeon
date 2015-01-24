@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
-//Special kind of buff, that doesn't perform any kind actions 
 public class FlavourBuff extends Buff {
 	
 	@Override

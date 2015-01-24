@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -49,8 +49,6 @@ public class Fadeleaf extends Plant {
 			
 		} else if (ch instanceof Mob) {
 			
-			// Why do I try to choose a new position 10 times?
-			// I don't remember...
 			int count = 10;
 			int newPos;
 			do {

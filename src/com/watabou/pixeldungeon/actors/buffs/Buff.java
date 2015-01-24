@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,7 +22,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class Buff extends Actor {
-	
+
 	public Char target;
 	
 	public boolean attachTo( Char target ) {
@@ -51,18 +51,28 @@ public class Buff extends Actor {
 		return BuffIndicator.NONE;
 	}
 	
+	public static<T extends Buff> T append( Char target, Class<T> buffClass ) {
+		try {
+			T buff = buffClass.newInstance();
+			buff.attachTo( target );
+			return buff;
+		} catch (Exception e) {
+			return null;
+		}
+	}
+	
+	public static<T extends FlavourBuff> T append( Char target, Class<T> buffClass, float duration ) {
+		T buff = append( target, buffClass );
+		buff.spend( duration );
+		return buff;
+	}
+	
 	public static<T extends Buff> T affect( Char target, Class<T> buffClass ) {
 		T buff = target.buff( buffClass );
 		if (buff != null) {
 			return buff;
 		} else {
-			try {
-				buff = buffClass.newInstance();
-				buff.attachTo( target );
-				return buff;
-			} catch (Exception e) {
-				return null;
-			}
+			return append( target, buffClass );
 		}
 	}
 	

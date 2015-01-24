@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,9 +19,9 @@ package com.watabou.pixeldungeon.actors.hero;
 
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
+import com.watabou.pixeldungeon.items.bags.Keyring;
 import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.rings.RingOfShadows;
@@ -33,6 +33,7 @@ import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.items.weapon.melee.ShortSword;
 import com.watabou.pixeldungeon.items.weapon.missiles.Dart;
 import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
+import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.utils.Bundle;
 
 public enum HeroClass {
@@ -73,7 +74,7 @@ public enum HeroClass {
 	public static final String[] HUN_PERKS = {
 		"Huntresses start with 15 points of Health.",
 		"Huntresses start with a unique upgradeable boomerang.",
-		"Huntresses are proficient with missile weapons and get damage bonus for excessive strength when using them.",
+		"Huntresses are proficient with missile weapons and get a damage bonus for excessive strength when using them.",
 		"Huntresses gain more health from dewdrops.",
 		"Huntresses sense neighbouring monsters even if they are hidden behind obstacles."
 	};
@@ -112,6 +113,7 @@ public enum HeroClass {
 	private static void initCommon( Hero hero ) {
 		(hero.belongings.armor = new ClothArmor()).identify();
 		new Food().identify().collect();
+		new Keyring().collect();
 	}
 	
 	public Badges.Badge masteryBadge() {
@@ -134,7 +136,7 @@ public enum HeroClass {
 		(hero.belongings.weapon = new ShortSword()).identify();
 		new Dart( 8 ).identify().collect();
 		
-		Dungeon.quickslot = Dart.class;
+		QuickSlot.primaryValue = Dart.class;
 		
 		new PotionOfStrength().setKnown();
 	}
@@ -145,7 +147,7 @@ public enum HeroClass {
 		WandOfMagicMissile wand = new WandOfMagicMissile();
 		wand.identify().collect();
 		
-		Dungeon.quickslot = wand;
+		QuickSlot.primaryValue = wand;
 		
 		new ScrollOfIdentify().setKnown();
 	}
@@ -157,7 +159,7 @@ public enum HeroClass {
 		
 		hero.belongings.ring1.activate( hero );
 		
-		Dungeon.quickslot = Dart.class;
+		QuickSlot.primaryValue = Dart.class;
 		
 		new ScrollOfMagicMapping().setKnown();
 	}
@@ -170,7 +172,7 @@ public enum HeroClass {
 		Boomerang boomerang = new Boomerang();
 		boomerang.identify().collect();
 		
-		Dungeon.quickslot = boomerang;
+		QuickSlot.primaryValue = boomerang;
 	}
 	
 	public String title() {

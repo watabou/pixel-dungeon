@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -35,7 +35,7 @@ public class StoragePainter extends Painter {
 		fill( level, room, 1, floor );
 		
 		int n = Random.IntRange( 3, 4 );
-		for (int i=0; i < n; i++) { 
+		for (int i=0; i < n; i++) {
 			int pos;
 			do {
 				pos = room.random();
@@ -58,7 +58,8 @@ public class StoragePainter extends Painter {
 			Generator.Category.POTION, 
 			Generator.Category.SCROLL,
 			Generator.Category.FOOD, 
-			Generator.Category.GOLD
+			Generator.Category.GOLD,
+			Generator.Category.MISC
 		) );
 	}
 }

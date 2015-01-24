@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -26,12 +26,14 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.items.bags.Bag;
+import com.watabou.pixeldungeon.items.bags.Keyring;
 import com.watabou.pixeldungeon.items.bags.ScrollHolder;
 import com.watabou.pixeldungeon.items.bags.SeedPouch;
 import com.watabou.pixeldungeon.items.bags.WandHolster;
@@ -46,6 +48,7 @@ import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.ItemSlot;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.Utils;
+import com.watabou.utils.GameMath;
 
 public class WndBag extends WndTabbed {
 	
@@ -57,26 +60,27 @@ public class WndBag extends WndTabbed {
 		FOR_SALE,
 		WEAPON,
 		ARMOR,
+		ENCHANTABLE,
 		WAND,
 		SEED
 	}
 	
-	protected static final int COLS	= 4;
+	protected static final int COLS_P	= 4;
+	protected static final int COLS_L	= 6;
 	
 	protected static final int SLOT_SIZE	= 28;
 	protected static final int SLOT_MARGIN	= 1;
 	
-	protected static final int TAB_WIDTH	= 30;
+	protected static final int TAB_WIDTH	= 25;
 	
 	protected static final int TITLE_HEIGHT	= 12;
-	
-	@SuppressWarnings("unused")
-	protected static final int ROWS = 
-		(Belongings.BACKPACK_SIZE + 4 + 1) / COLS + ((Belongings.BACKPACK_SIZE + 4 + 1) % COLS > 0 ? 1 : 0);
 	
 	private Listener listener;
 	private WndBag.Mode mode;
 	private String title;
+	
+	private int nCols;
+	private int nRows;
 	
 	protected int count;
 	protected int col;
@@ -96,25 +100,30 @@ public class WndBag extends WndTabbed {
 		lastMode = mode;
 		lastBag = bag;
 		
+		nCols = PixelDungeon.landscape() ? COLS_L : COLS_P;
+		nRows = (Belongings.BACKPACK_SIZE + 4 + 1) / nCols + ((Belongings.BACKPACK_SIZE + 4 + 1) % nCols > 0 ? 1 : 0);
+		
+		int slotsWidth = SLOT_SIZE * nCols + SLOT_MARGIN * (nCols - 1);
+		int slotsHeight = SLOT_SIZE * nRows + SLOT_MARGIN * (nRows - 1);
+		
 		BitmapText txtTitle = PixelScene.createText( title != null ? title : Utils.capitalize( bag.name() ), 9 );
 		txtTitle.hardlight( TITLE_COLOR );
 		txtTitle.measure();
-		txtTitle.x = (int)(SLOT_SIZE * COLS + SLOT_MARGIN * (COLS - 1) - txtTitle.width()) / 2;
+		txtTitle.x = (int)(slotsWidth - txtTitle.width()) / 2;
 		txtTitle.y = (int)(TITLE_HEIGHT - txtTitle.height()) / 2;
 		add( txtTitle );
 		
 		placeItems( bag );
 		
-		resize( 
-			SLOT_SIZE * COLS + SLOT_MARGIN * (COLS - 1), 
-			SLOT_SIZE * ROWS + SLOT_MARGIN * (ROWS - 1) + TITLE_HEIGHT );
+		resize( slotsWidth, slotsHeight + TITLE_HEIGHT );
 		
 		Belongings stuff = Dungeon.hero.belongings;
 		Bag[] bags = {
 			stuff.backpack, 
 			stuff.getItem( SeedPouch.class ), 
 			stuff.getItem( ScrollHolder.class ),
-			stuff.getItem( WandHolster.class )};
+			stuff.getItem( WandHolster.class ),
+			stuff.getItem( Keyring.class )};
 		
 		for (Bag b : bags) {
 			if (b != null) {
@@ -157,20 +166,27 @@ public class WndBag extends WndTabbed {
 		placeItem( stuff.ring1 != null ? stuff.ring1 : new Placeholder( ItemSpriteSheet.RING ) );
 		placeItem( stuff.ring2 != null ? stuff.ring2 : new Placeholder( ItemSpriteSheet.RING ) );
 		
-		// Unequipped items
+		boolean backpack = (container == Dungeon.hero.belongings.backpack);
+		if (!backpack) {
+			count = nCols;
+			col = 0;
+			row = 1;
+		}
+		
+		// Items in the bag
 		for (Item item : container.items) {
 			placeItem( item );
 		}
 		
-		// Empty slots
-		while (count-4 < container.size) {
+		// Free space
+		while (count-(backpack ? 4 : nCols) < container.size) {
 			placeItem( null );
 		}
 		
-		// Gold
+		// Gold in the backpack
 		if (container == Dungeon.hero.belongings.backpack) {
-			row = ROWS - 1;
-			col = COLS - 1;
+			row = nRows - 1;
+			col = nCols - 1;
 			placeItem( new Gold( Dungeon.gold ) );
 		}
 	}
@@ -182,7 +198,7 @@ public class WndBag extends WndTabbed {
 		
 		add( new ItemButton( item ).setPos( x, y ) );
 		
-		if (++col >= COLS) {
+		if (++col >= nCols) {
 			col = 0;
 			row++;
 		}
@@ -259,6 +275,8 @@ public class WndBag extends WndTabbed {
 				return Icons.get( Icons.SCROLL_HOLDER );
 			} else if (bag instanceof WandHolster) {
 				return Icons.get( Icons.WAND_HOLSTER );
+			} else if (bag instanceof Keyring) {
+				return Icons.get( Icons.KEYRING );
 			} else {
 				return Icons.get( Icons.BACKPACK );
 			}
@@ -290,8 +308,12 @@ public class WndBag extends WndTabbed {
 		private static final int NORMAL		= 0xFF4A4D44;
 		private static final int EQUIPPED	= 0xFF63665B;
 		
+		private static final int NBARS	= 3;
+		
 		private Item item;
 		private ColorBlock bg;
+		
+		private ColorBlock durability[];
 		
 		public ItemButton( Item item ) {
 			
@@ -318,6 +340,13 @@ public class WndBag extends WndTabbed {
 			bg.x = x;
 			bg.y = y;
 			
+			if (durability != null) {
+				for (int i=0; i < NBARS; i++) {
+					durability[i].x = x + 1 + i * 3;
+					durability[i].y = y + height - 3;
+				}
+			}
+			
 			super.layout();
 		}
 		
@@ -336,16 +365,30 @@ public class WndBag extends WndTabbed {
 					bg.ba = 0.1f;
 				}
 				
+				if (lastBag.owner.isAlive() && item.isUpgradable() && item.levelKnown) {
+					durability = new ColorBlock[NBARS];
+					int nBars = (int)GameMath.gate( 0, Math.round( (float)NBARS * item.durability() / item.maxDurability() ), NBARS );
+					for (int i=0; i < nBars; i++) {
+						durability[i] = new ColorBlock( 2, 2, 0xFF00EE00 );
+						add( durability[i] );
+					}
+					for (int i=nBars; i < NBARS; i++) {
+						durability[i] = new ColorBlock( 2, 2, 0xFFCC0000 );
+						add( durability[i] );
+					}
+				}
+				
 				if (item.name() == null) {
 					enable( false );
 				} else {
 					enable( 
+						mode == Mode.QUICKSLOT && (item.defaultAction != null) ||
 						mode == Mode.FOR_SALE && (item.price() > 0) && (!item.isEquipped( Dungeon.hero ) || !item.cursed) ||
 						mode == Mode.UPGRADEABLE && item.isUpgradable() || 
 						mode == Mode.UNIDENTIFED && !item.isIdentified() ||
-						mode == Mode.QUICKSLOT && (item.defaultAction != null) ||
 						mode == Mode.WEAPON && (item instanceof MeleeWeapon || item instanceof Boomerang) ||
 						mode == Mode.ARMOR && (item instanceof Armor) ||
+						mode == Mode.ENCHANTABLE && (item instanceof MeleeWeapon || item instanceof Boomerang || item instanceof Armor) ||
 						mode == Mode.WAND && (item instanceof Wand) ||
 						mode == Mode.SEED && (item instanceof Seed) ||
 						mode == Mode.ALL
@@ -384,7 +427,7 @@ public class WndBag extends WndTabbed {
 		protected boolean onLongClick() {
 			if (listener == null && item.defaultAction != null) {
 				hide();
-				Dungeon.quickslot = item instanceof Wand ? item : item.getClass();
+				QuickSlot.primaryValue = item.stackable ? item.getClass() : item;
 				QuickSlot.refresh();
 				return true;
 			} else {
