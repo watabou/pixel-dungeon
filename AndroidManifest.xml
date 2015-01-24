@@ -6,7 +6,6 @@
 	android:installLocation="auto">
 
     <uses-permission android:name="android.permission.VIBRATE"/>
-    <uses-permission android:name="com.android.vending.BILLING" />
     
 	<uses-sdk 
 	    android:minSdkVersion="9"
