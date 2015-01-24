@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -28,9 +28,12 @@ import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.items.Dewdrop;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.Heap.Type;
+import com.watabou.pixeldungeon.items.potions.Potion;
+import com.watabou.pixeldungeon.items.potions.PotionOfMight;
 import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
+import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
+import com.watabou.pixeldungeon.items.scrolls.ScrollOfEnchantment;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
@@ -88,7 +91,7 @@ public class WandOfTelekinesis extends Wand {
 						}
 						
 					} else {
-
+						
 						ch.damage( maxDistance-1 - i, this );
 						
 					}
@@ -101,7 +104,8 @@ public class WandOfTelekinesis extends Wand {
 					transport( heap );
 					break;
 				case CHEST:
-					open( heap );
+				case MIMIC:
+					heap.open( curUser );
 					break;
 				default:
 				}
@@ -134,11 +138,10 @@ public class WandOfTelekinesis extends Wand {
 		if (item.doPickUp( curUser )) {
 			
 			if (item instanceof Dewdrop) {
-
+				// Do nothing
 			} else {
-
-				if ((item instanceof ScrollOfUpgrade && ((ScrollOfUpgrade)item).isKnown()) ||
-					(item instanceof PotionOfStrength && ((PotionOfStrength)item).isKnown())) {
+				if (((item instanceof ScrollOfUpgrade || item instanceof ScrollOfEnchantment) && ((Scroll)item).isKnown()) ||
+					((item instanceof PotionOfStrength || item instanceof PotionOfMight) && ((Potion)item).isKnown())) {
 					GLog.p( TXT_YOU_NOW_HAVE, item.name() );
 				} else {
 					GLog.i( TXT_YOU_NOW_HAVE, item.name() );
@@ -148,12 +151,6 @@ public class WandOfTelekinesis extends Wand {
 		} else {
 			Dungeon.level.drop( item, curUser.pos ).sprite.drop();
 		}
-	}
-	
-	private void open( Heap heap ) {
-		heap.type = Type.HEAP;
-		heap.sprite.link();
-		heap.sprite.drop();
 	}
 	
 	protected void fx( int cell, Callback callback ) {

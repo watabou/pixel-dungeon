@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -70,7 +70,7 @@ public class Eye extends Mob {
 	protected boolean canAttack( Char enemy ) {
 		
 		hitCell = Ballistica.cast( pos, enemy.pos, true, false );
-		
+
 		for (int i=1; i < Ballistica.distance; i++) {
 			if (Ballistica.trace[i] == enemy.pos) {
 				return true;

@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -49,7 +49,6 @@ public class HighGrass {
 					herbalismLevel = herbalism.level;
 				}
 			}
-			
 			// Seed
 			if (herbalismLevel >= 0 && Random.Int( 18 ) <= Random.Int( herbalismLevel + 1 )) {
 				level.drop( Generator.random( Generator.Category.SEED ), pos ).sprite.drop();
@@ -63,7 +62,7 @@ public class HighGrass {
 		
 		int leaves = 4;
 		
-		// Barkskin
+		// Warlock's barkskin
 		if (ch instanceof Hero && ((Hero)ch).subClass == HeroSubClass.WARDEN) {
 			Buff.affect( ch, Barkskin.class ).level( ch.HT / 3 );
 			leaves = 8;

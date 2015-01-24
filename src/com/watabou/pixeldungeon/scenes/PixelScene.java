@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,7 +24,6 @@ import android.opengl.GLES20;
 import com.watabou.input.Touchscreen;
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.BitmapText.Font;
-import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.ColorBlock;
@@ -39,14 +38,17 @@ import com.watabou.utils.BitmapCache;
 
 public class PixelScene extends Scene {
 	
-	public static final float MIN_WIDTH	= 128;
-	public static final float MIN_HEIGHT	= 224;
+	// Minimum virtual display size for portrait orientation
+	public static final float MIN_WIDTH_P		= 128;
+	public static final float MIN_HEIGHT_P		= 224;
+	
+	// Minimum virtual display size for landscape orientation
+	public static final float MIN_WIDTH_L		= 224;
+	public static final float MIN_HEIGHT_L		= 160;
 	
 	public static float defaultZoom = 0;
 	public static float minZoom;
 	public static float maxZoom;
-	
-	public static boolean landscapeAvailable;
 	
 	public static Camera uiCamera;
 	
@@ -63,27 +65,34 @@ public class PixelScene extends Scene {
 		
 		GameScene.scene = null;
 		
+		float minWidth, minHeight;
+		if (PixelDungeon.landscape()) {
+			minWidth = MIN_WIDTH_L;
+			minHeight = MIN_HEIGHT_L;
+		} else {
+			minWidth = MIN_WIDTH_P;
+			minHeight = MIN_HEIGHT_P;
+		}
+		
 		defaultZoom = (int)Math.ceil( Game.density * 2.5 );
 		while ((
-			Game.width / defaultZoom < MIN_WIDTH || 
-			Game.height / defaultZoom < MIN_HEIGHT
+			Game.width / defaultZoom < minWidth || 
+			Game.height / defaultZoom < minHeight
 			) && defaultZoom > 1) {
 			
 			defaultZoom--;
 		}
-		
-		landscapeAvailable = 
-			Game.height / defaultZoom >= MIN_WIDTH && 
-			Game.width / defaultZoom >= MIN_HEIGHT;
 			
 		if (PixelDungeon.scaleUp()) {
-			while ((Game.width / (defaultZoom + 1) >= MIN_WIDTH && Game.height / (defaultZoom + 1) >= MIN_HEIGHT)) {
+			while (
+				Game.width / (defaultZoom + 1) >= minWidth && 
+				Game.height / (defaultZoom + 1) >= minHeight) {
+				
 				defaultZoom++;
 			}	
 		}
 		minZoom = 1;
 		maxZoom = defaultZoom * 2;	
-			
 		
 		Camera.reset( new PixelCamera( defaultZoom ) );
 		
@@ -123,11 +132,6 @@ public class PixelScene extends Scene {
 			font3x.baseLine = 17;
 			font3x.tracking = -2;
 		}
-		
-		Sample.INSTANCE.load( 
-			Assets.SND_CLICK, 
-			Assets.SND_BADGE, 
-			Assets.SND_GOLD );
 	}
 	
 	@Override
@@ -140,11 +144,15 @@ public class PixelScene extends Scene {
 	public static float scale;
 	
 	public static void chooseFont( float size ) {
-		
-		float pt = size * defaultZoom;
-		
+		chooseFont( size, defaultZoom );
+	}
+
+	public static void chooseFont( float size, float zoom ) {
+
+		float pt = size * zoom;
+
 		if (pt >= 19) {
-			
+
 			scale = pt / 19;
 			if (1.5 <= scale && scale < 2) {
 				font = font25x;
@@ -153,9 +161,9 @@ public class PixelScene extends Scene {
 				font = font3x;
 				scale = (int)scale;
 			}
-			
+
 		} else if (pt >= 14) {
-			
+
 			scale = pt / 14;
 			if (1.8 <= scale && scale < 2) {
 				font = font2x;
@@ -164,9 +172,9 @@ public class PixelScene extends Scene {
 				font = font25x;
 				scale = (int)scale;
 			}
-			
+
 		} else if (pt >= 12) {
-			
+
 			scale = pt / 12;
 			if (1.7 <= scale && scale < 2) {
 				font = font15x;
@@ -175,9 +183,9 @@ public class PixelScene extends Scene {
 				font = font2x;
 				scale = (int)scale;
 			}
-			
+
 		} else if (pt >= 10) {
-			
+
 			scale = pt / 10;
 			if (1.4 <= scale && scale < 2) {
 				font = font1x;
@@ -186,15 +194,15 @@ public class PixelScene extends Scene {
 				font = font15x;
 				scale = (int)scale;
 			}
-			
+
 		} else {
-			
+
 			font = font1x;
 			scale = Math.max( 1, (int)(pt / 7) );
-			
+
 		}
-		
-		scale /= defaultZoom;
+
+		scale /= zoom;
 	}
 	
 	public static BitmapText createText( float size ) {
@@ -229,6 +237,7 @@ public class PixelScene extends Scene {
 		return ((int)(pos * camera.zoom)) / camera.zoom;
 	}
 	
+	// This one should be used for UI elements
 	public static float align( float pos ) {
 		return ((int)(pos * defaultZoom)) / defaultZoom;
 	}

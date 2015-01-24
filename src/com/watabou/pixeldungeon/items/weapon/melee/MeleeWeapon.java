@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -50,7 +50,7 @@ public class MeleeWeapon extends Weapon {
 	}
 	
 	@Override
-	public Item upgrade() {
+	final public Item upgrade() {
 		return upgrade( false );
 	}
 	
@@ -185,7 +185,7 @@ public class MeleeWeapon extends Weapon {
 		super.random();
 		
 		if (Random.Int( 10 + level ) == 0) {
-			enchant( Enchantment.random() );
+			enchant();
 		}
 		
 		return this;

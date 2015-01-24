@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -72,7 +72,7 @@ public abstract class InventoryScroll extends Scroll {
 		@Override
 		public void onSelect( Item item ) {
 			if (item != null) {
-				
+
 				((InventoryScroll)curItem).onItemSelected( item );
 				curUser.spendAndNext( TIME_TO_READ );
 				
@@ -84,7 +84,7 @@ public abstract class InventoryScroll extends Scroll {
 				((InventoryScroll)curItem).confirmCancelation();
 				
 			} else {
-				
+
 				curItem.collect( curUser.belongings.backpack );
 				
 			}

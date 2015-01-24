@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -95,7 +95,7 @@ public class CellSelector extends TouchArea {
 	@Override
 	protected void onTouchUp( Touch t ) {
 		if (pinching && (t == touch || t == another)) {
-			
+
 			pinching = false;
 			
 			int zoom = Math.round( camera.zoom );
@@ -110,7 +110,7 @@ public class CellSelector extends TouchArea {
 			lastPos.set( touch.current );
 		}
 	}	
-	
+
 	private boolean dragging = false;
 	private PointF lastPos = new PointF();
 	
@@ -143,7 +143,6 @@ public class CellSelector extends TouchArea {
 	}	
 	
 	public void cancel() {
-		
 		if (listener != null) {
 			listener.onSelect( null );
 		}

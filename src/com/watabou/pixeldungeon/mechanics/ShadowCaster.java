@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -91,7 +91,7 @@ public final class ShadowCaster {
 					int pos = y * WIDTH + x;
 	
 					if (obs.isBlocked( a0 ) && obs.isBlocked( a1 ) && obs.isBlocked( a2 )) {
-				
+						// Do nothing					
 					} else {
 						fieldOfView[pos] = true;
 					}
@@ -125,6 +125,7 @@ public final class ShadowCaster {
 			
 			if (length > limit && o1 <= a2[length-1]) {
 				
+				// Merging several blocking cells
 				a2[length-1] = o2;
 				
 			} else {

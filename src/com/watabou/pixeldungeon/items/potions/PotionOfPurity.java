@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -45,7 +45,7 @@ public class PotionOfPurity extends Potion {
 	}
 	
 	@Override
-	protected void shatter( int cell ) {
+	public void shatter( int cell ) {
 		
 		PathFinder.buildDistanceMap( cell, BArray.not( Level.losBlocking, null ), DISTANCE );
 		
@@ -73,7 +73,9 @@ public class PotionOfPurity extends Potion {
 						blob.volume -= value;
 						procd = true;
 						
-						CellEmitter.get( i ).burst( Speck.factory( Speck.DISCOVER ), 1 );
+						if (Dungeon.visible[i]) {
+							CellEmitter.get( i ).burst( Speck.factory( Speck.DISCOVER ), 1 );
+						}
 					}
 
 				}
@@ -84,8 +86,10 @@ public class PotionOfPurity extends Potion {
 		
 		if (procd) {
 			
-			splash( cell );
-			Sample.INSTANCE.play( Assets.SND_SHATTER );
+			if (Dungeon.visible[cell]) {
+				splash( cell );
+				Sample.INSTANCE.play( Assets.SND_SHATTER );
+			}
 			
 			setKnown();
 			

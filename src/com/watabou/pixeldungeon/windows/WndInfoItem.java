@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -69,7 +69,7 @@ public class WndInfoItem extends Window {
 			String title;
 			String info;
 			
-			if (heap.type == Type.CHEST) {
+			if (heap.type == Type.CHEST || heap.type == Type.MIMIC) {
 				title = TXT_CHEST;
 				info = TXT_WONT_KNOW;
 			} else if (heap.type == Type.TOMB) {

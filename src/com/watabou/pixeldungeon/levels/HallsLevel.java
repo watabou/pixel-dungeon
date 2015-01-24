@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -85,18 +85,11 @@ public class HallsLevel extends RegularLevel {
 				}
 				
 			} else
-			if (map[i] == Terrain.WALL) {
+			if (map[i] == Terrain.WALL && 
+				map[i-1] != Terrain.WALL_DECO && map[i-WIDTH] != Terrain.WALL_DECO && 
+				Random.Int( 20 ) == 0) {
 				
-				int count = 0;
-				for (int j=0; j < NEIGHBOURS4.length; j++) {
-					if (map[i + NEIGHBOURS4[j]] == Terrain.WATER) {
-						count++;
-					}
-				}
-				
-				if (Random.Int( 4 ) < count) {
-					map[i] = Terrain.WALL_DECO;
-				}
+				map[i] = Terrain.WALL_DECO;
 				
 			}
 		}

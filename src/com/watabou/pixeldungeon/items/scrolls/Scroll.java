@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -43,13 +43,13 @@ public abstract class Scroll extends Item {
 		ScrollOfRecharging.class, 
 		ScrollOfRemoveCurse.class, 
 		ScrollOfTeleportation.class, 
-		ScrollOfUpgrade.class, 
 		ScrollOfChallenge.class,
 		ScrollOfTerror.class,
 		ScrollOfLullaby.class,
-		ScrollOfWeaponUpgrade.class,
 		ScrollOfPsionicBlast.class,
-		ScrollOfMirrorImage.class
+		ScrollOfMirrorImage.class,
+		ScrollOfUpgrade.class,
+		ScrollOfEnchantment.class
 	};
 	private static final String[] runes = 
 		{"KAUNAN", "SOWILO", "LAGUZ", "YNGVI", "GYFU", "RAIDO", "ISAZ", "MANNAZ", "NAUDIZ", "BERKANAN", "ODAL", "TIWAZ"};

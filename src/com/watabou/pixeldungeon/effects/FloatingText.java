@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.effects;
 import java.util.ArrayList;
 
 import com.watabou.noosa.BitmapText;
+import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -35,16 +36,12 @@ public class FloatingText extends BitmapText {
 	
 	private int key = -1;
 	
+	private float cameraZoom = -1;
+	
 	private static SparseArray<ArrayList<FloatingText>> stacks = new SparseArray<ArrayList<FloatingText>>();
 	
 	public FloatingText() {
-		
 		super();
-
-		PixelScene.chooseFont( 9 );
-		font = PixelScene.font;
-		scale.set( PixelScene.scale );
-		
 		speed.y = - DISTANCE / LIFESPAN;
 	}
 	
@@ -80,6 +77,13 @@ public class FloatingText extends BitmapText {
 	public void reset( float x, float y, String text, int color ) {
 		
 		revive();
+		
+		if (cameraZoom != Camera.main.zoom) {
+			cameraZoom = Camera.main.zoom;
+			PixelScene.chooseFont( 9, cameraZoom );
+			font = PixelScene.font;
+			scale.set( PixelScene.scale );
+		}
 
 		text( text );
 		hardlight( color );

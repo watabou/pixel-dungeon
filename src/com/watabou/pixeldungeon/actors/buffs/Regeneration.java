@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -27,7 +27,7 @@ public class Regeneration extends Buff {
 	@Override
 	public boolean act() {
 		if (target.isAlive()) {
-			
+
 			if (target.HP < target.HT && !((Hero)target).isStarving()) {
 				target.HP += 1;
 			}

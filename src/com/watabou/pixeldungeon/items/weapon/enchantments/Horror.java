@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -45,7 +45,7 @@ public class Horror extends Weapon.Enchantment {
 			if (defender == Dungeon.hero) {
 				Buff.affect( defender, Vertigo.class, Vertigo.duration( defender ) );
 			} else {
-				Buff.affect( defender, Terror.class, Terror.DURATION ).source = attacker;
+				Buff.affect( defender, Terror.class, Terror.DURATION ).object = attacker.id();
 			}
 			
 			return true;

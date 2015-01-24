@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -29,13 +29,14 @@ import com.watabou.pixeldungeon.ui.Window;
 public class WndChallenges extends Window {
 
 	private static final int WIDTH		= 108;
-	private static final int BTN_HEIGHT	= 20;
-	private static final int GAP		= 2;
+	private static final int TTL_HEIGHT	= 12;
+	private static final int BTN_HEIGHT	= 18;
+	private static final int GAP		= 1;
 	
 	private static final String TITLE	= "Challenges";
 	
 	private boolean editable;
-	private ArrayList<CheckBox> boxes;
+	private ArrayList<CheckBox> boxes;	
 	
 	public WndChallenges( int checked, boolean editable ) {
 		
@@ -47,11 +48,12 @@ public class WndChallenges extends Window {
 		title.hardlight( TITLE_COLOR );
 		title.measure();
 		title.x = PixelScene.align( camera, (WIDTH - title.width()) / 2 );
+		title.y = PixelScene.align( camera, (TTL_HEIGHT - title.height()) / 2 );
 		add( title );
-		
+
 		boxes = new ArrayList<CheckBox>();
 		
-		float pos = title.height() + GAP;
+		float pos = TTL_HEIGHT;
 		for (int i=0; i < Challenges.NAMES.length; i++) {
 			
 			CheckBox cb = new CheckBox( Challenges.NAMES[i] );
@@ -67,7 +69,7 @@ public class WndChallenges extends Window {
 			add( cb );
 			boxes.add( cb );
 		}
-		
+
 		resize( WIDTH, (int)pos );
 	}
 	

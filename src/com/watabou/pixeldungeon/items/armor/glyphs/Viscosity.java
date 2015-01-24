@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -126,9 +126,8 @@ public class Viscosity extends Glyph {
 				target.damage( 1, this );
 				if (target == Dungeon.hero && !target.isAlive()) {
 					// FIXME
-					Glyph glyph = new Viscosity();
-					Dungeon.fail( Utils.format( ResultDescriptions.GLYPH, glyph.name(), Dungeon.depth ) );
-					GLog.n( "%s killed you...", glyph.name() );
+					Dungeon.fail( Utils.format( ResultDescriptions.GLYPH, "enchantment of viscosity", Dungeon.depth ) );
+					GLog.n( "The enchantment of viscosity killed you..." );
 					
 					Badges.validateDeathFromGlyph();
 				}
@@ -143,7 +142,6 @@ public class Viscosity extends Glyph {
 				detach();
 				
 			}
-			
 			return true;
 		}
 	}

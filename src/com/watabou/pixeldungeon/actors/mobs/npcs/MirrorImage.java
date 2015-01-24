@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -38,8 +38,6 @@ public class MirrorImage extends NPC {
 		spriteClass = MirrorSprite.class;
 		
 		state = HUNTING;
-		
-		enemy = DUMMY;
 	}
 	
 	public int tier;
@@ -95,7 +93,7 @@ public class MirrorImage extends NPC {
 	
 	protected Char chooseEnemy() {
 		
-		if (enemy == DUMMY || !enemy.isAlive()) {
+		if (enemy == null || !enemy.isAlive()) {
 			HashSet<Mob> enemies = new HashSet<Mob>();
 			for (Mob mob:Dungeon.level.mobs) {
 				if (mob.hostile && Level.fieldOfView[mob.pos]) {
@@ -103,7 +101,7 @@ public class MirrorImage extends NPC {
 				}
 			}
 			
-			enemy = enemies.size() > 0 ? Random.element( enemies ) : DUMMY;
+			return enemies.size() > 0 ? Random.element( enemies ) : null;
 		}
 		
 		return enemy;

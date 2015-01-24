@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -34,7 +34,6 @@ import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.CellSelector;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.HeroSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
@@ -100,7 +99,7 @@ public class WarriorArmor extends ClassArmor {
 				
 				final int dest = cell;
 				curUser.busy();
-				((HeroSprite)curUser.sprite).jump( curUser.pos, cell, new Callback() {
+				curUser.sprite.jump( curUser.pos, cell, new Callback() {
 					@Override
 					public void call() {
 						curUser.move( dest );

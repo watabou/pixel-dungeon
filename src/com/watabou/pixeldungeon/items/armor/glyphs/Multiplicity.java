@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -60,7 +60,7 @@ public class Multiplicity extends Glyph {
 				GameScene.add( mob );
 				WandOfBlink.appear( mob, Random.element( respawnPoints ) );
 				
-				defender.damage( Random.IntRange( 1, defender.HT / 6 ), /*attacker*/ this );
+				defender.damage( Random.IntRange( 1, defender.HT / 6 ), this );
 				checkOwner( defender );
 			}
 			

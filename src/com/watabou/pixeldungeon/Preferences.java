@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -27,6 +27,7 @@ enum Preferences {
 	
 	public static final String KEY_LANDSCAPE	= "landscape";
 	public static final String KEY_IMMERSIVE	= "immersive";
+	public static final String KEY_GOOGLE_PLAY	= "google_play";
 	public static final String KEY_SCALE_UP		= "scaleup";
 	public static final String KEY_MUSIC		= "music";
 	public static final String KEY_SOUND_FX		= "soundfx";

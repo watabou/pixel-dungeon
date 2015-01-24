@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -36,7 +36,7 @@ public class WndResurrect extends Window {
 	private static final String TXT_NO		= "No, I give up";
 	
 	private static final int WIDTH		= 120;
-	private static final int BTN_HEIGHT	= 18;
+	private static final int BTN_HEIGHT	= 20;
 	private static final float GAP		= 2;
 	
 	public static WndResurrect instance;

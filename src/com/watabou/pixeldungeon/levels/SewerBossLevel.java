@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -93,12 +93,12 @@ public class SewerBossLevel extends RegularLevel {
 		
 		Graph.buildDistanceMap( rooms, roomExit );
 		List<Room> path = Graph.buildPath( rooms, roomEntrance, roomExit );
-		
+
 		Graph.setPrice( path, roomEntrance.distance );
-		
+
 		Graph.buildDistanceMap( rooms, roomExit );
 		path = Graph.buildPath( rooms, roomEntrance, roomExit );
-		
+
 		Room room = roomEntrance;
 		for (Room next : path) {
 			room.connect( next );

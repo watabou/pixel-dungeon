@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -63,7 +63,6 @@ public class Hunger extends Buff implements Hero.Doom {
 			Hero hero = (Hero)target;
 			
 			if (isStarving()) {
-
 				if (Random.Float() < 0.3f && (target.HP > 1 || !target.paralysed)) {
 					
 					GLog.n( TXT_STARVING );
@@ -109,7 +108,7 @@ public class Hunger extends Buff implements Hero.Doom {
 			diactivate();
 			
 		}
-		
+
 		return true;
 	}
 	

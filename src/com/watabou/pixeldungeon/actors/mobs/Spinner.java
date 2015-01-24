@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -68,10 +68,10 @@ public class Spinner extends Mob {
 	protected boolean act() {
 		boolean result = super.act();
 		
-		if (state == FLEEING  && buff( Terror.class ) == null && 
-			enemySeen && enemy.buff( Poison.class ) == null) {
-			
-			state = HUNTING;
+		if (state == FLEEING && buff( Terror.class ) == null) {
+			if (enemy != null && enemySeen && enemy.buff( Poison.class ) == null) {
+				state = HUNTING;
+			}
 		}
 		return result;
 	}
