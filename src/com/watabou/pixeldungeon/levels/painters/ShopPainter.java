@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -55,7 +55,7 @@ public class ShopPainter extends Painter {
 		
 		fill( level, room, Terrain.WALL );
 		fill( level, room, 1, Terrain.EMPTY_SP );
-		
+
 		pasWidth = room.width() - 2;
 		pasHeight = room.height() - 2;
 		int per = pasWidth * 2 + pasHeight * 2;
@@ -185,7 +185,7 @@ public class ShopPainter extends Painter {
 			
 			return (room.right - xy.x - 1) + pasWidth + pasHeight;
 			
-		} else {
+		} else /*if (xy.x == room.left)*/ {
 			
 			if (xy.y == room.top + 1) {
 				return 0;
@@ -210,7 +210,7 @@ public class ShopPainter extends Painter {
 			return new Point( room.right - 1 - (p - (pasWidth + pasHeight)), room.bottom - 1 );
 			
 		} else {
-			
+
 			return new Point( room.left + 1, room.bottom - 1 - (p - (pasWidth * 2 + pasHeight)) );
 			
 		}

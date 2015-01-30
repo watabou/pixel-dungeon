@@ -570,14 +570,6 @@
    <string name="LloidsBeacon_Set">\n\nEste Farol foi definido em algum lugar do nível %d de Pixel Dungeon.</string>
 
 
-   <!--  STRINGS OF Stylus CLASS  -->
-   <string name="Stylus_Name">caneta arcana</string>
-   <string name="Stylus_ACInscribe">ESCREVER</string>
-   <string name="Stylus_Info">Esta caneta arcana é feita de uma pedra muito escura e dura. Através dela você pode escrever um hieróglifo mágico na sua armadura, porém não poderá determinar qual o poder do hieróglifo. A predra irá escolher o poder por você!</string>
-   <string name="Stylus_SelectArmor">Selecione a armadura que deseja escrever</string>
-   <string name="Stylus_Inscribed">você escreveu o %1$s em sua %2$s</string>
-
-
    <!--  STRINGS OF TomeOfMastery CLASS  -->
    <string name="TomeOfMastery_Name">Livro Mestre</string>
    <string name="TomeOfMastery_ACRead">LER</string>
@@ -664,7 +656,6 @@
    <string name="Armor_Info7a">\n\nVocê está vestindo a %1$s%2$s.</string>
    <string name="Armor_Info7b">, e porque ele é amaldiçoado, você não tem como removê-lo</string>
    <string name="Armor_Info8">\n\nVocê pode sentir a magia maléfica escondida dentro do %s.</string>
-   <string name="Armor_Glyph">hieróglifo</string>
 
 
    <!--  STRINGS OF ClassArmor CLASS  -->
@@ -985,7 +976,6 @@
        <item >quartzo</item>
        <item >ágata</item>
    </string-array>
-   <string name="Ring_Info1">Você só pode usar dois anéis ao mesmo tempo</string>
    <string name="Ring_Info2">Seu %s aperta em torno de seu dedo dolorosamente.</string>
    <string name="Ring_Info3a">%1$s\n\nO %2$s está em seu dedo %3$s.</string>
    <string name="Ring_Info3b">, e porque ele é amaldiçoado, você não tem como removê-lo</string>
@@ -1156,13 +1146,6 @@
    <string name="ScrollOfUpgrade_LooksBetter">seu %s certamente está melhor agora.</string>
 
 
-   <!--  STRINGS OF ScrollOfWeaponUpgrade CLASS  -->
-   <string name="ScrollOfWeaponUpgrade_Name">Pergaminho de Atualização de Armas</string>
-   <string name="ScrollOfWeaponUpgrade_Info">Este pergaminho irá atualizar armas brancas, melhorando sua qualidade. A contrário do Pergaminho de Atualização normal este pergaminho especializado nunca irá destruir encantamentos em uma arma. Pelo contrário, ele é capaz de atribuir em uma arma desencantada um encantamento aleatório.</string>
-   <string name="ScrollOfWeaponUpgrade_InvTitle">Escolha uma arma para atualizar</string>
-   <string name="ScrollOfWeaponUpgrade_LooksBetter">seu %s certamente está melhor agora.</string>
-
-
 <!--  PACKAGE /items/Wands  -->
    <!--  STRINGS OF Wand CLASS  -->
    <string name="Wand_Name">varinha de %s</string>
@@ -1299,14 +1282,10 @@
    <string name="Luck_Name">%s da Sorte</string>
    <!--  STRINGS OF Paralysis CLASS  -->
    <string name="Paralysis_Name">%s do Atordoamento</string>
-   <!--  STRINGS OF Piercing CLASS  -->
-   <string name="Piercing_Name">%s Penetrante</string>
    <!--  STRINGS OF Poison CLASS  -->
    <string name="Poison_Name">%s Venenoso(a)</string>
    <!--  STRINGS OF Slow CLASS  -->
    <string name="Slow_Name">%s Arrepiante</string>
-   <!--  STRINGS OF Swing CLASS  -->
-   <string name="Swing_Name">%s Selvagem</string>
 
 
 <!--  PACKAGE /weapon/melee  -->
@@ -1563,7 +1542,7 @@
    <string name="Crab_Desc">Estes enormes caranguejos estão no topo da cadeia alimentar nos esgotos. Eles são extremamente rápidos e seu exoesqueleto grosso pode resistir a golpes pesados.</string>
    <string name="Crab_Defense">defendeu</string>
    <!--  STRINGS OF DM300 CLASS  -->
-   <string name="DM300_Name">DM-300</string>
+   <string name="DM300_Name1">DM-300</string>
    <string name="DM300_Desc">Esta máquina foi criada pelos anões há vários séculos. Mais tarde, os anões começaram a substituir as máquinas por golems, elementais e até mesmo demônios. Claro que, os demônios levaram sua civilização ao declínio. O DM-300 e máquinas semelhantes foram normalmente utilizados para a construção e exploração mineira e, em alguns casos, para a defesa da cidade.</string>
    <string name="DM300_Info1">DM-300 está se consertando!</string>
    <string name="DM300_Info2">Missão falhou. Desligando.</string>
@@ -1583,14 +1562,14 @@
    <string name="Golem_Desc">Os Anões tentaram combinar seu conhecimento mecânico com o poder de elementais. Eles usaram espíritos da terra, como uma "alma" dos órgãos mecânicos dos golems, que se acreditava ser mais controlável de todas. Apesar disso, o menor erro no ritual poderia causar um surto.</string>
    <string name="Golem_Defense">bloqueou</string>
    <!--  STRINGS OF Goo CLASS  -->
-   <string name="Goo_Name">Goo</string>
+   <string name="Goo_Name1">Goo</string>
    <string name="Goo_Desc">Há pouco conhecimento sobre o Goo. É bem possível que ele não seja nem mesmo uma criatura, mas sim um conglomerado de substâncias provenientes dos esgotos que ganharam rudimentos de livre-arbítrio.</string>
    <string name="Goo_Info1">Goo está se bombeando para cima!</string>
    <string name="Goo_Info2">glurp... glurp...</string>
    <string name="Goo_Info3">GLURP-GLURP!</string>
    <string name="Goo_StaInfo1">!!!</string>
    <!--  STRINGS OF King CLASS  -->
-   <string name="King_Name">Rei dos Anões</string>
+   <string name="King_Name1">Rei dos Anões</string>
    <string name="King_Desc">O último rei dos anões era conhecido por sua profunda compreensão dos processos de vida e morte. Ele convenceu os membros de sua corte para participar de um ritual, que deveria ter lhes concedido juventude eterna. No final, ele foi o único que conseguiu... E um exército de zumbis como um bônus.</string>
    <string name="King_Defense">defendeu</string>
    <string name="King_Info1">Você não pode me matar, %s... eu sou... imortal...</string>
@@ -1641,7 +1620,7 @@
    <string name="Swarm_Desc">O enxame mortal de moscas zumbe com raiva. Cada ataque não mágico irá dividi-la em dois enxames menores, mas igualmente perigosas.</string>
    <string name="Swarm_Defense">evitou</string>
    <!--  STRINGS OF Tengu CLASS  -->
-   <string name="Tengu_Name">Tengu</string>
+   <string name="Tengu_Name1">Tengu</string>
    <string name="Tengu_Desc">Tengu são membros de um clã antigo de assassinos, que também é chamado de Tengu. Esses assassinos são conhecidos por uso extensivo de shuriken e armadilhas.</string>
    <string name="Tengu_Info1">Finalmente livre...</string>
    <string name="Tengu_Info2">Te peguei, %s!</string>
@@ -1659,7 +1638,7 @@
    <string name="Wraith_Desc">Um espectro é um espírito vingativo de um pecador, cuja sepultura ou túmulo foi perturbado. Sendo uma entidade etérea, é muito difícil de bater com uma arma normal.</string>
    <string name="Wraith_Defense">evitou</string>
    <!--  STRINGS OF Yog CLASS  -->
-   <string name="Yog_Name">Yog-Dzewa</string>
+   <string name="Yog_Name1">Yog-Dzewa</string>
    <string name="Yog_Desc">Yog-Dzewa é um Deus Antigo, uma poderosa entidade do Reino do Caos. Um século atrás, os anões antigos quase venceram a guerra contra o seu exército de demônios, mas foram incapazes de matar o próprio deus. Em vez disso, eles então o aprisionaram nos salões abaixo sua cidade, acreditando ser fraco demais para subir outra vez.</string>
    <string name="Yog_Info1">...</string>
    <string name="Yog_Info2">A esperança é uma ilusão...</string>
@@ -1852,11 +1831,6 @@
    <!--  STRINGS OF LightningTrap CLASS  -->
    <string name="LightningTrap_Name">Armadilha de raios</string>
    <string name="LightningTrap_Desc">Você foi morto por uma descarga de armadilha de raio...</string>   
-
-
-<!--  PACKAGE /sprites  -->
-   <!--  STRINGS OF ItemSprite CLASS  -->
-   <string name="ItemSprite_Info1">caiu: %1$.1f %2$.1f</string>
 
 
 <!--  PACKAGE /ui  -->

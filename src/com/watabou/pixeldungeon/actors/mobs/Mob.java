@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,6 +25,7 @@ import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.Statistics;
+import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -39,12 +40,15 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public abstract class Mob extends Char {
 	
 	private static final String	TXT_DIED	= Game.getVar(R.string.Mob_Died);
+	
+	protected static final String	TXT_ECHO	= Game.getVar(R.string.Mob_Echo);//FIXME
 	
 	protected static final String TXT_NOTICE1	= "?!";
 	protected static final String TXT_RAGE		= "#$%^";
@@ -73,13 +77,6 @@ public abstract class Mob extends Char {
 	protected static final float TIME_TO_WAKE_UP = 1f;
 	
 	public boolean hostile = true;
-	
-	// Unreachable target
-	public static final Mob DUMMY = new Mob() {
-		{
-			pos = -1;
-		}
-	};
 	
 	private static final String STATE	= "state";
 	private static final String TARGET	= "target";
@@ -151,7 +148,9 @@ public abstract class Mob extends Char {
 		
 		enemy = chooseEnemy();
 		
-		boolean enemyInFOV = enemy.isAlive() && Level.fieldOfView[enemy.pos] && enemy.invisible <= 0;
+		boolean enemyInFOV = 
+			enemy != null && enemy.isAlive() && 
+			Level.fieldOfView[enemy.pos] && enemy.invisible <= 0;
 		
 		return state.act( enemyInFOV, justAlerted );
 	}
@@ -171,17 +170,18 @@ public abstract class Mob extends Char {
 					return Random.element( enemies );
 				}
 				
-			} else {
-				return enemy;
 			}
 		}
 		
 		Terror terror = (Terror)buff( Terror.class );
 		if (terror != null) {
-			return terror.source;
+			Char source = (Char)Actor.findById( terror.object );
+			if (source != null) {
+				return source;
+			}
 		}
-		
-		return Dungeon.hero;
+
+		return enemy != null && enemy.isAlive() ? enemy : Dungeon.hero;
 	}
 	
 	protected boolean moveSprite( int from, int to ) {
@@ -224,7 +224,7 @@ public abstract class Mob extends Char {
 	}
 	
 	protected boolean canAttack( Char enemy ) {
-		return Level.adjacent( pos, enemy.pos ) && !pacified;
+		return Level.adjacent( pos, enemy.pos ) && !isCharmedBy( enemy );
 	}
 	
 	protected boolean getCloser( int target ) {
@@ -304,6 +304,10 @@ public abstract class Mob extends Char {
 		return damage;
 	}
 	
+	public void aggro( Char ch ) {
+		enemy = ch;
+	}
+	
 	@Override
 	public void damage( int dmg, Object src ) {
 
@@ -326,7 +330,7 @@ public abstract class Mob extends Char {
 		Dungeon.level.mobs.remove( this );
 		
 		if (Dungeon.hero.isAlive()) {
-			
+
 			if (hostile) {
 				Statistics.enemiesSlain++;
 				Badges.validateMonstersSlain();
@@ -339,7 +343,7 @@ public abstract class Mob extends Char {
 				}
 				Badges.validateNightHunter();
 			}
-			
+
 			if (Dungeon.hero.lvl <= maxLvl && EXP > 0) {
 				Dungeon.hero.sprite.showStatus( CharSprite.POSITIVE, TXT_EXP, EXP );
 				Dungeon.hero.earnExp( EXP );
@@ -351,11 +355,11 @@ public abstract class Mob extends Char {
 	public void die( Object cause ) {
 		
 		super.die( cause );
-		
+
 		if (Dungeon.hero.lvl <= maxLvl + 2) {
 			dropLoot();
 		}
-		
+
 		if (Dungeon.hero.isAlive() && !Dungeon.visible[pos]) {	
 			GLog.i( TXT_DIED );
 		}
@@ -452,7 +456,7 @@ public abstract class Mob extends Char {
 		
 		@Override
 		public String status() {
-			return String.format(Game.getVar(R.string.Mob_StaSleepingStatus), name );
+			return Utils.format(Game.getVar(R.string.Mob_StaSleepingStatus), name);
 		}
 	}
 	
@@ -489,7 +493,7 @@ public abstract class Mob extends Char {
 		
 		@Override
 		public String status() {
-			return String.format(Game.getVar(R.string.Mob_StaWanderingStatus), name );
+			return Utils.format(Game.getVar(R.string.Mob_StaWanderingStatus), name );
 		}
 	}
 	
@@ -528,7 +532,7 @@ public abstract class Mob extends Char {
 		
 		@Override
 		public String status() {
-			return String.format(Game.getVar(R.string.Mob_StaHuntingStatus), name );
+			return Utils.format(Game.getVar(R.string.Mob_StaHuntingStatus), name );
 		}
 	}
 	
@@ -563,7 +567,7 @@ public abstract class Mob extends Char {
 		
 		@Override
 		public String status() {
-			return String.format(Game.getVar(R.string.Mob_StaFleeingStatus), name );
+			return Utils.format(Game.getVar(R.string.Mob_StaFleeingStatus), name );
 		}
 	}
 	
@@ -580,7 +584,7 @@ public abstract class Mob extends Char {
 		
 		@Override
 		public String status() {
-			return String.format(Game.getVar(R.string.Mob_StaPassiveStatus), name );
+			return Utils.format(Game.getVar(R.string.Mob_StaPassiveStatus), name );
 		}
 	}
 }

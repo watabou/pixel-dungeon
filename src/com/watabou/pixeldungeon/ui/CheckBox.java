@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -38,8 +38,10 @@ public class CheckBox extends RedButton {
 		text.x = PixelScene.align( PixelScene.uiCamera, x + margin );
 		text.y = PixelScene.align( PixelScene.uiCamera, y + margin );
 		
+		margin = (height - icon.height) / 2;
+		
 		icon.x = PixelScene.align( PixelScene.uiCamera, x + width - margin - icon.width );
-		icon.y = PixelScene.align( PixelScene.uiCamera, y + (height - icon.height()) / 2 );
+		icon.y = PixelScene.align( PixelScene.uiCamera, y + margin );
 	}
 	
 	public boolean checked() {

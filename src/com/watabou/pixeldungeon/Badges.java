@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -46,6 +46,7 @@ import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.Callback;
 
 public class Badges {
 	
@@ -168,6 +169,8 @@ public class Badges {
 	
 	private static boolean saveNeeded = false;
 	
+	public static Callback loadingListener = null;
+	
 	public static void reset() {
 		local.clear();
 		loadGlobal();
@@ -224,9 +227,12 @@ public class Badges {
 	}
 	
 	public static void saveGlobal() {
+		
+		Bundle bundle = null;
+		
 		if (saveNeeded) {
 			
-			Bundle bundle = new Bundle();
+			bundle = new Bundle();
 			store( bundle, global );
 			
 			try {
@@ -392,9 +398,9 @@ public class Badges {
 	public static void validateItemLevelAquired( Item item ) {
 		
 		// This method should be called:
-		// 1) When an item is obtained (Item.collect)
-		// 2) When an item is upgraded (ScrollOfUpgrade, ScrollOfWeaponUpgrade, ShortSword, WandOfMagicMissile)
-		// 3) When an item is identified
+		// 1) When an item gets obtained (Item.collect)
+		// 2) When an item gets upgraded (ScrollOfUpgrade, ScrollOfWeaponUpgrade, ShortSword, WandOfMagicMissile)
+		// 3) When an item gets identified
 		if (!item.levelKnown) {
 			return;
 		}

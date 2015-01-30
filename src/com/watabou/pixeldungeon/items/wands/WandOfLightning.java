@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -49,7 +49,7 @@ public class WandOfLightning extends Wand {
 	
 	@Override
 	protected void onZap( int cell ) {
-
+		// Everything is processed in fx() method
 		if (!curUser.isAlive()) {
 			Dungeon.fail( Utils.format( ResultDescriptions.WAND, name, Dungeon.depth ) );
 			GLog.n(Game.getVar(R.string.WandOfLightning_Info1));

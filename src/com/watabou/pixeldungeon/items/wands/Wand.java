@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -49,6 +49,8 @@ import com.watabou.utils.Random;
 
 public abstract class Wand extends KindOfWeapon {
 
+	private static final int USAGES_TO_KNOW	= 40;
+	
 	public static final String AC_ZAP	= Game.getVar(R.string.Wand_ACZap);
 	
 	private static final String TXT_WOOD	= Game.getVar(R.string.Wand_Wood);
@@ -58,6 +60,8 @@ public abstract class Wand extends KindOfWeapon {
 	private static final String TXT_FIZZLES		= Game.getVar(R.string.Wand_Fizzles);
 	private static final String TXT_SELF_TARGET	= Game.getVar(R.string.Wand_SelfTarget);
 	
+	private static final String TXT_IDENTIFY	= Game.getVar(R.string.Wand_Identify);
+	
 	private static final float TIME_TO_ZAP	= 1f;
 	
 	public int maxCharges = initialCharges();
@@ -66,6 +70,8 @@ public abstract class Wand extends KindOfWeapon {
 	protected Charger charger;
 	
 	private boolean curChargeKnown = false;
+	
+	private int usagesToKnow = USAGES_TO_KNOW;
 	
 	protected boolean hitChars = true;
 	
@@ -147,9 +153,9 @@ public abstract class Wand extends KindOfWeapon {
 	}
 	
 	@Override
-	public boolean doUnequip( Hero hero, boolean collect ) {
+	public boolean doUnequip( Hero hero, boolean collect, boolean single ) {
 		onDetach();
-		return super.doUnequip( hero, collect );
+		return super.doUnequip( hero, collect, single );
 	}
 	
 	@Override
@@ -187,7 +193,9 @@ public abstract class Wand extends KindOfWeapon {
 	};
 	
 	public void charge( Char owner ) {
-		(charger = new Charger()).attachTo( owner );
+		if (charger == null) {
+			(charger = new Charger()).attachTo( owner );
+		}
 	}
 	
 	@Override
@@ -303,6 +311,11 @@ public abstract class Wand extends KindOfWeapon {
 		return this;
 	}
 	
+	@Override
+	public int maxDurability( int lvl ) {
+		return 5 * (lvl < 16 ? 16 - lvl : 1);
+	}
+	
 	protected void updateLevel() {
 		maxCharges = Math.min( initialCharges() + level, 9 );
 		curCharges = Math.min( curCharges, maxCharges );
@@ -326,8 +339,16 @@ public abstract class Wand extends KindOfWeapon {
 	}
 
 	protected void wandUsed() {
+		
 		curCharges--;
-		updateQuickslot();
+		if (!isIdentified() && --usagesToKnow <= 0) {
+			identify();
+			GLog.w( TXT_IDENTIFY, name() );
+		} else {
+			updateQuickslot();
+		}
+		
+		use();
 		
 		curUser.spendAndNext( TIME_TO_ZAP );
 	}
@@ -367,6 +388,7 @@ public abstract class Wand extends KindOfWeapon {
 		return price;
 	}
 	
+	private static final String UNFAMILIRIARITY		= "unfamiliarity";
 	private static final String MAX_CHARGES			= "maxCharges";
 	private static final String CUR_CHARGES			= "curCharges";
 	private static final String CUR_CHARGE_KNOWN	= "curChargeKnown";
@@ -374,6 +396,7 @@ public abstract class Wand extends KindOfWeapon {
 	@Override
 	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle( bundle );
+		bundle.put( UNFAMILIRIARITY, usagesToKnow );
 		bundle.put( MAX_CHARGES, maxCharges );
 		bundle.put( CUR_CHARGES, curCharges );
 		bundle.put( CUR_CHARGE_KNOWN, curChargeKnown );
@@ -382,6 +405,9 @@ public abstract class Wand extends KindOfWeapon {
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
+		if ((usagesToKnow = bundle.getInt( UNFAMILIRIARITY )) == 0) {
+			usagesToKnow = USAGES_TO_KNOW;
+		}
 		maxCharges = bundle.getInt( MAX_CHARGES );
 		curCharges = bundle.getInt( CUR_CHARGES );
 		curChargeKnown = bundle.getBoolean( CUR_CHARGE_KNOWN );

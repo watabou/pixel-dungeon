@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,6 +24,7 @@ import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
+import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -37,6 +38,7 @@ import com.watabou.pixeldungeon.actors.buffs.Ooze;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.buffs.Sleep;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
+import com.watabou.pixeldungeon.actors.buffs.Vertigo;
 import com.watabou.pixeldungeon.effects.Pushing;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.items.keys.SkeletonKey;
@@ -57,7 +59,8 @@ import com.watabou.utils.Random;
 public class Yog extends Mob {
 	
 	{
-		name = Game.getVar(R.string.Yog_Name);
+		name = Dungeon.depth == Statistics.deepestFloor ? Game.getVar(R.string.Yog_Name1) : Game.getVar(R.string.Yog_Name2);
+
 		spriteClass = YogSprite.class;
 		
 		HP = HT = 300;
@@ -266,6 +269,7 @@ public class Yog extends Mob {
 			IMMUNITIES.add( Sleep.class );
 			IMMUNITIES.add( Terror.class );
 			IMMUNITIES.add( Poison.class );
+			IMMUNITIES.add( Vertigo.class );
 		}
 		
 		@Override
@@ -351,7 +355,6 @@ public class Yog extends Mob {
 		
 		@Override
 		public boolean act() {
-			
 			for (int i=0; i < Level.NEIGHBOURS9.length; i++) {
 				GameScene.add( Blob.seed( pos + Level.NEIGHBOURS9[i], 2, Fire.class ) );
 			}

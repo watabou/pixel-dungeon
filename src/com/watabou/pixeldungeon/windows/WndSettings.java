@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -26,6 +26,7 @@ import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.CheckBox;
 import com.watabou.pixeldungeon.ui.RedButton;
+import com.watabou.pixeldungeon.ui.Toolbar;
 import com.watabou.pixeldungeon.ui.Window;
 
 public class WndSettings extends Window {
@@ -43,8 +44,10 @@ public class WndSettings extends Window {
 	
 	private static final String TXT_BRIGHTNESS   = Game.getVar(R.string.WndSettings_Brightness);
 	
-	private static final String TXT_SWITCH_PORT  = Game.getVar(R.string.WndSettings_SwitchPort);
-	private static final String TXT_SWITCH_LAND  = Game.getVar(R.string.WndSettings_SwitchLand);
+	private static final String TXT_QUICKSLOT	   = Game.getVar(R.string.WndSettings_2QuickSlot);
+	
+	private static final String TXT_SWITCH_PORT	= Game.getVar(R.string.WndSettings_SwitchPort);
+	private static final String TXT_SWITCH_LAND	= Game.getVar(R.string.WndSettings_SwitchLand);
 	
 	private static final int WIDTH		= 112;
 	private static final int BTN_HEIGHT	= 20;
@@ -83,6 +86,8 @@ public class WndSettings extends Window {
 					zoom( PixelScene.defaultZoom );
 				}
 			}.setRect( btnZoomOut.right(), 0, WIDTH - btnZoomIn.width() - btnZoomOut.width(), BTN_HEIGHT ) );
+			
+			updateEnabled();
 			
 		} else {
 			
@@ -134,21 +139,8 @@ public class WndSettings extends Window {
 		btnSound.checked( PixelDungeon.soundFx() );
 		add( btnSound );
 		
-		if (!inGame) {
+		if (inGame) {
 			
-			RedButton btnOrientation = new RedButton( orientationText() ) {
-				@Override
-				protected void onClick() {
-					PixelDungeon.landscape( !PixelDungeon.landscape() );
-				}
-			};
-			btnOrientation.setRect( 0, btnSound.bottom() + GAP, WIDTH, BTN_HEIGHT );
-			add( btnOrientation );
-			
-			resize( WIDTH, (int)btnOrientation.bottom() );
-			
-		} else {
-		
 			CheckBox btnBrightness = new CheckBox( TXT_BRIGHTNESS ) {
 				@Override
 				protected void onClick() {
@@ -160,7 +152,31 @@ public class WndSettings extends Window {
 			btnBrightness.checked( PixelDungeon.brightness() );
 			add( btnBrightness );
 			
-			resize( WIDTH, (int)btnBrightness.bottom() );
+			CheckBox btnQuickslot = new CheckBox( TXT_QUICKSLOT ) {
+				@Override
+				protected void onClick() {
+					super.onClick();
+					Toolbar.secondQuickslot( checked() );
+				}
+			};
+			btnQuickslot.setRect( 0, btnBrightness.bottom() + GAP, WIDTH, BTN_HEIGHT );
+			btnQuickslot.checked( Toolbar.secondQuickslot() );
+			add( btnQuickslot );
+			
+			resize( WIDTH, (int)btnQuickslot.bottom() );
+			
+		} else {
+			
+			RedButton btnOrientation = new RedButton( orientationText() ) {
+				@Override
+				protected void onClick() {
+					PixelDungeon.landscape( !PixelDungeon.landscape() );
+				}
+			};
+			btnOrientation.setRect( 0, btnSound.bottom() + GAP, WIDTH, BTN_HEIGHT );
+			add( btnOrientation );
+			
+			resize( WIDTH, (int)btnOrientation.bottom() );
 			
 		}
 	}

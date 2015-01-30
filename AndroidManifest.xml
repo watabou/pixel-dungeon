@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	package="com.watabou.pixeldungeon"
-	android:versionCode="61"
-	android:versionName="1.7.2a-T"
+	android:versionCode="70"
+	android:versionName="1.7.5a-T"
 	android:installLocation="auto">
 
     <uses-permission android:name="android.permission.VIBRATE"/>
     
-	<uses-sdk 
-	    android:minSdkVersion="8"
-	    android:targetSdkVersion="19"/>
+	<uses-sdk
+	    android:minSdkVersion="9"
+	    android:targetSdkVersion="21"/>
 	
 	<uses-feature 
 	    android:glEsVersion="0x00020000"/>
@@ -25,6 +25,7 @@
 		android:label="@string/app_name"
 		android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
 		android:allowBackup="false">
+	    
 		<activity
 			android:label="@string/app_name"
 			android:name=".PixelDungeon"

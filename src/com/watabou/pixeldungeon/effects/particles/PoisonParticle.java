@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -63,7 +63,7 @@ public class PoisonParticle extends PixelParticle {
 		
 		left = lifespan;
 		
-		speed.polar( Random.Float( 3.1415926f ), Random.Float( 6 ) );
+		speed.polar( -Random.Float( 3.1415926f ), Random.Float( 6 ) );
 	}
 	
 	public void resetSplash( float x, float y ) {

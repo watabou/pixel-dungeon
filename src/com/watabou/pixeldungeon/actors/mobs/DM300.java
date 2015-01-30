@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -26,6 +26,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.R;
+import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -47,9 +48,10 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Random;
 
 public class DM300 extends Mob {
-	
+
 	{
-		name = Game.getVar(R.string.DM300_Name);
+		name = Dungeon.depth == Statistics.deepestFloor ? Game.getVar(R.string.DM300_Name1) : Game.getVar(R.string.DM300_Name2);
+
 		spriteClass = DM300Sprite.class;
 		
 		HP = HT = 200;
@@ -77,16 +79,14 @@ public class DM300 extends Mob {
 	
 	@Override
 	public boolean act() {
-
 		GameScene.add( Blob.seed( pos, 30, ToxicGas.class ) );
-		
 		return super.act();
 	}
 	
 	@Override
 	public void move( int step ) {
 		super.move( step );
-
+		
 		if (Dungeon.level.map[step] == Terrain.INACTIVE_TRAP && HP < HT) {
 			
 			HP += Random.Int( 1, HT - HP );
@@ -110,7 +110,7 @@ public class DM300 extends Mob {
 			CellEmitter.get( cell ).start( Speck.factory( Speck.ROCK ), 0.07f, 10 );
 			Camera.main.shake( 3, 0.7f );
 			Sample.INSTANCE.play( Assets.SND_ROCKS );
-
+			
 			if (Level.water[cell]) {
 				GameScene.ripple( cell );
 			} else if (Dungeon.level.map[cell] == Terrain.EMPTY) {

@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,9 +23,10 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
-import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.Badges.Badge;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
+import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -49,7 +50,8 @@ public class Tengu extends Mob {
 	private static final int JUMP_DELAY = 5;
 	
 	{
-		name = Game.getVar(R.string.Tengu_Name);
+		name = Dungeon.depth == Statistics.deepestFloor ? Game.getVar(R.string.Tengu_Name1) : Game.getVar(R.string.Tengu_Name2);
+
 		spriteClass = TenguSprite.class;
 		
 		HP = HT = 120;
@@ -153,7 +155,7 @@ public class Tengu extends Mob {
 		} while (
 			!Level.fieldOfView[newPos] || 
 			!Level.passable[newPos] || 
-			Level.adjacent( newPos, enemy.pos ) ||
+			(enemy != null && Level.adjacent( newPos, enemy.pos )) ||
 			Actor.findChar( newPos ) != null);
 		
 		sprite.move( pos, newPos );

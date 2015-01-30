@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,6 +21,7 @@ import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.noosa.particles.Emitter.Factory;
 import com.watabou.utils.ColorMath;
+import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
 public class PurpleParticle extends PixelParticle {
@@ -66,7 +67,7 @@ public class PurpleParticle extends PixelParticle {
 		this.x = x;
 		this.y = y;
 		
-		speed.polar( Random.Float( 360 ), Random.Float( 16, 32 ) );
+		speed.polar( Random.Float( PointF.PI2 ), Random.Float( 16, 32 ) );
 		
 		left = lifespan;
 	}

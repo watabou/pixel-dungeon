@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -51,7 +51,7 @@ public class SparkParticle extends PixelParticle {
 		
 		left = lifespan = Random.Float( 0.5f, 1.0f );
 		
-		speed.polar( Random.Float( 3.1415926f ), Random.Float( 20, 40 ) );
+		speed.polar( -Random.Float( 3.1415926f ), Random.Float( 20, 40 ) );
 	}
 	
 	@Override

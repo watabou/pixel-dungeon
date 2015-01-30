@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.scenes;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -47,6 +48,7 @@ import com.watabou.pixeldungeon.effects.Ripple;
 import com.watabou.pixeldungeon.effects.SpellSprite;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.items.potions.Potion;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.RegularLevel;
@@ -159,11 +161,12 @@ public class GameScene extends PixelScene {
 		for (int i=0; i < size; i++) {
 			addHeapSprite( Dungeon.level.heaps.valueAt( i ) );
 		}
-		
+
+
 		emitters = new Group();
 		effects = new Group();
 		emoicons = new Group();
-		
+
 		mobs = new Group();
 		add( mobs );
 		
@@ -297,6 +300,21 @@ public class GameScene extends PixelScene {
 			}
 			break;
 		default:
+		}
+		
+		ArrayList<Item> dropped = Dungeon.droppedItems.get( Dungeon.depth );
+		if (dropped != null) {
+			for (Item item : dropped) {
+				int pos = Dungeon.level.randomRespawnCell();
+				if (item instanceof Potion) {
+					((Potion)item).shatter( pos );
+				} else if (item instanceof Plant.Seed) {
+					Dungeon.level.plant( (Plant.Seed)item, pos );
+				} else {
+					Dungeon.level.drop( item, pos );
+				}
+			}
+			Dungeon.droppedItems.remove( Dungeon.depth );
 		}
 		
 		Camera.main.target = hero;
@@ -585,7 +603,7 @@ public class GameScene extends PixelScene {
 		
 		return wnd;
 	}
-	
+
 	static boolean cancel() {
 		if (Dungeon.hero.curAction != null || Dungeon.hero.restoreHealth) {
 			
@@ -609,7 +627,6 @@ public class GameScene extends PixelScene {
 		@Override
 		public void onSelect( Integer cell ) {
 			if (Dungeon.hero.handle( cell )) {
-			//	Actor.next();
 				Dungeon.hero.next();
 			}
 		}

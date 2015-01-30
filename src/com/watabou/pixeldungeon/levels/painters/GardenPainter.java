@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.levels.painters;
 
 import com.watabou.pixeldungeon.actors.blobs.Foliage;
+import com.watabou.pixeldungeon.items.Honeypot;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
@@ -34,9 +35,15 @@ public class GardenPainter extends Painter {
 		
 		room.entrance().set( Room.Door.Type.REGULAR );
 		
-		int bushes = Random.Int( 3 ) == 0 ? (Random.Int( 5 ) == 0 ? 2 : 1) : 0;
-		for (int i=0; i < bushes; i++) {
-			level.plant( new Sungrass.Seed(), room.random() );
+		if (Random.Int( 2 ) == 0) {
+			level.drop( new Honeypot(), room.random() );
+		} else {
+			int bushes = (Random.Int( 5 ) == 0 ? 2 : 1);
+			for (int i=0; i < bushes; i++) {
+				int pos = room.random();
+				set( level, pos, Terrain.GRASS );
+				level.plant( new Sungrass.Seed(), pos );
+			}
 		}
 		
 		Foliage light = (Foliage)level.blobs.get( Foliage.class );

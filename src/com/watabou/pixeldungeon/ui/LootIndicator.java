@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -64,7 +64,7 @@ public class LootIndicator extends Tag {
 			if (heap != null) {
 				
 				Item item = 
-					heap.type == Heap.Type.CHEST ? ItemSlot.CHEST : 
+					heap.type == Heap.Type.CHEST || heap.type == Heap.Type.MIMIC ? ItemSlot.CHEST : 
 					heap.type == Heap.Type.LOCKED_CHEST ? ItemSlot.LOCKED_CHEST :
 					heap.type == Heap.Type.TOMB ? ItemSlot.TOMB :
 					heap.type == Heap.Type.SKELETON ? ItemSlot.SKELETON :

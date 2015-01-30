@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,12 +18,12 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.watabou.noosa.BitmapText;
-import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
+import com.watabou.pixeldungeon.ui.HealthBar;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndInfoMob extends WndTitledMessage {
@@ -45,23 +45,14 @@ public class WndInfoMob extends WndTitledMessage {
 	
 	private static class MobTitle extends Component {
 		
-		private static final int COLOR_BG	= 0xFFCC0000;
-		private static final int COLOR_LVL	= 0xFF00EE00;
-		
-		private static final int BAR_HEIGHT	= 2;
 		private static final int GAP	= 2;
 		
 		private CharSprite image;
 		private BitmapText name;
-		private ColorBlock hpBg;
-		private ColorBlock hpLvl;
+		private HealthBar health;
 		private BuffIndicator buffs;
 		
-		private float hp;
-		
 		public MobTitle( Mob mob ) {
-			
-			hp = (float)mob.HP / mob.HT;
 			
 			name = PixelScene.createText( Utils.capitalize( mob.name ), 9 );
 			name.hardlight( TITLE_COLOR );
@@ -71,11 +62,9 @@ public class WndInfoMob extends WndTitledMessage {
 			image = mob.sprite();
 			add( image );
 			
-			hpBg = new ColorBlock( 1, 1, COLOR_BG );
-			add( hpBg );
-			
-			hpLvl = new ColorBlock( 1, 1, COLOR_LVL );
-			add( hpLvl );
+			health = new HealthBar();
+			health.level( (float)mob.HP / mob.HT );
+			add( health );
 			
 			buffs = new BuffIndicator( mob );
 			add( buffs );
@@ -85,24 +74,20 @@ public class WndInfoMob extends WndTitledMessage {
 		protected void layout() {
 			
 			image.x = 0;
-			image.y = Math.max( 0, name.height() + GAP + BAR_HEIGHT - image.height );
+			image.y = Math.max( 0, name.height() + GAP + health.height() - image.height );
 			
 			name.x = image.width + GAP;
-			name.y = image.height - BAR_HEIGHT - GAP - name.baseLine();
+			name.y = image.height - health.height() - GAP - name.baseLine();
 			
 			float w = width - image.width - GAP;
 			
-			hpBg.size( w, BAR_HEIGHT );
-			hpLvl.size( w * hp, BAR_HEIGHT );
-			
-			hpBg.x = hpLvl.x = image.width + GAP;
-			hpBg.y = hpLvl.y = image.height - BAR_HEIGHT;
+			health.setRect( image.width + GAP, image.height - health.height(), w, health.height() ); 
 			
 			buffs.setPos( 
 				name.x + name.width() + GAP, 
 				name.y + name.baseLine() - BuffIndicator.SIZE );
-			
-			height = hpBg.y + hpBg.height();
+
+			height = health.bottom();
 		}
 	}
 }

@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -192,7 +192,7 @@ public class Blacksmith extends NPC {
 		Sample.INSTANCE.play( Assets.SND_EVOKE );
 		ScrollOfUpgrade.upgrade( Dungeon.hero );
 		Item.evoke( Dungeon.hero );
-		
+
 		if (first.isEquipped( Dungeon.hero )) {
 			((EquipableItem)first).doUnequip( Dungeon.hero, true );
 		}
@@ -200,12 +200,12 @@ public class Blacksmith extends NPC {
 		GLog.p( TXT_LOOKS_BETTER, first.name() );
 		Dungeon.hero.spendAndNext( 2f );
 		Badges.validateItemLevelAquired( first );
-		
+
 		if (second.isEquipped( Dungeon.hero )) {
 			((EquipableItem)second).doUnequip( Dungeon.hero, false );
 		}
 		second.detachAll( Dungeon.hero.belongings.backpack );
-		
+
 		Quest.reforged = true;
 		
 		Journal.remove( Journal.Feature.TROLL );

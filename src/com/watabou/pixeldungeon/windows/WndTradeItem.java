@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -40,7 +40,7 @@ public class WndTradeItem extends Window {
 	
 	private static final float GAP		= 2;
 	private static final int WIDTH		= 120;
-	private static final int BTN_HEIGHT	= 18;
+	private static final int BTN_HEIGHT	= 16;
 	
 	private static final String TXT_SALE     = Game.getVar(R.string.WndTradeItem_Sale);
 	private static final String TXT_BUY      = Game.getVar(R.string.WndTradeItem_Buy);
@@ -168,7 +168,6 @@ public class WndTradeItem extends Window {
 	
 	private float createDescription( Item item, boolean forSale ) {
 		
-		// Title
 		IconTitle titlebar = new IconTitle();
 		titlebar.icon( new ItemSprite( item.image(), item.glowing() ) );
 		titlebar.label( forSale ? 
@@ -177,14 +176,12 @@ public class WndTradeItem extends Window {
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 		
-		// Upgraded / degraded
 		if (item.levelKnown && item.level > 0) {
 			titlebar.color( ItemSlot.UPGRADED );	
 		} else if (item.levelKnown && item.level < 0) {
 			titlebar.color( ItemSlot.DEGRADED );	
 		}
 		
-		// Description
 		BitmapTextMultiline info = PixelScene.createMultiline( item.info(), 6 );
 		info.maxWidth = WIDTH;
 		info.measure();
@@ -227,7 +224,7 @@ public class WndTradeItem extends Window {
 	}
 	
 	private int price( Item item ) {
-		// This formula is not completely correct...
+
 		int price = item.price() * 5 * (Dungeon.depth / 5 + 1);
 		if (Dungeon.hero.buff( RingOfHaggler.Haggling.class ) != null && price >= 2) {
 			price /= 2;

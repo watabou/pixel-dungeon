@@ -1,6 +1,7 @@
+
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -210,10 +211,12 @@ public class Potion extends Item {
 		shatter( hero.pos );
 	}
 	
-	protected void shatter( int cell ) {
-		GLog.i(String.format(Game.getVar(R.string.Potion_Shatter), color()));
-		Sample.INSTANCE.play( Assets.SND_SHATTER );
-		splash( cell );
+	public void shatter( int cell ) {
+		if (Dungeon.visible[cell]) {
+		   GLog.i(String.format(Game.getVar(R.string.Potion_Shatter), color()));
+			Sample.INSTANCE.play( Assets.SND_SHATTER );
+			splash( cell );
+		}
 	}
 	
 	public boolean isKnown() {

@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -47,12 +47,12 @@ public class Imp extends NPC {
 		spriteClass = ImpSprite.class;
 	}
 	
-	private static final String TXT_GOLEMS1	= Game.getVar(R.string.Imp_Golems1);
-	private static final String TXT_GOLEMS2	= Game.getVar(R.string.Imp_Golems2);
-	private static final String TXT_MONKS1	= Game.getVar(R.string.Imp_Monks1);
-	private static final String TXT_MONKS2	= Game.getVar(R.string.Imp_Monks2);	
-	private static final String TXT_CYA	    = Game.getVar(R.string.Imp_Cya);
-	private static final String TXT_HEY	    = Game.getVar(R.string.Imp_Hey);
+	private static final String TXT_GOLEMS1  = Game.getVar(R.string.Imp_Golems1);
+	private static final String TXT_GOLEMS2  = Game.getVar(R.string.Imp_Golems2);
+	private static final String TXT_MONKS1   = Game.getVar(R.string.Imp_Monks1);
+	private static final String TXT_MONKS2   = Game.getVar(R.string.Imp_Monks2);	
+	private static final String TXT_CYA      = Game.getVar(R.string.Imp_Cya);
+	private static final String TXT_HEY      = Game.getVar(R.string.Imp_Hey);
 	
 	private boolean seenBefore = false;
 	

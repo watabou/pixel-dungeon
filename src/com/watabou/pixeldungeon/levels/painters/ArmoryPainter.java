@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,6 +17,7 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
+import com.watabou.pixeldungeon.items.Bomb;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.keys.IronKey;
@@ -48,7 +49,7 @@ public class ArmoryPainter extends Painter {
 			set( level, statue, Terrain.STATUE );
 		}
 		
-		int n = Random.IntRange( 2, 3 );
+		int n = 3 + (Random.Int( 4 ) == 0 ? 1 : 0);
 		for (int i=0; i < n; i++) {
 			int pos;
 			do {
@@ -62,9 +63,11 @@ public class ArmoryPainter extends Painter {
 	}
 	
 	private static Item prize( Level level ) {
-		return Generator.random( Random.oneOf( 
-			Generator.Category.ARMOR, 
-			Generator.Category.WEAPON
-		) );
+		return Random.Int( 6 ) == 0 ?
+			new Bomb().random() :
+			Generator.random( Random.oneOf( 
+				Generator.Category.ARMOR, 
+				Generator.Category.WEAPON
+			) );
 	}
 }

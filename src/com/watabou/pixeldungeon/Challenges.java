@@ -1,6 +1,6 @@
 /*
  * Pixel Dungeon
- * Copyright (C) 2012-2014  Oleg Dolya
+ * Copyright (C) 2012-2015 Oleg Dolya
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -27,11 +27,12 @@ public class Challenges {
 	public static final int NO_HERBALISM		= 8;
 	public static final int SWARM_INTELLIGENCE	= 16;
 	public static final int DARKNESS			= 32;
+	public static final int NO_SCROLLS			= 64;
 	
 	public static final String[] NAMES = Game.getVars(R.array.Challenges_Names);
 	
 	public static final int[] MASKS = {
-		NO_FOOD, NO_ARMOR, NO_HEALING, NO_HERBALISM, SWARM_INTELLIGENCE, DARKNESS
+		NO_FOOD, NO_ARMOR, NO_HEALING, NO_HERBALISM, SWARM_INTELLIGENCE, DARKNESS, NO_SCROLLS
 	};
 	
 }
