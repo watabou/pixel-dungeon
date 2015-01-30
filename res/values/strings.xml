@@ -21,7 +21,7 @@
 
    <!--  STRINGS OF RankingsScene CLASS  -->
    <string name="RankingsScene_Title">Top Rankings</string>
-   <string name="RankingsScene_Total">Total games played: %d</string>
+   <string name="RankingsScene_Total">Total games won/played:\u0020</string>
    <string name="RankingsScene_NoGames">No games have been played yet.</string>
    <string name="RankingsScene_NoInfo">No additional information</string>
 
@@ -154,7 +154,7 @@
    <string-array name="HeroClass_HunPerks">
        <item >Huntresses start with 15 points of Health.</item>
        <item >Huntresses start with a unique upgradeable boomerang.</item>
-       <item >Huntresses are proficient with missile weapons and get a damage bonus for excessive strength when using them.</item><!-- //FIXME -->
+       <item >Huntresses are proficient with missile weapons and get a damage bonus for excessive strength when using them.</item>
        <item >Huntresses gain more health from dewdrops.</item>
        <item >Huntresses sense neighbouring monsters even if they are hidden behind obstacles.</item>
    </string-array>
@@ -177,37 +177,6 @@
    <string name="HeroSubClass_DescSnip">_Snipers_ are able to detect weak points in an enemy\'s armor, effectively ignoring it when using a missile weapon.</string>
    <string name="HeroSubClass_NameWard">warden</string>
    <string name="HeroSubClass_DescWard">Having a strong connection with forces of nature gives _Wardens_ an ability to gather dewdrops and seeds from plants. Also trampling a high grass grants them a temporary armor buff.</string>
-
-
-   <!--  STRINGS OF Dungeon CLASS  -->
-   <string name="Dungeon_NoTips">The text is indecipherable...</string><!-- FIXME -->
-   <string name="Dungeon_DeadEnd">What are you doing here?!</string><!-- FIXME -->
-   <string-array name="Dungeon_Tips"><!-- FIXME -->
-       <item >Don\'t overestimate your strength, use weapons and armor you can handle.</item>
-       <item >Not all doors in the dungeon are visible at first sight. If you are stuck, search for hidden doors.</item>
-       <item >Remember, that raising your strength is not the only way to access better equipment, you can go the other way lowering its strength requirement with Scrolls of Upgrade.</item>
-       <item >You can spend your gold in shops on deeper levels of the dungeon. The first one is on the 6th level.</item>
-       <item >Beware of Goo!</item>
-       <item >Pixel-Mart - all you need for successful adventure!</item>
-       <item >Identify your potions and scrolls as soon as possible. Don\'t put it off to the moment when you actually need them.</item>
-       <item >Being hungry doesn\'t hurt, but starving does hurt.</item>
-       <item >Surprise attack has a better chance to hit. For example, you can ambush your enemy behind a closed door when you know it is approaching.</item>
-       <item >Don\'t let The Tengu out!</item>
-       <item >Pixel-Mart. Spend money. Live longer.</item>
-       <item >When you\'re attacked by several monsters at the same time, try to retreat behind a door.</item>
-       <item >If you are burning, you can\'t put out the fire in the water while levitating.</item>
-       <item >There is no sense in possessing more than one Ankh at the same time, because you will lose them upon resurrecting.</item>
-       <item >DANGER! Heavy machinery can cause injury, loss of limbs or death!</item>
-       <item >Pixel-Mart. A safer life in dungeon.</item>
-       <item >When you upgrade an enchanted weapon, there is a chance to destroy that enchantment.</item>
-       <item >In a Well of Transmutation you can get an item, that cannot be obtained otherwise.</item>
-       <item >The only way to enchant a weapon is by upgrading it with a Scroll of Weapon Upgrade.</item>
-       <item >No weapons allowed in the presence of His Majesty!</item>
-       <item >Pixel-Mart. Special prices for demon hunters!</item>
-       <item >The text is written in demonic language.</item>
-       <item >The text is written in demonic language.</item>
-       <item >The text is written in demonic language.</item>
-   </string-array>
 
 
    <!--  STRINGS OF Badges CLASS  -->
@@ -239,7 +208,7 @@
    <string name="Badges_DeathPoison">Death from poison</string>
    <string name="Badges_DeathGas">Death from toxic gas</string>
    <string name="Badges_DeathHunger">Death from hunger</string>
-   <string name="Badges_DeathGlyph">Death from an enchantment</string><!-- FIXME -->
+   <string name="Badges_DeathGlyph">Death from an enchantment</string>
    <string name="Badges_DeathFalling">Death from falling down</string>
    <string name="Badges_Yasd">Death from fire, poison, toxic gas &amp; hunger</string>
    <!-- <string name="Badges_BossSlain1War"></string> -->
@@ -309,7 +278,7 @@
 
 
    <!--  STRINGS OF Challenges CLASS  -->
-   <string-array name="Challenges_Names"><!-- FIXME -->
+   <string-array name="Challenges_Names">
        <item >On diet</item>
        <item >Faith is my armor</item>
        <item >Pharmacophobia</item>
@@ -318,7 +287,7 @@
        <item >Into darkness</item>
        <item >Forbidden runes</item>
    </string-array>
- 
+
 
    <!--  STRINGS OF Journal CLASS  -->
    <string name="Journal_WellHealt">Well of Health</string>
@@ -384,7 +353,7 @@
    <string name="WndGame_Ranking">Rankings</string>
    <string name="WndGame_Start">Start New Game</string>
    <string name="WndGame_menu">Main Menu</string>
-   <string name="WndGame_Exit">Exit Game</string><!-- FIXME -->
+   <string name="WndGame_Exit">Exit Game</string>
    <string name="WndGame_Return">Return to Game</string>
 
 
@@ -467,7 +436,7 @@
    <string name="WndSettings_Music">Music</string>
    <string name="WndSettings_Sound">Sound FX</string>
    <string name="WndSettings_Brightness">Brightness</string>
-   <string name="WndSettings_2QuickSlot">Second quickslot</string><!-- FIXME -->
+   <string name="WndSettings_2QuickSlot">Second quickslot</string>
    <string name="WndSettings_SwitchPort">Switch to portrait</string>
    <string name="WndSettings_SwitchLand">Switch to landscape</string>
 
@@ -508,25 +477,14 @@
    <string name="Item_ACThrow">THROW</string>
    <string name="Item_PackFull">Your pack is too full for the %s</string>
    <string name="Item_DirThrow">Choose direction of throw</string>
-   <string name="Item_Degraded">Because of frequent use, your %s has degraded.</string><!-- FIXME -->
-   <string name="Item_GonnaDegrade">Because of frequent use, your %s is going to degrade soon.</string><!-- FIXME -->
+   <string name="Item_Degraded">Because of frequent use, your %s has degraded.</string>
+   <string name="Item_GonnaDegrade">Because of frequent use, your %s is going to degrade soon.</string>
 
 
    <!--  STRINGS OF EquipableItem CLASS  -->
    <string name="EquipableItem_ACEquip">EQUIP</string>
    <string name="EquipableItem_ACUnequip">UNEQUIP</string>
    <string name="EquipableItem_Unequip">You can\'t remove cursed %s!</string>
-
-
-   <!--  STRINGS OF KindOfWeapon CLASS  -->
-   <string name="KindOfWeapon_EquipCursed">you wince as your grip involuntarily tightens around your %s</string>
-
-
-   <!--  STRINGS OF Gold CLASS  -->
-   <string name="Gold_Name">gold</string>
-   <string name="Gold_Collect">Collect gold coins to spend them later in a shop.</string>
-   <string name="Gold_Info">A pile of %d gold coins.</string>
-   <string name="Gold_Info1">One gold coin.</string>
 
 
    <!--  STRINGS OF Amulet CLASS  -->
@@ -548,6 +506,11 @@
    <string name="ArmorKit_Upgraded">you applied the armor kit to upgrade your %s</string>
 
 
+   <!--  STRINGS OF Bomb CLASS  -->
+   <string name="Bomb_Name">bomb</string>
+   <string name="Bomb_Info">This is a relatively small bomb, filled with black powder. Conveniently, its fuse is lit automatically when the bomb is thrown.</string>
+
+
    <!--  STRINGS OF Dewdrop CLASS  -->
    <string name="Dewdrop_Name">dewdrop</string>
    <string name="Dewdrop_Info">A crystal clear dewdrop.</string>
@@ -561,6 +524,27 @@
    <string name="DewVial_Collected">You collected a dewdrop into your dew vial.</string>
    <string name="DewVial_Full">Your dew vial is full!</string>
    <string name="DewVial_Empty">Your dew vial is empty!</string>
+
+
+   <!--  STRINGS OF Heap CLASS  -->
+   <string name="Heap_Mimic">This is a mimic!</string>
+
+
+   <!--  STRINGS OF Honeypot CLASS  -->
+   <string name="Honeypot_Name">honeypot</string>
+   <string name="Honeypot_ACShatter">SHATTER</string>
+   <string name="Honeypot_Info">There is not much honey in this small honeypot, but there is a golden bee there and it doesn\'t want to leave it.</string>
+
+
+   <!--  STRINGS OF Gold CLASS  -->
+   <string name="Gold_Name">gold</string>
+   <string name="Gold_Collect">Collect gold coins to spend them later in a shop.</string>
+   <string name="Gold_Info">A pile of %d gold coins.</string>
+   <string name="Gold_Info1">One gold coin.</string>
+
+
+   <!--  STRINGS OF KindOfWeapon CLASS  -->
+   <string name="KindOfWeapon_EquipCursed">you wince as your grip involuntarily tightens around your %s</string>
 
 
    <!--  STRINGS OF LloidsBeacon CLASS  -->
@@ -656,11 +640,10 @@
    <string name="Armor_Info3">\n\nBecause of your inadequate strength wearing this armor will decrease your movement speed and defense skill.</string>
    <string name="Armor_Info4">\n\nTypical %1$s provides damage absorption up to %2$d points per attack and requires %3$d points of strength.</string>
    <string name="Armor_Info5">Probably this armor is too heavy for you.</string>
-   <string name="Armor_Info6">It is enchanted.</string><!-- FIXME -->
+   <string name="Armor_Info6">It is enchanted.</string>
    <string name="Armor_Info7a">\n\nYou are wearing the %1$s%2$s.</string>
    <string name="Armor_Info7b">, and because it is cursed, you are powerless to remove it</string>
    <string name="Armor_Info8">\n\nYou can feel a malevolent magic lurking within the %s.</string>
-   <!-- <string name="Armor_Glyph">glyph</string>FIXME -->
 
 
    <!--  STRINGS OF ClassArmor CLASS  -->
@@ -748,23 +731,23 @@
    <!--  STRINGS OF Viscosity CLASS  -->
    <string name="Viscosity_Txt">%s of viscosity</string>
    <string name="Viscosity_Status">deferred %d</string>
+   <string name="Viscosity_BufName">enchantment of viscosity</string>
+   <string name="Viscosity_BufInfo1">Defered damage (%d)</string>
+   <string name="Viscosity_BufInfo2">The enchantment of viscosity killed you...</string>
 
 
 <!--  PACKAGE /items/bags  -->
    <!--  STRINGS OF Bag CLASS  -->
    <string name="Bag_ACOpen">OPEN</string>
-
-
+   <!--  STRINGS OF Keyring CLASS  -->
+   <string name="Keyring_Name">key ring</string>
+   <string name="Keyring_Info">This is a copper key ring, that lets you keep all your keys separately from the rest of your belongings.</string>
    <!--  STRINGS OF ScrollHolder CLASS  -->
    <string name="ScrollHolder_Name">scroll holder</string>
    <string name="ScrollHolder_Info">You can place any number of scrolls into this tubular container. It saves room in your backpack and protects scrolls from fire.</string>
-
-
    <!--  STRINGS OF SeedPouch CLASS  -->
    <string name="SeedPouch_Name">seed pouch</string>
    <string name="SeedPouch_Info">This small velvet pouch allows you to store any number of seeds in it. Very convenient.</string>   
-
-
    <!--  STRINGS OF WandHolster CLASS  -->
    <string name="WandHolster_Name">wand holster</string>
    <string name="WandHolster_Info">This slim holder is made of leather of some exotic animal. It allows to compactly carry up to " + size + " wands.</string>  
@@ -865,7 +848,7 @@
 
    <!--  STRINGS OF PotionOfFrost CLASS  -->
    <string name="PotionOfFrost_Name">Potion of Frost</string>
-   <string name="PotionOfFrost_Info">Upon exposure to open air, this chemical will evaporate into a freezing cloud, causing any creature that contacts it to be frozen in place, unable to act and move.</string><!-- FIXME -->
+   <string name="PotionOfFrost_Info">Upon exposure to open air, this chemical will evaporate into a freezing cloud, causing any creature that contacts it to be frozen in place, unable to act and move.</string>
 
 
    <!--  STRINGS OF PotionOfHealing CLASS  -->
@@ -983,7 +966,6 @@
        <item >quartz</item>
        <item >agate</item>
    </string-array>
-   <!-- <string name="Ring_Info1">You can only wear 2 rings at a time</string>FIXME -->
    <string name="Ring_Info2">Your %s tightens around your finger painfully</string>
    <string name="Ring_Info3a">%1$s\n\nThe %2$s is on your finger %3$s.</string>
    <string name="Ring_Info3b">, and because it is cursed, you are powerless to remove it</string>
@@ -1171,7 +1153,7 @@
    <string name="Wand_Fizzles">your wand fizzles; it must be out of charges for now</string>
    <string name="Wand_SelfTarget">You can\'t target yourself</string>
    <string name="Wand_Prompt">Choose direction to zap</string>
-   <string name="Wand_Identify">You are now familiar enough with your %s.</string><!-- FIXME -->
+   <string name="Wand_Identify">You are now familiar enough with your %s.</string>
    <string-array name="Wand_Wood">
        <item >holly</item>
        <item >yew</item>
@@ -1298,14 +1280,14 @@
    <string name="Luck_Name">Lucky %s</string>
    <!--  STRINGS OF Paralysis CLASS  -->
    <string name="Paralysis_Name">Stunning %s</string>
-   <!--  STRINGS OF Piercing CLASS  -->
-   <!-- <string name="Piercing_Name">Piercing %s</string>FIXME -->
    <!--  STRINGS OF Poison CLASS  -->
    <string name="Poison_Name">Venomous %s</string>
+   <!--  STRINGS OF Shock CLASS  -->
+   <string name="Shock_Name">Shocking %s</string>
    <!--  STRINGS OF Slow CLASS  -->
    <string name="Slow_Name">Chilling %s</string>
-   <!--  STRINGS OF Swing CLASS  -->
-   <!-- <string name="Swing_Name">Wild %s</string>FIXME -->
+   <!--  STRINGS OF Tempering CLASS  -->
+   <string name="Tempering_Name">Tempered %s</string>
 
 
 <!--  PACKAGE /weapon/melee  -->
@@ -1520,7 +1502,7 @@
    <!--  STRINGS OF Slow CLASS  -->
    <string name="Slow_Info">Slowed</string>
    <!--  STRINGS OF SnipersMark CLASS  -->
-   <string name="SnipersMark_Info">Zeroed in</string><!-- //FIXME -->
+   <string name="SnipersMark_Info">Zeroed in</string>
    <!--  STRINGS OF Vertigo CLASS  -->
    <string name="Vertigo_Info">Vertigo</string>
    <!--  STRINGS OF Weakness CLASS  -->
@@ -1536,7 +1518,7 @@
    <!--  STRINGS OF Mob CLASS  -->
    <string name="Mob_Desc">Real description is coming soon!</string>
    <string name="Mob_Died">You hear something died in the distance</string>
-   <string name="Mob_Echo">echo of </string><!-- FIXME -->
+   <string name="Mob_Echo">echo of\u0020</string>
    <string name="Mob_Yell">%1$s: \"%2$s\"</string>
    <string name="Mob_StaSleepingStatus">This %s is sleeping</string>
    <string name="Mob_StaWanderingStatus">This %s is wandering</string>
@@ -1564,7 +1546,7 @@
    <string name="Crab_Defense">parried</string>
    <!--  STRINGS OF DM300 CLASS  -->
    <string name="DM300_Name1">DM-300</string>
-   <string name="DM300_Name2">DM-350</string><!-- //FIXME -->
+   <string name="DM300_Name2">DM-350</string>
    <string name="DM300_Desc">This machine was created by the Dwarves several centuries ago. Later, Dwarves started to replace machines with golems, elementals and even demons. Eventually it led their civilization to the decline. The DM-300 and similar machines were typically used for construction and mining, and in some cases, for city defense.</string>
    <string name="DM300_Info1">DM-300 repairs itself!</string>
    <string name="DM300_Info2">Mission failed. Shutting down.</string>
@@ -1585,7 +1567,7 @@
    <string name="Golem_Defense">blocked</string>
    <!--  STRINGS OF Goo CLASS  -->
    <string name="Goo_Name1">Goo</string>
-   <string name="Goo_Name2">spawn of Goo</string><!-- //FIXME -->
+   <string name="Goo_Name2">spawn of Goo</string>
    <string name="Goo_Desc">Little known about The Goo. It\'s quite possible that it is not even a creature, but rather a conglomerate of substances from the sewers that gained rudiments of free will.</string>
    <string name="Goo_Info1">Goo is pumping itself up!</string>
    <string name="Goo_Info2">glurp... glurp...</string>
@@ -1593,7 +1575,7 @@
    <string name="Goo_StaInfo1">!!!</string>
    <!--  STRINGS OF King CLASS  -->
    <string name="King_Name1">King of Dwarves</string>
-   <string name="King_Name2">undead King of Dwarves</string><!-- //FIXME -->
+   <string name="King_Name2">undead King of Dwarves</string>
    <string name="King_Desc">The last king of dwarves was known for his deep understanding of processes of life and death. He has persuaded members of his court to participate in a ritual, that should have granted them eternal youthfulness. In the end he was the only one, who got it - and an army of undead as a bonus.</string>
    <string name="King_Defense">parried</string>
    <string name="King_Info1">You cannot kill me, %s... I am... immortal...</string>
@@ -1602,6 +1584,9 @@
    <string name="King_UndeadName">undead dwarf</string>
    <string name="King_UndeadDesc">These undead dwarves, risen by the will of the King of Dwarves, were members of his court. They appear as skeletons with a stunning amount of facial hair.</string>
    <string name="King_UndeadDefense">blocked</string>
+   <!--  STRINGS OF Mimic CLASS  -->
+   <string name="Mimic_Name">mimic</string>
+   <string name="Mimic_Desc">Mimics are magical creatures which can take any shape they wish. In dungeons they almost always choose a shape of a treasure chest, because they know how to beckon an adventurer.</string>
    <!--  STRINGS OF Monk CLASS  -->
    <string name="Monk_Name">dwarf monk</string>
    <string name="Monk_Desc">These monks are fanatics, who devoted themselves to protecting their city\'s secrets from all aliens. They don\'t use any armor or weapons, relying solely on the art of hand-to-hand combat.</string>
@@ -1645,7 +1630,7 @@
    <string name="Swarm_Defense">evaded</string>
    <!--  STRINGS OF Tengu CLASS  -->
    <string name="Tengu_Name1">Tengu</string>
-   <string name="Tengu_Name2">memory of Tengu</string><!-- //FIXME -->
+   <string name="Tengu_Name2">memory of Tengu</string>
    <string name="Tengu_Desc">Tengu are members of the ancient assassins clan, which is also called Tengu. These assassins are noted for extensive use of shuriken and traps.</string>
    <string name="Tengu_Info1">Free at last...</string>
    <string name="Tengu_Info2">Gotcha, %s!</string>
@@ -1664,7 +1649,7 @@
    <string name="Wraith_Defense">evaded</string>
    <!--  STRINGS OF Yog CLASS  -->
    <string name="Yog_Name1">Yog-Dzewa</string>
-   <string name="Yog_Name2">echo of Yog-Dzewa</string><!-- //FIXME -->
+   <string name="Yog_Name2">echo of Yog-Dzewa</string>
    <string name="Yog_Desc">Yog-Dzewa is an Old God, a powerful entity from the realms of chaos. A century ago, the ancient dwarves barely won the war against its army of demons, but were unable to kill the god itself. Instead, they then imprisoned it in the halls below their city, believing it to be too weak to rise ever again.</string>
    <string name="Yog_Info1">...</string>
    <string name="Yog_Info2">Hope is an illusion...</string>
@@ -1674,6 +1659,10 @@
 
 
 <!--  PACKAGE /mobs/npcs  -->
+   <!--  STRINGS OF Bee CLASS  -->
+   <string name="Bee_Name">golden bee</string>
+   <string name="Bee_Desc">Despite their small size, golden bees tend to protect their master fiercely. They don\'t live long though.</string>
+   <string name="Bee_Status">This %s is wandering</string>
    <!--  STRINGS OF Blacksmith CLASS  -->
    <string name="Blacksmith_Name">troll blacksmith</string>
    <string name="Blacksmith_Desc">This troll blacksmith looks like all trolls look: he is tall and lean, and his skin resembles stone in both color and texture. The troll blacksmith is tinkering with unproportionally small tools.</string>
@@ -1705,9 +1694,9 @@
    <string name="Imp_Name">ambitious imp</string>
    <string name="Imp_Desc">Imps are lesser demons. They are notable for neither their strength nor their magic talent, but they are quite smart and sociable. Many imps prefer to live among non-demons.</string>
    <string name="Imp_Defense">evaded</string>
-   <string name="Imp_Golems1">Are you an adventurer? I love adventurers! You can always rely on them if something needs to be killed. Am I right? For a bounty, of course ;)\nIn my case this is _golems_ who need to be killed. You see, I\'m going to start a little business here, but these stupid golems are bad for business! It\'s very hard to negotiate with wandering lumps of granite, damn them! So please, kill... let\'s say _6 of them_ and a reward is yours.</string><!-- FIXME -->
+   <string name="Imp_Golems1">Are you an adventurer? I love adventurers! You can always rely on them if something needs to be killed. Am I right? For a bounty, of course ;)\nIn my case this is _golems_ who need to be killed. You see, I\'m going to start a little business here, but these stupid golems are bad for business! It\'s very hard to negotiate with wandering lumps of granite, damn them! So please, kill... let\'s say _6 of them_ and a reward is yours.</string>
    <string name="Imp_Golems2">How is your golem safari going?</string>
-   <string name="Imp_Monks1">Are you an adventurer? I love adventurers! You can always rely on them if something needs to be killed. Am I right? For a bounty, of course ;)\nIn my case this is _monks_ who need to be killed. You see, I\'m going to start a little business here, but these lunatics don\'t buy anything themselves and will scare away other customers. So please, kill... let\'s say _8 of them_ and a reward is yours.</string><!-- FIXME -->
+   <string name="Imp_Monks1">Are you an adventurer? I love adventurers! You can always rely on them if something needs to be killed. Am I right? For a bounty, of course ;)\nIn my case this is _monks_ who need to be killed. You see, I\'m going to start a little business here, but these lunatics don\'t buy anything themselves and will scare away other customers. So please, kill... let\'s say _8 of them_ and a reward is yours.</string>
    <string name="Imp_Monks2">Oh, you are still alive! I knew that your kung-fu is stronger ;) Just don\'t forget to grab these monks\' tokens.</string>
    <string name="Imp_Cya">See you, %s!</string>
    <string name="Imp_Hey">Psst, %s!</string>
@@ -1849,6 +1838,32 @@
    <string name="Chasm_No">No, I changed my mind</string>
    <string name="Chasm_Jump">Do you really want to jump into the chasm? You can probably die.</string>
    <string name="Chasm_Info">You fell to death...</string>
+   <!--  STRINGS OF Sign CLASS  -->
+   <string name="Sign_DeadEnd">What are you doing here?!</string>
+   <string name="Sign_Burn">As you try to read the sign it bursts into greenish flames.</string>
+   <string-array name="Sign_Tips">
+       <item >Don\'t overestimate your strength, use weapons and armor you can handle.</item>
+       <item >Not all doors in the dungeon are visible at first sight. If you are stuck, search for hidden doors.</item>
+       <item >Remember, that raising your strength is not the only way to access better equipment. You can go the other way, lowering its strength requirement with Scrolls of Upgrade.</item>
+       <item >You can spend your gold in shops on deeper levels of the dungeon. The first one is on the 6th level.</item>
+       <item >Beware of Goo!</item>
+       <item >Pixel-Mart - all you need for successful adventure!</item>
+       <item >Identify your potions and scrolls as soon as possible. Don\'t put it off to the moment when you actually need them.</item>
+       <item >Being hungry doesn\'t hurt, but starving does hurt.</item>
+       <item >Surprise attack has a better chance to hit. For example, you can ambush your enemy behind a closed door when you know it is approaching.</item>
+       <item >Don\'t let The Tengu out!</item>
+       <item >Pixel-Mart. Spend money. Live longer.</item>
+       <item >When you\'re attacked by several monsters at the same time, try to retreat behind a door.</item>
+       <item >If you are burning, you can\'t put out the fire in the water while levitating.</item>
+       <item >There is no sense in possessing more than one Ankh at the same time, because you will lose them upon resurrecting.</item>
+       <item >DANGER! Heavy machinery can cause injury, loss of limbs or death!</item>
+       <item >Pixel-Mart. A safer life in dungeon.</item>
+       <item >When you upgrade an enchanted weapon, there is a chance to destroy that enchantment.</item>
+       <item >With a Well of Transmutation you can get an item, that cannot be obtained otherwise.</item>
+       <item >The only way to enchant a weapon is by upgrading it with a Scroll of Weapon Upgrade.</item>
+       <item >No weapons allowed in the presence of His Majesty!</item>
+       <item >Pixel-Mart. Special prices for demon hunters!</item>
+   </string-array>
 
 
 <!--  PACKAGE /levels/traps  -->
@@ -1857,11 +1872,6 @@
    <!--  STRINGS OF LightningTrap CLASS  -->
    <string name="LightningTrap_Name">lightning trap</string>
    <string name="LightningTrap_Desc">You were killed by a discharge of a lightning trap...</string>   
-
-
-<!--  PACKAGE /sprites  -->
-   <!--  STRINGS OF ItemSprite CLASS  -->
-   <!-- <string name="ItemSprite_Info1">drop aside: %1$.1f %2$.1f</string>FIXME -->
 
 
 <!--  PACKAGE /ui  -->

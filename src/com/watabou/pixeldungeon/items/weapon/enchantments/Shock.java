@@ -20,6 +20,8 @@ package com.watabou.pixeldungeon.items.weapon.enchantments;
 import java.util.ArrayList;
 import java.util.HashSet;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Lightning;
@@ -31,7 +33,7 @@ import com.watabou.utils.Random;
 
 public class Shock extends Weapon.Enchantment {
 
-	private static final String TXT_SHOCKING	= "Shocking %s";
+	private static final String TXT_SHOCKING	= Game.getVar(R.string.Shock_Name);
 	
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {

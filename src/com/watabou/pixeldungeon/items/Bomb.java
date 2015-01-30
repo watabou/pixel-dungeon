@@ -17,9 +17,11 @@
  */
 package com.watabou.pixeldungeon.items;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -36,7 +38,7 @@ import com.watabou.utils.Random;
 public class Bomb extends Item {
 	
 	{
-		name = "bomb";
+		name = Game.getVar(R.string.Bomb_Name);
 		image = ItemSpriteSheet.BOMB;
 		defaultAction = AC_THROW;
 		stackable = true;
@@ -109,7 +111,6 @@ public class Bomb extends Item {
 	
 	@Override
 	public String info() {
-		return
-			"This is a relatively small bomb, filled with black powder. Conveniently, its fuse is lit automatically when the bomb is thrown.";
+		return Game.getVar(R.string.Bomb_Info);
 	}
 }

@@ -19,10 +19,12 @@ package com.watabou.pixeldungeon.items;
 
 import java.util.ArrayList;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Bee;
@@ -35,10 +37,10 @@ import com.watabou.utils.Random;
 
 public class Honeypot extends Item {
 	
-	public static final String AC_SHATTER	= "SHATTER";
+	public static final String AC_SHATTER	= Game.getVar(R.string.Honeypot_ACShatter);
 	
 	{
-		name = "honeypot";
+		name = Game.getVar(R.string.Honeypot_Name);
 		image = ItemSpriteSheet.HONEYPOT;
 		defaultAction = AC_THROW;
 		stackable = true;
@@ -130,7 +132,6 @@ public class Honeypot extends Item {
 	
 	@Override
 	public String info() {
-		return
-			"There is not much honey in this small honeypot, but there is a golden bee there and it doesn't want to leave it.";
+		return Game.getVar(R.string.Honeypot_Info);
 	}
 }
