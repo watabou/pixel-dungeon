@@ -237,7 +237,7 @@ public class HallsBossLevel extends Level {
 	public String tileDesc(int tile) {
 		switch (tile) {
 		case Terrain.WATER:
-			return Game.getVar(R.string.Halls_TileDescStatue);
+			return Game.getVar(R.string.Halls_TileDescWater);
 		case Terrain.STATUE:
 		case Terrain.STATUE_SP:
 			return Game.getVar(R.string.Halls_TileDescStatue);
