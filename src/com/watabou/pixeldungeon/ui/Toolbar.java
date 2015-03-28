@@ -26,6 +26,7 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.R;
+import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Heap;
@@ -121,7 +122,7 @@ public class Toolbar extends Component {
 		
 		add( btnQuick1 = new QuickslotTool( 83, 7, 22, 24, true ) );
 		add( btnQuick2 = new QuickslotTool( 83, 7, 22, 24, false ) );
-		btnQuick2.visible = (QuickSlot.secondaryValue != null);
+		btnQuick2.visible = secondQuickslot();
 		
 		add( pickedUp = new PickedUpItem() );
 	}
@@ -132,7 +133,7 @@ public class Toolbar extends Component {
 		btnSearch.setPos( btnWait.right(), y );
 		btnInfo.setPos( btnSearch.right(), y );
 		btnQuick1.setPos( width - btnQuick1.width(), y );
-		if (btnQuick2.visible) {
+		if (secondQuickslot()) {
 			btnQuick2.setPos(btnQuick1.left() - btnQuick2.width(), y );
 			btnInventory.setPos( btnQuick2.left() - btnInventory.width(), y );
 		} else {
@@ -166,13 +167,14 @@ public class Toolbar extends Component {
 	}
 	
 	public static boolean secondQuickslot() {
-		return instance.btnQuick2.visible;
+	   return PixelDungeon.secondQuickslot();
 	}
 	
 	public static void secondQuickslot( boolean value ) {
 		instance.btnQuick2.visible = 
 		instance.btnQuick2.active = 
 			value;
+		PixelDungeon.secondQuickslot(value);
 		instance.layout();
 	}
 	

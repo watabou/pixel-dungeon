@@ -336,6 +336,14 @@ public class PixelDungeon extends Game {
 	public static boolean intro() {
 		return Preferences.INSTANCE.getBoolean( Preferences.KEY_INTRO, true );
 	}
+   
+   public static void secondQuickslot( boolean value ) {
+      Preferences.INSTANCE.put( Preferences.KEY_2QUICK, value );
+   }
+   
+   public static boolean secondQuickslot() {
+      return Preferences.INSTANCE.getBoolean( Preferences.KEY_2QUICK, false );
+   }
 	
 	/*
 	 * <--- Preferences
