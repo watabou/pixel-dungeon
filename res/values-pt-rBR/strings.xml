@@ -59,7 +59,7 @@
 
 
    <!--  STRINGS OF AmuletScene CLASS  -->
-   <string name="AmuletScene_Exit">Vamos chamá-lo um dia</string>
+   <string name="AmuletScene_Exit">Foi bom enquanto durou</string>
    <string name="AmuletScene_Stay">Eu não acabei ainda</string>
    <string name="AmuletScene_Txt">Você finalmente segurou em suas mãos o Amuleto de Yendor. Usando o seu poder, você pode dominar o mundo ou trazer paz e prosperidade para as pessoas ou o que quiser. De qualquer forma, sua vida vai mudar para sempre e este jogo vai terminar aqui. Ou você pode continuar um mero mortal um pouco mais.</string>
 
@@ -281,7 +281,7 @@
    <string-array name="Challenges_Names">
        <item >Em dieta</item>
        <item >A fé é minha armadura</item>
-       <item >Farmacofobia</item>
+       <item >Medo de Agulhas</item>
        <item >Terra estéril</item>
        <item >Inteligência coletiva</item>
        <item >Nas trevas</item>
@@ -367,7 +367,7 @@
    <string name="WndHero_Depth">Profund. máxima</string>
    <string name="WndHero_StaTitle">Level %1$d %2$s</string>
    <string name="WndHero_StaCatalogus">Catálogo</string>
-   <string name="WndHero_StaJournal">Jornal</string>
+   <string name="WndHero_StaJournal">Diário</string>
 
 
    <!--  STRINGS OF WndImp CLASS  -->
@@ -393,7 +393,7 @@
 
 
    <!--  STRINGS OF WndJournal CLASS  -->
-   <string name="WndJournal_Title">Jornal</string>
+   <string name="WndJournal_Title">Diário</string>
 
 
    <!--  STRINGS OF WndRanking CLASS  -->
@@ -431,7 +431,7 @@
    <string name="WndSettings_ZoomIn">+</string>
    <string name="WndSettings_ZoomOut">-</string>
    <string name="WndSettings_ZoomDef">Zoom Default</string>
-   <string name="WndSettings_ScaleUp">Scale up UI</string>
+   <string name="WndSettings_ScaleUp">Menu Maior</string>
    <string name="WndSettings_Immersive">Modo Imersivo</string>
    <string name="WndSettings_Music">Música</string>
    <string name="WndSettings_Sound">Efeitos Sonoros</string>
