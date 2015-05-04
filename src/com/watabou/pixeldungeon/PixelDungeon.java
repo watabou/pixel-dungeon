@@ -236,6 +236,26 @@ public class PixelDungeon extends Game {
 	public static boolean brightness() {
 		return Preferences.INSTANCE.getBoolean( Preferences.KEY_BRIGHTNESS, false );
 	}
+	public static void signsshattered( boolean value ) {
+		Preferences.INSTANCE.put( Preferences.KEY_TIPS, value );
+		if (value){
+			Dungeon.TIPS=Dungeon.TIPS1;
+		}
+		else {
+			Dungeon.TIPS=Dungeon.TIPS0;
+		}
+	}
+
+	public static boolean signsshattered() {
+		boolean value= Preferences.INSTANCE.getBoolean( Preferences.KEY_TIPS, false );
+		if (value){
+			Dungeon.TIPS=Dungeon.TIPS1;
+		}
+		else {
+			Dungeon.TIPS=Dungeon.TIPS0;
+		}
+		return value;
+	}
 	
 	public static void donated( String value ) {
 		Preferences.INSTANCE.put( Preferences.KEY_DONATED, value );
