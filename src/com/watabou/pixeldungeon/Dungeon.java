@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -61,6 +63,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.StartScene;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.BArray;
+import com.watabou.pixeldungeon.utils.FIFO;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndResurrect;
 import com.watabou.utils.Bundlable;
@@ -95,7 +98,11 @@ public class Dungeon {
 	public static boolean nightMode;
 	
 	public static SparseArray<ArrayList<Item>> droppedItems;
-	
+
+	final static int undoLength = 10;
+	public static FIFO<byte[]> undoGameBuffer = new FIFO<>(undoLength);
+	public static FIFO<byte[]> undoLevelBuffer = new FIFO<>(undoLength);
+
 	public static void init() {
 
 		challenges = PixelDungeon.challenges();
@@ -361,64 +368,95 @@ public class Dungeon {
 			return RG_DEPTH_FILE;
 		}
 	}
-	
+
+	public static Bundle saveGameBundle () {
+		Bundle bundle = new Bundle();
+
+		bundle.put( VERSION, Game.version );
+		bundle.put( CHALLENGES, challenges );
+		bundle.put( HERO, hero );
+		bundle.put( GOLD, gold );
+		bundle.put( DEPTH, depth );
+
+		for (int d : droppedItems.keyArray()) {
+			bundle.put( String.format( DROPPED, d ), droppedItems.get( d ) );
+		}
+
+		bundle.put( POS, potionOfStrength );
+		bundle.put( SOU, scrollsOfUpgrade );
+		bundle.put( SOE, scrollsOfEnchantment );
+		bundle.put( DV, dewVial );
+		bundle.put( WT, transmutation );
+
+		int count = 0;
+		int ids[] = new int[chapters.size()];
+		for (Integer id : chapters) {
+			ids[count++] = id;
+		}
+		bundle.put( CHAPTERS, ids );
+
+		Bundle quests = new Bundle();
+		Ghost		.Quest.storeInBundle( quests );
+		Wandmaker	.Quest.storeInBundle( quests );
+		Blacksmith	.Quest.storeInBundle( quests );
+		Imp			.Quest.storeInBundle( quests );
+		bundle.put( QUESTS, quests );
+
+		Room.storeRoomsInBundle( bundle );
+
+		Statistics.storeInBundle( bundle );
+		Journal.storeInBundle( bundle );
+
+		QuickSlot.save( bundle );
+
+		Scroll.save( bundle );
+		Potion.save( bundle );
+		Wand.save( bundle );
+		Ring.save( bundle );
+
+		Bundle badges = new Bundle();
+		Badges.saveLocal( badges );
+		bundle.put( BADGES, badges );
+
+		return bundle;
+
+	}
+
+	public static void saveUndo () {
+
+		Actor.fixTime();
+		ByteArrayOutputStream bos;
+		try {
+			Bundle gameBundle = saveGameBundle();
+
+			bos = new ByteArrayOutputStream();
+			Bundle.write(gameBundle, bos);
+			undoGameBuffer.add(bos.toByteArray());
+			bos.close();
+
+			Bundle levelBundle = new Bundle();
+			levelBundle.put(LEVEL, level);
+
+			bos = new ByteArrayOutputStream();
+			Bundle.write(levelBundle, bos);
+			undoLevelBuffer.add(bos.toByteArray());
+			bos.close();
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
 	public static void saveGame( String fileName ) throws IOException {
 		try {
-			Bundle bundle = new Bundle();
-			
-			bundle.put( VERSION, Game.version );
-			bundle.put( CHALLENGES, challenges );
-			bundle.put( HERO, hero );
-			bundle.put( GOLD, gold );
-			bundle.put( DEPTH, depth );
-			
-			for (int d : droppedItems.keyArray()) {
-				bundle.put( String.format( DROPPED, d ), droppedItems.get( d ) );
-			}
-			
-			bundle.put( POS, potionOfStrength );
-			bundle.put( SOU, scrollsOfUpgrade );
-			bundle.put( SOE, scrollsOfEnchantment );
-			bundle.put( DV, dewVial );
-			bundle.put( WT, transmutation );
-			
-			int count = 0;
-			int ids[] = new int[chapters.size()];
-			for (Integer id : chapters) {
-				ids[count++] = id;
-			}
-			bundle.put( CHAPTERS, ids );
-			
-			Bundle quests = new Bundle();
-			Ghost		.Quest.storeInBundle( quests );
-			Wandmaker	.Quest.storeInBundle( quests );
-			Blacksmith	.Quest.storeInBundle( quests );
-			Imp			.Quest.storeInBundle( quests );
-			bundle.put( QUESTS, quests );
-			
-			Room.storeRoomsInBundle( bundle );
-			
-			Statistics.storeInBundle( bundle );
-			Journal.storeInBundle( bundle );
-			
-			QuickSlot.save( bundle );
-			
-			Scroll.save( bundle );
-			Potion.save( bundle );
-			Wand.save( bundle );
-			Ring.save( bundle );
-			
-			Bundle badges = new Bundle();
-			Badges.saveLocal( badges );
-			bundle.put( BADGES, badges );
-			
+			Bundle bundle = saveGameBundle();
 			OutputStream output = Game.instance.openFileOutput( fileName, Game.MODE_PRIVATE );
-			Bundle.write( bundle, output );
+			Bundle.write(bundle, output);
 			output.close();
 			
 		} catch (Exception e) {
 
-			GamesInProgress.setUnknown( hero.heroClass );
+			GamesInProgress.setUnknown(hero.heroClass);
 		}
 	}
 	
@@ -455,10 +493,22 @@ public class Dungeon {
 	public static void loadGame( String fileName ) throws IOException {
 		loadGame( fileName, false );
 	}
-	
+
+	public static void loadGame( int undoLocation) {
+
+		try {
+			loadGame(gameBundle(undoLocation), true);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
 	public static void loadGame( String fileName, boolean fullLoad ) throws IOException {
-		
-		Bundle bundle = gameBundle( fileName );
+		loadGame(gameBundle(fileName), fullLoad);
+
+	}
+
+	public static void loadGame( Bundle bundle, boolean fullLoad ) throws IOException {
 		
 		Dungeon.challenges = bundle.getInt( CHALLENGES );
 		
@@ -539,19 +589,25 @@ public class Dungeon {
 			}
 		}
 	}
-	
-	public static Level loadLevel( HeroClass cl ) throws IOException {
-		
+
+	public static Level loadLevel( InputStream input) throws IOException {
 		Dungeon.level = null;
 		Actor.clear();
-		
-		InputStream input = Game.instance.openFileInput( Utils.format( depthFile( cl ), depth ) ) ;
+
 		Bundle bundle = Bundle.read( input );
 		input.close();
-		
+
 		return (Level)bundle.get( "level" );
 	}
 	
+	public static Level loadLevel( HeroClass cl ) throws IOException {
+		return loadLevel(Game.instance.openFileInput( Utils.format( depthFile( cl ), depth ) )) ;
+	}
+
+	public static Level loadLevel( int undoLocation) throws IOException {
+		return loadLevel(new ByteArrayInputStream( undoLevelBuffer.get(undoLocation)));
+	}
+
 	public static void deleteGame( HeroClass cl, boolean deleteLevels ) {
 		
 		Game.instance.deleteFile( gameFile( cl ) );
@@ -563,16 +619,21 @@ public class Dungeon {
 			}
 		}
 		
-		GamesInProgress.delete( cl );
+		GamesInProgress.delete(cl);
 	}
-	
-	public static Bundle gameBundle( String fileName ) throws IOException {
-		
-		InputStream input = Game.instance.openFileInput( fileName );
-		Bundle bundle = Bundle.read( input );
+
+	public static Bundle gameBundle( InputStream input ) throws IOException {
+		Bundle bundle = Bundle.read(input);
 		input.close();
-		
 		return bundle;
+	}
+
+	public static Bundle gameBundle( int undoLocation ) throws IOException {
+		return gameBundle(new ByteArrayInputStream( undoGameBuffer.get(undoLocation) ));
+	}
+
+	public static Bundle gameBundle( String fileName ) throws IOException {
+		return gameBundle(Game.instance.openFileInput( fileName ));
 	}
 	
 	public static void preview( GamesInProgress.Info info, Bundle bundle ) {

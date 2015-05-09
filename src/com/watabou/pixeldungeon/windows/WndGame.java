@@ -111,12 +111,20 @@ public class WndGame extends Window {
 			} 
 		);
 		
-		addButton( new RedButton( TXT_RETURN ) {
+		addButton(new RedButton(TXT_RETURN) {
 			@Override
 			protected void onClick() {
 				hide();
 			}
-		} );
+		});
+
+		addButton(new RedButton("Undo") {
+			@Override
+			protected void onClick() {
+				InterlevelScene.mode = InterlevelScene.Mode.UNDO;
+				Game.switchScene(InterlevelScene.class);
+			}
+		});
 		
 		resize( WIDTH, pos );
 	}

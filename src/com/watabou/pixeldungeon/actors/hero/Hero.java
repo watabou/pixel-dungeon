@@ -398,7 +398,7 @@ public class Hero extends Char {
 			return false;
 			
 		} else {
-			
+
 			restoreHealth = false;
 			
 			ready = false;
@@ -466,7 +466,8 @@ public class Hero extends Char {
 		sprite.idle();
 		curAction = null;
 		ready = true;
-		
+
+		Dungeon.saveUndo();
 		GameScene.ready();
 	}
 	

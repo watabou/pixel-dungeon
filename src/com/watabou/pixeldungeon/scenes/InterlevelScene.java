@@ -43,12 +43,13 @@ public class InterlevelScene extends PixelScene {
 	private static final String TXT_RESURRECTING= "Resurrecting...";
 	private static final String TXT_RETURNING	= "Returning...";
 	private static final String TXT_FALLING		= "Falling...";
-	
+	private static final String TXT_UNDOING		= "Undoing...";
+
 	private static final String ERR_FILE_NOT_FOUND	= "File not found. For some reason.";
 	private static final String ERR_GENERIC			= "Something went wrong..."	;	
 	
 	public static enum Mode {
-		DESCEND, ASCEND, CONTINUE, RESURRECT, RETURN, FALL
+		DESCEND, ASCEND, CONTINUE, RESURRECT, RETURN, FALL, UNDO
 	};
 	public static Mode mode;
 	
@@ -94,6 +95,9 @@ public class InterlevelScene extends PixelScene {
 		case FALL:
 			text = TXT_FALLING;
 			break;
+		case UNDO:
+			text = TXT_UNDOING;
+			break;
 		}
 		
 		message = PixelScene.createText( text, 9 );
@@ -133,6 +137,9 @@ public class InterlevelScene extends PixelScene {
 						break;
 					case FALL:
 						fall();
+						break;
+					case UNDO:
+						undo();
 						break;
 					}
 
@@ -260,6 +267,20 @@ public class InterlevelScene extends PixelScene {
 		Dungeon.switchLevel( level, Level.resizingNeeded ? level.adjustPos( returnPos ) : returnPos );
 	}
 	
+	private void undo() throws Exception {
+		Actor.fixTime();
+
+		Dungeon.loadGame( 0);
+		if (Dungeon.depth == -1) {
+			Dungeon.depth = Statistics.deepestFloor;
+			Dungeon.switchLevel( Dungeon.loadLevel( 0 ), -1 );
+		} else {
+			Level level = Dungeon.loadLevel( 0 );
+			Dungeon.switchLevel( level, Level.resizingNeeded ? level.adjustPos( Dungeon.hero.pos ) : Dungeon.hero.pos );
+		}
+	}
+
+
 	private void restore() throws Exception {
 		
 		Actor.fixTime();
