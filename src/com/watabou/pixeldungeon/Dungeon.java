@@ -100,8 +100,8 @@ public class Dungeon {
 	public static SparseArray<ArrayList<Item>> droppedItems;
 
 	final static int undoLength = 10;
-	public static FIFO<byte[]> undoGameBuffer = new FIFO<>(undoLength);
-	public static FIFO<byte[]> undoLevelBuffer = new FIFO<>(undoLength);
+	public static FIFO<byte[]> undoGameBuffer;
+	public static FIFO<byte[]> undoLevelBuffer;
 
 	public static void init() {
 
@@ -109,7 +109,7 @@ public class Dungeon {
 		
 		Actor.clear();
 		
-		PathFinder.setMapSize( Level.WIDTH, Level.HEIGHT );
+		PathFinder.setMapSize(Level.WIDTH, Level.HEIGHT);
 		
 		Scroll.initLabels();
 		Potion.initColors();
@@ -123,7 +123,10 @@ public class Dungeon {
 		gold = 0;
 		
 		droppedItems = new SparseArray<ArrayList<Item>>();
-		
+
+		undoGameBuffer = new FIFO<>(undoLength);
+		undoLevelBuffer = new FIFO<>(undoLength);
+
 		potionOfStrength = 0;
 		scrollsOfUpgrade = 0;
 		scrollsOfEnchantment = 0;

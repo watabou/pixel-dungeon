@@ -360,7 +360,11 @@ public class Heap implements Bundlable {
 	public void restoreFromBundle( Bundle bundle ) {
 		pos = bundle.getInt( POS );
 		type = Type.valueOf( bundle.getString( TYPE ) );
-		items = new LinkedList<>( (Collection<? extends Item>) ((Item)bundle.getCollection( ITEMS ) ));
+
+		items = new LinkedList<Item>();
+		for (Bundlable bun : bundle.getCollection( ITEMS )) {
+			items.add( (Item) bun);
+		}
 	}
 
 	@Override

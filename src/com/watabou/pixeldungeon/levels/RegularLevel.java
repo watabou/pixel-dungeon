@@ -33,6 +33,7 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.pixeldungeon.levels.painters.*;
+import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Graph;
 import com.watabou.utils.Random;
@@ -681,8 +682,11 @@ public abstract class RegularLevel extends Level {
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
-		
-		rooms = new HashSet<Room>( (Collection<? extends Room>) ((Room)bundle.getCollection( "rooms" ) ));
+		rooms = new HashSet<Room>();
+		for (Bundlable bund: bundle.getCollection( "rooms" ) ) {
+			rooms.add((Room) bund);
+		}
+
 		for (Room r : rooms) {
 			if (r.type == Type.WEAK_FLOOR) {
 				weakFloorCreated = true;
