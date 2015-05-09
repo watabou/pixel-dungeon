@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	package="com.watabou.pixeldungeon"
+	package="org.ayal.pixeldungeonundone"
 	android:versionCode="70"
 	android:versionName="1.7.5a"
 	android:installLocation="auto">
@@ -28,7 +28,7 @@
 	    
 		<activity
 			android:label="@string/app_name"
-			android:name=".PixelDungeon"
+			android:name=".Main"
 			android:screenOrientation="portrait">
 			<intent-filter >
 				<action android:name="android.intent.action.MAIN" />
