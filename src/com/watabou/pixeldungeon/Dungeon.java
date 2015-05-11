@@ -100,8 +100,8 @@ public class Dungeon {
 	public static SparseArray<ArrayList<Item>> droppedItems;
 
 	final static int undoLength = 10;
-	public static FIFO<byte[]> undoGameBuffer;
-	public static FIFO<byte[]> undoLevelBuffer;
+	public static FIFO<byte[]> undoGameBuffer = null;
+	public static FIFO<byte[]> undoLevelBuffer = null;
 
 	public static void init() {
 
@@ -124,8 +124,6 @@ public class Dungeon {
 		
 		droppedItems = new SparseArray<ArrayList<Item>>();
 
-		undoGameBuffer = new FIFO<>(undoLength);
-		undoLevelBuffer = new FIFO<>(undoLength);
 
 		potionOfStrength = 0;
 		scrollsOfUpgrade = 0;
@@ -429,6 +427,13 @@ public class Dungeon {
 
 		Actor.fixTime();
 		ByteArrayOutputStream bos;
+
+		if (undoGameBuffer == null)
+			undoGameBuffer = new FIFO<>(undoLength);
+
+		if (undoLevelBuffer == null)
+			undoLevelBuffer = new FIFO<>(undoLength);
+
 		try {
 			Bundle gameBundle = saveGameBundle();
 
