@@ -61,7 +61,7 @@
    <!--  STRINGS OF AmuletScene CLASS  -->
    <string name="AmuletScene_Exit">Estuvo bien mientras duró</string>
    <string name="AmuletScene_Stay">Aun no he terminado con esto</string>
-   <string name="AmuletScene_Txt">Por fin lo tienes en las manos, el amuleto de Yendor. Usando su poder puedes gobernar el mundo o traer paz a la gente o lo que sea. De cualquier manera, tu vida cambiará para siempre y ésta partida acabará aquí. O puedes quedarte aqui como un simple mortal algo más.</string>
+   <string name="AmuletScene_Txt">Por fin lo tienes en las manos, el amuleto de Yendor. Usando su poder puedes gobernar el mundo o traer paz a la gente o lo que sea. De cualquier manera, tu vida cambiará para siempre y ésta partida acabará aquí. O puedes quedarte aquí como un simple mortal algo más.</string>
 
 
    <!--  STRINGS OF GameScene CLASS  -->
@@ -172,7 +172,7 @@
    <string name="HeroSubClass_NameAssa">asesino</string>
    <string name="HeroSubClass_DescAssa">Cuando inflinge una ataque sorpresa, el _Asesino_ añade daño adicional al enemigo.</string>
    <string name="HeroSubClass_NameFreR">corredor</string>
-   <string name="HeroSubClass_DescFreR">El _Corredor_ se mueve casi el doble de rápidoque muchos de los monstruos. Cuando está corriendo es mucho más dificil de acertar. Para ello no debe tener un enemigo al lado ni tener mucha hambre.</string>
+   <string name="HeroSubClass_DescFreR">El _Corredor_ se mueve casi el doble de rápidoque muchos de los monstruos. Cuando está corriendo es mucho más difícil de acertar. Para ello no debe tener un enemigo al lado ni tener mucha hambre.</string>
    <string name="HeroSubClass_NameSnip">sniper</string>
    <string name="HeroSubClass_DescSnip">Los _Snipers_ pueden detectar puntos débiles en la armadura de un enemigo, ignorándola al usar un proyectil.</string>
    <string name="HeroSubClass_NameWard">guardian</string>
@@ -443,7 +443,7 @@
 
    <!--  STRINGS OF WndStory CLASS  -->
    <string name="WndStory_Sewers">La mazmorra se encuentra justo debajo de la ciudad, sus niveles superiores constituyen el alcantarillado de la ciudad. Al ser parte de ella, éstos niveles no son peligrosos. Nadie los llamaría un lugar seguro, pero al menos no tienes que luchar contra magia malvada.</string>
-   <string name="WndStory_Prision">Hace muchos años una prisión bajo tierra se contruyó aquí para los criminales más peligrosos. Entonces parecía una buena idea, ya que era difícil de salir, pero pronto miasma oscuro emmpezó a perpretar desde abajo, volviendo locos a los guardias y prisioneros. Al final la prisión fué abandonada, aunque algunos convictos se quedaron encerrados allí.</string>
+   <string name="WndStory_Prision">Hace muchos años una prisión bajo tierra se contruyó aquí para los criminales más peligrosos. Entonces parecía una buena idea, ya que era difícil de salir, pero pronto miasma oscuro emmpezó a perpretar desde abajo, volviendo locos a los guardias y prisioneros. Al final la prisión fue abandonada, aunque algunos convictos se quedaron encerrados allí.</string>
    <string name="WndStory_Caves">Las cuevas, que se extienden hacia abajo bajo la prisión abandonada, están escasamente pobladas. Se encuentran demasiado profundas para ser explotadas por el Ayuntamiento y que son demasiado pobres en minerales para interesar a los enanos. En el pasado había un puesto comercial en alguna parte aquí en la ruta entre estos dos estados, pero ha perecido desde el declive de los enanos Metropolis. Sólo gnolls omnipresentes y animales subterráneos moran aquí ahora.</string>
    <string name="WndStory_Metropolis">Dwarven Metropolis fue una vez el más grande de las ciudades-estado de los enanos. En su apogeo el ejército mecanizado de enanos había repeler la invasión del antiguo dios y su ejército de demonios. Pero se dice, que los guerreros que regresan han traído semillas de corrupción con ellos, y que la victoria fue el principio del fin para el reino subterráneo.</string>
    <string name="WndStory_Halls">En el pasado, estos niveles eran las afueras de Metrópolis. Después de la costosa victoria en la guerra contra los viejos enanos Dios eran demasiado debilitado para borrarlos del resto de los demonios. Poco a poco, los demonios han endurecido su control sobre este lugar y ahora se llama Demon Halls.\n\nMuy pocos aventureros nunca han descendido hasta aquí...</string>
@@ -501,10 +501,212 @@
    <!--  STRINGS OF ArmorKit CLASS  -->
    <string name="ArmorKit_Name">kit de blindaje</string>
    <string name="ArmorKit_ACAplly">APLICAR</string>
+   <string name="ArmorKit_Info">El uso de este kit de herramientas y materiales pequeños cualquiera puede transformar cualquier armadura en una "armadura épica", que mantendrá todas las propiedades de la armadura original, sino que también proporcionará a su portador una habilidad especial en función de su clase. No se requieren habilidades en la sastrería, peletería o herrería.</string>
+   <string name="ArmorKit_SelectArmor">Seleccione una armadura para actualizar</string>
+   <string name="ArmorKit_Upgraded">se aplicó el kit de armadura para actualizar su %s</string>
 
 
+   <!--  STRINGS OF Bomb CLASS  -->
+   <string name="Bomb_Name">bomba</string>
+   <string name="Bomb_Info">Esta es una relativamente pequeña bomba, lleno de polvo negro. Convenientemente, la mecha se enciende automáticamente cuando se lanza la bomba.</string>
 
 
+   <!--  STRINGS OF Dewdrop CLASS  -->
+   <string name="Dewdrop_Name">gota de rocío</string>
+   <string name="Dewdrop_Info">Un claro gota de rocío.</string>
+
+
+   <!--  STRINGS OF DewVial CLASS  -->
+   <string name="DewVial_Name">frasco de rócio</string>
+   <string name="DewVial_ACDRINK">BEBER</string>
+   <string name="DewVial_Info">Puede almacenar el exceso de rocío en este pequeño recipiente para beber después. Si el frasco está lleno, en un momento de peligro mortal el rocío será consumida de forma automática.</string>
+   <string name="DewVial_AutoDrink">El frasco de rocío se vació para sanar sus heridas.</string>
+   <string name="DewVial_Collected">Usted recibió una gota de rocío en su frasco de rocío.</string>
+   <string name="DewVial_Full">Su frasco está lleno de rocío!</string>
+   <string name="DewVial_Empty">Su frasco de rocío está vacía!</string>
+
+
+   <!--  STRINGS OF Heap CLASS  -->
+   <string name="Heap_Mimic">Este es un imitador!</string>
+
+
+   <!--  STRINGS OF Honeypot CLASS  -->
+   <string name="Honeypot_Name">mielero</string>
+   <string name="Honeypot_ACShatter">ROMPER</string>
+   <string name="Honeypot_Info">No hay mucha miel en esta pequeña trampa, pero no es una abeja de oro allí y no quiere dejarlo.</string>
+
+
+   <!--  STRINGS OF Gold CLASS  -->
+   <string name="Gold_Name">oro</string>
+   <string name="Gold_Collect">Recoger las monedas de oro para pasar más tarde en una tienda.</string>
+   <string name="Gold_Info">Una pila de %d monedas de oro.</string>
+   <string name="Gold_Info1">Una moneda de oro.</string>
+
+
+   <!--  STRINGS OF KindOfWeapon CLASS  -->
+   <string name="KindOfWeapon_EquipCursed">mueca de dolor como su agarre aprieta involuntariamente alrededor de su %s</string>
+
+
+   <!--  STRINGS OF LloidsBeacon CLASS  -->
+   <string name="LloidsBeacon_Name">faro de lloyd</string>
+   <string name="LloidsBeacon_ACSet">ACTIVAR</string>
+   <string name="LloidsBeacon_ACReturn">RETORNO</string>
+   <string name="LloidsBeacon_Info">Faro de Lloyd es un dispositivo mágico intrincada, que permite volver a un lugar que ya han sido.</string>
+   <string name="LloidsBeacon_Preventing">Fuerte aura magia de este lugar no le permite usar el faro de la lloyd!</string>
+   <string name="LloidsBeacon_Creatures">Aura psíquica de las criaturas vecinos no le permite utilizar faro del Lloyd en este momento.</string>
+   <string name="LloidsBeacon_Return">Faro del lloyd se establece con éxito en su ubicación actual, ahora puedes volver aquí en cualquier momento.</string>
+   <string name="LloidsBeacon_Set">\n\nEste faro se estableció en algún lugar en el nivel %d de Pixel Dungeon.</string>
+
+
+   <!--  STRINGS OF TomeOfMastery CLASS  -->
+   <string name="TomeOfMastery_Name">Tomo de Maestría</string>
+   <string name="TomeOfMastery_ACRead">LEER</string>
+   <string name="TomeOfMastery_Info">Este libro de cuero gastado no es tan grueso, pero se siente de alguna manera, que puede reunir una gran cantidad de ella. Recuerde sin embargo que la lectura de este tomo puede requerir algún tiempo.</string>
+   <string name="TomeOfMastery_Blinded">No se puede leer mientras cegado</string>
+   <string name="TomeOfMastery_Choose">Usted ha elegido el camino del %s!</string>
+
+
+   <!--  STRINGS OF Torch CLASS  -->
+   <string name="Torch_Name">antorcha</string>
+   <string name="Torch_ACLight">LUZ</string>
+   <string name="Torch_Info">Es un elemento indispensable en The Demon Salas, que son conocidos por su iluminación ambiental pobres.</string>
+
+
+   <!--  STRINGS OF Weightstone CLASS  -->
+   <string name="Weightstone_Name">piedra de peso</string>
+   <string name="Weightstone_ACApply">APLICAR</string>
+   <string name="Weightstone_Info">Utilizando una piedra de peso, puede equilibrar su arma cuerpo a cuerpo para aumentar su velocidad y precisión.</string>
+   <string name="Weightstone_Select">Seleccionar un arma para equilibrar</string>
+   <string name="Weightstone_Fast">usted equilibrados tu %s para hacerlo más rápido</string>
+   <string name="Weightstone_Accurate">usted equilibrados tu %s para que sea más precisa</string>
+   <string name="Weightstone_WndChoice">¿Cómo le gustaría a equilibrar su %s?</string>
+   <string name="Weightstone_WndSpeed">Para la velocidad</string>
+   <string name="Weightstone_WndAccuracy">Para una precisión</string>
+   <string name="Weightstone_WndCancel">No importa</string>
+
+
+<!--  PACKAGE pixeldungeon/plants  -->
+   <!--  STRINGS OF Plant CLASS  -->
+   <string name="Plant_ACPlant">PLANTA</string>
+   <string name="Plant_Info">Tire a esta semilla en el lugar donde desea crecer %1$s.\n\n%2$s</string>
+   <string name="Plant_Seed">semilla de %s</string>
+
+
+   <!--  STRINGS OF Dreamweed CLASS  -->
+   <string name="Dreamweed_Name">Dreamweed</string>
+   <string name="Dreamweed_Desc">Al tocar un Dreamweed segrega una nube brillante de gas confuso.</string>
+
+
+   <!--  STRINGS OF Earthroot CLASS  -->
+   <string name="Earthroot_Name">Earthroot</string>
+   <string name="Earthroot_Desc">Cuando una criatura toca un Earthroot, sus raíces crean una especie de armadura natural a su alrededor.</string>
+   <string name="Earthroot_Buff">Armadura herbal</string>
+
+
+   <!--  STRINGS OF Fadeleaf CLASS  -->
+   <string name="Fadeleaf_Name">Fadeleaf</string>
+   <string name="Fadeleaf_Desc">Tocar una Fadeleaf se teletransportarse a cualquier criatura a un lugar al azar en el nivel actual.</string>
+
+
+   <!--  STRINGS OF Firebloom CLASS  -->
+   <string name="Firebloom_Name">Firebloom</string>
+   <string name="Firebloom_Desc">Cuando algo toca una Firebloom, estalla en llamas.</string>
+   
+
+   <!--  STRINGS OF Icecap CLASS  -->
+   <string name="Icecap_Name">Icecap</string>
+   <string name="Icecap_Desc">Al tocar un Icecap excreta un polen, que congela todo en su vecindad.</string>
+   
+
+   <!--  STRINGS OF Sorrowmoss CLASS  -->
+   <string name="Sorrowmoss_Name">Sorrowmoss</string>
+   <string name="Sorrowmoss_Desc">Un Sorrowmoss es una flor (no un musgo) con pétalos afilados, recubiertas de una de veneno mortal.</string>
+   
+
+   <!--  STRINGS OF Sungrass CLASS  -->
+   <string name="Sungrass_Name">Sungrass</string>
+   <string name="Sungrass_Desc">Sungrass es famoso por las propiedades curativas de su savia.</string>
+   <string name="Sungrass_Buff">Curación herbaria</string>
+
+
+<!--  PACKAGE items/armor  -->
+   <!--  STRINGS OF Armor CLASS  -->
+   <string name="Armor_EquipCursed">tu %s constriñe a tu alrededor dolorosamente</string>
+   <string name="Armor_Identify">que ahora está lo suficientemente familiarizado con su %1$s para identificarlo. Es %2$s.</string>
+   <string name="Armor_ToString">%1$s :%2$d</string>
+   <string name="Armor_Incompatible">Interacción de los diferentes tipos de magia ha borrado el glifo en esta armadura!</string>
+   <string name="Armor_Info1">\n\nEsta %1$s proporciona absorción de daño hasta puntos \"%2$d\" por el ataque.</string>
+   <string name="Armor_Info2">\n\nDebido a su fuerza inadecuada disminuye su velocidad de movimiento y la habilidad de defensa. </string>
+   <string name="Armor_Info3">\n\nDebido a su fuerza inadecuada vistiendo esta armadura disminuirá su velocidad de movimiento y la habilidad de defensa.</string>
+   <string name="Armor_Info4">\n\n%1$s típica proporciona daños absorción de hasta %2$d puntos por ataque y requiere %3$d puntos de fuerza.</string>
+   <string name="Armor_Info5">Probablemente esta armadura es demasiado pesado para usted.</string>
+   <string name="Armor_Info6">Está encantado.</string>
+   <string name="Armor_Info7a">\n\nUsted está usando el %1$s%2$s.</string>
+   <string name="Armor_Info7b">, y porque está maldito, eres incapaz de eliminarlo</string>
+   <string name="Armor_Info8">\n\nUsted puede sentir una magia malévola al acecho dentro de la %s.</string>
+
+
+   <!--  STRINGS OF ClassArmor CLASS  -->
+   <string name="ClassArmor_Desc">La cosa se ve impresionante!</string>
+   <string name="ClassArmor_LowHealt">Su salud es demasiado bajo!</string>
+   <string name="ClassArmor_NotEquipped">Necesitas estar usando esta armadura para usar su poder especial!</string>
+
+
+   <!--  STRINGS OF ClothArmor CLASS  -->
+   <string name="ClothArmor_Name">cloth armor</string>
+   <string name="ClothArmor_Desc">This lightweight armor offers basic protection.</string>
+
+
+   <!--  STRINGS OF HuntressArmor CLASS  -->
+   <string name="HuntressArmor_Name">manto cazadora</string>
+   <string name="HuntressArmor_Desc">Una cazadora de tal capa puede crear un ventilador de aspas espectrales. Cada una de estas hojas se dirigirse a un solo enemigo en el campo de la cazadora de vista, infligiendo daños en función de su arma cuerpo a cuerpo actualmente equipada.</string>
+   <string name="HuntressArmor_ACSpecial">BLADES ESPECTRALES</string>
+   <string name="HuntressArmor_NoEnemies">No hay enemigos a la vista</string>
+   <string name="HuntressArmor_NotHuntress">Sólo cazadoras pueden utilizar esta armadura!</string>
+
+
+   <!--  STRINGS OF LeatherArmor CLASS  -->
+   <string name="LeatherArmor_Name">armadura de cuero</string>
+   <string name="LeatherArmor_Desc">Armadura hecha de piel bronceada monstruo. No es tan ligero como armaduras de tela, pero proporciona una mejor protección.</string>
+
+
+   <!--  STRINGS OF MageArmor CLASS  -->
+   <string name="MageArmor_Name">túnica de mago</string>
+   <string name="MageArmor_Desc">El uso de este magnífico manto, un mago puede lanzar un hechizo de tierra fundida: todos los enemigos en su campo de visión se prendió fuego e incapaz de moverse al mismo tiempo.</string>
+   <string name="MageArmor_ACSpecial">TIERRA FUNDIDO</string>
+   <string name="MageArmor_NotMage">Sólo los magos pueden usar esta armadura!</string>
+
+
+   <!--  STRINGS OF MailArmor CLASS  -->
+   <string name="MailArmor_Name">armaduras de malla</string>
+   <string name="MailArmor_Desc">Enclavamiento eslabones de metal para hacer un traje resistente pero flexible de la armadura.</string>
+
+
+   <!--  STRINGS OF PlateArmor CLASS  -->
+   <string name="PlateArmor_Name">armadura de placas</string>
+   <string name="PlateArmor_Desc">Enormes placas metálicas se unen en un traje que proporciona una protección incomparable a cualquier aventurero lo suficientemente fuerte como para soportar su peso asombrosa.</string>
+
+
+   <!--  STRINGS OF RogueArmor CLASS  -->
+   <string name="RogueArmor_Name">ladrón traje</string>
+   <string name="RogueArmor_Desc">El uso de este atuendo oscuro, un pícaro puede realizar un truco, que se llama \"bomba de humo\" (aunque no se utilizan explosivos reales): le ciega enemigos que podían ver él y saltos a un lado.</string>
+   <string name="RogueArmor_ACSpecial">BOMBA DE HUMO</string>
+   <string name="RogueArmor_NotRogue">Sólo los ladrones pueden utilizar esta armadura!</string>
+   <string name="RogueArmor_Fov">Sólo se puede saltar a un lugar vacío en su campo de visión</string>
+   <string name="RogueArmor_Prompt">Elija un lugar para ir a</string>
+
+
+   <!--  STRINGS OF ScaleArmor CLASS  -->
+   <string name="ScaleArmor_Name">armadura de escamas</string>
+   <string name="ScaleArmor_Desc">Las escamas de metal cosidas en un chaleco de cuero crean una armadura flexible pero protectora.</string>
+
+
+   <!--  STRINGS OF WarriorArmor CLASS  -->
+   <string name="WarriorArmor_Name">guerrero armadura</string>
+   <string name="WarriorArmor_Desc">Si bien esta armadura se ve pesado, que permite a un guerrero para realizar salto heroico hacia una ubicación de orientación, golpeando hacia abajo para aturdir a todos los enemigos cercanos.</string>
+   <string name="WarriorArmor_ACSpecial">SALTO HEROICO</string>
+   <string name="WarriorArmor_NotWarrior">Sólo guerreros pueden usar esta armadura!</string>
+   <string name="WarriorArmor_Prompt">Elija la dirección de saltar</string>
 
 
 

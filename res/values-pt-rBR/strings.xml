@@ -660,7 +660,7 @@
    <!--  STRINGS OF HuntressArmor CLASS  -->
    <string name="HuntressArmor_Name">capa de caçadora</string>
    <string name="HuntressArmor_Desc">Uma caçadora nesse manto pode criar um redemoinho de lâminas espectrais. Cada uma dessas lâminas terá como alvo um único inimigo no campo de vista da caçadora, causando dano dependendo sua arma atualmente equipada.</string>
-   <string name="HuntressArmor_ACSpecial">SPECRTO DE BLADES</string>
+   <string name="HuntressArmor_ACSpecial">SPECTRO DE BLADES</string>
    <string name="HuntressArmor_NoEnemies">Sem inimigos à vista</string>
    <string name="HuntressArmor_NotHuntress">Só caçadoras podem usar esta armadura!</string>
 
