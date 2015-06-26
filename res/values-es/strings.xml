@@ -134,7 +134,7 @@
        <item >Los cazadores cuentan con una espada corta. Esta espada puede ser \"reforjada\" para ser transformada en otro arma.</item>
        <item >Los cazadores son menos eficientes con proyectiles.</item>
        <item >Cualquier consumición de comida le dará un poco de vida.</item>
-       <item >Las pociones de fuerza pueden ser identifficadas desde el principio.</item>
+       <item >Las pociones de fuerza pueden ser identificados desde el principio.</item>
    </string-array>
    <string-array name="HeroClass_MagPerks">
        <item >Los magos empiezan con una varita de Misil Mágico. Ésta varita puede ser \"reencantada\" para convertirla en otra.</item>
@@ -707,6 +707,93 @@
    <string name="WarriorArmor_ACSpecial">SALTO HEROICO</string>
    <string name="WarriorArmor_NotWarrior">Sólo guerreros pueden usar esta armadura!</string>
    <string name="WarriorArmor_Prompt">Elija la dirección de saltar</string>
+
+
+<!--  PACKAGE /armor/Gyphs  -->
+   <!--  STRINGS OF Affection CLASS  -->
+   <string name="Affection_Txt">%s de afecto</string>
+   <!--  STRINGS OF AntiEntropy CLASS  -->
+   <string name="AntiEntropy_Txt">%s de antientropía</string>
+   <!--  STRINGS OF Bounce CLASS  -->
+   <string name="Bounce_Txt">%s de rebote</string>
+   <!--  STRINGS OF Displacement CLASS  -->
+   <string name="Displacement_Txt">%s de desplazamiento</string>
+   <!--  STRINGS OF Entanglement CLASS  -->
+   <string name="Entanglement_Txt">%s de enredo</string>
+   <!--  STRINGS OF Metabolism CLASS  -->
+   <string name="Metabolism_Txt">%s de metabolismo</string>
+   <!--  STRINGS OF Multiplicity CLASS  -->
+   <string name="Multiplicity_Txt">%s de multiplicidad</string>
+   <!--  STRINGS OF Potential CLASS  -->
+   <string name="Potential_Txt">%s de potencial</string>
+   <!--  STRINGS OF Stench CLASS  -->
+   <string name="Stench_Txt">%s del hedor</string>
+   <!--  STRINGS OF Viscosity CLASS  -->
+   <string name="Viscosity_Txt">%s de viscosidad</string>
+   <string name="Viscosity_Status">diferido %d</string>
+   <string name="Viscosity_BufName">encantamiento de la viscosidad</string>
+   <string name="Viscosity_BufInfo1">daños defered (%d)</string>
+   <string name="Viscosity_BufInfo2">El encanto de la viscosidad que mató...</string>
+
+
+<!--  PACKAGE /items/bags  -->
+   <!--  STRINGS OF Bag CLASS  -->
+   <string name="Bag_ACOpen">ABRIR</string>
+   <!--  STRINGS OF Keyring CLASS  -->
+   <string name="Keyring_Name">llavero</string>
+   <string name="Keyring_Info">Esto es un llavero de cobre, que le permite mantener todas sus llaves por separado del resto de sus pertenencias.</string>
+   <!--  STRINGS OF ScrollHolder CLASS  -->
+   <string name="ScrollHolder_Name">apoyo de pergamino</string>
+   <string name="ScrollHolder_Info">Usted puede colocar cualquier número de rollos en este recipiente tubular. Se ahorra espacio en tu mochila y protege pergaminos del fuego.</string>
+   <!--  STRINGS OF SeedPouch CLASS  -->
+   <string name="SeedPouch_Name">bolsa de semillas</string>
+   <string name="SeedPouch_Info">Esta pequeña bolsa de terciopelo le permite almacenar cualquier número de semillas en el mismo. Muy conveniente.</string>   
+   <!--  STRINGS OF WandHolster CLASS  -->
+   <string name="WandHolster_Name">funda de varita</string>
+   <string name="WandHolster_Info">Este delgado soporte está hecho de cuero de un animal exótico. Permite realizar de forma compacta hasta %d varitas.</string>  
+
+
+<!--  PACKAGE /items/food  -->
+   <!--  STRINGS OF Food CLASS  -->
+   <string name="Food_Name">ración de comida</string>
+   <string name="Food_Info">Nada de lujos: carne seca, unas galletas - cosas como esas.</string>
+   <string name="Food_ACEat">COMER</string>
+   <string name="Food_Message">Esa comida era deliciosa!</string>
+
+
+   <!--  STRINGS OF ChargrilledMeat CLASS  -->
+   <string name="ChargrilledMeat_Name">carne a la brasa</string>
+   <string name="ChargrilledMeat_Info">Parece un bistec decente.</string>
+
+
+   <!--  STRINGS OF FrozenCarpaccio CLASS  -->
+   <string name="FrozenCarpaccio_Name">carpaccio congelada</string>
+   <string name="FrozenCarpaccio_Info">Es un pedazo de carne cruda congelada. La única manera de comer es cortando rebanadas delgadas de ella. Y de esta manera es sorprendentemente bueno.</string>
+   <string name="FrozenCarpaccio_Info1">Usted ve las manos se vuelven invisibles!</string>
+   <string name="FrozenCarpaccio_Info2">Usted siente que su piel se endurece!</string>
+   <string name="FrozenCarpaccio_Info3">Refrescante!</string>
+   <string name="FrozenCarpaccio_Info4">Te sientes mejor!</string>
+
+
+   <!--  STRINGS OF MysteryMeat CLASS  -->
+   <string name="MysteryMeat_Name">carne misteriosa</string>
+   <string name="MysteryMeat_Info">Coma en su propio riesgo!</string>
+   <string name="MysteryMeat_Info1">Oh, es caliente!</string>
+   <string name="MysteryMeat_Info2">Usted no puede sentir sus piernas!</string>
+   <string name="MysteryMeat_Info3">Usted no se siente bien.</string>
+   <string name="MysteryMeat_Info4">Usted está llenos.</string>
+   <string name="MysteryMeat_Message">Esa comida era ... extraño.</string>
+
+
+   <!--  STRINGS OF OverpricedRation CLASS  -->
+   <string name="OverpricedRation_Name">ración de comida cara</string>
+   <string name="OverpricedRation_Info">Se ve exactamente como una ración estándar de la comida, pero más pequeño.</string>
+   <string name="OverpricedRation_Message">Esa comida era buena.</string>
+
+
+   <!--  STRINGS OF Pasty CLASS  -->
+   <string name="Pasty_Name">pasta</string>
+   <string name="Pasty_Info">Esto es auténtico pastel de Cornualles con relleno tradicional de carne de vacuno y la patata.</string>
 
 
 
