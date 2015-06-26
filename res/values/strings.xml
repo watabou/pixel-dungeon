@@ -750,7 +750,7 @@
    <string name="SeedPouch_Info">This small velvet pouch allows you to store any number of seeds in it. Very convenient.</string>   
    <!--  STRINGS OF WandHolster CLASS  -->
    <string name="WandHolster_Name">wand holster</string>
-   <string name="WandHolster_Info">This slim holder is made of leather of some exotic animal. It allows to compactly carry up to " + size + " wands.</string>  
+   <string name="WandHolster_Info">This slim holder is made of leather of some exotic animal. It allows to compactly carry up to %d wands.</string>  
 
 
 <!--  PACKAGE /items/food  -->
