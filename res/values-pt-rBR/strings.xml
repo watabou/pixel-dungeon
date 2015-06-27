@@ -877,7 +877,7 @@
    <!--  STRINGS OF PotionOfMight CLASS  -->
    <string name="PotionOfMight_Name">Poção de Poder</string>
    <string name="PotionOfMight_Info">Este líquido poderoso flui naturalmente através de seus músculos, aumentando permanentemente a sua força em um ponto e vida em cinco pontos.</string>
-   <string name="PotionOfMight_Apply"></string>
+   <string name="PotionOfMight_Apply">Uma força recém-descoberta surge através de seu corpo.</string>
    <string name="PotionOfMight_StaApply">+1 str, +5 ht</string>
 
 
