@@ -287,7 +287,7 @@
        <item >Oscuridad</item>
        <item >Runas prohibido</item>
    </string-array>
- 
+
 
    <!--  STRINGS OF Journal CLASS  -->
    <string name="Journal_WellHealt">Pozo de Vitalidad</string>
@@ -611,17 +611,17 @@
    <!--  STRINGS OF Firebloom CLASS  -->
    <string name="Firebloom_Name">Firebloom</string>
    <string name="Firebloom_Desc">Cuando algo toca una Firebloom, estalla en llamas.</string>
-   
+
 
    <!--  STRINGS OF Icecap CLASS  -->
    <string name="Icecap_Name">Icecap</string>
    <string name="Icecap_Desc">Al tocar un Icecap excreta un polen, que congela todo en su vecindad.</string>
-   
+
 
    <!--  STRINGS OF Sorrowmoss CLASS  -->
    <string name="Sorrowmoss_Name">Sorrowmoss</string>
    <string name="Sorrowmoss_Desc">Un Sorrowmoss es una flor (no un musgo) con pétalos afilados, recubiertas de una de veneno mortal.</string>
-   
+
 
    <!--  STRINGS OF Sungrass CLASS  -->
    <string name="Sungrass_Name">Sungrass</string>
@@ -632,7 +632,7 @@
 <!--  PACKAGE items/armor  -->
    <!--  STRINGS OF Armor CLASS  -->
    <string name="Armor_EquipCursed">tu %s constriñe a tu alrededor dolorosamente</string>
-   <string name="Armor_Identify">que ahora está lo suficientemente familiarizado con su %1$s para identificarlo. Es %2$s.</string>
+   <string name="Armor_Identify">Que ahora está lo suficientemente familiarizado con su %1$s para identificarlo. Es %2$s.</string>
    <string name="Armor_ToString">%1$s :%2$d</string>
    <string name="Armor_Incompatible">Interacción de los diferentes tipos de magia ha borrado el glifo en esta armadura!</string>
    <string name="Armor_Info1">\n\nEsta %1$s proporciona absorción de daño hasta puntos \"%2$d\" por el ataque.</string>
@@ -811,7 +811,7 @@
    <!--  STRINGS OF SkeletonKey CLASS  -->
    <string name="SkeletonKey_Name">llave maestra</string>
    <string name="SkeletonKey_Info">Esta clave parece serio: la cabeza tiene la forma de un cráneo. Probablemente se puede abrir alguna puerta serio.</string>
-   
+
 
 <!--  PACKAGE /items/potions  -->
    <!--  STRINGS OF Potion CLASS  -->
@@ -949,7 +949,7 @@
    <!--  STRINGS OF Ring CLASS  -->
    <string name="Ring_Name">anillo de %s</string>
    <string name="Ring_Info">Esta banda metálica está adornado con una joya de %s de gran tamaño que brilla en la oscuridad. ¿Quién sabe qué efecto ha cuando se usa?</string>
-   <string name="Ring_Identify">que ahora está lo suficientemente familiarizado con su %1$s para identificarlo. Es %2$s.</string>
+   <string name="Ring_Identify">Que ahora está lo suficientemente familiarizado con su %1$s para identificarlo. Es %2$s.</string>
    <string name="Ring_UnequipTit">Desequipamiento un anillo</string>
    <string name="Ring_UnequipMsg">Sólo puede llevar dos anillos a la vez. Desequipamiento uno de sus anillos equipados.</string>
    <string-array name="Ring_Gems">
@@ -1257,6 +1257,179 @@
    <string name="WandOfTeleportation_Info">Una explosión de esta varita se teletransportar una criatura contra su voluntad a un lugar al azar en el nivel actual.</string>
    <string name="WandOfTeleportation_Info1">%1$s hombre teletransportado %2$s a algún lugar</string>
    <string name="WandOfTeleportation_Info2">no pasó nada</string>
+
+
+<!--  PACKAGE /items/weapon  -->
+   <!--  STRINGS OF Weapon CLASS  -->
+   <string name="Weapon_Identify">Que ahora está lo suficientemente familiarizado con su %1$s para identificarlo. Es %2$s</string>
+   <string name="Weapon_Incompatible">Interacción de los diferentes tipos de magia ha negado el encanto de esta arma!</string>
+
+
+<!--  PACKAGE /weapon/Enchantment  -->
+   <!--  STRINGS OF Death CLASS  -->
+   <string name="Death_Name">%s Sombría</string>
+   <!--  STRINGS OF Fire CLASS  -->
+   <string name="Fire_Name">%s Ardiente</string>
+   <!--  STRINGS OF Horror CLASS  -->
+   <string name="Horror_Name">%s Misterioso</string>
+   <!--  STRINGS OF Instability CLASS  -->
+   <string name="Instability_Name">%s Inestable</string>
+   <!--  STRINGS OF Leech CLASS  -->
+   <string name="Leech_Name">%s Vampírico</string>
+   <!--  STRINGS OF Luck CLASS  -->
+   <string name="Luck_Name">%s Suerte</string>
+   <!--  STRINGS OF Paralysis CLASS  -->
+   <string name="Paralysis_Name">%s que Aturde</string>
+   <!--  STRINGS OF Poison CLASS  -->
+   <string name="Poison_Name">%s Venenoso</string>
+   <!--  STRINGS OF Shock CLASS  -->
+   <string name="Shock_Name">%s Chocante</string>
+   <!--  STRINGS OF Slow CLASS  -->
+   <string name="Slow_Name">%s Escalofriante</string>
+   <!--  STRINGS OF Tempering CLASS  -->
+   <string name="Tempering_Name">%s Templado</string>
+
+
+<!--  PACKAGE /weapon/melee  -->
+   <!--  STRINGS OF MeleeWeapon CLASS  -->
+   <string name="MeleeWeapon_Info1a">%1$s: Es un arma cuerpo a cuerpo %2$s en el nivel %3$d.</string>
+   <string name="MeleeWeapon_Info1b"></string>
+   <string name="MeleeWeapon_Info1c">mejorado</string>
+   <string name="MeleeWeapon_Info1d">degrada</string>
+   <string name="MeleeWeapon_Info2a">Su daño promedio es de %d puntos por golpe.</string>
+   <string name="MeleeWeapon_Info2b">Su daño medio típico es %1$d puntos por golpe y por lo general requiere de %1$d puntos de fuerza.</string>
+   <string name="MeleeWeapon_Info2c">Probablemente esta arma es demasiado pesado para usted.</string>
+   <string name="MeleeWeapon_Info3a">Este es un arma bastante %s.</string>
+   <string name="MeleeWeapon_Info3b">rápido</string>
+   <string name="MeleeWeapon_Info3c">lento</string>
+   <string name="MeleeWeapon_Info3d">y</string>
+   <string name="MeleeWeapon_Info3e">pero</string>
+   <string name="MeleeWeapon_Info3f">preciso</string>
+   <string name="MeleeWeapon_Info3g">impreciso</string>
+   <string name="MeleeWeapon_Info4a">Fue equilibrado para hacerlo más rápido.</string>
+   <string name="MeleeWeapon_Info4b">Fue equilibrado para que sea más precisa.</string>
+   <string name="MeleeWeapon_Info5">Está encantado.</string>
+   <string name="MeleeWeapon_Info6a">Debido a su fuerza inadecuada disminuye la precisión y la velocidad de su ataque con %s.</string>
+   <string name="MeleeWeapon_Info6b">Debido a su exceso de fuerza se aumenta el daño de tu ataque con %s.</string>
+   <string name="MeleeWeapon_Info7a">Usted sostiene el %2$s en ristre%2$s.</string>
+   <string name="MeleeWeapon_Info7b">, y porque está maldito, eres incapaz de dejar ir</string>
+   <string name="MeleeWeapon_Info7c">Usted puede sentir una magia malévola al acecho dentro de %s.</string>
+
+
+   <!--  STRINGS OF BattleAxe CLASS  -->
+   <string name="BattleAxe_Name">hacha de batalla</string>
+   <string name="BattleAxe_Info">La enorme cabeza de acero de esta hacha de batalla pone considerable influencia detrás de cada golpe.</string>
+
+
+   <!--  STRINGS OF Dagger CLASS  -->
+   <string name="Dagger_Name">daga</string>
+   <string name="Dagger_Info">Una daga de hierro simple con un mango de madera desgastada.</string>
+
+
+   <!--  STRINGS OF Glaive CLASS  -->
+   <string name="Glaive_Name">glaive</string>
+   <string name="Glaive_Info">Un arma de asta que consiste en una hoja de la espada en el extremo de un poste.</string>
+
+
+   <!--  STRINGS OF Knuckles CLASS  -->
+   <string name="Knuckles_Name">puño de hierro</string>
+   <string name="Knuckles_Info">Un pedazo de hierro en forma de encajar alrededor de los nudillos.</string>
+
+
+   <!--  STRINGS OF Longsword CLASS  -->
+   <string name="Longsword_Name">espada larga</string>
+   <string name="Longsword_Info">Esta hoja se eleva inflige graves daños al invertir su peso en cada corte.</string>
+
+
+   <!--  STRINGS OF Mace CLASS  -->
+   <string name="Mace_Name">maza</string>
+   <string name="Mace_Info">La cabeza de hierro de esta arma inflige un daño sustancial.</string>
+
+
+   <!--  STRINGS OF Quarterstaff CLASS  -->
+   <string name="Quarterstaff_Name">barra</string>
+   <string name="Quarterstaff_Info">Un equipo de la madera dura, sus extremos están calzados con hierro.</string>
+
+
+   <!--  STRINGS OF ShortSword CLASS  -->
+   <string name="ShortSword_Name">espada corta</string>
+   <string name="ShortSword_Info">De hecho, es bastante corto, apenas unas pocas pulgadas más largo, que una daga.</string>
+   <string name="ShortSword_ACReforge">REFORJAR</string>
+   <string name="ShortSword_Select">Seleccionar un arma para actualizar</string>
+   <string name="ShortSword_Reforged">que reforjada la espada corta actualizar su %s</string>
+   <string name="ShortSword_NotBoomerang">no se puede actualizar un boomerang de esta manera</string>
+
+
+   <!--  STRINGS OF Spear CLASS  -->
+   <string name="Spear_Name">lanza</string>
+   <string name="Spear_Info">Una varilla de madera delgada con punta de hierro afilado.</string>
+
+
+   <!--  STRINGS OF Sword CLASS  -->
+   <string name="Sword_Name">espada</string>
+   <string name="Sword_Info">La longitud afilado de la hoja de acero brilla tranquilizador.</string>
+
+
+   <!--  STRINGS OF WarHammer CLASS  -->
+   <string name="WarHammer_Name">martillo de guerra</string>
+   <string name="WarHammer_Info">Pocas criaturas pueden soportar el duro golpe de esta masa imponente de plomo y acero, pero sólo el más fuerte de los aventureros pueden utilizarla de manera eficaz.</string>
+
+
+<!--  PACKAGE /weapon/missiles  -->
+   <!--  STRINGS OF MissileWeapon CLASS  -->
+   <string name="MissileWeapon_Missiles">arma de proyectiles</string>
+   <string name="MissileWeapon_Yes">Sí, ya sé lo que estoy haciendo</string>
+   <string name="MissileWeapon_No">No, he cambiado de opinión</string>
+   <string name="MissileWeapon_Sure">¿De verdad quiere equipar como un arma cuerpo a cuerpo?</string>
+   <string name="MissileWeapon_Info1">\n\nDaños media de esta arma es igual a %d puntos por golpe.</string>
+   <string name="MissileWeapon_Info2">Debido a su fuerza inadecuada disminuye la precisión y la velocidad de su ataque con este %s.</string>
+   <string name="MissileWeapon_Info3">A causa de su exceso de fuerza se aumenta el daño de tu ataque con este %s.</string>
+   <string name="MissileWeapon_Info4">\n\nUsted lleva a cabo el %s en la mano.</string>
+
+
+   <!--  STRINGS OF Boomerang CLASS  -->
+   <string name="Boomerang_Name">bumerang</string>
+   <string name="Boomerang_Info">Lanzado al enemigo este piso misiles madera curvada volverá a manos de su lanzador.</string>
+
+
+   <!--  STRINGS OF CurareDart CLASS  -->
+   <string name="CurareDart_Name">dardo venenoso</string>
+   <string name="CurareDart_Info">Estos pequeños dardos del maligno no hacen mucho daño, pero ellos pueden paralizar el objetivo dejándolo indefenso y sin moverse durante algún equipo.</string>
+
+
+   <!--  STRINGS OF Dart CLASS  -->
+   <string name="Dart_Name">dardo</string>
+   <string name="Dart_Info">Estas puntas de metal simples se ponderan a volar verdadera y pican a sus presas con un giro de muñeca.</string>
+
+
+   <!--  STRINGS OF IncendiaryDart CLASS  -->
+   <string name="IncendiaryDart_Name">dardos incendiarios</string>
+   <string name="IncendiaryDart_Info">El pico en cada uno de estos dardos está diseñado para fijarlo a su objetivo, mientras que los compuestos inestables atados a su longitud estallaron en llamas brillantes.</string>
+
+
+   <!--  STRINGS OF Javelin CLASS  -->
+   <string name="Javelin_Name">jabalina</string>
+   <string name="Javelin_Info">Esta longitud de metal se pondera para mantener la punta en la punta más importante, ya que navega por el aire.</string>
+
+
+   <!--  STRINGS OF Shuriken CLASS  -->
+   <string name="Shuriken_Name">shuriken</string>
+   <string name="Shuriken_Info">Piezas en forma de estrella, de metal con cuchillas afiladas hacen daño significativo cuando golpean un objetivo. Ellos pueden ser lanzadas a muy alta velocidad.</string>
+
+
+   <!--  STRINGS OF Tamahawk CLASS  -->
+   <string name="Tamahawk_Name">tomahawk</string>
+   <string name="Tamahawk_Info">Esta hacha de lanzamiento no es tan pesado, pero aún requiere de fuerza significativa para ser utilizado con eficacia.</string>
+
+
+
+
+
+
+
+
+
+
 
 
 
