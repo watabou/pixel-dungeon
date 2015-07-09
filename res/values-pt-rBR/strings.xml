@@ -660,7 +660,7 @@
    <!--  STRINGS OF HuntressArmor CLASS  -->
    <string name="HuntressArmor_Name">capa de caçadora</string>
    <string name="HuntressArmor_Desc">Uma caçadora nesse manto pode criar um redemoinho de lâminas espectrais. Cada uma dessas lâminas terá como alvo um único inimigo no campo de vista da caçadora, causando dano dependendo sua arma atualmente equipada.</string>
-   <string name="HuntressArmor_ACSpecial">SPECRTO DE BLADES</string>
+   <string name="HuntressArmor_ACSpecial">SPECTRO DE BLADES</string>
    <string name="HuntressArmor_NoEnemies">Sem inimigos à vista</string>
    <string name="HuntressArmor_NotHuntress">Só caçadoras podem usar esta armadura!</string>
 
@@ -877,7 +877,7 @@
    <!--  STRINGS OF PotionOfMight CLASS  -->
    <string name="PotionOfMight_Name">Poção de Poder</string>
    <string name="PotionOfMight_Info">Este líquido poderoso flui naturalmente através de seus músculos, aumentando permanentemente a sua força em um ponto e vida em cinco pontos.</string>
-   <string name="PotionOfMight_Apply">Uma força recém-descoberta surge através de seu corpo.</string>
+   <string name="PotionOfMight_Apply"></string>
    <string name="PotionOfMight_StaApply">+1 str, +5 ht</string>
 
 
@@ -1448,9 +1448,9 @@
 
 <!--  PACKAGE /actors/buffs  -->
    <!--  STRINGS OF Amok CLASS  -->
-   <string name="Amok_Info">Furioso</string>
+   <string name="Amok_Info">Loucura</string>
    <!--  STRINGS OF Barkskin CLASS  -->
-   <string name="Barkskin_Info">Barkskin</string>
+   <string name="Barkskin_Info">Pele Cascuda</string>
    <!--  STRINGS OF Bleeding CLASS  -->
    <string name="Bleeding_Info">Sangrando</string>
    <string name="Bleeding_Death">Você sangrou até a morte ...</string>
@@ -1557,7 +1557,7 @@
    <!--  STRINGS OF Eye CLASS  -->
    <string name="Eye_Name">olho do mal</string>
    <string name="Eye_Desc">Um dos outros nomes deste demônio é "esfera de ódio", porque quando vê um inimigo, ele usa seu Olhar da Morte de forma imprudente, muitas vezes ignorando seus aliados e ferindo-os.</string>
-   <string name="Eye_Kill">%s Olhar da Morte matou você...</string>
+   <string name="Eye_Kill">Olhar da Morte de %s matou você...</string>
    <!--  STRINGS OF Gnoll CLASS  -->
    <string name="Gnoll_Name">gnoll batedor</string>
    <string name="Gnoll_Desc">Gnolls são pequenos humanóides. Eles moram nos esgotos e masmorras, aventurando-se para invadir a superfície de tempos em tempos. Gnolls Batedores normalmente são membros matilhas, eles não são tão fortes como os Gnolls Brutamontes e não tão inteligentes como os Xamãs.</string>
@@ -1606,9 +1606,9 @@
    <!--  STRINGS OF Shaman CLASS  -->
    <string name="Shaman_Name">gnoll Xamã</string>
    <string name="Shaman_Desc">Os gnolls mais inteligentes podem dominar magia Xamã. Gnolls Xamãs preferem uma batalha de feitiços para compensar a falta de coragem, não hesitando em usá-los sobre aqueles que questionam o seu status na tribo.</string>
-   <string name="Shaman_Killed">O Raio de %s\ matou você...</string>
+   <string name="Shaman_Killed">O raio de %s matou você...</string>
    <!--  STRINGS OF Shielded CLASS  -->
-   <string name="Shielded_Name">brutamonte Blindado</string>
+   <string name="Shielded_Name">brutamonte blindado</string>
    <string name="Shielded_Defense">bloqueou</string>
    <!--  STRINGS OF Skeleton CLASS  -->
    <string name="Skeleton_Name">esqueleto</string>
@@ -1616,13 +1616,13 @@
    <string name="Skeleton_Defense">bloqueou</string>
    <string name="Skeleton_Killed">Você foi morto pela explosão de ossos ...</string>
    <!--  STRINGS OF Spinner CLASS  -->
-   <string name="Spinner_Name">arranha da caverna</string>
+   <string name="Spinner_Name">aranha da caverna</string>
    <string name="Spinner_Desc">Estas aranhas de caverna de pelos esverdeados tentam evitar o combate direto, preferindo esperar na distância, enquanto a sua vítima fica presa na teia de aranha excretado e morre lentamente de sua mordida venenosa.</string>
    <!--  STRINGS OF Statue CLASS  -->
    <string name="Statue_Name">estátua animada</string>
    <string name="Statue_Desc">Você poderia pensar que é apenas uma outra estátua feia deste calabouço, mas os seus olhos vermelhos podem ser vistos à distância. Enquanto a estátua em si é feita de pedra, o _%s_ que está empunhando parece bem real.</string>
    <!--  STRINGS OF Succubus CLASS  -->
-   <string name="Succubus_Name">Súcubo</string>
+   <string name="Succubus_Name">súcubo</string>
    <string name="Succubus_Desc">Os súcubos são demônios que parecem meninas sedutoras (de maneira um pouco gótica). Usando sua magia, o súcubo pode encantar um herói, que se tornará incapaz de atacar qualquer coisa até que o encanto desapareça.</string>
    <!--  STRINGS OF Swarm CLASS  -->
    <string name="Swarm_Name">enxame de moscas</string>
@@ -1664,7 +1664,7 @@
    <string name="Bee_Desc">Apesar de seu pequeno tamanho, abelhas douradas tendem a proteger seu mestre ferozmente. Elas, no entanto, não vivem por muito tempo.</string>
    <string name="Bee_Status">Esta %s está vagando</string>
    <!--  STRINGS OF Blacksmith CLASS  -->
-   <string name="Blacksmith_Name">Troll Ferreiro</string>
+   <string name="Blacksmith_Name">troll ferreiro</string>
    <string name="Blacksmith_Desc">Este Troll Ferreiro se parece muito com todos os trolls: ele é alto e magro, e sua pele se assemelha a pedra na cor e textura. O ferreiro trolls mexe com suas pequenas ferramentas de tamanho desproporcinal.</string>
    <string name="Blacksmith_Gold1">Ei humano! Quer ser útil, não é? Tome este picareta e me consiga algumas pedras de _Ouro Escuro_, _15 peças_ devem ser suficiente. O que quer dizer, como é que eu vou te pagar? Você gananciosos...\nOk, ok, eu não tenho dinheiro para pagar, mas posso forjar para você. Considere-se com sorte, eu sou o único ferreiro por perto.</string>
    <string name="Blacksmith_Blood1">Ei humano! Quer ser útil, não é? Tome este picareta e _mate um Morcego_, e me mostre seu sague na ponta da picareta. O que quer dizer, como é que eu vou te pagar? Você gananciosos...\nOk, ok, eu não tenho dinheiro para pagar, mas posso forjar para você. Considere-se com sorte, eu sou o único ferreiro por perto.</string>
@@ -1681,7 +1681,7 @@
    <string name="Blacksmith_Verify5">É um lixo, a qualidade é muito pobre!</string>
    <string name="Blacksmith_Verify6">Eu não posso reforjar estes artigos!</string>
    <!--  STRINGS OF Ghost CLASS  -->
-   <string name="Ghost_Name">Fantasma Triste</string>
+   <string name="Ghost_Name">fantasma triste</string>
    <string name="Ghost_Desc">O fantasma é pouco visível. Parece uma mancha disforme de luz fraca com uma cara triste.</string>
    <string name="Ghost_Rose1">Olá aventureiro... Uma vez eu era como você - forte e confiante... E agora eu estou morto... Mas eu não posso deixar este lugar... Não até eu ter a minha _Rosa Seca_... É muito importante para mim... Algum monstro roubou de meu corpo...</string>
    <string name="Ghost_Rose2">Por favor... Ajude-me... Encontre o rosa...</string>
@@ -1691,7 +1691,7 @@
    <string name="Ghost_FetidRatName">Rato Fétido</string>
    <string name="Ghost_FetidRatDesc">Este rato marsupial é muito maior, do que uma forma regular. É cercada por uma nuvem imunda.</string>
    <!--  STRINGS OF Imp CLASS  -->
-   <string name="Imp_Name">Diabinho Ambicioso</string>
+   <string name="Imp_Name">diabinho ambicioso</string>
    <string name="Imp_Desc">São demônios menores. Eles não são notáveis ​​por sua força nem por seu talento mágico, mas eles são muito inteligentes e sociáveis. Muitos diabinhos preferem viver entre os não-demônios.</string>
    <string name="Imp_Defense">evitou</string>
    <string name="Imp_Golems1">Você é um aventureiro? Eu amo aventureiros! Você sempre pode contar com eles, se algo precisa ser morto. Estou certo? Em troca uma recompensa, é claro;)\nNo meu caso, são _Golems_ que precisam ser mortos. Você vê, eu estou começand um pequeno negócio aqui, mas esses golems estúpidos são ruins para os negócios! É muito difícil de negociar com pedaços de granito errante, malditos sejam! Então, por favor, mate ... digamos _6 deles_ e a recompensa será sua.</string>
@@ -1701,23 +1701,23 @@
    <string name="Imp_Cya">Até logo, %s!</string>
    <string name="Imp_Hey">Psiuu, %s!</string>
    <!--  STRINGS OF ImpShopkeeper CLASS  -->
-   <string name="ImpShopkeeper_Name">Diabinho Ambicioso</string>
+   <string name="ImpShopkeeper_Name">diabinho ambicioso</string>
    <string name="ImpShopkeeper_Desc">São demônios menores. Eles não são notáveis ​​por sua força nem por seu talento mágico, mas eles são muito inteligentes e sociáveis. Muitos diabinhos preferem viver e fazer negócios entre os não-demônios.</string>
    <string name="ImpShopkeeper_Greetings">Olá Amigo!</string>
    <!--  STRINGS OF MirrorImage CLASS  -->
-   <string name="MirrorImage_Name">Imagem Espelhada</string>
+   <string name="MirrorImage_Name">imagem espelhada</string>
    <string name="MirrorImage_Desc">Esta ilusão é muito semelhante a você, mas é mais pálida e se contorce um pouco.</string>
    <!--  STRINGS OF RatKing CLASS  -->
-   <string name="RatKing_Name">Rei Rato</string>
+   <string name="RatKing_Name">rei rato</string>
    <string name="RatKing_Desc">Este rato é um pouco maior do que um rato marsupial normal e ele está usando uma pequena coroa em sua cabeça.</string>
    <string name="RatKing_Info1">Eu não estou dormindo!</string>
    <string name="RatKing_Info2">O que é isso? Eu não tenho tempo para essa bobagem. O meu reino não vai se governar sozinho!</string>
    <!--  STRINGS OF Shopkeeper CLASS  -->
-   <string name="Shopkeeper_Name">Comerciante</string>
+   <string name="Shopkeeper_Name">comerciante</string>
    <string name="Shopkeeper_Desc">Esse cara gordo parece mais apropriado para um distrito comercial em alguma grande cidade do que para um calabouço. Seus preços explicam por que ele prefere fazer negócios aqui.</string>
    <string name="Shopkeeper_Sell">Selecione um item para vender</string>
    <!--  STRINGS OF WandMaker CLASS  -->
-   <string name="WandMaker_Name">Velho Fabricante de Varinhas</string>
+   <string name="WandMaker_Name">velho fabricante de varinhas</string>
    <string name="WandMaker_Desc">Este antigo, mas forte cavalheiro usa uma expressão um pouco confusa. Ele é protegido por um escudo mágico.</string>
    <string name="WandMaker_Defense">absorveu</string>
    <string name="WandMaker_Berry1">Oh, que surpresa agradável encontrar uma pessoa decente em tal lugar! Eu vim aqui para um ingrediente raro - uma _Semente de Rotberry_. Sendo um usuário de magia, eu sou bem capaz de me defender contra os monstros locais, mas eu estou ficando perdido e tenho pouco tempo, é muito constrangedor. Provavelmente, você poderia me ajudar? Eu ficaria feliz em pagar por seu serviço com uma das minhas melhores varinhas.</string>
