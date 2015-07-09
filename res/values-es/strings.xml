@@ -1729,20 +1729,155 @@
    <string name="WandMaker_RotberryInfo">La semilla emite un rugido que hace eco a lo largo de la mazmorra!</string>
 
 
+<!--  PACKAGE /levels  -->
+   <!--  STRINGS OF Level CLASS  -->
+   <string name="Level_HiddenPlate">Una placa de presión oculta hace clic!</string>
+   <string name="Level_TileChasm">Abismo</string>
+   <string name="Level_TileFloor">Piso</string>
+   <string name="Level_TileGrass">Hierba</string>
+   <string name="Level_TileWater">Agua</string>
+   <string name="Level_TileWall">Pared</string>
+   <string name="Level_TileClosedDoor">Puerta cerrada</string>
+   <string name="Level_TileOpenDoor">Puerta abierta</string>
+   <string name="Level_TileEntrance">Entrada</string>
+   <string name="Level_TileExit">Salida</string>
+   <string name="Level_TileEmbers">Ascuas</string>
+   <string name="Level_TileLockedDoor">Puerta bloqueada</string>
+   <string name="Level_TilePedestal">Pedestal</string>
+   <string name="Level_TileBarricade">Barricada</string>
+   <string name="Level_TileHighGrass">Hierba alta</string>
+   <string name="Level_TileLockedExit">Salida bloqueada</string>
+   <string name="Level_TileUnlockedExit">Salida desbloqueada</string>
+   <string name="Level_TileSign">Letrero</string>
+   <string name="Level_TileWell">Pozo</string>
+   <string name="Level_TileEmptyWell">Pozo vacío</string>
+   <string name="Level_TileStatue">Estatua</string>
+   <string name="Level_TileToxicTrap">Trampa de gas tóxico</string>
+   <string name="Level_TileFireTrap">Trampa de fuego</string>
+   <string name="Level_TileParalyticTrap">Trampa de gas paralítico</string>
+   <string name="Level_TilePoisonTrap">Trampa de dardo venenoso</string>
+   <string name="Level_TileAlarmTrap">Trampa de alarma</string>
+   <string name="Level_TileLightningTrap">Trampa de rayo</string>
+   <string name="Level_TileGrippingTrap">Trampa de agarrarte</string>
+   <string name="Level_TileSummoningTrap">Trampa de convocación</string>
+   <string name="Level_TileInactiveTrap">Trampa disparada</string>
+   <string name="Level_TileBookshelf">Estantería</string>
+   <string name="Level_TileAlchemy">Alquimia olla</string>
+   <string name="Level_TileDefault">\?\?\?</string>
+   <string name="Level_TileDescChasm">No se puede ver el fondo.</string>
+   <string name="Level_TileDescWater">En caso de incendio, entrar en el agua para extinguir el fuego.</string>
+   <string name="Level_TileDescEntrance">Las escaleras le llevará a la planta superior.</string>
+   <string name="Level_TileDescExit">Las escaleras le llevará a una mayor profundidad.</string>
+   <string name="Level_TileDescEmbers">Ascuas cubren el suelo.</string>
+   <string name="Level_TileDescHighGrass">Bloques de vegetación densa por delante.</string>
+   <string name="Level_TileDescLockedDoor">Esta puerta está cerrada, se necesita una clave coincidente para desbloquearlo.</string>
+   <string name="Level_TileDescLockedExit">Bares pesados bloquean las escaleras que conducen.</string>
+   <string name="Level_TileDescBarricade">La barricada de madera se establece con firmeza pero se ha secado en los últimos años. Podría quemar?</string>
+   <string name="Level_TileDescSign">No se puede leer el texto de aquí.</string>
+   <string name="Level_TileDescTrap">Caminando sobre una placa de presión oculto activará la trampa.</string>
+   <string name="Level_TileDescInactiveTrap">La trampa se ha activado antes y no es peligroso ya.</string>
+   <string name="Level_TileDescStatue">Alguien quería adornar este lugar, pero no pudo, obviamente.</string>
+   <string name="Level_TileDescAlchemy">Caída de algunas semillas para cocinar una poción.</string>
+   <string name="Level_TileDescEmptyWell">El pozo se ha secado.</string>
+   <!--  STRINGS OF CavesLevel & CavesBossLevel CLASS  -->
+   <string name="Caves_TileGrass">Musgo fluorescente</string>
+   <string name="Caves_TileHighGrass">Hongos fluorescentes</string>
+   <string name="Caves_TileWater">Agua helada.</string>
+   <string name="Caves_TileDescEntrance">Las escaleras le llevará a la planta superior.</string>
+   <string name="Caves_TileDescExit">Las escaleras le llevará a una mayor profundidad.</string>
+   <string name="Caves_TileDescHighGrass">Enormes hongos bloquean la vista.</string>
+   <string name="Caves_TileDescDeco">Una vena de algún mineral es visible en la pared. Oro?</string>
+   <string name="Caves_TileDescBookshelf">Quién necesitaría una Estantería en una cueva?</string>
+   <!--  STRINGS OF CityLevel & CityBossLevel CLASS  -->
+   <string name="City_TileWater">Agua de color sospechosamente</string>
+   <string name="City_TileHighGrass">Flores de alta flor</string>
+   <string name="City_TileDescEntrance">La rampa le llevará a la planta superior.</string>
+   <string name="City_TileDescExit">La rampa le llevará a una mayor profundidad.</string>
+   <string name="City_TileDescDeco">Varios azulejos faltan aquí.</string>
+   <string name="City_TileDescEmptySP">Gruesa alfombra cubre el suelo.</string>
+   <string name="City_TileDescStatue">La estatua representa a algunos de pie enano en una postura heroica.</string>
+   <string name="City_TileDescBookshelf">Las filas de libros sobre diferentes disciplinas llenar la estantería.</string>
+   <!--  STRINGS OF HallsLevel & HallsBossLevel CLASS  -->
+   <string name="Halls_TileWater">Lava fría</string>
+   <string name="Halls_TileGrass">Musgo em brasas</string>
+   <string name="Halls_TileHighGrass">Fungo em brasas</string>
+   <string name="Halls_TileStatue">Pilar</string>
+   <string name="Halls_TileDescWater">Parece que la lava, pero hace frío y probablemente puede tocar.</string>
+   <string name="Halls_TileDescStatue">El pilar está hecho de cráneos humanoides reales. Impresionante.</string>
+   <string name="Halls_TileDescBookshelf">Libros en idiomas antiguos arden en la estantería.</string>
+   <!--  STRINGS OF LastLevel CLASS  -->
+   <string name="LastLevel_TileWater">@string/Halls_TileWater</string>
+   <string name="LastLevel_TileGrass">@string/Halls_TileGrass</string>
+   <string name="LastLevel_TileHighGrass">@string/Halls_TileHighGrass</string>
+   <string name="LastLevel_TileStatue">@string/Halls_TileStatue</string>
+   <string name="LastLevel_TileDescWater">@string/Halls_TileDescWater</string>
+   <string name="LastLevel_TileDescStatue">@string/Halls_TileDescStatue</string>
+   <!--  STRINGS OF LastShopLevel CLASS  -->
+   <string name="LastShopLevel_TileWater">@string/City_TileWater</string>
+   <string name="LastShopLevel_TileHighGrass">@string/City_TileHighGrass</string>
+   <string name="LastShopLevel_TileDescEntrance">@string/City_TileDescEntrance</string>
+   <string name="LastShopLevel_TileDescExit">@string/City_TileDescExit</string>
+   <string name="LastShopLevel_TileDescDeco">@string/City_TileDescDeco</string>
+   <string name="LastShopLevel_TileDescEmptySP">@string/City_TileDescEmptySP</string>
+   <!--  STRINGS OF PrisonLevel & PrisonBossLevel CLASS  -->
+   <string name="Prison_TileWater">Agua fría oscura.</string>
+   <string name="Prison_TileDescDeco">Hay viejas manchas de sangre en el suelo.</string>
+   <string name="Prison_TileDescBookshelf">Esto es probablemente un vestigio de una biblioteca de la prisión. Podría quemar?</string>
+   <!--  STRINGS OF SewerLevel & SewerBossLevel CLASS  -->
+   <string name="Sewer_TileWater">Agua turbia</string>
+   <string name="Sewer_TileDescDeco">Un musgo húmedo amarillento cubre el suelo.</string>
+   <string name="Sewer_TileDescBookshelf">La estantería está repleto de libros inútiles baratos. Podría quemar?</string>
 
 
+<!--  PACKAGE /levels/features  -->
+   <!--  STRINGS OF AlchemyPot CLASS  -->
+   <string name="AlchemyPot_SelectSeed">Seleccione una semilla para lanzar</string>
+   <!--  STRINGS OF Chasm CLASS  -->
+   <string name="Chasm_Chasm">Abismo</string>
+   <string name="Chasm_Yes">Sí, ya sé lo que estoy haciendo</string>
+   <string name="Chasm_No">No, he cambiado de opinión</string>
+   <string name="Chasm_Jump">¿De verdad quieres saltar al abismo? Usted probablemente puede morir.</string>
+   <string name="Chasm_Info">Caíste a la muerte ...</string>
+   <!--  STRINGS OF Sign CLASS  -->
+   <string name="Sign_DeadEnd">Qué estás haciendo aquí?!</string>
+   <string name="Sign_Burn">Al tratar de leer el letrero que estalla en llamas verdosas.</string>
+   <string-array name="Sign_Tips">
+       <item >No sobreestimar su fuerza, el uso de armas y armaduras que puede manejar.</item>
+       <item >No todas las puertas en la mazmorra son visibles a primera vista. Si usted está atascado, buscar puertas ocultas.</item>
+       <item >Recuerde, que el aumento de su fuerza no es la única forma de acceder a un mejor equipo. Usted puede ir a otro lado, la reducción de su requisito de resistencia con Pergaminos de actualización.</item>
+       <item >Usted puede pasar su oro en tiendas en los niveles más profundos de la mazmorra. El primero está en el sexto nivel.</item>
+       <item >Tenga cuidado con los Goo!</item>
+       <item >Pixel-Mart - todo lo que necesita para la aventura con éxito!</item>
+       <item >Identifique sus pociones y pergaminos tan pronto como sea posible. No lo posponga hasta el momento en que realmente los necesita.</item>
+       <item >Tener hambre no hace daño, pero muerto de hambre hace daño.</item>
+       <item >Ataque sorpresa tiene una mejor oportunidad de éxito. Por ejemplo, se puede tender una emboscada a tu enemigo detrás de una puerta cerrada cuando se sabe que se acerca.</item>
+       <item >No deje el Tengu huir!</item>
+       <item >Pixel-Mart. Gastar dinero. Vivir más tiempo.</item>
+       <item >Cuando eres atacado por varios monstruos al mismo tiempo, tratar de retirarse detrás de una puerta.</item>
+       <item >Si está quemando, no se puede apagar el fuego en el agua mientras levitando.</item>
+       <item >No hay sentido en posesión de más de un Ankh, al mismo tiempo, debido a que los perderá a resucitar.</item>
+       <item >PELIGRO! Maquinaria pesada puede causar lesiones, pérdida de extremidades o la muerte!</item>
+       <item >Pixel-Mart. Una vida más segura en la prisión.</item>
+       <item >Al actualizar un arma encantada, hay una oportunidad de destruir ese encantamiento.</item>
+       <item >Con un Pozo de Transmutación puede obtener un elemento, que no se puede obtener de otra manera.</item>
+       <item >La única manera de encantar un arma es mediante la actualización con un Pergamino de Actualización de Arma.</item>
+       <item >No se permiten armas en presencia de Su Majestad!</item>
+       <item >Pixel-Mart. Precios especiales para cazadores de demonios!</item>
+   </string-array>
 
 
+<!--  PACKAGE /levels/traps  -->
+   <!--  STRINGS OF AlarmTrap CLASS  -->
+   <string name="AlarmTrap_Desc">La trampa emite un sonido penetrante que hace eco a lo largo de la mazmorra!</string>
+   <!--  STRINGS OF LightningTrap CLASS  -->
+   <string name="LightningTrap_Name">trampa de rayo</string>
+   <string name="LightningTrap_Desc">Usted fue matado por una descarga de una trampa de rayo ...</string>   
 
 
-
-
-
-
-
-
-
-
+<!--  PACKAGE /ui  -->
+   <!--  STRINGS OF Toolbar CLASS  -->
+   <string name="Toolbar_Info1">Usted no sabe lo que hay.</string>
+   <string name="Toolbar_Info2">Seleccione una celda para examinar</string>
 
 
 <!--  PACKAGE /utils  -->
