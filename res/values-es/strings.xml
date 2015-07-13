@@ -130,9 +130,9 @@
    <string name="HeroClass_Rog">bellaco</string>
    <string name="HeroClass_Hun">cazadora</string>
    <string-array name="HeroClass_WarPerks">
-       <item >Los cazadores empiezan con 11 puntos de fuerza.</item>
-       <item >Los cazadores cuentan con una espada corta. Esta espada puede ser \"reforjada\" para ser transformada en otro arma.</item>
-       <item >Los cazadores son menos eficientes con proyectiles.</item>
+       <item >Los guerreros empiezan con 11 puntos de fuerza.</item>
+       <item >Los guerreros cuentan con una espada corta. Esta espada puede ser \"reforjada\" para ser transformada en otro arma.</item>
+       <item >Los guerreros son menos eficientes con proyectiles.</item>
        <item >Cualquier consumición de comida le dará un poco de vida.</item>
        <item >Las pociones de fuerza pueden ser identificados desde el principio.</item>
    </string-array>
@@ -140,7 +140,7 @@
        <item >Los magos empiezan con una varita de Misil Mágico. Ésta varita puede ser \"reencantada\" para convertirla en otra.</item>
        <item >Los mago recargan sus varitas más rápido.</item>
        <item >Al comer, añade una carga a todas la varitas que posee en su inventario.</item>
-       <item >Los magos pueden usar las varitas como arma melee.</item>
+       <item >Los magos pueden usar las varitas como arma cuerpo a cuerpo.</item>
        <item >Los pergaminos de Identificación pueden se identificados desde el principio.</item>
    </string-array>
    <string-array name="HeroClass_RogPerks">
@@ -162,7 +162,7 @@
 
    <!--  STRINGS OF HeroSubClass CLASS  -->
    <string name="HeroSubClass_NameGlad">gladiador</string>
-   <string name="HeroSubClass_DescGlad">Un ataque exitoso con un arma melee hace que el _Gladiador_ comience en combo, en el cual cada golpe exitoso inflinge más daño.</string>
+   <string name="HeroSubClass_DescGlad">Un ataque exitoso con un arma cuerpo a cuerpo permite al _Gladiador_ comience en combo, en el cual cada golpe exitoso inflinge más daño.</string>
    <string name="HeroSubClass_NameBers">furioso</string>
    <string name="HeroSubClass_DescBers">Cuando está muy dañado, el _Furioso_ entra en un estado de furia salvaje, incrementando significantemente su daño.</string>
    <string name="HeroSubClass_NameWarL">bruto</string>
@@ -353,12 +353,12 @@
    <string name="WndGame_Ranking">Puntuaciones</string>
    <string name="WndGame_Start">Empezar un nuevo juego</string>
    <string name="WndGame_menu">Menú principal</string>
-   <string name="WndGame_Exit">Salir de Pixel Dungeon</string>
+   <string name="WndGame_Exit">Salir del juego</string>
    <string name="WndGame_Return">Volver al juego</string>
 
 
    <!--  STRINGS OF WndHero CLASS  -->
-   <string name="WndHero_Stats">Estadísticas</string>
+   <string name="WndHero_Stats">Estadíst.</string>
    <string name="WndHero_Buffs">Bufos</string>
    <string name="WndHero_Exp">Experiencia</string>
    <string name="WndHero_Str">Fuerza</string>
@@ -398,7 +398,7 @@
 
    <!--  STRINGS OF WndRanking CLASS  -->
    <string name="WndRanking_Error">Imposible cargar información adicional</string>
-   <string name="WndRanking_Stats">Estadísticas</string>
+   <string name="WndRanking_Stats">Estadíst.</string>
    <string name="WndRanking_Items">Ítems</string>
    <string name="WndRanking_Badges">Insignias</string>
    <string name="WndRanking_StaTitle">Nivel %1$d %2$s</string>
@@ -421,10 +421,10 @@
 
 
    <!--  STRINGS OF WndSadGhost CLASS  -->
-   <string name="WndSadGhost_Rose">Yes! Yes!!! This is it! Please give it to me! And you can take one of these items, maybe they will be useful to you in your journey...</string>
-   <string name="WndSadGhost_Rat">Yes! The ugly creature is slain and I can finally rest... Please take one of these items, maybe they will be useful to you in your journey...</string>
-   <string name="WndSadGhost_Wepon">Ghost\'s weapon</string>
-   <string name="WndSadGhost_Armor">Ghost\'s armor</string>
+   <string name="WndSadGhost_Rose">¡Sí! Sí!!! Esto es! Dámelo por favor! Y usted puede tomar uno de estos elementos, puede ser que le sea útil en su viaje...</string>
+   <string name="WndSadGhost_Rat">¡Sí! La criatura fea es asesinado y yo finalmente pueda descansar... Por favor, tome uno de estos elementos, tal vez será útil para usted en su viaje...</string>
+   <string name="WndSadGhost_Wepon">Arma del fantasma</string>
+   <string name="WndSadGhost_Armor">Armadura del fantasma</string>
 
 
    <!--  STRINGS OF WndSettings CLASS  -->
@@ -653,8 +653,8 @@
 
 
    <!--  STRINGS OF ClothArmor CLASS  -->
-   <string name="ClothArmor_Name">cloth armor</string>
-   <string name="ClothArmor_Desc">This lightweight armor offers basic protection.</string>
+   <string name="ClothArmor_Name">armadura de paño</string>
+   <string name="ClothArmor_Desc">Esta armadura ligera ofrece una protección básica.</string>
 
 
    <!--  STRINGS OF HuntressArmor CLASS  -->
@@ -1057,7 +1057,7 @@
 
    <!--  STRINGS OF InventoryScroll CLASS  -->
    <string name="InventoryScroll_Title">Selecciona un ítem</string>
-   <string name="InventoryScroll_Warning">¿Realmente deseas cancelar el uso de desplazamiento? Se consume de todos modos.</string>
+   <string name="InventoryScroll_Warning">¿Realmente deseas cancelar el uso del pergamino? Se consume de todos modos.</string>
    <string name="InventoryScroll_Yes">Sí, ya sé lo que estoy haciendo</string>
    <string name="InventoryScroll_No">No, he cambiado de opinión</string>
 
@@ -1084,7 +1084,7 @@
 
 
    <!--  STRINGS OF ScrollOfMagicMapping CLASS  -->
-   <string name="ScrollOfMagicMapping_Name">Pergamino de Mapeo Magica</string>
+   <string name="ScrollOfMagicMapping_Name">Pergamino de Mapeo Mágica</string>
    <string name="ScrollOfMagicMapping_Info">Cuando se lee este pergamino, una imagen de claridad cristalina quedará grabado en su memoria, alertando a la distribución precisa del nivel y revelando todos los secretos ocultos. Las ubicaciones de los elementos y criaturas seguirán siendo desconocido.</string>
    <string name="ScrollOfMagicMapping_Layout">You are now aware of the level layout.</string>
 
@@ -1248,8 +1248,8 @@
 
    <!--  STRINGS OF WandOfTelekinesis CLASS  -->
    <string name="WandOfTelekinesis_Name">Varita de Telequinesia</string>
-   <string name="WandOfTelekinesis_Info">Waves of magic force from this wand will affect all cells on their way triggering traps, trampling high vegetation, opening closed doors and closing open ones. They also push back monsters.</string>
-   <string name="WandOfTelekinesis_YouNowHave">You have magically transported %s into your backpack</string>
+   <string name="WandOfTelekinesis_Info">Olas de fuerza mágica de esta varita afectarán todas las células en sus trampas manera desencadenantes, pisoteando vegetación alta, abriendo las puertas cerradas y el cierre de los abiertos. También empujan hacia atrás monstruos.</string>
+   <string name="WandOfTelekinesis_YouNowHave">Usted ha transportado mágicamente %s en su mochila</string>
 
 
    <!--  STRINGS OF WandOfTeleportation CLASS  -->
@@ -1297,7 +1297,7 @@
    <string name="MeleeWeapon_Info1c">mejorado</string>
    <string name="MeleeWeapon_Info1d">degrada</string>
    <string name="MeleeWeapon_Info2a">Su daño promedio es de %d puntos por golpe.</string>
-   <string name="MeleeWeapon_Info2b">Su daño medio típico es %1$d puntos por golpe y por lo general requiere de %1$d puntos de fuerza.</string>
+   <string name="MeleeWeapon_Info2b">Su daño medio típico es %1$d puntos por golpe y por lo general requiere de %2$d puntos de fuerza.</string>
    <string name="MeleeWeapon_Info2c">Probablemente esta arma es demasiado pesado para usted.</string>
    <string name="MeleeWeapon_Info3a">Este es un arma bastante %s.</string>
    <string name="MeleeWeapon_Info3b">rápido</string>
@@ -1311,7 +1311,7 @@
    <string name="MeleeWeapon_Info5">Está encantado.</string>
    <string name="MeleeWeapon_Info6a">Debido a su fuerza inadecuada disminuye la precisión y la velocidad de su ataque con %s.</string>
    <string name="MeleeWeapon_Info6b">Debido a su exceso de fuerza se aumenta el daño de tu ataque con %s.</string>
-   <string name="MeleeWeapon_Info7a">Usted sostiene el %2$s en ristre%2$s.</string>
+   <string name="MeleeWeapon_Info7a">Usted sostiene el %1$s en ristre%2$s.</string>
    <string name="MeleeWeapon_Info7b">, y porque está maldito, eres incapaz de dejar ir</string>
    <string name="MeleeWeapon_Info7c">Usted puede sentir una magia malévola al acecho dentro de %s.</string>
 
@@ -1353,7 +1353,7 @@
 
    <!--  STRINGS OF ShortSword CLASS  -->
    <string name="ShortSword_Name">espada corta</string>
-   <string name="ShortSword_Info">De hecho, es bastante corto, apenas unas pocas pulgadas más largo, que una daga.</string>
+   <string name="ShortSword_Info">De hecho, es bastante corto, apenas unas pocas pulgadas más largo que una daga.</string>
    <string name="ShortSword_ACReforge">REFORJAR</string>
    <string name="ShortSword_Select">Seleccionar un arma para actualizar</string>
    <string name="ShortSword_Reforged">que reforjada la espada corta actualizar su %s</string>
@@ -1670,7 +1670,7 @@
    <string name="Blacksmith_Blood1">Hey humano! ¿Quieres ser útil, ¿eh? Tome este pico y _matar a un murciélago_ con ella, necesito su sangre en la cabeza. ¿Qué quieres decir, ¿cómo voy a pagar? Usted es codicioso...\nOk, ok, no tengo dinero para pagar, pero puedo forjar para usted. Considérese afortunado, yo soy el único herrero alrededor.</string>
    <string name="Blacksmith_Txt2">Me estás tomando el pelo? ¿Dónde está mi pico?!</string>
    <string name="Blacksmith_Txt3">Mineral de oro oscuro. 15 piezas. En serio, ¿es tan difícil?</string>
-   <string name="Blacksmith_Txt4">Dije que necesito del sangre de murciélago en el pico. Chop Chop!</string>
+   <string name="Blacksmith_Txt4">Dije que necesito del sangre de murciélago en el pico. Chop chop!</string>
    <string name="Blacksmith_Completed">Oh, usted ha regresado... Mejor tarde que nunca.</string>
    <string name="Blacksmith_GetLost">Estoy ocupado. Piérdete!</string>
    <string name="Blacksmith_LooksBetter">tu %s sin duda se ve mejor ahora</string>
@@ -1884,5 +1884,5 @@
    <!--  STRINGS OF Utils CLASS  -->
    <!-- 1: Execute Indefinite Function to Language -->
    <!-- 0: NO Execute Indefinite Function to Language -->
-   <string name="Utils_IsIndefinte">1</string>
+   <string name="Utils_IsIndefinte">0</string>
 </resources>
