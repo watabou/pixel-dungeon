@@ -174,7 +174,7 @@
    <string name="HeroSubClass_NameFreR">coureur</string>
    <string name="HeroSubClass_DescFreR">Le _Coureur_ se déplace presque deux fois plus vite que la plupart des monstres. Quand il court, le coureur est beaucoup plus dur à toucher. Mais pour cela, il ne doit pas être encombré et ne pas être affamé.</string>
    <string name="HeroSubClass_NameSnip">sniper</string>
-   <string name="HeroSubClass_DescSnip">Les _Snipers_ sont capables de détecter les points faibles dans l\'armure d\'un ennemi, ignorant cette protection lors de l\'utilisation d\'armes à distance. </string>
+   <string name="HeroSubClass_DescSnip">Les _Snipers_ sont capables de détecter les points faibles dans l\'armure d\'un ennemi, ignorant cette protection lors de l\'utilisation d\'armes à distance.</string>
    <string name="HeroSubClass_NameWard">gardienne</string>
    <string name="HeroSubClass_DescWard">Les _Gardiennes_ ont une forte connexion avec les forces de la nature, ce qui leur donne la possibilité de collecter de la rosée et des graines sur les plantes. Fouler des herbes hautes leur octroie par ailleurs un bonus d\'armure temporaire.</string>
 
@@ -274,9 +274,201 @@
    <string name="Badges_GamesPlayed4">2000 parties jouées</string>
    <string name="Badges_HappyEnd">Fin heureuse</string>
    <string name="Badges_Champion">Challenge réussi</string>
-   <string name="Badges_Supporter">Merci pour votre soutien !</string>
+   <string name="Badges_Supporter">Merci pour votre soutien!</string>
 
 
+   <!--  STRINGS OF Challenges CLASS  -->
+   <string-array name="Challenges_Names">
+       <item >Au régime</item>
+       <item >Fidèle est mon armure</item>
+       <item >Pharmacophobie</item>
+       <item >Terre stérile</item>
+       <item >Intelligence de l\'essaim</item>
+       <item >Dans les ténèbres</item>
+       <item >Runes interdite</item>
+   </string-array>
+
+
+   <!--  STRINGS OF Journal CLASS  -->
+   <string name="Journal_WellHealt">Puits de Santé</string>
+   <string name="Journal_WellAwareness">Puits de Conscience</string>
+   <string name="Journal_WellTransmut">Puits de Transmutation</string>
+   <string name="Journal_Alchemy">Chaudron d\'Alchimie</string>
+   <string name="Journal_Garden">Jardin</string>
+   <string name="Journal_Statue">Statue animée</string>
+   <string name="Journal_Ghost">Fantôme triste</string>
+   <string name="Journal_Wandmaker">Vieux Fabricant de Sceptres</string>
+   <string name="Journal_Troll">Troll forgeron</string>
+   <string name="Journal_Imp">Diablotin ambitieux</string>
+
+
+   <!--  STRINGS OF ResultDescriptions CLASS  -->
+   <string name="ResultDescriptions_Mob">Tué par %1$s au niveau %2$d</string>
+   <string name="ResultDescriptions_Boss">Tué par le %1$s au niveau %2$d</string>
+   <string name="ResultDescriptions_Wand">Tué par votre propre %1$s au niveau %2$d</string>
+   <string name="ResultDescriptions_Glyph">Tué par le %1$s au niveau %2$d</string>
+   <string name="ResultDescriptions_Trap">Tué par une décharge du %1$s au niveau %2$d</string>
+   <string name="ResultDescriptions_Burning">Brûlé à mort au niveau %d</string>
+   <string name="ResultDescriptions_Hunger">Mort de faim au niveau %d</string>
+   <string name="ResultDescriptions_Poison">Empoisonné au niveau %d</string>
+   <string name="ResultDescriptions_Gas">Asphyxié au niveau %d</string>
+   <string name="ResultDescriptions_Bleeding">Mort d\'anémie au niveau %d</string>
+   <string name="ResultDescriptions_Ooze">Tué par le limon toxique au niveau %d</string>
+   <string name="ResultDescriptions_Fall">Est tombé au niveau %d</string>
+   <string name="ResultDescriptions_Win">A obtenu l\'amulette de Yendor</string>
+
+
+   <!--  STRINGS OF WndBlacksmith CLASS  -->
+   <string name="WndBlacksmith_Prompt">Ok, un marché est un marché, voilà c\'que je peux faire : je peux te reforger 2 objets et t\'en faire un de meilleure qualité. </string>
+   <string name="WndBlacksmith_Select">Choisissez un objet à reforger</string>
+   <string name="WndBlacksmith_Reforge">Les reforger</string>
+
+
+   <!--  STRINGS OF WndCatalogus CLASS  -->
+   <string name="WndCatalogus_Potions">Potions</string>
+   <string name="WndCatalogus_Scrolls">Parchemins</string>
+   <string name="WndCatalogus_Title">Catalogue</string>
+
+
+   <!--  STRINGS OF WndChallenges CLASS  -->
+   <string name="WndChallenges_Title">Défis</string>
+
+
+   <!--  STRINGS OF WndChooseWay CLASS  -->
+   <string name="WndChooseWay_Message">Quelle voie choisirez-vous?</string>
+   <string name="WndChooseWay_Cancel">Je choisirai plus tard</string>
+
+
+   <!--  STRINGS OF WndClass CLASS  -->
+   <string name="WndClass_Mastery">Spécialisation</string>
+
+
+   <!--  STRINGS OF WndError CLASS  -->
+   <string name="WndError_Title">ERREUR</string>
+
+
+   <!--  STRINGS OF WndGame CLASS  -->
+   <string name="WndGame_Settings">Paramètres</string>
+   <string name="WndGame_Challenges">Défis</string>
+   <string name="WndGame_Ranking">Classement</string>
+   <string name="WndGame_Start">Nouvelle partie</string>
+   <string name="WndGame_menu">Menu principal</string>
+   <string name="WndGame_Exit">Quitter Pixel Dungeon</string>
+   <string name="WndGame_Return">Revenir à la partie</string>
+
+
+   <!--  STRINGS OF WndHero CLASS  -->
+   <string name="WndHero_Stats">Statistiques</string>
+   <string name="WndHero_Buffs">Bonus</string>
+   <string name="WndHero_Exp">Expérience</string>
+   <string name="WndHero_Str">Force</string>
+   <string name="WndHero_Health">Santé</string>
+   <string name="WndHero_Gold">Or collecté</string>
+   <string name="WndHero_Depth">Etage maximum</string>
+   <string name="WndHero_StaTitle">Niveau %1$d %2$s</string>
+   <string name="WndHero_StaCatalogus">Catalogue</string>
+   <string name="WndHero_StaJournal">Journal</string>
+
+
+   <!--  STRINGS OF WndImp CLASS  -->
+   <string name="WndImp_Message">Oh oui ! Vous êtes mon héros !\nA propos de votre récompense, je n\'ai pas d\'argent sur moi, mais j\'ai quelque chose de mieux pour vous. Voici mon héritage familial: un anneau ! Mon grand-père l\'a volé sur le doigt d\'un paladin mort.</string>
+   <string name="WndImp_Reward">Prendre l\'anneau</string>
+
+
+   <!--  STRINGS OF WndInfoCell CLASS  -->
+   <string name="WndInfoCell_Nothing">Il n\'y a rien ici.</string>
+
+
+   <!--  STRINGS OF WndInfoItem CLASS  -->
+   <string name="WndInfoItem_Chest">Coffre</string>
+   <string name="WndInfoItem_LockedChest">Coffre verrouillé</string>
+   <string name="WndInfoItem_CrystalChest">Coffre de cristal</string>
+   <string name="WndInfoItem_Tomb">Tombe</string>
+   <string name="WndInfoItem_Skeleton">Restes de squelette</string>
+   <string name="WndInfoItem_WontKnow">Vous ne saurez pas ce qu\'il y a dedans tant que vous ne l\'ouvrirez pas !</string>
+   <string name="WndInfoItem_NeedKey">Mais vous aurez besoin d\'une clé dorée pour l\'ouvrir.</string>
+   <string name="WndInfoItem_Inside">Vous pouvez voir %s dedans, mais pour ouvrir le coffre, vous aurez besoin d\'une clé dorée.</string>
+   <string name="WndInfoItem_Owner">L\'ancienne tombe pourrait renfermer quelque chose d\'utile, mais son propriétaire refusera certainement que vous vérifiez.</string>
+   <string name="WndInfoItem_Remains">Voici tout ce qui reste de l\'un de vos prédécesseurs. Il vaudrait peut-être mieux vérifier s\'il n\'y a pas des objets de valeur.</string>
+
+
+   <!--  STRINGS OF WndJournal CLASS  -->
+   <string name="WndJournal_Title">Journal</string>
+
+
+   <!--  STRINGS OF WndRanking CLASS  -->
+   <string name="WndRanking_Error">Impossible de charger plus d\'informations</string>
+   <string name="WndRanking_Stats">Statistiques</string>
+   <string name="WndRanking_Items">Objets</string>
+   <string name="WndRanking_Badges">Médailles</string>
+   <string name="WndRanking_StaTitle">Niveau %1$d %2$s</string>
+   <string name="WndRanking_StaChallenges">Défis</string>
+   <string name="WndRanking_StaHealth">Santé</string>
+   <string name="WndRanking_StaStr">Force</string>
+   <string name="WndRanking_StaDuration">Durée de la partie</string>
+   <string name="WndRanking_StaDepth">Etage maximum</string>
+   <string name="WndRanking_StaEnemies">Ennemis tués</string>
+   <string name="WndRanking_StaGold">Or collectées</string>
+   <string name="WndRanking_StaFood">Rations mangées</string>
+   <string name="WndRanking_StaAlchemy">Potions fabriquées</string>
+   <string name="WndRanking_StaAnkhs">Ankhs utilisés</string>
+
+
+   <!--  STRINGS OF WndResurrect CLASS  -->
+   <string name="WndResurrect_Message">Vous êtes mort, mais vous recevez une chance de plus de finir ce donjon. La prendrez vous ?</string>
+   <string name="WndResurrect_Yes">Oui, je me battrai !</string>
+   <string name="WndResurrect_No">Non, j\'abandonne</string>
+
+
+   <!--  STRINGS OF WndSadGhost CLASS  -->
+   <string name="WndSadGhost_Rose">Oui ! OUI !!! C\'est ça ! Donnez la moi ! Vous pouvez prendre l\'un de ces objets, ils vous seront peut-être utiles pendant votre voyage...</string>
+   <string name="WndSadGhost_Rat">Oui ! Cette créature infâme est vaincue et je peux enfin reposer en paix... Je vous prie d\'accepter l\'un de ces objets, ils vous seront peut-être utiles pendant votre voyage...</string>
+   <string name="WndSadGhost_Wepon">Arme du fantôme</string>
+   <string name="WndSadGhost_Armor">Armure du fantôme</string>
+
+
+   <!--  STRINGS OF WndSettings CLASS  -->
+   <string name="WndSettings_ZoomIn">+</string>
+   <string name="WndSettings_ZoomOut">-</string>
+   <string name="WndSettings_ZoomDef">Zoom par défaut</string>
+   <string name="WndSettings_ScaleUp">Intensifier l\'UI</string>
+   <string name="WndSettings_Immersive">Mode immersif</string>
+   <string name="WndSettings_Music">Musique</string>
+   <string name="WndSettings_Sound">Effets sonores</string>
+   <string name="WndSettings_Brightness">Luminosité</string>
+   <string name="WndSettings_2QuickSlot">Deuxième raccourci</string>
+   <string name="WndSettings_SwitchPort">Passer en vue portrait</string>
+   <string name="WndSettings_SwitchLand">Passer en vue paysage</string>
+
+
+   <!--  STRINGS OF WndStory CLASS  -->
+   <string name="WndStory_Sewers">Le donjon se trouve juste sous la ville, ses niveaux les plus élevés sont en fait le système des égouts de la ville. Etant officiellement une partie de la ville, ces niveaux ne sont pas si dangereux. On ne peut pas dire que c\'est un endroit sûr, mais au moins, vous n\'aurez pas affaire à de la magie noire par ici.</string>
+   <string name="WndStory_Prision">Il y a des années, une prison souterraine fut bâtie ici pour les criminels les plus dangereux. A l\'époque, cela semblait être une bonne idée, car il était très dur de s\'échapper de cet endroit. Mais un miasme de magie noire ne tarda pas à venir des profondeurs, rendant prisonniers et gardes fous à lier. Au final, la prison fut abandonnée, même si certains condamnés sont restés enfermés dans ces murs...</string>
+   <string name="WndStory_Caves">Les grottes, qui s\'étendent sous la prison abandonnée, ne sont que peu peuplées. Elles sont top profondes pour être exploitées par la ville, et sont trop pauvres en minéraux pour susciter l\'intérêt des nains. Il y avait un avant-poste d\'échange quelque part sur le chemin entre les deux nations, mais il a péri depuis le déclin de la métropole naine. Seuls les gnolls et autres créatures souterraines résident ici désormais.</string>
+   <string name="WndStory_Metropolis">La métropole naine était la plus grande de toutes les cités-états naines. Lors de son apogée, l\'armée mécanique des nains repoussa avec succès l\'invasion du dieu ancien et son armée de démons. Mais on raconte que les guerriers qui en sont revenus ont apportés les graines de la corruption avec eux, et que la victoire n\'était que le début de la fin de ce royaume souterrain.</string>
+   <string name="WndStory_Halls">Ces niveaux sont les vestiges des banlieues de la métropole naine. Après la victoire coûteuse dans la guerre contre l\'ancien dieu, les nains furent trop affaiblis pour se débarrasser des démons restants. Peu à peu les démons se sont attachés à cet endroit qu\'on appelle désormais le Hall des Démons. Très peu d\'aventuriers ont réussi à descendre aussi loin...</string>
+
+
+   <!--  STRINGS OF WndTradeItem CLASS  -->
+   <string name="WndTradeItem_Sale">A VENDRE : %1$s - %2$dor</string>
+   <string name="WndTradeItem_Buy">Acheter pour %dor</string>
+   <string name="WndTradeItem_Sell">Vendre pour %dor</string>
+   <string name="WndTradeItem_Sell1">Vendre 1 pour %dor</string>
+   <string name="WndTradeItem_SellAll">Vendre tout pour %dor</string>
+   <string name="WndTradeItem_Cancel">En fait non</string>
+   <string name="WndTradeItem_Sold">Vous avez vendu votre %1$s pour %2$dor</string>
+   <string name="WndTradeItem_Bought">Vous avez acheté %1$s pour %2$dor</string>
+
+
+   <!--  STRINGS OF WndWandmaker CLASS  -->
+   <string name="WndWandmaker_Message">Oh, je vois que vous avez réussi ! J\'espère ne pas vous avoir trop dérangé. Comme promis, vous pouvez prendre l\'un de mes sceptres de haute qualité.</string>
+   <string name="WndWandmaker_Battle">Sceptre pour le combat</string>
+   <string name="WndWandmaker_NonBattle">Autres sceptres</string>
+   <string name="WndWandmaker_Farawell">Bonne chance dans votre quête, %s !</string>
+
+
+   <!--  STRINGS OF QuickSlot CLASS  -->
+   <string name="QuickSlot_SelectedItem">Choisissez un objet à mettre en raccourci</string>
 
 
 
