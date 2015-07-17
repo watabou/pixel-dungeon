@@ -229,8 +229,8 @@
    <!-- <string name="Badges_BossSlain3Snip"></string> -->
    <!-- <string name="Badges_BossSlain3Ward"></string> -->
    <string name="Badges_BossSlain3All">Tercer jefe derrotado por el Gladiador, Furioso, Bruto, BiMago, Corredor, Asesino, Sniper &amp; Guardian</string>
-   <string name="Badges_RingHaggler">Anillo de Haggler obtenido</string>
-   <string name="Badges_RingThorns">Anillo de Thorns obtenido</string>
+   <string name="Badges_RingHaggler">Anillo de Negociación obtenido</string>
+   <string name="Badges_RingThorns">Anillo de Espinas obtenido</string>
    <string name="Badges_StrengthAttained1">13 puntos de Fuerza adquiridos</string>
    <string name="Badges_StrengthAttained2">15 puntos de Fuerza adquiridos</string>
    <string name="Badges_StrengthAttained3">17 puntos de Fuerza adquiridos</string>
