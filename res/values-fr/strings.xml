@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <!--  GENERAL STRINGS VARIABLES  -->
+   <string name="app_name">Pixel Dungeon</string>
+
+
+   <!--  STRINGS OF TitleScene CLASS  -->
+   <string name="TitleScene_Play">Jouer</string>
+   <string name="TitleScene_Highscores">Meilleurs scores</string>
+   <string name="TitleScene_Badges">Médailles</string>
+   <string name="TitleScene_About">A propos</string>
+
+
+   <!--  STRINGS OF AboutScene CLASS  -->
+   <string name="AboutScene_Txt">Code &amp; graphiques: Watabou\nMusic: Cube_Code\n\nCe jeu est inspiré par Brian Walker\'s Brogue. Essayez-le sur Windows, Mac OS ou Linux - il est génial! ;)\n\nS\'il vous plaît visitez le site officiel pour plus d'info:</string>
+   <string name="AboutScene_Lnk">pixeldungeon.watabou.ru</string>
+   <string name="AboutScene_Translate">Traduction: Rémi Schneider/Emmanuel Dempuré/Bastien/Nikolay/rodriformiga</string><!-- Write here the translation credits. -->
+   <string name="AboutScene_TranslateLnk">rodriformiga@gmail.com</string><!-- Write here the e-mail to contat for translator -->
+   <string name="AboutScene_TranslateSnd">Envoyer un E-Mail</string><!-- Write here the "Send E-mail" title of the window -->
+
+
+   <!--  STRINGS OF RankingsScene CLASS  -->
+   <string name="RankingsScene_Title">Meilleures parties</string>
+   <string name="RankingsScene_Total">Nombre de jeux remportés/joués:\u0020</string>
+   <string name="RankingsScene_NoGames">Aucune partie n\'a encore été jouée.</string>
+   <string name="RankingsScene_NoInfo">Pas d\'informations supplémentaires</string>
+
+
+   <!--  STRINGS OF BadgesScene CLASS  -->
+   <string name="BadgesScene_Title">Vos médailles</string>
+
+
+   <!--  STRINGS OF StartScene CLASS  -->
+   <string name="StartScene_Load">Charger la partie</string>
+   <string name="StartScene_New">Charger la partie</string>
+   <string name="StartScene_Erase">Effacer la partie actuelle</string>
+   <string name="StartScene_Depth">Etage: %1$d\nNiveau: %2$d</string>
+   <string name="StartScene_Really">Voulez vous vraiment commencer une nouvelle partie?</string>
+   <string name="StartScene_Warning">Votre progression actuelle sera perdue.</string>
+   <string name="StartScene_Yes">Oui, une nouvelle partie</string>
+   <string name="StartScene_No">Non, retour au menu principal</string>
+   <string name="StartScene_Unlock">Pour débloquer ce personnage, vainquez le 3e boss avec tous les autres personnages</string>
+   <string name="StartScene_WinGame">Pour débloquer les \"Défis\", finissez le jeu avec n\'importe quel personnage.</string>
+
+
+   <!--  STRINGS OF InterLevelScene CLASS  -->
+   <string name="InterLevelScene_Descending">Descente...</string>
+   <string name="InterLevelScene_Ascending">Montée...</string>
+   <string name="InterLevelScene_Loading">Chargement...</string>
+   <string name="InterLevelScene_Resurrecting">Résurrection...</string>
+   <string name="InterLevelScene_Returning">Retour...</string>
+   <string name="InterLevelScene_Falling">Chute...</string>
+   <string name="InterLevelScene_FileNotFound">Fichier introuvable. Parce que voilà...</string>
+   <string name="InterLevelScene_ErrorGeneric">Quelque chose n\'a pas été...</string>
+
+
+   <!--  STRINGS OF IntroScene CLASS  -->
+   <string name="IntroScene_Txt">Bien des héros de tous les horizons se sont aventurés dans le donjon avant vous. Quelques uns en sont ressortis avec des trésors et des artefacts magiques, la plupart n\'en sont jamais revenus. Mais aucun d\'entre eux n\'a réussi à retrouver l\'amulette de Yendor, qui serait cachée dans les profondeurs du donjon. Vous vous considérez prêt à relever le défi, mais plus important encore, vous sentez que la chance vous sourit. Il est temps de commencer votre propre aventure !</string>
+
+
+   <!--  STRINGS OF AmuletScene CLASS  -->
+   <string name="AmuletScene_Exit">A l\'aventure!</string>
+   <string name="AmuletScene_Stay">Je ne suis pas encore prêt</string>
+   <string name="AmuletScene_Txt">Vous la tenez enfin dans vos mains, l\'amulette de Yendor. En utilisant ses pouvoirs, vous pourriez gouverner le monde ou y apporter la paix et la prospérité. De toutes façons, votre vie sera changée à jamais et ce jeu prendra fin ici. A moins que vous ne préfériez rester un simple mortel pour quelque temps encore.</string>
+
+
+   <!--  STRINGS OF GameScene CLASS  -->
+   <string name="GameScene_Welcome">Bienvenue au %de étage de Pixel Dungeon!</string>
+   <string name="GameScene_WelcomeBack">Re-bienvenue au %de étage de Pixel Dungeon!</string>
+   <string name="GameScene_NightMode">Soyez prudent, le donjon est encore plus dangereux pendant la nuit!</string>
+   <string name="GameScene_Chasm">Vos pas résonnent à travers le donjon.</string>
+   <string name="GameScene_Water">Vous entendez de l\'eau éclabousser autour de vous.</string>
+   <string name="GameScene_Grass">Vous sentez un épais relent de végétation.</string>
+   <string name="GameScene_Secrets">L\'atmosphère de cet endroit vous indique que cet étage vous cache beaucoup de secrets.</string>
+
+
+   <!--  STRINGS OF Char CLASS  -->
+   <string name="Char_Name">ennemi</string>
+   <string name="Char_Hit">%1$s frappe %2$s</string>
+   <string name="Char_Kill">%s vous a tué...</string>
+   <string name="Char_Defeat">%1$s avez vaincu %2$s</string>
+   <string name="Char_YouMissed">%1$s %2$s votre attaque</string>
+   <string name="Char_SmbMissed">%1$s %2$s l\'attaque de %3$s</string>
+   <string name="Char_OutParalysis">La douleur libère %s de la paralysie</string>
+   <string name="Char_StaDodged">esquivé</string>
+   <string name="Char_StaPoisoned">empoisonné</string>
+   <string name="Char_StaAmok">contrôle perdu</string>
+   <string name="Char_StaSlowed">ralenti</string>
+   <string name="Char_StaMind">vision</string>
+   <string name="Char_StaVision">esprit</string>
+   <string name="Char_StaParalysed">paralysé</string>
+   <string name="Char_StaFrightened">effrayé</string>
+   <string name="Char_StaRooted">enraciné</string>
+   <string name="Char_StaCrippled">estropié</string>
+   <string name="Char_StaBleeding">hémorragie</string>
+   <string name="Char_StaDizzy">étourdi</string>
+   <string name="Char_StaInvisible">invisible</string>
+
+
+   <!--  STRINGS OF Hero CLASS  -->
+   <string name="Hero_Name">vous</string>
+   <string name="Hero_Leave">Personne ne ressort de Pixel Dungeon si facilement.</string>
+   <string name="Hero_LevelUp">Niveau supérieur!</string>
+   <string name="Hero_NewLevel">Bienvenue au niveau %d ! Vous êtes désormais en meilleure santé et plus concentré. Il vous est plus facile de toucher vos ennemis et d\'esquiver leurs attaques.</string>
+   <string name="Hero_YouNowHave">Vous avez %s</string>
+   <string name="Hero_SomethingElse">Il y a autre chose ici</string>
+   <string name="Hero_LockedChest">Ce coffre est verrouillé et vous n\'en avez pas la clé</string>
+   <string name="Hero_LockedDoor">Vous n\'avez pas la bonne clé</string>
+   <string name="Hero_NoticedSmth">Vous remarquez quelque chose</string>
+   <string name="Hero_Wait">...</string>
+   <string name="Hero_Search">recherche</string>
+   <string name="Hero_StaBurning">Vous prenez feu!</string>
+   <string name="Hero_StaParalysis">Vous êtes paralysé!</string>
+   <string name="Hero_StaPoison">Vous êtes empoisonné!</string>
+   <string name="Hero_StaOoze">Le limon caustique vous ronge les chairs. Rincez-le!</string>
+   <string name="Hero_StaRoots">Vous ne pouvez pas bouger!</string>
+   <string name="Hero_StaWeakness">Vous vous sentez affaibli!</string>
+   <string name="Hero_StaBlindness">Vous êtes aveuglé!</string>
+   <string name="Hero_StaFury">Vous devenez furieux!</string>
+   <string name="Hero_StaFurious">furieux</string>
+   <string name="Hero_StaCharm">Vous êtes sous le charme!</string>
+   <string name="Hero_StaCripple">Vous êtes estropié!</string>
+   <string name="Hero_StaBleeding">Vous saignez!</string>
+   <string name="Hero_StaVertigo">Tout tourne autour de vous!</string>
+
+
+   <!--  STRINGS OF HeroClass CLASS  -->
+   <string name="HeroClass_War">guerrier</string>
+   <string name="HeroClass_Mag">mage</string>
+   <string name="HeroClass_Rog">gredin</string>
+   <string name="HeroClass_Hun">chasseresse</string>
+   <string-array name="HeroClass_WarPerks">
+       <item>Les guerriers commencent avec 11 points de force.</item>
+       <item>Les guerriers commencent avec une épée courte unique. Celle-ci pourra être \"reforgée\" pour améliorer une autre arme de mélée.</item>
+       <item>Les guerriers sont moins efficaces avec les armes à distance.</item>
+       <item>Chaque ration redonne un peu de santé lors de sa consommation.</item>
+       <item>Les potions de force sont identifiées dès le début.</item>
+   </string-array>
+   <string-array name="HeroClass_MagPerks">
+       <item>Les mages commencent avec un unique sceptre de missiles magiques. Celui-ci pourra être \"désenchanté\" pour améliorer un autre sceptre.</item>
+       <item>Les mages rechargent leurs sceptres plus vite.</item>
+       <item>Lors de sa consommation, une ration redonnera 1 charge à tous les sceptres de l\'inventaire.</item>
+       <item>Les mages peuvent utiliser leurs sceptres comme armes de mélée.</item>
+       <item>Les parchemins d\'identification sont identifiés dès le début.</item>
+   </string-array>
+   <string-array name="HeroClass_RogPerks">
+       <item>Les gredins commencent avec un anneau des ténèbres +1.</item>
+       <item>Les gredins identifient le type d\'un anneau en l\'équipant.</item>
+       <item>Les gredins sont plus à l\'aise avec les armures légères, ils esquivent mieux quand ils en portent une.</item>
+       <item>Les gredins détectent plus facilement les pièges et les portes cachées.</item>
+       <item>Les gredins survivent plus longtemps sans manger.</item>
+       <item>Les parchemins de repérage magique sont identifiés dès le début.</item>
+   </string-array>
+   <string-array name="HeroClass_HunPerks">
+       <item>Les chasseresses ne commencent qu\'avec 15 points de vie.</item>
+       <item>Les chasseresses commencent avec un unique boomerang améliorable.</item>
+       <item>Les chasseresses sont douées lors de l\'utilisation des armes à distance et font des dommages supplémentaires en fonction de leur force quand elles les utilisent.</item>
+       <item>Les chasseresses gagnent plus de points de vie en buvant la rosée.</item>
+       <item>Les chasseresses détectent les monstres à proximité même s\'ils sont cachés par des obstacles.</item>
+   </string-array>
+
+
+   <!--  STRINGS OF HeroSubClass CLASS  -->
+   <string name="HeroSubClass_NameGlad">gladiateur</string>
+   <string name="HeroSubClass_DescGlad">Une attaque réussie avec une arme de mélée permet au _Gladiateur_ de commencer un combo, durant lequel chaque nouvelle attaque réussie inflige plus de dégâts.</string>
+   <string name="HeroSubClass_NameBers">berzerk</string>
+   <string name="HeroSubClass_DescBers">Quand il est sévèrement blessé, le _Berzerker_ entre dans un état de furie sauvage et augmente significativement les dégâts qu\'il inflige.</string>
+   <string name="HeroSubClass_NameWarL">sorcier</string>
+   <string name="HeroSubClass_DescWarL">Après avoir tué un ennemi, le _Sorcier_ consomme son âme. Cela soigne ses blessures et satisfait sa faim.</string>
+   <string name="HeroSubClass_NameBatM">mage de bataille</string>
+   <string name="HeroSubClass_DescBatM">Quand il se bat avec un sceptre à la main, le _Mage de bataille_ inflige des dommages supplémentaires en fonction du nombre de charges du sceptre. Chaque attaque réussie restaure 1 charge à ce sceptre.</string>
+   <string name="HeroSubClass_NameAssa">assassin</string>
+   <string name="HeroSubClass_DescAssa">Quand il fait une attaque surprise, l\'_Assassin_ inflige des dommages supplémentaires à sa cible.</string>
+   <string name="HeroSubClass_NameFreR">coureur</string>
+   <string name="HeroSubClass_DescFreR">Le _Coureur_ se déplace presque deux fois plus vite que la plupart des monstres. Quand il court, le coureur est beaucoup plus dur à toucher. Mais pour cela, il ne doit pas être encombré et ne pas être affamé.</string>
+   <string name="HeroSubClass_NameSnip">sniper</string>
+   <string name="HeroSubClass_DescSnip">Les _Snipers_ sont capables de détecter les points faibles dans l\'armure d\'un ennemi, ignorant cette protection lors de l\'utilisation d\'armes à distance. </string>
+   <string name="HeroSubClass_NameWard">gardienne</string>
+   <string name="HeroSubClass_DescWard">Les _Gardiennes_ ont une forte connexion avec les forces de la nature, ce qui leur donne la possibilité de collecter de la rosée et des graines sur les plantes. Fouler des herbes hautes leur octroie par ailleurs un bonus d\'armure temporaire.</string>
+
+
+   <!--  STRINGS OF Badges CLASS  -->
+   <string name="Badges_Info1">Médaille obtenue : %s</string>
+   <string name="Badges_Info2">Nouvelle super médaille : %s</string>
+   <string name="Badges_Info3">Nouvelle médaille : %s</string>
+   <string name="Badges_MonsterSlain1">10 ennemis vaincus</string>
+   <string name="Badges_MonsterSlain2">50 ennemis vaincus</string>
+   <string name="Badges_MonsterSlain3">150 ennemis vaincus</string>
+   <string name="Badges_MonsterSlain4">250 ennemis vaincus</string>
+   <string name="Badges_GoldColleted1">100 pièces d\'or collectées</string>
+   <string name="Badges_GoldColleted2">500 pièces d\'or collectées</string>
+   <string name="Badges_GoldColleted3">2500 pièces d\'or collectées</string>
+   <string name="Badges_GoldColleted4">7500 pièces d\'or collectées</string>
+   <string name="Badges_LevelReached1">Niveau 6 atteint</string>
+   <string name="Badges_LevelReached2">Niveau 12 atteint</string>
+   <string name="Badges_LevelReached3">Niveau 18 atteint</string>
+   <string name="Badges_LevelReached4">Niveau 24 atteint</string>
+   <string name="Badges_AllPotions">Toutes les potions identifiées</string>
+   <string name="Badges_AllScrolls">Tous les parchemins identifiés</string>
+   <string name="Badges_AllRings">Tous les anneaux identifiés\"</string>
+   <string name="Badges_AllWands">Tous les sceptres identifiés\"</string>
+   <string name="Badges_AllItems">Tous les parchemins, potions, anneaux et sceptres identifiés</string>
+   <!-- <string name="Badges_BagSeed"></string> -->
+   <!-- <string name="Badges_BagSroll"></string> -->
+   <!-- <string name="Badges_BagWand"></string> -->
+   <string name="Badges_AllBags">Tous les sacs achetés</string>
+   <string name="Badges_DeathFire">Brûlé à mort</string>
+   <string name="Badges_DeathPoison">Mort par empoisonnement</string>
+   <string name="Badges_DeathGas">Asphyxié par des gaz toxiques</string>
+   <string name="Badges_DeathHunger">Mort de faim</string>
+   <string name="Badges_DeathGlyph">Mort par un glyphe</string>
+   <string name="Badges_DeathFalling">Mort suite à une chute</string>
+   <string name="Badges_Yasd">Mort par le feu, le poison, les gaz toxiques et la faim</string>
+   <!-- <string name="Badges_BossSlain1War"></string> -->
+   <!-- <string name="Badges_BossSlain1Mag"></string> -->
+   <!-- <string name="Badges_BossSlain1Rog"></string> -->
+   <!-- <string name="Badges_BossSlain1Hun"></string> -->
+   <string name="Badges_BossSlain1">1er boss vaincu</string>
+   <string name="Badges_BossSlain2">2e boss vaincu</string>
+   <string name="Badges_BossSlain3">3e boss vaincu</string>
+   <string name="Badges_BossSlain4">4e boss vaincu</string>
+   <string name="Badges_BossSlain1All">1er boss vaincu par Guerrier, Mage, Gredins & amp; Chasseresses</string>
+   <!-- <string name="Badges_BossSlain3Glad"></string> -->
+   <!-- <string name="Badges_BossSlain3Bers"></string> -->
+   <!-- <string name="Badges_BossSlain3WarL"></string> -->
+   <!-- <string name="Badges_BossSlain3BatM"></string> -->
+   <!-- <string name="Badges_BossSlain3FreR"></string> -->
+   <!-- <string name="Badges_BossSlain3Assa"></string> -->
+   <!-- <string name="Badges_BossSlain3Snip"></string> -->
+   <!-- <string name="Badges_BossSlain3Ward"></string> -->
+   <string name="Badges_BossSlain3All">3e boss vaincu par Gladiateur, Berzerk, Sorcier, Mage de Bataille, Coureur, Assassin, Sniper &amp; Gardienne</string>
+   <string name="Badges_RingHaggler">Anneau du marchandeur obtenu</string>
+   <string name="Badges_RingThorns">Anneau d\'épines obtenu</string>
+   <string name="Badges_StrengthAttained1">13 points de force obtenus</string>
+   <string name="Badges_StrengthAttained2">15 points de force obtenus</string>
+   <string name="Badges_StrengthAttained3">17 points de force obtenus</string>
+   <string name="Badges_StrengthAttained4">19 points de force obtenus</string>
+   <string name="Badges_FoodEaten1">10 rations consommées</string>
+   <string name="Badges_FoodEaten2">20 rations consommées</string>
+   <string name="Badges_FoodEaten3">30 rations consommées</string>
+   <string name="Badges_FoodEaten4">40 rations consommées</string>
+   <!-- <string name="Badges_MasteryWar"></string> -->
+   <!-- <string name="Badges_MasteryMag"></string> -->
+   <!-- <string name="Badges_MasteryRog"></string> -->
+   <!-- <string name="Badges_MasteryHun"></string> -->
+   <string name="Badges_ItemLvl1">Objet de niveau 3 acquis</string>
+   <string name="Badges_ItemLvl2">Objet de niveau 6 acquis</string>
+   <string name="Badges_ItemLvl3">Objet de niveau 9 acquis</string>
+   <string name="Badges_ItemLvl4">Objet de niveau 12 acquis</string>
+   <!-- <string name="Badges_RareAlbino"></string> -->
+   <!-- <string name="Badges_RareBandit"></string> -->
+   <!-- <string name="Badges_RareShielded"></string> -->
+   <!-- <string name="Badges_RareSenior"></string> -->
+   <!-- <string name="Badges_RareAcidid"></string> -->
+   <string name="Badges_RareAll">Tous les monstres rares vaincus</string>
+   <!-- <string name="Badges_VictoryWar"></string> -->
+   <!-- <string name="Badges_VictoryMag"></string> -->
+   <!-- <string name="Badges_VictoryRog"></string> -->
+   <!-- <string name="Badges_VictoryHun"></string> -->
+   <string name="Badges_Victory">Amulette de Yendor obtenue</string>
+   <string name="Badges_VictoryAll">Amulette de Yendor obtenue par tous les personnages</string>
+   <string name="Badges_MasteryCombo">Combo de 7 coups</string>
+   <string name="Badges_PotionsCooked1">3 potions préparées</string>
+   <string name="Badges_PotionsCooked2">6 potions préparées</string>
+   <string name="Badges_PotionsCooked3">9 potions préparées</string>
+   <string name="Badges_PotionsCooked4">12 potions préparées</string>
+   <string name="Badges_NoMonsterSlain">Niveau complété sans avoir tué un seul monstre</string>
+   <string name="Badges_GrimWepon">Monstre tué par une arme macabre</string>
+   <string name="Badges_Piranhas">6 piranhas tués</string>
+   <string name="Badges_NightHunter">5 monstres tués pendant la nuit</string>
+   <string name="Badges_GamesPlayed1">10 parties jouées</string>
+   <string name="Badges_GamesPlayed2">100 parties jouées</string>
+   <string name="Badges_GamesPlayed3">500 parties jouées</string>
+   <string name="Badges_GamesPlayed4">2000 parties jouées</string>
+   <string name="Badges_HappyEnd">Fin heureuse</string>
+   <string name="Badges_Champion">Challenge réussi</string>
+   <string name="Badges_Supporter">Merci pour votre soutien !</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  PACKAGE /utils  -->
+   <!--  STRINGS OF Utils CLASS  -->
+   <!-- 1: Execute Indefinite Function to Language -->
+   <!-- 0: NO Execute Indefinite Function to Language -->
+   <string name="Utils_IsIndefinte">0</string>
+</resources>
