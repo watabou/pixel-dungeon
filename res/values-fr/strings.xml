@@ -471,8 +471,118 @@
    <string name="QuickSlot_SelectedItem">Choisissez un objet à mettre en raccourci</string>
 
 
+   <!--  STRINGS OF Item CLASS  -->
+   <string name="Item_Name">smth</string>
+   <string name="Item_ACDrop">POSER</string>
+   <string name="Item_ACThrow">LANCER</string>
+   <string name="Item_PackFull">Vous n\'avez plus de place pour %s</string>
+   <string name="Item_DirThrow">Choisissez la direction du lancer</string>
+   <string name="Item_Degraded">En raison de l'utilisation fréquente, votre %s a dégradé.</string>
+   <string name="Item_GonnaDegrade">En raison de l'utilisation fréquente, votre %s va se dégrader rapidement.</string>
 
 
+   <!--  STRINGS OF EquipableItem CLASS  -->
+   <string name="EquipableItem_ACEquip">EQUIPER</string>
+   <string name="EquipableItem_ACUnequip">ENLEVER</string>
+   <string name="EquipableItem_Unequip">Vous ne pouvez pas enlever la %s maudite!</string>
+
+
+   <!--  STRINGS OF Amulet CLASS  -->
+   <string name="Amulet_Name">Amulette de Yendor</string>
+   <string name="Amulet_ACEnd">FIN DU JEU</string>
+   <string name="Amulet_Info">L\'amulette de Yendor est le plus puissant des artefacts d\'origine inconnue. On dit que l\'amulette est capable de satisfaire tous les souhaits si la volonté de son porteur est suffisante pour la \"persuader\" de le faire.</string>
+
+
+   <!--  STRINGS OF Ankh CLASS  -->
+   <string name="Ankh_Name">Ankh</string>
+   <string name="Ankh_Info">Cet ancien symbole d\'immortalité offre la vie après la mort. La résurrection implique cependant la perte de tous les objets non-équipés.</string>
+
+
+   <!--  STRINGS OF ArmorKit CLASS  -->
+   <string name="ArmorKit_Name">kit pour armure</string>
+   <string name="ArmorKit_ACAplly">APPLIQUER</string>
+   <string name="ArmorKit_Info">Utiliser cet ensemble de petits outils et matériaux permet à quiconque de transformer n\'importe quelle armure en \"armure épique\" qui gardera les propriétés de l\'armure originale, mais offrira  à son porteur une capacité spéciale en fonction de sa classe. Aucune compétence de couture, de travail du cuir, ou de forge n\'est requise.</string>
+   <string name="ArmorKit_SelectArmor">Choisissez une armure à améliorer</string>
+   <string name="ArmorKit_Upgraded">Vous utilisez votre kit pour améliorer votre %s</string>
+
+
+   <!--  STRINGS OF Bomb CLASS  -->
+   <string name="Bomb_Name">bombe</string>
+   <string name="Bomb_Info">Ceci est une relativement petite bombe, remplie de poudre noire. Idéalement, son fusible est allumé automatiquement lorsque la bombe est levée.</string>
+
+
+   <!--  STRINGS OF Dewdrop CLASS  -->
+   <string name="Dewdrop_Name">rosée</string>
+   <string name="Dewdrop_Info">Une goutte de rosée cristalline</string>
+
+
+   <!--  STRINGS OF DewVial CLASS  -->
+   <string name="DewVial_Name">pot à rosée</string>
+   <string name="DewVial_ACDRINK">BOIRE</string>
+   <string name="DewVial_Info">Vous pouvez stocker la rosée en excès dans ce petit récipient pour la boire plus tard. Si le pot est plein, il sera automatiquement consommé lors des situations délicates.</string>
+   <string name="DewVial_AutoDrink">Vous videz le pot à rosée pour soigner vos blessures.</string>
+   <string name="DewVial_Collected">Vous mettez la rosée dans le pot.</string>
+   <string name="DewVial_Full">Votre pot à rosée est plein !</string>
+   <string name="DewVial_Empty">Votre pot à rosée est vide !</string>
+
+
+   <!--  STRINGS OF Heap CLASS  -->
+   <string name="Heap_Mimic">C\'est un mime!</string>
+
+
+   <!--  STRINGS OF Honeypot CLASS  -->
+   <string name="Honeypot_Name">pot de miel</string>
+   <string name="Honeypot_ACShatter">BRISER</string>
+   <string name="Honeypot_Info">Il n\'y a pas beaucoup de miel dans ce petit pot de miel, mais il ya une abeille d\'or là-bas et il ne veut pas le quitter.</string>
+
+
+   <!--  STRINGS OF Gold CLASS  -->
+   <string name="Gold_Name">or</string>
+   <string name="Gold_Collect">Collectez les pièces d\'or pour les dépenser aux marchés plus tard.</string>
+   <string name="Gold_Info">Une pile de %d pièces d\'or</string>
+   <string name="Gold_Info1">Une pièce d\'or.</string>
+
+
+   <!--  STRINGS OF KindOfWeapon CLASS  -->
+   <string name="KindOfWeapon_EquipCursed">Vous grimacez alors que votre poing se resserre involontairement sur votre %s</string>
+
+
+   <!--  STRINGS OF LloidsBeacon CLASS  -->
+   <string name="LloidsBeacon_Name">balise de lloyd</string>
+   <string name="LloidsBeacon_ACSet">INSTALLER</string>
+   <string name="LloidsBeacon_ACReturn">REVENIR</string>
+   <string name="LloidsBeacon_Info">La Balise de Lloyd est un dispositif magique complexe qui vous permet de revenir à un endroit que vous avez déjà visité.</string>
+   <string name="LloidsBeacon_Preventing">Une forte aura magique vous empêche d\'utiliser la Balise de Lloyd !</string>
+   <string name="LloidsBeacon_Creatures">L\'aura psychique des créatures aux alentours vous empêchent d\'utiliser la Balise de Lloyd pour le moment.</string>
+   <string name="LloidsBeacon_Return">La balise est bien installée à votre position, vous pourrez revenir ici n\'importe quand maintenant. </string>
+   <string name="LloidsBeacon_Set">\n\nCette balise a été installée quelque part au %de étage du Pixel Dungeon.</string>
+
+
+   <!--  STRINGS OF TomeOfMastery CLASS  -->
+   <string name="TomeOfMastery_Name">Manuel de spécialisation</string>
+   <string name="TomeOfMastery_ACRead">LIRE</string>
+   <string name="TomeOfMastery_Info">Ce livre de cuir usé n\'est pas très épais, mais vous avez l\'impression que vous pourriez en apprendre beaucoup grâce à lui. Dites vous juste que sa lecture pourrait prendre un certain temps.</string>
+   <string name="TomeOfMastery_Blinded">Vous ne pouvez pas lire en étant aveuglé</string>
+   <string name="TomeOfMastery_Choose">Vous avez choisi la voie du %s !</string>
+
+
+   <!--  STRINGS OF Torch CLASS  -->
+   <string name="Torch_Name">torche</string>
+   <string name="Torch_ACLight">ALLUMER</string>
+   <string name="Torch_Info">C\'est un objet indispensable dans The Demon Halls, qui est connu pour son manque d\'éclairage.</string>
+
+
+   <!--  STRINGS OF Weightstone CLASS  -->
+   <string name="Weightstone_Name">pierre d\'équilibre</string>
+   <string name="Weightstone_ACApply">APPLIQUER</string>
+   <string name="Weightstone_Info">En utilisant une pierre d\'équilibre, vous pouvez équilibrer une arme de mélée pour augmenter sa vitesse ou sa précision.</string>
+   <string name="Weightstone_Select">Choisissez une arme à équilibrer</string>
+   <string name="Weightstone_Fast">Vous équilibrez votre %s pour la rendre plus rapide</string>
+   <string name="Weightstone_Accurate">Vous équilibrez votre %s pour la rendre plus précis</string>
+   <string name="Weightstone_WndChoice">Comment voulez vous équilibrer votre %s ?</string>
+   <string name="Weightstone_WndSpeed">Pour la vitesse</string>
+   <string name="Weightstone_WndAccuracy">Pour la précision</string>
+   <string name="Weightstone_WndCancel">En fait non</string>
 
 
 
