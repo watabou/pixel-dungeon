@@ -585,11 +585,215 @@
    <string name="Weightstone_WndCancel">En fait non</string>
 
 
+<!--  PACKAGE pixeldungeon/plants  -->
+   <!--  STRINGS OF Plant CLASS  -->
+   <string name="Plant_ACPlant">PLANTER</string>
+   <string name="Plant_Info">Lancez cette graine à l\'endroit voulu pour faire pousser %1$s.\n\n%2$s</string>
+   <string name="Plant_Seed">graine de %s</string>
 
 
+   <!--  STRINGS OF Dreamweed CLASS  -->
+   <string name="Dreamweed_Name">Herberêve</string>
+   <string name="Dreamweed_Desc">Toucher de l\'herberêve lui fera sécréter un nuage de gaz scintillant et qui causera la confusion à celui qui le respirera.</string>
 
 
+   <!--  STRINGS OF Earthroot CLASS  -->
+   <string name="Earthroot_Name">Terracine</string>
+   <string name="Earthroot_Desc">Quand une créature touche une Terracine, ses racines créent une sorte d\'armure autour d\'elle.</string>
+   <string name="Earthroot_Buff">Armure végétale</string>
 
+
+   <!--  STRINGS OF Fadeleaf CLASS  -->
+   <string name="Fadeleaf_Name">Pâlefeuille</string>
+   <string name="Fadeleaf_Desc">Toucher une Pâlefeuille téléportera n\'importe quelle créature à un endroit aléatoire de l\'étage actuel.</string>
+
+
+   <!--  STRINGS OF Firebloom CLASS  -->
+   <string name="Firebloom_Name">Fleur de feu</string>
+   <string name="Firebloom_Desc">Quand quelque chose touche la Fleur de feu, elle explose dans une gerbe de flammes.</string>
+
+
+   <!--  STRINGS OF Icecap CLASS  -->
+   <string name="Icecap_Name">Champiglace</string>
+   <string name="Icecap_Desc">Le champiglace va, au toucher, relâcher des spores qui vont geler tout ce qui se trouve dans les environs.</string>
+
+
+   <!--  STRINGS OF Sorrowmoss CLASS  -->
+   <string name="Sorrowmoss_Name">Tristemousse</string>
+   <string name="Sorrowmoss_Desc">La tristemousse est une fleur (pas de la mousse) avec des pétales tranchantes et vénéneuses.</string>
+
+
+   <!--  STRINGS OF Sungrass CLASS  -->
+   <string name="Sungrass_Name">Herbesoleil</string>
+   <string name="Sungrass_Desc">L\'Herbesoleil est renommée pour les propriétés curatives de sa sève.</string>
+   <string name="Sungrass_Buff">Soin végétal</string>
+
+
+<!--  PACKAGE items/armor  -->
+   <!--  STRINGS OF Armor CLASS  -->
+   <string name="Armor_EquipCursed">votre %s vous enserre douloureusement</string>
+   <string name="Armor_Identify">vous vous êtes assez familiarisé avec votre %1$s pour l\'identifier. C\'est %2$s.</string>
+   <string name="Armor_ToString">%1$s :%2$d</string>
+   <string name="Armor_Incompatible">L\'interaction entre les différents types de magie a effacé le glyphe de cette armure!</string>
+   <string name="Armor_Info1">\n\nCette %1$s permet une absorption de dommages jusqu\'à \"%2$d\" points par attaque.</string>
+   <string name="Armor_Info2">\n\nVotre force est inadéquate, vous êtes ralenti et votre défense est diminuée.</string>
+   <string name="Armor_Info3">\n\nVotre force est inadéquate, porter cette armure vous ralentira et diminuera votre défense.</string>
+   <string name="Armor_Info4">\n\nUne %1$s typique permet une absorption des dommages jusqu\'à %2$d points par attaque et requiert %3$d points de force.</string>
+   <string name="Armor_Info5">Cette armure est probablement trop lourde pour vous.</string>
+   <string name="Armor_Info6">Il est enchanté.</string>
+   <string name="Armor_Info7a">\n\nVous portez l\' %1$s%2$s.</string>
+   <string name="Armor_Info7b">, et parce qu\'elle est maudite, vous n\'arrivez pas à l\'enlever</string>
+   <string name="Armor_Info8">\n\nVous pouvez ressentir une énergie maléfique cachée dans l\' %s.</string>
+
+
+   <!--  STRINGS OF ClassArmor CLASS  -->
+   <string name="ClassArmor_Desc">Ca a l\'air génial!</string>
+   <string name="ClassArmor_LowHealt">Votre santé est trop basse!</string>
+   <string name="ClassArmor_NotEquipped">Vous avez besoin de porter cette armure pour utiliser son pouvoir spécial!</string>
+
+
+   <!--  STRINGS OF ClothArmor CLASS  -->
+   <string name="ClothArmor_Name">armure de vêtements</string>
+   <string name="ClothArmor_Desc">Cette armure légère offre une protection basique.</string>
+
+
+   <!--  STRINGS OF HuntressArmor CLASS  -->
+   <string name="HuntressArmor_Name">cape de la chasseresse</string>
+   <string name="HuntressArmor_Desc">Une chasseresse équipée de cette cape peut créer de multiples lames spectrales. Chacune de ces lames ciblera un seul ennemi dans le champ de vision de la chasseresse, infligeant des dommages en fonction de son arme de mélée actuellement équipée.</string>
+   <string name="HuntressArmor_ACSpecial">LAMES SPECTRALES</string>
+   <string name="HuntressArmor_NoEnemies">Aucun ennemi en vue</string>
+   <string name="HuntressArmor_NotHuntress">Seules les chasseresses peuvent porter cette armure!</string>
+
+
+   <!--  STRINGS OF LeatherArmor CLASS  -->
+   <string name="LeatherArmor_Name">armure de cuir</string>
+   <string name="LeatherArmor_Desc">Armure faite de peaux de monstre tannées. Un peu plus lourde que l\'armure de vêtements, mais offre une meilleure protection.</string>
+
+
+   <!--  STRINGS OF MageArmor CLASS  -->
+   <string name="MageArmor_Name">robe de mage</string>
+   <string name="MageArmor_Desc">En portant cette magnifique robe, un mage peut lancer un sort de lave en fusion: tous les ennemis dans le champ de vision prendront feu et seront incapables de bouger.</string>
+   <string name="MageArmor_ACSpecial">LAVE EN FUSION</string>
+   <string name="MageArmor_NotMage">Seuls les mages peuvent porter cette armure!</string>
+
+
+   <!--  STRINGS OF MailArmor CLASS  -->
+   <string name="MailArmor_Name">armure de maille</string>
+   <string name="MailArmor_Desc">Des liens de métal joints ensemble forment une armure dure mais flexible.</string>
+
+
+   <!--  STRINGS OF PlateArmor CLASS  -->
+   <string name="PlateArmor_Name">armure de plates</string>
+   <string name="PlateArmor_Desc">D\'énormes plaques de métal forment une tenue qui offre une protection sans égale pour tout aventurier assez fort pour supporter son poids colossal.</string>
+
+
+   <!--  STRINGS OF RogueArmor CLASS  -->
+   <string name="RogueArmor_Name">costume de gredin</string>
+   <string name="RogueArmor_Desc">En étant vêtu de ce sombre attirail, un gredin peut effectuer un mouvement appelé \"La bombe de fumée\" (même si aucun explosif n\'est utilisé): il aveugle les ennemis qui peuvent le voir et saute sur le côté.</string>
+   <string name="RogueArmor_ACSpecial">BOMBE DE FUMEE</string>
+   <string name="RogueArmor_NotRogue">Seuls les gredins peuvent porter cette armure!</string>
+   <string name="RogueArmor_Fov">Vous pouvez seulement sauter à un endroit libre dans votre champ de vision</string>
+   <string name="RogueArmor_Prompt">Choisissez l\'endroit où vous voulez sauter</string>
+
+
+   <!--  STRINGS OF ScaleArmor CLASS  -->
+   <string name="ScaleArmor_Name">armure d\'écailles</string>
+   <string name="ScaleArmor_Desc">Les écailles métalliques cousues sur une veste en cuir créent une armure flexible, mais protectrice.</string>
+
+
+   <!--  STRINGS OF WarriorArmor CLASS  -->
+   <string name="WarriorArmor_Name">armure du guerrier</string>
+   <string name="WarriorArmor_Desc">Même si elle semble lourde, cette armure permet à un guerrier de faire un bond héroïque vers un endroit ciblé, écrasant et sonnant tous les ennemis alentour.</string>
+   <string name="WarriorArmor_ACSpecial">BOND HEROIQUE</string>
+   <string name="WarriorArmor_NotWarrior">Seuls les guerriers peuvent porter cette armure!</string>
+   <string name="WarriorArmor_Prompt">Choisissez la direction du bond</string>
+
+
+<!--  PACKAGE /armor/Gyphs  -->
+   <!--  STRINGS OF Affection CLASS  -->
+   <string name="Affection_Txt">%s d\'affection</string>
+   <!--  STRINGS OF AntiEntropy CLASS  -->
+   <string name="AntiEntropy_Txt">%s d\'anti-entropie</string>
+   <!--  STRINGS OF Bounce CLASS  -->
+   <string name="Bounce_Txt">%s de rebond</string>
+   <!--  STRINGS OF Displacement CLASS  -->
+   <string name="Displacement_Txt">%s de déplacement</string>
+   <!--  STRINGS OF Entanglement CLASS  -->
+   <string name="Entanglement_Txt">%s enchevêtrée</string>
+   <!--  STRINGS OF Metabolism CLASS  -->
+   <string name="Metabolism_Txt">%s de métabolisme</string>
+   <!--  STRINGS OF Multiplicity CLASS  -->
+   <string name="Multiplicity_Txt">%s de multiplicité</string>
+   <!--  STRINGS OF Potential CLASS  -->
+   <string name="Potential_Txt">%s de potentiel</string>
+   <!--  STRINGS OF Stench CLASS  -->
+   <string name="Stench_Txt">%s fétide</string>
+   <!--  STRINGS OF Viscosity CLASS  -->
+   <string name="Viscosity_Txt">%s visqueuse</string>
+   <string name="Viscosity_Status">%d différée</string>
+   <string name="Viscosity_BufName">l'enchantement de la viscosité</string>
+   <string name="Viscosity_BufInfo1">Dommages différé (%d)</string>
+   <string name="Viscosity_BufInfo2">L'enchantement de la viscosité vous tué...</string>
+
+
+<!--  PACKAGE /items/bags  -->
+   <!--  STRINGS OF Bag CLASS  -->
+   <string name="Bag_ACOpen">OUVRIR</string>
+   <!--  STRINGS OF Keyring CLASS  -->
+   <string name="Keyring_Name">anneau de clé</string>
+   <string name="Keyring_Info">C\'est un anneau de clé en cuivre, qui vous permettra de transporter toutes vos clés séparément du reste de vos affaires.</string>
+   <!--  STRINGS OF ScrollHolder CLASS  -->
+   <string name="ScrollHolder_Name">étui à parchemins</string>
+   <string name="ScrollHolder_Info">Vous pouvez placer n\'importe quel nombre de parchemins dans ce contenant cylindrique. Cela économisera de la place dans votre sac à dos et épargnera vos parchemins du feu.</string>
+   <!--STRINGS OF SeedPouch CLASS-->
+   <string name="SeedPouch_Name">Poche à graines</string>
+   <string name="SeedPouch_Info">Cette petite poche en velours vous permet de stocker toutes vos graines. Très pratique.</string>
+   <!--STRINGS OF WandHolster CLASS-->
+   <string name="WandHolster_Name">Hotte à sceptres</string>
+   <string name="WandHolster_Info">La fine hotte est faite du cuir d\'un animal exotique. Elle vous permettra de porter jusqu\'à %d sceptres.</string>
+
+
+<!--  PACKAGE /items/food  -->
+   <!--  STRINGS OF Food CLASS  -->
+   <string name="Food_Name">ration de nourriture</string>
+   <string name="Food_Info">Rien de luxurieux là-dedans: de la viande séchée, des biscuits, etc.</string>
+   <string name="Food_ACEat">MANGE</string>
+   <string name="Food_Message">Cette nourriture avait un goût délicieux!</string>
+
+
+   <!--  STRINGS OF ChargrilledMeat CLASS  -->
+   <string name="ChargrilledMeat_Name">viande grillée</string>
+   <string name="ChargrilledMeat_Info">C\'est un steak décent, apparemment.</string>
+
+
+   <!--  STRINGS OF FrozenCarpaccio CLASS  -->
+   <string name="FrozenCarpaccio_Name">carpaccio glacé</string>
+   <string name="FrozenCarpaccio_Info">C\'est un morceau de viande gelée. La seule manière de la manger est de la couper en fines tranches. Et c\'est étonnamment bon.</string>
+   <string name="FrozenCarpaccio_Info1">Vous voyez vos mains devenir invisibles!</string>
+   <string name="FrozenCarpaccio_Info2">Vous sentez votre peau durcir!</string>
+   <string name="FrozenCarpaccio_Info3">Rafraîchissant!</string>
+   <string name="FrozenCarpaccio_Info4">Vous vous sentez mieux!</string>
+
+
+   <!--  STRINGS OF MysteryMeat CLASS  -->
+   <string name="MysteryMeat_Name">viande mystérieuse</string>
+   <string name="MysteryMeat_Info">A manger à vos risques et périls!</string>
+   <string name="MysteryMeat_Info1">Oulà c\'est chaud!</string>
+   <string name="MysteryMeat_Info2">Vous ne sentez plus vos jambes!</string>
+   <string name="MysteryMeat_Info3">Vous ne vous sentez pas bien.</string>
+   <string name="MysteryMeat_Info4">Vous êtes repu.</string>
+   <string name="MysteryMeat_Message">Cette nourriture avait un goût... bizarre.</string>
+
+
+   <!--  STRINGS OF OverpricedRation CLASS  -->
+   <string name="OverpricedRation_Name">ration hors de prix</string>
+   <string name="OverpricedRation_Info">Ca ressemble à une ration normale mais en plus petit.</string>
+   <string name="OverpricedRation_Message">Cette nourriture était bonne.</string>
+
+
+   <!--  STRINGS OF Pasty CLASS  -->
+   <string name="Pasty_Name">pâté en croute</string>
+   <string name="Pasty_Info">L\'authentique pâté en croute de Cornouailles, avec sa farce traditionnelle de boeuf et de pommes de terre.</string>
 
 
 
