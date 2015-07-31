@@ -12,7 +12,7 @@
 
 
    <!--  STRINGS OF AboutScene CLASS  -->
-   <string name="AboutScene_Txt">Code &amp; graphiques: Watabou\nMusic: Cube_Code\n\nCe jeu est inspiré par Brian Walker\'s Brogue. Essayez-le sur Windows, Mac OS ou Linux - il est génial! ;)\n\nS\'il vous plaît visitez le site officiel pour plus d'info:</string>
+   <string name="AboutScene_Txt">Code &amp; graphiques: Watabou\nMusic: Cube_Code\n\nCe jeu est inspiré par Brian Walker\'s Brogue. Essayez-le sur Windows, Mac OS ou Linux - il est génial! ;)\n\nS\'il vous plaît visitez le site officiel pour plus d\'info:</string>
    <string name="AboutScene_Lnk">pixeldungeon.watabou.ru</string>
    <string name="AboutScene_Translate">Traduction: Rémi Schneider/Emmanuel Dempuré/Bastien/Nikolay/rodriformiga</string><!-- Write here the translation credits. -->
    <string name="AboutScene_TranslateLnk">rodriformiga@gmail.com</string><!-- Write here the e-mail to contat for translator -->
@@ -219,7 +219,7 @@
    <string name="Badges_BossSlain2">2e boss vaincu</string>
    <string name="Badges_BossSlain3">3e boss vaincu</string>
    <string name="Badges_BossSlain4">4e boss vaincu</string>
-   <string name="Badges_BossSlain1All">1er boss vaincu par Guerrier, Mage, Gredins & amp; Chasseresses</string>
+   <string name="Badges_BossSlain1All">1er boss vaincu par Guerrier, Mage, Gredins &amp; Chasseresses</string>
    <!-- <string name="Badges_BossSlain3Glad"></string> -->
    <!-- <string name="Badges_BossSlain3Bers"></string> -->
    <!-- <string name="Badges_BossSlain3WarL"></string> -->
@@ -477,8 +477,8 @@
    <string name="Item_ACThrow">LANCER</string>
    <string name="Item_PackFull">Vous n\'avez plus de place pour %s</string>
    <string name="Item_DirThrow">Choisissez la direction du lancer</string>
-   <string name="Item_Degraded">En raison de l'utilisation fréquente, votre %s a dégradé.</string>
-   <string name="Item_GonnaDegrade">En raison de l'utilisation fréquente, votre %s va se dégrader rapidement.</string>
+   <string name="Item_Degraded">En raison de l\'utilisation fréquente, votre %s a dégradé.</string>
+   <string name="Item_GonnaDegrade">En raison de l\'utilisation fréquente, votre %s va se dégrader rapidement.</string>
 
 
    <!--  STRINGS OF EquipableItem CLASS  -->
@@ -731,9 +731,9 @@
    <!--  STRINGS OF Viscosity CLASS  -->
    <string name="Viscosity_Txt">%s visqueuse</string>
    <string name="Viscosity_Status">%d différée</string>
-   <string name="Viscosity_BufName">l'enchantement de la viscosité</string>
+   <string name="Viscosity_BufName">l\'enchantement de la viscosité</string>
    <string name="Viscosity_BufInfo1">Dommages différé (%d)</string>
-   <string name="Viscosity_BufInfo2">L'enchantement de la viscosité vous tué...</string>
+   <string name="Viscosity_BufInfo2">L\'enchantement de la viscosité vous tué...</string>
 
 
 <!--  PACKAGE /items/bags  -->
@@ -1137,8 +1137,8 @@
 
 
    <!--  STRINGS OF ScrollOfEnchantment CLASS  -->
-   <string name="ScrollOfEnchantment_Name">Parchemin d'Enchantement</string>
-   <string name="ScrollOfEnchantment_Info">Ce rouleau est capable d'imprégner une arme ou une armure avec un enchantement aléatoire, lui accordant un pouvoir spécial.</string>
+   <string name="ScrollOfEnchantment_Name">Parchemin d\'Enchantement</string>
+   <string name="ScrollOfEnchantment_Info">Ce rouleau est capable d\'imprégner une arme ou une armure avec un enchantement aléatoire, lui accordant un pouvoir spécial.</string>
    <string name="ScrollOfEnchantment_InvTitle">Sélectionnez un objet enchantable</string>
    <string name="ScrollOfEnchantment_Glows">votre %s brille dans le noir</string>
 
@@ -1315,6 +1315,7 @@
    <string name="MeleeWeapon_Info7b">, et à cause de sa malédiction, vous ne pouvez vous en défaire</string>
    <string name="MeleeWeapon_Info7c">Vous pouvez ressentir une magie maléfique qui se terre dans la %s.</string>
 
+
    <!--  STRINGS OF BattleAxe CLASS  -->
    <string name="BattleAxe_Name">hache de bataille</string>
    <string name="BattleAxe_Info">L\'énorme tête en acier de cette hache de bataille impose un soulèvement intense à chaque coup.</string>
@@ -1328,6 +1329,7 @@
    <!--  STRINGS OF Glaive CLASS  -->
    <string name="Glaive_Name">hallebarde</string>
    <string name="Glaive_Info">Une arme constituée d\'une lame d\'épée au bout d\'un bâton.</string>
+
 
    <!--  STRINGS OF Knuckles CLASS  -->
    <string name="Knuckles_Name">poing américain</string>
@@ -1507,7 +1509,224 @@
    <string name="Weakness_Info">Affaibli</string>
 
 
+<!--  PACKAGE /actors/hero  -->
+   <!--  STRINGS OF Belongings CLASS  -->
+   <string name="Belongings_Name">sac à dos</string>
 
+
+<!--  PACKAGE /actors/mobs  -->
+   <!--  STRINGS OF Mob CLASS  -->
+   <string name="Mob_Desc">La vraie description arrive bientôt!</string>
+   <string name="Mob_Died">Vous entendez quelque chose mourir au loin</string>
+   <string name="Mob_Echo">écho de\u0020</string>
+   <string name="Mob_Yell">%1$s: \"%2$s\"</string>
+   <string name="Mob_StaSleepingStatus">Ce %s dort</string>
+   <string name="Mob_StaWanderingStatus">Ce %s vagabonde</string>
+   <string name="Mob_StaHuntingStatus">Ce %s chasse</string>
+   <string name="Mob_StaFleeingStatus">Ce %s prend la fuite</string>
+   <string name="Mob_StaPassiveStatus">Ce %s est passif</string>
+   <!--  STRINGS OF Acidic CLASS  -->
+   <string name="Acidic_Name">scorpion d\'acide</string>
+   <!--  STRINGS OF Albino CLASS  -->
+   <string name="Albino_Name">rat albinos</string>
+   <!--  STRINGS OF Bandit CLASS  -->
+   <string name="Bandit_Name">bandit fou</string>
+   <!--  STRINGS OF Bat CLASS  -->
+   <string name="Bat_Name">chauve-souris vampire</string>
+   <string name="Bat_Desc">Ces résidents des grottes, rapides et teigneux, peuvent vaincre des ennemis bien plus gros en regagnant leur santé à chaque morsure réussie.</string>
+   <string name="Bat_Defense">esquivé</string>
+   <!--  STRINGS OF Brute CLASS  -->
+   <string name="Brute_Name">gnoll brutal</string>
+   <string name="Brute_Desc">Les brutes sont les plus grands, les plus forts et les plus résistants de tous les gnolls. Quand ils sont sérieusement blessés, ils deviennent berzerk, infligeant encore plus de dommages à leurs ennemis.</string>
+   <string name="Brute_Enraged">%s a la rage!</string>
+   <string name="Brute_StaEnraged">enragé</string>
+   <!--  STRINGS OF Crab CLASS  -->
+   <string name="Crab_Name">crabe des égouts</string>
+   <string name="Crab_Desc">Ces énormes crabes sont au sommet de la chaîne alimentaire dans les égouts. Ils sont très rapides et leur exosquelette épais peut résister à des coups puissants.</string>
+   <string name="Crab_Defense">paré</string>
+   <!--  STRINGS OF DM300 CLASS  -->
+   <string name="DM300_Name1">DM-300</string>
+   <string name="DM300_Name2">DM-350</string>
+   <string name="DM300_Desc">Cette machine fut créée par les nains des siècles plus tôt. Puis les nains ont commencé à remplacer les machines par des golems, des élémentaires et même des démons. Cela a mené à la perte de leur civilisation. Le DM-300 et les autre machines étaient utilisés pour la construction, le minage, et dans certains cas, à la défense de la ville.</string>
+   <string name="DM300_Info1">Le DM-300 se répare!</string>
+   <string name="DM300_Info2">Echec de la mission. Extinction du système.</string>
+   <string name="DM300_Info3">Personnel non autorisé détecté.</string>
+   <!--  STRINGS OF Elemental CLASS  -->
+   <string name="Elemental_Name">élémentaire de feu</string>
+   <string name="Elemental_Desc">Les élémentaires de feu sont les résidus des invocations de plus grandes entités. Leur nature est trop chaotique pour être contrôlée, même par les démonologues les plus puissants.</string>
+   <!--  STRINGS OF Eye CLASS  -->
+   <string name="Eye_Name">oeil malsain</string>
+   <string name="Eye_Desc">L\'un des autres noms de ce démon est \"orbe de haine\", car lorsqu\'il aperçoit un ennemi, il utilise des gaz toxiques inconsciemment, en ignorant souvent ses alliés et leurs blessures.</string>
+   <string name="Eye_Kill">les gaz toxique de l\'%s vous ont tué...</string>
+   <!--  STRINGS OF Gnoll CLASS  -->
+   <string name="Gnoll_Name">gnoll scout</string>
+   <string name="Gnoll_Desc">Les gnolls sont des hommes-hyènes. Ils errent dans les égouts et les donjons, s\'aventurant à la surface pour mener des raids de temps en temps. Les scouts sont des membres courants de leur meute, ils ne sont pas aussi forts que les brutes et pas aussi intelligents que les shamans.</string>
+   <!--  STRINGS OF Golem CLASS  -->
+   <string name="Golem_Name">golem</string>
+   <string name="Golem_Desc">Les nains ont essayé de combiner leurs connaissances en bricolage avec leur nouveaux pouvoirs engageant les pouvoirs des élémentaires. Ils utilisèrent les esprits de la terre comme \"âme\" pour les corps mécaniques des golems, qu\'ils pensaient être les plus dociles de tous. Malgré cela, la plus petite erreur dans le rituel pouvait déclencher un débordement.</string>
+   <string name="Golem_Defense">bloqué</string>
+   <!--  STRINGS OF Goo CLASS  -->
+   <string name="Goo_Name1">Goo</string>
+   <string name="Goo_Name2">frai de Goo</string>
+   <string name="Goo_Desc">On ne sait pas grand chose du Goo. Il est même possible que ce ne soit pas une créature, mais plutôt un agglomérat de substances des égouts qui auraient gagnés des rudiments de volonté propre.</string>
+   <string name="Goo_Info1">Goo est lui-même pompage!</string>
+   <string name="Goo_Info2">glurp... glurp...</string>
+   <string name="Goo_Info3">GLURP-GLURP!</string>
+   <string name="Goo_StaInfo1">!!!</string>
+   <!--  STRINGS OF King CLASS  -->
+   <string name="King_Name1">Roi des Nains</string>
+   <string name="King_Name2">mort-vivant Roi des Nains</string>
+   <string name="King_Desc">Le dernier souverain nain était connu pour sa profonde connaissance des choses sur le processus de la vie et de la mort. Il a persuadé des membres de la cour de participer à un rituel qui aurait dû leur donner la jeunesse éternelle. Au final, il fut le seul à l\'obtenir - avec une armée de morts-vivants en bonus.</string>
+   <string name="King_Defense">paré</string>
+   <string name="King_Info1">Tu ne peux pas me tuer, %s... Je suis... immortel...</string>
+   <string name="King_Info2">Levez-vous, esclaves!</string>
+   <string name="King_Info3">Comment osez-vous!</string>
+   <string name="King_UndeadName">mort-vivant nain</string>
+   <string name="King_UndeadDesc">Ces nains morts-vivants, créés par le roi des nains, furent des membres de sa cour. Ils ressemblent à des squelettes portant une quantité impressionnante de poils sur le visage.</string>
+   <string name="King_UndeadDefense">bloqué</string>
+   <!--  STRINGS OF Mimic CLASS  -->
+   <string name="Mimic_Name">mime</string>
+   <string name="Mimic_Desc">Les mimes sont des créatures magiques qui peuvent prendre n\'importe quelle forme selon leurs désirs. Dans les donjons, ils prennent très souvent la forme de coffres, car ils savent comment attirer les aventuriers.</string>
+   <!--  STRINGS OF Monk CLASS  -->
+   <string name="Monk_Name">moine nain</string>
+   <string name="Monk_Desc">Ces moines sont des fanatiques, ils se sont dévoués à protéger les secrets de leur cité des intrus. Ils n\'utilisent pas d\'armure ou d\'armes, se reposant uniquement sur le combat à mains nues.</string>
+   <string name="Monk_Defense">paré</string>
+   <string name="Monk_Disarm">%1$s vous a arraché le %2$s des mains!</string>
+   <!--  STRINGS OF Piranha CLASS  -->
+   <string name="Piranha_Name">piranha géant</string>
+   <string name="Piranha_Desc">Ces poissons carnivores ne sont pas des habitants naturels des eaux des sous-sols. Ils ont été amenés spécifiquement pour protéger les trésors submergés.</string>
+   <!--  STRINGS OF Rat CLASS  -->
+   <string name="Rat_Name">rats marsupiaux</string>
+   <string name="Rat_Desc">Les rats marsupiaux sont des habitants des égouts agressifs, mais plutôt faibles. Ils peuvent se révéler dangereux en grand nombre.</string>
+   <!--  STRINGS OF Scorpio CLASS  -->
+   <string name="Scorpio_Name">scorpion</string>
+   <string name="Scorpio_Desc">Ces énormes arachnides démoniaques évitent le combat rapproché à tout prix, tirant des épines empoisonnées et crantées sur de longues distances.</string>
+   <!--  STRINGS OF Senior CLASS  -->
+   <string name="Senior_Name">moine senior</string>
+   <!--  STRINGS OF Shaman CLASS  -->
+   <string name="Shaman_Name">gnoll shaman</string>
+   <string name="Shaman_Desc">les gnolls les plus intelligents peuvent maîtriser de la magie shamanique. Les gnoll shamans préfèrent les sorts de combat pour compenser leur manque de force, n\'hésitant pas à les utiliser sur ceux qui remettent leur statut en question dans la tribu.</string>
+   <string name="Shaman_Killed">L\'éclair du %s vous a tué...</string>
+   <!--  STRINGS OF Shielded CLASS  -->
+   <string name="Shielded_Name">brute au bouclier</string>
+   <string name="Shielded_Defense">bloqué</string>
+   <!--  STRINGS OF Skeleton CLASS  -->
+   <string name="Skeleton_Name">squelette</string>
+   <string name="Skeleton_Desc">Les squelettes sont composés des os cadavériques des aventuriers malchanceux et des résidents du donjon, animés par la magie noire venant des profondeurs. En les blessant suffisamment, ils se désintègreront dans une explosion osseuse.</string>
+   <string name="Skeleton_Defense">bloqué</string>
+   <string name="Skeleton_Killed">Vous avez été tué par l\'explosion des os...</string>
+   <!--  STRINGS OF Spinner CLASS  -->
+   <string name="Spinner_Name">tisseur des cavernes</string>
+   <string name="Spinner_Desc">Ces araignées verdâtres et poilues évitent le combat direct, préférant attendre à distance alors que leurs victimes, prises dans leur toile, succombent lentement d\'une morsure empoisonnée.</string>
+   <!--  STRINGS OF Statue CLASS  -->
+   <string name="Statue_Name">statue animée</string>
+   <string name="Statue_Desc">On pourrait penser que ce n\'est qu\'une autre de ces statues un peu moches du donjon, mais ses yeux rouges luminescents la mettent à part. Tandis que la statue est faite de pierre, le _%s_ qu\'elle porte a bien l\'air réel.</string>
+   <!--  STRINGS OF Succubus CLASS  -->
+   <string name="Succubus_Name">succube</string>
+   <string name="Succubus_Desc">Les succubes sont des démones séduisantes (d\'un point de vue gothique). En utilisant leur magie, elles peuvent envoûter un héros, qui deviendra incapable d\'attaquer quoi que ce soit avant la fin de l\'envoûtement.</string>
+   <!--  STRINGS OF Swarm CLASS  -->
+   <string name="Swarm_Name">essaim de mouches</string>
+   <string name="Swarm_Desc">L\'essaim de mouches meurtrières bourdonne de colère. Chaque attaque non-magique le séparera en deux essaims plus petits, mais tout aussi dangereux.</string>
+   <string name="Swarm_Defense">esquivé</string>
+   <!--  STRINGS OF Tengu CLASS  -->
+   <string name="Tengu_Name1">Tengu</string>
+   <string name="Tengu_Name2">mémoire de Tengu</string>
+   <string name="Tengu_Desc">Les Tengu sont les membres d\'un ancien clan d\'assassins, qui est aussi appelé Tengu. Ces assassins sont connus pour leur usage excessif de shurikens et de pièges.</string>
+   <string name="Tengu_Info1">Enfin libre...</string>
+   <string name="Tengu_Info2">Attrape ça, %s !</string>
+   <!--  STRINGS OF Thief CLASS  -->
+   <string name="Thief_Name">voleur fou</string>
+   <string name="Thief_Desc">Les profondeurs du donjon ont toujours étés une cachette pour les criminels en tous genres. Ils n\'ont pas tous gardés la raison pendant  ces excursions si lointaines de la lumière du jour. Cela fait longtemps que ces voleurs et bandits fous ont oubliés qui ils étaient et pourquoi ils volaient.</string>
+   <string name="Thief_Stole">%1$s volé %2$s de vous!!</string>
+   <string name="Thief_Carries">\n\nLe %1$s transporte un _%2$s_. Volé évidemment.</string
+   <!--  STRINGS OF Warlock CLASS  -->
+   <string name="Warlock_Name">sorcier nain</string>
+   <string name="Warlock_Desc">Quand les intérêts des nains sont passés de la mécanique à l\'art des arcanes, les sorciers sont arrivés au pouvoir dans la ville. Ils ont commencé avec la magie élémentaire, mais ont vite préféré la démonologie et la nécromancie.</string>
+   <string name="Warlock_Killed">La flèche des ténèbres du %s vous a tué...</string>
+   <!--  STRINGS OF Wraith CLASS  -->
+   <string name="Wraith_Name">spectre</string>
+   <string name="Wraith_Desc">Un spectre est l\'esprit vengeur de quelqu\'un qui a péché, ou de quelqu\'un dont la tombe a été profanée. Etant une entité éternelle, il est très difficile de les frapper avec des armes normales.</string>
+   <string name="Wraith_Defense">esquivé</string>
+   <!--  STRINGS OF Yog CLASS  -->
+   <string name="Yog_Name1">Yog-Dzewa</string>
+   <string name="Yog_Name2">écho de Yog-Dzewa</string>
+   <string name="Yog_Desc">Yog-Dzewa est une divinité ancestrale, une puissante entité venant des méandres du chaos. Un siècle plus tôt, les nains ont gagné la guerre de justesse contre son armée de démons, mais furent incapables de tuer leur dieu. A la place, ils l\'ont enfermé dans les grands halls sous leur cité, espérant qu\'il soit trop faible pour revenir un jour.</string>
+   <string name="Yog_Info1">...</string>
+   <string name="Yog_Info2">L\'espoir n\'est qu\'une illusion...</string>
+   <string name="Yog_NameRottingFist">poing pourissant</string>
+   <string name="Yog_NameBurningFist">poing ardent</string>
+   <string name="Yog_NameLarva">larve du dieu</string>
+
+
+<!--  PACKAGE /mobs/npcs  -->
+   <!--  STRINGS OF Bee CLASS  -->
+   <string name="Bee_Name">abeille d'or</string>
+   <string name="Bee_Desc">Malgré leur petite taille, les abeilles d'or ont tendance à protéger leur maître farouchement. Ils ne vivent pas longtemps cependant.</string>
+   <string name="Bee_Status">Cette %s se promène</string>
+   <!--  STRINGS OF Blacksmith CLASS  -->
+   <string name="Blacksmith_Name">forgeron troll</string>
+   <string name="Blacksmith_Desc">Ce forgeron troll à l\'air d\'un troll comme un autre: il est grand et maigre, et sa peau ressemble à de la pierre, que ce soit la couleur ou la texture. Il est en train de bricoler avec des outils un peu trop petits pour lui.</string>
+   <string name="Blacksmith_Gold1">Hé l'humain! Tu veux être utile, pas vrai? Prends c\'te pioche et va miner du _minerai noir_, _15 morceaux_ devraient suffire. Comment ça, je donne quoi en échange? Radin...\nOk, ok, je n\'ai pas d\'argent, mais je peux forger pour toi. T\'as de la chance, je suis le seul forgeron des environs.</string>
+   <string name="Blacksmith_Blood1">Hé l'humain! Tu veux être utile, pas vrai? Prends c\'te pioche et _tuer une chauve-souris_ avec elle, j\'ai besoin de son sang sur l\'outil. Comment ça, je donne quoi en échange? Radin...\nOk, ok, je n\'ai pas d\'argent, mais je peux forger pour toi. T\'as de la chance, je suis le seul forgeron des environs.</string>
+   <string name="Blacksmith_Txt2">Tu te fous de moi? Elle est où ma pioche?!</string>
+   <string name="Blacksmith_Txt3">Du minerai noir. 15 morceaux. Sérieusement, c\'est si dur que ça?</string>
+   <string name="Blacksmith_Txt4">J\'ai dit que j\'avais besoin de sang de chauve-souris sur la pioche. Allez allez!</string>
+   <string name="Blacksmith_Completed">Ah, tu es revenu... Mieux vaut tard que jamais.</string>
+   <string name="Blacksmith_GetLost">Je suis occupé, là. Débarrassez moi le plancher!</string>
+   <string name="Blacksmith_LooksBetter">votre %s a l\'air mieux maintenant</string>
+   <string name="Blacksmith_Verify1">Prends 2 objets différents, pas le même deux fois!</string>
+   <string name="Blacksmith_Verify2">Prends 2 objets du même type!</string>
+   <string name="Blacksmith_Verify3">J\'ai besoin de savoir avec quoi je travaille, identifiez moi ça avant!</string>
+   <string name="Blacksmith_Verify4">Je ne travaillerai pas avec des objets maudits!</string>
+   <string name="Blacksmith_Verify5">C\'est une blague? La qualité est trop basse!</string>
+   <string name="Blacksmith_Verify6">Je ne peux pas reforger ces objets!</string>
+   <!--  STRINGS OF Ghost CLASS  -->
+   <string name="Ghost_Name">fantôme triste</string>
+   <string name="Ghost_Desc">Le fantôme est à peine visible. On dirait un miasme de lumières défaillantes avec un visage des plus attristés.</string>
+   <string name="Ghost_Rose1">Bonjour aventurier... J\'étais comme vous, un jour - fort et confiant... Et maintenant je suis décédé... Mais je ne peux pas partir... Pas tant que je n\'aurai pas retrouvé ma _rose séchée_... Elle est très importante à mes yeux... Un monstre l\'a prise sur mon cadavre...</string>
+   <string name="Ghost_Rose2">S\'il vous plaît... Aidez moi... Trouvez la rose...</string>
+   <string name="Ghost_Rat1">Boujour aventurier... J\'étais comme vous, un jour - fort et confiant... Et maintenant je suis décédé... Mais je ne peux pas partir... Pas tant que je n\'aurai pas pris ma revanche... Tuez le _rat fétide_, celui qui a pris ma vie...</string>
+   <string name="Ghost_Rat2">S\'il vous plaît... Aidez-moi... Détruisez cette abomination...</string>
+   <string name="Ghost_Defense">esquivé</string>
+   <string name="Ghost_FetidRatName">rat fétide</string>
+   <string name="Ghost_FetidRatDesc">Ce rat est plus gros que les autres. Il est entouré d\'un nuage nauséabond.</string>
+   <!--  STRINGS OF Imp CLASS  -->
+   <string name="Imp_Name">diablotin ambitieux</string>
+   <string name="Imp_Desc">Les diablotins sont des démons mineurs. On ne les remarque pas pas pour leur force ou leur aptitudes à la magie, mais plutôt par leur intelligence et leur sociabilité. Beaucoup de diablotins préfèrent vivre parmi les non-démons.</string>
+   <string name="Imp_Defense">esquivé</string>
+   <string name="Imp_Golems1">Etes vous un aventurier? J\'adooore les aventuriers! On peut toujours compter sur eux quand on a besoin de tuer un truc! Pas vrai? Avec une prime à la clé bien sûr ;)\nMoi, j\'aurai besoin de tuer des _golems_. Vous voyez, j\'aimerais commencer ma petite affaire par ici, mais ces golems sont très mauvais pour le business! C\'est dur de négocier avec des grumeaux de granite errants, maudits soient-ils ! Alors, s\'il vous plaît, tuez... disons _6 d\'entre eux_, et la récompense est à vous.</string>
+   <string name="Imp_Golems2">Comment se passe votre safari avec les golems?</string>
+   <string name="Imp_Monks1">Etes vous un aventurier? J\'adooore les aventuriers! On peut toujours compter sur eux quand on a besoin de tuer un truc! Pas vrai? Avec une prime à la clé bien sûr ;)\nMoi, j\'aurai besoin de tuer des _moines_. Vous voyez, j\'aimerais établir un petit commerce par ici, mais ces lunatiques n\'achètent rien et vont effrayer les autres clients... Alors, s\'il vous plaît, tuez... disons _8 d\'entre eux_, et la récompense est à vous.</string>
+   <string name="Imp_Monks2">Oh, vous êtes encore en vie! Je savais que votre kung-fu était plus fort ;) Au fait, n\'oubliez pas de ramasser les jetons de ces moines.</string>
+   <string name="Imp_Cya">Au revoir, %s!</string>
+   <string name="Imp_Hey">Psst, %s!</string>
+   <!--  STRINGS OF ImpShopkeeper CLASS  -->
+   <string name="ImpShopkeeper_Name">diablotin ambitieux</string>
+   <string name="ImpShopkeeper_Desc">Les diablotins sont des démons mineurs. On ne les remarque pas pas pour leur force ou leur aptitudes à la magie, mais plutôt par leur intelligence et leur sociabilité. Beaucoup de diablotins préfèrent vivre parmi les non-démons.</string>
+   <string name="ImpShopkeeper_Greetings">Salut, l\'ami!</string>
+   <!--  STRINGS OF MirrorImage CLASS  -->
+   <string name="MirrorImage_Name">image miroir</string>
+   <string name="MirrorImage_Desc">Cette illusion possède une forte ressemblance avec vous, mais elle est plus pâle et frissonne un peu.</string>
+   <!--  STRINGS OF RatKing CLASS  -->
+   <string name="RatKing_Name">roi des rats</string>
+   <string name="RatKing_Desc">Ce rat est un peu plus grand que les autres et porte une petite couronne sur la tête.</string>
+   <string name="RatKing_Info1">Je ne dormais pas!</string>
+   <string name="RatKing_Info2">Qu\'est ce que c\'est? Je n\'ai pas le temps pour ces calomnies. Mon royaume ne va pas se gouverner tout seul!</string>
+   <!--  STRINGS OF Shopkeeper CLASS  -->
+   <string name="Shopkeeper_Name">marchand</string>
+   <string name="Shopkeeper_Desc">Ce mec un peu épais aurait l\'air plus approprié dans un quartier marchand d\'une grande ville plutôt qu\'un donjon. Ses prix expliquent pourquoi il préfère établir son business ici.</string>
+   <string name="Shopkeeper_Sell">Choisissez un objet à vendre</string>
+   <!--  STRINGS OF WandMaker CLASS  -->
+   <string name="WandMaker_Name">vieux fabricant de sceptres</string>
+   <string name="WandMaker_Desc">Ce gentleman, vieux mais robuste, a une expression un peu confuse. Il est protégé par un bouclier magique.</string>
+   <string name="WandMaker_Defense">absorbé</string>
+   <string name="WandMaker_Berry1">Oh, quelle agréable surprise de rencontrer quelqu\'un à un tel endroit! Je suis venu ici pour un ingrédient rare, la _graine Rougebaie_. Etant un magicien, je peux me défendre contre les monstres d\'ici, mais je me perds très facilement, c\'est très embarrassant. Vous pourriez peut-être m\'aider? Je serai heureux de payer vos services avec l\'un de mes meilleurs sceptres.</string>
+   <string name="WandMaker_Berry2">Vous avez trouvé la graine de Rougebaie, %s? Non? Pas de soucis, j\'ai tout mon temps, voyez-vous.</string>
+   <string name="WandMaker_Dust1">Oh, quelle agréable surprise de rencontrer quelqu\'un à un tel endroit! Je suis venu ici pour un ingrédient rare, la _poussière de cadavre_. Elle peut être récoltée sur les restes des squelettes, et il y\'en a beaucoup dans le coin. Etant un magicien, je peux me défendre contre les monstres d\'ici, mais je me perds très facilement, c\'est très embarrassant. Vous pourriez peut-être m\'aider? Je serai heureux de payer vos services avec l\'un de mes meilleurs sceptres.</string>
+   <string name="WandMaker_Dust2">Vous avez la poussière des morts , %s? Les piles d\'ossements sont les endroits à vérifier.</string>
+   <string name="WandMaker_RotberryName">Rougebaie</string>
+   <string name="WandMaker_RotberryDesc">Les baies de cet arbrisseau ont le goût délicieux de la mort.</string>
+   <string name="WandMaker_RotberryInfo">La graine pousse un rugissement qui fait écho dans le donjon!</string>
 
 
 
