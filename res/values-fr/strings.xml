@@ -1638,7 +1638,7 @@
    <string name="Thief_Name">voleur fou</string>
    <string name="Thief_Desc">Les profondeurs du donjon ont toujours étés une cachette pour les criminels en tous genres. Ils n\'ont pas tous gardés la raison pendant  ces excursions si lointaines de la lumière du jour. Cela fait longtemps que ces voleurs et bandits fous ont oubliés qui ils étaient et pourquoi ils volaient.</string>
    <string name="Thief_Stole">%1$s volé %2$s de vous!!</string>
-   <string name="Thief_Carries">\n\nLe %1$s transporte un _%2$s_. Volé évidemment.</string
+   <string name="Thief_Carries">\n\nLe %1$s transporte un _%2$s_. Volé évidemment.</string>
    <!--  STRINGS OF Warlock CLASS  -->
    <string name="Warlock_Name">sorcier nain</string>
    <string name="Warlock_Desc">Quand les intérêts des nains sont passés de la mécanique à l\'art des arcanes, les sorciers sont arrivés au pouvoir dans la ville. Ils ont commencé avec la magie élémentaire, mais ont vite préféré la démonologie et la nécromancie.</string>
@@ -1660,14 +1660,14 @@
 
 <!--  PACKAGE /mobs/npcs  -->
    <!--  STRINGS OF Bee CLASS  -->
-   <string name="Bee_Name">abeille d'or</string>
-   <string name="Bee_Desc">Malgré leur petite taille, les abeilles d'or ont tendance à protéger leur maître farouchement. Ils ne vivent pas longtemps cependant.</string>
+   <string name="Bee_Name">abeille d\'or</string>
+   <string name="Bee_Desc">Malgré leur petite taille, les abeilles d\'or ont tendance à protéger leur maître farouchement. Ils ne vivent pas longtemps cependant.</string>
    <string name="Bee_Status">Cette %s se promène</string>
    <!--  STRINGS OF Blacksmith CLASS  -->
    <string name="Blacksmith_Name">forgeron troll</string>
    <string name="Blacksmith_Desc">Ce forgeron troll à l\'air d\'un troll comme un autre: il est grand et maigre, et sa peau ressemble à de la pierre, que ce soit la couleur ou la texture. Il est en train de bricoler avec des outils un peu trop petits pour lui.</string>
-   <string name="Blacksmith_Gold1">Hé l'humain! Tu veux être utile, pas vrai? Prends c\'te pioche et va miner du _minerai noir_, _15 morceaux_ devraient suffire. Comment ça, je donne quoi en échange? Radin...\nOk, ok, je n\'ai pas d\'argent, mais je peux forger pour toi. T\'as de la chance, je suis le seul forgeron des environs.</string>
-   <string name="Blacksmith_Blood1">Hé l'humain! Tu veux être utile, pas vrai? Prends c\'te pioche et _tuer une chauve-souris_ avec elle, j\'ai besoin de son sang sur l\'outil. Comment ça, je donne quoi en échange? Radin...\nOk, ok, je n\'ai pas d\'argent, mais je peux forger pour toi. T\'as de la chance, je suis le seul forgeron des environs.</string>
+   <string name="Blacksmith_Gold1">Hé l\'humain! Tu veux être utile, pas vrai? Prends c\'te pioche et va miner du _minerai noir_, _15 morceaux_ devraient suffire. Comment ça, je donne quoi en échange? Radin...\nOk, ok, je n\'ai pas d\'argent, mais je peux forger pour toi. T\'as de la chance, je suis le seul forgeron des environs.</string>
+   <string name="Blacksmith_Blood1">Hé l\'humain! Tu veux être utile, pas vrai? Prends c\'te pioche et _tuer une chauve-souris_ avec elle, j\'ai besoin de son sang sur l\'outil. Comment ça, je donne quoi en échange? Radin...\nOk, ok, je n\'ai pas d\'argent, mais je peux forger pour toi. T\'as de la chance, je suis le seul forgeron des environs.</string>
    <string name="Blacksmith_Txt2">Tu te fous de moi? Elle est où ma pioche?!</string>
    <string name="Blacksmith_Txt3">Du minerai noir. 15 morceaux. Sérieusement, c\'est si dur que ça?</string>
    <string name="Blacksmith_Txt4">J\'ai dit que j\'avais besoin de sang de chauve-souris sur la pioche. Allez allez!</string>
@@ -1729,21 +1729,155 @@
    <string name="WandMaker_RotberryInfo">La graine pousse un rugissement qui fait écho dans le donjon!</string>
 
 
+<!--  PACKAGE /levels  -->
+   <!--  STRINGS OF Level CLASS  -->
+   <string name="Level_HiddenPlate">Une plaque de pression cachée s\'enclenche!</string>
+   <string name="Level_TileChasm">Gouffre</string>
+   <string name="Level_TileFloor">Etage</string>
+   <string name="Level_TileGrass">Herbe</string>
+   <string name="Level_TileWater">Eau</string>
+   <string name="Level_TileWall">Mur</string>
+   <string name="Level_TileClosedDoor">Porte fermée </string>
+   <string name="Level_TileOpenDoor">Porte ouverte</string>
+   <string name="Level_TileEntrance">Entrée de l\'étage</string>
+   <string name="Level_TileExit">Sortie de l\'étage</string>
+   <string name="Level_TileEmbers">Braises</string>
+   <string name="Level_TileLockedDoor">Porte verrouillée</string>
+   <string name="Level_TilePedestal">Piédestal</string>
+   <string name="Level_TileBarricade">Barricade</string>
+   <string name="Level_TileHighGrass">Hautes herbes</string>
+   <string name="Level_TileLockedExit">Sortie de l\'étage verrouillée</string>
+   <string name="Level_TileUnlockedExit">Sortie de l\'étage déverrouillée</string>
+   <string name="Level_TileSign">Panneau</string>
+   <string name="Level_TileWell">Puits</string>
+   <string name="Level_TileEmptyWell">Puits vide</string>
+   <string name="Level_TileStatue">Statue</string>
+   <string name="Level_TileToxicTrap">Piège de gaz toxiques</string>
+   <string name="Level_TileFireTrap">Piège de feu</string>
+   <string name="Level_TileParalyticTrap">Piège de gaz paralysants</string>
+   <string name="Level_TilePoisonTrap">Piège d\'aiguilles empoisonnées</string>
+   <string name="Level_TileAlarmTrap">Piège d\'alarme</string>
+   <string name="Level_TileLightningTrap">Piège de foudre</string>
+   <string name="Level_TileGrippingTrap">Piège agrippant  </string>
+   <string name="Level_TileSummoningTrap">Piège d\'invocation</string>
+   <string name="Level_TileInactiveTrap">Piège déclenché</string>
+   <string name="Level_TileBookshelf">Bibliothèque</string>
+   <string name="Level_TileAlchemy">Chaudron d\'alchimie</string>
+   <string name="Level_TileDefault">\?\?\?</string>
+   <string name="Level_TileDescChasm">Vous n\'arrivez pas à voir le sol.</string>
+   <string name="Level_TileDescWater">En cas de brûlure, marchez dans l\'eau pour éteindre les flammes.</string>
+   <string name="Level_TileDescEntrance">Les escaliers mènent à l\'étage du dessus.</string>
+   <string name="Level_TileDescExit">Les escaliers mènent à l\'étage du dessous.</string>
+   <string name="Level_TileDescEmbers">Des braises recouvrent le sol.</string>
+   <string name="Level_TileDescHighGrass">La végétation dense empêche de voir plus loin.</string>
+   <string name="Level_TileDescLockedDoor">Cette porte est verrouillée, vous avez besoin de la clé correspondante pour l\'ouvrir.</string>
+   <string name="Level_TileDescLockedExit">D\'épais barreaux vous séparent de l\'escalier qui mène à l\'étage suivant.</string>
+   <string name="Level_TileDescBarricade">La barricade de bois est bien fixée, mais elle a séché au fil des années. Pourrait-elle brûler?</string>
+   <string name="Level_TileDescSign">Vous n\'arrivez pas à lire d\'où vous êtes.</string>
+   <string name="Level_TileDescTrap">Marcher sur une plaque de pression cachée activera le piège.</string>
+   <string name="Level_TileDescInactiveTrap">Le piège a déjà été déclenché et ne représente plus une menace.</string>
+   <string name="Level_TileDescStatue">Quelqu\'un a voulu décorer cet endroit, mais a échoué visiblement.</string>
+   <string name="Level_TileDescAlchemy">Lâchez quelques graines ici pour préparer une potion.</string>
+   <string name="Level_TileDescEmptyWell">Le puits est sec maintenant.</string>
+   <!--  STRINGS OF CavesLevel & CavesBossLevel CLASS  -->
+   <string name="Caves_TileGrass">Mousse fluorescente</string>
+   <string name="Caves_TileHighGrass">Champignons fluorescents</string>
+   <string name="Caves_TileWater">Eau gelée.</string>
+   <string name="Caves_TileDescEntrance">L\'échelle mène à l\'étage du dessus.</string>
+   <string name="Caves_TileDescExit">L\'échelle descend vers l\'étage du dessous.</string>
+   <string name="Caves_TileDescHighGrass">Des champignons géants bloquent la vue.</string>
+   <string name="Caves_TileDescDeco">Une veine de minerai est visible sur le mur. De l\'or?</string>
+   <string name="Caves_TileDescBookshelf">Qui aurait besoin d\'une bibliothèque dans une grotte?</string>
+   <!--  STRINGS OF CityLevel & CityBossLevel CLASS  -->
+   <string name="City_TileWater">Eau colorée douteuse</string>
+   <string name="City_TileHighGrass">Hautes fleurs épanouies</string>
+   <string name="City_TileDescEntrance">Une rampe mène à l\'étage du dessus.</string>
+   <string name="City_TileDescExit">Une rampe mène à l\'étage du dessous.</string>
+   <string name="City_TileDescDeco">Il manque plusieurs briques ici.</string>
+   <string name="City_TileDescEmptySP">Un épais tapis est sur le sol.</string>
+   <string name="City_TileDescStatue">La statue représente un espèce de nain se dressant dans une position héroïque.</string>
+   <string name="City_TileDescBookshelf">Des rangs de livres sur des sujets divers remplissent la bibliothèque.</string>
+   <!--  STRINGS OF HallsLevel & HallsBossLevel CLASS  -->
+   <string name="Halls_TileWater">Lave froide</string>
+   <string name="Halls_TileGrass">Braises de mousse</string>
+   <string name="Halls_TileHighGrass">Braises de champignons</string>
+   <string name="Halls_TileStatue">Pilier</string>
+   <string name="Halls_TileDescWater">Ca ressemble à de la lave, mais c\'est froid et probablement pas dangereux à toucher.</string>
+   <string name="Halls_TileDescStatue">Le pilier est fait avec de véritables crânes humains. Magnifique.</string>
+   <string name="Halls_TileDescBookshelf">Des livres écrits dans d\'anciens langages recouvrent la bibliothèque.</string>
+   <!--  STRINGS OF LastLevel CLASS  -->
+   <string name="LastLevel_TileWater">@string/Halls_TileWater</string>
+   <string name="LastLevel_TileGrass">@string/Halls_TileGrass</string>
+   <string name="LastLevel_TileHighGrass">@string/Halls_TileHighGrass</string>
+   <string name="LastLevel_TileStatue">@string/Halls_TileStatue</string>
+   <string name="LastLevel_TileDescWater">@string/Halls_TileDescWater</string>
+   <string name="LastLevel_TileDescStatue">@string/Halls_TileDescStatue</string>
+   <!--  STRINGS OF LastShopLevel CLASS  -->
+   <string name="LastShopLevel_TileWater">@string/City_TileWater</string>
+   <string name="LastShopLevel_TileHighGrass">@string/City_TileHighGrass</string>
+   <string name="LastShopLevel_TileDescEntrance">@string/City_TileDescEntrance</string>
+   <string name="LastShopLevel_TileDescExit">@string/City_TileDescExit</string>
+   <string name="LastShopLevel_TileDescDeco">@string/City_TileDescDeco</string>
+   <string name="LastShopLevel_TileDescEmptySP">@string/City_TileDescEmptySP</string>
+   <!--  STRINGS OF PrisonLevel & PrisonBossLevel CLASS  -->
+   <string name="Prison_TileWater">Eau froide et sombre.</string>
+   <string name="Prison_TileDescDeco">Il y\'a des traces de sang séché sur le sol.</string>
+   <string name="Prison_TileDescBookshelf">C\'est probablement les restes d\'une librairie de prison. Pourraient-ils brûler?</string>
+   <!--  STRINGS OF SewerLevel & SewerBossLevel CLASS  -->
+   <string name="Sewer_TileWater">Eau boueuse</string>
+   <string name="Sewer_TileDescDeco">De la mousse jaunâtre et humide recouvre le sol.</string>
+   <string name="Sewer_TileDescBookshelf">La bibliothèque est remplie de livres inutiles et pas chers. Pourrait-elle brûler?</string>
 
 
+<!--  PACKAGE /levels/features  -->
+   <!--  STRINGS OF AlchemyPot CLASS  -->
+   <string name="AlchemyPot_SelectSeed">Choisissez une graine à lancer</string>
+   <!--  STRINGS OF Chasm CLASS  -->
+   <string name="Chasm_Chasm">Gouffre</string>
+   <string name="Chasm_Yes">Oui, je sais ce que je fais</string>
+   <string name="Chasm_No">Non, j\'ai changé d\'avis</string>
+   <string name="Chasm_Jump">Voulez vous vraiment plonger dans le gouffre? Vous pouvez probablement mourir.</string>
+   <string name="Chasm_Info">Votre chute a été fatale...</string>
+   <!--  STRINGS OF Sign CLASS  -->
+   <string name="Sign_DeadEnd">Qu\'est ce que tu fais là?!</string>
+   <string name="Sign_Burn">Comme vous essayez de lire le signe qu\'elle éclate en flammes verdâtres.</string>
+   <string-array name="Sign_Tips">
+       <item >Ne surestimez pas votre force. N\'utilisez que des armes et des armures que vous pouvez porter.</item>
+       <item >Toutes les portes du donjon ne sont pas visibles du premier coup. Si vous êtes bloqué, cherchez des portes cachées.</item>
+       <item >Souvenez-vous qu\'augmenter votre force n\'est pas le seul moyen d\'accéder à de meilleurs équipements. Vous pouvez faire l\'inverse et diminuer la force requise d\'un Parchemin d\'Amélioration.</item>
+       <item >Vous pouvez dépenser votre or aux marchés du donjon, le premier se trouvant au 6e étage.</item>
+       <item >Prenez garde au Goo!</item>
+       <item >Pixel-Mart - tout ce dont vous avez besoin pour une aventure réussie!</item>
+       <item >Identifiez vos potions et parchemins le plus tôt possible, ne le faites pas au moment où vous en auriez le plus besoin.</item>
+       <item >Avoir faim n\'est pas dangereux, mais être affamé est dangereux.</item>
+       <item >Une attaque surprise a plus de chances de réussir. Par exemple, vous pouvez embusquer vos ennemis derrière une porte quand vous savez qu\'ils arrivent.</item>
+       <item >Ne laissez pas le Tengu s\'échapper!</item>
+       <item >Pixel-Mart - dépensez de l\'argent: vivez plus longtemps!</item>
+       <item >Quand vous êtes attaqué par plusieurs monstres en même temps, essayez de battre en retraite derrière une porte.</item>
+       <item >Si vous brûlez, vous ne pourrez pas éteindre le feu en marchant dans l\'eau tout en lévitant!.</item>
+       <item >Il n\'ya aucun sens à posséder deux Ankhs à la fois car vous les perdrez tous les deux en ressuscitant.</item>
+       <item >DANGER! La machinerie peut causer des blessures, un démembrement ou même la mort!</item>
+       <item >Pixel-Mart - pour un donjon plus tranquille.</item>
+       <item >Quand vous améliorez une arme enchantée, il est possible que l\'enchantement soit détruit.</item>
+       <item >Les Puits de Transmutation vous permettent d\'obtenir des objets uniques, qui ne pourraient pas être obtenus autrement.</item>
+       <item >La seule manière d\'enchanter une arme est de l\'améliorer avec un Parchemin d\'Amélioration d\'Arme.</item>
+       <item >Aucune arme tolérée en présence de sa majesté!</item>
+       <item >Pixel-Mart - Des réductions pour les chasseurs de démons!</item>
+   </string-array>
 
 
+<!--  PACKAGE /levels/traps  -->
+   <!--  STRINGS OF AlarmTrap CLASS  -->
+   <string name="AlarmTrap_Desc">Le piège émet un son strident qui résonne à travers tout le donjon!</string>
+   <!--  STRINGS OF LightningTrap CLASS  -->
+   <string name="LightningTrap_Name">Piège de foudre</string>
+   <string name="LightningTrap_Desc">Vous avez été tué par une décharge d\'un piège de foudre...</string>   
 
 
-
-
-
-
-
-
-
-
-
+<!--  PACKAGE /ui  -->
+   <!--  STRINGS OF Toolbar CLASS  -->
+   <string name="Toolbar_Info1">Vous ne savez pas ce qu\'il y\'a ici.</string>
+   <string name="Toolbar_Info2">Choisissez l\'endroit à observer</string>
 
 
 <!--  PACKAGE /utils  -->
