@@ -38,6 +38,8 @@ public class WndSettings extends Window {
 	private static final String TXT_SCALE_UP     = Game.getVar(R.string.WndSettings_ScaleUp);
 	private static final String TXT_IMMERSIVE    = Game.getVar(R.string.WndSettings_Immersive);
 	
+	private static final String TXT_LANG         = Game.getVar(R.string.WndSettings_Language);
+   
 	private static final String TXT_MUSIC        = Game.getVar(R.string.WndSettings_Music);
 	
 	private static final String TXT_SOUND        = Game.getVar(R.string.WndSettings_Sound);
@@ -101,6 +103,15 @@ public class WndSettings extends Window {
 			btnScaleUp.setRect( 0, 0, WIDTH, BTN_HEIGHT );
 			btnScaleUp.checked( PixelDungeon.scaleUp() );
 			add( btnScaleUp );
+         
+         RedButton btnLanguage = new RedButton( TXT_LANG ) {
+            @Override
+            protected void onClick() {
+               parent.add( new WndLanguage() );
+            }
+         };
+         btnLanguage.setRect( 0, btnScaleUp.bottom() + GAP, WIDTH, BTN_HEIGHT );
+         add( btnLanguage );
 			
 			btnImmersive = new CheckBox( TXT_IMMERSIVE ) {
 				@Override
@@ -109,7 +120,7 @@ public class WndSettings extends Window {
 					PixelDungeon.immerse( checked() );
 				}
 			};
-			btnImmersive.setRect( 0, btnScaleUp.bottom() + GAP, WIDTH, BTN_HEIGHT );
+			btnImmersive.setRect( 0, btnLanguage.bottom() + GAP, WIDTH, BTN_HEIGHT );
 			btnImmersive.checked( PixelDungeon.immersed() );
 			btnImmersive.enable( android.os.Build.VERSION.SDK_INT >= 19 );
 			add( btnImmersive );

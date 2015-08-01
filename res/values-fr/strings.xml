@@ -396,6 +396,19 @@
    <string name="WndJournal_Title">Journal</string>
 
 
+   <!--  STRINGS OF WndLanguage CLASS  -->
+   <string name="WndLanguage_Title">Langues</string>
+   <string-array name="WndLanguage_Langs">
+       <item>Par défaut,def,1</item>
+       <item>Anglais,en,1</item>
+       <item>Portugais BR,pt_BR,1</item>
+       <item>Espagnol,es,1</item>
+       <item>Français,fr,1</item>
+       <item>Russe (Soon),ru,0</item>
+       <item>Néerlandais (Soon),nl,0</item>
+   </string-array>
+
+
    <!--  STRINGS OF WndRanking CLASS  -->
    <string name="WndRanking_Error">Impossible de charger plus d\'informations</string>
    <string name="WndRanking_Stats">Stats</string>
@@ -433,6 +446,7 @@
    <string name="WndSettings_ZoomDef">Zoom par défaut</string>
    <string name="WndSettings_ScaleUp">Intensifier l\'UI</string>
    <string name="WndSettings_Immersive">Mode immersif</string>
+   <string name="WndSettings_Language">Langue</string>
    <string name="WndSettings_Music">Musique</string>
    <string name="WndSettings_Sound">Effets sonores</string>
    <string name="WndSettings_Brightness">Luminosité</string>
@@ -1167,7 +1181,7 @@
        <item>pourpre</item>
        <item>de chêne</item>
        <item>de bouleau</item>
-   </string-array> 
+   </string-array>
 
 
    <!--  STRINGS OF WandOfAmok CLASS  -->
@@ -1210,7 +1224,7 @@
        <item >Baa...</item>
        <item >Bee...</item>
        <item >Ble...</item>
-   </string-array> 
+   </string-array>
 
 
    <!--  STRINGS OF WandOfLightning CLASS  -->
@@ -1871,7 +1885,7 @@
    <string name="AlarmTrap_Desc">Le piège émet un son strident qui résonne à travers tout le donjon!</string>
    <!--  STRINGS OF LightningTrap CLASS  -->
    <string name="LightningTrap_Name">Piège de foudre</string>
-   <string name="LightningTrap_Desc">Vous avez été tué par une décharge d\'un piège de foudre...</string>   
+   <string name="LightningTrap_Desc">Vous avez été tué par une décharge d\'un piège de foudre...</string>
 
 
 <!--  PACKAGE /ui  -->

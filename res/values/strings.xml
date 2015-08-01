@@ -396,6 +396,19 @@
    <string name="WndJournal_Title">Journal</string>
 
 
+   <!--  STRINGS OF WndLanguage CLASS  -->
+   <string name="WndLanguage_Title">Languages</string>
+   <string-array name="WndLanguage_Langs">
+       <item>Default,def,1</item>
+       <item>English,en,1</item>
+       <item>Portuguese BR,pt_BR,1</item>
+       <item>Spanish,es,1</item>
+       <item>French,fr,1</item>
+       <item>Russian (Soon),ru,0</item>
+       <item>Dutch (Soon),nl,0</item>
+   </string-array>
+
+
    <!--  STRINGS OF WndRanking CLASS  -->
    <string name="WndRanking_Error">Unable to load additional information</string>
    <string name="WndRanking_Stats">Stats</string>
@@ -433,6 +446,7 @@
    <string name="WndSettings_ZoomDef">Default Zoom</string>
    <string name="WndSettings_ScaleUp">Scale up UI</string>
    <string name="WndSettings_Immersive">Immersive mode</string>
+   <string name="WndSettings_Language">Language</string>
    <string name="WndSettings_Music">Music</string>
    <string name="WndSettings_Sound">Sound FX</string>
    <string name="WndSettings_Brightness">Brightness</string>
@@ -611,17 +625,17 @@
    <!--  STRINGS OF Firebloom CLASS  -->
    <string name="Firebloom_Name">Firebloom</string>
    <string name="Firebloom_Desc">When something touches a Firebloom, it bursts into flames.</string>
-   
+
 
    <!--  STRINGS OF Icecap CLASS  -->
    <string name="Icecap_Name">Icecap</string>
    <string name="Icecap_Desc">Upon touching an Icecap excretes a pollen, which freezes everything in its vicinity.</string>
-   
+
 
    <!--  STRINGS OF Sorrowmoss CLASS  -->
    <string name="Sorrowmoss_Name">Sorrowmoss</string>
    <string name="Sorrowmoss_Desc">A Sorrowmoss is a flower (not a moss) with razor-sharp petals, coated with a deadly venom.</string>
-   
+
 
    <!--  STRINGS OF Sungrass CLASS  -->
    <string name="Sungrass_Name">Sungrass</string>
@@ -747,10 +761,10 @@
    <string name="ScrollHolder_Info">You can place any number of scrolls into this tubular container. It saves room in your backpack and protects scrolls from fire.</string>
    <!--  STRINGS OF SeedPouch CLASS  -->
    <string name="SeedPouch_Name">seed pouch</string>
-   <string name="SeedPouch_Info">This small velvet pouch allows you to store any number of seeds in it. Very convenient.</string>   
+   <string name="SeedPouch_Info">This small velvet pouch allows you to store any number of seeds in it. Very convenient.</string>
    <!--  STRINGS OF WandHolster CLASS  -->
    <string name="WandHolster_Name">wand holster</string>
-   <string name="WandHolster_Info">This slim holder is made of leather of some exotic animal. It allows to compactly carry up to %d wands.</string>  
+   <string name="WandHolster_Info">This slim holder is made of leather of some exotic animal. It allows to compactly carry up to %d wands.</string>
 
 
 <!--  PACKAGE /items/food  -->
@@ -811,7 +825,7 @@
    <!--  STRINGS OF SkeletonKey CLASS  -->
    <string name="SkeletonKey_Name">skeleton key</string>
    <string name="SkeletonKey_Info">This key looks serious: its head is shaped like a skull. Probably it can open some serious door.</string>
-   
+
 
 <!--  PACKAGE /items/potions  -->
    <!--  STRINGS OF Potion CLASS  -->
@@ -1026,7 +1040,7 @@
    <!--  STRINGS OF RingOfShadows CLASS  -->
    <string name="RingOfShadows_Name">Ring of Shadows</string>
    <string name="RingOfShadows_Info">Enemies will be less likely to notice you if you wear this ring. Degraded rings of shadows will alert enemies who might otherwise not have noticed your presence.</string>
-   
+
 
    <!--  STRINGS OF RingOfThorns CLASS  -->
    <string name="RingOfThorns_Name">Ring of Thorns</string>
@@ -1167,7 +1181,7 @@
        <item >purpleheart</item>
        <item >oak</item>
        <item >birch</item>
-   </string-array> 
+   </string-array>
 
 
    <!--  STRINGS OF WandOfAmok CLASS  -->
@@ -1210,7 +1224,7 @@
        <item >Baa...</item>
        <item >Bee...</item>
        <item >Ble...</item>
-   </string-array> 
+   </string-array>
 
 
    <!--  STRINGS OF WandOfLightning CLASS  -->
@@ -1871,7 +1885,7 @@
    <string name="AlarmTrap_Desc">The trap emits a piercing sound that echoes throughout the dungeon!</string>
    <!--  STRINGS OF LightningTrap CLASS  -->
    <string name="LightningTrap_Name">lightning trap</string>
-   <string name="LightningTrap_Desc">You were killed by a discharge of a lightning trap...</string>   
+   <string name="LightningTrap_Desc">You were killed by a discharge of a lightning trap...</string>
 
 
 <!--  PACKAGE /ui  -->

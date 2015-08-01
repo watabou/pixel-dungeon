@@ -332,7 +332,7 @@
 
    <!--  STRINGS OF WndChallenges CLASS  -->
    <string name="WndChallenges_Title">Desafios</string>
-   
+
 
    <!--  STRINGS OF WndChooseWay CLASS  -->
    <string name="WndChooseWay_Message">Qual caminho você vai seguir?</string>
@@ -341,7 +341,7 @@
 
    <!--  STRINGS OF WndClass CLASS  -->
    <string name="WndClass_Mastery">Mestre</string>
-   
+
 
    <!--  STRINGS OF WndError CLASS  -->
    <string name="WndError_Title">ERRO</string>
@@ -396,6 +396,19 @@
    <string name="WndJournal_Title">Diário</string>
 
 
+   <!--  STRINGS OF WndLanguage CLASS  -->
+   <string name="WndLanguage_Title">Idiomas</string>
+   <string-array name="WndLanguage_Langs">
+       <item>Default,def,1</item>
+       <item>Inglês,en,1</item>
+       <item>Portugues BR,pt_BR,1</item>
+       <item>Espanhol,es,1</item>
+       <item>Francês,fr,1</item>
+       <item>Russo (Em Breve),ru,0</item>
+       <item>Holandês (Em Breve),nl,0</item>
+   </string-array>
+
+
    <!--  STRINGS OF WndRanking CLASS  -->
    <string name="WndRanking_Error">Não foi possível carregar informações adicionais</string>
    <string name="WndRanking_Stats">@string/WndHero_Stats</string>
@@ -433,6 +446,7 @@
    <string name="WndSettings_ZoomDef">Zoom Default</string>
    <string name="WndSettings_ScaleUp">Menu Maior</string>
    <string name="WndSettings_Immersive">Modo Imersivo</string>
+   <string name="WndSettings_Language">Idioma</string>
    <string name="WndSettings_Music">Música</string>
    <string name="WndSettings_Sound">Efeitos Sonoros</string>
    <string name="WndSettings_Brightness">Brilho</string>
@@ -479,7 +493,7 @@
    <string name="Item_DirThrow">Escoha a direção para jogar</string>
    <string name="Item_Degraded">Por causa do uso freqüente, seu %s se degradou.</string>
    <string name="Item_GonnaDegrade">Por causa do uso freqüente, seu %s vai se degradar em breve.</string>
-   
+
 
    <!--  STRINGS OF EquipableItem CLASS  -->
    <string name="EquipableItem_ACEquip">EQUIPAR</string>
@@ -628,7 +642,7 @@
    <string name="Sungrass_Desc">A planta da vida é conhecida por propriedades curativas da sua seiva.</string>
    <string name="Sungrass_Buff">Cura da Natureza</string>
 
-   
+
 <!--  PACKAGE items/armor  -->
    <!--  STRINGS OF Armor CLASS  -->
    <string name="Armor_EquipCursed">seu %s se contrai em torno de você dolorosamente</string>
@@ -747,10 +761,10 @@
    <string name="ScrollHolder_Info">Você pode colocar qualquer número de pergaminhos neste recipiente tubular. Ele economiza espaço em sua mochila e protege pergaminhos do fogo.</string>
    <!--  STRINGS OF SeedPouch CLASS  -->
    <string name="SeedPouch_Name">bolsa de sementes</string>
-   <string name="SeedPouch_Info">Esta pequena bolsa de veludo permite armazenar qualquer quantidade de sementes dentro. É muito conveniente.</string>   
+   <string name="SeedPouch_Info">Esta pequena bolsa de veludo permite armazenar qualquer quantidade de sementes dentro. É muito conveniente.</string>
    <!--  STRINGS OF WandHolster CLASS  -->
    <string name="WandHolster_Name">estojo de varinhas</string>
-   <string name="WandHolster_Info">Este suporte fino é feito de couro de algum animal exótico. Ele permite levar de forma compacta até %d varinhas.</string>  
+   <string name="WandHolster_Info">Este suporte fino é feito de couro de algum animal exótico. Ele permite levar de forma compacta até %d varinhas.</string>
 
 
 <!--  PACKAGE /items/food  -->
@@ -804,14 +818,14 @@
 
    <!--  STRINGS OF IronKey CLASS  -->
    <string name="IronKey_Name">chave de ferro</string>
-   <string name="IronKey_Info">Os entalhes nesta chave de ferro antiga estão bem gastos​​; seu cordão de couro está danificada pelo tempo. Pode abrir portas!?</string>
+   <string name="IronKey_Info">Os entalhes nesta chave de ferro antiga estão bem gastos; seu cordão de couro está danificada pelo tempo. Pode abrir portas!?</string>
    <string name="IronKey_FromDepth">chave do nível %d</string>
 
 
    <!--  STRINGS OF SkeletonKey CLASS  -->
    <string name="SkeletonKey_Name">chave mestra</string>
    <string name="SkeletonKey_Info">Esta chave parece importante: sua cabeça tem a forma de uma caveira. Provavelmente, ele pode abrir alguma porta importante.</string>
-   
+
 
 <!--  PACKAGE /items/potions  -->
    <!--  STRINGS OF Potion CLASS  -->
@@ -971,7 +985,7 @@
    <string name="Ring_Info3b">, e porque ele é amaldiçoado, você não tem como removê-lo</string>
    <string name="Ring_Info4">%1$s\n\nVocê pode sentir a magia maléfica escondida dentro do %2$s.</string>
    <string name="Ring_BuffKnown">Into é um %s</string>
-   
+
 
    <!--  STRINGS OF RingOfAccuracy CLASS  -->
    <string name="RingOfAccuracy_Name">Anel da Precisão</string>
@@ -1026,7 +1040,7 @@
    <!--  STRINGS OF RingOfShadows CLASS  -->
    <string name="RingOfShadows_Name">Anel das Sombras</string>
    <string name="RingOfShadows_Info">Inimigos serão menos propensos a notar você se você usar este anel. Anéis das Sobras degradados irão alertar os inimigos que poderiam não ter notado sua presença.</string>
-   
+
 
    <!--  STRINGS OF RingOfThorns CLASS  -->
    <string name="RingOfThorns_Name">Anel de Espinhos</string>
@@ -1167,7 +1181,7 @@
        <item >roxinho</item>
        <item >carvalho</item>
        <item >bétula</item>
-   </string-array> 
+   </string-array>
 
 
    <!--  STRINGS OF WandOfAmok CLASS  -->
@@ -1210,7 +1224,7 @@
        <item >Beeee...</item>
        <item >Baa...</item>
        <item >Blee...</item>
-   </string-array> 
+   </string-array>
 
 
    <!--  STRINGS OF WandOfLightning CLASS  -->
@@ -1338,7 +1352,7 @@
 
    <!--  STRINGS OF Longsword CLASS  -->
    <string name="Longsword_Name">Espada Grande</string>
-   <string name="Longsword_Info">Esta lâmina imponente causa danos graves​​, ao investir seu peso em cada corte.</string>
+   <string name="Longsword_Info">Esta lâmina imponente causa danos graves ao investir seu peso em cada corte.</string>
 
 
    <!--  STRINGS OF Mace CLASS  -->
@@ -1404,7 +1418,7 @@
 
    <!--  STRINGS OF IncendiaryDart CLASS  -->
    <string name="IncendiaryDart_Name">dardo incendiário</string>
-   <string name="IncendiaryDart_Info">A ponta de cada um desses dardos é projetada para fixar-se no alvo, enquanto os compostos instáveis ​​amarrados em sua extensão explodem em chamas brilhantes.</string>
+   <string name="IncendiaryDart_Info">A ponta de cada um desses dardos é projetada para fixar-se no alvo, enquanto os compostos instáveis amarrados em sua extensão explodem em chamas brilhantes.</string>
 
 
    <!--  STRINGS OF Javelin CLASS  -->
@@ -1692,7 +1706,7 @@
    <string name="Ghost_FetidRatDesc">Este rato marsupial é muito maior, do que uma forma regular. É cercada por uma nuvem imunda.</string>
    <!--  STRINGS OF Imp CLASS  -->
    <string name="Imp_Name">diabinho ambicioso</string>
-   <string name="Imp_Desc">São demônios menores. Eles não são notáveis ​​por sua força nem por seu talento mágico, mas eles são muito inteligentes e sociáveis. Muitos diabinhos preferem viver entre os não-demônios.</string>
+   <string name="Imp_Desc">São demônios menores. Eles não são notáveis por sua força nem por seu talento mágico, mas eles são muito inteligentes e sociáveis. Muitos diabinhos preferem viver entre os não-demônios.</string>
    <string name="Imp_Defense">evitou</string>
    <string name="Imp_Golems1">Você é um aventureiro? Eu amo aventureiros! Você sempre pode contar com eles, se algo precisa ser morto. Estou certo? Em troca uma recompensa, é claro;)\nNo meu caso, são _Golems_ que precisam ser mortos. Você vê, eu estou começand um pequeno negócio aqui, mas esses golems estúpidos são ruins para os negócios! É muito difícil de negociar com pedaços de granito errante, malditos sejam! Então, por favor, mate ... digamos _6 deles_ e a recompensa será sua.</string>
    <string name="Imp_Golems2">Como vai o seu safari golem?</string>
@@ -1702,7 +1716,7 @@
    <string name="Imp_Hey">Psiuu, %s!</string>
    <!--  STRINGS OF ImpShopkeeper CLASS  -->
    <string name="ImpShopkeeper_Name">diabinho ambicioso</string>
-   <string name="ImpShopkeeper_Desc">São demônios menores. Eles não são notáveis ​​por sua força nem por seu talento mágico, mas eles são muito inteligentes e sociáveis. Muitos diabinhos preferem viver e fazer negócios entre os não-demônios.</string>
+   <string name="ImpShopkeeper_Desc">São demônios menores. Eles não são notáveis por sua força nem por seu talento mágico, mas eles são muito inteligentes e sociáveis. Muitos diabinhos preferem viver e fazer negócios entre os não-demônios.</string>
    <string name="ImpShopkeeper_Greetings">Olá Amigo!</string>
    <!--  STRINGS OF MirrorImage CLASS  -->
    <string name="MirrorImage_Name">imagem espelhada</string>
@@ -1840,7 +1854,7 @@
    <string name="Chasm_Info">Você caiu para a morte...</string>
    <!--  STRINGS OF Sign CLASS  -->
    <string name="Sign_DeadEnd">O que você está fazendo aqui?!</string>
-   <string name="Sign_Burn">As you try to read the sign it bursts into greenish flames.</string>
+   <string name="Sign_Burn">Enquanto você tenta ler a placa, ela explode em chamas esverdeadas.</string>
    <string-array name="Sign_Tips">
        <item >Não superestime sua força, use armas e armaduras que você pode manipular.</item>
        <item >Nem todas as portas do calabouço são visíveis à primeira vista. Se você está preso, procure por portas escondidas.</item>
@@ -1871,7 +1885,7 @@
    <string name="AlarmTrap_Desc">A armadilha emite um som agudo que ecoa em todo o calabouço!</string>
    <!--  STRINGS OF LightningTrap CLASS  -->
    <string name="LightningTrap_Name">Armadilha de raios</string>
-   <string name="LightningTrap_Desc">Você foi morto por uma descarga de armadilha de raio...</string>   
+   <string name="LightningTrap_Desc">Você foi morto por uma descarga de armadilha de raio...</string>
 
 
 <!--  PACKAGE /ui  -->

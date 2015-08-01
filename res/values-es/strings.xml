@@ -396,6 +396,19 @@
    <string name="WndJournal_Title">Diario</string>
 
 
+   <!--  STRINGS OF WndLanguage CLASS  -->
+   <string name="WndLanguage_Title">Idiomas</string>
+   <string-array name="WndLanguage_Langs">
+       <item>Predeterminado,def,1</item>
+       <item>Inglés,en,1</item>
+       <item>Portugués BR,pt_BR,1</item>
+       <item>Español,es,1</item>
+       <item>Francés,fr,1</item>
+       <item>Ruso (Soon),ru,0</item>
+       <item>Holandés (Soon),nl,0</item>
+   </string-array>
+
+
    <!--  STRINGS OF WndRanking CLASS  -->
    <string name="WndRanking_Error">Imposible cargar información adicional</string>
    <string name="WndRanking_Stats">Estadíst.</string>
@@ -433,6 +446,7 @@
    <string name="WndSettings_ZoomDef">Zoom Default</string>
    <string name="WndSettings_ScaleUp">Menús más grandes</string>
    <string name="WndSettings_Immersive">Modo inmersivo</string>
+   <string name="WndSettings_Language">Idioma</string>
    <string name="WndSettings_Music">Música</string>
    <string name="WndSettings_Sound">Sonidos</string>
    <string name="WndSettings_Brightness">Modo Brillo</string>
@@ -747,10 +761,10 @@
    <string name="ScrollHolder_Info">Usted puede colocar cualquier número de rollos en este recipiente tubular. Se ahorra espacio en tu mochila y protege pergaminos del fuego.</string>
    <!--  STRINGS OF SeedPouch CLASS  -->
    <string name="SeedPouch_Name">bolsa de semillas</string>
-   <string name="SeedPouch_Info">Esta pequeña bolsa de terciopelo le permite almacenar cualquier número de semillas en el mismo. Muy conveniente.</string>   
+   <string name="SeedPouch_Info">Esta pequeña bolsa de terciopelo le permite almacenar cualquier número de semillas en el mismo. Muy conveniente.</string>
    <!--  STRINGS OF WandHolster CLASS  -->
    <string name="WandHolster_Name">funda de varita</string>
-   <string name="WandHolster_Info">Este delgado soporte está hecho de cuero de un animal exótico. Permite realizar de forma compacta hasta %d varitas.</string>  
+   <string name="WandHolster_Info">Este delgado soporte está hecho de cuero de un animal exótico. Permite realizar de forma compacta hasta %d varitas.</string>
 
 
 <!--  PACKAGE /items/food  -->
@@ -1026,7 +1040,7 @@
    <!--  STRINGS OF RingOfShadows CLASS  -->
    <string name="RingOfShadows_Name">Anillo de las Sombras</string>
    <string name="RingOfShadows_Info">Los enemigos serán menos propensos a notar que si usted usa este anillo. Anillos de las Sombras degradadas alertarán enemigos que de otra manera no se han dado cuenta de su presencia.</string>
-   
+
 
    <!--  STRINGS OF RingOfThorns CLASS  -->
    <string name="RingOfThorns_Name">Anillo de Espinas</string>
@@ -1167,7 +1181,7 @@
        <item >purpleheart</item>
        <item >roble</item>
        <item >abedul</item>
-   </string-array> 
+   </string-array>
 
 
    <!--  STRINGS OF WandOfAmok CLASS  -->
@@ -1210,7 +1224,7 @@
        <item >Baa...</item>
        <item >Bee...</item>
        <item >Ble...</item>
-   </string-array> 
+   </string-array>
 
 
    <!--  STRINGS OF WandOfLightning CLASS  -->
@@ -1871,7 +1885,7 @@
    <string name="AlarmTrap_Desc">La trampa emite un sonido penetrante que hace eco a lo largo de la mazmorra!</string>
    <!--  STRINGS OF LightningTrap CLASS  -->
    <string name="LightningTrap_Name">trampa de rayo</string>
-   <string name="LightningTrap_Desc">Usted fue matado por una descarga de una trampa de rayo ...</string>   
+   <string name="LightningTrap_Desc">Usted fue matado por una descarga de una trampa de rayo ...</string>
 
 
 <!--  PACKAGE /ui  -->

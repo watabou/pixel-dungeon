@@ -112,6 +112,8 @@ public class PixelDungeon extends Game {
 	protected void onCreate( Bundle savedInstanceState ) {
 		super.onCreate( savedInstanceState );
 		
+		useLocale(language());
+		
 		updateImmersiveMode();
 		
 		DisplayMetrics metrics = new DisplayMetrics();
@@ -343,6 +345,15 @@ public class PixelDungeon extends Game {
    
    public static boolean secondQuickslot() {
       return Preferences.INSTANCE.getBoolean( Preferences.KEY_2QUICK, false );
+   }
+   
+   public static void language( String value ) {
+      Preferences.INSTANCE.put( Preferences.KEY_LANGUAGE, value );
+      instance.doRestart();
+   }
+   
+   public static String language() {
+      return Preferences.INSTANCE.getString( Preferences.KEY_LANGUAGE, "def" );
    }
 	
 	/*
