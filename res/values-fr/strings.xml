@@ -32,8 +32,8 @@
 
    <!--  STRINGS OF StartScene CLASS  -->
    <string name="StartScene_Load">Charger la partie</string>
-   <string name="StartScene_New">Charger la partie</string>
-   <string name="StartScene_Erase">Effacer la partie actuelle</string>
+   <string name="StartScene_New">Nouvelle partie</string>
+   <string name="StartScene_Erase">Effacer partie en cours</string>
    <string name="StartScene_Depth">Etage: %1$d\nNiveau: %2$d</string>
    <string name="StartScene_Really">Voulez vous vraiment commencer une nouvelle partie?</string>
    <string name="StartScene_Warning">Votre progression actuelle sera perdue.</string>
@@ -353,12 +353,12 @@
    <string name="WndGame_Ranking">Classement</string>
    <string name="WndGame_Start">Nouvelle partie</string>
    <string name="WndGame_menu">Menu principal</string>
-   <string name="WndGame_Exit">Quitter Pixel Dungeon</string>
+   <string name="WndGame_Exit">Sortie Jeu</string>
    <string name="WndGame_Return">Revenir à la partie</string>
 
 
    <!--  STRINGS OF WndHero CLASS  -->
-   <string name="WndHero_Stats">Statistiques</string>
+   <string name="WndHero_Stats">Stats</string>
    <string name="WndHero_Buffs">Bonus</string>
    <string name="WndHero_Exp">Expérience</string>
    <string name="WndHero_Str">Force</string>
@@ -398,7 +398,7 @@
 
    <!--  STRINGS OF WndRanking CLASS  -->
    <string name="WndRanking_Error">Impossible de charger plus d\'informations</string>
-   <string name="WndRanking_Stats">Statistiques</string>
+   <string name="WndRanking_Stats">Stats</string>
    <string name="WndRanking_Items">Objets</string>
    <string name="WndRanking_Badges">Médailles</string>
    <string name="WndRanking_StaTitle">Niveau %1$d %2$s</string>
