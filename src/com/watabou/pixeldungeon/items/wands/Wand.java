@@ -89,7 +89,7 @@ public abstract class Wand extends KindOfWeapon {
 		WandOfDisintegration.class,
 		WandOfAvalanche.class
 	};
-	private static final String[] woods = Game.getVars(R.array.Wand_Wood);
+	private static final String[] woods = Game.getVars(R.array.Wand_Woods);
 	private static final Integer[] images = {
 		ItemSpriteSheet.WAND_HOLLY, 
 		ItemSpriteSheet.WAND_YEW, 

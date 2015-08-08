@@ -404,6 +404,7 @@
        <item>Portuguese BR,pt_BR,1</item>
        <item>Spanish,es,1</item>
        <item>French,fr,1</item>
+       <item>Polish,pl,1</item>
        <item>Russian (Soon),ru,0</item>
        <item>Dutch (Soon),nl,0</item>
    </string-array>
@@ -812,8 +813,8 @@
 
 <!--  PACKAGE /items/keys  -->
    <!--  STRINGS OF GoldemKey CLASS  -->
-   <string name="GoldemKey_Name">golden key</string>
-   <string name="GoldemKey_Info">The notches on this golden key are tiny and intricate. Maybe it can open some chest lock?</string>
+   <string name="GoldenKey_Name">golden key</string>
+   <string name="GoldenKey_Info">The notches on this golden key are tiny and intricate. Maybe it can open some chest lock?</string>
 
 
    <!--  STRINGS OF IronKey CLASS  -->
@@ -1168,7 +1169,7 @@
    <string name="Wand_SelfTarget">You can\'t target yourself</string>
    <string name="Wand_Prompt">Choose direction to zap</string>
    <string name="Wand_Identify">You are now familiar enough with your %s.</string>
-   <string-array name="Wand_Wood">
+   <string-array name="Wand_Woods">
        <item >holly</item>
        <item >yew</item>
        <item >ebony</item>

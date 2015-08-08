@@ -162,13 +162,13 @@
 
    <!--  STRINGS OF HeroSubClass CLASS  -->
    <string name="HeroSubClass_NameGlad">gladiator</string>
-   <string name="HeroSubClass_DescGlad">Udany atak wręcz _Gladiatora_ rozpoczyna kombinację, która zadaje więcej obrażeń z każdym kolejnym uderzeniem.</string>
+   <string name="HeroSubClass_DescGlad">Udany atak wręcz _Gladiator_ rozpoczyna kombinację, która zadaje więcej obrażeń z każdym kolejnym uderzeniem.</string>
    <string name="HeroSubClass_NameBers">berserker</string>
    <string name="HeroSubClass_DescBers">Kiedy _Berserker_ zostaje ciężko ranny wkracza w stan dzikiej furii zadając dodatkowe obrażenia wrogom.</string>
    <string name="HeroSubClass_NameWarL">Czarnoksiężnik</string>
    <string name="HeroSubClass_DescWarL">Po zabiciu wroga _Czarnoksiężnik_ pożera jego duszę. Leczy ona jego rany i syci jego głód.</string>
    <string name="HeroSubClass_NameBatM">Mag Bitewny</string>
-   <string name="HeroSubClass_DescBatM">Kiedy _Bitewny Mag_ walczy wręcz za pomocą kostura zadaje dodatkowe obrażenia zależne od posiadanych ładunków. Ponadto każdy udany atak przywraca 1 ładunek jego kosturowi.</string>
+   <string name="HeroSubClass_DescBatM">Kiedy _Mag Bitewny_ walczy wręcz za pomocą kostura zadaje dodatkowe obrażenia zależne od posiadanych ładunków. Ponadto każdy udany atak przywraca 1 ładunek jego kosturowi.</string>
    <string name="HeroSubClass_NameAssa">zabójca</string>
    <string name="HeroSubClass_DescAssa">Atakując z ukrycia _Zabójca_ zadaje dodatkowe obrażenia swej ofierze</string>
    <string name="HeroSubClass_NameFreR">sprinter</string>
@@ -353,7 +353,7 @@
    <string name="WndGame_Ranking">Rankingi</string>
    <string name="WndGame_Start">Zacznij nową grę</string>
    <string name="WndGame_menu">Menu Główne</string>
-   <string name="WndGame_Exit">Wyjdź z Pixel Dungeon</string>
+   <string name="WndGame_Exit">Wyjście z gry</string>
    <string name="WndGame_Return">Wróc do Gry</string>
 
 
@@ -404,6 +404,7 @@
        <item >Portugalski BR,pt_BR,1</item>
        <item >Hiszpański,es,1</item>
        <item >Francuski,fr,1</item>
+       <item >Polski,pl,1</item>
        <item >Rosyjski (wkrótce),ru,0</item>
        <item >Holenderski (wkrótce),nl,0</item>
    </string-array>
@@ -983,7 +984,7 @@
    <string name="Ring_Info2">Czujesz jak %s zaciska się boleśnie na twym palcu</string>
    <string name="Ring_Info3a">%1$s\n\n%2$s spoczywa na twym palcu %3$s.</string>
    <string name="Ring_Info3b">i ponieważ jest przeklęty, jesteś bezsilny by go zdjąć.</string>
-   <string name="Ring_Info4">%1$s\n\%2$s emanuje mroczną magią.</string>
+   <string name="Ring_Info4">%1$s\n%2$s emanuje mroczną magią.</string>
    <string name="Ring_BuffKnown">To jest %s</string>
 
 
@@ -1168,7 +1169,7 @@
    <string name="Wand_SelfTarget">Nie możesz celować w siebie</string>
    <string name="Wand_Prompt">Wybierz kierunek strzału</string>
    <string name="Wand_Identify">Jesteś już na tyle obeznany z %s.</string>
-   <string-array name="Wand_Wood_Types">
+   <string-array name="Wand_Woods">
        <item >ostrokrzewowy</item>
        <item >cisowy</item>
        <item >ebonitowy</item>
@@ -1855,7 +1856,7 @@
    <!--  STRINGS OF Sign CLASS  -->
    <string name="Sign_DeadEnd">Co ty tutaj robisz?!</string>
    <string name="Sign_Burn">Jak próbujesz odczytać znak, że wpada do zielonkawych płomieni.</string>
-   <string-array name="Dungeon_Tips">
+   <string-array name="Sign_Tips">
        <item >Nie przeceniaj swej siły. Używaj broni i pancerzy, które możesz udźwignąć.</item>
        <item >Nie wszystkie drzwi w Lochu są widoczne na pierwszy rzut oka. Jeśli utkniesz, szukaj ukrytych drzwi.</item>
        <item >Pamiętaj, że zwiększanie siły to nie jedyny sposób by zyskać dostęp do lepszego rynsztunku. Możesz pójść inną drogą i zmniejszyć wymagania siłowe przedmiotu ulepszając go Zwojem Ulepszenia.</item>

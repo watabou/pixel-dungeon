@@ -404,6 +404,7 @@
        <item>Portugués BR,pt_BR,1</item>
        <item>Español,es,1</item>
        <item>Francés,fr,1</item>
+       <item>Polaco,fr,1</item>
        <item>Ruso (Soon),ru,0</item>
        <item>Holandés (Soon),nl,0</item>
    </string-array>
@@ -812,8 +813,8 @@
 
 <!--  PACKAGE /items/keys  -->
    <!--  STRINGS OF GoldemKey CLASS  -->
-   <string name="GoldemKey_Name">llave de oro</string>
-   <string name="GoldemKey_Info">Las muescas en esta llave de oro son pequeñas e intrincado. Tal vez puede abrir alguna cerradura pecho?</string>
+   <string name="GoldenKey_Name">llave de oro</string>
+   <string name="GoldenKey_Info">Las muescas en esta llave de oro son pequeñas e intrincado. Tal vez puede abrir alguna cerradura pecho?</string>
 
 
    <!--  STRINGS OF IronKey CLASS  -->
@@ -1168,7 +1169,7 @@
    <string name="Wand_SelfTarget">No se puede apuntar a ti mismo</string>
    <string name="Wand_Prompt">Elija la dirección de hacer zapping</string>
    <string name="Wand_Identify">Ahora está lo suficientemente familiarizado con su %s.</string>
-   <string-array name="Wand_Wood">
+   <string-array name="Wand_Woods">
        <item >acebo</item>
        <item >tejo</item>
        <item >ébano</item>

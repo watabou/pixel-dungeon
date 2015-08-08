@@ -404,6 +404,7 @@
        <item>Portugues BR,pt_BR,1</item>
        <item>Espanhol,es,1</item>
        <item>Francês,fr,1</item>
+       <item>Polonês,pl,1</item>
        <item>Russo (Em Breve),ru,0</item>
        <item>Holandês (Em Breve),nl,0</item>
    </string-array>
@@ -812,8 +813,8 @@
 
 <!--  PACKAGE /items/keys  -->
    <!--  STRINGS OF GoldemKey CLASS  -->
-   <string name="GoldemKey_Name">chave de ouro</string>
-   <string name="GoldemKey_Info">Os entalhes nesta chave de ouro são minúsculos e intrincados. Talvez ele pode abrir alguns cofres fechados!?</string>
+   <string name="GoldenKey_Name">chave de ouro</string>
+   <string name="GoldenKey_Info">Os entalhes nesta chave de ouro são minúsculos e intrincados. Talvez ele pode abrir alguns cofres fechados!?</string>
 
 
    <!--  STRINGS OF IronKey CLASS  -->
@@ -1168,7 +1169,7 @@
    <string name="Wand_SelfTarget">Você não pode acertar a si mesmo.</string>
    <string name="Wand_Prompt">Escolha uma direção para atirar</string>
    <string name="Wand_Identify">Você agora está bastante familiarizado com sua %s</string>
-   <string-array name="Wand_Wood">
+   <string-array name="Wand_Woods">
        <item >azevinho</item>
        <item >teixo</item>
        <item >ébano</item>

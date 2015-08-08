@@ -404,6 +404,7 @@
        <item>Portugais BR,pt_BR,1</item>
        <item>Espagnol,es,1</item>
        <item>Français,fr,1</item>
+       <item>Polonais,pl,1</item>
        <item>Russe (Soon),ru,0</item>
        <item>Néerlandais (Soon),nl,0</item>
    </string-array>
@@ -812,8 +813,8 @@
 
 <!--  PACKAGE /items/keys  -->
    <!--  STRINGS OF GoldemKey CLASS  -->
-   <string name="GoldemKey_Name">clé dorée</string>
-   <string name="GoldemKey_Info">Les encoches de cette clé dorée sont petites et complexes. Peut-être que ça peut ouvrir une serrure de coffre?</string>
+   <string name="GoldenKey_Name">clé dorée</string>
+   <string name="GoldenKey_Info">Les encoches de cette clé dorée sont petites et complexes. Peut-être que ça peut ouvrir une serrure de coffre?</string>
 
 
    <!--  STRINGS OF IronKey CLASS  -->
@@ -1168,7 +1169,7 @@
    <string name="Wand_SelfTarget">vous ne pouvez pas vous cibler vous-même!</string>
    <string name="Wand_Prompt">Choisissez la direction ou zap</string>
    <string name="Wand_Identify">Vous êtes maintenant assez familier avec votre %s.</string>
-   <string-array name="Wand_Wood">
+   <string-array name="Wand_Woods">
        <item>de houx</item>
        <item>d\'if</item>
        <item>d\'ébène</item>
