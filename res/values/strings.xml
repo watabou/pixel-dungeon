@@ -401,12 +401,13 @@
    <string-array name="WndLanguage_Langs">
        <item>Default,def,1</item>
        <item>English,en,1</item>
-       <item>Portuguese BR,pt_BR,1</item>
-       <item>Spanish,es,1</item>
-       <item>French,fr,1</item>
-       <item>Polish,pl,1</item>
+       <item>Español (España),es,1</item>
+       <item>Français (France),fr,1</item>
+       <item>Polski,pl,1</item>
+       <item>Português (Brasil),pt_BR,1</item>
+       <item>Deutsch (Soon),de,0</item>
+       <item>Nederlands (Soon),nl,0</item>
        <item>Russian (Soon),ru,0</item>
-       <item>Dutch (Soon),nl,0</item>
    </string-array>
 
 

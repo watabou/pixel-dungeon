@@ -398,16 +398,6 @@
 
    <!--  STRINGS OF WndLanguage CLASS  -->
    <string name="WndLanguage_Title">Langues</string>
-   <string-array name="WndLanguage_Langs">
-       <item>Par défaut,def,1</item>
-       <item>Anglais,en,1</item>
-       <item>Portugais BR,pt_BR,1</item>
-       <item>Espagnol,es,1</item>
-       <item>Français,fr,1</item>
-       <item>Polonais,pl,1</item>
-       <item>Russe (Soon),ru,0</item>
-       <item>Néerlandais (Soon),nl,0</item>
-   </string-array>
 
 
    <!--  STRINGS OF WndRanking CLASS  -->

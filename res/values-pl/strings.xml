@@ -15,7 +15,7 @@
    <string name="AboutScene_Txt">Kod &amp; grafika: Watabou\nMuzyka: Cube_Code\n\nTa gra jest inspirowana akcentem Brian Walker\'s. Wypróbuj Windows, Mac OS i Linux - to jest zajebiste!\n\nZapraszamy do odwiedzenia oficjalnej strony o dodatkowe informacje:</string>
    <string name="AboutScene_Lnk">pixeldungeon.watabou.ru</string>
    <string name="AboutScene_Translate">Tłumaczenie: Łukasza Piętki, rodriformiga</string><!--   Write here the translation credits.   -->
-   <string name="AboutScene_TranslateLnk">tramer008@gmail.com;rodriformiga@gmail.com</string><!--   Write here the e-mail to contat for translator   -->
+   <string name="AboutScene_TranslateLnk">tramer008@gmail.com; rodriformiga@gmail.com</string><!--   Write here the e-mail to contat for translator   -->
    <string name="AboutScene_TranslateSnd">Wyślij e-mail</string><!--  Write here the "Send E-mail" title of the window  -->
 
 
@@ -398,16 +398,6 @@
 
    <!--  STRINGS OF WndLanguage CLASS  -->
    <string name="WndLanguage_Title">Języki</string>
-   <string-array name="WndLanguage_Langs">
-       <item >Domyślnie,def,1</item>
-       <item >Angielski,en,1</item>
-       <item >Portugalski BR,pt_BR,1</item>
-       <item >Hiszpański,es,1</item>
-       <item >Francuski,fr,1</item>
-       <item >Polski,pl,1</item>
-       <item >Rosyjski (wkrótce),ru,0</item>
-       <item >Holenderski (wkrótce),nl,0</item>
-   </string-array>
 
 
    <!--  STRINGS OF WndRanking CLASS  -->
