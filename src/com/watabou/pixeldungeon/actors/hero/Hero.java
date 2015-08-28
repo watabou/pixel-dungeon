@@ -1219,8 +1219,6 @@ public class Hero extends Char {
 		if (cause instanceof Hero.Doom) {
 			((Hero.Doom)cause).onDeath();
 		}
-		
-		Dungeon.deleteGame( Dungeon.hero.heroClass, true );
 	}
 	
 	@Override

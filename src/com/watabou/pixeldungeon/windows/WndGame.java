@@ -97,7 +97,12 @@ public class WndGame extends Window {
 				@Override
 				protected void onClick() {
 					try {
-						Dungeon.saveAll();
+						if (!Dungeon.hero.isAlive()) {
+							Dungeon.deleteGame(Dungeon.hero.heroClass, true);
+						}
+						else {
+							Dungeon.saveAll();
+						}
 					} catch (IOException e) {
 						// Do nothing
 					}
@@ -106,6 +111,9 @@ public class WndGame extends Window {
 			}, new RedButton( TXT_EXIT ) {
 				@Override
 				protected void onClick() {
+					if (!Dungeon.hero.isAlive()) {
+						Dungeon.deleteGame(Dungeon.hero.heroClass, true);
+					}
 					Game.instance.finish();
 				}
 			} 
