@@ -23,6 +23,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -31,19 +32,16 @@ import com.watabou.utils.Random;
 
 public class AmuletScene extends PixelScene {
 
-	private static final String TXT_EXIT	= "Let's call it a day";
-	private static final String TXT_STAY	= "I'm not done yet";
+	private static final String TXT_EXIT = Game.getVar(R.string.AmuletScene_Exit);
+	private static final String TXT_STAY = Game.getVar(R.string.AmuletScene_Stay);;
+	private static final String TXT      = Game.getVar(R.string.AmuletScene_Txt);
 	
 	private static final int WIDTH			= 120;
 	private static final int BTN_HEIGHT		= 18;
 	private static final float SMALL_GAP	= 2;
 	private static final float LARGE_GAP	= 8;
 	
-	private static final String TXT = 
-		"You finally hold it in your hands, the Amulet of Yendor. Using its power " +
-		"you can take over the world or bring peace and prosperity to people or whatever. " +
-		"Anyway, your life will change forever and this game will end here. " +
-		"Or you can stay a mere mortal a little longer.";
+	
 	
 	public static boolean noText = false;
 	

@@ -17,8 +17,10 @@
  */
 package com.watabou.pixeldungeon.actors.blobs;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.Journal.Feature;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.effects.BlobEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Generator;
@@ -218,8 +220,6 @@ public class WaterOfTransmutation extends WellWater {
 	
 	@Override
 	public String tileDesc() {
-		return 
-			"Power of change radiates from the water of this well. " +
-			"Throw an item into the well to turn it into something else.";
+		return Game.getVar(R.string.WaterOfTransmutation_Info);
 	}
 }

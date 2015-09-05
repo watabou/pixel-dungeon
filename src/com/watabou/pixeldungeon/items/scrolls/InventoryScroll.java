@@ -17,8 +17,10 @@
  */
 package com.watabou.pixeldungeon.items.scrolls;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -27,12 +29,12 @@ import com.watabou.pixeldungeon.windows.WndOptions;
 
 public abstract class InventoryScroll extends Scroll {
 
-	protected String inventoryTitle = "Select an item";
+	protected String inventoryTitle = Game.getVar(R.string.InventoryScroll_Title);
 	protected WndBag.Mode mode = WndBag.Mode.ALL;
-	
-	private static final String TXT_WARNING	= "Do you really want to cancel this scroll usage? It will be consumed anyway.";
-	private static final String TXT_YES		= "Yes, I'm positive";
-	private static final String TXT_NO		= "No, I changed my mind";
+
+	private static final String TXT_WARNING	= Game.getVar(R.string.InventoryScroll_Warning);
+	private static final String TXT_YES		= Game.getVar(R.string.InventoryScroll_Yes);
+	private static final String TXT_NO		= Game.getVar(R.string.InventoryScroll_No);
 	
 	@Override
 	protected void doRead() {

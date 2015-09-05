@@ -17,10 +17,12 @@
  */
 package com.watabou.pixeldungeon.items.rings;
 
-public class RingOfAccuracy extends Ring {
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 
+public class RingOfAccuracy extends Ring {
 	{
-		name = "Ring of Accuracy";
+		name = Game.getVar(R.string.RingOfAccuracy_Name);
 	}
 	
 	@Override
@@ -30,9 +32,7 @@ public class RingOfAccuracy extends Ring {
 	
 	@Override
 	public String desc() {
-		return isKnown() ?
-			"This ring increases your chance to hit the enemy." :
-			super.desc();
+		return isKnown() ? Game.getVar(R.string.RingOfAccuracy_Info) : super.desc();
 	}
 	
 	public class Accuracy extends RingBuff {

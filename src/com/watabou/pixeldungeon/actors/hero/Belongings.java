@@ -19,8 +19,10 @@ package com.watabou.pixeldungeon.actors.hero;
 
 import java.util.Iterator;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.KindOfWeapon;
 import com.watabou.pixeldungeon.items.armor.Armor;
@@ -50,7 +52,7 @@ public class Belongings implements Iterable<Item> {
 		this.owner = owner;
 		
 		backpack = new Bag() {{
-			name = "backpack";
+			name = Game.getVar(R.string.Belongings_Name);
 			size = BACKPACK_SIZE;
 		}};
 		backpack.owner = owner;

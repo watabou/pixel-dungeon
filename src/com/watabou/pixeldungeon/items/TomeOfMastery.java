@@ -19,9 +19,11 @@ package com.watabou.pixeldungeon.items;
 
 import java.util.ArrayList;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Fury;
@@ -37,15 +39,15 @@ import com.watabou.pixeldungeon.windows.WndChooseWay;
 
 public class TomeOfMastery extends Item {
 
-	private static final String TXT_BLINDED	= "You can't read while blinded";
+	private static final String TXT_BLINDED	= Game.getVar(R.string.TomeOfMastery_Blinded);
 	
 	public static final float TIME_TO_READ = 10;
 	
-	public static final String AC_READ	= "READ";
+	public static final String AC_READ	= Game.getVar(R.string.TomeOfMastery_ACRead);
 	
 	{
 		stackable = false;
-		name = "Tome of Mastery";
+		name = Game.getVar(R.string.TomeOfMastery_Name);
 		image = ItemSpriteSheet.MASTERY;
 		
 		unique = true;
@@ -116,10 +118,7 @@ public class TomeOfMastery extends Item {
 	
 	@Override
 	public String info() {
-		return 
-			"This worn leather book is not that thick, but you feel somehow, " +
-			"that you can gather a lot from it. Remember though that reading " +
-			"this tome may require some time.";
+		return Game.getVar(R.string.TomeOfMastery_Info);
 	}
 	
 	public void choose( HeroSubClass way ) {
@@ -136,7 +135,7 @@ public class TomeOfMastery extends Item {
 		
 		SpellSprite.show( curUser, SpellSprite.MASTERY );
 		curUser.sprite.emitter().burst( Speck.factory( Speck.MASTERY ), 12 );
-		GLog.w( "You have chosen the way of the %s!", Utils.capitalize( way.title() ) );
+		GLog.w(Game.getVar(R.string.TomeOfMastery_Choose), Utils.capitalize( way.title() ) );
 		
 		if (way == HeroSubClass.BERSERKER && curUser.HP <= curUser.HT * Fury.LEVEL) {
 			Buff.affect( curUser, Fury.class );

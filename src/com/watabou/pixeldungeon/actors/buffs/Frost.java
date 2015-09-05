@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
@@ -69,7 +71,7 @@ public class Frost extends FlavourBuff {
 	
 	@Override
 	public String toString() {
-		return "Frozen";
+		return Game.getVar(R.string.Frost_Info);
 	}
 	
 	public static float duration( Char ch ) {

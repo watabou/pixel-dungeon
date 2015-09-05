@@ -29,6 +29,7 @@ import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
 import com.watabou.pixeldungeon.items.Item;
@@ -44,11 +45,11 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndRanking extends WndTabbed {
 	
-	private static final String TXT_ERROR		= "Unable to load additional information";
+	private static final String TXT_ERROR   = Game.getVar(R.string.WndRanking_Error);
 	
-	private static final String TXT_STATS	= "Stats";
-	private static final String TXT_ITEMS	= "Items";
-	private static final String TXT_BADGES	= "Badges";
+	private static final String TXT_STATS	= Game.getVar(R.string.WndRanking_Stats);
+	private static final String TXT_ITEMS	= Game.getVar(R.string.WndRanking_Items);
+	private static final String TXT_BADGES	= Game.getVar(R.string.WndRanking_Badges);
 	
 	private static final int WIDTH			= 112;
 	private static final int HEIGHT			= 134;
@@ -142,23 +143,22 @@ public class WndRanking extends WndTabbed {
 	private class StatsTab extends Group {
 		
 		private static final int GAP	= 4;
+
+		private final String TXT_TITLE      = Game.getVar(R.string.WndRanking_StaTitle);
+		private final String TXT_CHALLENGES = Game.getVar(R.string.WndRanking_StaChallenges);
 		
-		private static final String TXT_TITLE	= "Level %d %s";
+		private final String TXT_HEALTH	  = Game.getVar(R.string.WndRanking_StaHealth);
+		private final String TXT_STR      = Game.getVar(R.string.WndRanking_StaStr);
 		
-		private static final String TXT_CHALLENGES	= "Challenges";
+		private final String TXT_DURATION = Game.getVar(R.string.WndRanking_StaDuration);
 		
-		private static final String TXT_HEALTH	= "Health";
-		private static final String TXT_STR		= "Strength";
+		private final String TXT_DEPTH    = Game.getVar(R.string.WndRanking_StaDepth);
+		private final String TXT_ENEMIES  = Game.getVar(R.string.WndRanking_StaEnemies);
+		private final String TXT_GOLD     = Game.getVar(R.string.WndRanking_StaGold);;
 		
-		private static final String TXT_DURATION	= "Game Duration";
-		
-		private static final String TXT_DEPTH	= "Maximum Depth";
-		private static final String TXT_ENEMIES	= "Mobs Killed";
-		private static final String TXT_GOLD	= "Gold Collected";
-		
-		private static final String TXT_FOOD	= "Food Eaten";
-		private static final String TXT_ALCHEMY	= "Potions Cooked";
-		private static final String TXT_ANKHS	= "Ankhs Used";
+		private final String TXT_FOOD     = Game.getVar(R.string.WndRanking_StaFood);
+		private final String TXT_ALCHEMY  = Game.getVar(R.string.WndRanking_StaAlchemy);
+		private final String TXT_ANKHS    = Game.getVar(R.string.WndRanking_StaAnkhs);
 		
 		public StatsTab() {
 			super();

@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.actors.blobs;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -109,6 +111,6 @@ public class Fire extends Blob {
 	
 	@Override
 	public String tileDesc() {
-		return "A fire is raging here.";
+		return Game.getVar(R.string.Fire_Info);
 	}
 }

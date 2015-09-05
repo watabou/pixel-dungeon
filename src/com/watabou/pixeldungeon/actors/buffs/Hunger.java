@@ -17,8 +17,10 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
@@ -36,9 +38,9 @@ public class Hunger extends Buff implements Hero.Doom {
 	public static final float HUNGRY	= 260f;
 	public static final float STARVING	= 360f;
 	
-	private static final String TXT_HUNGRY		= "You are hungry.";
-	private static final String TXT_STARVING	= "You are starving!";
-	private static final String TXT_DEATH		= "You starved to death...";
+	private static final String TXT_HUNGRY		= Game.getVar(R.string.Hunger_Hungry);
+	private static final String TXT_STARVING	= Game.getVar(R.string.Hunger_Starving);
+	private static final String TXT_DEATH		= Game.getVar(R.string.Hunger_Death);
 	
 	private float level;
 
@@ -141,9 +143,9 @@ public class Hunger extends Buff implements Hero.Doom {
 	@Override
 	public String toString() {
 		if (level < STARVING) {
-			return "Hungry";
+			return Game.getVar(R.string.Hunger_Info1);
 		} else {
-			return "Starving";
+			return Game.getVar(R.string.Hunger_Info2);
 		}
 	}
 

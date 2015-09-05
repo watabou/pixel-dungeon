@@ -20,8 +20,10 @@ package com.watabou.pixeldungeon.items;
 import java.util.ArrayList;
 
 import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -36,16 +38,16 @@ import com.watabou.pixeldungeon.windows.WndBag;
 
 public class Weightstone extends Item {
 	
-	private static final String TXT_SELECT_WEAPON	= "Select a weapon to balance";
-	private static final String TXT_FAST			= "you balanced your %s to make it faster";
-	private static final String TXT_ACCURATE		= "you balanced your %s to make it more accurate";
+	private static final String TXT_SELECT_WEAPON = Game.getVar(R.string.Weightstone_Select);
+	private static final String TXT_FAST          = Game.getVar(R.string.Weightstone_Fast);
+	private static final String TXT_ACCURATE      = Game.getVar(R.string.Weightstone_Accurate);
 	
 	private static final float TIME_TO_APPLY = 2;
 	
-	private static final String AC_APPLY = "APPLY";
+	private static final String AC_APPLY = Game.getVar(R.string.Weightstone_ACApply);
 	
 	{
-		name = "weightstone";
+		name = Game.getVar(R.string.Weightstone_Name);
 		image = ItemSpriteSheet.WEIGHT;
 		
 		stackable = true;
@@ -109,8 +111,7 @@ public class Weightstone extends Item {
 	
 	@Override
 	public String info() {
-		return
-			"Using a weightstone, you can balance your melee weapon to increase its speed or accuracy.";
+		return Game.getVar(R.string.Weightstone_Info);
 	}
 	
 	private final WndBag.Listener itemSelector = new WndBag.Listener() {
@@ -124,11 +125,11 @@ public class Weightstone extends Item {
 	
 	public class WndBalance extends Window {
 
-		private static final String TXT_CHOICE = "How would you like to balance your %s?";
+		private final String TXT_CHOICE   = Game.getVar(R.string.Weightstone_WndChoice);
 		
-		private static final String TXT_SPEED		= "For speed";
-		private static final String TXT_ACCURACY	= "For accuracy";
-		private static final String TXT_CANCEL		= "Never mind";
+		private final String TXT_SPEED    = Game.getVar(R.string.Weightstone_WndSpeed);
+		private final String TXT_ACCURACY = Game.getVar(R.string.Weightstone_WndAccuracy);
+		private final String TXT_CANCEL   = Game.getVar(R.string.Weightstone_WndCancel);
 		
 		private static final int WIDTH			= 120;
 		private static final int MARGIN 		= 2;

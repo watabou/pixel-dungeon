@@ -17,12 +17,13 @@
  */
 package com.watabou.pixeldungeon.items.weapon.melee;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Quarterstaff extends MeleeWeapon {
-
 	{
-		name = "quarterstaff";
+		name = Game.getVar(R.string.Quarterstaff_Name);
 		image = ItemSpriteSheet.QUARTERSTAFF;
 	}
 	
@@ -32,6 +33,6 @@ public class Quarterstaff extends MeleeWeapon {
 	
 	@Override
 	public String desc() {
-		return "A staff of hardwood, its ends are shod with iron.";
+		return Game.getVar(R.string.Quarterstaff_Info);
 	}
 }

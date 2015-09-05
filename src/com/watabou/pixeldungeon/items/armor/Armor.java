@@ -19,6 +19,7 @@ package com.watabou.pixeldungeon.items.armor;
 
 import java.util.ArrayList;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Char;
@@ -33,20 +34,20 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.R;
 
 public class Armor extends EquipableItem {
-	
-	private static final int HITS_TO_KNOW	= 10;
-	
-	private static final String TXT_EQUIP_CURSED	= "your %s constricts around you painfully";
-		
-	private static final String TXT_IDENTIFY	= "you are now familiar enough with your %s to identify it. It is %s.";
-	
-	private static final String TXT_TO_STRING	= "%s :%d";
-	
-	private static final String TXT_INCOMPATIBLE = 
-		"Interaction of different types of magic has erased the glyph on this armor!";
-	
+
+   private static final int HITS_TO_KNOW  = 10;
+
+	private static final String TXT_EQUIP_CURSED    = Game.getVar(R.string.Armor_EquipCursed);
+
+	private static final String TXT_IDENTIFY        = Game.getVar(R.string.Armor_Identify);
+
+	private static final String TXT_TO_STRING       = Game.getVar(R.string.Armor_ToString);
+
+	private static final String TXT_INCOMPATIBLE    = Game.getVar(R.string.Armor_Incompatible);
+
 	public int tier;
 	
 	public int STR;
@@ -220,42 +221,32 @@ public class Armor extends EquipableItem {
 		StringBuilder info = new StringBuilder( desc() );
 		
 		if (levelKnown) {
-			info.append( 
-				"\n\nThis " + name + " provides damage absorption up to " +
-				"" + Math.max( DR, 0 ) + " points per attack. " );
+			info.append(String.format(Game.getVar(R.string.Armor_Info1), name, Math.max( DR, 0 )));
 			
 			if (STR > Dungeon.hero.STR()) {
-				
 				if (isEquipped( Dungeon.hero )) {
-					info.append( 
-						"\n\nBecause of your inadequate strength your " +
-						"movement speed and defense skill is decreased. " );
+					info.append(Game.getVar(R.string.Armor_Info2));
 				} else {
-					info.append( 
-						"\n\nBecause of your inadequate strength wearing this armor " +
-						"will decrease your movement speed and defense skill. " );
+					info.append(Game.getVar(R.string.Armor_Info3));
 				}
-				
 			}
 		} else {
-			info.append( 
-				"\n\nTypical " + name + " provides damage absorption up to " + typicalDR() + " points per attack " +
-				" and requires " + typicalSTR() + " points of strength. " );
+			info.append(String.format(Game.getVar(R.string.Armor_Info4), name, typicalDR(), typicalSTR()));
 			if (typicalSTR() > Dungeon.hero.STR()) {
-				info.append( "Probably this armor is too heavy for you. " );
+				info.append(Game.getVar(R.string.Armor_Info5));
 			}
 		}
-		
+		info.append(" ");
 		if (glyph != null) {
-			info.append( "It is enchanted." );
+			info.append(Game.getVar(R.string.Armor_Info6));
 		}
 		
 		if (isEquipped( Dungeon.hero )) {
-			info.append( "\n\nYou are wearing the " + name + 
-				(cursed ? ", and because it is cursed, you are powerless to remove it." : ".") ); 
+			info.append(String.format(Game.getVar(R.string.Armor_Info7a), name,  
+				(cursed ? Game.getVar(R.string.Armor_Info7b) : "") )); 
 		} else {
 			if (cursedKnown && cursed) {
-				info.append( "\n\nYou can feel a malevolent magic lurking within the " + name + "." );
+				info.append(String.format(Game.getVar(R.string.Armor_Info8), name));
 			}
 		}
 		

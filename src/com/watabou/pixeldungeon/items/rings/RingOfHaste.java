@@ -17,10 +17,12 @@
  */
 package com.watabou.pixeldungeon.items.rings;
 
-public class RingOfHaste extends Ring {
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 
+public class RingOfHaste extends Ring {
 	{
-		name = "Ring of Haste";
+		name = Game.getVar(R.string.RingOfHaste_Name);
 	}
 	
 	@Override
@@ -30,9 +32,7 @@ public class RingOfHaste extends Ring {
 	
 	@Override
 	public String desc() {
-		return isKnown() ?
-			"This ring accelerates the wearer's flow of time, allowing one to perform all actions a little faster." :
-			super.desc();
+		return isKnown() ? Game.getVar(R.string.RingOfHaste_Info) : super.desc();
 	}
 	
 	public class Haste extends RingBuff {

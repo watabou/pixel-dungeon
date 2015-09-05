@@ -20,10 +20,12 @@ package com.watabou.pixeldungeon.scenes;
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.ui.Button;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.PixelDungeon;
 import com.watabou.pixeldungeon.Rankings;
 import com.watabou.pixeldungeon.effects.Flare;
@@ -40,11 +42,11 @@ public class RankingsScene extends PixelScene {
 	
 	private static final int DEFAULT_COLOR	= 0xCCCCCC;
 	
-	private static final String TXT_TITLE		= "Top Rankings";
-	private static final String TXT_TOTAL		= "Games played: ";
-	private static final String TXT_NO_GAMES	= "No games have been played yet.";
+	private static final String TXT_TITLE		= Game.getVar(R.string.RankingsScene_Title);
+	private static final String TXT_TOTAL		= Game.getVar(R.string.RankingsScene_Total);
+	private static final String TXT_NO_GAMES	= Game.getVar(R.string.RankingsScene_NoGames);
 	
-	private static final String TXT_NO_INFO	= "No additional information";
+	private static String TXT_NO_INFO  = Game.getVar(R.string.RankingsScene_NoInfo);
 	
 	private static final float ROW_HEIGHT_L	= 22;
 	private static final float ROW_HEIGHT_P	= 28;
@@ -57,7 +59,6 @@ public class RankingsScene extends PixelScene {
 	
 	@Override
 	public void create() {
-		
 		super.create();
 		
 		Music.INSTANCE.play( Assets.THEME, true );

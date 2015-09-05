@@ -20,10 +20,12 @@ package com.watabou.pixeldungeon.items;
 import java.util.Collection;
 import java.util.LinkedList;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
@@ -51,7 +53,7 @@ import com.watabou.utils.Random;
 
 public class Heap implements Bundlable {
 
-	private static final String TXT_MIMIC = "This is a mimic!";
+	private static final String TXT_MIMIC = Game.getVar(R.string.Heap_Mimic);
 	
 	private static final int SEEDS_TO_POTION = 3;
 	

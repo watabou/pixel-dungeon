@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.items.scrolls;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.armor.Armor;
@@ -27,11 +29,11 @@ import com.watabou.pixeldungeon.windows.WndBag;
 
 public class ScrollOfEnchantment extends InventoryScroll {
 
-	private static final String TXT_GLOWS	= "your %s glows in the dark";
+	private static final String TXT_GLOWS	= Game.getVar(R.string.ScrollOfEnchantment_Glows);
 	
 	{
-		name = "Scroll of Enchantment";
-		inventoryTitle = "Select an enchantable item";
+		name = Game.getVar(R.string.ScrollOfEnchantment_Name);
+		inventoryTitle = Game.getVar(R.string.ScrollOfEnchantment_InvTitle);
 		mode = WndBag.Mode.ENCHANTABLE;
 	}
 	
@@ -58,8 +60,6 @@ public class ScrollOfEnchantment extends InventoryScroll {
 	
 	@Override
 	public String desc() {
-		return
-			"This scroll is able to imbue a weapon or an armor " +
-			"with a random enchantment, granting it a special power.";
+		return Game.getVar(R.string.ScrollOfEnchantment_Info);
 	}
 }

@@ -2,14 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	package="com.watabou.pixeldungeon"
 	android:versionCode="70"
-	android:versionName="1.7.5a"
+	android:versionName="1.7.5a-T"
 	android:installLocation="auto">
 
     <uses-permission android:name="android.permission.VIBRATE"/>
     
-	<uses-sdk 
+	<uses-sdk
 	    android:minSdkVersion="9"
-	    android:targetSdkVersion="20"/>
+	    android:targetSdkVersion="21"/>
 	
 	<uses-feature 
 	    android:glEsVersion="0x00020000"/>

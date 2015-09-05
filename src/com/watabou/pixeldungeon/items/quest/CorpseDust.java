@@ -17,13 +17,15 @@
  */
 package com.watabou.pixeldungeon.items.quest;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class CorpseDust extends Item {
 	
 	{
-		name = "corpse dust";
+		name = Game.getVar(R.string.CorpseDust_Name);
 		image = ItemSpriteSheet.DUST;
 		
 		cursed = true;
@@ -44,8 +46,6 @@ public class CorpseDust extends Item {
 	
 	@Override
 	public String info() {
-		return
-			"The ball of corpse dust doesn't differ outwardly from a regular dust ball. However, " +
-			"you know somehow that it's better to get rid of it as soon as possible.";
+		return Game.getVar(R.string.CorpseDust_Info);
 	}
 }

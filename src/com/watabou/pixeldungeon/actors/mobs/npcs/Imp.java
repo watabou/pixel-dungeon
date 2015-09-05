@@ -17,8 +17,10 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -41,35 +43,16 @@ import com.watabou.utils.Random;
 public class Imp extends NPC {
 
 	{
-		name = "ambitious imp";
+		name = Game.getVar(R.string.Imp_Name);
 		spriteClass = ImpSprite.class;
 	}
 	
-	private static final String TXT_GOLEMS1	=
-		"Are you an adventurer? I love adventurers! You can always rely on them " +
-		"if something needs to be killed. Am I right? For a bounty, of course ;)\n" +
-		"In my case this is _golems_ who need to be killed. You see, I'm going to start a " +
-		"little business here, but these stupid golems are bad for business! " +
-		"It's very hard to negotiate with wandering lumps of granite, damn them! " +
-		"So please, kill... let's say _6 of them_ and a reward is yours.";
-	
-	private static final String TXT_MONKS1	=
-		"Are you an adventurer? I love adventurers! You can always rely on them " +
-		"if something needs to be killed. Am I right? For a bounty, of course ;)\n" +
-		"In my case this is _monks_ who need to be killed. You see, I'm going to start a " +
-		"little business here, but these lunatics don't buy anything themselves and " +
-		"will scare away other customers. " +
-		"So please, kill... let's say _8 of them_ and a reward is yours.";
-	
-	private static final String TXT_GOLEMS2	=
-		"How is your golem safari going?";	
-	
-	private static final String TXT_MONKS2	=
-		"Oh, you are still alive! I knew that your kung-fu is stronger ;) " +
-		"Just don't forget to grab these monks' tokens.";	
-	
-	private static final String TXT_CYA	= "See you, %s!";
-	private static final String TXT_HEY	= "Psst, %s!";
+	private static final String TXT_GOLEMS1  = Game.getVar(R.string.Imp_Golems1);
+	private static final String TXT_GOLEMS2  = Game.getVar(R.string.Imp_Golems2);
+	private static final String TXT_MONKS1   = Game.getVar(R.string.Imp_Monks1);
+	private static final String TXT_MONKS2   = Game.getVar(R.string.Imp_Monks2);	
+	private static final String TXT_CYA      = Game.getVar(R.string.Imp_Cya);
+	private static final String TXT_HEY      = Game.getVar(R.string.Imp_Hey);
 	
 	private boolean seenBefore = false;
 	
@@ -97,7 +80,7 @@ public class Imp extends NPC {
 	
 	@Override
 	public String defenseVerb() {
-		return "evaded";
+		return Game.getVar(R.string.Imp_Defense);
 	}
 	
 	@Override
@@ -150,9 +133,7 @@ public class Imp extends NPC {
 	
 	@Override
 	public String description() {
-		return 
-			"Imps are lesser demons. They are notable for neither their strength nor their magic talent, " +
-			"but they are quite smart and sociable. Many imps prefer to live among non-demons.";
+		return Game.getVar(R.string.Imp_Desc);
 	}
 	
 	public static class Quest {

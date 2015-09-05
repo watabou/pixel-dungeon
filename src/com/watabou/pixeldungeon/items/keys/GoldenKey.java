@@ -17,19 +17,19 @@
  */
 package com.watabou.pixeldungeon.items.keys;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class GoldenKey extends Key {
 	
 	{
-		name = "golden key";
+		name = Game.getVar(R.string.GoldenKey_Name);
 		image = ItemSpriteSheet.GOLDEN_KEY;
 	}
 	
 	@Override
 	public String info() {
-		return 
-			"The notches on this golden key are tiny and intricate. " +
-			"Maybe it can open some chest lock?";
+		return Game.getVar(R.string.GoldenKey_Info);
 	}
 }

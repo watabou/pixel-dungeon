@@ -17,10 +17,12 @@
  */
 package com.watabou.pixeldungeon.items.rings;
 
-public class RingOfHerbalism extends Ring {
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 
+public class RingOfHerbalism extends Ring {
 	{
-		name = "Ring of Herbalism";
+		name = Game.getVar(R.string.RingOfHerbalism_Name);
 	}
 	
 	@Override
@@ -30,9 +32,7 @@ public class RingOfHerbalism extends Ring {
 	
 	@Override
 	public String desc() {
-		return isKnown() ?
-			"This ring increases your chance to gather dew and seeds from trampled grass." :
-			super.desc();
+		return isKnown() ? Game.getVar(R.string.RingOfHerbalism_Info) : super.desc();
 	}
 	
 	public class Herbalism extends RingBuff {

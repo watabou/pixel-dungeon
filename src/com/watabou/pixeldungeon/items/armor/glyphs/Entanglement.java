@@ -18,6 +18,8 @@
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Roots;
@@ -32,7 +34,7 @@ import com.watabou.utils.Random;
 
 public class Entanglement extends Glyph {
 
-	private static final String TXT_ENTANGLEMENT	= "%s of entanglement";
+	private static final String TXT_ENTANGLEMENT = Game.getVar(R.string.Entanglement_Txt);
 	
 	private static ItemSprite.Glowing GREEN = new ItemSprite.Glowing( 0x448822 );
 	

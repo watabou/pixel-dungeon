@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.scenes.AmuletScene;
@@ -30,10 +31,10 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Amulet extends Item {
 	
-	private static final String AC_END = "END THE GAME";
+	private static final String AC_END = Game.getVar(R.string.Amulet_ACEnd);
 	
 	{
-		name = "Amulet of Yendor";
+		name = Game.getVar(R.string.Amulet_Name);
 		image = ItemSpriteSheet.AMULET;
 		
 		unique = true;
@@ -97,8 +98,6 @@ public class Amulet extends Item {
 	
 	@Override
 	public String info() {
-		return 
-			"The Amulet of Yendor is the most powerful known artifact of unknown origin. It is said that the amulet " +
-			"is able to fulfil any wish if its owner's will-power is strong enough to \"persuade\" it to do it.";
+		return Game.getVar(R.string.Amulet_Info);
 	}
 }

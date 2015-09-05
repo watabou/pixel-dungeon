@@ -17,8 +17,10 @@
  */
 package com.watabou.pixeldungeon.items.scrolls;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.buffs.Weakness;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -29,13 +31,11 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class ScrollOfRemoveCurse extends Scroll {
 
-	private static final String TXT_PROCCED	= 
-		"Your pack glows with a cleansing light, and a malevolent energy disperses.";
-	private static final String TXT_NOT_PROCCED	= 
-		"Your pack glows with a cleansing light, but nothing happens.";
+	private static final String TXT_PROCCED	= Game.getVar(R.string.ScrollOfRemoveCurse_Proced);
+	private static final String TXT_NOT_PROCCED	= Game.getVar(R.string.ScrollOfRemoveCurse_NoProced);
 	
 	{
-		name = "Scroll of Remove Curse";
+		name = Game.getVar(R.string.ScrollOfRemoveCurse_Name);
 	}
 	
 	@Override
@@ -67,10 +67,7 @@ public class ScrollOfRemoveCurse extends Scroll {
 	
 	@Override
 	public String desc() {
-		return
-			"The incantation on this scroll will instantly strip from " +
-			"the reader's weapon, armor, rings and carried items any evil " +
-			"enchantments that might prevent the wearer from removing them.";
+		return Game.getVar(R.string.ScrollOfRemoveCurse_Info);
 	}
 	
 	public static boolean uncurse( Hero hero, Item... items ) {

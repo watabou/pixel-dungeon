@@ -17,8 +17,10 @@
  */
 package com.watabou.pixeldungeon.items.wands;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -28,22 +30,17 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
 
 public class WandOfSlowness extends Wand {
-
 	{
-		name = "Wand of Slowness";
+		name = Game.getVar(R.string.WandOfSlowness_Name);
 	}
 
 	@Override
 	protected void onZap( int cell ) {
 		Char ch = Actor.findChar( cell );
 		if (ch != null) {
-			
 			Buff.affect( ch, Slow.class, Slow.duration( ch ) / 3 + level() );
-
 		} else {
-			
-			GLog.i( "nothing happened" );
-			
+			GLog.i(Game.getVar(R.string.WandOfSlowness_Info1));
 		}
 	}
 	
@@ -54,8 +51,6 @@ public class WandOfSlowness extends Wand {
 	
 	@Override
 	public String desc() {
-		return 
-			"This wand will cause a creature to move and attack " +
-			"at half its ordinary speed until the effect ends";
+		return Game.getVar(R.string.WandOfSlowness_Info);
 	}
 }

@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.food;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
@@ -32,10 +34,10 @@ import com.watabou.utils.Random;
 public class MysteryMeat extends Food {
 
 	{
-		name = "mystery meat";
+		name = Game.getVar(R.string.MysteryMeat_Name);
 		image = ItemSpriteSheet.MEAT;
 		energy = Hunger.STARVING - Hunger.HUNGRY;
-		message = "That food tasted... strange.";
+		message = Game.getVar(R.string.MysteryMeat_Message);
 	}
 	
 	@Override
@@ -47,19 +49,19 @@ public class MysteryMeat extends Food {
 			
 			switch (Random.Int( 5 )) {
 			case 0:
-				GLog.w( "Oh it's hot!" );
+				GLog.w(Game.getVar(R.string.MysteryMeat_Info1));
 				Buff.affect( hero, Burning.class ).reignite( hero );
 				break;
 			case 1:
-				GLog.w( "You can't feel your legs!" );
+				GLog.w(Game.getVar(R.string.MysteryMeat_Info2));
 				Buff.prolong( hero, Roots.class, Paralysis.duration( hero ) );
 				break;
 			case 2:
-				GLog.w( "You are not feeling well." );
+				GLog.w(Game.getVar(R.string.MysteryMeat_Info3));
 				Buff.affect( hero, Poison.class ).set( Poison.durationFactor( hero ) * hero.HT / 5 );
 				break;
 			case 3:
-				GLog.w( "You are stuffed." );
+				GLog.w(Game.getVar(R.string.MysteryMeat_Info4));
 				Buff.prolong( hero, Slow.class, Slow.duration( hero ) );
 				break;
 			}
@@ -68,7 +70,7 @@ public class MysteryMeat extends Food {
 	
 	@Override
 	public String info() {
-		return "Eat at your own risk!";
+		return Game.getVar(R.string.MysteryMeat_Info);
 	}
 	
 	public int price() {

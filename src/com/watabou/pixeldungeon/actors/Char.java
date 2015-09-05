@@ -19,10 +19,12 @@ package com.watabou.pixeldungeon.actors;
 
 import java.util.HashSet;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
@@ -62,20 +64,20 @@ import com.watabou.utils.Random;
 
 public abstract class Char extends Actor {
 
-	protected static final String TXT_HIT		= "%s hit %s";
-	protected static final String TXT_KILL		= "%s killed you...";
-	protected static final String TXT_DEFEAT	= "%s defeated %s";
+	protected static final String TXT_HIT		= Game.getVar(R.string.Char_Hit);
+	protected static final String TXT_KILL		= Game.getVar(R.string.Char_Kill);
+	protected static final String TXT_DEFEAT	= Game.getVar(R.string.Char_Defeat);
 	
-	private static final String TXT_YOU_MISSED	= "%s %s your attack";
-	private static final String TXT_SMB_MISSED	= "%s %s %s's attack";
+	private static final String TXT_YOU_MISSED	= Game.getVar(R.string.Char_YouMissed);
+	private static final String TXT_SMB_MISSED	= Game.getVar(R.string.Char_SmbMissed);
 	
-	private static final String TXT_OUT_OF_PARALYSIS	= "The pain snapped %s out of paralysis";
+	private static final String TXT_OUT_OF_PARALYSIS = Game.getVar(R.string.Char_OutParalysis);
 	
 	public int pos = 0;
 	
 	public CharSprite sprite;
 	
-	public String name = "mob";
+	public String name = Game.getVar(R.string.Char_Name);
 	
 	public int HT;
 	public int HP;
@@ -225,7 +227,7 @@ public abstract class Char extends Actor {
 	}
 	
 	public String defenseVerb() {
-		return "dodged";
+		return Game.getVar(R.string.Char_StaDodged);
 	}
 	
 	public int dr() {
@@ -357,45 +359,45 @@ public abstract class Char extends Actor {
 			if (buff instanceof Poison) {
 				
 				CellEmitter.center( pos ).burst( PoisonParticle.SPLASH, 5 );
-				sprite.showStatus( CharSprite.NEGATIVE, "poisoned" );
+				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaPoisoned));
 				
 			} else if (buff instanceof Amok) {
 				
-				sprite.showStatus( CharSprite.NEGATIVE, "amok" );
+				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaAmok));
 
 			} else if (buff instanceof Slow) {
 
-				sprite.showStatus( CharSprite.NEGATIVE, "slowed" );
+				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaSlowed));
 				
 			} else if (buff instanceof MindVision) {
 				
-				sprite.showStatus( CharSprite.POSITIVE, "mind" );
-				sprite.showStatus( CharSprite.POSITIVE, "vision" );
+				sprite.showStatus( CharSprite.POSITIVE, Game.getVar(R.string.Char_StaMind));
+				sprite.showStatus( CharSprite.POSITIVE, Game.getVar(R.string.Char_StaVision));
 				
 			} else if (buff instanceof Paralysis) {
 
 				sprite.add( CharSprite.State.PARALYSED );
-				sprite.showStatus( CharSprite.NEGATIVE, "paralysed" );
+				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaParalysed));
 				
 			} else if (buff instanceof Terror) {
 				
-				sprite.showStatus( CharSprite.NEGATIVE, "frightened" );
+				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaFrightened));
 				
 			} else if (buff instanceof Roots) {
 				
-				sprite.showStatus( CharSprite.NEGATIVE, "rooted" );
+				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaRooted));
 				
 			} else if (buff instanceof Cripple) {
 
-				sprite.showStatus( CharSprite.NEGATIVE, "crippled" );
+				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaCrippled));
 				
 			} else if (buff instanceof Bleeding) {
 
-				sprite.showStatus( CharSprite.NEGATIVE, "bleeding" );
+				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaBleeding));
 				
 			} else if (buff instanceof Vertigo) {
 
-				sprite.showStatus( CharSprite.NEGATIVE, "dizzy" );
+				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Char_StaDizzy));
 				
 			} else if (buff instanceof Sleep) {
 				sprite.idle();
@@ -409,7 +411,7 @@ public abstract class Char extends Actor {
 				sprite.add( CharSprite.State.FROZEN );
 			} else if (buff instanceof Invisibility) {
 				if (!(buff instanceof Shadows)) {
-					sprite.showStatus( CharSprite.POSITIVE, "invisible" );
+					sprite.showStatus( CharSprite.POSITIVE, Game.getVar(R.string.Char_StaInvisible));
 				}
 				sprite.add( CharSprite.State.INVISIBLE );
 			}

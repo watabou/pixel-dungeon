@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.bags;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -24,7 +26,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class WandHolster extends Bag {
 
 	{
-		name = "wand holster";
+		name = Game.getVar(R.string.WandHolster_Name);
 		image = ItemSpriteSheet.HOLSTER;
 		
 		size = 12;
@@ -63,8 +65,6 @@ public class WandHolster extends Bag {
 	
 	@Override
 	public String info() {
-		return
-			"This slim holder is made of leather of some exotic animal. " +
-			"It allows to compactly carry up to " + size + " wands.";
+		return String.format(Game.getVar(R.string.WandHolster_Info), size);
 	}
 }

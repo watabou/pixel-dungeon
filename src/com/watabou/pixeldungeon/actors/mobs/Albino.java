@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Bleeding;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -27,7 +29,7 @@ import com.watabou.utils.Random;
 public class Albino extends Rat {
 
 	{
-		name = "albino rat";
+		name = Game.getVar(R.string.Albino_Name);
 		spriteClass = AlbinoSprite.class;
 		
 		HP = HT = 15;

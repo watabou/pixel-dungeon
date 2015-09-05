@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.blobs;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -47,6 +49,6 @@ public class ParalyticGas extends Blob {
 	
 	@Override
 	public String tileDesc() {
-		return "A cloud of paralytic gas is swirling here.";
+		return Game.getVar(R.string.ParalyticGas_Info);
 	}
 }

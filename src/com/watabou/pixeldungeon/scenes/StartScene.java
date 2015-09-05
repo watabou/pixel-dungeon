@@ -18,6 +18,7 @@
 package com.watabou.pixeldungeon.scenes;
 
 import java.util.HashMap;
+import java.util.Locale;
 
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.BitmapTextMultiline;
@@ -33,10 +34,11 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.GamesInProgress;
 import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.effects.BannerSprites;
-import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.BannerSprites.Type;
+import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.Icons;
@@ -52,22 +54,21 @@ public class StartScene extends PixelScene {
 
 	private static final float BUTTON_HEIGHT	= 24;
 	private static final float GAP				= 2;
+
+	private static final String TXT_LOAD         = Game.getVar(R.string.StartScene_Load);
+	private static final String TXT_NEW          = Game.getVar(R.string.StartScene_New);
 	
-	private static final String TXT_LOAD	= "Load Game";
-	private static final String TXT_NEW		= "New Game";
+	private static final String TXT_ERASE        = Game.getVar(R.string.StartScene_Erase);
+	private static final String TXT_DPTH_LVL     = Game.getVar(R.string.StartScene_Depth);
 	
-	private static final String TXT_ERASE		= "Erase current game";
-	private static final String TXT_DPTH_LVL	= "Depth: %d, level: %d";
+	private static final String TXT_REALLY       = Game.getVar(R.string.StartScene_Really);
+	private static final String TXT_WARNING      = Game.getVar(R.string.StartScene_Warning);
+	private static final String TXT_YES          = Game.getVar(R.string.StartScene_Yes);
+	private static final String TXT_NO           = Game.getVar(R.string.StartScene_No);
 	
-	private static final String TXT_REALLY	= "Do you really want to start new game?";
-	private static final String TXT_WARNING	= "Your current game progress will be erased.";
-	private static final String TXT_YES		= "Yes, start new game";
-	private static final String TXT_NO		= "No, return to main menu";
+	private static final String TXT_UNLOCK       = Game.getVar(R.string.StartScene_Unlock);
 	
-	private static final String TXT_UNLOCK	= "To unlock this character class, slay the 3rd boss with any other class";
-	
-	private static final String TXT_WIN_THE_GAME = 
-		"To unlock \"Challenges\", win the game with any character class.";
+	private static final String TXT_WIN_THE_GAME = Game.getVar(R.string.StartScene_WinGame);
 	
 	private static final float WIDTH_P	= 116;
 	private static final float HEIGHT_P	= 220;
@@ -90,7 +91,6 @@ public class StartScene extends PixelScene {
 	
 	@Override
 	public void create() {
-		
 		super.create();
 		
 		Badges.loadGlobal();
@@ -398,7 +398,8 @@ public class StartScene extends PixelScene {
 				highlighted = BASIC_HIGHLIGHTED;
 			}
 			
-			name.text( cl.name() );
+			//name.text( cl.name() );//Adjusted to load the translated names as each player class
+			name.text( cl.title().toUpperCase(Locale.getDefault()) );
 			name.measure();
 			name.hardlight( normal );
 			

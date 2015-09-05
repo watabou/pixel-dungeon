@@ -17,9 +17,11 @@
  */
 package com.watabou.pixeldungeon.items.scrolls;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
@@ -27,14 +29,11 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class ScrollOfTeleportation extends Scroll {
 
-	public static final String TXT_TELEPORTED = 
-		"In a blink of an eye you were teleported to another location of the level.";
-	
-	public static final String TXT_NO_TELEPORT = 
-		"Strong magic aura of this place prevents you from teleporting!";
+	public static final String TXT_TELEPORTED = Game.getVar(R.string.ScrollOfTeleportation_Teleport);
+	public static final String TXT_NO_TELEPORT = Game.getVar(R.string.ScrollOfTeleportation_NoTeleport);
 	
 	{
-		name = "Scroll of Teleportation";
+		name = Game.getVar(R.string.ScrollOfTeleportation_Name);
 	}
 	
 	@Override
@@ -77,11 +76,7 @@ public class ScrollOfTeleportation extends Scroll {
 	
 	@Override
 	public String desc() {
-		return
-			"The spell on this parchment instantly transports the reader " +
-			"to a random location on the dungeon level. It can be used " +
-			"to escape a dangerous situation, but the unlucky reader might " +
-			"find himself in an even more dangerous place.";
+		return Game.getVar(R.string.ScrollOfTeleportation_Info);
 	}
 	
 	@Override

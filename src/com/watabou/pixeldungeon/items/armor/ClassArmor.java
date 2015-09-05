@@ -19,14 +19,17 @@ package com.watabou.pixeldungeon.items.armor;
 
 import java.util.ArrayList;
 
+
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 
 abstract public class ClassArmor extends Armor {
 	
-	private static final String TXT_LOW_HEALTH		= "Your health is too low!";
-	private static final String TXT_NOT_EQUIPPED	= "You need to be wearing this armor to use its special power!";
+	private static final String TXT_LOW_HEALTH   = Game.getVar(R.string.ClassArmor_LowHealt);
+	private static final String TXT_NOT_EQUIPPED = Game.getVar(R.string.ClassArmor_NotEquipped);
 	
 	{
 		levelKnown = true;
@@ -129,6 +132,6 @@ abstract public class ClassArmor extends Armor {
 	
 	@Override
 	public String desc() {
-		return "The thing looks awesome!";
+		return Game.getVar(R.string.ClassArmor_Desc);
 	}
 }

@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.plants;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -29,13 +31,12 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Fadeleaf extends Plant {
 
-	private static final String TXT_DESC = 
-		"Touching a Fadeleaf will teleport any creature " +
-		"to a random place on the current level.";
+	private static final String TXT_NAME = Game.getVar(R.string.Fadeleaf_Name);
+	private static final String TXT_DESC = Game.getVar(R.string.Fadeleaf_Desc);
 	
 	{
 		image = 6;
-		plantName = "Fadeleaf";
+		plantName = TXT_NAME;
 	}
 	
 	@Override
@@ -80,9 +81,9 @@ public class Fadeleaf extends Plant {
 	
 	public static class Seed extends Plant.Seed {
 		{
-			plantName = "Fadeleaf";
+			plantName = TXT_NAME;
 			
-			name = "seed of " + plantName;
+			name = String.format(TXT_SEED, plantName);
 			image = ItemSpriteSheet.SEED_FADELEAF;
 			
 			plantClass = Fadeleaf.class;

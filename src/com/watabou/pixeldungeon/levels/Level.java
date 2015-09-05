@@ -23,11 +23,13 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -91,7 +93,7 @@ public abstract class Level implements Bundlable {
 	
 	protected static final float TIME_TO_RESPAWN	= 50;
 	
-	private static final String TXT_HIDDEN_PLATE_CLICKS = "A hidden pressure plate clicks!";
+	private static final String TXT_HIDDEN_PLATE_CLICKS = Game.getVar(R.string.Level_HiddenPlate);
 	
 	public static boolean resizingNeeded;
 	public static int loadedMapSize;
@@ -871,7 +873,7 @@ public abstract class Level implements Bundlable {
 		
 		switch (tile) {
 		case Terrain.CHASM:
-			return "Chasm";
+			return Game.getVar(R.string.Level_TileChasm);
 		case Terrain.EMPTY:
 		case Terrain.EMPTY_SP:
 		case Terrain.EMPTY_DECO:
@@ -881,70 +883,70 @@ public abstract class Level implements Bundlable {
 		case Terrain.SECRET_POISON_TRAP:
 		case Terrain.SECRET_ALARM_TRAP:
 		case Terrain.SECRET_LIGHTNING_TRAP:
-			return "Floor";
+			return Game.getVar(R.string.Level_TileFloor);
 		case Terrain.GRASS:
-			return "Grass";
+			return Game.getVar(R.string.Level_TileGrass);
 		case Terrain.WATER:
-			return "Water";
+			return Game.getVar(R.string.Level_TileWater);
 		case Terrain.WALL:
 		case Terrain.WALL_DECO:
 		case Terrain.SECRET_DOOR:
-			return "Wall";
+			return Game.getVar(R.string.Level_TileWall);
 		case Terrain.DOOR:
-			return "Closed door";
+			return Game.getVar(R.string.Level_TileClosedDoor);
 		case Terrain.OPEN_DOOR:
-			return "Open door";
+			return Game.getVar(R.string.Level_TileOpenDoor);
 		case Terrain.ENTRANCE:
-			return "Depth entrance";
+			return Game.getVar(R.string.Level_TileEntrance);
 		case Terrain.EXIT:
-			return "Depth exit";
+			return Game.getVar(R.string.Level_TileExit);
 		case Terrain.EMBERS:
-			return "Embers";
+			return Game.getVar(R.string.Level_TileEmbers);
 		case Terrain.LOCKED_DOOR:
-			return "Locked door";
+			return Game.getVar(R.string.Level_TileLockedDoor);
 		case Terrain.PEDESTAL:
-			return "Pedestal";
+			return Game.getVar(R.string.Level_TilePedestal);
 		case Terrain.BARRICADE:
-			return "Barricade";
+			return Game.getVar(R.string.Level_TileBarricade);
 		case Terrain.HIGH_GRASS:
-			return "High grass";
+			return Game.getVar(R.string.Level_TileHighGrass);
 		case Terrain.LOCKED_EXIT:
-			return "Locked depth exit";
+			return Game.getVar(R.string.Level_TileLockedExit);
 		case Terrain.UNLOCKED_EXIT:
-			return "Unlocked depth exit";
+			return Game.getVar(R.string.Level_TileUnlockedExit);
 		case Terrain.SIGN:
-			return "Sign";
+			return Game.getVar(R.string.Level_TileSign);
 		case Terrain.WELL:
-			return "Well";
+			return Game.getVar(R.string.Level_TileWell);
 		case Terrain.EMPTY_WELL:
-			return "Empty well";
+			return Game.getVar(R.string.Level_TileEmptyWell);
 		case Terrain.STATUE:
 		case Terrain.STATUE_SP:
-			return "Statue";
+			return Game.getVar(R.string.Level_TileStatue);
 		case Terrain.TOXIC_TRAP:
-			return "Toxic gas trap";
+			return Game.getVar(R.string.Level_TileToxicTrap);
 		case Terrain.FIRE_TRAP:
-			return "Fire trap";
+			return Game.getVar(R.string.Level_TileFireTrap);
 		case Terrain.PARALYTIC_TRAP:
-			return "Paralytic gas trap";
+			return Game.getVar(R.string.Level_TileParalyticTrap);
 		case Terrain.POISON_TRAP:
-			return "Poison dart trap";
+			return Game.getVar(R.string.Level_TilePoisonTrap);
 		case Terrain.ALARM_TRAP:
-			return "Alarm trap";
+			return Game.getVar(R.string.Level_TileAlarmTrap);
 		case Terrain.LIGHTNING_TRAP:
-			return "Lightning trap";
+			return Game.getVar(R.string.Level_TileLightningTrap);
 		case Terrain.GRIPPING_TRAP:
-			return "Gripping trap";
+			return Game.getVar(R.string.Level_TileGrippingTrap);
 		case Terrain.SUMMONING_TRAP:
-			return "Summoning trap";
+			return Game.getVar(R.string.Level_TileSummoningTrap);
 		case Terrain.INACTIVE_TRAP:
-			return "Triggered trap";
+			return Game.getVar(R.string.Level_TileInactiveTrap);
 		case Terrain.BOOKSHELF:
-			return "Bookshelf";
+			return Game.getVar(R.string.Level_TileBookshelf);
 		case Terrain.ALCHEMY:
-			return "Alchemy pot";
+			return Game.getVar(R.string.Level_TileAlchemy);
 		default:
-			return "???";
+			return Game.getVar(R.string.Level_TileDefault);
 		}
 	}
 	
@@ -952,26 +954,26 @@ public abstract class Level implements Bundlable {
 		
 		switch (tile) {
 		case Terrain.CHASM:
-			return "You can't see the bottom.";
+			return Game.getVar(R.string.Level_TileDescChasm);
 		case Terrain.WATER:
-			return "In case of burning step into the water to extinguish the fire.";
+			return Game.getVar(R.string.Level_TileDescWater);
 		case Terrain.ENTRANCE:
-			return "Stairs lead up to the upper depth.";
+			return Game.getVar(R.string.Level_TileDescEntrance);
 		case Terrain.EXIT:
 		case Terrain.UNLOCKED_EXIT:
-			return "Stairs lead down to the lower depth.";
+			return Game.getVar(R.string.Level_TileDescExit);
 		case Terrain.EMBERS:
-			return "Embers cover the floor.";
+			return Game.getVar(R.string.Level_TileDescEmbers);
 		case Terrain.HIGH_GRASS:
-			return "Dense vegetation blocks the view.";
+			return Game.getVar(R.string.Level_TileDescHighGrass);
 		case Terrain.LOCKED_DOOR:
-			return "This door is locked, you need a matching key to unlock it.";
+			return Game.getVar(R.string.Level_TileDescLockedDoor);
 		case Terrain.LOCKED_EXIT:
-			return "Heavy bars block the stairs leading down.";
+			return Game.getVar(R.string.Level_TileDescLockedExit);
 		case Terrain.BARRICADE:
-			return "The wooden barricade is firmly set but has dried over the years. Might it burn?";
+			return Game.getVar(R.string.Level_TileDescBarricade);
 		case Terrain.SIGN:
-			return "You can't read the text from here.";
+			return Game.getVar(R.string.Level_TileDescSign);
 		case Terrain.TOXIC_TRAP:
 		case Terrain.FIRE_TRAP:
 		case Terrain.PARALYTIC_TRAP:
@@ -980,16 +982,16 @@ public abstract class Level implements Bundlable {
 		case Terrain.LIGHTNING_TRAP:
 		case Terrain.GRIPPING_TRAP:
 		case Terrain.SUMMONING_TRAP:
-			return "Stepping onto a hidden pressure plate will activate the trap.";
+			return Game.getVar(R.string.Level_TileDescTrap);
 		case Terrain.INACTIVE_TRAP:
-			return "The trap has been triggered before and it's not dangerous anymore.";
+			return Game.getVar(R.string.Level_TileDescInactiveTrap);
 		case Terrain.STATUE:
 		case Terrain.STATUE_SP:
-			return "Someone wanted to adorn this place, but failed, obviously.";
+			return Game.getVar(R.string.Level_TileDescStatue);
 		case Terrain.ALCHEMY:
-			return "Drop some seeds here to cook a potion.";
+			return Game.getVar(R.string.Level_TileDescAlchemy);
 		case Terrain.EMPTY_WELL:
-			return "The well has run dry.";
+			return Game.getVar(R.string.Level_TileDescEmptyWell);
 		default:
 			if (tile >= Terrain.WATER_TILES) {
 				return tileDesc( Terrain.WATER );

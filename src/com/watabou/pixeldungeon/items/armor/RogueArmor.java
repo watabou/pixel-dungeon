@@ -17,9 +17,11 @@
  */
 package com.watabou.pixeldungeon.items.armor;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -37,13 +39,13 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class RogueArmor extends ClassArmor {
 	
-	private static final String TXT_FOV 		= "You can only jump to an empty location in your field of view";
-	private static final String TXT_NOT_ROGUE	= "Only rogues can use this armor!";
+	private static final String TXT_FOV       = Game.getVar(R.string.RogueArmor_Fov);
+	private static final String TXT_NOT_ROGUE = Game.getVar(R.string.RogueArmor_NotRogue);
 	
-	private static final String AC_SPECIAL = "SMOKE BOMB"; 
+	private static final String AC_SPECIAL = Game.getVar(R.string.RogueArmor_ACSpecial); 
 	
 	{
-		name = "rogue garb";
+		name = Game.getVar(R.string.RogueArmor_Name);
 		image = ItemSpriteSheet.ARMOR_ROGUE;
 	}
 	
@@ -69,9 +71,7 @@ public class RogueArmor extends ClassArmor {
 	
 	@Override
 	public String desc() {
-		return 
-			"Wearing this dark garb, a rogue can perform a trick, that is called \"smoke bomb\" " +
-			"(though no real explosives are used): he blinds enemies who could see him and jumps aside.";
+		return Game.getVar(R.string.RogueArmor_Desc);
 	}
 	
 	protected static CellSelector.Listener teleporter = new  CellSelector.Listener() {
@@ -110,7 +110,7 @@ public class RogueArmor extends ClassArmor {
 		
 		@Override
 		public String prompt() {
-			return "Choose a location to jump to";
+			return Game.getVar(R.string.RogueArmor_Prompt);
 		}
 	};
 }

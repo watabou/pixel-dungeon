@@ -19,10 +19,12 @@ package com.watabou.pixeldungeon.levels;
 
 import java.util.List;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Bones;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Bestiary;
@@ -351,7 +353,7 @@ public class PrisonBossLevel extends RegularLevel {
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.WATER:
-			return "Dark cold water.";
+			return Game.getVar(R.string.Prison_TileWater);
 		default:
 			return super.tileName( tile );
 		}
@@ -361,7 +363,7 @@ public class PrisonBossLevel extends RegularLevel {
 	public String tileDesc(int tile) {
 		switch (tile) {
 		case Terrain.EMPTY_DECO:
-			return "There are old blood stains on the floor.";
+			return Game.getVar(R.string.Prison_TileDescDeco);
 		default:
 			return super.tileDesc( tile );
 		}

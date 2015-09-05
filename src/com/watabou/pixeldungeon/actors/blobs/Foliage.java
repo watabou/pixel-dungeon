@@ -17,8 +17,10 @@
  */
 package com.watabou.pixeldungeon.actors.blobs;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Shadows;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -81,6 +83,6 @@ public class Foliage extends Blob {
 	
 	@Override
 	public String tileDesc() {
-		return "Shafts of light pierce the gloom of the underground garden.";
+		return Game.getVar(R.string.Foliage_Info);
 	}
 }

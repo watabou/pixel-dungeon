@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class MindVision extends FlavourBuff {
@@ -33,7 +35,7 @@ public class MindVision extends FlavourBuff {
 	
 	@Override
 	public String toString() {
-		return "Mind vision";
+		return Game.getVar(R.string.MindVision_Info);
 	}
 
 	@Override

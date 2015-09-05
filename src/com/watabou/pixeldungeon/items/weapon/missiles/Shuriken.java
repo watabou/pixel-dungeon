@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.utils.Random;
@@ -24,7 +26,7 @@ import com.watabou.utils.Random;
 public class Shuriken extends MissileWeapon {
 
 	{
-		name = "shuriken";
+		name = Game.getVar(R.string.Shuriken_Name);
 		image = ItemSpriteSheet.SHURIKEN;
 		
 		STR = 13;
@@ -46,9 +48,7 @@ public class Shuriken extends MissileWeapon {
 	
 	@Override
 	public String desc() {
-		return 
-			"Star-shaped pieces of metal with razor-sharp blades do significant damage " +
-			"when they hit a target. They can be thrown at very high rate.";
+		return Game.getVar(R.string.Shuriken_Info);
 	}
 	
 	@Override

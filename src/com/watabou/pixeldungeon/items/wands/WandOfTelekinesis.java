@@ -17,9 +17,11 @@
  */
 package com.watabou.pixeldungeon.items.wands;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -43,10 +45,9 @@ import com.watabou.utils.Callback;
 
 public class WandOfTelekinesis extends Wand {
 
-	private static final String TXT_YOU_NOW_HAVE	= "You have magically transported %s into your backpack"; 
-	
+	private static final String TXT_YOU_NOW_HAVE = Game.getVar(R.string.WandOfTelekinesis_YouNowHave); 
 	{
-		name = "Wand of Telekinesis";
+		name = Game.getVar(R.string.WandOfTelekinesis_Name);
 		hitChars = false;
 	}
 	
@@ -160,8 +161,6 @@ public class WandOfTelekinesis extends Wand {
 	
 	@Override
 	public String desc() {
-		return
-			"Waves of magic force from this wand will affect all cells on their way triggering traps, trampling high vegetation, " +
-			"opening closed doors and closing open ones. They also push back monsters.";
+		return Game.getVar(R.string.WandOfTelekinesis_Info);
 	}
 }

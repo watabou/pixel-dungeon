@@ -19,9 +19,11 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Challenges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -44,9 +46,9 @@ import com.watabou.utils.Random;
 
 public abstract class Mob extends Char {
 	
-	private static final String	TXT_DIED	= "You hear something died in the distance";
+	private static final String	TXT_DIED	= Game.getVar(R.string.Mob_Died);
 	
-	protected static final String	TXT_ECHO	= "echo of ";
+	protected static final String	TXT_ECHO	= Game.getVar(R.string.Mob_Echo);//FIXME
 	
 	protected static final String TXT_NOTICE1	= "?!";
 	protected static final String TXT_RAGE		= "#$%^";
@@ -402,7 +404,7 @@ public abstract class Mob extends Char {
 	}
 	
 	public String description() {
-		return "Real description is coming soon!";
+		return Game.getVar(R.string.Mob_Desc);
 	}
 	
 	public void notice() {
@@ -410,7 +412,7 @@ public abstract class Mob extends Char {
 	}
 	
 	public void yell( String str ) {
-		GLog.n( "%s: \"%s\" ", name, str );
+		GLog.n(Game.getVar(R.string.Mob_Yell), name, str );
 	}
 	
 	public interface AiState {
@@ -420,7 +422,7 @@ public abstract class Mob extends Char {
 	
 	private class Sleeping implements AiState {
 		
-		public static final String TAG	= "SLEEPING";
+		public static final String	TAG = "SLEEPING";
 		
 		@Override
 		public boolean act( boolean enemyInFOV, boolean justAlerted ) {
@@ -454,13 +456,13 @@ public abstract class Mob extends Char {
 		
 		@Override
 		public String status() {
-			return Utils.format( "This %s is sleeping", name );
+			return Utils.format(Game.getVar(R.string.Mob_StaSleepingStatus), name);
 		}
 	}
 	
 	private class Wandering implements AiState {
 		
-		public static final String TAG	= "WANDERING";
+		public static final String	TAG = "WANDERING";
 		
 		@Override
 		public boolean act( boolean enemyInFOV, boolean justAlerted ) {
@@ -491,13 +493,13 @@ public abstract class Mob extends Char {
 		
 		@Override
 		public String status() {
-			return Utils.format( "This %s is wandering", name );
+			return Utils.format(Game.getVar(R.string.Mob_StaWanderingStatus), name );
 		}
 	}
 	
 	private class Hunting implements AiState {
 		
-		public static final String TAG	= "HUNTING";
+		public static final String	TAG = "HUNTING";
 		
 		@Override
 		public boolean act( boolean enemyInFOV, boolean justAlerted ) {
@@ -530,13 +532,13 @@ public abstract class Mob extends Char {
 		
 		@Override
 		public String status() {
-			return Utils.format( "This %s is hunting", name );
+			return Utils.format(Game.getVar(R.string.Mob_StaHuntingStatus), name );
 		}
 	}
 	
 	protected class Fleeing implements AiState {
 		
-		public static final String TAG	= "FLEEING";
+		public static final String	TAG = "FLEEING";
 		
 		@Override
 		public boolean act( boolean enemyInFOV, boolean justAlerted ) {
@@ -565,13 +567,13 @@ public abstract class Mob extends Char {
 		
 		@Override
 		public String status() {
-			return Utils.format( "This %s is fleeing", name );
+			return Utils.format(Game.getVar(R.string.Mob_StaFleeingStatus), name );
 		}
 	}
 	
 	private class Passive implements AiState {
 		
-		public static final String TAG	= "PASSIVE";
+		public static final String	TAG = "PASSIVE";
 		
 		@Override
 		public boolean act( boolean enemyInFOV, boolean justAlerted ) {
@@ -582,7 +584,7 @@ public abstract class Mob extends Char {
 		
 		@Override
 		public String status() {
-			return Utils.format( "This %s is passive", name );
+			return Utils.format(Game.getVar(R.string.Mob_StaPassiveStatus), name );
 		}
 	}
 }

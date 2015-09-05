@@ -27,6 +27,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TouchArea;
 import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.effects.Flare;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.ExitButton;
@@ -35,14 +36,11 @@ import com.watabou.pixeldungeon.ui.Window;
 
 public class AboutScene extends PixelScene {
 
-	private static final String TXT = 
-		"Code & graphics: Watabou\n" +
-		"Music: Cube_Code\n\n" + 
-		"This game is inspired by Brian Walker's Brogue. " +
-		"Try it on Windows, Mac OS or Linux - it's awesome! ;)\n\n" +
-		"Please visit official website for additional info:";
-	
-	private static final String LNK = "pixeldungeon.watabou.ru";
+	private static final String TXT           = Game.getVar(R.string.AboutScene_Txt);
+	private static final String LNK           = Game.getVar(R.string.AboutScene_Lnk);
+	private static final String TRANSLATE     = Game.getVar(R.string.AboutScene_Translate);
+	private static final String TRANSLATE_LNK = Game.getVar(R.string.AboutScene_TranslateLnk);
+	private static final String TRANSLATE_SND = Game.getVar(R.string.AboutScene_TranslateSnd);
 	
 	@Override
 	public void create() {
@@ -73,6 +71,37 @@ public class AboutScene extends PixelScene {
 			}
 		};
 		add( hotArea );
+
+
+		BitmapTextMultiline txtTra = createMultiline( TRANSLATE, 8 );
+		txtTra.maxWidth = Math.min( Camera.main.width, 120 );
+		txtTra.measure();
+		add( txtTra );
+		
+		txtTra.x = link.x;
+		txtTra.y = link.y + link.height()+txtTra.height();
+		
+		BitmapTextMultiline lnkTra = createMultiline( TRANSLATE_LNK, 8 );
+		lnkTra.maxWidth = Math.min( Camera.main.width, 120 );
+		lnkTra.measure();
+		lnkTra.hardlight( Window.TITLE_COLOR );
+		add( lnkTra );
+		
+		lnkTra.x = txtTra.x;
+		lnkTra.y = txtTra.y + txtTra.height();
+		TouchArea traArea = new TouchArea( lnkTra ) {
+			@Override
+			protected void onClick( Touch touch ) {
+				Intent intent = new Intent( Intent.ACTION_SEND);
+				intent.setType("message/rfc822");
+				intent.putExtra(Intent.EXTRA_EMAIL, new String[]{TRANSLATE_LNK} );
+				intent.putExtra(Intent.EXTRA_SUBJECT, Game.getVar(R.string.app_name) );
+
+				Game.instance.startActivity( Intent.createChooser(intent, TRANSLATE_SND) );
+			}
+		};
+		add( traArea );
+		
 		
 		Image wata = Icons.WATA.get();
 		wata.x = align( (Camera.main.width - wata.width) / 2 );

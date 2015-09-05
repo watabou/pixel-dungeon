@@ -32,20 +32,21 @@ import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.windows.WndError;
 import com.watabou.pixeldungeon.windows.WndStory;
+import com.watabou.pixeldungeon.R;
 
 public class InterlevelScene extends PixelScene {
 
 	private static final float TIME_TO_FADE = 0.3f;
 	
-	private static final String TXT_DESCENDING	= "Descending...";
-	private static final String TXT_ASCENDING	= "Ascending...";
-	private static final String TXT_LOADING		= "Loading...";
-	private static final String TXT_RESURRECTING= "Resurrecting...";
-	private static final String TXT_RETURNING	= "Returning...";
-	private static final String TXT_FALLING		= "Falling...";
+	private static final String TXT_DESCENDING     = Game.getVar(R.string.InterLevelScene_Descending);
+	private static final String TXT_ASCENDING      = Game.getVar(R.string.InterLevelScene_Ascending);
+	private static final String TXT_LOADING        = Game.getVar(R.string.InterLevelScene_Loading);
+	private static final String TXT_RESURRECTING   = Game.getVar(R.string.InterLevelScene_Resurrecting);
+	private static final String TXT_RETURNING      = Game.getVar(R.string.InterLevelScene_Returning);
+	private static final String TXT_FALLING        = Game.getVar(R.string.InterLevelScene_Falling);
 	
-	private static final String ERR_FILE_NOT_FOUND	= "File not found. For some reason.";
-	private static final String ERR_GENERIC			= "Something went wrong..."	;	
+	private static final String ERR_FILE_NOT_FOUND = Game.getVar(R.string.InterLevelScene_FileNotFound);
+	private static final String ERR_GENERIC        = Game.getVar(R.string.InterLevelScene_ErrorGeneric);	
 	
 	public static enum Mode {
 		DESCEND, ASCEND, CONTINUE, RESURRECT, RETURN, FALL

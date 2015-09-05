@@ -17,19 +17,21 @@
  */
 package com.watabou.pixeldungeon.items.keys;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class IronKey extends Key {
 
-	private static final String TXT_FROM_DEPTH = "iron key from depth %d";
+	private static final String TXT_FROM_DEPTH = Game.getVar(R.string.IronKey_FromDepth);
 
 	public static int curDepthQuantity = 0;
 	
 	{
-		name = "iron key";
+		name = Game.getVar(R.string.IronKey_Name);
 		image = ItemSpriteSheet.IRON_KEY;
 	}
 	
@@ -56,8 +58,6 @@ public class IronKey extends Key {
 	
 	@Override
 	public String info() {
-		return 
-			"The notches on this ancient iron key are well worn; its leather lanyard " +
-			"is battered by age. What door might it open?";
+		return Game.getVar(R.string.IronKey_Info);
 	}
 }

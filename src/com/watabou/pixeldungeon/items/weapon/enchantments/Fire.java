@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.weapon.enchantments;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
@@ -28,7 +30,7 @@ import com.watabou.utils.Random;
 
 public class Fire extends Weapon.Enchantment {
 
-	private static final String TXT_BLAZING	= "Blazing %s";
+	private static final String TXT_NAME = Game.getVar(R.string.Fire_Name);
 	
 	private static ItemSprite.Glowing ORANGE = new ItemSprite.Glowing( 0xFF4400 );
 	
@@ -64,7 +66,7 @@ public class Fire extends Weapon.Enchantment {
 	
 	@Override
 	public String name( String weaponName ) {
-		return String.format( TXT_BLAZING, weaponName );
+		return String.format( TXT_NAME, weaponName );
 	}
 
 }

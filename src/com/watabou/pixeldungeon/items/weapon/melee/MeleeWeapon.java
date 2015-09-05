@@ -17,10 +17,11 @@
  */
 package com.watabou.pixeldungeon.items.weapon.melee;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
-import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 public class MeleeWeapon extends Weapon {
@@ -80,78 +81,80 @@ public class MeleeWeapon extends Weapon {
 	
 	@Override
 	public String info() {
-		
 		final String p = "\n\n";
 		
 		StringBuilder info = new StringBuilder( desc() );
-		
-		String quality = levelKnown && level != 0 ? (level > 0 ? "upgraded" : "degraded") : "";
-		info.append( p );
-		info.append( "This " + name + " is " + Utils.indefinite( quality ) );
-		info.append( " tier-" + tier + " melee weapon. " );
+
+		String typical  = Game.getVar(R.string.MeleeWeapon_Info1b);
+		String upgraded = Game.getVar(R.string.MeleeWeapon_Info1c);
+		String degraded = Game.getVar(R.string.MeleeWeapon_Info1d);
+		String quality = levelKnown && level != 0 ? (level > 0 ? upgraded : degraded) : typical;
+		info.append(p);
+		info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info1a), name, quality, tier));
+		info.append(" ");
 		
 		if (levelKnown) {
-			info.append( "Its average damage is " + (MIN + (MAX - MIN) / 2) + " points per hit. " );
+			info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info2a), (MIN + (MAX - MIN) / 2)));
 		} else {
-			info.append( 
-				"Its typical average damage is " + (min() + (max() - min()) / 2) + " points per hit " +
-				"and usually it requires " + typicalSTR() + " points of strength. " );
+			info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info2b), (min() + (max() - min()) / 2), typicalSTR()));
 			if (typicalSTR() > Dungeon.hero.STR()) {
-				info.append( "Probably this weapon is too heavy for you. " );
+				info.append(" "+Game.getVar(R.string.MeleeWeapon_Info2c));
 			}
 		}
-		
+
+		quality = "";
+		info.append(" ");
 		if (DLY != 1f) {
-			info.append( "This is a rather " + (DLY < 1f ? "fast" : "slow") );
+			quality += (DLY < 1f ? Game.getVar(R.string.MeleeWeapon_Info3b) : Game.getVar(R.string.MeleeWeapon_Info3c));
 			if (ACU != 1f) {
+				quality += " ";
 				if ((ACU > 1f) == (DLY < 1f)) {
-					info.append( " and ");
+					quality += Game.getVar(R.string.MeleeWeapon_Info3d);
 				} else {
-					info.append( " but ");
+					quality += Game.getVar(R.string.MeleeWeapon_Info3e);
 				}
-				info.append( ACU > 1f ? "accurate" : "inaccurate" );
+				quality += " ";
+				quality += ACU > 1f ? Game.getVar(R.string.MeleeWeapon_Info3f) : Game.getVar(R.string.MeleeWeapon_Info3g);
 			}
-			info.append( " weapon. ");
+			info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info3a), quality));
 		} else if (ACU != 1f) {
-			info.append( "This is a rather " + (ACU > 1f ? "accurate" : "inaccurate") + " weapon. " );
+			quality += ACU > 1f ? Game.getVar(R.string.MeleeWeapon_Info3f) : Game.getVar(R.string.MeleeWeapon_Info3g);
+			info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info3a), quality));
 		}
+
+		info.append(" ");
 		switch (imbue) {
 		case SPEED:
-			info.append( "It was balanced to make it faster. " );
+			info.append(Game.getVar(R.string.MeleeWeapon_Info4a));
 			break;
 		case ACCURACY:
-			info.append( "It was balanced to make it more accurate. " );
+			info.append(Game.getVar(R.string.MeleeWeapon_Info4b));
 			break;
 		case NONE:
 		}
-		
+
+		info.append(" ");
 		if (enchantment != null) {
-			info.append( "It is enchanted." );
+			info.append(Game.getVar(R.string.MeleeWeapon_Info5));
 		}
-		
+
 		if (levelKnown && Dungeon.hero.belongings.backpack.items.contains( this )) {
+			info.append(p);
 			if (STR > Dungeon.hero.STR()) {
-				info.append( p );
-				info.append( 
-					"Because of your inadequate strength the accuracy and speed " +
-					"of your attack with this " + name + " is decreased." );
+				info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info6a), name));
 			}
 			if (STR < Dungeon.hero.STR()) {
-				info.append( p );
-				info.append( 
-					"Because of your excess strength the damage " +
-					"of your attack with this " + name + " is increased." );
+				info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info6b), name));
 			}
 		}
 		
 		if (isEquipped( Dungeon.hero )) {
-			info.append( p );
-			info.append( "You hold the " + name + " at the ready" + 
-				(cursed ? ", and because it is cursed, you are powerless to let go." : ".") ); 
+			info.append(p);
+			info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info7a), name, (cursed ? Game.getVar(R.string.MeleeWeapon_Info7b) : "")) ); 
 		} else {
 			if (cursedKnown && cursed) {
-				info.append( p );
-				info.append( "You can feel a malevolent magic lurking within " + name +"." );
+				info.append(p);
+				info.append(String.format(Game.getVar(R.string.MeleeWeapon_Info7c), name));
 			}
 		}
 		

@@ -17,8 +17,10 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -42,8 +44,8 @@ import com.watabou.utils.Random;
 
 public class Burning extends Buff implements Hero.Doom {
 
-	private static final String TXT_BURNS_UP		= "%s burns up!";
-	private static final String TXT_BURNED_TO_DEATH	= "You burned to death...";
+	private static final String TXT_BURNS_UP		= Game.getVar(R.string.Burning_Burns);
+	private static final String TXT_BURNED_TO_DEATH	= Game.getVar(R.string.Burning_Death);
 	
 	private static final float DURATION = 8f;
 	
@@ -135,7 +137,7 @@ public class Burning extends Buff implements Hero.Doom {
 	
 	@Override
 	public String toString() {
-		return "Burning";
+		return Game.getVar(R.string.Burning_Info);
 	}
 
 	public static float duration( Char ch ) {

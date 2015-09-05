@@ -61,7 +61,7 @@ public class Statistics {
 	private static final String SLAIN		= "enemiesSlain";
 	private static final String FOOD		= "foodEaten";
 	private static final String ALCHEMY		= "potionsCooked";
-	private static final String PIRANHAS	= "priranhas";
+	private static final String PIRANHAS	= "piranhas";
 	private static final String NIGHT		= "nightHunt";
 	private static final String ANKHS		= "ankhsUsed";
 	private static final String DURATION	= "duration";

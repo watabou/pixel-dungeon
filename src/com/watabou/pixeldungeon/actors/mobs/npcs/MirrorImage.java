@@ -19,7 +19,9 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import java.util.HashSet;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Burning;
@@ -34,7 +36,7 @@ import com.watabou.utils.Random;
 public class MirrorImage extends NPC {
 	
 	{
-		name = "mirror image";
+		name = Game.getVar(R.string.MirrorImage_Name);
 		spriteClass = MirrorSprite.class;
 		
 		state = HUNTING;
@@ -109,9 +111,7 @@ public class MirrorImage extends NPC {
 	
 	@Override
 	public String description() {
-		return
-			"This illusion bears a close resemblance to you, " +
-			"but it's paler and twitches a little.";
+		return Game.getVar(R.string.MirrorImage_Desc);
 	}
 	
 	@Override

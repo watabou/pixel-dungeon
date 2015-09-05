@@ -35,17 +35,17 @@ import com.watabou.pixeldungeon.effects.Fireball;
 import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.PrefsButton;
+import com.watabou.pixeldungeon.R;
 
 public class TitleScene extends PixelScene {
 
-	private static final String TXT_PLAY		= "Play";
-	private static final String TXT_HIGHSCORES	= "Rankings";
-	private static final String TXT_BADGES		= "Badges";
-	private static final String TXT_ABOUT		= "About";
+	private static final String TXT_PLAY       = Game.getVar(R.string.TitleScene_Play);
+	private static final String TXT_HIGHSCORES = Game.getVar(R.string.TitleScene_Highscores);
+	private static final String TXT_BADGES     = Game.getVar(R.string.TitleScene_Badges);
+	private static final String TXT_ABOUT      = Game.getVar(R.string.TitleScene_About);
 	
 	@Override
 	public void create() {
-		
 		super.create();
 		
 		Music.INSTANCE.play( Assets.THEME, true );

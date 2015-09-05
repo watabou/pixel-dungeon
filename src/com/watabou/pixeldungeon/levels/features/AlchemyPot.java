@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.levels.features;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -24,7 +26,7 @@ import com.watabou.pixeldungeon.windows.WndBag;
 
 public class AlchemyPot {
 
-	private static final String TXT_SELECT_SEED	= "Select a seed to throw"; 
+	private static final String TXT_SELECT_SEED	= Game.getVar(R.string.AlchemyPot_SelectSeed); 
 	
 	private static Hero hero;
 	private static int pos;

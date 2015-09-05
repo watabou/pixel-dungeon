@@ -17,9 +17,11 @@
  */
 package com.watabou.pixeldungeon.items.potions;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ParalyticGas;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -35,13 +37,13 @@ import com.watabou.utils.PathFinder;
 
 public class PotionOfPurity extends Potion {
 
-	private static final String TXT_FRESHNESS	= "You feel uncommon freshness in the air.";
-	private static final String TXT_NO_SMELL	= "You've stopped sensing any smells!";
+	private static final String TXT_FRESHNESS = Game.getVar(R.string.PotionOfPurity_Freshness);
+	private static final String TXT_NO_SMELL  = Game.getVar(R.string.PotionOfPurity_NoSmell);
 	
 	private static final int DISTANCE	= 2;
 	
 	{
-		name = "Potion of Purification";
+		name = Game.getVar(R.string.PotionOfPurity_Name);
 	}
 	
 	@Override
@@ -118,9 +120,7 @@ public class PotionOfPurity extends Potion {
 	
 	@Override
 	public String desc() {
-		return 
-			"This reagent will quickly neutralize all harmful gases in the area of effect. " +
-			"Drinking it will give you a temporary immunity to such gases.";
+		return Game.getVar(R.string.PotionOfPurity_Info);
 	}
 	
 	@Override

@@ -17,12 +17,13 @@
  */
 package com.watabou.pixeldungeon.items.weapon.melee;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class BattleAxe extends MeleeWeapon {
-
 	{
-		name = "battle axe";
+		name = Game.getVar(R.string.BattleAxe_Name);
 		image = ItemSpriteSheet.BATTLE_AXE;
 	}
 	
@@ -32,6 +33,6 @@ public class BattleAxe extends MeleeWeapon {
 	
 	@Override
 	public String desc() {
-		return "The enormous steel head of this battle axe puts considerable heft behind each stroke.";
+		return Game.getVar(R.string.BattleAxe_Info);
 	}
 }

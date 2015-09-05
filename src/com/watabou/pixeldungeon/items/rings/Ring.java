@@ -19,9 +19,11 @@ package com.watabou.pixeldungeon.items.rings;
 
 import java.util.ArrayList;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -42,13 +44,10 @@ public class Ring extends EquipableItem {
 	
 	private static final float TIME_TO_EQUIP = 1f;
 	
-	private static final String TXT_IDENTIFY = 
-		"you are now familiar enough with your %s to identify it. It is %s.";
+	private static final String TXT_IDENTIFY = Game.getVar(R.string.Ring_Identify);
 	
-	private static final String TXT_UNEQUIP_TITLE = "Unequip one ring";
-	private static final String TXT_UNEQUIP_MESSAGE = 
-		"You can only wear two rings at a time. " +
-		"Unequip one of your equipped rings.";
+	private static final String TXT_UNEQUIP_TITLE = Game.getVar(R.string.Ring_UnequipTit);
+	private static final String TXT_UNEQUIP_MESSAGE = Game.getVar(R.string.Ring_UnequipMsg);
 	
 	protected Buff buff;
 	
@@ -66,8 +65,7 @@ public class Ring extends EquipableItem {
 		RingOfElements.class,
 		RingOfThorns.class
 	};
-	private static final String[] gems = 
-		{"diamond", "opal", "garnet", "ruby", "amethyst", "topaz", "onyx", "tourmaline", "emerald", "sapphire", "quartz", "agate"};
+	private static final String[] gems = Game.getVars(R.array.Ring_Gems);
 	private static final Integer[] images = {
 		ItemSpriteSheet.RING_DIAMOND, 
 		ItemSpriteSheet.RING_OPAL, 
@@ -163,7 +161,7 @@ public class Ring extends EquipableItem {
 			cursedKnown = true;
 			if (cursed) {
 				equipCursed( hero );
-				GLog.n( "your " + this + " tightens around your finger painfully" );
+				GLog.n(String.format(Game.getVar(R.string.Ring_Info2), this));
 			}
 			
 			hero.spendAndNext( TIME_TO_EQUIP );
@@ -192,11 +190,8 @@ public class Ring extends EquipableItem {
 			buff = null;
 			
 			return true;
-			
 		} else {
-			
 			return false;
-			
 		}
 	}
 	
@@ -262,31 +257,22 @@ public class Ring extends EquipableItem {
 	
 	@Override
 	public String name() {
-		return isKnown() ? name : gem + " ring";
+		return isKnown() ? name : String.format(Game.getVar(R.string.Ring_Name), gem);
 	}
 	
 	@Override
 	public String desc() {
-		return 
-			"This metal band is adorned with a large " + gem + " gem " +
-			"that glitters in the darkness. Who knows what effect it has when worn?";
+		return String.format(Game.getVar(R.string.Ring_Info), gem);
 	}
 	
 	@Override
 	public String info() {
 		if (isEquipped( Dungeon.hero )) {
-			
-			return desc() + "\n\n" + "The " + name() + " is on your finger" + 
-				(cursed ? ", and because it is cursed, you are powerless to remove it." : "." );
-			
+			return String.format(Game.getVar(R.string.Ring_Info3a), desc(), name(), (cursed ? Game.getVar(R.string.Ring_Info3b) : ""));
 		} else if (cursed && cursedKnown) {
-			
-			return desc() + "\n\nYou can feel a malevolent magic lurking within the " + name() + ".";
-			
+			return String.format(Game.getVar(R.string.Ring_Info4), desc(), name());
 		} else {
-			
 			return desc();
-			
 		}
 	}
 	
@@ -358,7 +344,7 @@ public class Ring extends EquipableItem {
 	
 	public class RingBuff extends Buff {
 		
-		private static final String TXT_KNOWN = "This is a %s"; 
+		private final String TXT_KNOWN = Game.getVar(R.string.Ring_BuffKnown); 
 		
 		public int level;
 		public RingBuff() {

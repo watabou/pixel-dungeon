@@ -17,10 +17,12 @@
  */
 package com.watabou.pixeldungeon.items.wands;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.MagicMissile;
@@ -29,9 +31,8 @@ import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.utils.Callback;
 
 public class WandOfBlink extends Wand {
-
 	{
-		name = "Wand of Blink";
+		name = Game.getVar(R.string.WandOfBlink_Name);
 	}
 	
 	@Override
@@ -75,8 +76,6 @@ public class WandOfBlink extends Wand {
 	
 	@Override
 	public String desc() {
-		return
-			"This wand will allow you to teleport in the chosen direction. " +
-			"Creatures and inanimate obstructions will block the teleportation.";
+		return Game.getVar(R.string.WandOfBlink_Info);
 	}
 }

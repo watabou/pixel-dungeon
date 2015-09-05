@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.items.scrolls;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.effects.Identification;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -26,8 +28,8 @@ import com.watabou.pixeldungeon.windows.WndBag;
 public class ScrollOfIdentify extends InventoryScroll {
 
 	{
-		name = "Scroll of Identify";
-		inventoryTitle = "Select an item to identify";
+		name = Game.getVar(R.string.ScrollOfIdentify_Name);
+		inventoryTitle = Game.getVar(R.string.ScrollOfIdentify_InvTitle);
 		mode = WndBag.Mode.UNIDENTIFED;
 	}
 	
@@ -37,15 +39,14 @@ public class ScrollOfIdentify extends InventoryScroll {
 		curUser.sprite.parent.add( new Identification( curUser.sprite.center().offset( 0, -16 ) ) );
 		
 		item.identify();
-		GLog.i( "It is " + item );
+		GLog.i(String.format(Game.getVar(R.string.ScrollOfIdentify_Info1), item));
 		
 		Badges.validateItemLevelAquired( item );
 	}
 	
 	@Override
 	public String desc() {
-		return
-			"Permanently reveals all of the secrets of a single item.";
+		return Game.getVar(R.string.ScrollOfIdentify_Info);
 	}
 	
 	@Override

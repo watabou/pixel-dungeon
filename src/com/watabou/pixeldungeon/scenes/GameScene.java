@@ -34,6 +34,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.FogOfWar;
 import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -77,14 +78,14 @@ import com.watabou.utils.Random;
 
 public class GameScene extends PixelScene {
 	
-	private static final String TXT_WELCOME			= "Welcome to the level %d of Pixel Dungeon!";
-	private static final String TXT_WELCOME_BACK	= "Welcome back to the level %d of Pixel Dungeon!";
-	private static final String TXT_NIGHT_MODE		= "Be cautious, since the dungeon is even more dangerous at night!";
+	private static final String TXT_WELCOME = Game.getVar(R.string.GameScene_Welcome);
+	private static final String TXT_WELCOME_BACK = Game.getVar(R.string.GameScene_WelcomeBack);
+	private static final String TXT_NIGHT_MODE = Game.getVar(R.string.GameScene_NightMode);
 	
-	private static final String TXT_CHASM	= "Your steps echo across the dungeon.";
-	private static final String TXT_WATER	= "You hear the water splashing around you.";
-	private static final String TXT_GRASS	= "The smell of vegetation is thick in the air.";
-	private static final String TXT_SECRETS	= "The atmosphere hints that this floor hides many secrets.";
+	private static final String TXT_CHASM = Game.getVar(R.string.GameScene_Chasm);
+	private static final String TXT_WATER = Game.getVar(R.string.GameScene_Water);
+	private static final String TXT_GRASS = Game.getVar(R.string.GameScene_Grass);
+	private static final String TXT_SECRETS = Game.getVar(R.string.GameScene_Secrets);
 	
 	static GameScene scene;
 	
@@ -122,7 +123,8 @@ public class GameScene extends PixelScene {
 		
 		PixelDungeon.lastClass( Dungeon.hero.heroClass.ordinal() );
 		
-		super.create();
+		super.create();		
+		
 		Camera.main.zoom( defaultZoom + PixelDungeon.zoom() );
 		
 		scene = this;

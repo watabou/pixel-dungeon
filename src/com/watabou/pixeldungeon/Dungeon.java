@@ -322,8 +322,8 @@ public class Dungeon {
 	
 	private static final String VERSION		= "version";
 	private static final String CHALLENGES	= "challenges";
-	private static final String HERO		= "hero";
-	private static final String GOLD		= "gold";
+	private static final String HERO       = "hero";
+	private static final String GOLD       = "gold";
 	private static final String DEPTH		= "depth";
 	private static final String LEVEL		= "level";
 	private static final String DROPPED		= "dropped%d";
@@ -335,7 +335,8 @@ public class Dungeon {
 	private static final String CHAPTERS	= "chapters";
 	private static final String QUESTS		= "quests";
 	private static final String BADGES		= "badges";
-	
+
+
 	public static String gameFile( HeroClass cl ) {
 		switch (cl) {
 		case WARRIOR:

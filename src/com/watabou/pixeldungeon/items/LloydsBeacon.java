@@ -23,6 +23,7 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.wands.WandOfBlink;
@@ -36,31 +37,26 @@ import com.watabou.utils.Bundle;
 
 public class LloydsBeacon extends Item {
 
-	private static final String TXT_PREVENTING = 
-		"Strong magic aura of this place prevents you from using the lloyd's beacon!";
+	private static final String TXT_PREVENTING = Game.getVar(R.string.LloidsBeacon_Preventing);
 	
-	private static final String TXT_CREATURES = 
-		"Psychic aura of neighbouring creatures doesn't allow you to use the lloyd's beacon at this moment.";
+	private static final String TXT_CREATURES = Game.getVar(R.string.LloidsBeacon_Creatures);
 	
-	private static final String TXT_RETURN = 
-		"The lloyd's beacon is successfully set at your current location, now you can return here anytime.";
+	private static final String TXT_RETURN = Game.getVar(R.string.LloidsBeacon_Return);
 			
-	private static final String TXT_INFO =
-		"Lloyd's beacon is an intricate magic device, that allows you to return to a place you have already been.";
+	private static final String TXT_INFO = Game.getVar(R.string.LloidsBeacon_Info);
 	
-	private static final String TXT_SET = 
-		"\n\nThis beacon was set somewhere on the level %d of Pixel Dungeon.";
+	private static final String TXT_SET = Game.getVar(R.string.LloidsBeacon_Set);
 	
 	public static final float TIME_TO_USE = 1;
 	
-	public static final String AC_SET		= "SET";
-	public static final String AC_RETURN	= "RETURN";
+	public static final String AC_SET		= Game.getVar(R.string.LloidsBeacon_ACSet);
+	public static final String AC_RETURN	= Game.getVar(R.string.LloidsBeacon_ACReturn);
 	
 	private int returnDepth	= -1;
 	private int returnPos;
 	
 	{
-		name = "lloyd's beacon";
+		name = Game.getVar(R.string.LloidsBeacon_Name);
 		image = ItemSpriteSheet.BEACON;
 		
 		unique = true;

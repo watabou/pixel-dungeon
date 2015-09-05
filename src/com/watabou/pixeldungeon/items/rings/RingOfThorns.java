@@ -17,14 +17,15 @@
  */
 package com.watabou.pixeldungeon.items.rings;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 
 public class RingOfThorns extends Ring {
-
 	{
-		name = "Ring of Thorns";
+		name = Game.getVar(R.string.RingOfThorns_Name);
 	}
 	
 	@Override
@@ -58,11 +59,7 @@ public class RingOfThorns extends Ring {
 	
 	@Override
 	public String desc() {
-		return isKnown() ?
-			"Though this ring doesn't provide real thorns, an enemy that attacks you " +
-			"will itself be wounded by a fraction of the damage that it inflicts. " +
-			"Upgrading this ring won't give any additional bonuses." :
-			super.desc();
+		return isKnown() ? Game.getVar(R.string.RingOfThorns_Info) : super.desc();
 	}
 	
 	public class Thorns extends RingBuff {	

@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.weapon.enchantments;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
@@ -26,7 +28,7 @@ import com.watabou.utils.Random;
 
 public class Paralysis extends Weapon.Enchantment {
 
-	private static final String TXT_STUNNING = "Stunning %s";
+	private static final String TXT_NAME = Game.getVar(R.string.Paralysis_Name);
 	
 	private static ItemSprite.Glowing YELLOW = new ItemSprite.Glowing( 0xCCAA44 );
 	
@@ -55,7 +57,7 @@ public class Paralysis extends Weapon.Enchantment {
 	
 	@Override
 	public String name( String weaponName) {
-		return String.format( TXT_STUNNING, weaponName );
+		return String.format( TXT_NAME, weaponName );
 	}
 
 }

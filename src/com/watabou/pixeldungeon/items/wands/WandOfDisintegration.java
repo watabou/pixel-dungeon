@@ -19,8 +19,10 @@ package com.watabou.pixeldungeon.items.wands;
 
 import java.util.ArrayList;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.CellEmitter;
@@ -34,9 +36,8 @@ import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
 public class WandOfDisintegration extends Wand {
-
 	{
-		name = "Wand of Disintegration";
+		name = Game.getVar(R.string.WandOfDisintegration_Name);
 		hitChars = false;
 	}
 	
@@ -99,7 +100,6 @@ public class WandOfDisintegration extends Wand {
 	
 	@Override
 	protected void fx( int cell, Callback callback ) {
-		
 		cell = Ballistica.trace[Math.min( Ballistica.distance, distance() ) - 1];
 		curUser.sprite.parent.add( new DeathRay( curUser.sprite.center(), DungeonTilemap.tileCenterToWorld( cell ) ) );		
 		callback.call();
@@ -107,8 +107,6 @@ public class WandOfDisintegration extends Wand {
 	
 	@Override
 	public String desc() {
-		return
-			"This wand emits a beam of destructive energy, which pierces all creatures in its way. " +
-			"The more targets it hits, the more damage it inflicts to each of them.";
+		return Game.getVar(R.string.WandOfDisintegration_Info);
 	}
 }

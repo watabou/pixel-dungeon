@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.rings.RingOfElements.Resistance;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
@@ -48,7 +50,7 @@ public class Charm extends FlavourBuff {
 	
 	@Override
 	public String toString() {
-		return "Charmed";
+		return Game.getVar(R.string.Charm_Info);
 	}
 	
 	public static float durationFactor( Char ch ) {

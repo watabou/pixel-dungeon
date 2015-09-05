@@ -17,13 +17,15 @@
  */
 package com.watabou.pixeldungeon.items.armor;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 
 public class LeatherArmor extends Armor {
 
 	{	
-		name = "leather armor";
+		name = Game.getVar(R.string.LeatherArmor_Name);
 		image = ItemSpriteSheet.ARMOR_LEATHER;
 	}
 	
@@ -33,6 +35,6 @@ public class LeatherArmor extends Armor {
 	
 	@Override
 	public String desc() {
-		return "Armor made from tanned monster hide. Not as light as cloth armor but provides better protection.";
+		return Game.getVar(R.string.LeatherArmor_Desc);
 	}
 }

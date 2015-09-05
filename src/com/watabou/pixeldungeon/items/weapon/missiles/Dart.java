@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.utils.Random;
@@ -24,7 +26,7 @@ import com.watabou.utils.Random;
 public class Dart extends MissileWeapon {
 
 	{
-		name = "dart";
+		name = Game.getVar(R.string.Dart_Name);
 		image = ItemSpriteSheet.DART;
 		
 		MIN = 1;
@@ -42,9 +44,7 @@ public class Dart extends MissileWeapon {
 	
 	@Override
 	public String desc() {
-		return 
-			"These simple metal spikes are weighted to fly true and " +
-			"sting their prey with a flick of the wrist.";
+		return Game.getVar(R.string.Dart_Info);
 	}
 	
 	@Override

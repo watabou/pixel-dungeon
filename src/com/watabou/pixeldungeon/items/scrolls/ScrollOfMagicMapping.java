@@ -17,9 +17,11 @@
  */
 package com.watabou.pixeldungeon.items.scrolls;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
@@ -31,10 +33,10 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class ScrollOfMagicMapping extends Scroll {
 
-	private static final String TXT_LAYOUT = "You are now aware of the level layout.";
+	private static final String TXT_LAYOUT = Game.getVar(R.string.ScrollOfMagicMapping_Layout);
 	
 	{
-		name = "Scroll of Magic Mapping";
+		name = Game.getVar(R.string.ScrollOfMagicMapping_Name);
 	}
 	
 	@Override
@@ -86,10 +88,7 @@ public class ScrollOfMagicMapping extends Scroll {
 	
 	@Override
 	public String desc() {
-		return
-			"When this scroll is read, an image of crystal clarity will be etched into your memory, " +
-			"alerting you to the precise layout of the level and revealing all hidden secrets. " +
-			"The locations of items and creatures will remain unknown.";
+		return Game.getVar(R.string.ScrollOfMagicMapping_Info);
 	}
 	
 	@Override

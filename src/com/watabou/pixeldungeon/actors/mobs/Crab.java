@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.items.food.MysteryMeat;
@@ -26,7 +28,7 @@ import com.watabou.utils.Random;
 public class Crab extends Mob {
 
 	{
-		name = "sewer crab";
+		name = Game.getVar(R.string.Crab_Name);
 		spriteClass = CrabSprite.class;
 		
 		HP = HT = 15;
@@ -57,7 +59,7 @@ public class Crab extends Mob {
 	
 	@Override
 	public String defenseVerb() {
-		return "parried";
+		return Game.getVar(R.string.Crab_Defense);
 	}
 	
 	@Override
@@ -68,9 +70,6 @@ public class Crab extends Mob {
 	
 	@Override
 	public String description() {
-		return
-			"These huge crabs are at the top of the food chain in the sewers. " +
-			"They are extremely fast and their thick exoskeleton can withstand " +
-			"heavy blows.";
+		return Game.getVar(R.string.Crab_Desc);
 	}
 }

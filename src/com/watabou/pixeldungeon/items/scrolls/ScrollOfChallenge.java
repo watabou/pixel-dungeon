@@ -17,9 +17,11 @@
  */
 package com.watabou.pixeldungeon.items.scrolls;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.mobs.Mimic;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -30,7 +32,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 public class ScrollOfChallenge extends Scroll {
 
 	{
-		name = "Scroll of Challenge";
+		name = Game.getVar(R.string.ScrollOfChallenge_Name);
 	}
 	
 	@Override
@@ -51,7 +53,7 @@ public class ScrollOfChallenge extends Scroll {
 			}
 		}
 		
-		GLog.w( "The scroll emits a challenging roar that echoes throughout the dungeon!" );
+		GLog.w(Game.getVar(R.string.ScrollOfChallenge_Info1));
 		setKnown();
 		
 		curUser.sprite.centerEmitter().start( Speck.factory( Speck.SCREAM ), 0.3f, 3 );		
@@ -63,8 +65,6 @@ public class ScrollOfChallenge extends Scroll {
 	
 	@Override
 	public String desc() {
-		return 
-			"When read aloud, this scroll will unleash a challenging roar " +
-			"that will awaken all monsters and alert them to the reader's location.";
+		return Game.getVar(R.string.ScrollOfChallenge_Info);
 	}
 }

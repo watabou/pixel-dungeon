@@ -21,7 +21,9 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -36,9 +38,8 @@ import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
 public class WandOfLightning extends Wand {
-
 	{
-		name = "Wand of Lightning";
+		name = Game.getVar(R.string.WandOfLightning_Name);
 	}
 	
 	private ArrayList<Char> affected = new ArrayList<Char>();
@@ -51,7 +52,7 @@ public class WandOfLightning extends Wand {
 		// Everything is processed in fx() method
 		if (!curUser.isAlive()) {
 			Dungeon.fail( Utils.format( ResultDescriptions.WAND, name, Dungeon.depth ) );
-			GLog.n( "You killed yourself with your own Wand of Lightning..." );
+			GLog.n(Game.getVar(R.string.WandOfLightning_Info1));
 		}
 	}
 	
@@ -110,8 +111,6 @@ public class WandOfLightning extends Wand {
 	
 	@Override
 	public String desc() {
-		return
-			"This wand conjures forth deadly arcs of electricity, which deal damage " +
-			"to several creatures standing close to each other.";
+		return Game.getVar(R.string.WandOfLightning_Info);
 	}
 }

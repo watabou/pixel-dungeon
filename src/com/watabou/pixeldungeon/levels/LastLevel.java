@@ -19,8 +19,10 @@ package com.watabou.pixeldungeon.levels;
 
 import java.util.Arrays;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.items.Amulet;
 import com.watabou.pixeldungeon.levels.painters.Painter;
 import com.watabou.utils.Random;
@@ -96,14 +98,14 @@ public class LastLevel extends Level {
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.WATER:
-			return "Cold lava";
+			return Game.getVar(R.string.LastLevel_TileWater);
 		case Terrain.GRASS:
-			return "Embermoss";
+			return Game.getVar(R.string.LastLevel_TileGrass);
 		case Terrain.HIGH_GRASS:
-			return "Emberfungi";
+			return Game.getVar(R.string.LastLevel_TileHighGrass);
 		case Terrain.STATUE:
 		case Terrain.STATUE_SP:
-			return "Pillar";
+			return Game.getVar(R.string.LastLevel_TileStatue);
 		default:
 			return super.tileName( tile );
 		}
@@ -113,10 +115,10 @@ public class LastLevel extends Level {
 	public String tileDesc(int tile) {
 		switch (tile) {
 		case Terrain.WATER:
-			return "It looks like lava, but it's cold and probably safe to touch.";
+			return Game.getVar(R.string.LastLevel_TileDescWater);
 		case Terrain.STATUE:
 		case Terrain.STATUE_SP:
-			return "The pillar is made of real humanoid skulls. Awesome."; 
+			return Game.getVar(R.string.LastLevel_TileDescStatue);
 		default:
 			return super.tileDesc( tile );
 		}

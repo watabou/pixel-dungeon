@@ -20,11 +20,13 @@ package com.watabou.pixeldungeon.windows;
 import java.util.Collections;
 
 import com.watabou.noosa.BitmapText;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.ui.Component;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.PixelDungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.ScrollPane;
@@ -38,7 +40,7 @@ public class WndJournal extends Window {
 	
 	private static final int ITEM_HEIGHT	= 18;
 	
-	private static final String TXT_TITLE	= "Journal";
+	private static final String TXT_TITLE	= Game.getVar(R.string.WndJournal_Title);
 	
 	private BitmapText txtTitle;
 	private ScrollPane list;

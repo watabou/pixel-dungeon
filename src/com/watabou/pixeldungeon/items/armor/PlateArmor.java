@@ -17,13 +17,15 @@
  */
 package com.watabou.pixeldungeon.items.armor;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 
 public class PlateArmor extends Armor {
 
 	{
-		name = "plate armor";
+		name = Game.getVar(R.string.PlateArmor_Name);
 		image = ItemSpriteSheet.ARMOR_PLATE;
 	}
 	
@@ -33,8 +35,6 @@ public class PlateArmor extends Armor {
 	
 	@Override
 	public String desc() {
-		return 
-			"Enormous plates of metal are joined together into a suit that provides " +
-			"unmatched protection to any adventurer strong enough to bear its staggering weight.";
+		return Game.getVar(R.string.PlateArmor_Desc);
 	}
 }

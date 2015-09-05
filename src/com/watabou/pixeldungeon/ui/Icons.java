@@ -50,7 +50,8 @@ public enum Icons {
 	EXIT,
 	CHALLENGE_OFF,
 	CHALLENGE_ON,
-	RESUME;
+	RESUME,
+	MASTERY;
 	
 	public Image get() {
 		return get( this );
@@ -143,6 +144,9 @@ public enum Icons {
 		case RESUME:
 			icon.frame( icon.texture.uvRect( 114, 0, 126, 11 ) );
 			break;
+		case MASTERY:
+         icon.frame( icon.texture.uvRect( 16, 15, 29, 28 ) );
+         break;
 		}
 		return icon;
 	}

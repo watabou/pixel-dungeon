@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.weapon.enchantments;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
@@ -24,7 +26,7 @@ import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 
 public class Tempering extends Weapon.Enchantment {
 
-	private static final String TXT_TEMPERED	= "Tempered %s";
+	private static final String TXT_TEMPERED	= Game.getVar(R.string.Tempering_Name);
 	
 	private static ItemSprite.Glowing GRAY = new ItemSprite.Glowing( 0xCC8888 );
 	

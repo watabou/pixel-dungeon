@@ -19,7 +19,9 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import java.util.HashSet;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
@@ -32,7 +34,7 @@ import com.watabou.utils.Random;
 public class Bee extends NPC {
 	
 	{
-		name = "golden bee";
+		name = Game.getVar(R.string.Bee_Name);
 		spriteClass = BeeSprite.class;
 		
 		viewDistance = 4;
@@ -116,9 +118,7 @@ public class Bee extends NPC {
 	
 	@Override
 	public String description() {
-		return
-			"Despite their small size, golden bees tend " +
-			"to protect their master fiercely. They don't live long though.";
+		return Game.getVar(R.string.Bee_Desc);
 	}
 
 	@Override
@@ -176,7 +176,7 @@ public class Bee extends NPC {
 		
 		@Override
 		public String status() {
-			return Utils.format( "This %s is wandering", name );
+			return Utils.format(Game.getVar(R.string.Bee_Status), name );
 		}
 	}
 }

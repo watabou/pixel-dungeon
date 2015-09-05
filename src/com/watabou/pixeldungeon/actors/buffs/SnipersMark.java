@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.utils.Bundle;
 
@@ -46,6 +48,6 @@ public int object = 0;
 	
 	@Override
 	public String toString() {
-		return "Zeroed in";
+		return Game.getVar(R.string.SnipersMark_Info);
 	}
 }

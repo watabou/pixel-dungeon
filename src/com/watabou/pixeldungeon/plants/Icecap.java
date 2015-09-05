@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.plants;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Fire;
 import com.watabou.pixeldungeon.actors.blobs.Freezing;
@@ -29,11 +31,12 @@ import com.watabou.utils.PathFinder;
 
 public class Icecap extends Plant {
 
-	private static final String TXT_DESC = "Upon touching an Icecap excretes a pollen, which freezes everything in its vicinity.";
+	private static final String TXT_NAME = Game.getVar(R.string.Icecap_Name);
+	private static final String TXT_DESC = Game.getVar(R.string.Icecap_Desc);
 	
 	{
 		image = 1;
-		plantName = "Icecap";
+		plantName = TXT_NAME;
 	}
 	
 	@Override
@@ -58,9 +61,9 @@ public class Icecap extends Plant {
 	
 	public static class Seed extends Plant.Seed {
 		{
-			plantName = "Icecap";
+			plantName = TXT_NAME;
 			
-			name = "seed of " + plantName;
+			name = String.format(TXT_SEED, plantName);
 			image = ItemSpriteSheet.SEED_ICECAP;
 			
 			plantClass = Icecap.class;

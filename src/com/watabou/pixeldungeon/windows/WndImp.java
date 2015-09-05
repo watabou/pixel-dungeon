@@ -18,7 +18,9 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Imp;
 import com.watabou.pixeldungeon.items.Item;
@@ -31,17 +33,14 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndImp extends Window {
-	
-	private static final String TXT_MESSAGE	= 
-		"Oh yes! You are my hero!\n" +
-		"Regarding your reward, I don't have cash with me right now, but I have something better for you. " +
-		"This is my family heirloom ring: my granddad took it off a dead paladin's finger.";
-	private static final String TXT_REWARD		= "Take the ring";
-	
+
+	private static final String TXT_MESSAGE	= Game.getVar(R.string.WndImp_Message);
+	private static final String TXT_REWARD  = Game.getVar(R.string.WndImp_Reward);
+
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 20;
 	private static final int GAP		= 2;
-	
+
 	public WndImp( final Imp imp, final DwarfToken tokens ) {
 		
 		super();

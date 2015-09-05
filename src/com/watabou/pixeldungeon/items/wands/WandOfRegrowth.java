@@ -17,9 +17,11 @@
  */
 package com.watabou.pixeldungeon.items.wands;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.Regrowth;
 import com.watabou.pixeldungeon.effects.MagicMissile;
@@ -31,9 +33,8 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
 
 public class WandOfRegrowth extends Wand {
-
 	{
-		name = "Wand of Regrowth";
+		name = Game.getVar(R.string.WandOfRegrowth_Name);
 	}
 	
 	@Override
@@ -61,9 +62,7 @@ public class WandOfRegrowth extends Wand {
 			GameScene.add( Blob.seed( cell, (level() + 2) * 20, Regrowth.class ) );
 			
 		} else {
-			
-			GLog.i( "nothing happened" );
-			
+			GLog.i(Game.getVar(R.string.WandOfRegrowth_Info1));
 		}
 	}
 	
@@ -74,7 +73,6 @@ public class WandOfRegrowth extends Wand {
 	
 	@Override
 	public String desc() {
-		return
-			"\"When life ceases new life always begins to grow... The eternal cycle always remains!\"";
+		return Game.getVar(R.string.WandOfRegrowth_Info);
 	}
 }

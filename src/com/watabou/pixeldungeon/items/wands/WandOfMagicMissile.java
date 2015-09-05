@@ -19,10 +19,12 @@ package com.watabou.pixeldungeon.items.wands;
 
 import java.util.ArrayList;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
@@ -38,19 +40,18 @@ import com.watabou.utils.Random;
 
 public class WandOfMagicMissile extends Wand {
 
-	public static final String AC_DISENCHANT	= "DISENCHANT";
+	public static final String AC_DISENCHANT    = Game.getVar(R.string.WandOfMagicMissile_ACDisenchant);
 	
-	private static final String TXT_SELECT_WAND	= "Select a wand to upgrade";
+	private static final String TXT_SELECT_WAND	= Game.getVar(R.string.WandOfMagicMissile_SelectWand);
 	
-	private static final String TXT_DISENCHANTED = 
-		"you disenchanted the Wand of Magic Missile and used its essence to upgrade your %s";
+	private static final String TXT_DISENCHANTED = Game.getVar(R.string.WandOfMagicMissile_Desinchanted);
 	
 	private static final float TIME_TO_DISENCHANT	= 2f;
 	
 	private boolean disenchantEquipped;
 	
 	{
-		name = "Wand of Magic Missile";
+		name = Game.getVar(R.string.WandOfMagicMissile_Name);
 		image = ItemSpriteSheet.WAND_MAGIC_MISSILE;
 	}
 	
@@ -76,7 +77,7 @@ public class WandOfMagicMissile extends Wand {
 			
 			if (ch == curUser && !ch.isAlive()) {
 				Dungeon.fail( Utils.format( ResultDescriptions.WAND, name, Dungeon.depth ) );
-				GLog.n( "You killed yourself with your own Wand of Magic Missile..." );
+				GLog.n(Game.getVar(R.string.WandOfMagicMissile_Info1));
 			}
 		}
 	}
@@ -119,8 +120,7 @@ public class WandOfMagicMissile extends Wand {
 	
 	@Override
 	public String desc() {
-		return
-			"This wand launches missiles of pure magical energy, dealing moderate damage to a target creature.";
+		return Game.getVar(R.string.WandOfMagicMissile_Info);
 	}
 	
 	private final WndBag.Listener itemSelector = new WndBag.Listener() {

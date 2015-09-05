@@ -24,6 +24,7 @@ import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.items.DewVial;
 import com.watabou.pixeldungeon.scenes.GameScene;
@@ -137,7 +138,7 @@ public class SewerLevel extends RegularLevel {
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.WATER:
-			return "Murky water";
+			return Game.getVar(R.string.Sewer_TileWater);
 		default:
 			return super.tileName( tile );
 		}
@@ -147,9 +148,9 @@ public class SewerLevel extends RegularLevel {
 	public String tileDesc(int tile) {
 		switch (tile) {
 		case Terrain.EMPTY_DECO:
-			return "Wet yellowish moss covers the floor.";
+			return Game.getVar(R.string.Sewer_TileDescDeco);
 		case Terrain.BOOKSHELF:
-			return "The bookshelf is packed with cheap useless books. Might it burn?";
+			return Game.getVar(R.string.Sewer_TileDescBookshelf);
 		default:
 			return super.tileDesc( tile );
 		}

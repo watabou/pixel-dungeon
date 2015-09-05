@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.items.weapon.missiles;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -33,7 +35,7 @@ import com.watabou.utils.Random;
 public class IncendiaryDart extends MissileWeapon {
 
 	{
-		name = "incendiary dart";
+		name = Game.getVar(R.string.IncendiaryDart_Name);
 		image = ItemSpriteSheet.INCENDIARY_DART;
 		
 		STR = 12;
@@ -75,9 +77,7 @@ public class IncendiaryDart extends MissileWeapon {
 	
 	@Override
 	public String desc() {
-		return 
-			"The spike on each of these darts is designed to pin it to its target " +
-			"while the unstable compounds strapped to its length burst into brilliant flames.";
+		return Game.getVar(R.string.IncendiaryDart_Info);
 	}
 	
 	@Override

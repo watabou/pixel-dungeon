@@ -17,8 +17,10 @@
  */
 package com.watabou.pixeldungeon.items.wands;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -28,22 +30,17 @@ import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
 
 public class WandOfPoison extends Wand {
-
 	{
-		name = "Wand of Poison";
+		name = Game.getVar(R.string.WandOfPoison_Name);
 	}
 	
 	@Override
 	protected void onZap( int cell ) {
 		Char ch = Actor.findChar( cell );
 		if (ch != null) {
-
 			Buff.affect( ch, Poison.class ).set( Poison.durationFactor( ch ) * (5 + level()) );
-			
 		} else {
-			
-			GLog.i( "nothing happened" );
-			
+			GLog.i(Game.getVar(R.string.WandOfPoison_Info1));
 		}
 	}
 	
@@ -54,10 +51,6 @@ public class WandOfPoison extends Wand {
 	
 	@Override
 	public String desc() {
-		return
-			"The vile blast of this twisted bit of wood will imbue its target " +
-			"with a deadly venom. A creature that is poisoned will suffer periodic " +
-			"damage until the effect ends. The duration of the effect increases " +
-			"with the level of the staff.";
+		return Game.getVar(R.string.WandOfPoison_Info);
 	}
 }

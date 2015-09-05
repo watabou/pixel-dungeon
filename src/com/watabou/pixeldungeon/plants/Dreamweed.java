@@ -17,6 +17,9 @@
  */
 package com.watabou.pixeldungeon.plants;
 
+
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ConfusionGas;
@@ -26,12 +29,12 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Dreamweed extends Plant {
 
-	private static final String TXT_DESC = 
-		"Upon touching a Dreamweed it secretes a glittering cloud of confusing gas.";
+	private static final String TXT_NAME = Game.getVar(R.string.Dreamweed_Name);
+	private static final String TXT_DESC = Game.getVar(R.string.Dreamweed_Desc);
 	
 	{
 		image = 3;
-		plantName = "Dreamweed";
+		plantName = TXT_NAME;
 	}
 	
 	@Override
@@ -50,9 +53,9 @@ public class Dreamweed extends Plant {
 	
 	public static class Seed extends Plant.Seed {
 		{
-			plantName = "Dreamweed";
+			plantName = TXT_NAME;
 			
-			name = "seed of " + plantName;
+			name = String.format(TXT_SEED, plantName);
 			image = ItemSpriteSheet.SEED_DREAMWEED;
 			
 			plantClass = Dreamweed.class;

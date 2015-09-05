@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class Barkskin extends Buff {
@@ -58,6 +60,6 @@ public class Barkskin extends Buff {
 	
 	@Override
 	public String toString() {
-		return "Barkskin";
+		return Game.getVar(R.string.Barkskin_Info);
 	}
 }

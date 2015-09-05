@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.bags;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.plants.Plant;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
@@ -24,7 +26,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class SeedPouch extends Bag {
 
 	{
-		name = "seed pouch";
+		name = Game.getVar(R.string.SeedPouch_Name);
 		image = ItemSpriteSheet.POUCH;
 		
 		size = 8;
@@ -42,7 +44,6 @@ public class SeedPouch extends Bag {
 	
 	@Override
 	public String info() {
-		return
-			"This small velvet pouch allows you to store any number of seeds in it. Very convenient.";
+		return Game.getVar(R.string.SeedPouch_Info);
 	}
 }

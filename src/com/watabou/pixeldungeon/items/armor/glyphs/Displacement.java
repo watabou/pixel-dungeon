@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.items.armor.Armor;
@@ -30,7 +32,7 @@ import com.watabou.utils.Random;
 
 public class Displacement extends Glyph {
 
-	private static final String TXT_DISPLACEMENT	= "%s of displacement";
+	private static final String TXT_DISPLACEMENT = Game.getVar(R.string.Displacement_Txt);
 	
 	private static ItemSprite.Glowing BLUE = new ItemSprite.Glowing( 0x66AAFF );
 	

@@ -19,7 +19,9 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
@@ -34,10 +36,10 @@ import com.watabou.utils.Random;
 
 public class Monk extends Mob {
 
-	public static final String TXT_DISARM	= "%s has knocked the %s from your hands!";
+	public static final String TXT_DISARM = Game.getVar(R.string.Monk_Disarm);
 	
 	{
-		name = "dwarf monk";
+		name = Game.getVar(R.string.Monk_Name);
 		spriteClass = MonkSprite.class;
 		
 		HP = HT = 70;
@@ -72,7 +74,7 @@ public class Monk extends Mob {
 	
 	@Override
 	public String defenseVerb() {
-		return "parried";
+		return Game.getVar(R.string.Monk_Defense);
 	}
 	
 	@Override
@@ -102,9 +104,7 @@ public class Monk extends Mob {
 	
 	@Override
 	public String description() {
-		return
-			"These monks are fanatics, who devoted themselves to protecting their city's secrets from all aliens. " +
-			"They don't use any armor or weapons, relying solely on the art of hand-to-hand combat.";
+		return Game.getVar(R.string.Monk_Desc);
 	}
 	
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();

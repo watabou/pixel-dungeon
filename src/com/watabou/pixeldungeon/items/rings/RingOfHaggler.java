@@ -17,14 +17,15 @@
  */
 package com.watabou.pixeldungeon.items.rings;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
 
 public class RingOfHaggler extends Ring {
-
 	{
-		name = "Ring of Haggler";
+		name = Game.getVar(R.string.RingOfHaggler_Name);
 	}
 	
 	@Override
@@ -58,13 +59,7 @@ public class RingOfHaggler extends Ring {
 	
 	@Override
 	public String desc() {
-		return isKnown() ?
-			"In fact this ring doesn't provide any magic effect, but it demonstrates " +
-			"to shopkeepers and vendors, that the owner of the ring is a member of " +
-			"The Thieves' Guild. Usually they are glad to give a discount in exchange " +
-			"for temporary immunity guarantee. Upgrading this ring won't give any additional " +
-			"bonuses." :
-			super.desc();
+		return isKnown() ? Game.getVar(R.string.RingOfHaggler_Info) : super.desc();
 	}
 	
 	public class Haggling extends RingBuff {	

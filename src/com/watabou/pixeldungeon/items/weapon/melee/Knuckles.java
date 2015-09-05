@@ -17,12 +17,13 @@
  */
 package com.watabou.pixeldungeon.items.weapon.melee;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Knuckles extends MeleeWeapon {
-
 	{
-		name = "knuckleduster";
+		name = Game.getVar(R.string.Knuckles_Name);
 		image = ItemSpriteSheet.KNUCKLEDUSTER;
 	}
 	
@@ -32,6 +33,6 @@ public class Knuckles extends MeleeWeapon {
 	
 	@Override
 	public String desc() {
-		return "A piece of iron shaped to fit around the knuckles.";
+		return Game.getVar(R.string.Knuckles_Info);
 	}
 }

@@ -19,7 +19,9 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Terror;
 import com.watabou.pixeldungeon.items.Gold;
@@ -31,10 +33,10 @@ import com.watabou.utils.Random;
 
 public class Brute extends Mob {
 
-	private static final String TXT_ENRAGED = "%s becomes enraged!";
+	private static final String TXT_ENRAGED = Game.getVar(R.string.Brute_Enraged);
 	
 	{
-		name = "gnoll brute";
+		name = Game.getVar(R.string.Brute_Name);
 		spriteClass = BruteSprite.class;
 		
 		HP = HT = 40;
@@ -81,16 +83,14 @@ public class Brute extends Mob {
 			spend( TICK );
 			if (Dungeon.visible[pos]) {
 				GLog.w( TXT_ENRAGED, name );
-				sprite.showStatus( CharSprite.NEGATIVE, "enraged" );
+				sprite.showStatus( CharSprite.NEGATIVE, Game.getVar(R.string.Brute_StaEnraged));
 			}
 		}
 	}
 	
 	@Override
 	public String description() {
-		return
-			"Brutes are the largest, strongest and toughest of all gnolls. When severely wounded, " +
-			"they go berserk, inflicting even more damage to their enemies.";
+		return Game.getVar(R.string.Brute_Desc);
 	}
 	
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();

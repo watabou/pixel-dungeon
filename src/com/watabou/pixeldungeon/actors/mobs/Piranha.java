@@ -19,8 +19,10 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -36,7 +38,7 @@ import com.watabou.utils.Random;
 public class Piranha extends Mob {
 	
 	{
-		name = "giant piranha";
+		name = Game.getVar(R.string.Piranha_Name);
 		spriteClass = PiranhaSprite.class;
 
 		baseSpeed = 2f;
@@ -123,9 +125,7 @@ public class Piranha extends Mob {
 
 	@Override
 	public String description() {
-		return
-			"These carnivorous fish are not natural inhabitants of underground pools. " +
-			"They were bred specifically to protect flooded treasure vaults.";
+		return Game.getVar(R.string.Piranha_Desc);
 	}
 	
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();

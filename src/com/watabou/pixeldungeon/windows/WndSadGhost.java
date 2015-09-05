@@ -18,7 +18,9 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Ghost;
 import com.watabou.pixeldungeon.items.Item;
@@ -32,16 +34,10 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndSadGhost extends Window {
 	
-	private static final String TXT_ROSE	= 
-		"Yes! Yes!!! This is it! Please give it to me! " +
-		"And you can take one of these items, maybe they " +
-		"will be useful to you in your journey...";
-	private static final String TXT_RAT	= 
-		"Yes! The ugly creature is slain and I can finally rest... " +
-		"Please take one of these items, maybe they " +
-		"will be useful to you in your journey...";
-	private static final String TXT_WEAPON	= "Ghost's weapon";
-	private static final String TXT_ARMOR	= "Ghost's armor";
+	private static final String TXT_ROSE   = Game.getVar(R.string.WndSadGhost_Rose);
+	private static final String TXT_RAT    = Game.getVar(R.string.WndSadGhost_Rat);;
+	private static final String TXT_WEAPON = Game.getVar(R.string.WndSadGhost_Wepon);
+	private static final String TXT_ARMOR  = Game.getVar(R.string.WndSadGhost_Armor);
 	
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 20;

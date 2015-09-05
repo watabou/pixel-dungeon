@@ -17,8 +17,10 @@
  */
 package com.watabou.pixeldungeon.items.scrolls;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Item;
@@ -27,11 +29,11 @@ import com.watabou.pixeldungeon.windows.WndBag;
 
 public class ScrollOfUpgrade extends InventoryScroll {
 
-	private static final String TXT_LOOKS_BETTER	= "your %s certainly looks better now";
+	private static final String TXT_LOOKS_BETTER = Game.getVar(R.string.ScrollOfUpgrade_LooksBetter);
 	
 	{
-		name = "Scroll of Upgrade";
-		inventoryTitle = "Select an item to upgrade";
+		name = Game.getVar(R.string.ScrollOfUpgrade_Name);
+		inventoryTitle = Game.getVar(R.string.ScrollOfUpgrade_InvTitle);
 		mode = WndBag.Mode.UPGRADEABLE;
 	}
 	
@@ -53,11 +55,6 @@ public class ScrollOfUpgrade extends InventoryScroll {
 	
 	@Override
 	public String desc() {
-		return
-			"This scroll will upgrade a single item, improving its quality. A wand will " +
-			"increase in power and in number of charges; a weapon will inflict more damage " +
-			"or find its mark more frequently; a suit of armor will deflect additional blows; " +
-			"the effect of a ring on its wearer will intensify. Weapons and armor will also " +
-			"require less strength to use, and any curses on the item will be lifted.";
+		return Game.getVar(R.string.ScrollOfUpgrade_Info);
 	}
 }

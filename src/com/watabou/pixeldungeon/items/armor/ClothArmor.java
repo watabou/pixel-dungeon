@@ -17,13 +17,15 @@
  */
 package com.watabou.pixeldungeon.items.armor;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.pixeldungeon.R;
 
 
 public class ClothArmor extends Armor {
 
 	{	
-		name = "cloth armor";
+		name = Game.getVar(R.string.ClothArmor_Name);
 		image = ItemSpriteSheet.ARMOR_CLOTH;
 	}
 	
@@ -33,6 +35,6 @@ public class ClothArmor extends Armor {
 	
 	@Override
 	public String desc() {
-		return "This lightweight armor offers basic protection.";
+		return Game.getVar(R.string.ClothArmor_Desc);
 	}
 }

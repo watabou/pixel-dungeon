@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
@@ -30,7 +32,7 @@ import com.watabou.utils.Random;
 
 public class Stench extends Glyph {
 
-	private static final String TXT_STENCH	= "%s of stench";
+	private static final String TXT_STENCH = Game.getVar(R.string.Stench_Txt);
 	
 	private static ItemSprite.Glowing GREEN = new ItemSprite.Glowing( 0x22CC44 );
 	

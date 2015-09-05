@@ -17,9 +17,11 @@
  */
 package com.watabou.pixeldungeon.items.wands;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
@@ -36,14 +38,12 @@ import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
 public class WandOfFlock extends Wand {
-
 	{
-		name = "Wand of Flock";
+		name = Game.getVar(R.string.WandOfFlock_Name);
 	}
 	
 	@Override
 	protected void onZap( int cell ) {
-		
 		int level = level();
 		
 		int n = level + 2;
@@ -97,19 +97,17 @@ public class WandOfFlock extends Wand {
 		MagicMissile.wool( curUser.sprite.parent, curUser.pos, cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 	}
-	
+
 	@Override
 	public String desc() {
-		return 
-			"A flick of this wand summons a flock of magic sheep, creating temporary impenetrable obstacle.";
+		return Game.getVar(R.string.WandOfFlock_Info);
 	}
-	
+
 	public static class Sheep extends NPC {
-		
-		private static final String[] QUOTES = {"Baa!", "Baa?", "Baa.", "Baa..."};
+		private static final String[] QUOTES = Game.getVars(R.array.WandOfFlock_SheepBaa);
 		
 		{
-			name = "sheep";
+			name = Game.getVar(R.string.WandOfFlock_SheepName);
 			spriteClass = SheepSprite.class;
 		}
 		
@@ -138,9 +136,7 @@ public class WandOfFlock extends Wand {
 		
 		@Override
 		public String description() {
-			return 
-				"This is a magic sheep. What's so magical about it? You can't kill it. " +
-				"It will stand there until it magcially fades away, all the while chewing cud with a blank stare.";
+			return Game.getVar(R.string.WandOfFlock_SheepInfo);
 		}
 
 		@Override

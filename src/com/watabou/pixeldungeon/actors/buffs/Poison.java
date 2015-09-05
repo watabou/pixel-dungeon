@@ -17,8 +17,10 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -58,7 +60,7 @@ public class Poison extends Buff implements Hero.Doom {
 	
 	@Override
 	public String toString() {
-		return "Poisoned";
+		return Game.getVar(R.string.Poison_Info);
 	}
 	
 	@Override
@@ -91,6 +93,6 @@ public class Poison extends Buff implements Hero.Doom {
 		Badges.validateDeathFromPoison();
 		
 		Dungeon.fail( Utils.format( ResultDescriptions.POISON, Dungeon.depth ) );
-		GLog.n( "You died from poison..." );
+		GLog.n(Game.getVar(R.string.Poison_Death));
 	}
 }

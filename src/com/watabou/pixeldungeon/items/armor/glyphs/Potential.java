@@ -18,7 +18,9 @@
 package com.watabou.pixeldungeon.items.armor.glyphs;
 
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Lightning;
 import com.watabou.pixeldungeon.items.armor.Armor;
@@ -31,7 +33,7 @@ import com.watabou.utils.Random;
 
 public class Potential extends Glyph {
 
-	private static final String TXT_POTENTIAL	= "%s of potential";
+	private static final String TXT_POTENTIAL = Game.getVar(R.string.Potential_Txt);
 	
 	private static ItemSprite.Glowing BLUE = new ItemSprite.Glowing( 0x66CCEE );
 	

@@ -108,25 +108,24 @@ import com.watabou.pixeldungeon.windows.WndResurrect;
 import com.watabou.pixeldungeon.windows.WndTradeItem;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+import com.watabou.pixeldungeon.R;
 
 public class Hero extends Char {
 	
-	private static final String TXT_LEAVE = "One does not simply leave Pixel Dungeon.";
+	private static final String TXT_LEAVE           = Game.getVar(R.string.Hero_Leave);
 	
-	private static final String TXT_LEVEL_UP = "level up!";
-	private static final String TXT_NEW_LEVEL = 
-		"Welcome to level %d! Now you are healthier and more focused. " +
-		"It's easier for you to hit enemies and dodge their attacks.";
+	private static final String TXT_LEVEL_UP        = Game.getVar(R.string.Hero_LevelUp);
+	private static final String TXT_NEW_LEVEL       = Game.getVar(R.string.Hero_NewLevel);
 	
-	public static final String TXT_YOU_NOW_HAVE	= "You now have %s";
+	public static final String TXT_YOU_NOW_HAVE	    = Game.getVar(R.string.Hero_YouNowHave);
 	
-	private static final String TXT_SOMETHING_ELSE	= "There is something else here";
-	private static final String TXT_LOCKED_CHEST	= "This chest is locked and you don't have matching key";
-	private static final String TXT_LOCKED_DOOR		= "You don't have a matching key";
-	private static final String TXT_NOTICED_SMTH	= "You noticed something";
+	private static final String TXT_SOMETHING_ELSE	= Game.getVar(R.string.Hero_SomethingElse);
+	private static final String TXT_LOCKED_CHEST	= Game.getVar(R.string.Hero_LockedChest);
+	private static final String TXT_LOCKED_DOOR		= Game.getVar(R.string.Hero_LockedDoor);
+	private static final String TXT_NOTICED_SMTH	= Game.getVar(R.string.Hero_NoticedSmth);
 	
-	private static final String TXT_WAIT	= "...";
-	private static final String TXT_SEARCH	= "search";
+	private static final String TXT_WAIT	        = Game.getVar(R.string.Hero_Wait);
+	private static final String TXT_SEARCH	        = Game.getVar(R.string.Hero_Search);
 	
 	public static final int STARTING_STR = 10;
 	
@@ -168,7 +167,8 @@ public class Hero extends Char {
 	
 	public Hero() {
 		super();
-		name = "you";
+		
+		name = Game.getVar(R.string.Hero_Name);
 		
 		HP = HT = 20;
 		STR = STARTING_STR;
@@ -1079,33 +1079,33 @@ public class Hero extends Char {
 		
 		if (sprite != null) {
 			if (buff instanceof Burning) {
-				GLog.w( "You catch fire!" );
+				GLog.w(Game.getVar(R.string.Hero_StaBurning));
 				interrupt();
 			} else if (buff instanceof Paralysis) {
-				GLog.w( "You are paralysed!" );
+				GLog.w(Game.getVar(R.string.Hero_StaParalysis));
 				interrupt();
 			} else if (buff instanceof Poison) {
-				GLog.w( "You are poisoned!" );
+				GLog.w(Game.getVar(R.string.Hero_StaPoison));
 				interrupt();
 			} else if (buff instanceof Ooze) {
-				GLog.w( "Caustic ooze eats your flesh. Wash away it!" );
+				GLog.w(Game.getVar(R.string.Hero_StaOoze));
 			} else if (buff instanceof Roots) {
-				GLog.w( "You can't move!" );
+				GLog.w(Game.getVar(R.string.Hero_StaRoots));
 			} else if (buff instanceof Weakness) {
-				GLog.w( "You feel weakened!" );
+				GLog.w(Game.getVar(R.string.Hero_StaWeakness));
 			} else if (buff instanceof Blindness) {
-				GLog.w( "You are blinded!" );
+				GLog.w(Game.getVar(R.string.Hero_StaBlindness));
 			} else if (buff instanceof Fury) {
-				GLog.w( "You become furious!" );
-				sprite.showStatus( CharSprite.POSITIVE, "furious" );
+				GLog.w(Game.getVar(R.string.Hero_StaFury));
+				sprite.showStatus( CharSprite.POSITIVE, Game.getVar(R.string.Hero_StaFurious));
 			} else if (buff instanceof Charm) {
-				GLog.w( "You are charmed!" );
+				GLog.w(Game.getVar(R.string.Hero_StaCharm));
 			}  else if (buff instanceof Cripple) {
-				GLog.w( "You are crippled!" );
+				GLog.w(Game.getVar(R.string.Hero_StaCripple));
 			} else if (buff instanceof Bleeding) {
-				GLog.w( "You are bleeding!" );
+				GLog.w(Game.getVar(R.string.Hero_StaBleeding));
 			} else if (buff instanceof Vertigo) {
-				GLog.w( "Everything is spinning around you!" );
+				GLog.w(Game.getVar(R.string.Hero_StaVertigo));
 				interrupt();
 			}
 			

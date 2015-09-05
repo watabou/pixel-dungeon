@@ -19,6 +19,8 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.potions.PotionOfHealing;
@@ -29,7 +31,7 @@ import com.watabou.utils.Random;
 public class Bat extends Mob {
 
 	{
-		name = "vampire bat";
+		name = Game.getVar(R.string.Bat_Name);
 		spriteClass = BatSprite.class;
 		
 		HP = HT = 30;
@@ -62,7 +64,7 @@ public class Bat extends Mob {
 	
 	@Override
 	public String defenseVerb() {
-		return "evaded";
+		return Game.getVar(R.string.Bat_Defense);
 	}
 	
 	@Override
@@ -80,9 +82,7 @@ public class Bat extends Mob {
 	
 	@Override
 	public String description() {
-		return
-			"These brisk and tenacious inhabitants of cave domes may defeat much larger opponents by " +
-			"replenishing their health with each successful attack.";
+		return Game.getVar(R.string.Bat_Desc);
 	}
 	
 	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();

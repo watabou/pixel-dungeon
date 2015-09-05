@@ -22,11 +22,13 @@ import java.util.Locale;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.BitmapText;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -38,14 +40,14 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndHero extends WndTabbed {
 	
-	private static final String TXT_STATS	= "Stats";
-	private static final String TXT_BUFFS	= "Buffs";
+	private static final String TXT_STATS	= Game.getVar(R.string.WndHero_Stats);
+	private static final String TXT_BUFFS	= Game.getVar(R.string.WndHero_Buffs);
 	
-	private static final String TXT_EXP		= "Experience";
-	private static final String TXT_STR		= "Strength";
-	private static final String TXT_HEALTH	= "Health";
-	private static final String TXT_GOLD	= "Gold Collected";
-	private static final String TXT_DEPTH	= "Maximum Depth";
+	private static final String TXT_EXP		= Game.getVar(R.string.WndHero_Exp);
+	private static final String TXT_STR		= Game.getVar(R.string.WndHero_Str);
+	private static final String TXT_HEALTH	= Game.getVar(R.string.WndHero_Health);
+	private static final String TXT_GOLD	= Game.getVar(R.string.WndHero_Gold);
+	private static final String TXT_DEPTH	= Game.getVar(R.string.WndHero_Depth);
 	
 	private static final int WIDTH		= 100;
 	private static final int TAB_WIDTH	= 40;
@@ -92,9 +94,10 @@ public class WndHero extends WndTabbed {
 	
 	private class StatsTab extends Group {
 		
-		private static final String TXT_TITLE		= "Level %d %s";
-		private static final String TXT_CATALOGUS	= "Catalogus";
-		private static final String TXT_JOURNAL		= "Journal";
+		//Removido o "Static" para poder definir valor a partir ds resouces
+		private final String TXT_TITLE     = Game.getVar(R.string.WndHero_StaTitle);
+		private final String TXT_CATALOGUS = Game.getVar(R.string.WndHero_StaCatalogus);
+		private final String TXT_JOURNAL   = Game.getVar(R.string.WndHero_StaJournal);
 		
 		private static final int GAP = 5;
 		

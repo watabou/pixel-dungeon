@@ -21,10 +21,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.SnipersMark;
@@ -53,10 +55,11 @@ import com.watabou.utils.PointF;
 
 public class Item implements Bundlable {
 
-	private static final String TXT_PACK_FULL	= "Your pack is too full for the %s";
-	
-	private static final String TXT_DEGRADED		= "Because of frequent use, your %s has degraded.";
-	private static final String TXT_GONNA_DEGRADE	= "Because of frequent use, your %s is going to degrade soon.";
+	private static final String TXT_PACK_FULL      = Game.getVar(R.string.Item_PackFull);
+	private static final String TXT_DIR_THROW      = Game.getVar(R.string.Item_DirThrow);
+
+	private static final String TXT_DEGRADED       = Game.getVar(R.string.Item_Degraded);
+	private static final String TXT_GONNA_DEGRADE  = Game.getVar(R.string.Item_GonnaDegrade);
 	
 	private static final String TXT_TO_STRING		= "%s";
 	private static final String TXT_TO_STRING_X		= "%s x%d";
@@ -69,12 +72,12 @@ public class Item implements Bundlable {
 	protected static final float TIME_TO_PICK_UP	= 1.0f;
 	protected static final float TIME_TO_DROP		= 0.5f;
 	
-	public static final String AC_DROP		= "DROP";
-	public static final String AC_THROW		= "THROW";
+	public static final String AC_DROP		= Game.getVar(R.string.Item_ACDrop);
+	public static final String AC_THROW		= Game.getVar(R.string.Item_ACThrow);
 	
 	public String defaultAction;
 	
-	protected String name = "smth";
+	protected String name = Game.getVar(R.string.Item_Name);
 	protected int image = 0;
 	
 
@@ -547,7 +550,7 @@ public class Item implements Bundlable {
 		}
 		@Override
 		public String prompt() {
-			return "Choose direction of throw";
+			return TXT_DIR_THROW;
 		}
 	};
 }

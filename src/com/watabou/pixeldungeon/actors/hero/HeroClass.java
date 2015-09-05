@@ -17,8 +17,10 @@
  */
 package com.watabou.pixeldungeon.actors.hero;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
 import com.watabou.pixeldungeon.items.armor.ClothArmor;
 import com.watabou.pixeldungeon.items.bags.Keyring;
@@ -31,65 +33,38 @@ import com.watabou.pixeldungeon.items.wands.WandOfMagicMissile;
 import com.watabou.pixeldungeon.items.weapon.melee.Dagger;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.items.weapon.melee.ShortSword;
-import com.watabou.pixeldungeon.items.weapon.missiles.Dart;
 import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
+import com.watabou.pixeldungeon.items.weapon.missiles.Dart;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.utils.Bundle;
 
 public enum HeroClass {
 
-	WARRIOR( "warrior" ), MAGE( "mage" ), ROGUE( "rogue" ), HUNTRESS( "huntress" );
-	
+	WARRIOR(Game.getVar(R.string.HeroClass_War)),
+	MAGE(Game.getVar(R.string.HeroClass_Mag)),
+	ROGUE(Game.getVar(R.string.HeroClass_Rog)),
+	HUNTRESS(Game.getVar(R.string.HeroClass_Hun));
+
 	private String title;
-	
+
 	private HeroClass( String title ) {
 		this.title = title;
 	}
-	
-	public static final String[] WAR_PERKS = {
-		"Warriors start with 11 points of Strength.",
-		"Warriors start with a unique short sword. This sword can be later \"reforged\" to upgrade another melee weapon.",
-		"Warriors are less proficient with missile weapons.",
-		"Any piece of food restores some health when eaten.",
-		"Potions of Strength are identified from the beginning.",
-	};
-	
-	public static final String[] MAG_PERKS = {
-		"Mages start with a unique Wand of Magic Missile. This wand can be later \"disenchanted\" to upgrade another wand.",
-		"Mages recharge their wands faster.",
-		"When eaten, any piece of food restores 1 charge for all wands in the inventory.",
-		"Mages can use wands as a melee weapon.",
-		"Scrolls of Identify are identified from the beginning."
-	};
-	
-	public static final String[] ROG_PERKS = {
-		"Rogues start with a Ring of Shadows+1.",
-		"Rogues identify a type of a ring on equipping it.",
-		"Rogues are proficient with light armor, dodging better while wearing one.",
-		"Rogues are proficient in detecting hidden doors and traps.",
-		"Rogues can go without food longer.",
-		"Scrolls of Magic Mapping are identified from the beginning."
-	};
-	
-	public static final String[] HUN_PERKS = {
-		"Huntresses start with 15 points of Health.",
-		"Huntresses start with a unique upgradeable boomerang.",
-		"Huntresses are proficient with missile weapons and get a damage bonus for excessive strength when using them.",
-		"Huntresses gain more health from dewdrops.",
-		"Huntresses sense neighbouring monsters even if they are hidden behind obstacles."
-	};
+
+	public static final String[] WAR_PERKS = Game.getVars(R.array.HeroClass_WarPerks);
+	public static final String[] MAG_PERKS = Game.getVars(R.array.HeroClass_MagPerks);
+	public static final String[] ROG_PERKS = Game.getVars(R.array.HeroClass_RogPerks);
+	public static final String[] HUN_PERKS = Game.getVars(R.array.HeroClass_HunPerks);
 	
 	public void initHero( Hero hero ) {
-		
 		hero.heroClass = this;
-		
 		initCommon( hero );
-		
+
 		switch (this) {
 		case WARRIOR:
 			initWarrior( hero );
 			break;
-			
+
 		case MAGE:
 			initMage( hero );
 			break;
@@ -211,7 +186,7 @@ public enum HeroClass {
 		return null;
 	}
 
-	private static final String CLASS	= "class";
+	private static final String CLASS = "class";
 	
 	public void storeInBundle( Bundle bundle ) {
 		bundle.put( CLASS, toString() );

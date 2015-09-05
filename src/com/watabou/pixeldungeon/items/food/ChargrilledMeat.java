@@ -17,20 +17,22 @@
  */
 package com.watabou.pixeldungeon.items.food;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class ChargrilledMeat extends Food {
 
 	{
-		name = "chargrilled meat";
+		name = Game.getVar(R.string.ChargrilledMeat_Name);
 		image = ItemSpriteSheet.STEAK;
 		energy = Hunger.STARVING - Hunger.HUNGRY;
 	}
 	
 	@Override
 	public String info() {
-		return "It looks like a decent steak.";
+		return Game.getVar(R.string.ChargrilledMeat_Info);
 	}
 	
 	@Override

@@ -18,23 +18,18 @@
 package com.watabou.pixeldungeon.scenes;
 
 import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.windows.WndStory;
 
 public class IntroScene extends PixelScene {
 
-	private static final String TEXT = 	
-		"Many heroes of all kinds ventured into the Dungeon before you. Some of them have returned with treasures and magical " +
-		"artifacts, most have never been heard of since. But none have succeeded in retrieving the Amulet of Yendor, " +
-		"which is told to be hidden in the depths of the Dungeon.\n\n" +
-		"" +
-		"You consider yourself ready for the challenge, but most importantly, you feel that fortune smiles on you. " +
-		"It's time to start your own adventure!";
+	private static final String TXT = Game.getVar(R.string.IntroScene_Txt);
 	
 	@Override
 	public void create() {
 		super.create();
 		
-		add( new WndStory( TEXT ) {
+		add( new WndStory( TXT ) {
 			@Override
 			public void hide() {
 				super.hide();

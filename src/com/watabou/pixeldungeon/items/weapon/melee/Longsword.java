@@ -17,12 +17,13 @@
  */
 package com.watabou.pixeldungeon.items.weapon.melee;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Longsword extends MeleeWeapon {
-	
 	{
-		name = "longsword";
+		name = Game.getVar(R.string.Longsword_Name);
 		image = ItemSpriteSheet.LONG_SWORD;
 	}
 	
@@ -32,6 +33,6 @@ public class Longsword extends MeleeWeapon {
 	
 	@Override
 	public String desc() {
-		return "This towering blade inflicts heavy damage by investing its heft into every cut.";
+		return Game.getVar(R.string.Longsword_Info);
 	}
 }

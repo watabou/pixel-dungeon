@@ -17,11 +17,13 @@
  */
 package com.watabou.pixeldungeon.levels;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.Scene;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Wandmaker;
 import com.watabou.pixeldungeon.effects.Halo;
 import com.watabou.pixeldungeon.effects.particles.FlameParticle;
@@ -130,7 +132,7 @@ public class PrisonLevel extends RegularLevel {
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.WATER:
-			return "Dark cold water.";
+			return Game.getVar(R.string.Prison_TileWater);
 		default:
 			return super.tileName( tile );
 		}
@@ -140,9 +142,9 @@ public class PrisonLevel extends RegularLevel {
 	public String tileDesc(int tile) {
 		switch (tile) {
 		case Terrain.EMPTY_DECO:
-			return "There are old blood stains on the floor.";
+			return Game.getVar(R.string.Prison_TileDescDeco);
 		case Terrain.BOOKSHELF:
-			return "This is probably a vestige of a prison library. Might it burn?";
+			return Game.getVar(R.string.Prison_TileDescBookshelf);
 		default:
 			return super.tileDesc( tile );
 		}

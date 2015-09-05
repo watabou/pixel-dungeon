@@ -18,7 +18,9 @@
 package com.watabou.pixeldungeon.windows;
 
 import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.watabou.pixeldungeon.items.EquipableItem;
@@ -40,15 +42,15 @@ public class WndTradeItem extends Window {
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 16;
 	
-	private static final String TXT_SALE		= "FOR SALE: %s - %dg";
-	private static final String TXT_BUY			= "Buy for %dg";
-	private static final String TXT_SELL		= "Sell for %dg";
-	private static final String TXT_SELL_1		= "Sell 1 for %dg";
-	private static final String TXT_SELL_ALL	= "Sell all for %dg";
-	private static final String TXT_CANCEL		= "Never mind";
+	private static final String TXT_SALE     = Game.getVar(R.string.WndTradeItem_Sale);
+	private static final String TXT_BUY      = Game.getVar(R.string.WndTradeItem_Buy);
+	private static final String TXT_SELL     = Game.getVar(R.string.WndTradeItem_Sell);
+	private static final String TXT_SELL_1   = Game.getVar(R.string.WndTradeItem_Sell1);
+	private static final String TXT_SELL_ALL = Game.getVar(R.string.WndTradeItem_SellAll);
+	private static final String TXT_CANCEL   = Game.getVar(R.string.WndTradeItem_Cancel);
 	
-	private static final String TXT_SOLD	= "You've sold your %s for %dg";
-	private static final String TXT_BOUGHT	= "You've bought %s for %dg";
+	private static final String TXT_SOLD     = Game.getVar(R.string.WndTradeItem_Sold);
+	private static final String TXT_BOUGHT   = Game.getVar(R.string.WndTradeItem_Bought);
 	
 	private WndBag owner;
 	

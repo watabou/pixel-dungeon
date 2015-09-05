@@ -17,19 +17,21 @@
  */
 package com.watabou.pixeldungeon.items;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.utils.GLog;
 
 public abstract class EquipableItem extends Item {
 
-	private static final String TXT_UNEQUIP_CURSED	= "You can't remove cursed %s!";
-	
-	public static final String AC_EQUIP		= "EQUIP";
-	public static final String AC_UNEQUIP	= "UNEQUIP";
+	public static final String AC_EQUIP		= Game.getVar(R.string.EquipableItem_ACEquip);
+	public static final String AC_UNEQUIP	= Game.getVar(R.string.EquipableItem_ACUnequip);
+
+	private static final String TXT_UNEQUIP_CURSED	= Game.getVar(R.string.EquipableItem_Unequip);
 	
 	@Override
 	public void execute( Hero hero, String action ) {

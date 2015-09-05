@@ -19,8 +19,10 @@ package com.watabou.pixeldungeon.windows;
 
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.scenes.PixelScene;
@@ -28,7 +30,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndClass extends WndTabbed {
 	
-	private static final String TXT_MASTERY	= "Mastery";
+	private static final String TXT_MASTERY	= Game.getVar(R.string.WndClass_Mastery);
 	
 	private static final int WIDTH			= 110;
 	

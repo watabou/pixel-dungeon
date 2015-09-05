@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon;
 
+import com.watabou.noosa.Game;
+
 public class Challenges {
 
 	public static final int NO_FOOD				= 1;
@@ -27,15 +29,7 @@ public class Challenges {
 	public static final int DARKNESS			= 32;
 	public static final int NO_SCROLLS			= 64;
 	
-	public static final String[] NAMES = {
-		"On diet",
-		"Faith is my armor",
-		"Pharmacophobia",
-		"Barren land",
-		"Swarm intelligence",
-		"Into darkness",
-		"Forbidden runes"
-	};
+	public static final String[] NAMES = Game.getVars(R.array.Challenges_Names);
 	
 	public static final int[] MASKS = {
 		NO_FOOD, NO_ARMOR, NO_HEALING, NO_HERBALISM, SWARM_INTELLIGENCE, DARKNESS, NO_SCROLLS

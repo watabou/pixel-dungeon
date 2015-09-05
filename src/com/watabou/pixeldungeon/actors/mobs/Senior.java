@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.actors.mobs;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
@@ -27,7 +29,7 @@ import com.watabou.utils.Random;
 public class Senior extends Monk {
 
 	{
-		name = "senior monk";
+		name = Game.getVar(R.string.Senior_Name);
 		spriteClass = SeniorSprite.class;
 	}
 	

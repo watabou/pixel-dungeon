@@ -15,15 +15,18 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
- */package com.watabou.pixeldungeon.items.potions;
+ */
+package com.watabou.pixeldungeon.items.potions;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Splash;
 import com.watabou.pixeldungeon.items.Item;
@@ -39,16 +42,14 @@ import com.watabou.utils.Bundle;
 
 public class Potion extends Item {
 	
-	public static final String AC_DRINK	= "DRINK";
+	public static final String AC_DRINK	= Game.getVar(R.string.Potion_ACDrink);
 	
-	private static final String TXT_HARMFUL		= "Harmful potion!";
-	private static final String TXT_BENEFICIAL	= "Beneficial potion";
-	private static final String TXT_YES			= "Yes, I know what I'm doing";
-	private static final String TXT_NO			= "No, I changed my mind";
-	private static final String TXT_R_U_SURE_DRINK = 
-		"Are you sure you want to drink it? In most cases you should throw such potions at your enemies.";
-	private static final String TXT_R_U_SURE_THROW = 
-		"Are you sure you want to throw it? In most cases it makes sense to drink it.";
+	private static final String TXT_HARMFUL		= Game.getVar(R.string.Potion_Harmfull);
+	private static final String TXT_BENEFICIAL	= Game.getVar(R.string.Potion_Beneficial);
+	private static final String TXT_YES			= Game.getVar(R.string.Potion_Yes);
+	private static final String TXT_NO			= Game.getVar(R.string.Potion_No);
+	private static final String TXT_R_U_SURE_DRINK = Game.getVar(R.string.Potion_SureDrink);
+	private static final String TXT_R_U_SURE_THROW = Game.getVar(R.string.Potion_SureThrow);
 	
 	private static final float TIME_TO_DRINK = 1f;
 	
@@ -66,9 +67,7 @@ public class Potion extends Item {
 		PotionOfMight.class,
 		PotionOfFrost.class
 	};
-	private static final String[] colors = {
-		"turquoise", "crimson", "azure", "jade", "golden", "magenta", 
-		"charcoal", "ivory", "amber", "bistre", "indigo", "silver"};
+	private static final String[] colors = Game.getVars(R.array.Potion_Colors);
 	private static final Integer[] images = {
 		ItemSpriteSheet.POTION_TURQUOISE, 
 		ItemSpriteSheet.POTION_CRIMSON, 
@@ -214,7 +213,7 @@ public class Potion extends Item {
 	
 	public void shatter( int cell ) {
 		if (Dungeon.visible[cell]) {
-			GLog.i( "The flask shatters and " + color() + " liquid splashes harmlessly" );
+		   GLog.i(String.format(Game.getVar(R.string.Potion_Shatter), color()));
 			Sample.INSTANCE.play( Assets.SND_SHATTER );
 			splash( cell );
 		}
@@ -244,15 +243,12 @@ public class Potion extends Item {
 	
 	@Override
 	public String name() {
-		return isKnown() ? name : color + " potion";
+		return isKnown() ? name : String.format(Game.getVar(R.string.Potion_Name), color);
 	}
 	
 	@Override
 	public String info() {
-		return isKnown() ?
-			desc() :
-			"This flask contains a swirling " + color + " liquid. " +
-			"Who knows what it will do when drunk or thrown?";
+		return isKnown() ? desc() : String.format(Game.getVar(R.string.Potion_Info), color);
 	}
 	
 	@Override

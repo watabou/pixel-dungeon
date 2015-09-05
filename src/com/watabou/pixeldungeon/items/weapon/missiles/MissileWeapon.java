@@ -19,7 +19,9 @@ package com.watabou.pixeldungeon.items.weapon.missiles;
 
 import java.util.ArrayList;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -31,11 +33,10 @@ import com.watabou.pixeldungeon.windows.WndOptions;
 
 public class MissileWeapon extends Weapon {
 
-	private static final String TXT_MISSILES	= "Missile weapon";
-	private static final String TXT_YES			= "Yes, I know what I'm doing";
-	private static final String TXT_NO			= "No, I changed my mind";
-	private static final String TXT_R_U_SURE	= 
-		"Do you really want to equip it as a melee weapon?";
+	private static final String TXT_MISSILES = Game.getVar(R.string.MissileWeapon_Missiles);
+	private static final String TXT_YES      = Game.getVar(R.string.MissileWeapon_Yes);
+	private static final String TXT_NO       = Game.getVar(R.string.MissileWeapon_No);
+	private static final String TXT_R_U_SURE = Game.getVar(R.string.MissileWeapon_Sure);
 	
 	{
 		stackable = true;
@@ -119,24 +120,21 @@ public class MissileWeapon extends Weapon {
 	public String info() {
 		
 		StringBuilder info = new StringBuilder( desc() );
-		
-		info.append( "\n\nAverage damage of this weapon equals to " + (MIN + (MAX - MIN) / 2) + " points per hit. " );
-		
+		   
+		info.append(String.format(Game.getVar(R.string.MissileWeapon_Info1),(MIN + (MAX - MIN) / 2)));
+		info.append(" ");
+
 		if (Dungeon.hero.belongings.backpack.items.contains( this )) {
 			if (STR > Dungeon.hero.STR()) {
-				info.append( 
-					"Because of your inadequate strength the accuracy and speed " +
-					"of your attack with this " + name + " is decreased." );
+				info.append(String.format(Game.getVar(R.string.MissileWeapon_Info2), name));
 			}
 			if (STR < Dungeon.hero.STR()) {
-				info.append( 
-					"Because of your excess strength the damage " +
-					"of your attack with this " + name + " is increased." );
+				info.append(String.format(Game.getVar(R.string.MissileWeapon_Info3), name));
 			}
 		}
 		
 		if (isEquipped( Dungeon.hero )) {
-			info.append( "\n\nYou hold the " + name + " at the ready." ); 
+			info.append(String.format(Game.getVar(R.string.MissileWeapon_Info4), name)); 
 		}
 		
 		return info.toString();

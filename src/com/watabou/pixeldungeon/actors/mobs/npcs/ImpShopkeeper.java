@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.actors.mobs.npcs;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
@@ -27,10 +29,10 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class ImpShopkeeper extends Shopkeeper {
 
-	private static final String TXT_GREETINGS = "Hello, friend!";
+	private static final String TXT_GREETINGS = Game.getVar(R.string.ImpShopkeeper_Greetings);
 	
 	{
-		name = "ambitious imp";
+		name = Game.getVar(R.string.ImpShopkeeper_Name);
 		spriteClass = ImpSprite.class;
 	}
 	
@@ -64,8 +66,6 @@ public class ImpShopkeeper extends Shopkeeper {
 	
 	@Override
 	public String description() {
-		return 
-			"Imps are lesser demons. They are notable for neither their strength nor their magic talent. " +
-			"But they are quite smart and sociable, and many of imps prefer to live and do business among non-demons.";
+		return Game.getVar(R.string.ImpShopkeeper_Desc);
 	}
 }

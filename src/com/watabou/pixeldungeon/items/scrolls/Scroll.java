@@ -20,7 +20,9 @@ package com.watabou.pixeldungeon.items.scrolls;
 import java.util.ArrayList;
 import java.util.HashSet;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.items.Item;
@@ -31,9 +33,9 @@ import com.watabou.utils.Bundle;
 
 public abstract class Scroll extends Item {
 
-	private static final String TXT_BLINDED	= "You can't read a scroll while blinded";
+	private static final String TXT_BLINDED	= Game.getVar(R.string.Scroll_Blinded);
 	
-	public static final String AC_READ	= "READ";
+	public static final String AC_READ	= Game.getVar(R.string.Scroll_ACRead);
 	
 	protected static final float TIME_TO_READ	= 1f;
 	
@@ -51,8 +53,7 @@ public abstract class Scroll extends Item {
 		ScrollOfUpgrade.class,
 		ScrollOfEnchantment.class
 	};
-	private static final String[] runes = 
-		{"KAUNAN", "SOWILO", "LAGUZ", "YNGVI", "GYFU", "RAIDO", "ISAZ", "MANNAZ", "NAUDIZ", "BERKANAN", "ODAL", "TIWAZ"};
+	private static final String[] runes = Game.getVars(R.array.Scroll_Runes);
 	private static final Integer[] images = {
 		ItemSpriteSheet.SCROLL_KAUNAN, 
 		ItemSpriteSheet.SCROLL_SOWILO, 
@@ -144,15 +145,12 @@ public abstract class Scroll extends Item {
 	
 	@Override
 	public String name() {
-		return isKnown() ? name : "scroll \"" + rune + "\"";
+		return isKnown() ? name : String.format(Game.getVar(R.string.Scroll_Name), rune);
 	}
 	
 	@Override
 	public String info() {
-		return isKnown() ?
-			desc() :
-			"This parchment is covered with indecipherable writing, and bears a title " +
-			"of rune " + rune + ". Who knows what it will do when read aloud?";
+		return isKnown() ? desc() : String.format(Game.getVar(R.string.Scroll_Info), rune);
 	}
 	
 	@Override

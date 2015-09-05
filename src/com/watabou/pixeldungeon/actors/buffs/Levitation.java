@@ -17,7 +17,9 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
@@ -50,6 +52,6 @@ public class Levitation extends FlavourBuff {
 	
 	@Override
 	public String toString() {
-		return "Levitating";
+		return Game.getVar(R.string.Levitation_Info);
 	}
 }

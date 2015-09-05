@@ -19,8 +19,10 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
@@ -37,7 +39,7 @@ import com.watabou.utils.Random;
 public class Statue extends Mob {
 	
 	{
-		name = "animated statue";
+		name = Game.getVar(R.string.Statue_Name);
 		spriteClass = StatueSprite.class;
 
 		EXP = 0;
@@ -143,9 +145,7 @@ public class Statue extends Mob {
 
 	@Override
 	public String description() {
-		return
-			"You would think that it's just another ugly statue of this dungeon, but its red glowing eyes give itself away. " +
-			"While the statue itself is made of stone, the _" + weapon.name() + "_, it's wielding, looks real.";
+		return String.format(Game.getVar(R.string.Statue_Desc), weapon.name());
 	}
 	
 	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();

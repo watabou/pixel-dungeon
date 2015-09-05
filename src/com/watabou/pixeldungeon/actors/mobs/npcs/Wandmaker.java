@@ -19,10 +19,12 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import java.util.ArrayList;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.Blob;
@@ -65,27 +67,14 @@ import com.watabou.utils.Random;
 public class Wandmaker extends NPC {
 
 	{	
-		name = "old wandmaker";
+		name = Game.getVar(R.string.WandMaker_Name);
 		spriteClass = WandmakerSprite.class;
 	}
 	
-	private static final String TXT_BERRY1	=
-		"Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient - " +
-		"a _Rotberry seed_. Being a magic user, I'm quite able to defend myself against local monsters, " +
-		"but I'm getting lost in no time, it's very embarrassing. Probably you could help me? I would be " +
-		"happy to pay for your service with one of my best wands.";
-	
-	private static final String TXT_DUST1	=
-		"Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient - " +
-		"_corpse dust_. It can be gathered from skeletal remains and there is an ample number of them in the dungeon. " +
-		"Being a magic user, I'm quite able to defend myself against local monsters, but I'm getting lost in no time, " +
-		"it's very embarrassing. Probably you could help me? I would be happy to pay for your service with one of my best wands.";
-	
-	private static final String TXT_BERRY2	=
-		"Any luck with a Rotberry seed, %s? No? Don't worry, I'm not in a hurry.";
-	
-	private static final String TXT_DUST2	=
-		"Any luck with corpse dust, %s? Bone piles are the most obvious places to look.";
+	private static final String TXT_BERRY1 = Game.getVar(R.string.WandMaker_Berry1);
+	private static final String TXT_BERRY2 = Game.getVar(R.string.WandMaker_Berry2);
+	private static final String TXT_DUST1  = Game.getVar(R.string.WandMaker_Dust1);
+	private static final String TXT_DUST2  = Game.getVar(R.string.WandMaker_Dust2);
 	
 	@Override
 	protected boolean act() {
@@ -100,7 +89,7 @@ public class Wandmaker extends NPC {
 	
 	@Override
 	public String defenseVerb() {
-		return "absorbed";
+		return Game.getVar(R.string.WandMaker_Defense);
 	}
 	
 	@Override
@@ -147,9 +136,7 @@ public class Wandmaker extends NPC {
 	
 	@Override
 	public String description() {
-		return 
-			"This old but hale gentleman wears a slightly confused " +
-			"expression. He is protected by a magic shield.";
+		return Game.getVar(R.string.WandMaker_Desc);
 	}
 	
 	public static class Quest {
@@ -313,12 +300,12 @@ public class Wandmaker extends NPC {
 	
 	public static class Rotberry extends Plant {
 		
-		private static final String TXT_DESC = 
-			"Berries of this shrub taste like sweet, sweet death.";
+		private static final String TXT_NAME = Game.getVar(R.string.WandMaker_RotberryName);
+		private static final String TXT_DESC = Game.getVar(R.string.WandMaker_RotberryDesc);
 		
 		{
 			image = 7;
-			plantName = "Rotberry";
+			plantName = TXT_NAME;
 		}
 		
 		@Override
@@ -341,9 +328,9 @@ public class Wandmaker extends NPC {
 		
 		public static class Seed extends Plant.Seed {
 			{
-				plantName = "Rotberry";
+				plantName = TXT_NAME;
 				
-				name = "seed of " + plantName;
+				name = String.format(TXT_SEED, plantName);
 				image = ItemSpriteSheet.SEED_ROTBERRY;
 				
 				plantClass = Rotberry.class;
@@ -359,7 +346,7 @@ public class Wandmaker extends NPC {
 							mob.beckon( Dungeon.hero.pos );
 						}
 						
-						GLog.w( "The seed emits a roar that echoes throughout the dungeon!" );
+						GLog.w(Game.getVar(R.string.WandMaker_RotberryInfo));
 						CellEmitter.center( Dungeon.hero.pos ).start( Speck.factory( Speck.SCREAM ), 0.3f, 3 );
 						Sample.INSTANCE.play( Assets.SND_CHALLENGE );
 					}
