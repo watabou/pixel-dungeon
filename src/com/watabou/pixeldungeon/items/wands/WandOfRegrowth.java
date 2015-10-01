@@ -47,6 +47,10 @@ public class WandOfRegrowth extends Wand {
 				c == Terrain.EMPTY_DECO) {
 				
 				Level.set( p, Terrain.GRASS );
+				GameScene.updateMap( p );
+				if (Dungeon.visible[p]) {
+					GameScene.discoverTile( p, c );
+				}
 				
 			}
 		}
@@ -58,7 +62,7 @@ public class WandOfRegrowth extends Wand {
 			c == Terrain.GRASS ||
 			c == Terrain.HIGH_GRASS) {
 			
-			GameScene.add( Blob.seed( cell, (level() + 2) * 20, Regrowth.class ) );
+			GameScene.add( Blob.seed( cell, (power() + 2) * 20, Regrowth.class ) );
 			
 		} else {
 			

@@ -24,7 +24,7 @@ import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 
 public class Tempering extends Weapon.Enchantment {
 
-	private static final String TXT_TEMPERED	= "Tempered %s";
+	private static final String TXT_TEMPERED	= "tempered %s";
 	
 	private static ItemSprite.Glowing GRAY = new ItemSprite.Glowing( 0xCC8888 );
 	

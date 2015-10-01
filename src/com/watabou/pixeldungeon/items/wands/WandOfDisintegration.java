@@ -45,7 +45,7 @@ public class WandOfDisintegration extends Wand {
 		
 		boolean terrainAffected = false;
 		
-		int level = level();
+		int level = power();
 		
 		int maxDistance = distance();
 		Ballistica.distance = Math.min( Ballistica.distance, maxDistance );
@@ -62,9 +62,9 @@ public class WandOfDisintegration extends Wand {
 			}
 			
 			int terr = Dungeon.level.map[c];
-			if (terr == Terrain.DOOR || terr == Terrain.BARRICADE) {
+			if (terr == Terrain.DOOR || terr == Terrain.SIGN) {
 				
-				Level.set( c, Terrain.EMBERS );
+				Dungeon.level.destroy( c );
 				GameScene.updateMap( c );
 				terrainAffected = true;
 				

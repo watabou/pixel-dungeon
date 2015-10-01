@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Badges;
+import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Fury;
@@ -45,7 +46,7 @@ public class TomeOfMastery extends Item {
 	
 	{
 		stackable = false;
-		name = "Tome of Mastery";
+		name = Dungeon.hero != null && Dungeon.hero.subClass != HeroSubClass.NONE ? "Tome of Remastery" : "Tome of Mastery";
 		image = ItemSpriteSheet.MASTERY;
 		
 		unique = true;
@@ -69,32 +70,23 @@ public class TomeOfMastery extends Item {
 			
 			curUser = hero;
 			
-			HeroSubClass way1 = null;
-			HeroSubClass way2 = null;
 			switch (hero.heroClass) {
 			case WARRIOR:
-				way1 = HeroSubClass.GLADIATOR;
-				way2 = HeroSubClass.BERSERKER;
+				read( hero, HeroSubClass.GLADIATOR, HeroSubClass.BERSERKER );
 				break;
 			case MAGE:
-				way1 = HeroSubClass.BATTLEMAGE;
-				way2 = HeroSubClass.WARLOCK;
+				read( hero, HeroSubClass.BATTLEMAGE, HeroSubClass.WARLOCK );
 				break;
 			case ROGUE:
-				way1 = HeroSubClass.FREERUNNER;
-				way2 = HeroSubClass.ASSASSIN;
+				read( hero, HeroSubClass.ASSASSIN, HeroSubClass.FREERUNNER );
 				break;
 			case HUNTRESS:
-				way1 = HeroSubClass.SNIPER;
-				way2 = HeroSubClass.WARDEN;
+				read( hero, HeroSubClass.SNIPER, HeroSubClass.WARDEN );
 				break;
 			}
-			GameScene.show( new WndChooseWay( this, way1, way2 ) );
 			
-		} else {
-			
-			super.execute( hero, action );
-			
+		} else {			
+			super.execute( hero, action );		
 		}
 	}
 	
@@ -120,6 +112,16 @@ public class TomeOfMastery extends Item {
 			"This worn leather book is not that thick, but you feel somehow, " +
 			"that you can gather a lot from it. Remember though that reading " +
 			"this tome may require some time.";
+	}
+	
+	private void read( Hero hero, HeroSubClass sc1, HeroSubClass sc2 ) {
+		if (hero.subClass == sc1) {
+			GameScene.show( new WndChooseWay( this, sc2 ) );
+		} else if (hero.subClass == sc2) {
+			GameScene.show( new WndChooseWay( this, sc1 ) );
+		} else {
+			GameScene.show( new WndChooseWay( this, sc1, sc2 ) );
+		}
 	}
 	
 	public void choose( HeroSubClass way ) {

@@ -194,10 +194,6 @@ public abstract class RegularLevel extends Level {
 						
 						r.type = Type.LABORATORY;
 						
-					} else if (Dungeon.depth >= Dungeon.transmutation && specials.contains( Type.MAGIC_WELL )) {
-						
-						r.type = Type.MAGIC_WELL;
-						
 					} else {
 						
 						int n = specials.size();
@@ -457,6 +453,7 @@ public abstract class RegularLevel extends Level {
 				break;
 			case HIDDEN:
 				map[door] = Terrain.SECRET_DOOR;
+				secretDoors++;
 				break;
 			case BARRICADE:
 				map[door] = Random.Int( 3 ) == 0 ? Terrain.BOOKSHELF : Terrain.BARRICADE;

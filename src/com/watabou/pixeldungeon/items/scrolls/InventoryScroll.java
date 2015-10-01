@@ -74,7 +74,7 @@ public abstract class InventoryScroll extends Scroll {
 			if (item != null) {
 
 				((InventoryScroll)curItem).onItemSelected( item );
-				curUser.spendAndNext( TIME_TO_READ );
+				((InventoryScroll)curItem).readAnimation();
 				
 				Sample.INSTANCE.play( Assets.SND_READ );
 				Invisibility.dispel();

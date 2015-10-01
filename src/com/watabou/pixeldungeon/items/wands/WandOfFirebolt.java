@@ -46,7 +46,7 @@ public class WandOfFirebolt extends Wand {
 	@Override
 	protected void onZap( int cell ) {
 
-		int level = level();
+		int level = power();
 		
 		for (int i=1; i < Ballistica.distance - 1; i++) {
 			int c = Ballistica.trace[i];

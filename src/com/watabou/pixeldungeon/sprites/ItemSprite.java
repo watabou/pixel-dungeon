@@ -213,6 +213,7 @@ public class ItemSprite extends MovieClip {
 		
 		public static final Glowing WHITE = new Glowing( 0xFFFFFF, 0.6f );
 		
+		public int color;
 		public float red;
 		public float green;
 		public float blue;
@@ -223,6 +224,9 @@ public class ItemSprite extends MovieClip {
 		}
 		
 		public Glowing( int color, float period ) {
+			
+			this.color = color;
+			
 			red = (color >> 16) / 255f;
 			green = ((color >> 8) & 0xFF) / 255f;
 			blue = (color & 0xFF) / 255f;

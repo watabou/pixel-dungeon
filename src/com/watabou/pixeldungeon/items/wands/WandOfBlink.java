@@ -37,7 +37,7 @@ public class WandOfBlink extends Wand {
 	@Override
 	protected void onZap( int cell ) {
 
-		int level = level();
+		int level = power();
 		
 		if (Ballistica.distance > level + 4) {
 			cell = Ballistica.trace[level + 3];

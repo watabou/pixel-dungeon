@@ -29,7 +29,7 @@ import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.windows.WndOptions;
 
-public class MissileWeapon extends Weapon {
+abstract public class MissileWeapon extends Weapon {
 
 	private static final String TXT_MISSILES	= "Missile weapon";
 	private static final String TXT_YES			= "Yes, I know what I'm doing";
@@ -120,7 +120,9 @@ public class MissileWeapon extends Weapon {
 		
 		StringBuilder info = new StringBuilder( desc() );
 		
-		info.append( "\n\nAverage damage of this weapon equals to " + (MIN + (MAX - MIN) / 2) + " points per hit. " );
+		int min = min();
+		int max = max();
+		info.append( "\n\nAverage damage of this weapon equals to " + (min + (max - min) / 2) + " points per hit. " );
 		
 		if (Dungeon.hero.belongings.backpack.items.contains( this )) {
 			if (STR > Dungeon.hero.STR()) {

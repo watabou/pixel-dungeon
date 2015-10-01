@@ -32,10 +32,17 @@ public class Boomerang extends MissileWeapon {
 		
 		STR = 10;
 		
-		MIN = 1;
-		MAX = 4;
-		
 		stackable = false;
+	}
+	
+	@Override
+	public int min() {
+		return isBroken() ? 1 : 1 + level();
+	}
+	
+	@Override
+	public int max() {
+		return isBroken() ? 4 : 4 + 2 * level();
 	}
 	
 	@Override
@@ -50,8 +57,6 @@ public class Boomerang extends MissileWeapon {
 	
 	@Override
 	public Item upgrade( boolean enchant ) {
-		MIN += 1;
-		MAX += 2;
 		super.upgrade( enchant );
 		
 		updateQuickslot();
@@ -60,15 +65,8 @@ public class Boomerang extends MissileWeapon {
 	}
 	
 	@Override
-	public Item degrade() {
-		MIN -= 1;
-		MAX -= 2;
-		return super.degrade();
-	}
-	
-	@Override
 	public int maxDurability( int lvl ) {
-		return 7 * (lvl < 16 ? 16 - lvl : 1);
+		return 8 * (lvl < 16 ? 16 - lvl : 1);
 	}
 	
 	@Override

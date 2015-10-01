@@ -26,7 +26,7 @@ import com.watabou.utils.Random;
 
 public class Paralysis extends Weapon.Enchantment {
 
-	private static final String TXT_STUNNING = "Stunning %s";
+	private static final String TXT_STUNNING = "stunning %s";
 	
 	private static ItemSprite.Glowing YELLOW = new ItemSprite.Glowing( 0xCCAA44 );
 	
@@ -35,7 +35,7 @@ public class Paralysis extends Weapon.Enchantment {
 		// lvl 0 - 13%
 		// lvl 1 - 22%
 		// lvl 2 - 30%
-		int level = Math.max( 0, weapon.level );
+		int level = Math.max( 0, weapon.effectiveLevel() );
 		
 		if (Random.Int( level + 8 ) >= 7) {
 			
