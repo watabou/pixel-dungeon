@@ -32,6 +32,7 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Amok;
 import com.watabou.pixeldungeon.actors.buffs.Light;
+import com.watabou.pixeldungeon.actors.buffs.Rage;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.mobs.npcs.Blacksmith;
@@ -78,7 +79,6 @@ public class Dungeon {
 	public static int scrollsOfUpgrade;
 	public static int scrollsOfEnchantment;
 	public static boolean dewVial;		// true if the dew vial can be spawned
-	public static int transmutation;	// depth number for a well of transmutation
 	
 	public static int challenges;
 	
@@ -129,7 +129,6 @@ public class Dungeon {
 		scrollsOfUpgrade = 0;
 		scrollsOfEnchantment = 0;
 		dewVial = true;
-		transmutation = Random.IntRange( 6, 14 );
 		
 		chapters = new HashSet<Integer>();
 		
@@ -339,7 +338,6 @@ public class Dungeon {
 	private static final String SOU			= "scrollsOfEnhancement";
 	private static final String SOE			= "scrollsOfEnchantment";
 	private static final String DV			= "dewVial";
-	private static final String WT			= "transmutation";
 	private static final String CHAPTERS	= "chapters";
 	private static final String QUESTS		= "quests";
 	private static final String BADGES		= "badges";
@@ -457,6 +455,53 @@ public class Dungeon {
 
 	public static void saveGame( String fileName ) throws IOException {
 		try {
+			Bundle bundle = new Bundle();
+			
+			bundle.put( VERSION, Game.version );
+			bundle.put( CHALLENGES, challenges );
+			bundle.put( HERO, hero );
+			bundle.put( GOLD, gold );
+			bundle.put( DEPTH, depth );
+			
+			for (int d : droppedItems.keyArray()) {
+				bundle.put( String.format( DROPPED, d ), droppedItems.get( d ) );
+			}
+			
+			bundle.put( POS, potionOfStrength );
+			bundle.put( SOU, scrollsOfUpgrade );
+			bundle.put( SOE, scrollsOfEnchantment );
+			bundle.put( DV, dewVial );
+			
+			int count = 0;
+			int ids[] = new int[chapters.size()];
+			for (Integer id : chapters) {
+				ids[count++] = id;
+			}
+			bundle.put( CHAPTERS, ids );
+			
+			Bundle quests = new Bundle();
+			Ghost		.Quest.storeInBundle( quests );
+			Wandmaker	.Quest.storeInBundle( quests );
+			Blacksmith	.Quest.storeInBundle( quests );
+			Imp			.Quest.storeInBundle( quests );
+			bundle.put( QUESTS, quests );
+			
+			Room.storeRoomsInBundle( bundle );
+			
+			Statistics.storeInBundle( bundle );
+			Journal.storeInBundle( bundle );
+			
+			QuickSlot.save( bundle );
+			
+			Scroll.save( bundle );
+			Potion.save( bundle );
+			Wand.save( bundle );
+			Ring.save( bundle );
+			
+			Bundle badges = new Bundle();
+			Badges.saveLocal( badges );
+			bundle.put( BADGES, badges );
+			
 			Bundle bundle = saveGameBundle();
 			OutputStream output = Game.instance.openFileOutput( fileName, Game.MODE_PRIVATE );
 			Bundle.write(bundle, output);
@@ -536,7 +581,6 @@ public class Dungeon {
 		scrollsOfUpgrade = bundle.getInt( SOU );
 		scrollsOfEnchantment = bundle.getInt( SOE );
 		dewVial = bundle.getBoolean( DV );
-		transmutation = bundle.getInt( WT );
 		
 		if (fullLoad) {
 			chapters = new HashSet<Integer>();
@@ -694,7 +738,7 @@ public class Dungeon {
 			return Actor.findChar( to ) == null && (pass[to] || Level.avoid[to]) ? to : -1;
 		}
 		
-		if (ch.flying || ch.buff( Amok.class ) != null) {
+		if (ch.flying || ch.buff( Amok.class ) != null || ch.buff( Rage.class ) != null) {
 			BArray.or( pass, Level.avoid, passable );
 		} else {
 			System.arraycopy( pass, 0, passable, 0, Level.LENGTH );

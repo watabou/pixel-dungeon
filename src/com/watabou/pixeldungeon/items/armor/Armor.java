@@ -43,14 +43,13 @@ public class Armor extends EquipableItem {
 	private static final String TXT_IDENTIFY	= "you are now familiar enough with your %s to identify it. It is %s.";
 	
 	private static final String TXT_TO_STRING	= "%s :%d";
+	private static final String TXT_BROKEN		= "broken %s :%d";
 	
 	private static final String TXT_INCOMPATIBLE = 
 		"Interaction of different types of magic has erased the glyph on this armor!";
 	
 	public int tier;
-	
 	public int STR;
-	public int DR;
 	
 	private int hitsToKnow = HITS_TO_KNOW;
 	
@@ -61,7 +60,6 @@ public class Armor extends EquipableItem {
 		this.tier = tier;
 		
 		STR = typicalSTR();
-		DR = typicalDR();
 	}
 	
 	private static final String UNFAMILIRIARITY	= "unfamiliarity";
@@ -144,6 +142,10 @@ public class Armor extends EquipableItem {
 		return hero.belongings.armor == this;
 	}
 	
+	public int DR() {
+		return tier * (2 + effectiveLevel() + (glyph == null ? 0 : 1));
+	}
+	
 	@Override
 	public Item upgrade() {
 		return upgrade( false );
@@ -152,7 +154,7 @@ public class Armor extends EquipableItem {
 	public Item upgrade( boolean inscribe ) {
 		
 		if (glyph != null) {
-			if (!inscribe && Random.Int( level ) > 0) {
+			if (!inscribe && Random.Int( level() ) > 0) {
 				GLog.w( TXT_INCOMPATIBLE );
 				inscribe( null );
 			}
@@ -162,7 +164,6 @@ public class Armor extends EquipableItem {
 			}
 		};
 		
-		DR += tier;
 		STR--;
 		
 		return super.upgrade();
@@ -174,9 +175,7 @@ public class Armor extends EquipableItem {
 	
 	@Override
 	public Item degrade() {
-		DR -= tier;
 		STR++;
-		
 		return super.degrade();
 	}
 	
@@ -206,7 +205,7 @@ public class Armor extends EquipableItem {
 	
 	@Override
 	public String toString() {
-		return levelKnown ? Utils.format( TXT_TO_STRING, super.toString(), STR ) : super.toString();
+		return levelKnown ? Utils.format( isBroken() ? TXT_BROKEN : TXT_TO_STRING, super.toString(), STR ) : super.toString();
 	}
 	
 	@Override
@@ -222,7 +221,7 @@ public class Armor extends EquipableItem {
 		if (levelKnown) {
 			info.append( 
 				"\n\nThis " + name + " provides damage absorption up to " +
-				"" + Math.max( DR, 0 ) + " points per attack. " );
+				"" + Math.max( DR(), 0 ) + " points per attack. " );
 			
 			if (STR > Dungeon.hero.STR()) {
 				
@@ -301,32 +300,11 @@ public class Armor extends EquipableItem {
 		if (glyph != null) {
 			price *= 1.5;
 		}
-		if (cursed && cursedKnown) {
-			price /= 2;
-		}
-		if (levelKnown) {
-			if (level > 0) {
-				price *= (level + 1);
-			} else if (level < 0) {
-				price /= (1 - level);
-			}
-		}
-		if (price < 1) {
-			price = 1;
-		}
-		return price;
+		return considerState( price );
 	}
 	
 	public Armor inscribe( Glyph glyph ) {
-		
-		if (glyph != null && this.glyph == null) {
-			DR += tier;
-		} else if (glyph == null && this.glyph != null) {
-			DR -= tier;
-		}
-		
 		this.glyph = glyph;
-		
 		return this;
 	}
 	
@@ -355,9 +333,9 @@ public class Armor extends EquipableItem {
 		private static final Class<?>[] glyphs = new Class<?>[]{ 
 			Bounce.class, Affection.class, AntiEntropy.class, Multiplicity.class, 
 			Potential.class, Metabolism.class, Stench.class, Viscosity.class,
-			Displacement.class, Entanglement.class };
+			Displacement.class, Entanglement.class, AutoRepair.class };
 		
-		private static final float[] chances= new float[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+		private static final float[] chances= new float[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
 			
 		public abstract int proc( Armor armor, Char attacker, Char defender, int damage );
 		

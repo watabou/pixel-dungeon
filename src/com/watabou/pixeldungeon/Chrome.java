@@ -42,7 +42,7 @@ public class Chrome {
 		case TOAST_TR:
 			return new NinePatch( Assets.CHROME, 40, 0, 18, 18, 5 );
 		case BUTTON:
-			return new NinePatch( Assets.CHROME, 58, 0, 4, 4, 1 );
+			return new NinePatch( Assets.CHROME, 58, 0, 6, 6, 2 );
 		case TAG:
 			return new NinePatch( Assets.CHROME, 22, 18, 16, 14, 3 );
 		case SCROLL:

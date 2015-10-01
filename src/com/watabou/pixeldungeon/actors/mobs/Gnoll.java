@@ -56,7 +56,7 @@ public class Gnoll extends Mob {
 	
 	@Override
 	public void die( Object cause ) {
-		Ghost.Quest.process( pos );
+		Ghost.Quest.processSewersKill( pos );
 		super.die( cause );
 	}
 	

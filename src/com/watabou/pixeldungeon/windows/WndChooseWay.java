@@ -17,19 +17,15 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
-import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
+import com.watabou.pixeldungeon.ui.HighlightedText;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndChooseWay extends Window {
-	
-	private static final String TXT_MESSAGE	= "Which way will you follow?";
-	private static final String TXT_CANCEL	= "I'll decide later";
 	
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 18;
@@ -39,34 +35,10 @@ public class WndChooseWay extends Window {
 		
 		super();
 		
-		IconTitle titlebar = new IconTitle();
-		titlebar.icon( new ItemSprite( tome.image(), null ) );
-		titlebar.label( tome.name() );
-		titlebar.setRect( 0, 0, WIDTH, 0 );
-		add( titlebar );
+		final String TXT_MASTERY	= "Which way will you follow?";
+		final String TXT_CANCEL		= "I'll decide later";
 		
-		Highlighter hl = new Highlighter( way1.desc() + "\n\n" + way2.desc() + "\n\n" + TXT_MESSAGE );
-		
-		BitmapTextMultiline normal = PixelScene.createMultiline( hl.text, 6 );
-		normal.maxWidth = WIDTH;
-		normal.measure();
-		normal.x = titlebar.left();
-		normal.y = titlebar.bottom() + GAP;
-		add( normal );
-		
-		if (hl.isHighlighted()) {
-			normal.mask = hl.inverted();
-			
-			BitmapTextMultiline highlighted = PixelScene.createMultiline( hl.text, 6 );
-			highlighted.maxWidth = normal.maxWidth;
-			highlighted.measure();
-			highlighted.x = normal.x;
-			highlighted.y = normal.y;
-			add( highlighted );
-	
-			highlighted.mask = hl.mask;
-			highlighted.hardlight( TITLE_COLOR );
-		}
+		float bottom = createCommonStuff( tome, way1.desc() + "\n\n" + way2.desc() + "\n\n" + TXT_MASTERY );
 		
 		RedButton btnWay1 = new RedButton( Utils.capitalize( way1.title() ) ) {
 			@Override
@@ -75,7 +47,7 @@ public class WndChooseWay extends Window {
 				tome.choose( way1 );
 			}
 		};
-		btnWay1.setRect( 0, normal.y + normal.height() + GAP, (WIDTH - GAP) / 2, BTN_HEIGHT );
+		btnWay1.setRect( 0, bottom + GAP, (WIDTH - GAP) / 2, BTN_HEIGHT );
 		add( btnWay1 );
 		
 		RedButton btnWay2 = new RedButton( Utils.capitalize( way2.title() ) ) {
@@ -98,5 +70,53 @@ public class WndChooseWay extends Window {
 		add( btnCancel );
 		
 		resize( WIDTH, (int)btnCancel.bottom() );
+	}
+	
+	public WndChooseWay( final TomeOfMastery tome, final HeroSubClass way ) {
+		
+		super();
+		
+		final String TXT_REMASTERY	= "Do you want to respec into %s?";
+		
+		final String TXT_OK		= "Yes, I want to respec";
+		final String TXT_CANCEL	= "Maybe later";
+		
+		float bottom = createCommonStuff( tome, way.desc() + "\n\n" + Utils.format( TXT_REMASTERY, Utils.indefinite( way.title() ) ) );
+		
+		RedButton btnWay = new RedButton( TXT_OK ) {
+			@Override
+			protected void onClick() {
+				hide();
+				tome.choose( way );
+			}
+		};
+		btnWay.setRect( 0, bottom + GAP, WIDTH, BTN_HEIGHT );
+		add( btnWay );
+		
+		RedButton btnCancel = new RedButton( TXT_CANCEL ) {
+			@Override
+			protected void onClick() {
+				hide();
+			}
+		};
+		btnCancel.setRect( 0, btnWay.bottom() + GAP, WIDTH, BTN_HEIGHT );
+		add( btnCancel );
+		
+		resize( WIDTH, (int)btnCancel.bottom() );
+	}
+	
+	private float createCommonStuff( TomeOfMastery tome, String text ) {
+		IconTitle titlebar = new IconTitle();
+		titlebar.icon( new ItemSprite( tome.image(), null ) );
+		titlebar.label( tome.name() );
+		titlebar.setRect( 0, 0, WIDTH, 0 );
+		add( titlebar );
+		
+		HighlightedText hl = new HighlightedText( 6 );
+		hl.text( text, WIDTH );
+		hl.setPos( titlebar.left(), titlebar.bottom() + GAP );
+		add( hl );
+		
+		return hl.bottom();
 	}
 }

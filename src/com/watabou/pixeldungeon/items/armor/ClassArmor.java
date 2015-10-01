@@ -28,6 +28,8 @@ abstract public class ClassArmor extends Armor {
 	private static final String TXT_LOW_HEALTH		= "Your health is too low!";
 	private static final String TXT_NOT_EQUIPPED	= "You need to be wearing this armor to use its special power!";
 	
+	private int DR;
+	
 	{
 		levelKnown = true;
 		cursedKnown = true;
@@ -58,7 +60,7 @@ abstract public class ClassArmor extends Armor {
 		}
 		
 		classArmor.STR = armor.STR;
-		classArmor.DR = armor.DR;
+		classArmor.DR = armor.DR();
 		
 		classArmor.inscribe( armor.glyph );
 		
@@ -111,6 +113,11 @@ abstract public class ClassArmor extends Armor {
 	
 	abstract public String special();
 	abstract public void doSpecial();
+	
+	@Override
+	public int DR() {
+		return DR;
+	}
 	
 	@Override
 	public boolean isUpgradable() {

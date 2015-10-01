@@ -29,6 +29,7 @@ import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
+import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
@@ -91,7 +92,7 @@ public class Tengu extends Mob {
 			badgeToCheck = Badge.MASTERY_HUNTRESS;
 			break;
 		}
-		if (!Badges.isUnlocked( badgeToCheck )) {
+		if (!Badges.isUnlocked( badgeToCheck ) || Dungeon.hero.subClass != HeroSubClass.NONE) {
 			Dungeon.level.drop( new TomeOfMastery(), pos ).sprite.drop();
 		}
 		

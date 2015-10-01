@@ -24,7 +24,9 @@ import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Belongings;
+import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.items.Item;
+import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.windows.WndBag;
@@ -44,9 +46,8 @@ public class QuickSlot extends Button implements WndBag.Listener {
 	private Image crossM;
 	
 	private boolean targeting = false;
-	private Item lastItem = null;
-	private Char lastTarget= null;
-
+	
+	private static Char lastTarget= null;
 	public static Object primaryValue;
 	public static Object secondaryValue;
 	
@@ -70,7 +71,6 @@ public class QuickSlot extends Button implements WndBag.Listener {
 			secondary = null;
 		}
 		
-		lastItem = null;
 		lastTarget = null;
 	}
 	
@@ -84,13 +84,8 @@ public class QuickSlot extends Button implements WndBag.Listener {
 				if (targeting) {
 					GameScene.handleCell( lastTarget.pos );
 				} else {
-					Item item = select();
-					if (item == lastItem) {
-						useTargeting();
-					} else {
-						lastItem = item;
-					}
-					item.execute( Dungeon.hero );
+					useTargeting();
+					select().execute( Dungeon.hero );
 				}
 			}
 			@Override
@@ -196,6 +191,27 @@ public class QuickSlot extends Button implements WndBag.Listener {
 		targeting = lastTarget != null && lastTarget.isAlive() && Dungeon.visible[lastTarget.pos];
 		
 		if (targeting) {
+			int pos = Ballistica.cast( Dungeon.hero.pos, lastTarget.pos, false, true );
+			if (pos != lastTarget.pos) {
+				lastTarget = null;
+				targeting = false;
+			}
+		}
+		
+		if (!targeting) {
+			int n = Dungeon.hero.visibleEnemies();
+			for (int i=0; i < n; i++) {
+				Mob enemy = Dungeon.hero.visibleEnemy( i );
+				int pos = Ballistica.cast( Dungeon.hero.pos, enemy.pos, false, true );
+				if (pos == enemy.pos) { 
+					lastTarget = enemy;
+					targeting = true;
+					break;
+				}
+			}
+		}
+		
+		if (targeting) {
 			if (Actor.all().contains( lastTarget )) {
 				lastTarget.sprite.parent.add( crossM );
 				crossM.point( DungeonTilemap.tileToWorld( lastTarget.pos ) );
@@ -217,17 +233,8 @@ public class QuickSlot extends Button implements WndBag.Listener {
 	
 	public static void target( Item item, Char target ) {
 		if (target != Dungeon.hero) {
-			if (item == primary.lastItem) {
-				
-				primary.lastTarget = target;
-				HealthIndicator.instance.target( target );
-				
-			} else if (item == secondary.lastItem) {
-				
-				secondary.lastTarget = target;
-				HealthIndicator.instance.target( target );
-				
-			}
+			lastTarget = target;
+			HealthIndicator.instance.target( target );
 		}
 	}
 	

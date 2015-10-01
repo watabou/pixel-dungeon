@@ -32,7 +32,7 @@ import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-public class Weapon extends KindOfWeapon {
+abstract public class Weapon extends KindOfWeapon {
 
 	private static final int HITS_TO_KNOW	= 20;
 	
@@ -40,7 +40,9 @@ public class Weapon extends KindOfWeapon {
 		"You are now familiar enough with your %s to identify it. It is %s.";
 	private static final String TXT_INCOMPATIBLE	= 
 		"Interaction of different types of magic has negated the enchantment on this weapon!";
-	private static final String TXT_TO_STRING		= "%s :%d";
+	
+	private static final String TXT_TO_STRING	= "%s :%d";
+	private static final String TXT_BROKEN		= "broken %s :%d";
 	
 	public int		STR	= 10;
 	public float	ACU	= 1;
@@ -147,7 +149,7 @@ public class Weapon extends KindOfWeapon {
 	
 	public Item upgrade( boolean enchant ) {		
 		if (enchantment != null) {
-			if (!enchant && Random.Int( level ) > 0) {
+			if (!enchant && Random.Int( level() ) > 0) {
 				GLog.w( TXT_INCOMPATIBLE );
 				enchant( null );
 			}
@@ -162,12 +164,12 @@ public class Weapon extends KindOfWeapon {
 	
 	@Override
 	public int maxDurability( int lvl ) {
-		return 4 * (lvl < 16 ? 16 - lvl : 1);
+		return 5 * (lvl < 16 ? 16 - lvl : 1);
 	}
 	
 	@Override
 	public String toString() {
-		return levelKnown ? Utils.format( TXT_TO_STRING, super.toString(), STR ) : super.toString();
+		return levelKnown ? Utils.format( isBroken() ? TXT_BROKEN : TXT_TO_STRING, super.toString(), STR ) : super.toString();
 	}
 	
 	@Override

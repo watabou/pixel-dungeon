@@ -55,8 +55,8 @@ public class Item implements Bundlable {
 
 	private static final String TXT_PACK_FULL	= "Your pack is too full for the %s";
 	
-	private static final String TXT_DEGRADED		= "Because of frequent use, your %s has degraded.";
-	private static final String TXT_GONNA_DEGRADE	= "Because of frequent use, your %s is going to degrade soon.";
+	private static final String TXT_BROKEN		= "Because of frequent use, your %s has broken.";
+	private static final String TXT_GONNA_BREAK	= "Because of frequent use, your %s is going to break soon.";
 	
 	private static final String TXT_TO_STRING		= "%s";
 	private static final String TXT_TO_STRING_X		= "%s x%d";
@@ -81,9 +81,9 @@ public class Item implements Bundlable {
 	public boolean stackable = false;
 	protected int quantity = 1;
 	
-	public int level = 0;
-	public boolean levelKnown = false;
+	private int level = 0;
 	private int durability = maxDurability();
+	public boolean levelKnown = false;
 	
 	public boolean cursed;
 	public boolean cursedKnown;
@@ -250,6 +250,18 @@ public class Item implements Bundlable {
 	protected void onDetach( ) {
 	}
 	
+	public int level() {
+		return level;
+	}
+	
+	public void level( int value ) {
+		level = value;
+	}
+	
+	public int effectiveLevel() {
+		return isBroken() ? 0 : level;
+	}
+	
 	public Item upgrade() {
 		
 		cursed = false;
@@ -286,15 +298,15 @@ public class Item implements Bundlable {
 	}
 	
 	public void use() {
-		if (level > 0) {
+		if (level > 0 && !isBroken()) {
 			int threshold = (int)(maxDurability() * DURABILITY_WARNING_LEVEL);
-			if (durability-- >= threshold && threshold > durability) {
-				GLog.w( TXT_GONNA_DEGRADE, name() );
+			if (durability-- >= threshold && threshold > durability && levelKnown) {
+				GLog.w( TXT_GONNA_BREAK, name() );
 			}
-			if (durability <= 0) {
-				degrade();
+			if (isBroken()) {
+				getBroken();
 				if (levelKnown) {
-					GLog.n( TXT_DEGRADED, name() );
+					GLog.n( TXT_BROKEN, name() );
 					Dungeon.hero.interrupt();
 					
 					CharSprite sprite = Dungeon.hero.sprite;
@@ -312,6 +324,13 @@ public class Item implements Bundlable {
 				}
 			}
 		}
+	}
+	
+	public boolean isBroken() {
+		return durability <= 0;
+	}
+	
+	public void getBroken() {	
 	}
 	
 	public void fix() {
@@ -342,6 +361,10 @@ public class Item implements Bundlable {
 	
 	public boolean visiblyCursed() {
 		return cursed && cursedKnown;
+	}
+	
+	public boolean visiblyBroken() {
+		return levelKnown && isBroken();
 	}
 	
 	public boolean isUpgradable() {
@@ -422,6 +445,27 @@ public class Item implements Bundlable {
 		return 0;
 	}
 	
+	public int considerState( int price ) {
+		if (cursed && cursedKnown) {
+			price /= 2;
+		}
+		if (levelKnown) {
+			if (level > 0) {
+				price *= (level + 1);
+				if (isBroken()) {
+					price /= 2;
+				}
+			} else if (level < 0) {
+				price /= (1 - level);
+			}
+		}
+		if (price < 1) {
+			price = 1;
+		}
+		
+		return price;
+	}
+	
 	public static Item virtual( Class<? extends Item> cl ) {
 		try {
 			
@@ -491,9 +535,6 @@ public class Item implements Bundlable {
 		
 		if (isUpgradable()) {
 			durability = bundle.getInt( DURABILITY );
-		}
-		if (durability <= 0) {
-			durability = maxDurability( level );
 		}
 		
 		QuickSlot.restore( bundle, this );

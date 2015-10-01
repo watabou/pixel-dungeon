@@ -442,13 +442,7 @@ public abstract class Level implements Bundlable {
 		for (int i=WIDTH; i < LENGTH - WIDTH; i++) {
 			
 			if (water[i]) {
-				int t = Terrain.WATER_TILES;
-				for (int j=0; j < NEIGHBOURS4.length; j++) {
-					if ((Terrain.flags[map[i + NEIGHBOURS4[j]]] & Terrain.UNSTITCHABLE) != 0) {
-						t += 1 << j;
-					}
-				}
-				map[i] = t;
+				map[i] = getWaterTile( i );
 			}
 			
 			if (pit[i]) {
@@ -464,6 +458,37 @@ public abstract class Level implements Bundlable {
 						map[i] = Terrain.CHASM_FLOOR;
 					}
 				}
+			}
+		}
+	}
+	
+	private int getWaterTile( int pos ) {
+		int t = Terrain.WATER_TILES;
+		for (int j=0; j < NEIGHBOURS4.length; j++) {
+			if ((Terrain.flags[map[pos + NEIGHBOURS4[j]]] & Terrain.UNSTITCHABLE) != 0) {
+				t += 1 << j;
+			}
+		}
+		return t;
+	}
+	
+	public void destroy( int pos ) {
+		if ((Terrain.flags[map[pos]] & Terrain.UNSTITCHABLE) == 0) {
+			
+			set( pos, Terrain.EMBERS );
+			
+		} else {
+			boolean flood = false;
+			for (int j=0; j < NEIGHBOURS4.length; j++) {
+				if (water[pos + NEIGHBOURS4[j]]) {
+					flood = true;
+					break;
+				}
+			}
+			if (flood) {
+				set( pos, getWaterTile( pos ) );
+			} else {
+				set( pos, Terrain.EMBERS );
 			}
 		}
 	}
