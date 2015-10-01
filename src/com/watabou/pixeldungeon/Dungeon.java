@@ -385,7 +385,6 @@ public class Dungeon {
 		bundle.put( SOU, scrollsOfUpgrade );
 		bundle.put( SOE, scrollsOfEnchantment );
 		bundle.put( DV, dewVial );
-		bundle.put( WT, transmutation );
 
 		int count = 0;
 		int ids[] = new int[chapters.size()];
@@ -418,7 +417,6 @@ public class Dungeon {
 		bundle.put( BADGES, badges );
 
 		return bundle;
-
 	}
 
 	public static void saveUndo () {
@@ -455,53 +453,6 @@ public class Dungeon {
 
 	public static void saveGame( String fileName ) throws IOException {
 		try {
-			Bundle bundle = new Bundle();
-			
-			bundle.put( VERSION, Game.version );
-			bundle.put( CHALLENGES, challenges );
-			bundle.put( HERO, hero );
-			bundle.put( GOLD, gold );
-			bundle.put( DEPTH, depth );
-			
-			for (int d : droppedItems.keyArray()) {
-				bundle.put( String.format( DROPPED, d ), droppedItems.get( d ) );
-			}
-			
-			bundle.put( POS, potionOfStrength );
-			bundle.put( SOU, scrollsOfUpgrade );
-			bundle.put( SOE, scrollsOfEnchantment );
-			bundle.put( DV, dewVial );
-			
-			int count = 0;
-			int ids[] = new int[chapters.size()];
-			for (Integer id : chapters) {
-				ids[count++] = id;
-			}
-			bundle.put( CHAPTERS, ids );
-			
-			Bundle quests = new Bundle();
-			Ghost		.Quest.storeInBundle( quests );
-			Wandmaker	.Quest.storeInBundle( quests );
-			Blacksmith	.Quest.storeInBundle( quests );
-			Imp			.Quest.storeInBundle( quests );
-			bundle.put( QUESTS, quests );
-			
-			Room.storeRoomsInBundle( bundle );
-			
-			Statistics.storeInBundle( bundle );
-			Journal.storeInBundle( bundle );
-			
-			QuickSlot.save( bundle );
-			
-			Scroll.save( bundle );
-			Potion.save( bundle );
-			Wand.save( bundle );
-			Ring.save( bundle );
-			
-			Bundle badges = new Bundle();
-			Badges.saveLocal( badges );
-			bundle.put( BADGES, badges );
-			
 			Bundle bundle = saveGameBundle();
 			OutputStream output = Game.instance.openFileOutput( fileName, Game.MODE_PRIVATE );
 			Bundle.write(bundle, output);
