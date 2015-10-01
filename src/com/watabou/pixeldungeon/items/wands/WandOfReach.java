@@ -22,9 +22,8 @@ import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.MagicMissile;
-import com.watabou.pixeldungeon.effects.Pushing;
+import com.watabou.pixeldungeon.effects.Swap;
 import com.watabou.pixeldungeon.items.Dewdrop;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
@@ -41,91 +40,60 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.utils.Callback;
 
-public class WandOfTelekinesis extends Wand {
+public class WandOfReach extends Wand {
 
 	private static final String TXT_YOU_NOW_HAVE	= "You have magically transported %s into your backpack"; 
 	
 	{
-		name = "Wand of Telekinesis";
+		name = "Wand of Reach";
 		hitChars = false;
 	}
 	
 	@Override
 	protected void onZap( int cell ) {
 		
+		int reach = Math.min( Ballistica.distance, power() + 4 );
+		
 		boolean mapUpdated = false;
-		
-		int maxDistance = level() + 4;
-		Ballistica.distance = Math.min( Ballistica.distance, maxDistance );
-		
-		Char ch;
-		Heap heap = null;
-		
-		for (int i=1; i < Ballistica.distance; i++) {
+		for (int i=1; i < reach; i++) {
 			
 			int c = Ballistica.trace[i];
 			
 			int before = Dungeon.level.map[c];
 			
-			if ((ch = Actor.findChar( c )) != null) {
-
-				if (i == Ballistica.distance-1) {
-					
-					ch.damage( maxDistance-1 - i, this );
-					
-				} else {
-					
-					int next = Ballistica.trace[i + 1];
-					if ((Level.passable[next] || Level.avoid[next]) && Actor.findChar( next ) == null) {
-						
-						Actor.addDelayed( new Pushing( ch, ch.pos, next ), -1 );
-						
-						ch.pos = next;
-						Actor.freeCell( next );
-
-						// FIXME
-						if (ch instanceof Mob) {
-							Dungeon.level.mobPress( (Mob)ch );
-						} else {
-							Dungeon.level.press( ch.pos, ch );
-						}
-						
-					} else {
-						
-						ch.damage( maxDistance-1 - i, this );
-						
-					}
-				}
+			Char ch = Actor.findChar( c );
+			if (ch != null) {
+				Actor.addDelayed( new Swap( curUser, ch ), -1 );
+				break;
 			}
 			
-			if (heap == null && (heap = Dungeon.level.heaps.get( c )) != null) {
+			Heap heap = Dungeon.level.heaps.get( c );
+			if (heap != null) {
 				switch (heap.type) {
 				case HEAP:
 					transport( heap );
 					break;
 				case CHEST:
 				case MIMIC:
+				case TOMB:
+				case SKELETON:
 					heap.open( curUser );
 					break;
 				default:
 				}
+				
+				break;
 			}
 			
 			Dungeon.level.press( c, null );
-			if (before == Terrain.OPEN_DOOR && Actor.findChar( c ) == null) {
-				
+			if (before == Terrain.OPEN_DOOR) {	
 				Level.set( c, Terrain.DOOR );
 				GameScene.updateMap( c );
-				
 			} else if (Level.water[c]) {
-				
 				GameScene.ripple( c );
-				
 			}
 			
-			if (!mapUpdated && Dungeon.level.map[c] != before) {
-				mapUpdated = true;
-			}
+			mapUpdated = mapUpdated || Dungeon.level.map[c] != before;
 		}
 		
 		if (mapUpdated) {
@@ -161,7 +129,8 @@ public class WandOfTelekinesis extends Wand {
 	@Override
 	public String desc() {
 		return
-			"Waves of magic force from this wand will affect all cells on their way triggering traps, trampling high vegetation, " +
-			"opening closed doors and closing open ones. They also push back monsters.";
+			"This utility wand can be used to grab objects from a distance and to switch places with enemies. " +
+			"Waves of magic force radiated from it will affect all cells on their way triggering traps, " +
+			"trampling high vegetation, opening closed doors and closing open ones.";
 	}
 }

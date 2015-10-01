@@ -19,24 +19,15 @@ package com.watabou.pixeldungeon.actors.mobs.npcs;
 
 import java.util.ArrayList;
 
-import com.watabou.noosa.audio.Sample;
-import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
-import com.watabou.pixeldungeon.actors.blobs.Blob;
-import com.watabou.pixeldungeon.actors.blobs.ToxicGas;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
-import com.watabou.pixeldungeon.actors.buffs.Roots;
-import com.watabou.pixeldungeon.actors.mobs.Mob;
-import com.watabou.pixeldungeon.effects.CellEmitter;
-import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Heap;
 import com.watabou.pixeldungeon.items.Item;
-import com.watabou.pixeldungeon.items.bags.Bag;
-import com.watabou.pixeldungeon.items.potions.PotionOfStrength;
 import com.watabou.pixeldungeon.items.quest.CorpseDust;
+import com.watabou.pixeldungeon.items.quest.PhantomFish;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.items.wands.WandOfAmok;
 import com.watabou.pixeldungeon.items.wands.WandOfAvalanche;
@@ -47,15 +38,14 @@ import com.watabou.pixeldungeon.items.wands.WandOfLightning;
 import com.watabou.pixeldungeon.items.wands.WandOfPoison;
 import com.watabou.pixeldungeon.items.wands.WandOfRegrowth;
 import com.watabou.pixeldungeon.items.wands.WandOfSlowness;
-import com.watabou.pixeldungeon.items.wands.WandOfTelekinesis;
+import com.watabou.pixeldungeon.items.wands.WandOfReach;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.PrisonLevel;
 import com.watabou.pixeldungeon.levels.Room;
 import com.watabou.pixeldungeon.levels.Terrain;
-import com.watabou.pixeldungeon.plants.Plant;
+import com.watabou.pixeldungeon.plants.Rotberry;
 import com.watabou.pixeldungeon.scenes.GameScene;
-import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.sprites.WandmakerSprite;
-import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.pixeldungeon.windows.WndWandmaker;
@@ -68,24 +58,6 @@ public class Wandmaker extends NPC {
 		name = "old wandmaker";
 		spriteClass = WandmakerSprite.class;
 	}
-	
-	private static final String TXT_BERRY1	=
-		"Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient - " +
-		"a _Rotberry seed_. Being a magic user, I'm quite able to defend myself against local monsters, " +
-		"but I'm getting lost in no time, it's very embarrassing. Probably you could help me? I would be " +
-		"happy to pay for your service with one of my best wands.";
-	
-	private static final String TXT_DUST1	=
-		"Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient - " +
-		"_corpse dust_. It can be gathered from skeletal remains and there is an ample number of them in the dungeon. " +
-		"Being a magic user, I'm quite able to defend myself against local monsters, but I'm getting lost in no time, " +
-		"it's very embarrassing. Probably you could help me? I would be happy to pay for your service with one of my best wands.";
-	
-	private static final String TXT_BERRY2	=
-		"Any luck with a Rotberry seed, %s? No? Don't worry, I'm not in a hurry.";
-	
-	private static final String TXT_DUST2	=
-		"Any luck with corpse dust, %s? Bone piles are the most obvious places to look.";
 	
 	@Override
 	protected boolean act() {
@@ -118,27 +90,8 @@ public class Wandmaker extends NPC {
 	
 	@Override
 	public void interact() {
-		
 		sprite.turnTo( pos, Dungeon.hero.pos );
-		if (Quest.given) {
-			
-			Item item = Quest.alternative ?
-				Dungeon.hero.belongings.getItem( CorpseDust.class ) :
-				Dungeon.hero.belongings.getItem( Rotberry.Seed.class );
-			if (item != null) {
-				GameScene.show( new WndWandmaker( this, item ) );
-			} else {
-				tell( Quest.alternative ? TXT_DUST2 : TXT_BERRY2, Dungeon.hero.className() );
-			}
-			
-		} else {
-			tell( Quest.alternative ? TXT_DUST1 : TXT_BERRY1 );
-			Quest.given = true;
-			
-			Quest.placeItem();
-			
-			Journal.add( Journal.Feature.WANDMAKER );
-		}
+		Quest.type.handler.interact( this );
 	}
 	
 	private void tell( String format, Object...args ) {
@@ -154,10 +107,18 @@ public class Wandmaker extends NPC {
 	
 	public static class Quest {
 		
+		enum Type {
+			ILLEGAL( null ), BERRY( berryQuest ), DUST( dustQuest ), FISH( fishQuest );
+			
+			public QuestHandler handler;
+			private Type( QuestHandler handler ) {
+				this.handler = handler;
+			}
+		}
+		
+		private static Type type;
+		
 		private static boolean spawned;
-		
-		private static boolean alternative;
-		
 		private static boolean given;
 		
 		public static Wand wand1;
@@ -173,6 +134,7 @@ public class Wandmaker extends NPC {
 		private static final String NODE		= "wandmaker";
 		
 		private static final String SPAWNED		= "spawned";
+		private static final String TYPE		= "type";
 		private static final String ALTERNATIVE	= "alternative";
 		private static final String GIVEN		= "given";
 		private static final String WAND1		= "wand1";
@@ -186,9 +148,9 @@ public class Wandmaker extends NPC {
 			
 			if (spawned) {
 				
-				node.put( ALTERNATIVE, alternative );
+				node.put( TYPE, type.toString() );
 				
-				node.put(GIVEN, given );
+				node.put( GIVEN, given );
 				
 				node.put( WAND1, wand1 );
 				node.put( WAND2, wand2 );
@@ -203,7 +165,10 @@ public class Wandmaker extends NPC {
 			
 			if (!node.isNull() && (spawned = node.getBoolean( SPAWNED ))) {
 				
-				alternative	=  node.getBoolean( ALTERNATIVE );
+				type = node.getEnum( TYPE, Type.class );
+				if (type == Type.ILLEGAL) {
+					type = node.getBoolean( ALTERNATIVE ) ? Type.DUST : Type.BERRY;
+				}
 				
 				given = node.getBoolean( GIVEN );
 				
@@ -225,7 +190,26 @@ public class Wandmaker extends NPC {
 				Actor.occupyCell( npc );
 				
 				spawned = true;
-				alternative = Random.Int( 2 ) == 0;
+				switch (Random.Int( 3 )) {
+				case 0:
+					type = Type.BERRY;
+					break;
+				case 1:
+					type = Type.DUST;
+					break;
+				case 2:
+					type = Type.FISH;
+					int water = 0;
+					for (int i=0; i < Level.LENGTH; i++) {
+						if (Level.water[i]) {
+							if (++water > Level.LENGTH / 16) {
+								type = Random.Int( 2 ) == 0 ? Type.BERRY : Type.DUST;
+								break;
+							}
+						}
+					}
+					break;
+				}
 				
 				given = false;
 				
@@ -262,44 +246,10 @@ public class Wandmaker extends NPC {
 					wand2 = new WandOfSlowness();
 					break;
 				case 4:
-					wand2 = new WandOfTelekinesis();
+					wand2 = new WandOfReach();
 					break;
 				}
 				wand2.random().upgrade();
-			}
-		}
-		
-		public static void placeItem() {
-			if (alternative) {
-				
-				ArrayList<Heap> candidates = new ArrayList<Heap>();
-				for (Heap heap : Dungeon.level.heaps.values()) {
-					if (heap.type == Heap.Type.SKELETON && !Dungeon.visible[heap.pos]) {
-						candidates.add( heap );
-					}
-				}
-				
-				if (candidates.size() > 0) {
-					Random.element( candidates ).drop( new CorpseDust() );
-				} else {
-					int pos = Dungeon.level.randomRespawnCell();
-					while (Dungeon.level.heaps.get( pos ) != null) {
-						pos = Dungeon.level.randomRespawnCell();
-					}
-					
-					Heap heap = Dungeon.level.drop( new CorpseDust(), pos );
-					heap.type = Heap.Type.SKELETON;
-					heap.sprite.link();
-				}
-				
-			} else {
-				
-				int shrubPos = Dungeon.level.randomRespawnCell();
-				while (Dungeon.level.heaps.get( shrubPos ) != null) {
-					shrubPos = Dungeon.level.randomRespawnCell();
-				}
-				Dungeon.level.plant( new Rotberry.Seed(), shrubPos );
-				
 			}
 		}
 		
@@ -311,69 +261,137 @@ public class Wandmaker extends NPC {
 		}
 	}
 	
-	public static class Rotberry extends Plant {
-		
-		private static final String TXT_DESC = 
-			"Berries of this shrub taste like sweet, sweet death.";
-		
-		{
-			image = 7;
-			plantName = "Rotberry";
-		}
-		
-		@Override
-		public void activate( Char ch ) {
-			super.activate( ch );
+	abstract public static class QuestHandler {
 			
-			GameScene.add( Blob.seed( pos, 100, ToxicGas.class ) );
-			
-			Dungeon.level.drop( new Seed(), pos ).sprite.drop();
-			
-			if (ch != null) {
-				Buff.prolong( ch, Roots.class, TICK * 3 );
-			}
-		}
+		protected String txtQuest1;
+		protected String txtQuest2;
 		
-		@Override
-		public String desc() {
-			return TXT_DESC;
-		}
-		
-		public static class Seed extends Plant.Seed {
-			{
-				plantName = "Rotberry";
+		public void interact( Wandmaker wandmaker ) {
+			if (Quest.given) {
 				
-				name = "seed of " + plantName;
-				image = ItemSpriteSheet.SEED_ROTBERRY;
-				
-				plantClass = Rotberry.class;
-				alchemyClass = PotionOfStrength.class;
-			}
-			
-			@Override
-			public boolean collect( Bag container ) {
-				if (super.collect( container )) {
-					
-					if (Dungeon.level != null) {
-						for (Mob mob : Dungeon.level.mobs) {
-							mob.beckon( Dungeon.hero.pos );
-						}
-						
-						GLog.w( "The seed emits a roar that echoes throughout the dungeon!" );
-						CellEmitter.center( Dungeon.hero.pos ).start( Speck.factory( Speck.SCREAM ), 0.3f, 3 );
-						Sample.INSTANCE.play( Assets.SND_CHALLENGE );
-					}
-					
-					return true;
+				Item item = checkItem();
+				if (item != null) {
+					GameScene.show( new WndWandmaker( wandmaker, item ) );
 				} else {
-					return false;
+					wandmaker.tell( txtQuest2, Dungeon.hero.className() );
+				}
+				
+			} else {
+				wandmaker.tell( txtQuest1 );
+				Quest.given = true;
+				
+				placeItem();
+				
+				Journal.add( Journal.Feature.WANDMAKER );
+			}
+		}
+		
+		abstract protected Item checkItem();
+		abstract protected void placeItem();
+	}
+	
+	private static final QuestHandler berryQuest = new QuestHandler() {
+		{
+			txtQuest1 = 
+				"Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient - " +
+				"a _Rotberry seed_. Being a magic user, I'm quite able to defend myself against local monsters, " +
+				"but I'm getting lost in no time, it's very embarrassing. Probably you could help me? I would be " +
+				"happy to pay for your service with one of my best wands.";
+			txtQuest2 = 
+				"Any luck with a _Rotberry seed_, %s? No? Don't worry, I'm not in a hurry.";
+		}
+
+		@Override
+		protected Item checkItem() {
+			return Dungeon.hero.belongings.getItem( Rotberry.Seed.class );
+		}
+
+		@Override
+		protected void placeItem() {
+			int shrubPos = Dungeon.level.randomRespawnCell();
+			while (Dungeon.level.heaps.get( shrubPos ) != null) {
+				shrubPos = Dungeon.level.randomRespawnCell();
+			}
+			Dungeon.level.plant( new Rotberry.Seed(), shrubPos );
+		}
+	};
+	
+	private static final QuestHandler dustQuest = new QuestHandler() {
+		{
+			txtQuest1 = 
+				"Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient - " +
+				"_corpse dust_. It can be gathered from skeletal remains and there is an ample number of them in the dungeon. " +
+				"Being a magic user, I'm quite able to defend myself against local monsters, but I'm getting lost in no time, " +
+				"it's very embarrassing. Probably you could help me? I would be happy to pay for your service with one of my best wands.";
+			txtQuest2 = 
+				"Any luck with _corpse dust_, %s? Bone piles are the most obvious places to look.";
+		}
+		
+		@Override
+		protected Item checkItem() {
+			return Dungeon.hero.belongings.getItem( CorpseDust.class );
+		}
+
+		@Override
+		protected void placeItem() {
+			ArrayList<Heap> candidates = new ArrayList<Heap>();
+			for (Heap heap : Dungeon.level.heaps.values()) {
+				if (heap.type == Heap.Type.SKELETON && !Dungeon.visible[heap.pos]) {
+					candidates.add( heap );
 				}
 			}
 			
-			@Override
-			public String desc() {
-				return TXT_DESC;
+			if (candidates.size() > 0) {
+				Random.element( candidates ).drop( new CorpseDust() );
+			} else {
+				int pos = Dungeon.level.randomRespawnCell();
+				while (Dungeon.level.heaps.get( pos ) != null) {
+					pos = Dungeon.level.randomRespawnCell();
+				}
+				
+				Heap heap = Dungeon.level.drop( new CorpseDust(), pos );
+				heap.type = Heap.Type.SKELETON;
+				heap.sprite.link();
 			}
 		}
-	}
+	};
+	
+	private static final QuestHandler fishQuest = new QuestHandler() {
+		{
+			txtQuest1 = 
+				"Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient: " +
+				"a _phantom fish_. You can catch it with your bare hands, but it's very hard to notice in the water. " +
+				"Being a magic user, I'm quite able to defend myself against local monsters, but I'm getting lost in no time, " +
+				"it's very embarrassing. Probably you could help me? I would be happy to pay for your service with one of my best wands.";
+			txtQuest2 = 
+				"Any luck with a _phantom fish_, %s? You may want to try searching for it in one of the local pools.";
+		}
+		
+		@Override
+		protected Item checkItem() {
+			return Dungeon.hero.belongings.getItem( PhantomFish.class );
+		}
+
+		@Override
+		protected void placeItem() {
+			Heap heap = null;
+			for (int i=0; i < 100; i++) {
+				int pos = Random.Int( Level.LENGTH );
+				if (Level.water[pos]) {
+					heap = Dungeon.level.drop( new PhantomFish(), pos );
+					heap.type = Heap.Type.HIDDEN;
+					heap.sprite.link();
+					return;
+				}
+			}
+			if (heap == null) {
+				int pos = Dungeon.level.randomRespawnCell();
+				while (Dungeon.level.heaps.get( pos ) != null) {
+					pos = Dungeon.level.randomRespawnCell();
+				}
+				
+				Dungeon.level.drop( new PhantomFish(), pos );
+			}
+		}
+	};
 }

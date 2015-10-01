@@ -26,6 +26,7 @@ public class ResultDescriptions {
 	// Items
 	public static final String WAND		= "Killed by your own %s on level %d";
 	public static final String GLYPH	= "Killed by the %s on level %d";
+	public static final String BOMB		= "Killed by an explosion of a bomb on level %d";
 	
 	// Dungeon features
 	public static final String TRAP	= "Killed by discharge of %s on level %d";

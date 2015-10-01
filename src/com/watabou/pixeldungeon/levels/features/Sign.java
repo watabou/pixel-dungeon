@@ -23,7 +23,6 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
 import com.watabou.pixeldungeon.levels.DeadEndLevel;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -61,8 +60,8 @@ public class Sign {
 		
 		"Pixel-Mart. A safer life in dungeon.",
 		"When you upgrade an enchanted weapon, there is a chance to destroy that enchantment.",
-		"With a Well of Transmutation you can get an item, that cannot be obtained otherwise.",
-		"The only way to enchant a weapon is by upgrading it with a Scroll of Weapon Upgrade.",
+		"Weapons and armors deteriorate faster than wands and rings, but there are more ways to fix them.",
+		"The only way to obtain a Scroll of Wipe Out is to receive it as a gift from the dungeon spirits.",
 		
 		"No weapons allowed in the presence of His Majesty!",
 		
@@ -86,7 +85,7 @@ public class Sign {
 				GameScene.show( new WndMessage( TIPS[index] ) );
 			} else {
 				
-				Level.set( pos, Terrain.EMBERS );
+				Dungeon.level.destroy( pos );
 				GameScene.updateMap( pos );
 				GameScene.discoverTile( pos, Terrain.SIGN );
 				

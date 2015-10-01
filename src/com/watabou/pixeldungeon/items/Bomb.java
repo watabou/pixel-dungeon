@@ -20,6 +20,7 @@ package com.watabou.pixeldungeon.items;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.ResultDescriptions;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -28,9 +29,10 @@ import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.BlastParticle;
 import com.watabou.pixeldungeon.effects.particles.SmokeParticle;
 import com.watabou.pixeldungeon.levels.Level;
-import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 public class Bomb extends Item {
@@ -62,7 +64,7 @@ public class Bomb extends Item {
 					}
 					
 					if (Level.flamable[c]) {
-						Level.set( c, Terrain.EMBERS );
+						Dungeon.level.destroy( c );
 						GameScene.updateMap( c );
 						terrainAffected = true;	
 					}
@@ -74,6 +76,9 @@ public class Bomb extends Item {
 							ch.damage( dmg, this );
 							if (ch.isAlive()) {
 								Buff.prolong( ch, Paralysis.class, 2 );
+							} else if (ch == Dungeon.hero) {
+								Dungeon.fail( Utils.format( ResultDescriptions.BOMB, Dungeon.depth ) );
+								GLog.n( "You killed yourself with a bomb..." );
 							}
 						}
 					}

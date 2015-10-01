@@ -96,7 +96,7 @@ public class WandOfLightning extends Wand {
 		if (ch != null) {
 			
 			affected.clear();
-			int lvl = level();
+			int lvl = power();
 			hit( ch, Random.Int( 5 + lvl / 2, 10 + lvl ) );
 
 		} else {

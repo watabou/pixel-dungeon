@@ -57,7 +57,7 @@ public class WandOfMagicMissile extends Wand {
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );
-		if (level > 0) {
+		if (level() > 0) {
 			actions.add( AC_DISENCHANT );
 		}
 		return actions;
@@ -69,7 +69,7 @@ public class WandOfMagicMissile extends Wand {
 		Char ch = Actor.findChar( cell );
 		if (ch != null) {	
 			
-			int level = level();
+			int level = power();
 			
 			ch.damage( Random.Int( 1, 6 + level * 2 ), this );
 			ch.sprite.burst( 0xFF99CCFF, level / 2 + 2 );

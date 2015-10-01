@@ -18,6 +18,8 @@
 package com.watabou.pixeldungeon.actors.mobs;
 
 import com.watabou.pixeldungeon.actors.Char;
+import com.watabou.pixeldungeon.actors.mobs.Yog.BurningFist;
+import com.watabou.pixeldungeon.actors.mobs.Yog.RottingFist;
 import com.watabou.utils.Random;
 
 public class Bestiary {
@@ -178,6 +180,11 @@ public class Bestiary {
 	}
 	
 	public static boolean isBoss( Char mob ) {
-		return mob instanceof Goo || mob instanceof Tengu || mob instanceof DM300 || mob instanceof King || mob instanceof Yog;
+		return 
+			mob instanceof Goo || 
+			mob instanceof Tengu || 
+			mob instanceof DM300 || 
+			mob instanceof King || 
+			mob instanceof Yog || mob instanceof BurningFist || mob instanceof RottingFist;
 	}
 }

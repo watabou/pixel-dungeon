@@ -119,6 +119,7 @@ public class ItemSpriteSheet {
 	public static final int SCROLL_BERKANAN	= 77;
 	public static final int SCROLL_ODAL		= 78;
 	public static final int SCROLL_TIWAZ	= 79;
+	public static final int SCROLL_WIPE_OUT	= 117;
 	
 	// Seeds
 	public static final int SEED_FIREBLOOM	= 88;
@@ -135,6 +136,7 @@ public class ItemSpriteSheet {
 	public static final int PICKAXE	= 101;
 	public static final int ORE		= 102;
 	public static final int SKULL	= 103;
+	public static final int PHANTOM	= 118;
 	public static final int DUST	= 121;
 	public static final int TOKEN	= 122;
 	
@@ -144,6 +146,7 @@ public class ItemSpriteSheet {
 	public static final int LOCKED_CHEST	= 12;
 	public static final int TOMB			= 13;
 	public static final int CRYSTAL_CHEST	= 105;
+	public static final int HIDDEN			= 119;
 	
 	// Food
 	public static final int RATION		= 4;

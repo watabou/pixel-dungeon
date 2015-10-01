@@ -30,6 +30,7 @@ import com.watabou.pixeldungeon.Statistics;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.items.Generator;
 import com.watabou.pixeldungeon.levels.Level;
+import com.watabou.pixeldungeon.ui.GameLog;
 import com.watabou.pixeldungeon.windows.WndError;
 import com.watabou.pixeldungeon.windows.WndStory;
 
@@ -48,7 +49,7 @@ public class InterlevelScene extends PixelScene {
 	private static final String ERR_GENERIC			= "Something went wrong..."	;	
 	
 	public static enum Mode {
-		DESCEND, ASCEND, CONTINUE, RESURRECT, RETURN, FALL
+		DESCEND, ASCEND, CONTINUE, RESURRECT, RETURN, FALL, NONE
 	};
 	public static Mode mode;
 	
@@ -94,6 +95,7 @@ public class InterlevelScene extends PixelScene {
 		case FALL:
 			text = TXT_FALLING;
 			break;
+		default:
 		}
 		
 		message = PixelScene.createText( text, 9 );
@@ -112,8 +114,6 @@ public class InterlevelScene extends PixelScene {
 				try {
 					
 					Generator.reset();
-					
-					
 					
 					switch (mode) {
 					case DESCEND:
@@ -134,6 +134,7 @@ public class InterlevelScene extends PixelScene {
 					case FALL:
 						fall();
 						break;
+					default:
 					}
 
 					if ((Dungeon.depth % 5) == 0) {
@@ -212,6 +213,7 @@ public class InterlevelScene extends PixelScene {
 				Dungeon.chapters.add( WndStory.ID_SEWERS );
 				noStory = false;
 			}
+			GameLog.wipe();
 		} else {
 			Dungeon.saveLevel();
 		}
@@ -263,6 +265,8 @@ public class InterlevelScene extends PixelScene {
 	private void restore() throws Exception {
 		
 		Actor.fixTime();
+		
+		GameLog.wipe();
 		
 		Dungeon.loadGame( StartScene.curClass );
 		if (Dungeon.depth == -1) {

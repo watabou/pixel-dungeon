@@ -26,9 +26,6 @@ public class Dart extends MissileWeapon {
 	{
 		name = "dart";
 		image = ItemSpriteSheet.DART;
-		
-		MIN = 1;
-		MAX = 4;
 	}
 	
 	public Dart() {
@@ -38,6 +35,16 @@ public class Dart extends MissileWeapon {
 	public Dart( int number ) {
 		super();
 		quantity = number;
+	}
+	
+	@Override
+	public int min() {
+		return 1;
+	}
+	
+	@Override
+	public int max() {
+		return 4;
 	}
 	
 	@Override
