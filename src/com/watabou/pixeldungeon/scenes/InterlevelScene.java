@@ -50,7 +50,7 @@ public class InterlevelScene extends PixelScene {
 	private static final String ERR_GENERIC			= "Something went wrong..."	;	
 	
 	public static enum Mode {
-		DESCEND, ASCEND, CONTINUE, RESURRECT, RETURN, FALL, NONE
+		DESCEND, ASCEND, CONTINUE, RESURRECT, RETURN, FALL, UNDO, NONE
 	};
 	public static Mode mode;
 	
