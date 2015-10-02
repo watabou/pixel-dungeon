@@ -167,8 +167,8 @@
    <string name="HeroSubClass_DescBers">Quando gravemente ferido, o _Furia_ entra em um estado de fúria selvagem aumentando significativamente seu potencial de dano.</string>
    <string name="HeroSubClass_NameWarL">bruxo</string>
    <string name="HeroSubClass_DescWarL">Depois de matar um inimigo o _Bruxo_ consome a sua alma. Ele cura as feridas e preenche sua fome.</string>
-   <string name="HeroSubClass_NameBatM">mago</string>
-   <string name="HeroSubClass_DescBatM">Ao lutar com uma varinha, o _Mago_ causa dano adicional, dependendo do número atual de cargas. Cada ataque bem sucedido restaura 1 carga para esta varinha.</string>
+   <string name="HeroSubClass_NameBatM">mago lutador</string>
+   <string name="HeroSubClass_DescBatM">Ao lutar com uma varinha, o _Mago Lutador_ causa dano adicional, dependendo do número atual de cargas. Cada ataque bem sucedido restaura 1 carga para esta varinha.</string>
    <string name="HeroSubClass_NameAssa">assassino</string>
    <string name="HeroSubClass_DescAssa">Ao realizar um ataque surpresa, o _Assassino_ inflige danos adicionais ao seu alvo.</string>
    <string name="HeroSubClass_NameFreR">corredor</string>
@@ -1041,7 +1041,7 @@
 <!--  PACKAGE /items/scrolls  -->
    <!--  STRINGS OF Scroll CLASS  -->
    <string name="Scroll_Name">pergaminho \"%s\"</string>
-   <string name="Scroll_Info">Este pergaminho é tem uma escrita indecifrável, e tem um título de runa %s. Quem sabe o que vai acontecer quando lido em voz alta?</string>
+   <string name="Scroll_Info">Este pergaminho está coberto com uma escrita indecifrável, e o título exibe a runa %s. Quem sabe o que vai acontecer quando lido em voz alta?</string>
    <string name="Scroll_ACRead">LER</string>
    <string name="Scroll_Blinded">Você não pode ler um pergaminho enquanto cego</string>
    <string-array name="Scroll_Runes">
@@ -1062,7 +1062,7 @@
 
    <!--  STRINGS OF InventoryScroll CLASS  -->
    <string name="InventoryScroll_Title">Escolha um item</string>
-   <string name="InventoryScroll_Warning">Você realmente deseja cancelar o uso d prgaminho? Ele será descartado de qualquer forma!</string>
+   <string name="InventoryScroll_Warning">Você realmente deseja cancelar o uso do pergaminho? Ele será descartado de qualquer forma!</string>
    <string name="InventoryScroll_Yes">Sim, tenho certeza</string>
    <string name="InventoryScroll_No">Não, eu mudei de idéia</string>
 
@@ -1075,7 +1075,7 @@
 
    <!--  STRINGS OF ScrollOfIdentify CLASS  -->
    <string name="ScrollOfIdentify_Name">Pergaminho da Identificação</string>
-   <string name="ScrollOfIdentify_Info">Revela permanentemente durante o jogo todos os segredos de determinado item</string>
+   <string name="ScrollOfIdentify_Info">Revela permanentemente durante o jogo todos os segredos de determinado item.</string>
    <string name="ScrollOfIdentify_InvTitle">Escolha um item para identificar</string>
    <string name="ScrollOfIdentify_Info1">Isto é %s</string>
 
@@ -1090,7 +1090,7 @@
 
    <!--  STRINGS OF ScrollOfMagicMapping CLASS  -->
    <string name="ScrollOfMagicMapping_Name">Pergaminho de Mapeamento</string>
-   <string name="ScrollOfMagicMapping_Info">Quando este pergaminho é lido, uma imagem de clareza cristalina será gravada em sua memória, mostrando o layout preciso do nível e revelando todos os segredos ocultos. As localizações dos itens e criaturas permanecerão desconhecidos.</string>
+   <string name="ScrollOfMagicMapping_Info">Quando este pergaminho for lido, uma imagem de clareza cristalina será gravada em sua memória, mostrando o layout preciso do nível e revelando todos os segredos ocultos. As localizações dos itens e criaturas permanecerão desconhecidos.</string>
    <string name="ScrollOfMagicMapping_Layout">Agora você conhece todo o nível atual.</string>
 
 
@@ -1101,12 +1101,12 @@
 
    <!--  STRINGS OF ScrollOfPsionicBlast CLASS  -->
    <string name="ScrollOfPsionicBlast_Name">Pergaminho de Explosão Psiônica</string>
-   <string name="ScrollOfPsionicBlast_Info">Este pergaminho contém energia destrutiva que pode ser psionicamente canalizados para infligir um grande dano a todas as criaturas dentro do campo de visão. Um flash de luz acompanhada de cegueira temporaria afetará todos na área de efeito, incluindo o leitor de pergaminho.</string>
+   <string name="ScrollOfPsionicBlast_Info">Este pergaminho possui uma energia destrutiva que pode ser psionicamente canalizada para infligir um grande dano a todas as criaturas dentro do campo de visão. Um flash de luz acompanhada de cegueira temporaria afetará todos na área de efeito, incluindo o leitor de pergaminho.</string>
 
 
    <!--  STRINGS OF ScrollOfRecharging CLASS  -->
    <string name="ScrollOfRecharging_Name">Pergaminho da Recarga</string>
-   <string name="ScrollOfRecharging_Info">O poder mágico bruto ligado neste pergaminho irá, quando lançado, recarregar todas as varinhas do leitor para a carga máxima.</string>
+   <string name="ScrollOfRecharging_Info">O poder mágico bruto ligado a este pergaminho irá, quando lançado, recarregar todas as varinhas do leitor para a carga máxima.</string>
    <string name="ScrollOfRecharging_Info1a">uma onda de energia através de seu pacote, recarrega sua varinha</string>
    <string name="ScrollOfRecharging_Info1b">uma onda de energia através de seu pacote, recarrega suas varinhas</string>
    <string name="ScrollOfRecharging_Info2">uma onda de energia através de seu pacote, mas nada acontece</string>
