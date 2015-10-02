@@ -48,7 +48,7 @@ public class Viscosity extends Glyph {
 			return 0;
 		}
 		
-		int level = Math.max( 0, armor.level );
+		int level = Math.max( 0, armor.effectiveLevel() );
 		
 		if (Random.Int( level + 7 ) >= 6) {
 			

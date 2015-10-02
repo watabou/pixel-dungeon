@@ -35,9 +35,6 @@ public class CurareDart extends MissileWeapon {
 		image = ItemSpriteSheet.CURARE_DART;
 		
 		STR = 14;
-		
-		MIN = 1;
-		MAX = 3;
 	}
 	
 	public CurareDart() {
@@ -47,6 +44,16 @@ public class CurareDart extends MissileWeapon {
 	public CurareDart( int number ) {
 		super();
 		quantity = number;
+	}
+	
+	@Override
+	public int min() {
+		return 1;
+	}
+	
+	@Override
+	public int max() {
+		return 3;
 	}
 	
 	@Override

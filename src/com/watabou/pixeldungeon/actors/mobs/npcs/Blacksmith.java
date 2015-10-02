@@ -167,7 +167,7 @@ public class Blacksmith extends NPC {
 			return Game.getVar(R.string.Blacksmith_Verify4);
 		}
 		
-		if (item1.level < 0 || item2.level < 0) {
+		if (item1.level() < 0 || item2.level() < 0) {
 			return Game.getVar(R.string.Blacksmith_Verify5);
 		}
 		
@@ -181,7 +181,7 @@ public class Blacksmith extends NPC {
 	public static void upgrade( Item item1, Item item2 ) {
 		
 		Item first, second;
-		if (item2.level > item1.level) {
+		if (item2.level() > item1.level()) {
 			first = item2;
 			second = item1;
 		} else {

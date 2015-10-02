@@ -32,7 +32,7 @@ public class Luck extends Weapon.Enchantment {
 	
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {
-		int level = Math.max( 0, weapon.level );
+		int level = Math.max( 0, weapon.effectiveLevel() );
 		
 		int dmg = damage;
 		for (int i=1; i <= level+1; i++) {

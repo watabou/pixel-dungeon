@@ -22,11 +22,14 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.R;
+import com.watabou.pixeldungeon.actors.buffs.Buff;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
+import com.watabou.pixeldungeon.actors.buffs.Rage;
 import com.watabou.pixeldungeon.actors.mobs.Mimic;
 import com.watabou.pixeldungeon.actors.mobs.Mob;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Heap;
+import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.utils.GLog;
 
 public class ScrollOfChallenge extends Scroll {
@@ -38,10 +41,12 @@ public class ScrollOfChallenge extends Scroll {
 	@Override
 	protected void doRead() {
 		
-		for (Mob mob : Dungeon.level.mobs) {
+		for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
 			mob.beckon( curUser.pos );
+			if (Dungeon.visible[mob.pos]) {
+				Buff.affect( mob, Rage.class, Level.distance( curUser.pos, mob.pos ) );
+			}
 		}
-		
 		
 		for (Heap heap : Dungeon.level.heaps.values()) {
 			if (heap.type == Heap.Type.MIMIC) {
@@ -60,7 +65,7 @@ public class ScrollOfChallenge extends Scroll {
 		Sample.INSTANCE.play( Assets.SND_CHALLENGE );
 		Invisibility.dispel();
 		
-		curUser.spendAndNext( TIME_TO_READ );
+		readAnimation();
 	}
 	
 	@Override

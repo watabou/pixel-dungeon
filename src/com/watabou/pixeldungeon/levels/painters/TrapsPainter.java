@@ -94,7 +94,7 @@ public class TrapsPainter extends Painter {
 				Generator.Category.WEAPON, 
 				Generator.Category.ARMOR 
 			) );
-			if (another.level > prize.level) {
+			if (another.level() > prize.level()) {
 				prize = another;
 			}
 		}

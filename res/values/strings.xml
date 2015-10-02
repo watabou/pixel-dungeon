@@ -335,7 +335,7 @@
 
 
    <!--  STRINGS OF WndChooseWay CLASS  -->
-   <string name="WndChooseWay_Message">Which way will you follow?</string>
+   <string name="WndChooseWay_Mastery">Which way will you follow?</string>
    <string name="WndChooseWay_Cancel">I\'ll decide later</string>
 
 
@@ -436,8 +436,6 @@
 
 
    <!--  STRINGS OF WndSadGhost CLASS  -->
-   <string name="WndSadGhost_Rose">Yes! Yes!!! This is it! Please give it to me! And you can take one of these items, maybe they will be useful to you in your journey...</string>
-   <string name="WndSadGhost_Rat">Yes! The ugly creature is slain and I can finally rest... Please take one of these items, maybe they will be useful to you in your journey...</string>
    <string name="WndSadGhost_Wepon">Ghost\'s weapon</string>
    <string name="WndSadGhost_Armor">Ghost\'s armor</string>
 
@@ -493,8 +491,8 @@
    <string name="Item_ACThrow">THROW</string>
    <string name="Item_PackFull">Your pack is too full for the %s</string>
    <string name="Item_DirThrow">Choose direction of throw</string>
-   <string name="Item_Degraded">Because of frequent use, your %s has degraded.</string>
-   <string name="Item_GonnaDegrade">Because of frequent use, your %s is going to degrade soon.</string>
+   <string name="Item_Broken">Because of frequent use, your %s has broken.</string>
+   <string name="Item_GonnaBreak">Because of frequent use, your %s is going to break soon.</string>
 
 
    <!--  STRINGS OF EquipableItem CLASS  -->
@@ -632,6 +630,12 @@
    <!--  STRINGS OF Icecap CLASS  -->
    <string name="Icecap_Name">Icecap</string>
    <string name="Icecap_Desc">Upon touching an Icecap excretes a pollen, which freezes everything in its vicinity.</string>
+
+
+   <!--  STRINGS OF Rotberry CLASS  -->
+   <string name="Rotberry_Name">Rotberry</string>
+   <string name="Rotberry_Desc">Berries of this shrub taste like sweet, sweet death.</string>
+   <string name="Rotberry_Info">The seed emits a roar that echoes throughout the dungeon!</string>
 
 
    <!--  STRINGS OF Sorrowmoss CLASS  -->
@@ -1262,10 +1266,10 @@
    <string name="WandOfSlowness_Info1">nothing happened</string>
 
 
-   <!--  STRINGS OF WandOfTelekinesis CLASS  -->
-   <string name="WandOfTelekinesis_Name">Wand of Telekinesis</string>
-   <string name="WandOfTelekinesis_Info">Waves of magic force from this wand will affect all cells on their way triggering traps, trampling high vegetation, opening closed doors and closing open ones. They also push back monsters.</string>
-   <string name="WandOfTelekinesis_YouNowHave">You have magically transported %s into your backpack</string>
+   <!--  STRINGS OF WandOfReach CLASS  -->
+   <string name="WandOfReach_Name">Wand of Reach</string>
+   <string name="WandOfReach_Info">This utility wand can be used to grab objects from a distance and to switch places with enemies. Waves of magic force radiated from it will affect all cells on their way triggering traps, trampling high vegetation, opening closed doors and closing open ones.</string>
+   <string name="WandOfReach_YouNowHave">You have magically transported %s into your backpack</string>
 
 
    <!--  STRINGS OF WandOfTeleportation CLASS  -->
@@ -1283,27 +1287,27 @@
 
 <!--  PACKAGE /weapon/Enchantment  -->
    <!--  STRINGS OF Death CLASS  -->
-   <string name="Death_Name">Grim %s</string>
+   <string name="Death_Name">grim %s</string>
    <!--  STRINGS OF Fire CLASS  -->
-   <string name="Fire_Name">Blazing %s</string>
+   <string name="Fire_Name">blazing %s</string>
    <!--  STRINGS OF Horror CLASS  -->
-   <string name="Horror_Name">Eldritch %s</string>
+   <string name="Horror_Name">eldritch %s</string>
    <!--  STRINGS OF Instability CLASS  -->
-   <string name="Instability_Name">Unstable %s</string>
+   <string name="Instability_Name">unstable %s</string>
    <!--  STRINGS OF Leech CLASS  -->
-   <string name="Leech_Name">Vampiric %s</string>
+   <string name="Leech_Name">vampiric %s</string>
    <!--  STRINGS OF Luck CLASS  -->
-   <string name="Luck_Name">Lucky %s</string>
+   <string name="Luck_Name">lucky %s</string>
    <!--  STRINGS OF Paralysis CLASS  -->
-   <string name="Paralysis_Name">Stunning %s</string>
+   <string name="Paralysis_Name">stunning %s</string>
    <!--  STRINGS OF Poison CLASS  -->
-   <string name="Poison_Name">Venomous %s</string>
+   <string name="Poison_Name">venomous %s</string>
    <!--  STRINGS OF Shock CLASS  -->
-   <string name="Shock_Name">Shocking %s</string>
+   <string name="Shock_Name">shocking %s</string>
    <!--  STRINGS OF Slow CLASS  -->
-   <string name="Slow_Name">Chilling %s</string>
+   <string name="Slow_Name">chilling %s</string>
    <!--  STRINGS OF Tempering CLASS  -->
-   <string name="Tempering_Name">Tempered %s</string>
+   <string name="Tempering_Name">tempered %s</string>
 
 
 <!--  PACKAGE /weapon/melee  -->
@@ -1312,6 +1316,7 @@
    <string name="MeleeWeapon_Info1b">a</string>
    <string name="MeleeWeapon_Info1c">a upgraded</string>
    <string name="MeleeWeapon_Info1d">an degraded</string>
+   <string name="MeleeWeapon_Info1e">a broken</string>
    <string name="MeleeWeapon_Info2a">Its average damage is %d points per hit.</string>
    <string name="MeleeWeapon_Info2b">Its typical average damage is %1$d points per hit and usually it requires %2$d points of strength.</string>
    <string name="MeleeWeapon_Info2c">Probably this weapon is too heavy for you.</string>
@@ -1574,6 +1579,10 @@
    <string name="Eye_Name">evil eye</string>
    <string name="Eye_Desc">One of this demon\'s other names is \"orb of hatred\", because when it sees an enemy, it uses its deathgaze recklessly, often ignoring its allies and wounding them.</string>
    <string name="Eye_Kill">%s\'s deathgaze killed you...</string>
+   <!--  STRINGS OF FetidRat CLASS  -->
+   <string name="FetidRat_Name">fetid rat</string>
+   <string name="FetidRat_Desc">This marsupial rat is much larger, than a regular one. It is surrounded by a foul cloud.</string>
+   <string name="FetidRat_Defense">evaded</string>
    <!--  STRINGS OF Gnoll CLASS  -->
    <string name="Gnoll_Name">gnoll scout</string>
    <string name="Gnoll_Desc">Gnolls are hyena-like humanoids. They dwell in sewers and dungeons, venturing up to raid the surface from time to time. Gnoll scouts are regular members of their pack, they are not as strong as brutes and not as intelligent as shamans.</string>
@@ -1700,12 +1709,12 @@
    <string name="Ghost_Name">sad ghost</string>
    <string name="Ghost_Desc">The ghost is barely visible. It looks like a shapeless spot of faint light with a sorrowful face.</string>
    <string name="Ghost_Rose1">Hello adventurer... Once I was like you - strong and confident... And now I\'m dead... But I can\'t leave this place... Not until I have my _dried rose_... It\'s very important to me... Some monster stole it from my body...</string>
-   <string name="Ghost_Rose2">Please... Help me... Find the rose...</string>
+   <string name="Ghost_Rose2">Please... Help me... _Find the rose_...</string>
+   <string name="Ghost_Rose3">Yes! Yes!!! This is it! Please give it to me! And you can take one of these items, maybe they will be useful to you in your journey...</string>
    <string name="Ghost_Rat1">Hello adventurer... Once I was like you - strong and confident... And now I\'m dead... But I can\'t leave this place... Not until I have my revenge... Slay the _fetid rat_, that has taken my life...</string>
-   <string name="Ghost_Rat2">Please... Help me... Slay the abomination...</string>
+   <string name="Ghost_Rat2">Please... Help me... _Slay the abomination_...</string>
+   <string name="Ghost_Rat3">Yes! The ugly creature is slain and I can finally rest... Please take one of these items, maybe they will be useful to you in your journey...</string>
    <string name="Ghost_Defense">evaded</string>
-   <string name="Ghost_FetidRatName">fetid rat</string>
-   <string name="Ghost_FetidRatDesc">This marsupial rat is much larger, than a regular one. It is surrounded by a foul cloud.</string>
    <!--  STRINGS OF Imp CLASS  -->
    <string name="Imp_Name">ambitious imp</string>
    <string name="Imp_Desc">Imps are lesser demons. They are notable for neither their strength nor their magic talent, but they are quite smart and sociable. Many imps prefer to live among non-demons.</string>
@@ -1737,12 +1746,9 @@
    <string name="WandMaker_Desc">This old but hale gentleman wears a slightly confused expression. He is protected by a magic shield.</string>
    <string name="WandMaker_Defense">absorbed</string>
    <string name="WandMaker_Berry1">Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient - a _Rotberry seed_. Being a magic user, I\'m quite able to defend myself against local monsters, but I\'m getting lost in no time, it\'s very embarrassing. Probably you could help me? I would be happy to pay for your service with one of my best wands.</string>
-   <string name="WandMaker_Berry2">Any luck with a Rotberry seed, %s? No? Don\'t worry, I\'m not in a hurry.</string>
+   <string name="WandMaker_Berry2">Any luck with a _Rotberry seed_, %s? No? Don\'t worry, I\'m not in a hurry.</string>
    <string name="WandMaker_Dust1">Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient - _corpse dust_. It can be gathered from skeletal remains and there is an ample number of them in the dungeon. Being a magic user, I\'m quite able to defend myself against local monsters, but I\'m getting lost in no time, it\'s very embarrassing. Probably you could help me? I would be happy to pay for your service with one of my best wands.</string>
-   <string name="WandMaker_Dust2">Any luck with corpse dust, %s? Bone piles are the most obvious places to look.</string>
-   <string name="WandMaker_RotberryName">Rotberry</string>
-   <string name="WandMaker_RotberryDesc">Berries of this shrub taste like sweet, sweet death.</string>
-   <string name="WandMaker_RotberryInfo">The seed emits a roar that echoes throughout the dungeon!</string>
+   <string name="WandMaker_Dust2">Any luck with _corpse dust_, %s? Bone piles are the most obvious places to look.</string>
 
 
 <!--  PACKAGE /levels  -->
@@ -1875,8 +1881,8 @@
        <item >DANGER! Heavy machinery can cause injury, loss of limbs or death!</item>
        <item >Pixel-Mart. A safer life in dungeon.</item>
        <item >When you upgrade an enchanted weapon, there is a chance to destroy that enchantment.</item>
-       <item >With a Well of Transmutation you can get an item, that cannot be obtained otherwise.</item>
-       <item >The only way to enchant a weapon is by upgrading it with a Scroll of Weapon Upgrade.</item>
+       <item >Weapons and armors deteriorate faster than wands and rings, but there are more ways to fix them.</item>
+       <item >The only way to obtain a Scroll of Wipe Out is to receive it as a gift from the dungeon spirits.</item>
        <item >No weapons allowed in the presence of His Majesty!</item>
        <item >Pixel-Mart. Special prices for demon hunters!</item>
    </string-array>

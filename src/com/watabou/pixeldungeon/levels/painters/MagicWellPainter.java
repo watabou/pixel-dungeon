@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.levels.painters;
 
-import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.blobs.WaterOfAwareness;
 import com.watabou.pixeldungeon.actors.blobs.WaterOfHealth;
 import com.watabou.pixeldungeon.actors.blobs.WaterOfTransmutation;
@@ -43,13 +42,7 @@ public class MagicWellPainter extends Painter {
 		
 		@SuppressWarnings("unchecked")
 		Class<? extends WellWater> waterClass = 
-			Dungeon.depth >= Dungeon.transmutation ?
-			WaterOfTransmutation.class :		
 			(Class<? extends WellWater>)Random.element( WATERS );
-			
-		if (waterClass == WaterOfTransmutation.class) {
-			Dungeon.transmutation = Integer.MAX_VALUE;
-		}
 		
 		WellWater water = (WellWater)level.blobs.get( waterClass );
 		if (water == null) {

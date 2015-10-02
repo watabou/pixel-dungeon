@@ -39,7 +39,7 @@ public class Fire extends Weapon.Enchantment {
 		// lvl 0 - 33%
 		// lvl 1 - 50%
 		// lvl 2 - 60%
-		int level = Math.max( 0, weapon.level );
+		int level = Math.max( 0, weapon.effectiveLevel() );
 		
 		if (Random.Int( level + 3 ) >= 2) {
 			

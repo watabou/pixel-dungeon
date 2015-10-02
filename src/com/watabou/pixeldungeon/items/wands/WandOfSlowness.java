@@ -38,7 +38,9 @@ public class WandOfSlowness extends Wand {
 	protected void onZap( int cell ) {
 		Char ch = Actor.findChar( cell );
 		if (ch != null) {
-			Buff.affect( ch, Slow.class, Slow.duration( ch ) / 3 + level() );
+			
+			Buff.affect( ch, Slow.class, Slow.duration( ch ) / 3 + power() );
+
 		} else {
 			GLog.i(Game.getVar(R.string.WandOfSlowness_Info1));
 		}

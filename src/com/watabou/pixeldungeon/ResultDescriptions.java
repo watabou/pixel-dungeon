@@ -28,6 +28,7 @@ public class ResultDescriptions {
 	// Items
 	public static final String WAND		= Game.getVar(R.string.ResultDescriptions_Wand);
 	public static final String GLYPH	= Game.getVar(R.string.ResultDescriptions_Glyph);
+	public static final String BOMB		= "Killed by an explosion of a bomb on level %d";
 	
 	// Dungeon features
 	public static final String TRAP	= Game.getVar(R.string.ResultDescriptions_Trap);

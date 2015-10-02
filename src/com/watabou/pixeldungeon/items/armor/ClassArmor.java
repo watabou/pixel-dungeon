@@ -31,6 +31,8 @@ abstract public class ClassArmor extends Armor {
 	private static final String TXT_LOW_HEALTH   = Game.getVar(R.string.ClassArmor_LowHealt);
 	private static final String TXT_NOT_EQUIPPED = Game.getVar(R.string.ClassArmor_NotEquipped);
 	
+	private int DR;
+	
 	{
 		levelKnown = true;
 		cursedKnown = true;
@@ -61,7 +63,7 @@ abstract public class ClassArmor extends Armor {
 		}
 		
 		classArmor.STR = armor.STR;
-		classArmor.DR = armor.DR;
+		classArmor.DR = armor.DR();
 		
 		classArmor.inscribe( armor.glyph );
 		
@@ -114,6 +116,11 @@ abstract public class ClassArmor extends Armor {
 	
 	abstract public String special();
 	abstract public void doSpecial();
+	
+	@Override
+	public int DR() {
+		return DR;
+	}
 	
 	@Override
 	public boolean isUpgradable() {

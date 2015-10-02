@@ -162,7 +162,7 @@ public class ItemSlot extends Button {
 			if (level != 0 || (item.cursed && item.cursedKnown)) {
 				bottomRight.text( item.levelKnown ? Utils.format( TXT_LEVEL, level ) : TXT_CURSED );
 				bottomRight.measure();
-				bottomRight.hardlight( level > 0 ? UPGRADED : DEGRADED );
+				bottomRight.hardlight( level > 0 ? (item.isBroken() ? WARNING : UPGRADED) : DEGRADED );
 			} else {
 				bottomRight.text( null );
 			}

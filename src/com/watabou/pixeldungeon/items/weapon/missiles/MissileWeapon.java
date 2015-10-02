@@ -31,7 +31,7 @@ import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.windows.WndOptions;
 
-public class MissileWeapon extends Weapon {
+abstract public class MissileWeapon extends Weapon {
 
 	private static final String TXT_MISSILES = Game.getVar(R.string.MissileWeapon_Missiles);
 	private static final String TXT_YES      = Game.getVar(R.string.MissileWeapon_Yes);
@@ -120,8 +120,10 @@ public class MissileWeapon extends Weapon {
 	public String info() {
 		
 		StringBuilder info = new StringBuilder( desc() );
-		   
-		info.append(String.format(Game.getVar(R.string.MissileWeapon_Info1),(MIN + (MAX - MIN) / 2)));
+		
+		int min = min();
+		int max = max();   
+		info.append(String.format(Game.getVar(R.string.MissileWeapon_Info1), (min + (max - min) / 2)));
 		info.append(" ");
 
 		if (Dungeon.hero.belongings.backpack.items.contains( this )) {

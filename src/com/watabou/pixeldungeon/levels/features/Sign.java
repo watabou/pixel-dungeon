@@ -27,7 +27,6 @@ import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.effects.CellEmitter;
 import com.watabou.pixeldungeon.effects.particles.ElmoParticle;
 import com.watabou.pixeldungeon.levels.DeadEndLevel;
-import com.watabou.pixeldungeon.levels.Level;
 import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
@@ -53,7 +52,7 @@ public class Sign {
 				GameScene.show( new WndMessage( TIPS[index] ) );
 			} else {
 				
-				Level.set( pos, Terrain.EMBERS );
+				Dungeon.level.destroy( pos );
 				GameScene.updateMap( pos );
 				GameScene.discoverTile( pos, Terrain.SIGN );
 				

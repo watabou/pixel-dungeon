@@ -39,7 +39,7 @@ public class Death extends Weapon.Enchantment {
 		// lvl 0 - 8%
 		// lvl 1 ~ 9%
 		// lvl 2 ~ 10%
-		int level = Math.max( 0, weapon.level );
+		int level = Math.max( 0, weapon.effectiveLevel() );
 		
 		if (Random.Int( level + 100 ) >= 92) {
 			

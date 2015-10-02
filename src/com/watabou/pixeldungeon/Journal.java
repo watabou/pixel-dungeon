@@ -29,6 +29,7 @@ public class Journal {
 		WELL_OF_HEALTH			(Game.getVar(R.string.Journal_WellHealt)),
 		WELL_OF_AWARENESS		(Game.getVar(R.string.Journal_WellAwareness)),
 		WELL_OF_TRANSMUTATION	(Game.getVar(R.string.Journal_WellTransmut)),
+		SACRIFICIAL_FIRE		( "Sacrificial chamber" ),
 		ALCHEMY					(Game.getVar(R.string.Journal_Alchemy)),
 		GARDEN					(Game.getVar(R.string.Journal_Garden)),
 		STATUE					(Game.getVar(R.string.Journal_Statue)),

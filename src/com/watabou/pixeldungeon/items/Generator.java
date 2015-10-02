@@ -21,7 +21,6 @@ import java.util.HashMap;
 
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
-import com.watabou.pixeldungeon.actors.mobs.npcs.Wandmaker.Rotberry;
 import com.watabou.pixeldungeon.items.armor.*;
 import com.watabou.pixeldungeon.items.bags.Bag;
 import com.watabou.pixeldungeon.items.food.Food;
@@ -120,7 +119,7 @@ public class Generator {
 			WandOfBlink.class,
 			WandOfLightning.class,
 			WandOfAmok.class,
-			WandOfTelekinesis.class,
+			WandOfReach.class,
 			WandOfFlock.class,
 			WandOfMagicMissile.class,
 			WandOfDisintegration.class,
