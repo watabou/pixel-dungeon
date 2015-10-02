@@ -335,7 +335,7 @@
 
 
    <!--  STRINGS OF WndChooseWay CLASS  -->
-   <string name="WndChooseWay_Message">Quelle voie choisirez-vous?</string>
+   <string name="WndChooseWay_Mastery">Quelle voie choisirez-vous?</string>
    <string name="WndChooseWay_Cancel">Je choisirai plus tard</string>
 
 
@@ -425,8 +425,6 @@
 
 
    <!--  STRINGS OF WndSadGhost CLASS  -->
-   <string name="WndSadGhost_Rose">Oui ! OUI !!! C\'est ça ! Donnez la moi ! Vous pouvez prendre l\'un de ces objets, ils vous seront peut-être utiles pendant votre voyage...</string>
-   <string name="WndSadGhost_Rat">Oui ! Cette créature infâme est vaincue et je peux enfin reposer en paix... Je vous prie d\'accepter l\'un de ces objets, ils vous seront peut-être utiles pendant votre voyage...</string>
    <string name="WndSadGhost_Wepon">Arme du fantôme</string>
    <string name="WndSadGhost_Armor">Armure du fantôme</string>
 
@@ -482,8 +480,8 @@
    <string name="Item_ACThrow">LANCER</string>
    <string name="Item_PackFull">Vous n\'avez plus de place pour %s</string>
    <string name="Item_DirThrow">Choisissez la direction du lancer</string>
-   <string name="Item_Degraded">En raison de l\'utilisation fréquente, votre %s a dégradé.</string>
-   <string name="Item_GonnaDegrade">En raison de l\'utilisation fréquente, votre %s va se dégrader rapidement.</string>
+   <string name="Item_Broken">En raison de l\'utilisation fréquente, votre %s a rompu.</string>
+   <string name="Item_GonnaBreak">En raison de l\'utilisation fréquente, votre %s va se  briser bientôt.</string>
 
 
    <!--  STRINGS OF EquipableItem CLASS  -->
@@ -621,6 +619,12 @@
    <!--  STRINGS OF Icecap CLASS  -->
    <string name="Icecap_Name">Champiglace</string>
    <string name="Icecap_Desc">Le champiglace va, au toucher, relâcher des spores qui vont geler tout ce qui se trouve dans les environs.</string>
+
+
+   <!--  STRINGS OF Rotberry CLASS  -->
+   <string name="Rotberry_Name">Rougebaie</string>
+   <string name="Rotberry_Desc">Les baies de cet arbrisseau ont le goût délicieux de la mort.</string>
+   <string name="Rotberry_Info">La graine pousse un rugissement qui fait écho dans le donjon!</string>
 
 
    <!--  STRINGS OF Sorrowmoss CLASS  -->
@@ -1251,10 +1255,10 @@
    <string name="WandOfSlowness_Info1">rien ne se passe</string>
 
 
-   <!--  STRINGS OF WandOfTelekinesis CLASS  -->
-   <string name="WandOfTelekinesis_Name">Sceptre de Télékinésie</string>
-   <string name="WandOfTelekinesis_Info">Les vagues de force magique de ce sceptre affecterons tout sur leur passage, activant les pièges, piétinant les hautes herbes, ouvrant les portes fermées et fermant celles qui sont ouvertes. Cela  repoussera aussi les monstres.</string>
-   <string name="WandOfTelekinesis_YouNowHave">Vous avez transporté magiquement le %s dans votre sac</string>
+   <!--  STRINGS OF WandOfReach CLASS  -->
+   <string name="WandOfReach_Name">Sceptre de Atteindre</string>
+   <string name="WandOfReach_Info">Cette sceptre utilitaire peut être utilisé pour saisir des objets à distance et de changer de place avec des ennemis. Les vagues de force magique de ce sceptre affecterons tout sur leur passage, activant les pièges, piétinant les hautes herbes, ouvrant les portes fermées et fermant celles qui sont ouvertes.</string>
+   <string name="WandOfReach_YouNowHave">Vous avez transporté magiquement le %s dans votre sac</string>
 
 
    <!--  STRINGS OF WandOfTeleportation CLASS  -->
@@ -1272,27 +1276,27 @@
 
 <!--  PACKAGE /weapon/Enchantment  -->
    <!--  STRINGS OF Death CLASS  -->
-   <string name="Death_Name">%s Macabre</string>
+   <string name="Death_Name">%s macabre</string>
    <!--  STRINGS OF Fire CLASS  -->
-   <string name="Fire_Name">%s Enflammée</string>
+   <string name="Fire_Name">%s enflammée</string>
    <!--  STRINGS OF Horror CLASS  -->
-   <string name="Horror_Name">%s d\'Eldritch</string>
+   <string name="Horror_Name">%s d\'eldritch</string>
    <!--  STRINGS OF Instability CLASS  -->
-   <string name="Instability_Name">%s Instable</string>
+   <string name="Instability_Name">%s instable</string>
    <!--  STRINGS OF Leech CLASS  -->
-   <string name="Leech_Name">%s Vampirique</string>
+   <string name="Leech_Name">%s vampirique</string>
    <!--  STRINGS OF Luck CLASS  -->
-   <string name="Luck_Name">%s Chanceuse</string>
+   <string name="Luck_Name">%s chanceuse</string>
    <!--  STRINGS OF Paralysis CLASS  -->
-   <string name="Paralysis_Name">%s Etourdissante</string>
+   <string name="Paralysis_Name">%s etourdissante</string>
    <!--  STRINGS OF Poison CLASS  -->
-   <string name="Poison_Name">%s Venimeuse</string>
+   <string name="Poison_Name">%s venimeuse</string>
    <!--  STRINGS OF Shock CLASS  -->
-   <string name="Shock_Name">%s Choquant</string>
+   <string name="Shock_Name">%s choquant</string>
    <!--  STRINGS OF Slow CLASS  -->
-   <string name="Slow_Name">%s Glaçante</string>
+   <string name="Slow_Name">%s glaçante</string>
    <!--  STRINGS OF Tempering CLASS  -->
-   <string name="Tempering_Name">%s Trempé</string>
+   <string name="Tempering_Name">%s trempé</string>
 
 
 <!--  PACKAGE /weapon/melee  -->
@@ -1301,6 +1305,7 @@
    <string name="MeleeWeapon_Info1b"></string>
    <string name="MeleeWeapon_Info1c">améliorée</string>
    <string name="MeleeWeapon_Info1d">dégradé</string>
+   <string name="MeleeWeapon_Info1e">brisée</string>
    <string name="MeleeWeapon_Info2a">Ses dommages moyens sont de %d points par coup.</string>
    <string name="MeleeWeapon_Info2b">Ses dommages moyens sont typiquement de %1$d points par coup et elle requiert %2$d points de force.</string>
    <string name="MeleeWeapon_Info2c">Cette arme est sûrement trop lourde pour vous.</string>
@@ -1563,6 +1568,10 @@
    <string name="Eye_Name">oeil malsain</string>
    <string name="Eye_Desc">L\'un des autres noms de ce démon est \"orbe de haine\", car lorsqu\'il aperçoit un ennemi, il utilise des gaz toxiques inconsciemment, en ignorant souvent ses alliés et leurs blessures.</string>
    <string name="Eye_Kill">les gaz toxique de l\'%s vous ont tué...</string>
+   <!--  STRINGS OF FetidRat CLASS  -->
+   <string name="FetidRat_Name">rat fétide</string>
+   <string name="FetidRat_Desc">Ce rat est plus gros que les autres. Il est entouré d\'un nuage nauséabond.</string>
+   <string name="FetidRat_Defense">esquivé</string>
    <!--  STRINGS OF Gnoll CLASS  -->
    <string name="Gnoll_Name">gnoll scout</string>
    <string name="Gnoll_Desc">Les gnolls sont des hommes-hyènes. Ils errent dans les égouts et les donjons, s\'aventurant à la surface pour mener des raids de temps en temps. Les scouts sont des membres courants de leur meute, ils ne sont pas aussi forts que les brutes et pas aussi intelligents que les shamans.</string>
@@ -1689,12 +1698,12 @@
    <string name="Ghost_Name">fantôme triste</string>
    <string name="Ghost_Desc">Le fantôme est à peine visible. On dirait un miasme de lumières défaillantes avec un visage des plus attristés.</string>
    <string name="Ghost_Rose1">Bonjour aventurier... J\'étais comme vous, un jour - fort et confiant... Et maintenant je suis décédé... Mais je ne peux pas partir... Pas tant que je n\'aurai pas retrouvé ma _rose séchée_... Elle est très importante à mes yeux... Un monstre l\'a prise sur mon cadavre...</string>
-   <string name="Ghost_Rose2">S\'il vous plaît... Aidez moi... Trouvez la rose...</string>
+   <string name="Ghost_Rose2">S\'il vous plaît... Aidez moi... _Trouvez la rose_...</string>
+   <string name="Ghost_Rose3">Oui ! OUI !!! C\'est ça ! Donnez la moi ! Vous pouvez prendre l\'un de ces objets, ils vous seront peut-être utiles pendant votre voyage...</string>
    <string name="Ghost_Rat1">Boujour aventurier... J\'étais comme vous, un jour - fort et confiant... Et maintenant je suis décédé... Mais je ne peux pas partir... Pas tant que je n\'aurai pas pris ma revanche... Tuez le _rat fétide_, celui qui a pris ma vie...</string>
-   <string name="Ghost_Rat2">S\'il vous plaît... Aidez-moi... Détruisez cette abomination...</string>
+   <string name="Ghost_Rat2">S\'il vous plaît... Aidez-moi... _Détruisez cette abomination_...</string>
+   <string name="Ghost_Rat3">Oui ! Cette créature infâme est vaincue et je peux enfin reposer en paix... Je vous prie d\'accepter l\'un de ces objets, ils vous seront peut-être utiles pendant votre voyage...</string>
    <string name="Ghost_Defense">esquivé</string>
-   <string name="Ghost_FetidRatName">rat fétide</string>
-   <string name="Ghost_FetidRatDesc">Ce rat est plus gros que les autres. Il est entouré d\'un nuage nauséabond.</string>
    <!--  STRINGS OF Imp CLASS  -->
    <string name="Imp_Name">diablotin ambitieux</string>
    <string name="Imp_Desc">Les diablotins sont des démons mineurs. On ne les remarque pas pas pour leur force ou leur aptitudes à la magie, mais plutôt par leur intelligence et leur sociabilité. Beaucoup de diablotins préfèrent vivre parmi les non-démons.</string>
@@ -1726,12 +1735,9 @@
    <string name="WandMaker_Desc">Ce gentleman, vieux mais robuste, a une expression un peu confuse. Il est protégé par un bouclier magique.</string>
    <string name="WandMaker_Defense">absorbé</string>
    <string name="WandMaker_Berry1">Oh, quelle agréable surprise de rencontrer quelqu\'un à un tel endroit! Je suis venu ici pour un ingrédient rare, la _graine Rougebaie_. Etant un magicien, je peux me défendre contre les monstres d\'ici, mais je me perds très facilement, c\'est très embarrassant. Vous pourriez peut-être m\'aider? Je serai heureux de payer vos services avec l\'un de mes meilleurs sceptres.</string>
-   <string name="WandMaker_Berry2">Vous avez trouvé la graine de Rougebaie, %s? Non? Pas de soucis, j\'ai tout mon temps, voyez-vous.</string>
+   <string name="WandMaker_Berry2">Vous avez trouvé la _graine Rougebaie_, %s? Non? Pas de soucis, j\'ai tout mon temps, voyez-vous.</string>
    <string name="WandMaker_Dust1">Oh, quelle agréable surprise de rencontrer quelqu\'un à un tel endroit! Je suis venu ici pour un ingrédient rare, la _poussière de cadavre_. Elle peut être récoltée sur les restes des squelettes, et il y\'en a beaucoup dans le coin. Etant un magicien, je peux me défendre contre les monstres d\'ici, mais je me perds très facilement, c\'est très embarrassant. Vous pourriez peut-être m\'aider? Je serai heureux de payer vos services avec l\'un de mes meilleurs sceptres.</string>
-   <string name="WandMaker_Dust2">Vous avez la poussière des morts , %s? Les piles d\'ossements sont les endroits à vérifier.</string>
-   <string name="WandMaker_RotberryName">Rougebaie</string>
-   <string name="WandMaker_RotberryDesc">Les baies de cet arbrisseau ont le goût délicieux de la mort.</string>
-   <string name="WandMaker_RotberryInfo">La graine pousse un rugissement qui fait écho dans le donjon!</string>
+   <string name="WandMaker_Dust2">Vous avez la _poussière de cadavre_ , %s? Les piles d\'ossements sont les endroits à vérifier.</string>
 
 
 <!--  PACKAGE /levels  -->
@@ -1864,8 +1870,8 @@
        <item >DANGER! La machinerie peut causer des blessures, un démembrement ou même la mort!</item>
        <item >Pixel-Mart - pour un donjon plus tranquille.</item>
        <item >Quand vous améliorez une arme enchantée, il est possible que l\'enchantement soit détruit.</item>
-       <item >Les Puits de Transmutation vous permettent d\'obtenir des objets uniques, qui ne pourraient pas être obtenus autrement.</item>
-       <item >La seule manière d\'enchanter une arme est de l\'améliorer avec un Parchemin d\'Amélioration d\'Arme.</item>
+       <item >Armes et armures se détériorent plus rapidement que des baguettes et des anneaux, mais il ya d\'autres façons d\'y remédier.</item>
+       <item >La seule façon d\'obtenir un Parchemin de Nettoyage est de le recevoir comme un don des esprits de donjon.</item>
        <item >Aucune arme tolérée en présence de sa majesté!</item>
        <item >Pixel-Mart - Des réductions pour les chasseurs de démons!</item>
    </string-array>

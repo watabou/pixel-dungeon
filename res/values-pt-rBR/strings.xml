@@ -335,7 +335,7 @@
 
 
    <!--  STRINGS OF WndChooseWay CLASS  -->
-   <string name="WndChooseWay_Message">Qual caminho você vai seguir?</string>
+   <string name="WndChooseWay_Mastery">Qual caminho você vai seguir?</string>
    <string name="WndChooseWay_Cancel">Vou decidir mais tarde</string>
 
 
@@ -425,8 +425,6 @@
 
 
    <!--  STRINGS OF WndSadGhost CLASS  -->
-   <string name="WndSadGhost_Rose">Sim! Sim!!! É isso aí! Por favor, dê-me! E você pode levar um desses itens, talvez eles sejam úteis para você em sua jornada...</string>
-   <string name="WndSadGhost_Rat">Sim! A criatura feia e grotesca está morta, mas finalmente posso descansar... Por favor, pegue um desses itens, talvez eles sejam úteis para você em sua jornada...</string>
    <string name="WndSadGhost_Wepon">Arma do Fantasma</string>
    <string name="WndSadGhost_Armor">Armadura do Fantasma</string>
 
@@ -482,8 +480,8 @@
    <string name="Item_ACThrow">JOGAR</string>
    <string name="Item_PackFull">Sua mochila está muito cheia para %s</string>
    <string name="Item_DirThrow">Escoha a direção para jogar</string>
-   <string name="Item_Degraded">Por causa do uso freqüente, seu %s se degradou.</string>
-   <string name="Item_GonnaDegrade">Por causa do uso freqüente, seu %s vai se degradar em breve.</string>
+   <string name="Item_Broken">Por causa do uso freqüente, seu %s quebrou.</string>
+   <string name="Item_GonnaBreak">Por causa do uso freqüente, seu %s vai quebrar em breve.</string>
 
 
    <!--  STRINGS OF EquipableItem CLASS  -->
@@ -621,6 +619,12 @@
    <!--  STRINGS OF Icecap CLASS  -->
    <string name="Icecap_Name">planta de gelo</string>
    <string name="Icecap_Desc">Ao tocar uma planta de gelo, ela excreta um pólen, que congela tudo em sua vizinhança.</string>
+
+
+   <!--  STRINGS OF Rotberry CLASS  -->
+   <string name="Rotberry_Name">Rotberry</string>
+   <string name="Rotberry_Desc">Berries deste arbusto tem gosto de doce, doce morte.</string>
+   <string name="Rotberry_Info">A semente emite um rugido que ecoa em todo o calabouço!</string>
 
 
    <!--  STRINGS OF Sorrowmoss CLASS  -->
@@ -1251,10 +1255,10 @@
    <string name="WandOfSlowness_Info1">nada aconteceu</string>
 
 
-   <!--  STRINGS OF WandOfTelekinesis CLASS  -->
-   <string name="WandOfTelekinesis_Name">Varinha de Telecinésia</string>
-   <string name="WandOfTelekinesis_Info">Ondas de força mágica desta varinha vão afetar todas as armadilhas no caminho desarmando-as; pisará a vegetação alta; abrirá portas fechadas e fechará as abertas. Esta onda também empurará os monstros.</string>
-   <string name="WandOfTelekinesis_YouNowHave">Você magicamente transportou %s para a sua mochila</string>
+   <!--  STRINGS OF WandOfReach CLASS  -->
+   <string name="WandOfReach_Name">Varinha de Alcance</string>
+   <string name="WandOfReach_Info">Esta varinha utilitário pode ser usada para agarrar objetos a distância e para trocar de lugar com os inimigos. Ondas de força mágica desta varinha vão afetar todas as armadilhas no caminho desarmando-as; pisará a vegetação alta; abrirá portas fechadas e fechará as abertas.</string>
+   <string name="WandOfReach_YouNowHave">Você magicamente transportou %s para a sua mochila</string>
 
 
    <!--  STRINGS OF WandOfTeleportation CLASS  -->
@@ -1272,27 +1276,27 @@
 
 <!--  PACKAGE /weapon/Enchantment  -->
    <!--  STRINGS OF Death CLASS  -->
-   <string name="Death_Name">%s Cruel</string>
+   <string name="Death_Name">%s cruel</string>
    <!--  STRINGS OF Fire CLASS  -->
-   <string name="Fire_Name">%s Ardente</string>
+   <string name="Fire_Name">%s ardente</string>
    <!--  STRINGS OF Horror CLASS  -->
-   <string name="Horror_Name">%s Sobrenatural</string>
+   <string name="Horror_Name">%s sobrenatural</string>
    <!--  STRINGS OF Instability CLASS  -->
-   <string name="Instability_Name">%s Instável</string>
+   <string name="Instability_Name">%s instável</string>
    <!--  STRINGS OF Leech CLASS  -->
-   <string name="Leech_Name">%s Vampírico(a)</string>
+   <string name="Leech_Name">%s vampírico(a)</string>
    <!--  STRINGS OF Luck CLASS  -->
-   <string name="Luck_Name">%s da Sorte</string>
+   <string name="Luck_Name">%s da sorte</string>
    <!--  STRINGS OF Paralysis CLASS  -->
-   <string name="Paralysis_Name">%s do Atordoamento</string>
+   <string name="Paralysis_Name">%s do atordoamento</string>
    <!--  STRINGS OF Poison CLASS  -->
-   <string name="Poison_Name">%s Venenoso(a)</string>
+   <string name="Poison_Name">%s venenoso(a)</string>
    <!--  STRINGS OF Shock CLASS  -->
-   <string name="Shock_Name">%s Chocante</string>
+   <string name="Shock_Name">%s chocante</string>
    <!--  STRINGS OF Slow CLASS  -->
-   <string name="Slow_Name">%s Arrepiante</string>
+   <string name="Slow_Name">%s arrepiante</string>
    <!--  STRINGS OF Tempering CLASS  -->
-   <string name="Tempering_Name">%s Temperada</string>
+   <string name="Tempering_Name">%s temperada</string>
 
 
 <!--  PACKAGE /weapon/melee  -->
@@ -1301,6 +1305,7 @@
    <string name="MeleeWeapon_Info1b"></string>
    <string name="MeleeWeapon_Info1c">aprimorada</string>
    <string name="MeleeWeapon_Info1d">degradada</string>
+   <string name="MeleeWeapon_Info1e">quebrada</string>
    <string name="MeleeWeapon_Info2a">O dano médio é de %d pontos por acerto.</string>
    <string name="MeleeWeapon_Info2b">O dano médio normal é de %1$d pontos por acerto e, geralmente, requer %2$d pontos de força.</string>
    <string name="MeleeWeapon_Info2c">Provavelmente, esta arma é muito pesada para você.</string>
@@ -1563,6 +1568,10 @@
    <string name="Eye_Name">olho do mal</string>
    <string name="Eye_Desc">Um dos outros nomes deste demônio é "esfera de ódio", porque quando vê um inimigo, ele usa seu Olhar da Morte de forma imprudente, muitas vezes ignorando seus aliados e ferindo-os.</string>
    <string name="Eye_Kill">Olhar da Morte de %s matou você...</string>
+   <!--  STRINGS OF FetidRat CLASS  -->
+   <string name="FetidRat_Name">rato Fedido</string>
+   <string name="FetidRat_Desc">Este rato marsupial é muito maior, do que uma forma regular. É cercado por uma nuvem imunda.</string>
+   <string name="FetidRat_Defense">evitou</string>
    <!--  STRINGS OF Gnoll CLASS  -->
    <string name="Gnoll_Name">gnoll batedor</string>
    <string name="Gnoll_Desc">Gnolls são pequenos humanóides. Eles moram nos esgotos e masmorras, aventurando-se para invadir a superfície de tempos em tempos. Gnolls Batedores normalmente são membros matilhas, eles não são tão fortes como os Gnolls Brutamontes e não tão inteligentes como os Xamãs.</string>
@@ -1689,12 +1698,12 @@
    <string name="Ghost_Name">fantasma triste</string>
    <string name="Ghost_Desc">O fantasma é pouco visível. Parece uma mancha disforme de luz fraca com uma cara triste.</string>
    <string name="Ghost_Rose1">Olá aventureiro... Uma vez eu era como você - forte e confiante... E agora eu estou morto... Mas eu não posso deixar este lugar... Não até eu ter a minha _Rosa Seca_... É muito importante para mim... Algum monstro roubou de meu corpo...</string>
-   <string name="Ghost_Rose2">Por favor... Ajude-me... Encontre o rosa...</string>
-   <string name="Ghost_Rat1">Olá aventureiro... Uma vez eu era como você - forte e confiante... E agora eu estou morto... Mas eu não posso deixar este lugar... Não até eu ter a minha vingança... Mate o _Rato Fétido_, que tomou a minha vida...</string>
-   <string name="Ghost_Rat2">Por favor... Ajude-me... Mate essa abominação...</string>
+   <string name="Ghost_Rose2">Por favor... Ajude-me... _Encontre a rosa_...</string>
+   <string name="Ghost_Rose3">Sim! Sim!!! É isso aí! Por favor, dê-me! E você pode levar um desses itens, talvez eles sejam úteis para você em sua jornada...</string>
+   <string name="Ghost_Rat1">Olá aventureiro... Uma vez eu era como você - forte e confiante... E agora eu estou morto... Mas eu não posso deixar este lugar... Não até eu ter a minha vingança... Mate o _rato fedido_, que tomou a minha vida...</string>
+   <string name="Ghost_Rat2">Por favor... Ajude-me... _Mate essa abominação_...</string>
+   <string name="Ghost_Rat3">Sim! A criatura feia e grotesca está morta, mas finalmente posso descansar... Por favor, pegue um desses itens, talvez eles sejam úteis para você em sua jornada...</string>
    <string name="Ghost_Defense">evitou</string>
-   <string name="Ghost_FetidRatName">Rato Fétido</string>
-   <string name="Ghost_FetidRatDesc">Este rato marsupial é muito maior, do que uma forma regular. É cercada por uma nuvem imunda.</string>
    <!--  STRINGS OF Imp CLASS  -->
    <string name="Imp_Name">diabinho ambicioso</string>
    <string name="Imp_Desc">São demônios menores. Eles não são notáveis por sua força nem por seu talento mágico, mas eles são muito inteligentes e sociáveis. Muitos diabinhos preferem viver entre os não-demônios.</string>
@@ -1725,13 +1734,10 @@
    <string name="WandMaker_Name">velho fabricante de varinhas</string>
    <string name="WandMaker_Desc">Este antigo, mas forte cavalheiro usa uma expressão um pouco confusa. Ele é protegido por um escudo mágico.</string>
    <string name="WandMaker_Defense">absorveu</string>
-   <string name="WandMaker_Berry1">Oh, que surpresa agradável encontrar uma pessoa decente em tal lugar! Eu vim aqui para um ingrediente raro - uma _Semente de Rotberry_. Sendo um usuário de magia, eu sou bem capaz de me defender contra os monstros locais, mas eu estou ficando perdido e tenho pouco tempo, é muito constrangedor. Provavelmente, você poderia me ajudar? Eu ficaria feliz em pagar por seu serviço com uma das minhas melhores varinhas.</string>
-   <string name="WandMaker_Berry2">Alguma sorte com a semente de Rotberry, %s? Não? Não se preocupe, eu não estou com pressa.</string>
+   <string name="WandMaker_Berry1">Oh, que surpresa agradável encontrar uma pessoa decente em tal lugar! Eu vim aqui para um ingrediente raro - uma _semente rotberry_. Sendo um usuário de magia, eu sou bem capaz de me defender contra os monstros locais, mas eu estou ficando perdido e tenho pouco tempo, é muito constrangedor. Provavelmente, você poderia me ajudar? Eu ficaria feliz em pagar por seu serviço com uma das minhas melhores varinhas.</string>
+   <string name="WandMaker_Berry2">Alguma sorte com a _semente Rotberry_, %s? Não? Não se preocupe, eu não estou com pressa.</string>
    <string name="WandMaker_Dust1">Oh, que surpresa agradável encontrar uma pessoa decente em tal lugar! Eu vim aqui para um ingrediente raro - _Pó de Cadáver_. Ela pode ser obtida de restos de esqueletos e há um amplo número deles no calabouço. Sendo um usuário de magia, eu sou bem capaz de me defender contra os monstros locais, mas eu estou ficando perdido e tenho pouco tempo, é muito constrangedor. Provavelmente, você poderia me ajudar? Eu ficaria feliz em pagar por seu serviço com uma das minhas melhores varinhas.</string>
-   <string name="WandMaker_Dust2">Alguma sorte com o Pó de Cadáver, %s? Pilhas de Ossos são os lugares mais óbvios para procurar.</string>
-   <string name="WandMaker_RotberryName">Rotberry</string>
-   <string name="WandMaker_RotberryDesc">Berries deste arbusto tem gosto de doce, doce morte.</string>
-   <string name="WandMaker_RotberryInfo">A semente emite um rugido que ecoa em todo o calabouço!</string>
+   <string name="WandMaker_Dust2">Alguma sorte com o _Pó de Cadáver_, %s? Pilhas de Ossos são os lugares mais óbvios para procurar.</string>
 
 
 <!--  PACKAGE /levels  -->
@@ -1864,8 +1870,8 @@
        <item >Perigo! Máquinas pesadas podem causar lesões, perda de membros ou morte!</item>
        <item >Pixel-Mart. A vida mais segura no calabouço.</item>
        <item >Quando você atualiza uma arma encantada, há uma chance de destruir esse encantamento.</item>
-       <item >Com um Poço de Transmutação você pode obter um item que não pode ser obtido de outra forma.</item>
-       <item >A única maneira de encantar a arma é atualizá-la com um upgrade de Pergaminho de Arma.</item>
+       <item >Armas e armaduras se deterioram mais rapidamente do que varinhas e anéis, mas há outras maneiras de repara-los.</item>
+       <item >A única maneira de obter um Pergaminho de Limpeza é a recebê-lo como um presente dos espíritos do calabouço.</item>
        <item >Nenhuma arma é permitida na presença de Vossa Majestade!</item>
        <item >Pixel-Mart. Preços especiais para caçadores de demônios!</item>
    </string-array>

@@ -335,7 +335,7 @@
 
 
    <!--  STRINGS OF WndChooseWay CLASS  -->
-   <string name="WndChooseWay_Message">Którą ścieżkę obierzesz?</string>
+   <string name="WndChooseWay_Mastery">Którą ścieżkę obierzesz?</string>
    <string name="WndChooseWay_Cancel">Zdecyduję później</string>
 
 
@@ -425,8 +425,6 @@
 
 
    <!--  STRINGS OF WndSadGhost CLASS  -->
-   <string name="WndSadGhost_Rose">Tak ! Tak !!! To jest to! Proszę daj mi to! Możesz w nagrodę wziąć jeden z tych przedmiotów, może pomogą ci w podróży...</string>
-   <string name="WndSadGhost_Rat">Tak! Paskudna kreatura jest zabita i mogę w końcu odpocząć... Proszę, weź jeden z tych przedmiotów, może przydadzą ci się w podróży...</string>
    <string name="WndSadGhost_Wepon">Broń ducha</string>
    <string name="WndSadGhost_Armor">Zbroja Ducha</string>
 
@@ -482,8 +480,8 @@
    <string name="Item_ACThrow">RZUĆ</string>
    <string name="Item_PackFull">Nie masz dość miejsca w plecaku by wziąć %s</string>
    <string name="Item_DirThrow">Wybierz kierunek rzutu</string>
-   <string name="Item_Degraded">Z powodu częstego stosowania, twój %s degradacji.</string>
-   <string name="Item_GonnaDegrade">Z powodu częstego stosowania, %s będzie pogarszać szybko.</string>
+   <string name="Item_Broken">Z powodu częstego stosowania, twój %s złamał.</string>
+   <string name="Item_GonnaBreak">Z powodu częstego stosowania, twój %s ma zamiar złamać szybko.</string>
 
 
    <!--  STRINGS OF EquipableItem CLASS  -->
@@ -616,6 +614,12 @@
    <!--  STRINGS OF Firebloom CLASS  -->
    <string name="Firebloom_Name">Ogniokwiat</string>
    <string name="Firebloom_Desc">Kiedy coś dotknie Ogniokwiatu, natychmiast staje w płomieniach.</string>
+
+
+   <!--  STRINGS OF Rotberry CLASS  -->
+   <string name="Rotberry_Name">Pętojagoda</string>
+   <string name="Rotberry_Desc">Jagody z tego krzewu smakują jak słodka, słodka śmierć.</string>
+   <string name="Rotberry_Info">Nasiono wyzwala ryk, który rozchodzi się echem po lochu!</string>
 
 
    <!--  STRINGS OF Icecap CLASS  -->
@@ -1251,10 +1255,10 @@
    <string name="WandOfSlowness_Info1">nic się nie stało</string>
 
 
-   <!--  STRINGS OF WandOfTelekinesis CLASS  -->
-   <string name="WandOfTelekinesis_Name">Kostur Telekinezy</string>
-   <string name="WandOfTelekinesis_Info">Fala magicznej mocy tego kostura uaktywni pułapki, stratuje wysoką roślinność, otworzy zamknięte i zamknie otwarte drzwi na swej trasie. Odepchnie ona również potwory.</string>
-   <string name="WandOfTelekinesis_YouNowHave">Magicznie przeteleportowałeś %s do Twojego Plecaka</string>
+   <!--  STRINGS OF WandOfReach CLASS  -->
+   <string name="WandOfReach_Name">Kostur Dotrzeć</string>
+   <string name="WandOfReach_Info">Ta różdżka narzędzie może być używany do przechwycenia obiektów z odległości i zamienić się miejscami z wrogami. Fala magicznej mocy tego kostura uaktywni pułapki, stratuje wysoką roślinność, otworzy zamknięte i zamknie otwarte drzwi na swej trasie.</string>
+   <string name="WandOfReach_YouNowHave">Magicznie przeteleportowałeś %s do Twojego Plecaka</string>
 
 
    <!--  STRINGS OF WandOfTeleportation CLASS  -->
@@ -1272,27 +1276,27 @@
 
 <!--  PACKAGE /weapon/Enchantment  -->
    <!--  STRINGS OF Death CLASS  -->
-   <string name="Death_Name">Śmiercionośny %s</string>
+   <string name="Death_Name">śmiercionośny %s</string>
    <!--  STRINGS OF Fire CLASS  -->
-   <string name="Fire_Name">Płonący %s</string>
+   <string name="Fire_Name">płonący %s</string>
    <!--  STRINGS OF Horror CLASS  -->
-   <string name="Horror_Name">Duchowy %s</string>
+   <string name="Horror_Name">duchowy %s</string>
    <!--  STRINGS OF Instability CLASS  -->
-   <string name="Instability_Name">Niestabilny %s</string>
+   <string name="Instability_Name">niestabilny %s</string>
    <!--  STRINGS OF Leech CLASS  -->
-   <string name="Leech_Name">Wampiryczny %s</string>
+   <string name="Leech_Name">wampiryczny %s</string>
    <!--  STRINGS OF Luck CLASS  -->
-   <string name="Luck_Name">Szczęśliwy %s</string>
+   <string name="Luck_Name">szczęśliwy %s</string>
    <!--  STRINGS OF Paralysis CLASS  -->
-   <string name="Paralysis_Name">Ogłuszający %s</string>
+   <string name="Paralysis_Name">ogłuszający %s</string>
    <!--  STRINGS OF Poison CLASS  -->
-   <string name="Poison_Name">Trujący %s</string>
+   <string name="Poison_Name">trujący %s</string>
    <!--  STRINGS OF Shock CLASS  -->
-   <string name="Shock_Name">Wstrząsający %s</string>
+   <string name="Shock_Name">wstrząsający %s</string>
    <!--  STRINGS OF Slow CLASS  -->
-   <string name="Slow_Name">Zimny %s</string>
+   <string name="Slow_Name">zimny %s</string>
    <!--  STRINGS OF Tempering CLASS  -->
-   <string name="Tempering_Name">Hartowanego %s</string>
+   <string name="Tempering_Name">hartowanego %s</string>
 
 
 <!--  PACKAGE /weapon/melee  -->
@@ -1301,6 +1305,7 @@
    <string name="MeleeWeapon_Info1b"></string>
    <string name="MeleeWeapon_Info1c">ulepszony</string>
    <string name="MeleeWeapon_Info1d">zdegradowany</string>
+   <string name="MeleeWeapon_Info1e">złamany</string>
    <string name="MeleeWeapon_Info2a">Zadaje średnie obrażenia o wartości %d punktów na uderzenie.</string>
    <string name="MeleeWeapon_Info2b">Jego średnie obrażenia zazwyczaj zadają %1$d punktów na uderzenie i wymaga %2$d punktów Siły.</string>
    <string name="MeleeWeapon_Info2c">Prawdopodobnie ta broń jest dla ciebie za ciężka.</string>
@@ -1563,6 +1568,10 @@
    <string name="Eye_Name">Złe oko</string>
    <string name="Eye_Desc">Jedno z imion tego demona brzmi \"kula nienawiści\", ponieważ gdy widzi wroga używa bezmyślnie swego Wzroku Śmierci, często ignorując swoich sojuszników i raniąc ich dotkliwie.</string>
    <string name="Eye_Kill">%s\'s Wzrok Śmierci zabił ciebie...</string>
+   <!--  STRINGS OF FetidRat CLASS  -->
+   <string name="FetidRat_Name">cuchnący ściekoszczur</string>
+   <string name="FetidRat_Desc">Ten ściekoszczur jest znacznie większy od zwykłego szczura. Jest otoczony chmurą paraliżującego smrodu...</string>
+   <string name="FetidRat_Defense">unik</string>
    <!--  STRINGS OF Gnoll CLASS  -->
    <string name="Gnoll_Name">Zwiadowca Gnolli</string>
    <string name="Gnoll_Desc">Gnolle są hienopodobnymi humanoidami. Ukrywają się w kanałach i lochach wybierając się na powierzchnię od czasu do czasu by zaatakować Miasto. Zwiadowcy Gnolli to podstawowi członkowie ich klanu, nie są tak silni jak siepacze i nie tak inteligentni jak szamani.</string>
@@ -1688,13 +1697,13 @@
    <!--  STRINGS OF Ghost CLASS  -->
    <string name="Ghost_Name">smutny duch</string>
    <string name="Ghost_Desc">Ten duch jest ledwo widoczny. Wygląda jak bezkształtna masa światła z twarzą pełną cierpienia.</string>
-   <string name="Ghost_Rose1">Witaj podróżniku... Kiedyś byłem taki jak ty - silny i pewny siebie... I teraz jestem martwy... Ale nie mogę opuścić tego miejsca... Nie bez mojej _wysuszonej róży_... Jest dla mnie bardzo ważna... Wręczyła mi ją moja ukochana lata temu, lecz jakiś potwór skradł ją z moich szczątków... Odzyskaj ją...</string>
-   <string name="Ghost_Rose2">Proszę... Pomóż mi... Znajdź różę...</string>
-   <string name="Ghost_Rat1">Witaj podróżniku... Kiedyś byłem taki jak ty - silny i pewny siebie... Ale teraz jestem martwy... Ale nie mogę opuścić tego miejsca... Nie dopóki nie dopełni się moja zemsta! Zabij _cuchnącego ściekoszczura_, który pozbawił mnie życia lata temu... Jedyne co pamiętam ze starcia z nim to smród... Otumaniający smród...</string>
-   <string name="Ghost_Rat2">Proszę... Pomóż mi... Zabij tę abominację...</string>
+   <string name="Ghost_Rose1">Witaj podróżniku... Kiedyś byłem taki jak ty - silny i pewny siebie... I teraz jestem martwy... Ale nie mogę opuścić tego miejsca... Nie bez mojej _wysuszona róża_... Jest dla mnie bardzo ważna... Wręczyła mi ją moja ukochana lata temu, lecz jakiś potwór skradł ją z moich szczątków... Odzyskaj ją...</string>
+   <string name="Ghost_Rose2">Proszę... Pomóż mi... _Znajdź różę_...</string>
+   <string name="Ghost_Rose3">Tak ! Tak !!! To jest to! Proszę daj mi to! Możesz w nagrodę wziąć jeden z tych przedmiotów, może pomogą ci w podróży...</string>
+   <string name="Ghost_Rat1">Witaj podróżniku... Kiedyś byłem taki jak ty - silny i pewny siebie... Ale teraz jestem martwy... Ale nie mogę opuścić tego miejsca... Nie dopóki nie dopełni się moja zemsta! Zabij _cuchnący ściekoszczur_, który pozbawił mnie życia lata temu... Jedyne co pamiętam ze starcia z nim to smród... Otumaniający smród...</string>
+   <string name="Ghost_Rat2">Proszę... Pomóż mi... _Zabij tę abominację_...</string>
+   <string name="Ghost_Rat3">Tak! Paskudna kreatura jest zabita i mogę w końcu odpocząć... Proszę, weź jeden z tych przedmiotów, może przydadzą ci się w podróży...</string>
    <string name="Ghost_Defense">unik</string>
-   <string name="Ghost_FetidRatName">cuchnący ściekoszczur</string>
-   <string name="Ghost_FetidRatDesc">Ten ściekoszczur jest znacznie większy od zwykłego szczura. Jest otoczony chmurą paraliżującego smrodu...</string>
    <!--  STRINGS OF Imp CLASS  -->
    <string name="Imp_Name">Ambitny Imp</string>
    <string name="Imp_Desc">Impy to pomniejsze demony. Nie są podziwiane ze względu na ich siłę czy talent magiczny, lecz ich inteligencję i zdolności retoryczne. Wiele impów woli żyć pośród nie-demonów.</string>
@@ -1725,13 +1734,10 @@
    <string name="WandMaker_Name">Stary kosturnik</string>
    <string name="WandMaker_Desc">Ten stary, ale żwawy pan jest nieco zdezorientowany. Jest chroniony przez magiczną tarczę.</string>
    <string name="WandMaker_Defense">wchłonięto</string>
-   <string name="WandMaker_Berry1">Och, cóż za miła niespodzianka, spotkać prawdziwego człowieka w takim miejscu! Przybyłem tutaj po rzadki składnik - _nasiono Pętjagody_. Ponieważ potrafię używać magii, mogę chronić się przed lokalnymi potworami, ale gubię się w braku czasu, co jest bardzo irytujące. Może mógłbyś mi pomóc? Będę zadowolony mogąc zaoferować ci jeden z mych najlepszych kosturów.</string>
-   <string name="WandMaker_Berry2">Jakieś postępy w poszukiwaniu nasiona Pętojagody, %s? Nie martw się, nie spieszy mi się.</string>
+   <string name="WandMaker_Berry1">Och, cóż za miła niespodzianka, spotkać prawdziwego człowieka w takim miejscu! Przybyłem tutaj po rzadki składnik - _nasiona Pętojagody_. Ponieważ potrafię używać magii, mogę chronić się przed lokalnymi potworami, ale gubię się w braku czasu, co jest bardzo irytujące. Może mógłbyś mi pomóc? Będę zadowolony mogąc zaoferować ci jeden z mych najlepszych kosturów.</string>
+   <string name="WandMaker_Berry2">Jakieś postępy w poszukiwaniu _nasiona Pętojagody_, %s? Nie martw się, nie spieszy mi się.</string>
    <string name="WandMaker_Dust1">Och, co za miła niespodzianka, spotkać prawdziwego człowieka w takim miejscu! Przybyłem tutaj po rzadki składnik -_pyłu trupa_. Może zostać zebrany z kościanych szczątków, a tych jest całkiem sporo w Lochu. Będąc użytkownikiem magii, mogę chronić się przed lokalnymi potworami, lecz gubię się w braku czasu, co jest bardzo irytujące. Może mógłbyś mi pomóc? Byłbym szczęśliwy, mogąc ci oferować ci jeden z mych najlepszych kosturów.</string>
-   <string name="WandMaker_Dust2">Jakieś postępy w poszukiwaniu pyłu trupa, %s? Stosy kości to najbardziej oczywiste miejsca do zbadania.</string>
-   <string name="WandMaker_RotberryName">Pętojagoda</string>
-   <string name="WandMaker_RotberryDesc">Jagody z tego krzewu smakują jak słodka, słodka śmierć.</string>
-   <string name="WandMaker_RotberryInfo">Nasiono wyzwala ryk, który rozchodzi się echem po lochu!</string>
+   <string name="WandMaker_Dust2">Jakieś postępy w poszukiwaniu _pyłu trupa_, %s? Stosy kości to najbardziej oczywiste miejsca do zbadania.</string>
 
 
 <!--  PACKAGE /levels  -->
@@ -1864,8 +1870,8 @@
        <item >UWAGA! Ciężka maszyneria może spowodować zranienie, utratę kończyn lub śmierć!</item>
        <item >Pixel-Mart. Bezpieczniejsze życie w Lochu.</item>
        <item >Kiedy ulepszasz zaklęte przedmioty, istnieje szansa na zniszczenie tego zaklęcia.</item>
-       <item >Studnia Transmutacji może być wykorzystana by uzyskać przedmiot niemożliwy do zdobycia naturalnie.</item>
-       <item >Jedynym sposobem na zaklęcie broni jest ulepszenie jej Zwojem Ulepszenia Broni.</item>
+       <item >Broń i zbroje pogarsza się szybciej niż różdżki i pierścienie, ale jest więcej sposobów, aby je naprawić.</item>
+       <item >Jedynym sposobem na uzyskanie Zwój Czystość ma otrzymać go w prezencie od duchów Bossów.</item>
        <item >Posiadanie broni w pobliżu Jego Wysokości jest surowo wzbronione!</item>
        <item >Pixel-Mart. Specjalne ceny dla łowców demonów!</item>
    </string-array>
