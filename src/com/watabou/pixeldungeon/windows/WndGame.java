@@ -97,7 +97,12 @@ public class WndGame extends Window {
 				@Override
 				protected void onClick() {
 					try {
-						Dungeon.saveAll();
+						if (!Dungeon.hero.isAlive()) {
+							Dungeon.deleteGame(Dungeon.hero.heroClass, true);
+						}
+						else {
+							Dungeon.saveAll();
+						}
 					} catch (IOException e) {
 						// Do nothing
 					}
@@ -106,17 +111,28 @@ public class WndGame extends Window {
 			}, new RedButton( TXT_EXIT ) {
 				@Override
 				protected void onClick() {
+					if (!Dungeon.hero.isAlive()) {
+						Dungeon.deleteGame(Dungeon.hero.heroClass, true);
+					}
 					Game.instance.finish();
 				}
 			} 
 		);
 		
-		addButton( new RedButton( TXT_RETURN ) {
+		addButton(new RedButton(TXT_RETURN) {
 			@Override
 			protected void onClick() {
 				hide();
 			}
-		} );
+		});
+
+		addButton(new RedButton("Undo") {
+			@Override
+			protected void onClick() {
+				InterlevelScene.mode = InterlevelScene.Mode.UNDO;
+				Game.switchScene(InterlevelScene.class);
+			}
+		});
 		
 		resize( WIDTH, pos );
 	}
