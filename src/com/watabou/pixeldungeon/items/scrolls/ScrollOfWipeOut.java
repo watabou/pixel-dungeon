@@ -19,9 +19,11 @@ package com.watabou.pixeldungeon.items.scrolls;
 
 import java.util.ArrayList;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.buffs.Blindness;
 import com.watabou.pixeldungeon.actors.buffs.Invisibility;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -40,14 +42,14 @@ import com.watabou.utils.Random;
 
 public class ScrollOfWipeOut extends Item {
 
-	private static final String TXT_BLINDED	= "You can't read a scroll while blinded";
+	private static final String TXT_BLINDED	= Game.getVar(R.string.ScrollOfWipeOut_Blinded);
 	
-	public static final String AC_READ	= "READ";
+	public static final String AC_READ	= Game.getVar(R.string.ScrollOfWipeOut_ACRead);
 	
 	protected static final float TIME_TO_READ	= 1f;
 	
 	{
-		name = "Scroll of Wipe Out";
+		name = Game.getVar(R.string.ScrollOfWipeOut_Name);
 		image = ItemSpriteSheet.SCROLL_WIPE_OUT;
 		
 		stackable = true;		
@@ -126,9 +128,7 @@ public class ScrollOfWipeOut extends Item {
 
 	@Override
 	public String desc() {
-		return
-			"Read this scroll to unleash the wrath of the dungeon spirits, killing everything on the current level. " +
-			"Well, almost everything. Some of the more powerful creatures may be not affected.";
+		return Game.getVar(R.string.ScrollOfWipeOut_Info);
 	}
 	
 	@Override

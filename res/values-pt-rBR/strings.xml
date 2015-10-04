@@ -290,23 +290,25 @@
 
 
    <!--  STRINGS OF Journal CLASS  -->
-   <string name="Journal_WellHealt">Bem de Vida</string>
-   <string name="Journal_WellAwareness">Bem de Consciência</string>
-   <string name="Journal_WellTransmut">Bem de transmutação</string>
+   <string name="Journal_WellHealt">Poço de Vida</string>
+   <string name="Journal_WellAwareness">Poço de Consciência</string>
+   <string name="Journal_WellTransmut">Poço de Transmutação</string>
+   <string name="Journal_SacrFire">Câmara de Sacrifício</string>
    <string name="Journal_Alchemy">Pote de Alquimia</string>
    <string name="Journal_Garden">Jardin</string>
-   <string name="Journal_Statue">Estátua Animada</string>
+   <string name="Journal_Statue">Estátua Viva</string>
    <string name="Journal_Ghost">Fantasma Triste</string>
    <string name="Journal_Wandmaker">Velho Fabricante de Varinhas</string>
    <string name="Journal_Troll">Troll Ferreiro</string>
-   <string name="Journal_Imp">Ambicioso imp</string>
+   <string name="Journal_Imp">Diabinho Ambicioso</string>
 
 
    <!--  STRINGS OF ResultDescriptions CLASS  -->
    <string name="ResultDescriptions_Mob">Morto por %1$s no nível %2$d</string>
    <string name="ResultDescriptions_Boss">Morto pelo %1$s no nível %2$d</string>
    <string name="ResultDescriptions_Wand">Morto por você mesmo %1$s no nível %2$d</string>
-   <string name="ResultDescriptions_Glyph">Morto Pelo %1$s no nível %2$d</string>
+   <string name="ResultDescriptions_Glyph">Morto por %1$s no nível %2$d</string>
+   <string name="ResultDescriptions_Bomb">Morto pela explosão de uma bomba no nível %d</string>
    <string name="ResultDescriptions_Trap">Morto por descarga de %1$s no nível %2$d</string>
    <string name="ResultDescriptions_Burning">Queimou até a morte no nível %d</string>
    <string name="ResultDescriptions_Hunger">Passou fome até a morte no nível %d</string>
@@ -337,6 +339,9 @@
    <!--  STRINGS OF WndChooseWay CLASS  -->
    <string name="WndChooseWay_Mastery">Qual caminho você vai seguir?</string>
    <string name="WndChooseWay_Cancel">Vou decidir mais tarde</string>
+   <string name="WndChooseWay_ReMastery">Você quer re-especializar o(a) %s?</string>
+   <string name="WndChooseWay_ReMastOk">Sim, eu quero re-especializar</string>
+   <string name="WndChooseWay_ReMastNo">Talvez mais tarde</string>
 
 
    <!--  STRINGS OF WndClass CLASS  -->
@@ -425,8 +430,9 @@
 
 
    <!--  STRINGS OF WndSadGhost CLASS  -->
-   <string name="WndSadGhost_Wepon">Arma do Fantasma</string>
+   <string name="WndSadGhost_Weapon">Arma do Fantasma</string>
    <string name="WndSadGhost_Armor">Armadura do Fantasma</string>
+   <string name="WndSadGhost_Info">Adeus, aventureiro!</string>
 
 
    <!--  STRINGS OF WndSettings CLASS  -->
@@ -512,6 +518,7 @@
    <!--  STRINGS OF Bomb CLASS  -->
    <string name="Bomb_Name">bomba</string>
    <string name="Bomb_Info">Esta é uma bomba relativamente pequena, cheia de pó preto. Convenientemente, seu estopim acende automaticamente quando a bomba é jogada.</string>
+   <string name="Bomb_Kill">Você se matoue com a bomba...</string>
 
 
    <!--  STRINGS OF Dewdrop CLASS  -->
@@ -563,6 +570,7 @@
 
    <!--  STRINGS OF TomeOfMastery CLASS  -->
    <string name="TomeOfMastery_Name">Livro Mestre</string>
+   <string name="TomeOfMastery_NameR">Livro Mestre - Releitura</string>
    <string name="TomeOfMastery_ACRead">LER</string>
    <string name="TomeOfMastery_Info">Este livro de couro desgastado é muito grosso, mas você se sente de alguma forma, que você pode descobrir muito, lendo ele. Lembre-se que a leitura deste livro pode exigir algum tempo.</string>
    <string name="TomeOfMastery_Blinded">Você não pode ler enquanto estiver cego</string>
@@ -643,6 +651,7 @@
    <string name="Armor_EquipCursed">seu %s se contrai em torno de você dolorosamente</string>
    <string name="Armor_Identify">agora você está bastante familiarizado com seu %1$s e pode identificá-lo como %2$s.</string>
    <string name="Armor_ToString">%1$s :%2$d</string>
+   <string name="Armor_Broken">%1$s quebrado :%2$d</string>
    <string name="Armor_Incompatible">Interação de diferentes tipos de magia apagaram o hieróglifo desta armadura!</string>
    <string name="Armor_Info1">\n\nEsta %1$s concede até \"%2$d\" pontos de absorção de danos por ataque.</string>
    <string name="Armor_Info2">\n\nPor causa de sua força inadequada, sua velocidade de movimento e habilidade de defesa será diminuída.</string>
@@ -723,6 +732,8 @@
    <string name="Affection_Txt">%s de afeição</string>
    <!--  STRINGS OF AntiEntropy CLASS  -->
    <string name="AntiEntropy_Txt">%s de anti-entropia</string>
+   <!--  STRINGS OF AutoRepair CLASS  -->
+   <string name="AutoRepair_Txt">%s de auto-reparação</string>
    <!--  STRINGS OF Bounce CLASS  -->
    <string name="Bounce_Txt">%s de salto</string>
    <!--  STRINGS OF Displacement CLASS  -->
@@ -942,6 +953,13 @@
    <string name="DwarfToken_Info">Muitos anões e algumas de suas criações maiores carregam esses pequenos pedaços de metal de propósito desconhecido. Talvez eles sejam jóias ou algum tipo de identificação. Anões são pessoas estranhas.</string>
 
 
+   <!--  STRINGS OF PhantomFish CLASS  -->
+   <string name="PhantomFish_Name">peixe fantasma</string>
+   <string name="PhantomFish_ACEat">COMER</string>
+   <string name="PhantomFish_Info">Você mal pode ver este pequeno peixe translúcido no ar. Na água, torna-se praticamente invisível.</string>
+   <string name="PhantomFish_Invisible">Você vê suas mãos ficarem invisíveis!</string>
+
+
    <!--  STRINGS OF Pickaxe CLASS  -->
    <string name="Pickaxe_Name">picareta</string>
    <string name="Pickaxe_Info">Esta é uma ferramenta grande e resistente para quebrar rochas. Provavelmente isto pode ser usado como uma arma.</string>
@@ -958,6 +976,7 @@
    <!--  STRINGS OF Ring CLASS  -->
    <string name="Ring_Name">anel de %s</string>
    <string name="Ring_Info">Esta tira de metal é adornada com uma grande jóia de %s que brilha na escuridão. Quem sabe o efeito que tem quando usado?</string>
+   <string name="Ring_Broken">%s quebrado</string>
    <string name="Ring_Identify">agora você está bastante familiarizado com seu %1$s e pode identificá-lo como %2$s.</string>
    <string name="Ring_UnequipTit">Desequipar um anel</string>
    <string name="Ring_UnequipMsg">Você só pode usar dois anéis de cada vez. Desequipe um de seus anéis equipados.</string>
@@ -1152,6 +1171,13 @@
    <string name="ScrollOfEnchantment_Glows">seu %s brilha no escuro</string>
 
 
+   <!--  STRINGS OF ScrollOfWipeOut CLASS  -->
+   <string name="ScrollOfWipeOut_Name">Pergaminho de Limpeza</string>
+   <string name="ScrollOfWipeOut_ACRead">@string/Scroll_ACRead</string>
+   <string name="ScrollOfWipeOut_Info">Leia este pergaminho para desencadear a ira dos espíritos, matando tudo no nível atual. Bem, quase tudo. Algumas das criaturas mais poderosas podem não ser afetadas.</string>
+   <string name="ScrollOfWipeOut_Blinded">@string/Scroll_Blinded</string>
+
+
 <!--  PACKAGE /items/Wands  -->
    <!--  STRINGS OF Wand CLASS  -->
    <string name="Wand_Name">varinha de %s</string>
@@ -1272,6 +1298,8 @@
    <!--  STRINGS OF Weapon CLASS  -->
    <string name="Weapon_Identify">Você agora está bastante familiarizado com sua %1$s e pode indentificá-la como %2$s.</string>
    <string name="Weapon_Incompatible">Interação de diferentes tipos de magia negou o encantamento sobre essa arma!</string>
+   <string name="Weapon_ToString">%1$s :%2$d</string>
+   <string name="Weapon_Broken">%1$s quebrado :%2$d</string>
 
 
 <!--  PACKAGE /weapon/Enchantment  -->
@@ -1441,6 +1469,12 @@
    <string name="Foliage_Info">Raios de luz penetram na escuridão do jardim subterrâneo.</string>
    <!--  STRINGS OF ParalyticGas CLASS  -->
    <string name="ParalyticGas_Info">Uma nuvem de gás paralisante está pairando aqui.</string>
+   <!--  STRINGS OF SacrificialFire CLASS  -->
+   <string name="SacrificialFire_Worthy">\"Seu sacrifício é digno...\"</string>
+   <string name="SacrificialFire_UnWorthy">\"Seu sacrifício é indigno...\"</string>
+   <string name="SacrificialFire_Reward">\"Seu sacrifício é digno e assim que você é!\"</string>
+   <string name="SacrificialFire_Desc">Fogo sacrificial queima aqui. Toda criatura tocada por este fogo está marcado como uma oferenda para os espíritos do calabouço.</string>
+   <string name="SacrificialFire_Marked">Marcado para o sacrifício</string>
    <!--  STRINGS OF ToxicGas CLASS  -->
    <string name="ToxicGas_Info">Uma nuvem de esverdeada de gás tóxico está pairando aqui</string>
    <string name="ToxicGas_Info1">Você morreu por causa do gás tóxico ..</string>
@@ -1505,6 +1539,8 @@
    <!--  STRINGS OF Poison CLASS  -->
    <string name="Poison_Info">Envenenado</string>
    <string name="Poison_Death">Você morreu envenenado...</string>
+   <!--  STRINGS OF Rage CLASS  -->
+   <string name="Rage_Info">Cego de raiva</string>
    <!--  STRINGS OF Roots CLASS  -->
    <string name="Roots_Info">Preso ao chão</string>
    <!--  STRINGS OF Shadows CLASS  -->
@@ -1546,7 +1582,7 @@
    <string name="Bat_Desc">Estes habitantes vivos e tenazes de cavernas podem derrotar adversários muito maiores, repondo a sua vida a cada ataque bem sucedido.</string>
    <string name="Bat_Defense">evitou</string>
    <!--  STRINGS OF Brute CLASS  -->
-   <string name="Brute_Name">gnoll Brutamonte</string>
+   <string name="Brute_Name">gnoll brutamonte</string>
    <string name="Brute_Desc">Brutamontes são os maiores, mais fortes e mais resistentes de todos os gnolls. Quando gravemente feridos, eles ficam furiosos, causando ainda mais danos aos seus inimigos.</string>
    <string name="Brute_Enraged">%s fica enfurecido!</string>
    <string name="Brute_StaEnraged">irritado</string>
@@ -1554,6 +1590,9 @@
    <string name="Crab_Name">caranguejo do esgoto</string>
    <string name="Crab_Desc">Estes enormes caranguejos estão no topo da cadeia alimentar nos esgotos. Eles são extremamente rápidos e seu exoesqueleto grosso pode resistir a golpes pesados.</string>
    <string name="Crab_Defense">defendeu</string>
+   <!--  STRINGS OF CursePersonification CLASS  -->
+   <string name="CursePersonification_Name">encarnação maldita</string>
+   <string name="CursePersonification_Desc">Esta criatura se assemelha ao fantasma triste, mas ronda na escuridão. Seu rosto carrega uma expressão de desespero.</string>
    <!--  STRINGS OF DM300 CLASS  -->
    <string name="DM300_Name1">DM-300</string>
    <string name="DM300_Name2">DM-350</string>
@@ -1697,13 +1736,17 @@
    <!--  STRINGS OF Ghost CLASS  -->
    <string name="Ghost_Name">fantasma triste</string>
    <string name="Ghost_Desc">O fantasma é pouco visível. Parece uma mancha disforme de luz fraca com uma cara triste.</string>
+   <string name="Ghost_Defense">evitou</string>
    <string name="Ghost_Rose1">Olá aventureiro... Uma vez eu era como você - forte e confiante... E agora eu estou morto... Mas eu não posso deixar este lugar... Não até eu ter a minha _Rosa Seca_... É muito importante para mim... Algum monstro roubou de meu corpo...</string>
    <string name="Ghost_Rose2">Por favor... Ajude-me... _Encontre a rosa_...</string>
    <string name="Ghost_Rose3">Sim! Sim!!! É isso aí! Por favor, dê-me! E você pode levar um desses itens, talvez eles sejam úteis para você em sua jornada...</string>
    <string name="Ghost_Rat1">Olá aventureiro... Uma vez eu era como você - forte e confiante... E agora eu estou morto... Mas eu não posso deixar este lugar... Não até eu ter a minha vingança... Mate o _rato fedido_, que tomou a minha vida...</string>
    <string name="Ghost_Rat2">Por favor... Ajude-me... _Mate essa abominação_...</string>
    <string name="Ghost_Rat3">Sim! A criatura feia e grotesca está morta, mas finalmente posso descansar... Por favor, pegue um desses itens, talvez eles sejam úteis para você em sua jornada...</string>
-   <string name="Ghost_Defense">evitou</string>
+   <string name="Ghost_Curse1">Olá aventureiro... Uma vez eu era como você - forte e confiante... E agora eu estou morto... Mas eu não posso deixar este lugar... Eu estou bloqueado por uma maldição horrível... Por favor... Ajude-me... _Destrua a maldição_...</string>
+   <string name="Ghost_Curse2">Obrigado %s! A maldição foi quebrada e eu finalmente posso descansar... Por favor, pegue um desses itens, talvez eles sejam úteis para você em sua jornada...</string>
+   <string name="Ghost_CurseY">Sim, vou fazer isso por você</string>
+   <string name="Ghost_CurseN">Não, eu não posso ajudá-lo</string>
    <!--  STRINGS OF Imp CLASS  -->
    <string name="Imp_Name">diabinho ambicioso</string>
    <string name="Imp_Desc">São demônios menores. Eles não são notáveis por sua força nem por seu talento mágico, mas eles são muito inteligentes e sociáveis. Muitos diabinhos preferem viver entre os não-demônios.</string>
@@ -1738,6 +1781,8 @@
    <string name="WandMaker_Berry2">Alguma sorte com a _semente Rotberry_, %s? Não? Não se preocupe, eu não estou com pressa.</string>
    <string name="WandMaker_Dust1">Oh, que surpresa agradável encontrar uma pessoa decente em tal lugar! Eu vim aqui para um ingrediente raro - _Pó de Cadáver_. Ela pode ser obtida de restos de esqueletos e há um amplo número deles no calabouço. Sendo um usuário de magia, eu sou bem capaz de me defender contra os monstros locais, mas eu estou ficando perdido e tenho pouco tempo, é muito constrangedor. Provavelmente, você poderia me ajudar? Eu ficaria feliz em pagar por seu serviço com uma das minhas melhores varinhas.</string>
    <string name="WandMaker_Dust2">Alguma sorte com o _Pó de Cadáver_, %s? Pilhas de Ossos são os lugares mais óbvios para procurar.</string>
+   <string name="WandMaker_Fish1">Oh, que surpresa agradável encontrar uma pessoa decente em tal lugar! Eu vim aqui para um ingrediente raro - um _peixe fantasma_. Você pode pegá-lo com suas próprias mãos, mas é muito difícil vê-lo na água. Sendo um usuário de magia, eu sou bem capaz de me defender contra os monstros locais, mas eu estou ficando perdido e tenho pouco tempo, é muito constrangedor. Provavelmente, você poderia me ajudar? Eu ficaria feliz em pagar por seu serviço com uma das minhas melhores varinhas.</string>
+   <string name="WandMaker_Fish2">Alguma sorte com um _peixe fantasma_, %s? Você pode tentar procurá-lo em uma das piscinas locais.</string>
 
 
 <!--  PACKAGE /levels  -->

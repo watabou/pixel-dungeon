@@ -27,7 +27,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class WndSadGhost extends WndQuest {
 	
-	private static final String TXT_WEAPON = Game.getVar(R.string.WndSadGhost_Wepon);
+	private static final String TXT_WEAPON = Game.getVar(R.string.WndSadGhost_Weapon);
 	private static final String TXT_ARMOR  = Game.getVar(R.string.WndSadGhost_Armor);
 	
 	private Ghost ghost;
@@ -55,7 +55,7 @@ public class WndSadGhost extends WndQuest {
 			Dungeon.level.drop( reward, ghost.pos ).sprite.drop();
 		}
 		
-		ghost.yell( "Farewell, adventurer!" );
+		ghost.yell( Game.getVar(R.string.WndSadGhost_Info) );
 		ghost.die( null );
 		
 		Ghost.Quest.complete();

@@ -17,12 +17,14 @@
  */
 package com.watabou.pixeldungeon.actors.blobs;
 
+import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.DungeonTilemap;
 import com.watabou.pixeldungeon.Journal;
 import com.watabou.pixeldungeon.Journal.Feature;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
@@ -42,9 +44,9 @@ import com.watabou.utils.Random;
 
 public class SacrificialFire extends Blob {
 	
-	private static final String TXT_WORTHY		= "\"Your sacrifice is worthy...\" ";
-	private static final String TXT_UNWORTHY	= "\"Your sacrifice is unworthy...\" ";
-	private static final String TXT_REWARD		= "\"Your sacrifice is worthy and so you are!\" ";
+	private static final String TXT_WORTHY		= Game.getVar(R.string.SacrificialFire_Worthy);
+	private static final String TXT_UNWORTHY	= Game.getVar(R.string.SacrificialFire_UnWorthy);
+	private static final String TXT_REWARD		= Game.getVar(R.string.SacrificialFire_Reward);
 	
 	protected int pos;
 	
@@ -128,7 +130,7 @@ public class SacrificialFire extends Blob {
 	
 	@Override
 	public String tileDesc() {
-		return "Sacrificial fire burns here. Every creature touched by this fire is marked as an offering for the spirits of the dungeon.";
+		return Game.getVar(R.string.SacrificialFire_Desc);
 	}
 	
 	public static class Marked extends FlavourBuff {
@@ -142,7 +144,7 @@ public class SacrificialFire extends Blob {
 		
 		@Override
 		public String toString() {
-			return "Marked for sacrifice";
+			return Game.getVar(R.string.SacrificialFire_Marked);
 		}
 		
 		@Override

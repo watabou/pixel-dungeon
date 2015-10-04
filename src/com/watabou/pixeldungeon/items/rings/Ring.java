@@ -252,8 +252,7 @@ public class Ring extends EquipableItem {
 	public String toString() {
 		return 
 			levelKnown && isBroken() ? 
-				"broken " + super.toString() : 
-				super.toString();
+				String.format(Game.getVar(R.string.Ring_Broken), super.toString()) : super.toString();
 	}
 	
 	@Override

@@ -40,14 +40,14 @@ public class Armor extends EquipableItem {
 
    private static final int HITS_TO_KNOW  = 10;
 
-	private static final String TXT_EQUIP_CURSED    = Game.getVar(R.string.Armor_EquipCursed);
+	private static final String TXT_EQUIP_CURSED	= Game.getVar(R.string.Armor_EquipCursed);
 
-	private static final String TXT_IDENTIFY        = Game.getVar(R.string.Armor_Identify);
+	private static final String TXT_IDENTIFY		= Game.getVar(R.string.Armor_Identify);
 
-	private static final String TXT_TO_STRING       = Game.getVar(R.string.Armor_ToString);
-	private static final String TXT_BROKEN		= "broken %s :%d";
+	private static final String TXT_TO_STRING		= Game.getVar(R.string.Armor_ToString);
+	private static final String TXT_BROKEN			= Game.getVar(R.string.Armor_Broken);
 
-	private static final String TXT_INCOMPATIBLE    = Game.getVar(R.string.Armor_Incompatible);
+	private static final String TXT_INCOMPATIBLE	= Game.getVar(R.string.Armor_Incompatible);
 
 	public int tier;
 	public int STR;

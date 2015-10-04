@@ -61,14 +61,14 @@ public class Item implements Bundlable {
 	private static final String TXT_BROKEN			= Game.getVar(R.string.Item_Broken);
 	private static final String TXT_GONNA_BREAK  = Game.getVar(R.string.Item_GonnaBreak);
 	
-	private static final String TXT_TO_STRING		= "%s";
+	private static final String TXT_TO_STRING			= "%s";
 	private static final String TXT_TO_STRING_X		= "%s x%d";
 	private static final String TXT_TO_STRING_LVL	= "%s%+d";
 	private static final String TXT_TO_STRING_LVL_X	= "%s%+d x%d";
 	
 	private static final float DURABILITY_WARNING_LEVEL	= 1/6f;
 	
-	protected static final float TIME_TO_THROW		= 1.0f;
+	protected static final float TIME_TO_THROW	= 1.0f;
 	protected static final float TIME_TO_PICK_UP	= 1.0f;
 	protected static final float TIME_TO_DROP		= 0.5f;
 	
@@ -503,7 +503,7 @@ public class Item implements Bundlable {
 	
 	private static final String QUANTITY		= "quantity";
 	private static final String LEVEL			= "level";
-	private static final String LEVEL_KNOWN		= "levelKnown";
+	private static final String LEVEL_KNOWN	= "levelKnown";
 	private static final String CURSED			= "cursed";
 	private static final String CURSED_KNOWN	= "cursedKnown";
 	private static final String DURABILITY		= "durability";

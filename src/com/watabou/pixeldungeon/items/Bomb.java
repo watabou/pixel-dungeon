@@ -80,7 +80,7 @@ public class Bomb extends Item {
 								Buff.prolong( ch, Paralysis.class, 2 );
 							} else if (ch == Dungeon.hero) {
 								Dungeon.fail( Utils.format( ResultDescriptions.BOMB, Dungeon.depth ) );
-								GLog.n( "You killed yourself with a bomb..." );
+								GLog.n( Game.getVar(R.string.Bomb_Kill) );
 							}
 						}
 					}

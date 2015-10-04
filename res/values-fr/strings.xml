@@ -293,13 +293,14 @@
    <string name="Journal_WellHealt">Puits de Santé</string>
    <string name="Journal_WellAwareness">Puits de Conscience</string>
    <string name="Journal_WellTransmut">Puits de Transmutation</string>
+   <string name="Journal_SacrFire">Chambre Sacrificielle</string>
    <string name="Journal_Alchemy">Chaudron d\'Alchimie</string>
    <string name="Journal_Garden">Jardin</string>
-   <string name="Journal_Statue">Statue animée</string>
-   <string name="Journal_Ghost">Fantôme triste</string>
+   <string name="Journal_Statue">Statue Animée</string>
+   <string name="Journal_Ghost">Fantôme Triste</string>
    <string name="Journal_Wandmaker">Vieux Fabricant de Sceptres</string>
-   <string name="Journal_Troll">Troll forgeron</string>
-   <string name="Journal_Imp">Diablotin ambitieux</string>
+   <string name="Journal_Troll">Troll Forgeron</string>
+   <string name="Journal_Imp">Diablotin Ambitieux</string>
 
 
    <!--  STRINGS OF ResultDescriptions CLASS  -->
@@ -307,6 +308,7 @@
    <string name="ResultDescriptions_Boss">Tué par le %1$s au niveau %2$d</string>
    <string name="ResultDescriptions_Wand">Tué par votre propre %1$s au niveau %2$d</string>
    <string name="ResultDescriptions_Glyph">Tué par le %1$s au niveau %2$d</string>
+   <string name="ResultDescriptions_Bomb">Tué par l\'explosion d\'une bombe au niveau %d</string>
    <string name="ResultDescriptions_Trap">Tué par une décharge du %1$s au niveau %2$d</string>
    <string name="ResultDescriptions_Burning">Brûlé à mort au niveau %d</string>
    <string name="ResultDescriptions_Hunger">Mort de faim au niveau %d</string>
@@ -337,6 +339,9 @@
    <!--  STRINGS OF WndChooseWay CLASS  -->
    <string name="WndChooseWay_Mastery">Quelle voie choisirez-vous?</string>
    <string name="WndChooseWay_Cancel">Je choisirai plus tard</string>
+   <string name="WndChooseWay_ReMastery">Voulez-vous respécialiser le %s?</string>
+   <string name="WndChooseWay_ReMastOk">Oui, je veux respécialiser</string>
+   <string name="WndChooseWay_ReMastNo">Peut-être plus tard.</string>
 
 
    <!--  STRINGS OF WndClass CLASS  -->
@@ -425,8 +430,9 @@
 
 
    <!--  STRINGS OF WndSadGhost CLASS  -->
-   <string name="WndSadGhost_Wepon">Arme du fantôme</string>
+   <string name="WndSadGhost_Weapon">Arme du fantôme</string>
    <string name="WndSadGhost_Armor">Armure du fantôme</string>
+   <string name="WndSadGhost_Info">Adieu, aventurier!</string>
 
 
    <!--  STRINGS OF WndSettings CLASS  -->
@@ -512,6 +518,7 @@
    <!--  STRINGS OF Bomb CLASS  -->
    <string name="Bomb_Name">bombe</string>
    <string name="Bomb_Info">Ceci est une relativement petite bombe, remplie de poudre noire. Idéalement, son fusible est allumé automatiquement lorsque la bombe est levée.</string>
+   <string name="Bomb_Kill">Vous vous tué avec une bombe...</string>
 
 
    <!--  STRINGS OF Dewdrop CLASS  -->
@@ -563,6 +570,7 @@
 
    <!--  STRINGS OF TomeOfMastery CLASS  -->
    <string name="TomeOfMastery_Name">Manuel de spécialisation</string>
+   <string name="TomeOfMastery_NameR">Manuel de reespécialisation</string>
    <string name="TomeOfMastery_ACRead">LIRE</string>
    <string name="TomeOfMastery_Info">Ce livre de cuir usé n\'est pas très épais, mais vous avez l\'impression que vous pourriez en apprendre beaucoup grâce à lui. Dites vous juste que sa lecture pourrait prendre un certain temps.</string>
    <string name="TomeOfMastery_Blinded">Vous ne pouvez pas lire en étant aveuglé</string>
@@ -643,6 +651,7 @@
    <string name="Armor_EquipCursed">votre %s vous enserre douloureusement</string>
    <string name="Armor_Identify">vous vous êtes assez familiarisé avec votre %1$s pour l\'identifier. C\'est %2$s.</string>
    <string name="Armor_ToString">%1$s :%2$d</string>
+   <string name="Armor_Broken">%1$s brisée :%2$d</string>
    <string name="Armor_Incompatible">L\'interaction entre les différents types de magie a effacé le glyphe de cette armure!</string>
    <string name="Armor_Info1">\n\nCette %1$s permet une absorption de dommages jusqu\'à \"%2$d\" points par attaque.</string>
    <string name="Armor_Info2">\n\nVotre force est inadéquate, vous êtes ralenti et votre défense est diminuée.</string>
@@ -723,6 +732,8 @@
    <string name="Affection_Txt">%s d\'affection</string>
    <!--  STRINGS OF AntiEntropy CLASS  -->
    <string name="AntiEntropy_Txt">%s d\'anti-entropie</string>
+   <!--  STRINGS OF AutoRepair CLASS  -->
+   <string name="AutoRepair_Txt">%s d\'auto-réparation</string>
    <!--  STRINGS OF Bounce CLASS  -->
    <string name="Bounce_Txt">%s de rebond</string>
    <!--  STRINGS OF Displacement CLASS  -->
@@ -942,6 +953,13 @@
    <string name="DwarfToken_Info">Beaucoup de nains et de créations naines portent ces petits bouts de métal, on n\'en connaît cependant pas l\'utilité. Peut-être que ce sont des bijoux ou des espèces de cartes d\'identités. Les nains sont bizarres.</string>
 
 
+   <!--  STRINGS OF PhantomFish CLASS  -->
+   <string name="PhantomFish_Name">poisson fantôme</string>
+   <string name="PhantomFish_ACEat">MANGE</string>
+   <string name="PhantomFish_Info">Vous pouvez à peine voir ce minuscule poisson translucide dans l\'air. Dans l\'eau, il devient effectivement invisible.</string>
+   <string name="PhantomFish_Invisible">Vous ne voyez plus vos mains!</string>
+
+
    <!--  STRINGS OF Pickaxe CLASS  -->
    <string name="Pickaxe_Name">pioche</string>
    <string name="Pickaxe_Info">C\'est un outil grand et robuste fait pour casser la pierre. Il pourrait peut-être servir d\'arme.</string>
@@ -958,6 +976,7 @@
    <!--  STRINGS OF Ring CLASS  -->
    <string name="Ring_Name">anneau de %s</string>
    <string name="Ring_Info">Ce cercle de métal est orné d\'une grosse gemme %s qui scintille dans les ténèbres. Qui sait quels effets cela peut avoir mis au doigt?</string>
+   <string name="Ring_Broken">%s brisée</string>
    <string name="Ring_Identify">Vous vous êtes assez familiarisé avec votre %1$s pour l\'identifier. C\'est %2$s.</string>
    <string name="Ring_UnequipTit">Déséquiper un anneau</string>
    <string name="Ring_UnequipMsg">Vous ne pouvez porter deux anneaux à la fois. Déséquipez une de vos bagues équipées.</string>
@@ -1152,6 +1171,13 @@
    <string name="ScrollOfEnchantment_Glows">votre %s brille dans le noir</string>
 
 
+   <!--  STRINGS OF ScrollOfWipeOut CLASS  -->
+   <string name="ScrollOfWipeOut_Name">Parchemin de Nettoyage</string>
+   <string name="ScrollOfWipeOut_ACRead">@string/Scroll_ACRead</string>
+   <string name="ScrollOfWipeOut_Info">Lisez ce parchemin pour déclencher la colère des esprits de donjon, tuant tout sur le niveau actuel. Eh bien, presque tout. Certaines des créatures plus puissantes peut-être pas touchés.</string>
+   <string name="ScrollOfWipeOut_Blinded">@string/Scroll_Blinded</string>
+
+
 <!--  PACKAGE /items/Wands  -->
    <!--  STRINGS OF Wand CLASS  -->
    <string name="Wand_Name">Sceptre %s</string>
@@ -1272,6 +1298,8 @@
    <!--  STRINGS OF Weapon CLASS  -->
    <string name="Weapon_Identify">Vous vous êtes assez familiarisé avec votre %1$s pour l\'identifier. C\'est %2$s.</string>
    <string name="Weapon_Incompatible">L\'interaction entre les différents types de magie a annulé l\'enchantement de cette arme!</string>
+   <string name="Weapon_ToString">%1$s :%2$d</string>
+   <string name="Weapon_Broken">%1$s brisée :%2$d</string>
 
 
 <!--  PACKAGE /weapon/Enchantment  -->
@@ -1441,6 +1469,12 @@
    <string name="Foliage_Info">Des arbres lumineux percent l\'obscurité du jardin souterrain.</string>
    <!--  STRINGS OF ParalyticGas CLASS  -->
    <string name="ParalyticGas_Info">Un nuage de gaz paralysant flotte ici.</string>
+   <!--  STRINGS OF SacrificialFire CLASS  -->
+   <string name="SacrificialFire_Worthy">\"Votre sacrifice est digne...\"</string>
+   <string name="SacrificialFire_UnWorthy">\"Votre sacrifice est indigne...\"</string>
+   <string name="SacrificialFire_Reward">\"Votre sacrifice est digne et donc vous êtes!\"</string>
+   <string name="SacrificialFire_Desc">Feu sacrificiel brûle ici. Chaque créature touché par ce feu est marqué comme une offrande aux esprits du donjon.</string>
+   <string name="SacrificialFire_Marked">Marqué pour le sacrifice</string>
    <!--  STRINGS OF ToxicGas CLASS  -->
    <string name="ToxicGas_Info">Un nuage verdâtre de gaz toxique flotte par ici.</string>
    <string name="ToxicGas_Info1">Le gaz toxique vous a asphyxié...</string>
@@ -1505,6 +1539,8 @@
    <!--  STRINGS OF Poison CLASS  -->
    <string name="Poison_Info">Empoisonné</string>
    <string name="Poison_Death">Vous succombez au poison...</string>
+   <!--  STRINGS OF Rage CLASS  -->
+   <string name="Rage_Info">Aveuglé par la rage</string>
    <!--  STRINGS OF Roots CLASS  -->
    <string name="Roots_Info">Enraciné</string>
    <!--  STRINGS OF Shadows CLASS  -->
@@ -1554,6 +1590,9 @@
    <string name="Crab_Name">crabe des égouts</string>
    <string name="Crab_Desc">Ces énormes crabes sont au sommet de la chaîne alimentaire dans les égouts. Ils sont très rapides et leur exosquelette épais peut résister à des coups puissants.</string>
    <string name="Crab_Defense">paré</string>
+   <!--  STRINGS OF CursePersonification CLASS  -->
+   <string name="CursePersonification_Name">incarnation maudit</string>
+   <string name="CursePersonification_Desc">Cette créature ressemble avec le triste fantôme, mais il tourbillonne avec les ténèbres. Son visage porte une expression de désespoir.</string>
    <!--  STRINGS OF DM300 CLASS  -->
    <string name="DM300_Name1">DM-300</string>
    <string name="DM300_Name2">DM-350</string>
@@ -1697,13 +1736,17 @@
    <!--  STRINGS OF Ghost CLASS  -->
    <string name="Ghost_Name">fantôme triste</string>
    <string name="Ghost_Desc">Le fantôme est à peine visible. On dirait un miasme de lumières défaillantes avec un visage des plus attristés.</string>
+   <string name="Ghost_Defense">esquivé</string>
    <string name="Ghost_Rose1">Bonjour aventurier... J\'étais comme vous, un jour - fort et confiant... Et maintenant je suis décédé... Mais je ne peux pas partir... Pas tant que je n\'aurai pas retrouvé ma _rose séchée_... Elle est très importante à mes yeux... Un monstre l\'a prise sur mon cadavre...</string>
    <string name="Ghost_Rose2">S\'il vous plaît... Aidez moi... _Trouvez la rose_...</string>
    <string name="Ghost_Rose3">Oui ! OUI !!! C\'est ça ! Donnez la moi ! Vous pouvez prendre l\'un de ces objets, ils vous seront peut-être utiles pendant votre voyage...</string>
    <string name="Ghost_Rat1">Boujour aventurier... J\'étais comme vous, un jour - fort et confiant... Et maintenant je suis décédé... Mais je ne peux pas partir... Pas tant que je n\'aurai pas pris ma revanche... Tuez le _rat fétide_, celui qui a pris ma vie...</string>
    <string name="Ghost_Rat2">S\'il vous plaît... Aidez-moi... _Détruisez cette abomination_...</string>
    <string name="Ghost_Rat3">Oui ! Cette créature infâme est vaincue et je peux enfin reposer en paix... Je vous prie d\'accepter l\'un de ces objets, ils vous seront peut-être utiles pendant votre voyage...</string>
-   <string name="Ghost_Defense">esquivé</string>
+   <string name="Ghost_Curse1">Boujour aventurier... J\'étais comme vous, un jour - fort et confiant... Et maintenant je suis décédé... Mais je ne peux pas partir... Je suis lié par une malédiction horrible... S\'il vous plaît... Aidez-moi... _Détruisez la malédiction_...</string>
+   <string name="Ghost_Curse2">Merci, %s! La malédiction est brisée et je peut enfin se reposer... Je vous prie d\'accepter l\'un de ces objets, ils vous seront peut-être utiles pendant votre voyage...</string>
+   <string name="Ghost_CurseY">Oui, je vais le faire pour vous</string>
+   <string name="Ghost_CurseN">Non, je ne peux pas vous aider</string>
    <!--  STRINGS OF Imp CLASS  -->
    <string name="Imp_Name">diablotin ambitieux</string>
    <string name="Imp_Desc">Les diablotins sont des démons mineurs. On ne les remarque pas pas pour leur force ou leur aptitudes à la magie, mais plutôt par leur intelligence et leur sociabilité. Beaucoup de diablotins préfèrent vivre parmi les non-démons.</string>
@@ -1734,10 +1777,12 @@
    <string name="WandMaker_Name">vieux fabricant de sceptres</string>
    <string name="WandMaker_Desc">Ce gentleman, vieux mais robuste, a une expression un peu confuse. Il est protégé par un bouclier magique.</string>
    <string name="WandMaker_Defense">absorbé</string>
-   <string name="WandMaker_Berry1">Oh, quelle agréable surprise de rencontrer quelqu\'un à un tel endroit! Je suis venu ici pour un ingrédient rare, la _graine Rougebaie_. Etant un magicien, je peux me défendre contre les monstres d\'ici, mais je me perds très facilement, c\'est très embarrassant. Vous pourriez peut-être m\'aider? Je serai heureux de payer vos services avec l\'un de mes meilleurs sceptres.</string>
+   <string name="WandMaker_Berry1">Oh, quelle agréable surprise de rencontrer quelqu\'un à un tel endroit! Je suis venu ici pour un ingrédient rare - la _graine Rougebaie_. Etant un magicien, je peux me défendre contre les monstres d\'ici, mais je me perds très facilement, c\'est très embarrassant. Vous pourriez peut-être m\'aider? Je serai heureux de payer vos services avec l\'un de mes meilleurs sceptres.</string>
    <string name="WandMaker_Berry2">Vous avez trouvé la _graine Rougebaie_, %s? Non? Pas de soucis, j\'ai tout mon temps, voyez-vous.</string>
-   <string name="WandMaker_Dust1">Oh, quelle agréable surprise de rencontrer quelqu\'un à un tel endroit! Je suis venu ici pour un ingrédient rare, la _poussière de cadavre_. Elle peut être récoltée sur les restes des squelettes, et il y\'en a beaucoup dans le coin. Etant un magicien, je peux me défendre contre les monstres d\'ici, mais je me perds très facilement, c\'est très embarrassant. Vous pourriez peut-être m\'aider? Je serai heureux de payer vos services avec l\'un de mes meilleurs sceptres.</string>
-   <string name="WandMaker_Dust2">Vous avez la _poussière de cadavre_ , %s? Les piles d\'ossements sont les endroits à vérifier.</string>
+   <string name="WandMaker_Dust1">Oh, quelle agréable surprise de rencontrer quelqu\'un à un tel endroit! Je suis venu ici pour un ingrédient rare - le _poussière de cadavre_. Elle peut être récoltée sur les restes des squelettes, et il y\'en a beaucoup dans le coin. Etant un magicien, je peux me défendre contre les monstres d\'ici, mais je me perds très facilement, c\'est très embarrassant. Vous pourriez peut-être m\'aider? Je serai heureux de payer vos services avec l\'un de mes meilleurs sceptres.</string>
+   <string name="WandMaker_Dust2">Vous avez le _poussière de cadavre_ , %s? Les piles d\'ossements sont les endroits à vérifier.</string>
+   <string name="WandMaker_Fish1">Oh, quelle agréable surprise de rencontrer quelqu\'un à un tel endroit! Je suis venu ici pour un ingrédient rare - le _poisson fantôme_. Vous pouvez attraper avec vos mains nues, mais il est très difficile de remarquer dans l\'eau. Etant un magicien, je peux me défendre contre les monstres d\'ici, mais je me perds très facilement, c\'est très embarrassant. Vous pourriez peut-être m\'aider? Je serai heureux de payer vos services avec l\'un de mes meilleurs sceptres.</string>
+   <string name="WandMaker_Fish2">Vous avez le _poisson fantôme_, %s? Vous pouvez essayer de chercher dans l\'une des piscines locales.</string>
 
 
 <!--  PACKAGE /levels  -->

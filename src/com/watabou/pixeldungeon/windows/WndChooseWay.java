@@ -78,10 +78,10 @@ public class WndChooseWay extends Window {
 		
 		super();
 		
-		final String TXT_REMASTERY	= "Do you want to respec into %s?";
+		final String TXT_REMASTERY	= Game.getVar(R.string.WndChooseWay_ReMastery);
 		
-		final String TXT_OK		= "Yes, I want to respec";
-		final String TXT_CANCEL	= "Maybe later";
+		final String TXT_OK		= Game.getVar(R.string.WndChooseWay_ReMastOk);
+		final String TXT_CANCEL	= Game.getVar(R.string.WndChooseWay_ReMastNo);
 		
 		float bottom = createCommonStuff( tome, way.desc() + "\n\n" + Utils.format( TXT_REMASTERY, Utils.indefinite( way.title() ) ) );
 		

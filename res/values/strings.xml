@@ -293,6 +293,7 @@
    <string name="Journal_WellHealt">Well of Health</string>
    <string name="Journal_WellAwareness">Well of Awareness</string>
    <string name="Journal_WellTransmut">Well of Transmutation</string>
+   <string name="Journal_SacrFire">Sacrificial chamber</string>
    <string name="Journal_Alchemy">Alchemy pot</string>
    <string name="Journal_Garden">Garden</string>
    <string name="Journal_Statue">Animated statue</string>
@@ -307,6 +308,7 @@
    <string name="ResultDescriptions_Boss">Killed by the %1$s on level %2$d</string>
    <string name="ResultDescriptions_Wand">Killed by your own %1$s on level %2$d</string>
    <string name="ResultDescriptions_Glyph">Killed by the %1$s on level %2$d</string>
+   <string name="ResultDescriptions_Bomb">Killed by an explosion of a bomb on level %d</string>
    <string name="ResultDescriptions_Trap">Killed by discharge of %1$s on level %2$d</string>
    <string name="ResultDescriptions_Burning">Burned to death on level %d</string>
    <string name="ResultDescriptions_Hunger">Starved to death on level %d</string>
@@ -337,6 +339,9 @@
    <!--  STRINGS OF WndChooseWay CLASS  -->
    <string name="WndChooseWay_Mastery">Which way will you follow?</string>
    <string name="WndChooseWay_Cancel">I\'ll decide later</string>
+   <string name="WndChooseWay_ReMastery">Do you want to respec into %s?</string>
+   <string name="WndChooseWay_ReMastOk">Yes, I want to respec</string>
+   <string name="WndChooseWay_ReMastNo">Maybe later</string>
 
 
    <!--  STRINGS OF WndClass CLASS  -->
@@ -436,8 +441,9 @@
 
 
    <!--  STRINGS OF WndSadGhost CLASS  -->
-   <string name="WndSadGhost_Wepon">Ghost\'s weapon</string>
+   <string name="WndSadGhost_Weapon">Ghost\'s weapon</string>
    <string name="WndSadGhost_Armor">Ghost\'s armor</string>
+   <string name="WndSadGhost_Info">Farewell, adventurer!</string>
 
 
    <!--  STRINGS OF WndSettings CLASS  -->
@@ -523,6 +529,7 @@
    <!--  STRINGS OF Bomb CLASS  -->
    <string name="Bomb_Name">bomb</string>
    <string name="Bomb_Info">This is a relatively small bomb, filled with black powder. Conveniently, its fuse is lit automatically when the bomb is thrown.</string>
+   <string name="Bomb_Kill">You killed yourself with a bomb...</string>
 
 
    <!--  STRINGS OF Dewdrop CLASS  -->
@@ -574,6 +581,7 @@
 
    <!--  STRINGS OF TomeOfMastery CLASS  -->
    <string name="TomeOfMastery_Name">Tome of Mastery</string>
+   <string name="TomeOfMastery_NameR">Tome of Remastery</string>
    <string name="TomeOfMastery_ACRead">READ</string>
    <string name="TomeOfMastery_Info">This worn leather book is not that thick, but you feel somehow, that you can gather a lot from it. Remember though that reading this tome may require some time.</string>
    <string name="TomeOfMastery_Blinded">You can\'t read while blinded</string>
@@ -654,6 +662,7 @@
    <string name="Armor_EquipCursed">your %s constricts around you painfully</string>
    <string name="Armor_Identify">you are now familiar enough with your %1$s to identify it. It is %2$s.</string>
    <string name="Armor_ToString">%1$s :%2$d</string>
+   <string name="Armor_Broken">broken %1$s :%2$d</string>
    <string name="Armor_Incompatible">Interaction of different types of magic has erased the glyph on this armor!</string>
    <string name="Armor_Info1">\n\nThis %1$s provides damage absorption up to \"%2$d\"  points per attack.</string>
    <string name="Armor_Info2">\n\nBecause of your inadequate strength your movement speed and defense skill is decreased. </string>
@@ -734,6 +743,8 @@
    <string name="Affection_Txt">%s of affection</string>
    <!--  STRINGS OF AntiEntropy CLASS  -->
    <string name="AntiEntropy_Txt">%s of anti-entropy</string>
+   <!--  STRINGS OF AutoRepair CLASS  -->
+   <string name="AutoRepair_Txt">%s of auto-repair</string>
    <!--  STRINGS OF Bounce CLASS  -->
    <string name="Bounce_Txt">%s of bounce</string>
    <!--  STRINGS OF Displacement CLASS  -->
@@ -953,6 +964,13 @@
    <string name="DwarfToken_Info">Many dwarves and some of their larger creations carry these small pieces of metal of unknown purpose. Maybe they are jewelry or maybe some kind of ID. Dwarves are strange folk.</string>
 
 
+   <!--  STRINGS OF PhantomFish CLASS  -->
+   <string name="PhantomFish_Name">phantom fish</string>
+   <string name="PhantomFish_ACEat">EAT</string>
+   <string name="PhantomFish_Info">You can barely see this tiny translucent fish in the air. In the water it becomes effectively invisible.</string>
+   <string name="PhantomFish_Invisible">You see your hands turn invisible!</string>
+
+
    <!--  STRINGS OF Pickaxe CLASS  -->
    <string name="Pickaxe_Name">pickaxe</string>
    <string name="Pickaxe_Info">This is a large and sturdy tool for breaking rocks. Probably it can be used as a weapon.</string>
@@ -969,6 +987,7 @@
    <!--  STRINGS OF Ring CLASS  -->
    <string name="Ring_Name">%s ring</string>
    <string name="Ring_Info">This metal band is adorned with a large %s gem that glitters in the darkness. Who knows what effect it has when worn?</string>
+   <string name="Ring_Broken">broken %s</string>
    <string name="Ring_Identify">you are now familiar enough with your %1$s to identify it. It is %2$s.</string>
    <string name="Ring_UnequipTit">Unequip one ring</string>
    <string name="Ring_UnequipMsg">You can only wear two rings at a time. Unequip one of your equipped rings.</string>
@@ -1163,6 +1182,13 @@
    <string name="ScrollOfEnchantment_Glows">your %s glows in the dark</string>
 
 
+   <!--  STRINGS OF ScrollOfWipeOut CLASS  -->
+   <string name="ScrollOfWipeOut_Name">Scroll of Wipe Out</string>
+   <string name="ScrollOfWipeOut_ACRead">@string/Scroll_ACRead</string>
+   <string name="ScrollOfWipeOut_Info">Read this scroll to unleash the wrath of the dungeon spirits, killing everything on the current level. Well, almost everything. Some of the more powerful creatures may be not affected.</string>
+   <string name="ScrollOfWipeOut_Blinded">@string/Scroll_Blinded</string>
+
+
 <!--  PACKAGE /items/Wands  -->
    <!--  STRINGS OF Wand CLASS  -->
    <string name="Wand_Name">%s wand</string>
@@ -1283,6 +1309,8 @@
    <!--  STRINGS OF Weapon CLASS  -->
    <string name="Weapon_Identify">You are now familiar enough with your %1$s to identify it. It is %2$s.</string>
    <string name="Weapon_Incompatible">Interaction of different types of magic has negated the enchantment on this weapon!</string>
+   <string name="Weapon_ToString">%1$s :%2$d</string>
+   <string name="Weapon_Broken">broken %1$s :%2$d</string>
 
 
 <!--  PACKAGE /weapon/Enchantment  -->
@@ -1452,6 +1480,12 @@
    <string name="Foliage_Info">Shafts of light pierce the gloom of the underground garden.</string>
    <!--  STRINGS OF ParalyticGas CLASS  -->
    <string name="ParalyticGas_Info">A cloud of paralytic gas is swirling here.</string>
+   <!--  STRINGS OF SacrificialFire CLASS  -->
+   <string name="SacrificialFire_Worthy">\"Your sacrifice is worthy...\"</string>
+   <string name="SacrificialFire_UnWorthy">\"Your sacrifice is unworthy...\"</string>
+   <string name="SacrificialFire_Reward">\"Your sacrifice is worthy and so you are!\"</string>
+   <string name="SacrificialFire_Desc">Sacrificial fire burns here. Every creature touched by this fire is marked as an offering for the spirits of the dungeon.</string>
+   <string name="SacrificialFire_Marked">Marked for sacrifice</string>
    <!--  STRINGS OF ToxicGas CLASS  -->
    <string name="ToxicGas_Info">A greenish cloud of toxic gas is swirling here.</string>
    <string name="ToxicGas_Info1">You died from a toxic gas..</string>
@@ -1516,6 +1550,8 @@
    <!--  STRINGS OF Poison CLASS  -->
    <string name="Poison_Info">Poisoned</string>
    <string name="Poison_Death">You died from poison...</string>
+   <!--  STRINGS OF Rage CLASS  -->
+   <string name="Rage_Info">Blinded with rage</string>
    <!--  STRINGS OF Roots CLASS  -->
    <string name="Roots_Info">Rooted</string>
    <!--  STRINGS OF Shadows CLASS  -->
@@ -1565,6 +1601,9 @@
    <string name="Crab_Name">sewer crab</string>
    <string name="Crab_Desc">These huge crabs are at the top of the food chain in the sewers. They are extremely fast and their thick exoskeleton can withstand heavy blows.</string>
    <string name="Crab_Defense">parried</string>
+   <!--  STRINGS OF CursePersonification CLASS  -->
+   <string name="CursePersonification_Name">curse personification</string>
+   <string name="CursePersonification_Desc">This creature resembles the sad ghost, but it swirls with darkness. Its face bears an expression of despair.</string>
    <!--  STRINGS OF DM300 CLASS  -->
    <string name="DM300_Name1">DM-300</string>
    <string name="DM300_Name2">DM-350</string>
@@ -1708,13 +1747,17 @@
    <!--  STRINGS OF Ghost CLASS  -->
    <string name="Ghost_Name">sad ghost</string>
    <string name="Ghost_Desc">The ghost is barely visible. It looks like a shapeless spot of faint light with a sorrowful face.</string>
+   <string name="Ghost_Defense">evaded</string>
    <string name="Ghost_Rose1">Hello adventurer... Once I was like you - strong and confident... And now I\'m dead... But I can\'t leave this place... Not until I have my _dried rose_... It\'s very important to me... Some monster stole it from my body...</string>
    <string name="Ghost_Rose2">Please... Help me... _Find the rose_...</string>
    <string name="Ghost_Rose3">Yes! Yes!!! This is it! Please give it to me! And you can take one of these items, maybe they will be useful to you in your journey...</string>
    <string name="Ghost_Rat1">Hello adventurer... Once I was like you - strong and confident... And now I\'m dead... But I can\'t leave this place... Not until I have my revenge... Slay the _fetid rat_, that has taken my life...</string>
    <string name="Ghost_Rat2">Please... Help me... _Slay the abomination_...</string>
    <string name="Ghost_Rat3">Yes! The ugly creature is slain and I can finally rest... Please take one of these items, maybe they will be useful to you in your journey...</string>
-   <string name="Ghost_Defense">evaded</string>
+   <string name="Ghost_Curse1">Hello adventurer... Once I was like you - strong and confident... And now I\'m dead... But I can\'t leave this place, as I am bound by a horrid curse... Please... Help me... _Destroy the curse_...</string>
+   <string name="Ghost_Curse2">Thank you, %s! The curse is broken and I can finally rest... Please take one of these items, maybe they will be useful to you in your journey...</string>
+   <string name="Ghost_CurseY">Yes, I will do it for you</string>
+   <string name="Ghost_CurseN">No, I can\'t help you</string>
    <!--  STRINGS OF Imp CLASS  -->
    <string name="Imp_Name">ambitious imp</string>
    <string name="Imp_Desc">Imps are lesser demons. They are notable for neither their strength nor their magic talent, but they are quite smart and sociable. Many imps prefer to live among non-demons.</string>
@@ -1749,6 +1792,8 @@
    <string name="WandMaker_Berry2">Any luck with a _Rotberry seed_, %s? No? Don\'t worry, I\'m not in a hurry.</string>
    <string name="WandMaker_Dust1">Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient - _corpse dust_. It can be gathered from skeletal remains and there is an ample number of them in the dungeon. Being a magic user, I\'m quite able to defend myself against local monsters, but I\'m getting lost in no time, it\'s very embarrassing. Probably you could help me? I would be happy to pay for your service with one of my best wands.</string>
    <string name="WandMaker_Dust2">Any luck with _corpse dust_, %s? Bone piles are the most obvious places to look.</string>
+   <string name="WandMaker_Fish1">Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient - a _phantom fish_. You can catch it with your bare hands, but it\'s very hard to notice in the water. Being a magic user, I\'m quite able to defend myself against local monsters, but I\'m getting lost in no time, it\'s very embarrassing. Probably you could help me? I would be happy to pay for your service with one of my best wands.</string>
+   <string name="WandMaker_Fish2">Any luck with a _phantom fish_, %s? You may want to try searching for it in one of the local pools.</string>
 
 
 <!--  PACKAGE /levels  -->

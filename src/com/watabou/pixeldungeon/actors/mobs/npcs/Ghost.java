@@ -405,17 +405,12 @@ public class Ghost extends NPC {
 	};
 	
 	private static final QuestHandler curseQuest = new QuestHandler() {
-		private static final String TXT_CURSE1 =
-			"Hello adventurer... Once I was like you - strong and confident... " +
-			"And now I'm dead... But I can't leave this place, as I am bound by a horrid curse... " +
-			"Please... Help me... _Destroy the curse_...";
-		private static final String TXT_CURSE2 =
-			"Thank you, %s! The curse is broken and I can finally rest... " +
-			"Please take one of these items, maybe they " +
-			"will be useful to you in your journey...";
 		
-		private static final String TXT_YES	= "Yes, I will do it for you";
-		private static final String TXT_NO	= "No, I can't help you";
+		private final String TXT_CURSE1 = Game.getVar(R.string.Ghost_Curse1);
+		private final String TXT_CURSE2 = Game.getVar(R.string.Ghost_Curse2);
+		
+		private final String TXT_YES	= Game.getVar(R.string.Ghost_CurseY);
+		private final String TXT_NO	= Game.getVar(R.string.Ghost_CurseN);
 		
 		public void interact( final Ghost ghost ) {
 			if (Quest.given) {

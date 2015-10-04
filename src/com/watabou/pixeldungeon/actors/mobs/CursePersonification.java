@@ -19,7 +19,9 @@ package com.watabou.pixeldungeon.actors.mobs;
 
 import java.util.HashSet;
 
+import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Dungeon;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.actors.Actor;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
@@ -35,7 +37,7 @@ import com.watabou.utils.Random;
 public class CursePersonification extends Mob {
 
 	{
-		name = "curse personification";
+		name = Game.getVar(R.string.CursePersonification_Name);
 		spriteClass = CursePersonificationSprite.class;
 		
 		HP = HT = 10 + Dungeon.depth * 3;
@@ -108,9 +110,7 @@ public class CursePersonification extends Mob {
 	
 	@Override
 	public String description() {
-		return
-			"This creature resembles the sad ghost, but it swirls with darkness. " +
-			"Its face bears an expression of despair.";
+		return Game.getVar(R.string.CursePersonification_Desc);
 	}
 	
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();

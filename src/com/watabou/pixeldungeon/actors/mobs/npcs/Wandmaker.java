@@ -349,13 +349,8 @@ public class Wandmaker extends NPC {
 	
 	private static final QuestHandler fishQuest = new QuestHandler() {
 		{
-			txtQuest1 = 
-				"Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient: " +
-				"a _phantom fish_. You can catch it with your bare hands, but it's very hard to notice in the water. " +
-				"Being a magic user, I'm quite able to defend myself against local monsters, but I'm getting lost in no time, " +
-				"it's very embarrassing. Probably you could help me? I would be happy to pay for your service with one of my best wands.";
-			txtQuest2 = 
-				"Any luck with a _phantom fish_, %s? You may want to try searching for it in one of the local pools.";
+			txtQuest1 = Game.getVar(R.string.WandMaker_Fish1);
+			txtQuest2 = Game.getVar(R.string.WandMaker_Fish2);
 		}
 		
 		@Override

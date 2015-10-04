@@ -40,8 +40,8 @@ abstract public class Weapon extends KindOfWeapon {
 	
 	private static final String TXT_IDENTIFY		= Game.getVar(R.string.Weapon_Identify);
 	private static final String TXT_INCOMPATIBLE	= Game.getVar(R.string.Weapon_Incompatible);
-	private static final String TXT_TO_STRING		= "%s :%d";
-	private static final String TXT_BROKEN			= "broken %s :%d";
+	private static final String TXT_TO_STRING		= Game.getVar(R.string.Weapon_ToString);
+	private static final String TXT_BROKEN			= Game.getVar(R.string.Weapon_Broken);
 	
 	public int		STR	= 10;
 	public float	ACU	= 1;

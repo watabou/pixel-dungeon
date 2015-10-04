@@ -48,7 +48,7 @@ public class TomeOfMastery extends Item {
 	
 	{
 		stackable = false;
-		name = Dungeon.hero != null && Dungeon.hero.subClass != HeroSubClass.NONE ? "Tome of Remastery" : Game.getVar(R.string.TomeOfMastery_Name);
+		name = Dungeon.hero != null && Dungeon.hero.subClass != HeroSubClass.NONE ? Game.getVar(R.string.TomeOfMastery_NameR) : Game.getVar(R.string.TomeOfMastery_Name);
 		image = ItemSpriteSheet.MASTERY;
 		
 		unique = true;

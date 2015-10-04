@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.actors.buffs;
 
+import com.watabou.noosa.Game;
+import com.watabou.pixeldungeon.R;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 
 public class Rage extends FlavourBuff {
@@ -28,6 +30,6 @@ public class Rage extends FlavourBuff {
 	
 	@Override
 	public String toString() {
-		return "Blinded with rage";
+		return Game.getVar(R.string.Rage_Info);
 	}
 }

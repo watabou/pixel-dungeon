@@ -293,13 +293,14 @@
    <string name="Journal_WellHealt">Studnia Zdrowia</string>
    <string name="Journal_WellAwareness">Studnia Świadomości</string>
    <string name="Journal_WellTransmut">Studnia Transmutacji</string>
+   <string name="Journal_SacrFire">Ofiarnym Komora</string>
    <string name="Journal_Alchemy">Kociołek Alchemiczny</string>
    <string name="Journal_Garden">Ogród</string>
    <string name="Journal_Statue">Żywy posąg</string>
    <string name="Journal_Ghost">Smutny duch</string>
    <string name="Journal_Wandmaker">Stary Kosturnik</string>
    <string name="Journal_Troll">Kowal Trolli</string>
-   <string name="Journal_Imp">Ambitny Imp</string>
+   <string name="Journal_Imp">Chochlik Ambitny</string>
 
 
    <!--  STRINGS OF ResultDescriptions CLASS  -->
@@ -307,6 +308,7 @@
    <string name="ResultDescriptions_Boss">Zabity przez %1$s na poziomie %2$d</string>
    <string name="ResultDescriptions_Wand">Zabity przez siebie %1$s na poziomie %2$d</string>
    <string name="ResultDescriptions_Glyph">Zabity przez %1$s na poziomie %2$d</string>
+   <string name="ResultDescriptions_Bomb">Zabity przez wybuch bomby na poziomie %d</string>
    <string name="ResultDescriptions_Trap">Zabity przez porażenie %1$s na poziomie %2$d</string>
    <string name="ResultDescriptions_Burning">Spalony żywcem na poziomie %d</string>
    <string name="ResultDescriptions_Hunger">Zagłodzony na śmierć na poziomie %d</string>
@@ -337,6 +339,9 @@
    <!--  STRINGS OF WndChooseWay CLASS  -->
    <string name="WndChooseWay_Mastery">Którą ścieżkę obierzesz?</string>
    <string name="WndChooseWay_Cancel">Zdecyduję później</string>
+   <string name="WndChooseWay_ReMastery">Chcesz respec %s?</string>
+   <string name="WndChooseWay_ReMastOk">Tak, chcę respec</string>
+   <string name="WndChooseWay_ReMastNo">Może później</string>
 
 
    <!--  STRINGS OF WndClass CLASS  -->
@@ -425,8 +430,9 @@
 
 
    <!--  STRINGS OF WndSadGhost CLASS  -->
-   <string name="WndSadGhost_Wepon">Broń ducha</string>
+   <string name="WndSadGhost_Weapon">Broń ducha</string>
    <string name="WndSadGhost_Armor">Zbroja Ducha</string>
+   <string name="WndSadGhost_Info">Żegnaj, przygód!</string>
 
 
    <!--  STRINGS OF WndSettings CLASS  -->
@@ -512,6 +518,7 @@
    <!--  STRINGS OF Bomb CLASS  -->
    <string name="Bomb_Name">bomba</string>
    <string name="Bomb_Info">Jest to stosunkowo małe bomb wypełnione czarnym proszku. Wygodnie, jej bezpiecznik świeci się automatycznie, gdy rzuca bomby.</string>
+   <string name="Bomb_Kill">Zabiłeś się z bombą...</string>
 
 
    <!--  STRINGS OF Dewdrop CLASS  -->
@@ -563,6 +570,7 @@
 
    <!--  STRINGS OF TomeOfMastery CLASS  -->
    <string name="TomeOfMastery_Name">Książka Mistrzostwa</string>
+   <string name="TomeOfMastery_NameR">Książka Mistrzostwa(2)</string>
    <string name="TomeOfMastery_ACRead">CZYTAJ</string>
    <string name="TomeOfMastery_Info">Ta używana, skórzana książka nie jest aż tak gruba, ale czujesz jednak, że mógłbyś się z niej wiele nauczyć. Pamiętaj, że czytanie jej zajmie trochę czasu.</string>
    <string name="TomeOfMastery_Blinded">Nie możesz czytać gdy jesteś oślepiony</string>
@@ -643,6 +651,7 @@
    <string name="Armor_EquipCursed">%s boleśnie zaciska się na tobie</string>
    <string name="Armor_Identify">Udało Ci się zidentyfikować %1$s. Okazuje się, że to  %2$s.</string>
    <string name="Armor_ToString">%1$s :%2$d</string>
+   <string name="Armor_Broken">złamany %1$s :%2$d</string>
    <string name="Armor_Incompatible">Interakcja różnych typów magii usunęła glif z tej zbroi!</string>
    <string name="Armor_Info1">\n\nTa %1$s wchłania \"%2$d\"  obrażeń.</string>
    <string name="Armor_Info2">\n\nPonieważ twoja siła jest niewystarczająca, twoja szybkość i zdolności obronne są obniżone.</string>
@@ -723,6 +732,8 @@
    <string name="Affection_Txt">%s uroku</string>
    <!--  STRINGS OF AntiEntropy CLASS  -->
    <string name="AntiEntropy_Txt">%s chaotycznej magii</string>
+   <!--  STRINGS OF AutoRepair CLASS  -->
+   <string name="AutoRepair_Txt">%s auto-naprawy</string>
    <!--  STRINGS OF Bounce CLASS  -->
    <string name="Bounce_Txt">%s odbicia</string>
    <!--  STRINGS OF Displacement CLASS  -->
@@ -942,6 +953,13 @@
    <string name="DwarfToken_Info">Wiele krasnoludów i ich większe twory noszą te małe kawałki metalu z nieznanych przyczyn. Może to biżuteria, albo jakiś rodzaj identyfikatorów. Krasnoludy to dziwny lud.</string>
 
 
+   <!--  STRINGS OF PhantomFish CLASS  -->
+   <string name="PhantomFish_Name">fantom ryby</string>
+   <string name="PhantomFish_ACEat">ZJEDZ</string>
+   <string name="PhantomFish_Info">Można nawet zobaczyć ten mały przezroczyste ryby w powietrzu. W wodzie staje się skutecznie niewidoczne.</string>
+   <string name="PhantomFish_Invisible">Widzisz, że twe dłonie znikają!</string>
+
+
    <!--  STRINGS OF Pickaxe CLASS  -->
    <string name="Pickaxe_Name">Kilof</string>
    <string name="Pickaxe_Info">Jest to duże i wytrzymałe narzędzie do rozbijania skał. Może można tego używać jako broń.</string>
@@ -958,6 +976,7 @@
    <!--  STRINGS OF Ring CLASS  -->
    <string name="Ring_Name">%s pierscien</string>
    <string name="Ring_Info">Na tej metalowej obrączce znajduje się wielki, %s klejnot, który połyskuje w ciemności. Kto wie jakie ma właściwości po założeniu?</string>
+   <string name="Ring_Broken">złamany %s</string>
    <string name="Ring_Identify">%1$s i jego działanie są teraz dla ciebie zrozumiałe. To %2$s.</string>
    <string name="Ring_UnequipTit">Rozebrać jednego pierścienia</string>
    <string name="Ring_UnequipMsg">Można nosić tylko dwa pierścienie na raz. Rozebrać jednej z wyposażonych pierścieni.</string>
@@ -1152,6 +1171,13 @@
    <string name="ScrollOfEnchantment_Glows">%s świeci w ciemności</string>
 
 
+   <!--  STRINGS OF ScrollOfWipeOut CLASS  -->
+   <string name="ScrollOfWipeOut_Name">Zwój Czystość</string>
+   <string name="ScrollOfWipeOut_ACRead">@string/Scroll_ACRead</string>
+   <string name="ScrollOfWipeOut_Info">Przeczytaj ten zwój wyzwolić gniew duchów Bossów, zabijając wszystko, co na obecnym poziomie. No, prawie wszystko. Niektóre z bardziej potężnych stworzeń nie może być naruszone.</string>
+   <string name="ScrollOfWipeOut_Blinded">@string/Scroll_Blinded</string>
+
+
 <!--  PACKAGE /items/Wands  -->
    <!--  STRINGS OF Wand CLASS  -->
    <string name="Wand_Name">%s kostur</string>
@@ -1272,6 +1298,8 @@
    <!--  STRINGS OF Weapon CLASS  -->
    <string name="Weapon_Identify">%1$s został już przez ciebie dokładniej poznany. Okazuje się, że to %2$s.</string>
    <string name="Weapon_Incompatible">Interakcja roznych typow magii usunela zaklecie z tej broni!</string>
+   <string name="Weapon_ToString">%1$s :%2$d</string>
+   <string name="Weapon_Broken">złamany %1$s :%2$d</string>
 
 
 <!--  PACKAGE /weapon/Enchantment  -->
@@ -1441,6 +1469,12 @@
    <string name="Foliage_Info">Snopy światła oświetlają pogrążony w mroku ogród.</string>
    <!--  STRINGS OF ParalyticGas CLASS  -->
    <string name="ParalyticGas_Info">Chmura gazu paraliżującego tutaj się unosi.</string>
+   <!--  STRINGS OF SacrificialFire CLASS  -->
+   <string name="SacrificialFire_Worthy">\"Twoja ofiara jest godzien...\"</string>
+   <string name="SacrificialFire_UnWorthy">\"Twoja ofiara jest niegodne...\"</string>
+   <string name="SacrificialFire_Reward">\"Twoje poświęcenie jest godne i tak jesteś!\"</string>
+   <string name="SacrificialFire_Desc">Płonie ogień ofiarny tutaj. Każde stworzenie dotknął tego ognia jest oznaczony jako ofiara dla duchów lochu.</string>
+   <string name="SacrificialFire_Marked">Zaznaczono ofiary</string>
    <!--  STRINGS OF ToxicGas CLASS  -->
    <string name="ToxicGas_Info">Chmura gazu toksycznego się tutaj unosi.</string>
    <string name="ToxicGas_Info1">Zabił cię trujący gaz...</string>
@@ -1505,6 +1539,8 @@
    <!--  STRINGS OF Poison CLASS  -->
    <string name="Poison_Info">Zatruty</string>
    <string name="Poison_Death">Trucizna ciebie zabiła...</string>
+   <!--  STRINGS OF Rage CLASS  -->
+   <string name="Rage_Info">Zaślepiony gniewem</string>
    <!--  STRINGS OF Roots CLASS  -->
    <string name="Roots_Info">Unieruchomiony</string>
    <!--  STRINGS OF Shadows CLASS  -->
@@ -1554,6 +1590,9 @@
    <string name="Crab_Name">Krab ściekowy</string>
    <string name="Crab_Desc">Te olbrzymie kraby są na górze łańcucha pokarmowego w kanałach. Są niezwykle szybkie, a ich gruby egzoszkielet potrafi wytrzymać nawet potężne ciosy.</string>
    <string name="Crab_Defense">sparowano</string>
+   <!--  STRINGS OF CursePersonification CLASS  -->
+   <string name="CursePersonification_Name">przeklęty wcielenie</string>
+   <string name="CursePersonification_Desc">Ta istota przypomina o smutnej ducha, ale to wiruje z ciemności. Jego twarz nosi wyraz rozpaczy.</string>
    <!--  STRINGS OF DM300 CLASS  -->
    <string name="DM300_Name1">DM-300</string>
    <string name="DM300_Name2">DM-350</string>
@@ -1697,15 +1736,19 @@
    <!--  STRINGS OF Ghost CLASS  -->
    <string name="Ghost_Name">smutny duch</string>
    <string name="Ghost_Desc">Ten duch jest ledwo widoczny. Wygląda jak bezkształtna masa światła z twarzą pełną cierpienia.</string>
-   <string name="Ghost_Rose1">Witaj podróżniku... Kiedyś byłem taki jak ty - silny i pewny siebie... I teraz jestem martwy... Ale nie mogę opuścić tego miejsca... Nie bez mojej _wysuszona róża_... Jest dla mnie bardzo ważna... Wręczyła mi ją moja ukochana lata temu, lecz jakiś potwór skradł ją z moich szczątków... Odzyskaj ją...</string>
+   <string name="Ghost_Defense">unik</string>
+   <string name="Ghost_Rose1">Witaj podróżniku... Kiedyś byłem taki jak ty - silny i pewny siebie... Ale teraz jestem martwy... Ale nie mogę opuścić tego miejsca... Nie bez mojej _wysuszona róża_... Jest dla mnie bardzo ważna... Wręczyła mi ją moja ukochana lata temu, lecz jakiś potwór skradł ją z moich szczątków... Odzyskaj ją...</string>
    <string name="Ghost_Rose2">Proszę... Pomóż mi... _Znajdź różę_...</string>
-   <string name="Ghost_Rose3">Tak ! Tak !!! To jest to! Proszę daj mi to! Możesz w nagrodę wziąć jeden z tych przedmiotów, może pomogą ci w podróży...</string>
+   <string name="Ghost_Rose3">Tak! Tak!!! To jest to! Proszę daj mi to! Możesz w nagrodę wziąć jeden z tych przedmiotów, może przydadzą ci się w podróży...</string>
    <string name="Ghost_Rat1">Witaj podróżniku... Kiedyś byłem taki jak ty - silny i pewny siebie... Ale teraz jestem martwy... Ale nie mogę opuścić tego miejsca... Nie dopóki nie dopełni się moja zemsta! Zabij _cuchnący ściekoszczur_, który pozbawił mnie życia lata temu... Jedyne co pamiętam ze starcia z nim to smród... Otumaniający smród...</string>
    <string name="Ghost_Rat2">Proszę... Pomóż mi... _Zabij tę abominację_...</string>
    <string name="Ghost_Rat3">Tak! Paskudna kreatura jest zabita i mogę w końcu odpocząć... Proszę, weź jeden z tych przedmiotów, może przydadzą ci się w podróży...</string>
-   <string name="Ghost_Defense">unik</string>
+   <string name="Ghost_Curse1">Witaj podróżniku... Kiedyś byłem taki jak ty - silny i pewny siebie... Ale teraz jestem martwy... Ale nie mogę opuścić tego miejsca... Jestem związany strasznej klątwy... Proszę... Pomóż mi... _Zniszczyć klątwę_...</string>
+   <string name="Ghost_Curse2">Dziękuję, %s! Przekleństwo jest uszkodzony i może wreszcie odpocząć... Proszę, weź jeden z tych przedmiotów, może przydadzą ci się w podróży...</string>
+   <string name="Ghost_CurseY">Tak, zrobię to za Ciebie</string>
+   <string name="Ghost_CurseN">Nie, nie mogę ci pomóc</string>
    <!--  STRINGS OF Imp CLASS  -->
-   <string name="Imp_Name">Ambitny Imp</string>
+   <string name="Imp_Name">chochlik ambitny</string>
    <string name="Imp_Desc">Impy to pomniejsze demony. Nie są podziwiane ze względu na ich siłę czy talent magiczny, lecz ich inteligencję i zdolności retoryczne. Wiele impów woli żyć pośród nie-demonów.</string>
    <string name="Imp_Defense">unik</string>
    <string name="Imp_Golems1">Jesteś podróżnikiem? Kocham podróżników! Możesz na nich zawsze polegać jeśli coś ma być zabite. Mam rację? Oczywiście za nagrodę ;)\nW moim przypadku są to  _Golemy_, które muszą zostać wykończone. Widzisz, zamierzam założyć tutaj mój mały interes, lecz te głupie golemy mu nie służą! Przeciwnie! Wiesz, trudno negocjować z chodzącymi kupami granitu, niech je szlag! Więc proszę, zabij powiedzmy... _6 z nich_, a nagroda będzie twoja!</string>
@@ -1715,7 +1758,7 @@
    <string name="Imp_Cya">Do zobaczenia, %s!</string>
    <string name="Imp_Hey">Psst, %s!</string>
    <!--  STRINGS OF ImpShopkeeper CLASS  -->
-   <string name="ImpShopkeeper_Name">Ambitny Imp</string>
+   <string name="ImpShopkeeper_Name">chochlik ambitny</string>
    <string name="ImpShopkeeper_Desc">Impy to pomniejsze demony. Nie są podziwiane ze względu na ich siłę czy talent magiczny, lecz ich inteligencję i zdolności retoryczne. Wiele impów woli żyć pośród nie-demonów.</string>
    <string name="ImpShopkeeper_Greetings">Witaj przyjacielu!</string>
    <!--  STRINGS OF MirrorImage CLASS  -->
@@ -1734,10 +1777,12 @@
    <string name="WandMaker_Name">Stary kosturnik</string>
    <string name="WandMaker_Desc">Ten stary, ale żwawy pan jest nieco zdezorientowany. Jest chroniony przez magiczną tarczę.</string>
    <string name="WandMaker_Defense">wchłonięto</string>
-   <string name="WandMaker_Berry1">Och, cóż za miła niespodzianka, spotkać prawdziwego człowieka w takim miejscu! Przybyłem tutaj po rzadki składnik - _nasiona Pętojagody_. Ponieważ potrafię używać magii, mogę chronić się przed lokalnymi potworami, ale gubię się w braku czasu, co jest bardzo irytujące. Może mógłbyś mi pomóc? Będę zadowolony mogąc zaoferować ci jeden z mych najlepszych kosturów.</string>
+   <string name="WandMaker_Berry1">Och, cóż za miła niespodzianka, spotkać prawdziwego człowieka w takim miejscu! Przybyłem tutaj po rzadki składnik - _nasiona Pętojagody_. Będąc użytkownikiem magii, mogę chronić się przed lokalnymi potworami, lecz gubię się w braku czasu, co jest bardzo irytujące. Może mógłbyś mi pomóc? Byłbym szczęśliwy, mogąc ci oferować ci jeden z mych najlepszych różdżek.</string>
    <string name="WandMaker_Berry2">Jakieś postępy w poszukiwaniu _nasiona Pętojagody_, %s? Nie martw się, nie spieszy mi się.</string>
-   <string name="WandMaker_Dust1">Och, co za miła niespodzianka, spotkać prawdziwego człowieka w takim miejscu! Przybyłem tutaj po rzadki składnik -_pyłu trupa_. Może zostać zebrany z kościanych szczątków, a tych jest całkiem sporo w Lochu. Będąc użytkownikiem magii, mogę chronić się przed lokalnymi potworami, lecz gubię się w braku czasu, co jest bardzo irytujące. Może mógłbyś mi pomóc? Byłbym szczęśliwy, mogąc ci oferować ci jeden z mych najlepszych kosturów.</string>
+   <string name="WandMaker_Dust1">Och, coż za miła niespodzianka, spotkać prawdziwego człowieka w takim miejscu! Przybyłem tutaj po rzadki składnik - _pyłu trupa_. Może zostać zebrany z kościanych szczątków, a tych jest całkiem sporo w Lochu. Będąc użytkownikiem magii, mogę chronić się przed lokalnymi potworami, lecz gubię się w braku czasu, co jest bardzo irytujące. Może mógłbyś mi pomóc? Byłbym szczęśliwy, mogąc ci oferować ci jeden z mych najlepszych różdżek.</string>
    <string name="WandMaker_Dust2">Jakieś postępy w poszukiwaniu _pyłu trupa_, %s? Stosy kości to najbardziej oczywiste miejsca do zbadania.</string>
+   <string name="WandMaker_Fish1">Och, coż za miła niespodzianka, spotkać prawdziwego człowieka w takim miejscu! Przybyłem tutaj po rzadki składnik - _fantom ryby_. Możesz złapać go gołymi rękami, ale jest to bardzo trudne do zawiadomienia w wodzie. Będąc użytkownikiem magii, mogę chronić się przed lokalnymi potworami, lecz gubię się w braku czasu, co jest bardzo irytujące. Może mógłbyś mi pomóc? Byłbym szczęśliwy, mogąc ci oferować ci jeden z mych najlepszych różdżek.</string>
+   <string name="WandMaker_Fish2">Jakieś postępy w poszukiwaniu _fantom ryby_, %s? Możesz spróbować poszukać go w jednej z lokalnych basenów.</string>
 
 
 <!--  PACKAGE /levels  -->
