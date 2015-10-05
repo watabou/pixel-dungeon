@@ -144,7 +144,7 @@
        <item >Los pergaminos de Identificación pueden se identificados desde el principio.</item>
    </string-array>
    <string-array name="HeroClass_RogPerks">
-       <item >Los bellacos empiezan con una nillo de las Sombras +1.</item>
+       <item >Los bellacos empiezan con una anillo de las Sombras +1.</item>
        <item >Los bellacos pueden identificar un anillo al ponérselo.</item>
        <item >Los bellacos son más eficientes con armaduras ligeras, aumentando la posibilidad de esquivar.</item>
        <item >Los bellacos son más eficientes detectando puertas ocultas y trampas.</item>
@@ -184,7 +184,7 @@
    <string name="Badges_Info2">Nueva súper insignia: %s</string>
    <string name="Badges_Info3">Nueva insignia: %s</string>
    <string name="Badges_MonsterSlain1">10 enemigos asesinados</string>
-   <string name="Badges_MonsterSlain2">50 enemigoss asesinados</string>
+   <string name="Badges_MonsterSlain2">50 enemigos asesinados</string>
    <string name="Badges_MonsterSlain3">150 enemigos asesinados</string>
    <string name="Badges_MonsterSlain4">250 enemigos asesinados</string>
    <string name="Badges_GoldColleted1">100 monedas de oro robadas</string>
@@ -321,7 +321,7 @@
 
 
    <!--  STRINGS OF WndBlacksmith CLASS  -->
-   <string name="WndBlacksmith_Prompt">OK, un trato es un trato, ésto es lo que puedo hacer por ti: Puedo forjar 2 ítems, sacando uno de mejor calidad.</string>
+   <string name="WndBlacksmith_Prompt">OK, un trato es un trato, esto es lo que puedo hacer por ti: Puedo forjar 2 ítems, sacando uno de mejor calidad.</string>
    <string name="WndBlacksmith_Select">Selecciona un ítem que reforjar</string>
    <string name="WndBlacksmith_Reforge">Refórjalos</string>
 
@@ -1093,7 +1093,7 @@
    <!--  STRINGS OF ScrollOfChallenge CLASS  -->
    <string name="ScrollOfChallenge_Name">Pergamino de Desafío</string>
    <string name="ScrollOfChallenge_Info">Cuando lea en voz alta, este pergamino va a desatar un rugido desafiante que despertará todos los monstruos y alertarlos sobre la ubicación del lector.</string>
-   <string name="ScrollOfChallenge_Info1">The scroll emits a challenging roar that echoes throughout the dungeon!</string>
+   <string name="ScrollOfChallenge_Info1">El desplazamiento emite un rugido desafiante que hace eco a lo largo de la mazmorra!</string>
 
 
    <!--  STRINGS OF ScrollOfIdentify CLASS  -->
@@ -1114,7 +1114,7 @@
    <!--  STRINGS OF ScrollOfMagicMapping CLASS  -->
    <string name="ScrollOfMagicMapping_Name">Pergamino de Mapeo Mágica</string>
    <string name="ScrollOfMagicMapping_Info">Cuando se lee este pergamino, una imagen de claridad cristalina quedará grabado en su memoria, alertando a la distribución precisa del nivel y revelando todos los secretos ocultos. Las ubicaciones de los elementos y criaturas seguirán siendo desconocido.</string>
-   <string name="ScrollOfMagicMapping_Layout">You are now aware of the level layout.</string>
+   <string name="ScrollOfMagicMapping_Layout">Ahora eres consciente de la disposición de nivel.</string>
 
 
    <!--  STRINGS OF ScrollOfMirrorImage CLASS  -->
@@ -1167,7 +1167,7 @@
    <!--  STRINGS OF ScrollOfEnchantment CLASS  -->
    <string name="ScrollOfEnchantment_Name">Pergamino de Encantamiento</string>
    <string name="ScrollOfEnchantment_Info">Este pergamino es capaz de imbuir un arma o una armadura con un encanto al azar, otorgándole un poder especial.</string>
-   <string name="ScrollOfEnchantment_InvTitle">Seleccione un ítem encantable</string>
+   <string name="ScrollOfEnchantment_InvTitle">Seleccione un ítem incantable</string>
    <string name="ScrollOfEnchantment_Glows">tu %s brilla en la oscuridad</string>
 
 
@@ -1237,7 +1237,7 @@
    <string name="WandOfFlock_Name">Varita del Rebaño</string>
    <string name="WandOfFlock_Info">Un movimiento de esta varita convoca a un rebaño de ovejas magia, creando obstáculo impenetrable temporal.</string>
    <string name="WandOfFlock_SheepName">oveja</string>
-   <string name="WandOfFlock_SheepInfo">Esta es una oveja magia. ¿Qué es tan mágico sobre él? No se puede acabar con él. Será permanecer allí hasta que magcially desvanece, todo el bolo alimenticio al masticar con una mirada en blanco.</string>
+   <string name="WandOfFlock_SheepInfo">Esta es una oveja magia. ¿Qué es tan mágico sobre él? No se puede acabar con él. Será permanecer allí hasta que por arte de magia desvanece, todo el bolo alimenticio al masticar con una mirada en blanco.</string>
    <string-array name="WandOfFlock_SheepBaa">
        <item >Baa!</item>
        <item >Baa?</item>
