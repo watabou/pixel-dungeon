@@ -1,35 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-   <!--  GENERAL STRINGS VARIABLES  -->
+   <!--  ***GENERAL STRINGS VARIABLES***  -->
    <string name="app_name">Pixel Dungeon</string>
 
 
+<!--  PACKAGE /scenes  -->
    <!--  STRINGS OF TitleScene CLASS  -->
    <string name="TitleScene_Play">Jugar</string>
    <string name="TitleScene_Highscores">Puntuaciones</string>
    <string name="TitleScene_Badges">Insignias</string>
    <string name="TitleScene_About">Acerca</string>
-
-
    <!--  STRINGS OF AboutScene CLASS  -->
    <string name="AboutScene_Txt">Código &amp; Gráficos: Watabou\nMúsica: Cube_Code\n\nEste juego está inspirado en Brian Walker\'s Brogue. Pruébalo en Windows, Mac OS or Linux - Es genial! ;)\n\nPara más información visita la web oficial:</string>
    <string name="AboutScene_Lnk">pixeldungeon.watabou.ru</string>
    <string name="AboutScene_Translate">Traducción: rodriformiga &amp; TavoCello</string><!-- Write here the translation credits. -->
    <string name="AboutScene_TranslateLnk">rodriformiga@gmail.com</string><!-- Write here the e-mail to contat for translator -->
    <string name="AboutScene_TranslateSnd">E-Mail</string><!-- Write here the "Send E-mail" title of the window -->
-
-
    <!--  STRINGS OF RankingsScene CLASS  -->
    <string name="RankingsScene_Title">Mejores puntuaciones</string>
    <string name="RankingsScene_Total">Total juegos ganados/jugados:\u0020</string>
    <string name="RankingsScene_NoGames">Ningún juego se ha jugado todavía.</string>
    <string name="RankingsScene_NoInfo">No hay información adicional</string>
-
-
    <!--  STRINGS OF BadgesScene CLASS  -->
    <string name="BadgesScene_Title">Tus insignias</string>
-
-
    <!--  STRINGS OF StartScene CLASS  -->
    <string name="StartScene_Load">Cargar juego</string>
    <string name="StartScene_New">Nuevo juego</string>
@@ -41,8 +34,6 @@
    <string name="StartScene_No">No, volver al menú</string>
    <string name="StartScene_Unlock">Para desbloquear esta clase, debes matar al tercer jefe con otra clase</string>
    <string name="StartScene_WinGame">Para desbloquear \"Desafíos\", termina el juego con una clase.</string>
-
-
    <!--  STRINGS OF InterLevelScene CLASS  -->
    <string name="InterLevelScene_Descending">Descendiendo...</string>
    <string name="InterLevelScene_Ascending">Ascendiendo...</string>
@@ -52,18 +43,12 @@
    <string name="InterLevelScene_Falling">Cayendo...</string>
    <string name="InterLevelScene_FileNotFound">Archivo no encontrado. Ni idea de por qué...</string>
    <string name="InterLevelScene_ErrorGeneric">Algo ha ido mal...</string>
-
-
    <!--  STRINGS OF IntroScene CLASS  -->
    <string name="IntroScene_Txt">Muchos héroes de todo tipo han entrado en la Pixel Dungeon antes que tu. Algunos han vuelto con riquezas, la mayoría de ellos no se les ha vuelto a ver. Pero ninguno ha conseguido traer el Amuleto de Yendor, el cual está escondido en la decadencia de la mazmorra.\n\nTe consideras listo para este reto, pero más aún sientes que la suerte está de tu parte. Es hora de empezar tu propia aventura!</string>
-
-
    <!--  STRINGS OF AmuletScene CLASS  -->
    <string name="AmuletScene_Exit">Estuvo bien mientras duró</string>
    <string name="AmuletScene_Stay">Aun no he terminado con esto</string>
    <string name="AmuletScene_Txt">Por fin lo tienes en las manos, el amuleto de Yendor. Usando su poder puedes gobernar el mundo o traer paz a la gente o lo que sea. De cualquier manera, tu vida cambiará para siempre y ésta partida acabará aquí. O puedes quedarte aquí como un simple mortal algo más.</string>
-
-
    <!--  STRINGS OF GameScene CLASS  -->
    <string name="GameScene_Welcome">Bienvenido al nivel %d de Pixel Dungeon!</string>
    <string name="GameScene_WelcomeBack">Bienvenido de vuelta al nivel %d de Pixel Dungeon!</string>
@@ -95,8 +80,6 @@
    <string name="Char_StaBleeding">sangría</string>
    <string name="Char_StaDizzy">mareado</string>
    <string name="Char_StaInvisible">invisible</string>
-
-
    <!--  STRINGS OF Hero CLASS  -->
    <string name="Hero_Name">tu</string>
    <string name="Hero_Leave">Uno no sale de Pixel Dungeon tan fácilmente.</string>
@@ -122,8 +105,6 @@
    <string name="Hero_StaCripple">Te sientes incapacitado!</string>
    <string name="Hero_StaBleeding">Estás sangrando!</string>
    <string name="Hero_StaVertigo">Todo da vueltas alrededor tuya!</string>
-
-
    <!--  STRINGS OF HeroClass CLASS  -->
    <string name="HeroClass_War">guerrero</string>
    <string name="HeroClass_Mag">mago</string>
@@ -158,8 +139,6 @@
        <item >Las cazadoras ganan más vida de las gotas de rocío.</item>
        <item >Las cazadoras perciben monstruos cercanos aunque estén escondidos tras paredes o obstáculos.</item>
    </string-array>
-
-
    <!--  STRINGS OF HeroSubClass CLASS  -->
    <string name="HeroSubClass_NameGlad">gladiador</string>
    <string name="HeroSubClass_DescGlad">Un ataque exitoso con un arma cuerpo a cuerpo permite al _Gladiador_ comience en combo, en el cual cada golpe exitoso inflinge más daño.</string>
@@ -320,38 +299,27 @@
    <string name="ResultDescriptions_Win">Obtenido el Amuleto de Yendor</string>
 
 
+<!--  PACKAGE /windows  -->
    <!--  STRINGS OF WndBlacksmith CLASS  -->
    <string name="WndBlacksmith_Prompt">OK, un trato es un trato, esto es lo que puedo hacer por ti: Puedo forjar 2 ítems, sacando uno de mejor calidad.</string>
    <string name="WndBlacksmith_Select">Selecciona un ítem que reforjar</string>
    <string name="WndBlacksmith_Reforge">Refórjalos</string>
-
-
    <!--  STRINGS OF WndCatalogus CLASS  -->
    <string name="WndCatalogus_Potions">Pociones</string>
    <string name="WndCatalogus_Scrolls">Pergaminos</string>
    <string name="WndCatalogus_Title">Catalogus</string>
-
-
    <!--  STRINGS OF WndChallenges CLASS  -->
    <string name="WndChallenges_Title">Retos</string>
-
-
    <!--  STRINGS OF WndChooseWay CLASS  -->
    <string name="WndChooseWay_Mastery">Qué camino seguiré?</string>
    <string name="WndChooseWay_Cancel">Lo decidiré más tarde</string>
    <string name="WndChooseWay_ReMastery">¿Quieres respec %s?</string>
    <string name="WndChooseWay_ReMastOk">Sí, quiero respec</string>
    <string name="WndChooseWay_ReMastNo">Tal vez después</string>
-
-
    <!--  STRINGS OF WndClass CLASS  -->
    <string name="WndClass_Mastery">Amaestrear</string>
-
-
    <!--  STRINGS OF WndError CLASS  -->
    <string name="WndError_Title">ERROR</string>
-
-
    <!--  STRINGS OF WndGame CLASS  -->
    <string name="WndGame_Settings">Opciones</string>
    <string name="WndGame_Challenges">Retos</string>
@@ -360,8 +328,6 @@
    <string name="WndGame_menu">Menú principal</string>
    <string name="WndGame_Exit">Salir del juego</string>
    <string name="WndGame_Return">Volver al juego</string>
-
-
    <!--  STRINGS OF WndHero CLASS  -->
    <string name="WndHero_Stats">Estadíst.</string>
    <string name="WndHero_Buffs">Bufos</string>
@@ -373,17 +339,11 @@
    <string name="WndHero_StaTitle">Nivel %1$d %2$s</string>
    <string name="WndHero_StaCatalogus">Catalogus</string>
    <string name="WndHero_StaJournal">Diario</string>
-
-
    <!--  STRINGS OF WndImp CLASS  -->
    <string name="WndImp_Message">Oh sí! Eres mi héroe!\nSobre lo de tu recompensa, No tengo dinero para darte, pero tengo algo mejor. Éste es mi anillo familiar: mi abuelo lo cogió del dedo de un paladín muerto.</string>
    <string name="WndImp_Reward">Coge el anillo</string>
-
-
    <!--  STRINGS OF WndInfoCell CLASS  -->
    <string name="WndInfoCell_Nothing">No hay nada ahí.</string>
-
-
    <!--  STRINGS OF WndInfoItem CLASS  -->
    <string name="WndInfoItem_Chest">Cofre</string>
    <string name="WndInfoItem_LockedChest">Cofre cerrado</string>
@@ -395,16 +355,10 @@
    <string name="WndInfoItem_Inside">Puedes ver %s dentro, pero para abrirlo necesitarás una llave dorada.</string>
    <string name="WndInfoItem_Owner">Esta tumba antigua puede contener algo, pero sea de quien sea no le va a gustar que le robes.</string>
    <string name="WndInfoItem_Remains">Esto es todo lo que queda de uno de tus predecesores. A lo mejor vale la pena mirar qué es.</string>
-
-
    <!--  STRINGS OF WndJournal CLASS  -->
    <string name="WndJournal_Title">Diario</string>
-
-
    <!--  STRINGS OF WndLanguage CLASS  -->
    <string name="WndLanguage_Title">Idiomas</string>
-
-
    <!--  STRINGS OF WndRanking CLASS  -->
    <string name="WndRanking_Error">Imposible cargar información adicional</string>
    <string name="WndRanking_Stats">Estadíst.</string>
@@ -421,20 +375,14 @@
    <string name="WndRanking_StaFood">Raciones consumidas</string>
    <string name="WndRanking_StaAlchemy">Pociones cocinadas</string>
    <string name="WndRanking_StaAnkhs">Ankhs Usados</string>
-
-
    <!--  STRINGS OF WndResurrect CLASS  -->
    <string name="WndResurrect_Message">Has muerto, pero se te ha dado otra oportunidad de ganar ésta mazmorra. Aceptarás?</string>
    <string name="WndResurrect_Yes">Sí, lucharé!</string>
    <string name="WndResurrect_No">No, me rindo</string>
-
-
    <!--  STRINGS OF WndSadGhost CLASS  -->
    <string name="WndSadGhost_Weapon">Arma del fantasma</string>
    <string name="WndSadGhost_Armor">Armadura del fantasma</string>
    <string name="WndSadGhost_Info">Adiós, aventurero!</string>
-
-
    <!--  STRINGS OF WndSettings CLASS  -->
    <string name="WndSettings_ZoomIn">+</string>
    <string name="WndSettings_ZoomOut">-</string>
@@ -448,16 +396,12 @@
    <string name="WndSettings_2QuickSlot">Segundo QuickSlot</string>
    <string name="WndSettings_SwitchPort">Sin inclinación</string>
    <string name="WndSettings_SwitchLand">Modo tumbado</string>
-
-
    <!--  STRINGS OF WndStory CLASS  -->
    <string name="WndStory_Sewers">La mazmorra se encuentra justo debajo de la ciudad, sus niveles superiores constituyen el alcantarillado de la ciudad. Al ser parte de ella, éstos niveles no son peligrosos. Nadie los llamaría un lugar seguro, pero al menos no tienes que luchar contra magia malvada.</string>
    <string name="WndStory_Prision">Hace muchos años una prisión bajo tierra se contruyó aquí para los criminales más peligrosos. Entonces parecía una buena idea, ya que era difícil de salir, pero pronto miasma oscuro emmpezó a perpretar desde abajo, volviendo locos a los guardias y prisioneros. Al final la prisión fue abandonada, aunque algunos convictos se quedaron encerrados allí.</string>
    <string name="WndStory_Caves">Las cuevas, que se extienden hacia abajo bajo la prisión abandonada, están escasamente pobladas. Se encuentran demasiado profundas para ser explotadas por el Ayuntamiento y que son demasiado pobres en minerales para interesar a los enanos. En el pasado había un puesto comercial en alguna parte aquí en la ruta entre estos dos estados, pero ha perecido desde el declive de los enanos Metropolis. Sólo gnolls omnipresentes y animales subterráneos moran aquí ahora.</string>
    <string name="WndStory_Metropolis">Dwarven Metropolis fue una vez el más grande de las ciudades-estado de los enanos. En su apogeo el ejército mecanizado de enanos había repeler la invasión del antiguo dios y su ejército de demonios. Pero se dice, que los guerreros que regresan han traído semillas de corrupción con ellos, y que la victoria fue el principio del fin para el reino subterráneo.</string>
    <string name="WndStory_Halls">En el pasado, estos niveles eran las afueras de Metrópolis. Después de la costosa victoria en la guerra contra los viejos enanos Dios eran demasiado debilitado para borrarlos del resto de los demonios. Poco a poco, los demonios han endurecido su control sobre este lugar y ahora se llama Demon Halls.\n\nMuy pocos aventureros nunca han descendido hasta aquí...</string>
-
-
    <!--  STRINGS OF WndTradeItem CLASS  -->
    <string name="WndTradeItem_Sale">EN VENTA: %1$s - %2$dg</string>
    <string name="WndTradeItem_Buy">Comprar para %dg</string>
@@ -467,8 +411,6 @@
    <string name="WndTradeItem_Cancel">No importa</string>
    <string name="WndTradeItem_Sold">Has vendido tu %1$s para %2$dg</string>
    <string name="WndTradeItem_Bought">Has comprado %1$s para %2$dg</string>
-
-
    <!--  STRINGS OF WndWandmaker CLASS  -->
    <string name="WndWandmaker_Message">Oh, ya veo que has conseguido! Yo espero que no se molesta demasiado. Como prometí, puede elegir una de mis varitas de alta calidad.</string>
    <string name="WndWandmaker_Battle">Batalla varita</string>
@@ -480,6 +422,7 @@
    <string name="QuickSlot_SelectedItem">Seleccione un elemento para la Quickslot</string>
 
 
+<!--  PACKAGE /items  -->
    <!--  STRINGS OF Item CLASS  -->
    <string name="Item_Name">smth</string>
    <string name="Item_ACDrop">DEJAR</string>
@@ -488,44 +431,30 @@
    <string name="Item_DirThrow">Elija la dirección de tiro</string>
    <string name="Item_Broken">Debido al uso frecuente, su %s se ha roto.</string>
    <string name="Item_GonnaBreak">Debido al uso frecuente, su %s va a romper pronto.</string>
-
-
    <!--  STRINGS OF EquipableItem CLASS  -->
    <string name="EquipableItem_ACEquip">EQUIPAR</string>
    <string name="EquipableItem_ACUnequip">DESEQUIPAR</string>
    <string name="EquipableItem_Unequip">No se puede quitar %s maldito!</string>
-
-
    <!--  STRINGS OF Amulet CLASS  -->
    <string name="Amulet_Name">Amuleto de Yendor</string>
    <string name="Amulet_ACEnd">TERMINE EL JUEGO</string>
    <string name="Amulet_Info">El Amuleto de Yendor es el más poderoso artefacto conocido de origen desconocido. Se dice que el amuleto es capaz de cumplir cualquier deseo si la fuerza de voluntad de su propietario es lo suficientemente fuerte para "persuadir" a hacerlo.</string>
-
-
    <!--  STRINGS OF Ankh CLASS  -->
    <string name="Ankh_Name">Ankh</string>
    <string name="Ankh_Info">El antiguo símbolo de la inmortalidad concedió una capacidad de volver a la vida después de la muerte. Tras la resurrección todos los artículos no equipados se pierden.</string>
-
-
    <!--  STRINGS OF ArmorKit CLASS  -->
    <string name="ArmorKit_Name">kit de blindaje</string>
    <string name="ArmorKit_ACAplly">APLICAR</string>
    <string name="ArmorKit_Info">El uso de este kit de herramientas y materiales pequeños cualquiera puede transformar cualquier armadura en una "armadura épica", que mantendrá todas las propiedades de la armadura original, sino que también proporcionará a su portador una habilidad especial en función de su clase. No se requieren habilidades en la sastrería, peletería o herrería.</string>
    <string name="ArmorKit_SelectArmor">Seleccione una armadura para actualizar</string>
    <string name="ArmorKit_Upgraded">se aplicó el kit de armadura para actualizar su %s</string>
-
-
    <!--  STRINGS OF Bomb CLASS  -->
    <string name="Bomb_Name">bomba</string>
    <string name="Bomb_Info">Esta es una relativamente pequeña bomba, lleno de polvo negro. Convenientemente, la mecha se enciende automáticamente cuando se lanza la bomba.</string>
    <string name="Bomb_Kill">Usted mismo mató con una bomba...</string>
-
-
    <!--  STRINGS OF Dewdrop CLASS  -->
    <string name="Dewdrop_Name">gota de rocío</string>
    <string name="Dewdrop_Info">Un claro gota de rocío.</string>
-
-
    <!--  STRINGS OF DewVial CLASS  -->
    <string name="DewVial_Name">frasco de rócio</string>
    <string name="DewVial_ACDRINK">BEBER</string>
@@ -534,29 +463,19 @@
    <string name="DewVial_Collected">Usted recibió una gota de rocío en su frasco de rocío.</string>
    <string name="DewVial_Full">Su frasco está lleno de rocío!</string>
    <string name="DewVial_Empty">Su frasco de rocío está vacía!</string>
-
-
    <!--  STRINGS OF Heap CLASS  -->
    <string name="Heap_Mimic">Este es un imitador!</string>
-
-
    <!--  STRINGS OF Honeypot CLASS  -->
    <string name="Honeypot_Name">mielero</string>
    <string name="Honeypot_ACShatter">ROMPER</string>
    <string name="Honeypot_Info">No hay mucha miel en esta pequeña trampa, pero no es una abeja de oro allí y no quiere dejarlo.</string>
-
-
    <!--  STRINGS OF Gold CLASS  -->
    <string name="Gold_Name">oro</string>
    <string name="Gold_Collect">Recoger las monedas de oro para pasar más tarde en una tienda.</string>
    <string name="Gold_Info">Una pila de %d monedas de oro.</string>
    <string name="Gold_Info1">Una moneda de oro.</string>
-
-
    <!--  STRINGS OF KindOfWeapon CLASS  -->
    <string name="KindOfWeapon_EquipCursed">mueca de dolor como su agarre aprieta involuntariamente alrededor de su %s</string>
-
-
    <!--  STRINGS OF LloidsBeacon CLASS  -->
    <string name="LloidsBeacon_Name">faro de lloyd</string>
    <string name="LloidsBeacon_ACSet">ACTIVAR</string>
@@ -566,8 +485,6 @@
    <string name="LloidsBeacon_Creatures">Aura psíquica de las criaturas vecinos no le permite utilizar faro del Lloyd en este momento.</string>
    <string name="LloidsBeacon_Return">Faro del lloyd se establece con éxito en su ubicación actual, ahora puedes volver aquí en cualquier momento.</string>
    <string name="LloidsBeacon_Set">\n\nEste faro se estableció en algún lugar en el nivel %d de Pixel Dungeon.</string>
-
-
    <!--  STRINGS OF TomeOfMastery CLASS  -->
    <string name="TomeOfMastery_Name">Tomo de Maestría</string>
    <string name="TomeOfMastery_NameR">Tomo de Remaestría</string>
@@ -575,14 +492,10 @@
    <string name="TomeOfMastery_Info">Este libro de cuero gastado no es tan grueso, pero se siente de alguna manera, que puede reunir una gran cantidad de ella. Recuerde sin embargo que la lectura de este tomo puede requerir algún tiempo.</string>
    <string name="TomeOfMastery_Blinded">No se puede leer mientras cegado</string>
    <string name="TomeOfMastery_Choose">Usted ha elegido el camino del %s!</string>
-
-
    <!--  STRINGS OF Torch CLASS  -->
    <string name="Torch_Name">antorcha</string>
    <string name="Torch_ACLight">LUZ</string>
    <string name="Torch_Info">Es un elemento indispensable en The Demon Salas, que son conocidos por su iluminación ambiental pobres.</string>
-
-
    <!--  STRINGS OF Weightstone CLASS  -->
    <string name="Weightstone_Name">piedra de peso</string>
    <string name="Weightstone_ACApply">APLICAR</string>
@@ -601,45 +514,29 @@
    <string name="Plant_ACPlant">PLANTA</string>
    <string name="Plant_Info">Tire a esta semilla en el lugar donde desea crecer %1$s.\n\n%2$s</string>
    <string name="Plant_Seed">semilla de %s</string>
-
-
    <!--  STRINGS OF Dreamweed CLASS  -->
    <string name="Dreamweed_Name">Dreamweed</string>
    <string name="Dreamweed_Desc">Al tocar un Dreamweed segrega una nube brillante de gas confuso.</string>
-
-
    <!--  STRINGS OF Earthroot CLASS  -->
    <string name="Earthroot_Name">Earthroot</string>
    <string name="Earthroot_Desc">Cuando una criatura toca un Earthroot, sus raíces crean una especie de armadura natural a su alrededor.</string>
    <string name="Earthroot_Buff">Armadura herbal</string>
-
-
    <!--  STRINGS OF Fadeleaf CLASS  -->
    <string name="Fadeleaf_Name">Fadeleaf</string>
    <string name="Fadeleaf_Desc">Tocar una Fadeleaf se teletransportarse a cualquier criatura a un lugar al azar en el nivel actual.</string>
-
-
    <!--  STRINGS OF Firebloom CLASS  -->
    <string name="Firebloom_Name">Firebloom</string>
    <string name="Firebloom_Desc">Cuando algo toca una Firebloom, estalla en llamas.</string>
-
-
    <!--  STRINGS OF Icecap CLASS  -->
    <string name="Icecap_Name">Icecap</string>
    <string name="Icecap_Desc">Al tocar un Icecap excreta un polen, que congela todo en su vecindad.</string>
-
-
    <!--  STRINGS OF Rotberry CLASS  -->
    <string name="Rotberry_Name">Rotberry</string>
    <string name="Rotberry_Desc">Las bayas de este arbusto saben a dulce, dulce muerte.</string>
    <string name="Rotberry_Info">La semilla emite un rugido que hace eco a lo largo de la mazmorra!</string>
-
-
    <!--  STRINGS OF Sorrowmoss CLASS  -->
    <string name="Sorrowmoss_Name">Sorrowmoss</string>
    <string name="Sorrowmoss_Desc">Un Sorrowmoss es una flor (no un musgo) con pétalos afilados, recubiertas de una de veneno mortal.</string>
-
-
    <!--  STRINGS OF Sungrass CLASS  -->
    <string name="Sungrass_Name">Sungrass</string>
    <string name="Sungrass_Desc">Sungrass es famoso por las propiedades curativas de su savia.</string>
@@ -662,49 +559,33 @@
    <string name="Armor_Info7a">\n\nUsted está usando el %1$s%2$s.</string>
    <string name="Armor_Info7b">, y porque está maldito, eres incapaz de eliminarlo</string>
    <string name="Armor_Info8">\n\nUsted puede sentir una magia malévola al acecho dentro de la %s.</string>
-
-
    <!--  STRINGS OF ClassArmor CLASS  -->
    <string name="ClassArmor_Desc">La cosa se ve impresionante!</string>
    <string name="ClassArmor_LowHealt">Su salud es demasiado bajo!</string>
    <string name="ClassArmor_NotEquipped">Necesitas estar usando esta armadura para usar su poder especial!</string>
-
-
    <!--  STRINGS OF ClothArmor CLASS  -->
    <string name="ClothArmor_Name">armadura de paño</string>
    <string name="ClothArmor_Desc">Esta armadura ligera ofrece una protección básica.</string>
-
-
    <!--  STRINGS OF HuntressArmor CLASS  -->
    <string name="HuntressArmor_Name">manto cazadora</string>
    <string name="HuntressArmor_Desc">Una cazadora de tal capa puede crear un ventilador de aspas espectrales. Cada una de estas hojas se dirigirse a un solo enemigo en el campo de la cazadora de vista, infligiendo daños en función de su arma cuerpo a cuerpo actualmente equipada.</string>
    <string name="HuntressArmor_ACSpecial">BLADES ESPECTRALES</string>
    <string name="HuntressArmor_NoEnemies">No hay enemigos a la vista</string>
    <string name="HuntressArmor_NotHuntress">Sólo cazadoras pueden utilizar esta armadura!</string>
-
-
    <!--  STRINGS OF LeatherArmor CLASS  -->
    <string name="LeatherArmor_Name">armadura de cuero</string>
    <string name="LeatherArmor_Desc">Armadura hecha de piel bronceada monstruo. No es tan ligero como armaduras de tela, pero proporciona una mejor protección.</string>
-
-
    <!--  STRINGS OF MageArmor CLASS  -->
    <string name="MageArmor_Name">túnica de mago</string>
    <string name="MageArmor_Desc">El uso de este magnífico manto, un mago puede lanzar un hechizo de tierra fundida: todos los enemigos en su campo de visión se prendió fuego e incapaz de moverse al mismo tiempo.</string>
    <string name="MageArmor_ACSpecial">TIERRA FUNDIDO</string>
    <string name="MageArmor_NotMage">Sólo los magos pueden usar esta armadura!</string>
-
-
    <!--  STRINGS OF MailArmor CLASS  -->
    <string name="MailArmor_Name">armaduras de malla</string>
    <string name="MailArmor_Desc">Enclavamiento eslabones de metal para hacer un traje resistente pero flexible de la armadura.</string>
-
-
    <!--  STRINGS OF PlateArmor CLASS  -->
    <string name="PlateArmor_Name">armadura de placas</string>
    <string name="PlateArmor_Desc">Enormes placas metálicas se unen en un traje que proporciona una protección incomparable a cualquier aventurero lo suficientemente fuerte como para soportar su peso asombrosa.</string>
-
-
    <!--  STRINGS OF RogueArmor CLASS  -->
    <string name="RogueArmor_Name">ladrón traje</string>
    <string name="RogueArmor_Desc">El uso de este atuendo oscuro, un pícaro puede realizar un truco, que se llama \"bomba de humo\" (aunque no se utilizan explosivos reales): le ciega enemigos que podían ver él y saltos a un lado.</string>
@@ -712,13 +593,9 @@
    <string name="RogueArmor_NotRogue">Sólo los ladrones pueden utilizar esta armadura!</string>
    <string name="RogueArmor_Fov">Sólo se puede saltar a un lugar vacío en su campo de visión</string>
    <string name="RogueArmor_Prompt">Elija un lugar para ir a</string>
-
-
    <!--  STRINGS OF ScaleArmor CLASS  -->
    <string name="ScaleArmor_Name">armadura de escamas</string>
    <string name="ScaleArmor_Desc">Las escamas de metal cosidas en un chaleco de cuero crean una armadura flexible pero protectora.</string>
-
-
    <!--  STRINGS OF WarriorArmor CLASS  -->
    <string name="WarriorArmor_Name">guerrero armadura</string>
    <string name="WarriorArmor_Desc">Si bien esta armadura se ve pesado, que permite a un guerrero para realizar salto heroico hacia una ubicación de orientación, golpeando hacia abajo para aturdir a todos los enemigos cercanos.</string>
@@ -779,13 +656,9 @@
    <string name="Food_Info">Nada de lujos: carne seca, unas galletas - cosas como esas.</string>
    <string name="Food_ACEat">COMER</string>
    <string name="Food_Message">Esa comida era deliciosa!</string>
-
-
    <!--  STRINGS OF ChargrilledMeat CLASS  -->
    <string name="ChargrilledMeat_Name">carne a la brasa</string>
    <string name="ChargrilledMeat_Info">Parece un bistec decente.</string>
-
-
    <!--  STRINGS OF FrozenCarpaccio CLASS  -->
    <string name="FrozenCarpaccio_Name">carpaccio congelada</string>
    <string name="FrozenCarpaccio_Info">Es un pedazo de carne cruda congelada. La única manera de comer es cortando rebanadas delgadas de ella. Y de esta manera es sorprendentemente bueno.</string>
@@ -793,8 +666,6 @@
    <string name="FrozenCarpaccio_Info2">Usted siente que su piel se endurece!</string>
    <string name="FrozenCarpaccio_Info3">Refrescante!</string>
    <string name="FrozenCarpaccio_Info4">Te sientes mejor!</string>
-
-
    <!--  STRINGS OF MysteryMeat CLASS  -->
    <string name="MysteryMeat_Name">carne misteriosa</string>
    <string name="MysteryMeat_Info">Coma en su propio riesgo!</string>
@@ -803,14 +674,10 @@
    <string name="MysteryMeat_Info3">Usted no se siente bien.</string>
    <string name="MysteryMeat_Info4">Usted está llenos.</string>
    <string name="MysteryMeat_Message">Esa comida era ... extraño.</string>
-
-
    <!--  STRINGS OF OverpricedRation CLASS  -->
    <string name="OverpricedRation_Name">ración de comida cara</string>
    <string name="OverpricedRation_Info">Se ve exactamente como una ración estándar de la comida, pero más pequeño.</string>
    <string name="OverpricedRation_Message">Esa comida era buena.</string>
-
-
    <!--  STRINGS OF Pasty CLASS  -->
    <string name="Pasty_Name">pasta</string>
    <string name="Pasty_Info">Esto es auténtico pastel de Cornualles con relleno tradicional de carne de vacuno y la patata.</string>
@@ -820,14 +687,10 @@
    <!--  STRINGS OF GoldemKey CLASS  -->
    <string name="GoldenKey_Name">llave de oro</string>
    <string name="GoldenKey_Info">Las muescas en esta llave de oro son pequeñas e intrincado. Tal vez puede abrir alguna cerradura pecho?</string>
-
-
    <!--  STRINGS OF IronKey CLASS  -->
    <string name="IronKey_Name">llave de hierro</string>
    <string name="IronKey_Info">Las muescas en esta llave de hierro antigua son bien gastado; su cordón de cuero es maltratada por la edad. ¿Qué puerta se puede abrir?</string>
    <string name="IronKey_FromDepth">llave de hierro de profundidad %d</string>
-
-
    <!--  STRINGS OF SkeletonKey CLASS  -->
    <string name="SkeletonKey_Name">llave maestra</string>
    <string name="SkeletonKey_Info">Esta clave parece serio: la cabeza tiene la forma de un cráneo. Probablemente se puede abrir alguna puerta serio.</string>
@@ -859,74 +722,50 @@
        <item >añil</item>
        <item >plata</item>
    </string-array>
-
-
    <!--  STRINGS OF PotionOfExperience CLASS  -->
    <string name="PotionOfExperience_Name">Poción de Experiencia</string>
    <string name="PotionOfExperience_Info">Las experiencias pisos de multitud de batallas reducidos a forma líquida, este proyecto al instante elevar su nivel de experiencia.</string>
-
-
    <!--  STRINGS OF PotionOfFrost CLASS  -->
    <string name="PotionOfFrost_Name">Poción de Escarcha</string>
    <string name="PotionOfFrost_Info">Tras la exposición a abrir el aire, este producto químico se evaporará en una nube de congelación, haciendo que cualquier criatura que los contactos a congelarse en el lugar, incapaz de actuar y moverse.</string>
-
-
    <!--  STRINGS OF PotionOfHealing CLASS  -->
    <string name="PotionOfHealing_Name">Poción de Curación</string>
    <string name="PotionOfHealing_Info">Un elixir que al instante que volver a la plena salud y curar veneno.</string>
    <string name="PotionOfHealing_Apply">Sus heridas se curan completamente.</string>
-
-
    <!--  STRINGS OF PotionOfInvisibility CLASS  -->
    <string name="PotionOfInvisibility_Name">Poción de Invisibilidad</string>
    <string name="PotionOfInvisibility_Info">Beber esta poción hará que usted temporalmente invisible. Aunque invisible, los enemigos no podrán verte. Atacar a un enemigo, así como usar una varita o un pergamino ante los ojos del enemigo, disipará el efecto.</string>
    <string name="PotionOfInvisibility_Apply">Usted ve las manos se vuelven invisibles!</string>
-
-
    <!--  STRINGS OF PotionOfLevitation CLASS  -->
    <string name="PotionOfLevitation_Name">Poción de Levitación</string>
    <string name="PotionOfLevitation_Info">Beber este curioso líquido hará que ciernen en el aire, capaz de desplazarse sin esfuerzo sobre trampas. Las llamas y los gases llenan el aire, sin embargo, y no pueden ser anuladas mientras el aire.</string>
    <string name="PotionOfLevitation_Apply">Flotas en el aire!</string>
-
-
    <!--  STRINGS OF PotionOfLiquidFlame CLASS  -->
    <string name="PotionOfLiquidFlame_Name">Poción de la Llama Líquido</string>
    <string name="PotionOfLiquidFlame_Info">Este frasco contiene un compuesto inestable que va a estallar violentamente en llamas tras la exposición al aire libre.</string>
-
-
    <!--  STRINGS OF PotionOfMight CLASS  -->
    <string name="PotionOfMight_Name">Poción de Poderío</string>
    <string name="PotionOfMight_Info">Este poderoso líquido curso a través de los músculos, de forma permanente aumento de su fuerza en un punto y la salud en cinco puntos.</string>
    <string name="PotionOfMight_Apply">Nueva fuerza surge a través de su cuerpo.</string>
    <string name="PotionOfMight_StaApply">+1 str, +5 ht</string>
-
-
    <!--  STRINGS OF PotionOfMindVision CLASS  -->
    <string name="PotionOfMindVision_Name">Poción de la Mente Visión</string>
    <string name="PotionOfMindVision_Info">Después de beber esto, tu mente se convertirá en sintonía con la firma psíquica de criaturas distantes, lo que le permite sentir presencias biológicos a través de paredes. También esta poción le permitirá ver a través de paredes y puertas cercanas.</string>
    <string name="PotionOfMindVision_Apply1">De alguna manera puede sentir la presencia de las mentes de otras criaturas!</string>
    <string name="PotionOfMindVision_Apply2">Se puede decir de alguna manera que estás solo en este nivel en el momento.</string>
-
-
    <!--  STRINGS OF PotionOfParalyticGas CLASS  -->
    <string name="PotionOfParalyticGas_Name">Poción de Gas paralítico</string>
    <string name="PotionOfParalyticGas_Info">Tras la exposición a abrir el aire, el líquido en este matraz se evapora en una neblina amarilla adormecedor. Cualquier persona que inhala la nube se paralizó al instante, incapaz de moverse durante algún tiempo después se disipa la nube. Este artículo se puede lanzar a los enemigos distantes para atraparlos en el efecto del gas.</string>
-
-
    <!--  STRINGS OF PotionOfPurity CLASS  -->
    <string name="PotionOfPurity_Name">Poción de la Purificación</string>
    <string name="PotionOfPurity_Info">Este reactivo neutralizará rápidamente todos los gases nocivos en el área de efecto. Beber le dará una inmunidad temporal a tales gases.</string>
    <string name="PotionOfPurity_Freshness">Se siente la frescura poco común en el aire.</string>
    <string name="PotionOfPurity_NoSmell">Has dejado de detectar olores!</string>
-
-
    <!--  STRINGS OF PotionOfStrength CLASS  -->
    <string name="PotionOfStrength_Name">Poción de Fuerza</string>
    <string name="PotionOfStrength_Info">Este poderoso líquido curso a través de los músculos, de forma permanente aumento de su fuerza por un punto.</string>
    <string name="PotionOfStrength_Apply">Nueva fuerza surge a través de su cuerpo.</string>
    <string name="PotionOfStrength_StaApply">+1 str</string>
-
-
    <!--  STRINGS OF PotionOfToxicGas CLASS  -->
    <string name="PotionOfToxicGas_Name">Poción de Gas Tóxico</string>
    <string name="PotionOfToxicGas_Info">El descorche o destrozando este vidrio a presión hará que su contenido a explotar en una nube mortal de gas verde tóxico. Usted puede optar por lanzar esta poción a los enemigos distantes en lugar de descorchar a mano.</string>
@@ -936,37 +775,25 @@
    <!--  STRINGS OF CorpseDust CLASS  -->
    <string name="CorpseDust_Name">polvo de cadáver</string>
    <string name="CorpseDust_Info">La bola de polvo de cadáver no se diferencia exteriormente de una bola de polvo regular. Sin embargo, usted sabe de alguna manera que es mejor deshacerse de él tan pronto como sea posible.</string>
-
-
    <!--  STRINGS OF DarkGold CLASS  -->
    <string name="DarkGold_Name">mineral de oro oscuro</string>
    <string name="DarkGold_Info">Este metal se llama oscuro no a causa de su color (que no difiere de la de oro normal), pero debido a que se funde bajo la luz del día, lo que es inútil en la superficie.</string>
-
-
    <!--  STRINGS OF DriedRose CLASS  -->
    <string name="DriedRose_Name">rosa seca</string>
    <string name="DriedRose_Info">La rosa se ha secado hace mucho tiempo, pero se ha mantenido todos sus pétalos de alguna manera.</string>
-
-
    <!--  STRINGS OF DwarfToken CLASS  -->
    <string name="DwarfToken_Name">símbolo enana</string>
    <string name="DwarfToken_Info">Muchos enanos y algunas de sus creaciones más grandes llevan estas pequeñas piezas de metal de propósito desconocido. Tal vez son de joyería o tal vez algún tipo de identificación. Los enanos son gente extraña.</string>
-
-
    <!--  STRINGS OF PhantomFish CLASS  -->
    <string name="PhantomFish_Name">peces fantasma</string>
    <string name="PhantomFish_ACEat">COMER</string>
    <string name="PhantomFish_Info">Apenas se puede ver este pequeño pez transparente en el aire. En el agua se convierte efectivamente invisible.</string>
    <string name="PhantomFish_Invisible">Usted ve las manos se vuelven invisibles!</string>
-
-
    <!--  STRINGS OF Pickaxe CLASS  -->
    <string name="Pickaxe_Name">pico</string>
    <string name="Pickaxe_Info">Esta es una herramienta grande y robusto para romper rocas. Probablemente que puede ser utilizado como un arma.</string>
    <string name="Pickaxe_ACMine">MÍA</string>
    <string name="Pickaxe_NoVein">No es la veta de oro oscuro cerca de usted a la mía</string>
-
-
    <!--  STRINGS OF RatSkull CLASS  -->
    <string name="RatSkull_Name">cráneo rata gigante</string>
    <string name="RatSkull_Info">Podría ser una buena caza de trofeos, pero huele demasiado mal para colocarlo en la pared.</string>
@@ -999,63 +826,39 @@
    <string name="Ring_Info3b">, y porque está maldito, eres incapaz de eliminarlo</string>
    <string name="Ring_Info4">%1$s\n\nUsted puede sentir una magia malévola acecho dentro del %2$s.</string>
    <string name="Ring_BuffKnown">Este es un %s</string>
-
-
    <!--  STRINGS OF RingOfAccuracy CLASS  -->
    <string name="RingOfAccuracy_Name">Anillo de Precisión</string>
    <string name="RingOfAccuracy_Info">Este anillo aumenta tu probabilidad de golpear al enemigo.</string>
-
-
    <!--  STRINGS OF RingOfDetection CLASS  -->
    <string name="RingOfDetection_Name">Anillo de Detección</string>
    <string name="RingOfDetection_Info">El uso de este anillo permitirá al usuario note secretos ocultos - trampas y puertas secretas - sin tener tiempo para buscar. Anillos Degradadas de detección serán apagados sus sentidos, por lo que es más difícil de notar secretos incluso cuando la búsqueda activa de ellos.</string>
-
-
    <!--  STRINGS OF RingOfElements CLASS  -->
    <string name="RingOfElements_Name">Anillo de los Elementos</string>
    <string name="RingOfElements_Info">Este anillo proporciona resistencia a diferentes elementos, tales como el fuego, la electricidad, los gases, etc. También disminuye la duración de los efectos negativos.</string>
-
-
    <!--  STRINGS OF RingOfEvasion CLASS  -->
    <string name="RingOfEvasion_Name">Anillo de la Evasión</string>
    <string name="RingOfEvasion_Info">Este anillo aumenta la probabilidad de esquivar ataques enemigos.</string>
-
-
    <!--  STRINGS OF RingOfHaggler CLASS  -->
    <string name="RingOfHaggler_Name">Anillo de Negociación</string>
    <string name="RingOfHaggler_Info">De hecho este anillo no proporciona ningún efecto mágico, pero demuestra que los comerciantes y vendedores, que el dueño del anillo es un miembro del Gremio de Ladrones. Por lo general, están contentos de dar un descuento a cambio de la garantía de inmunidad temporal. Actualización de este anillo no dará ningún bono adicional.</string>
-
-
    <!--  STRINGS OF RingOfHaste CLASS  -->
    <string name="RingOfHaste_Name">Anillo de Prisa</string>
    <string name="RingOfHaste_Info">Este anillo acelera el flujo del portador de tiempo, lo que permite una para llevar a cabo todas las acciones un poco más rápido.</string>
-
-
    <!--  STRINGS OF RingOfHerbalism CLASS  -->
    <string name="RingOfHerbalism_Name">Anillo de las Hierbas</string>
    <string name="RingOfHerbalism_Info">Este anillo aumenta la posibilidad de reunir el rocío y las semillas de la hierba pisoteada.</string>
-
-
    <!--  STRINGS OF RingOfMending CLASS  -->
    <string name="RingOfMending_Name">Anillo de Regeneración</string>
    <string name="RingOfMending_Info">Este anillo aumenta las propiedades regenerativas del cuerpo, permitiendo recuperar la salud perdida a un ritmo acelerado. Anillos Degradadas disminuirá o incluso detener la propia regeneración natural.</string>
-
-
    <!--  STRINGS OF RingOfPower CLASS  -->
    <string name="RingOfPower_Name">Anillo de Poder</string>
    <string name="RingOfPower_Info">Sus varitas serán más poderosa en el campo de la energía que irradia de este anillo. Anillos Degradadas de poder en lugar de otro debilitar sus varitas.</string>
-
-
    <!--  STRINGS OF RingOfSatiety CLASS  -->
    <string name="RingOfSatiety_Name">Anillo de Saciedad</string>
    <string name="RingOfSatiety_Info">El uso de este anillo se puede ir sin alimentos por más tiempo. Anillos degradadas de saciedad harán que el efecto opuesto.</string>
-
-
    <!--  STRINGS OF RingOfShadows CLASS  -->
    <string name="RingOfShadows_Name">Anillo de las Sombras</string>
    <string name="RingOfShadows_Info">Los enemigos serán menos propensos a notar que si usted usa este anillo. Anillos de las Sombras degradadas alertarán enemigos que de otra manera no se han dado cuenta de su presencia.</string>
-
-
    <!--  STRINGS OF RingOfThorns CLASS  -->
    <string name="RingOfThorns_Name">Anillo de Espinas</string>
    <string name="RingOfThorns_Info">Aunque este anillo no proporciona espinas reales, un enemigo que ataca a sí mismo se va herido por una fracción del daño que inflige. Actualización de este anillo no dará ningún bono adicional.</string>
@@ -1081,96 +884,68 @@
        <item >ODAL</item>
        <item >TIWAZ</item>
    </string-array>
-
-
    <!--  STRINGS OF InventoryScroll CLASS  -->
    <string name="InventoryScroll_Title">Selecciona un ítem</string>
    <string name="InventoryScroll_Warning">¿Realmente deseas cancelar el uso del pergamino? Se consume de todos modos.</string>
    <string name="InventoryScroll_Yes">Sí, ya sé lo que estoy haciendo</string>
    <string name="InventoryScroll_No">No, he cambiado de opinión</string>
-
-
    <!--  STRINGS OF ScrollOfChallenge CLASS  -->
    <string name="ScrollOfChallenge_Name">Pergamino de Desafío</string>
    <string name="ScrollOfChallenge_Info">Cuando lea en voz alta, este pergamino va a desatar un rugido desafiante que despertará todos los monstruos y alertarlos sobre la ubicación del lector.</string>
    <string name="ScrollOfChallenge_Info1">El desplazamiento emite un rugido desafiante que hace eco a lo largo de la mazmorra!</string>
-
-
    <!--  STRINGS OF ScrollOfIdentify CLASS  -->
    <string name="ScrollOfIdentify_Name">Pergamino de Identificar</string>
    <string name="ScrollOfIdentify_Info">Permanentemente revela todos los secretos de un solo elemento.</string>
    <string name="ScrollOfIdentify_InvTitle">Seleccione un ítem para identificar</string>
    <string name="ScrollOfIdentify_Info1">Este es un %s</string>
-
-
    <!--  STRINGS OF ScrollOfLullaby CLASS  -->
    <string name="ScrollOfLullaby_Name">Pergamino de Canción de Cuna</string>
    <string name="ScrollOfLullaby_Info">Una melodía suave pondrá todas las criaturas en su campo de visión en un sueño profundo, que le da la oportunidad de huir o hacer un ataque sorpresa sobre ellos.</string>
    <string name="ScrollOfLullaby_Info1">El desplazamiento pronuncia una melodía relajante.</string>
    <string name="ScrollOfLullaby_Info2">El desplazamiento pronuncia una melodía suave y el %s se duerme!</string>
    <string name="ScrollOfLullaby_Info3">El desplazamiento pronuncia una melodía suave y los monstruos se duerma!</string>
-
-
    <!--  STRINGS OF ScrollOfMagicMapping CLASS  -->
    <string name="ScrollOfMagicMapping_Name">Pergamino de Mapeo Mágica</string>
    <string name="ScrollOfMagicMapping_Info">Cuando se lee este pergamino, una imagen de claridad cristalina quedará grabado en su memoria, alertando a la distribución precisa del nivel y revelando todos los secretos ocultos. Las ubicaciones de los elementos y criaturas seguirán siendo desconocido.</string>
    <string name="ScrollOfMagicMapping_Layout">Ahora eres consciente de la disposición de nivel.</string>
-
-
    <!--  STRINGS OF ScrollOfMirrorImage CLASS  -->
    <string name="ScrollOfMirrorImage_Name">Pergamino de Imagen de Espejo</string>
    <string name="ScrollOfMirrorImage_Info">El encantamiento de este pergamino creará gemelos ilusorias del lector, que perseguirá a sus enemigos.</string>
-
-
    <!--  STRINGS OF ScrollOfPsionicBlast CLASS  -->
    <string name="ScrollOfPsionicBlast_Name">Pergamino de Explosión Psiónica</string>
    <string name="ScrollOfPsionicBlast_Info">Este pergamino contiene energía destructiva, que puede ser canalizada psiónicamente para infligir un daño masivo a todas las criaturas dentro de un campo de visión. Un flash que acompaña de la luz será cegar temporalmente a todo el mundo en el área de efecto que incluye el lector del pergamino.</string>
-
-
    <!--  STRINGS OF ScrollOfRecharging CLASS  -->
    <string name="ScrollOfRecharging_Name">Pergamino de Recarga</string>
    <string name="ScrollOfRecharging_Info">El poder mágico prima ligada en este pergamino será, cuando se libera, recargar todas las varitas del lector a plena potencia.</string>
    <string name="ScrollOfRecharging_Info1a">una oleada de cursos de energía a través de su paquete, recarga tu varita</string>
    <string name="ScrollOfRecharging_Info1b">una oleada de cursos de energía a través de su paquete, recargando sus varitas</string>
    <string name="ScrollOfRecharging_Info2">una oleada de cursos de energía a través de su paquete, pero no pasa nada</string>
-
-
    <!--  STRINGS OF ScrollOfRemoveCurse CLASS  -->
    <string name="ScrollOfRemoveCurse_Name">Pergamino de Remoción de Maldición</string>
    <string name="ScrollOfRemoveCurse_Info">El encantamiento de el pergamino instantáneamente despojar de armas, armaduras, anillos del lector y artículos llevado ningún encantamientos malignos que pudieran impedir al usuario de la eliminación de ellos.</string>
    <string name="ScrollOfRemoveCurse_Proced">Su paquete se ilumina con una luz de limpieza, y una energía malévola dispersa.</string>
    <string name="ScrollOfRemoveCurse_NoProced">Su paquete se ilumina con una luz de limpieza, pero no pasa nada.</string>
-
-
    <!--  STRINGS OF ScrollOfTeleportation CLASS  -->
    <string name="ScrollOfTeleportation_Name">Pergamino de Teletransporte</string>
    <string name="ScrollOfTeleportation_Info">El hechizo en este pergamino transporta inmediatamente al lector a un lugar al azar en el nivel mazmorra. Puede ser utilizado para escapar de una situación peligrosa, pero el lector de mala suerte podría encontrarse en un lugar aún más peligroso.</string>
    <string name="ScrollOfTeleportation_Teleport">En un abrir y cerrar de ojos estabas teletransportado a otro lugar del nivel.</string>
    <string name="ScrollOfTeleportation_NoTeleport">Fuerte aura magia de este lugar le impide teletransportarse!</string>
-
-
    <!--  STRINGS OF ScrollOfTerror CLASS  -->
    <string name="ScrollOfTerror_Name">Pergamino de Terror</string>
    <string name="ScrollOfTerror_Info">Un destello de luz roja se abrumar a todas las criaturas en su campo de visión con el terror, y ellos a su vez, y huir. Atacar a un enemigo que huye disipará el efecto.</string>
    <string name="ScrollOfTerror_Info1">El desplazamiento emite un brillante destello de luz roja</string>
    <string name="ScrollOfTerror_Info2">El desplazamiento emite un brillante destello de luz roja y el %s huye!</string>
    <string name="ScrollOfTerror_Info3">El desplazamiento emite un brillante destello de luz roja y los monstruos huyen!</string>
-
-
    <!--  STRINGS OF ScrollOfUpgrade CLASS  -->
    <string name="ScrollOfUpgrade_Name">Pergamino de Actualización</string>
    <string name="ScrollOfUpgrade_Info">Este pergamino actualizará un solo elemento, la mejora de su calidad. Una varita aumentará en el poder y en número de cargas; un arma infligirá más daño o encontrar su marca con mayor frecuencia; una armadura desviará golpes adicionales; el efecto de un anillo en su portador se intensificará. Armas y armaduras también requieren menos fuerza de usar, y cualquier maldición sobre el artículo será levantado.</string>
    <string name="ScrollOfUpgrade_InvTitle">Seleccione un ítem para actualizar</string>
    <string name="ScrollOfUpgrade_LooksBetter">tu %s sin duda se ve mejor ahora</string>
-
-
    <!--  STRINGS OF ScrollOfEnchantment CLASS  -->
    <string name="ScrollOfEnchantment_Name">Pergamino de Encantamiento</string>
    <string name="ScrollOfEnchantment_Info">Este pergamino es capaz de imbuir un arma o una armadura con un encanto al azar, otorgándole un poder especial.</string>
    <string name="ScrollOfEnchantment_InvTitle">Seleccione un ítem incantable</string>
    <string name="ScrollOfEnchantment_Glows">tu %s brilla en la oscuridad</string>
-
-
    <!--  STRINGS OF ScrollOfWipeOut CLASS  -->
    <string name="ScrollOfWipeOut_Name">Pergamino de Limpieza</string>
    <string name="ScrollOfWipeOut_ACRead">@string/Scroll_ACRead</string>
@@ -1203,36 +978,24 @@
        <item >roble</item>
        <item >abedul</item>
    </string-array>
-
-
    <!--  STRINGS OF WandOfAmok CLASS  -->
    <string name="WandOfAmok_Name">Varita de Furia</string>
    <string name="WandOfAmok_Info">La luz violeta de esta varita hará que el blanco fuera de control criaturas atacantes al azar en sus proximidades.</string>
    <string name="WandOfAmok_Info1">no pasó nada</string>
-
-
    <!--  STRINGS OF WandOfAvalanche CLASS  -->
    <string name="WandOfAvalanche_Name">Varita de la Avalancha</string>
    <string name="WandOfAvalanche_Info">Cuando una descarga de esta varita golpea una pared (o cualquier otro obstáculo sólido) que provoca una avalancha de piedras, perjudiciales e impresionantes todas las criaturas en la zona afectada.</string>
    <string name="WandOfAvalanche_Info1">Usted mismo mató con su propia Varita de Avalancha ...</string>
-
-
    <!--  STRINGS OF WandOfBlink CLASS  -->
    <string name="WandOfBlink_Name">Varita de Flash</string>
    <string name="WandOfBlink_Info">Esta varita le permitirá teletransportarse en la dirección elegida. Criaturas y obstáculos inanimados bloquearán la teletransportación.</string>
-
-
    <!--  STRINGS OF WandOfDisintegration CLASS  -->
    <string name="WandOfDisintegration_Name">Varita de Desintegración</string>
    <string name="WandOfDisintegration_Info">Esta varita emite un haz de energía destructiva, que atraviesa todas las criaturas en su camino. Los más objetivos que impacta, más daño que inflige a cada uno de ellos.</string>
-
-
    <!--  STRINGS OF WandOfFirebolt CLASS  -->
    <string name="WandOfFirebolt_Name">Varita de Saeta de Fuego</string>
    <string name="WandOfFirebolt_Info">Esta varita desata ráfagas de fuego mágico. Se encenderá terreno inflamable y puede dañar y quemar una criatura que golpee.</string>
    <string name="WandOfFirebolt_Info1">Usted mismo mató con su propia varita de Saeta de Fuego...</string>
-
-
    <!--  STRINGS OF WandOfFlock CLASS  -->
    <string name="WandOfFlock_Name">Varita del Rebaño</string>
    <string name="WandOfFlock_Info">Un movimiento de esta varita convoca a un rebaño de ovejas magia, creando obstáculo impenetrable temporal.</string>
@@ -1246,14 +1009,10 @@
        <item >Bee...</item>
        <item >Ble...</item>
    </string-array>
-
-
    <!--  STRINGS OF WandOfLightning CLASS  -->
    <string name="WandOfLightning_Name">Vara del Rayo</string>
    <string name="WandOfLightning_Info">Esta varita evoca sucesivamente arcos mortales de la electricidad, que se ocupan daños a varias criaturas de pie cerca uno del otro.</string>
    <string name="WandOfLightning_Info1">Usted mismo mató con su propia varita del Rayo...</string>
-
-
    <!--  STRINGS OF WandOfMagicMissile CLASS  -->
    <string name="WandOfMagicMissile_Name">Varita de Misil Mágico</string>
    <string name="WandOfMagicMissile_Info">Esta varita lanza misiles de energía mágica pura, haciendo daño moderado a una criatura objetivo.</string>
@@ -1261,32 +1020,22 @@
    <string name="WandOfMagicMissile_Info1">Usted mismo mató con su propia Varita de Misil Mágico...</string>
    <string name="WandOfMagicMissile_SelectWand">Seleccionar una varita para actualizar</string>
    <string name="WandOfMagicMissile_Desinchanted">usted desencantado la Varita de la magia de Misiles y utilizó su esencia actualizar su %s</string>
-
-
    <!--  STRINGS OF WandOfPoison CLASS  -->
    <string name="WandOfPoison_Name">Varita de Veneno</string>
    <string name="WandOfPoison_Info">La explosión de este vil poco retorcida de madera se imbuir su objetivo con un veneno mortal. Una criatura que se envenenó sufrirá daño periódico hasta que termine el efecto. La duración del efecto aumenta con el nivel del personal.</string>
    <string name="WandOfPoison_Info1">no pasó nada</string>
-
-
    <!--  STRINGS OF WandOfRegrowth CLASS  -->
    <string name="WandOfRegrowth_Name">Varita de Brote</string>
    <string name="WandOfRegrowth_Info">\"Cuando la vida deja nueva vida siempre empieza a crecer ... El ciclo eterno permanece siempre!\"</string>
    <string name="WandOfRegrowth_Info1">no pasó nada</string>
-
-
    <!--  STRINGS OF WandOfSlowness CLASS  -->
    <string name="WandOfSlowness_Name">Varita de la Lentitud</string>
    <string name="WandOfSlowness_Info">Esta varita causará una criatura a moverse y atacar a la mitad de su velocidad normal hasta que los extremos de efecto</string>
    <string name="WandOfSlowness_Info1">no pasó nada</string>
-
-
    <!--  STRINGS OF WandOfReach CLASS  -->
    <string name="WandOfReach_Name">Varita de Alcance</string>
    <string name="WandOfReach_Info">Esta varita utilidad se puede utilizar para agarrar objetos a distancia y para cambiar de lugar con los enemigos. Olas de fuerza mágica de esta varita afectarán todas las células en sus trampas manera desencadenantes, pisoteando vegetación alta, abriendo las puertas cerradas y el cierre de los abiertos.</string>
    <string name="WandOfReach_YouNowHave">Usted ha transportado mágicamente %s en su mochila</string>
-
-
    <!--  STRINGS OF WandOfTeleportation CLASS  -->
    <string name="WandOfTeleportation_Name">Varita de Teletransporte</string>
    <string name="WandOfTeleportation_Info">Una explosión de esta varita se teletransportar una criatura contra su voluntad a un lugar al azar en el nivel actual.</string>
@@ -1300,6 +1049,7 @@
    <string name="Weapon_Incompatible">Interacción de los diferentes tipos de magia ha negado el encanto de esta arma!</string>
    <string name="Weapon_ToString">%1$s :%2$d</string>
    <string name="Weapon_Broken">%1$s roto :%2$d</string>
+
 
 <!--  PACKAGE /weapon/Enchantment  -->
    <!--  STRINGS OF Death CLASS  -->
@@ -1351,43 +1101,27 @@
    <string name="MeleeWeapon_Info7a">Usted sostiene el %1$s en ristre%2$s.</string>
    <string name="MeleeWeapon_Info7b">, y porque está maldito, eres incapaz de dejar ir</string>
    <string name="MeleeWeapon_Info7c">Usted puede sentir una magia malévola al acecho dentro de %s.</string>
-
-
    <!--  STRINGS OF BattleAxe CLASS  -->
    <string name="BattleAxe_Name">hacha de batalla</string>
    <string name="BattleAxe_Info">La enorme cabeza de acero de esta hacha de batalla pone considerable influencia detrás de cada golpe.</string>
-
-
    <!--  STRINGS OF Dagger CLASS  -->
    <string name="Dagger_Name">daga</string>
    <string name="Dagger_Info">Una daga de hierro simple con un mango de madera desgastada.</string>
-
-
    <!--  STRINGS OF Glaive CLASS  -->
    <string name="Glaive_Name">glaive</string>
    <string name="Glaive_Info">Un arma de asta que consiste en una hoja de la espada en el extremo de un poste.</string>
-
-
    <!--  STRINGS OF Knuckles CLASS  -->
    <string name="Knuckles_Name">puño de hierro</string>
    <string name="Knuckles_Info">Un pedazo de hierro en forma de encajar alrededor de los nudillos.</string>
-
-
    <!--  STRINGS OF Longsword CLASS  -->
    <string name="Longsword_Name">espada larga</string>
    <string name="Longsword_Info">Esta hoja se eleva inflige graves daños al invertir su peso en cada corte.</string>
-
-
    <!--  STRINGS OF Mace CLASS  -->
    <string name="Mace_Name">maza</string>
    <string name="Mace_Info">La cabeza de hierro de esta arma inflige un daño sustancial.</string>
-
-
    <!--  STRINGS OF Quarterstaff CLASS  -->
    <string name="Quarterstaff_Name">barra</string>
    <string name="Quarterstaff_Info">Un equipo de la madera dura, sus extremos están calzados con hierro.</string>
-
-
    <!--  STRINGS OF ShortSword CLASS  -->
    <string name="ShortSword_Name">espada corta</string>
    <string name="ShortSword_Info">De hecho, es bastante corto, apenas unas pocas pulgadas más largo que una daga.</string>
@@ -1395,18 +1129,12 @@
    <string name="ShortSword_Select">Seleccionar un arma para actualizar</string>
    <string name="ShortSword_Reforged">que reforjada la espada corta actualizar su %s</string>
    <string name="ShortSword_NotBoomerang">no se puede actualizar un boomerang de esta manera</string>
-
-
    <!--  STRINGS OF Spear CLASS  -->
    <string name="Spear_Name">lanza</string>
    <string name="Spear_Info">Una varilla de madera delgada con punta de hierro afilado.</string>
-
-
    <!--  STRINGS OF Sword CLASS  -->
    <string name="Sword_Name">espada</string>
    <string name="Sword_Info">La longitud afilado de la hoja de acero brilla tranquilizador.</string>
-
-
    <!--  STRINGS OF WarHammer CLASS  -->
    <string name="WarHammer_Name">martillo de guerra</string>
    <string name="WarHammer_Info">Pocas criaturas pueden soportar el duro golpe de esta masa imponente de plomo y acero, pero sólo el más fuerte de los aventureros pueden utilizarla de manera eficaz.</string>
@@ -1422,38 +1150,24 @@
    <string name="MissileWeapon_Info2">Debido a su fuerza inadecuada disminuye la precisión y la velocidad de su ataque con este %s.</string>
    <string name="MissileWeapon_Info3">A causa de su exceso de fuerza se aumenta el daño de tu ataque con este %s.</string>
    <string name="MissileWeapon_Info4">\n\nUsted lleva a cabo el %s en la mano.</string>
-
-
    <!--  STRINGS OF Boomerang CLASS  -->
    <string name="Boomerang_Name">bumerang</string>
    <string name="Boomerang_Info">Lanzado al enemigo este piso misiles madera curvada volverá a manos de su lanzador.</string>
-
-
    <!--  STRINGS OF CurareDart CLASS  -->
    <string name="CurareDart_Name">dardo venenoso</string>
    <string name="CurareDart_Info">Estos pequeños dardos del maligno no hacen mucho daño, pero ellos pueden paralizar el objetivo dejándolo indefenso y sin moverse durante algún equipo.</string>
-
-
    <!--  STRINGS OF Dart CLASS  -->
    <string name="Dart_Name">dardo</string>
    <string name="Dart_Info">Estas puntas de metal simples se ponderan a volar verdadera y pican a sus presas con un giro de muñeca.</string>
-
-
    <!--  STRINGS OF IncendiaryDart CLASS  -->
    <string name="IncendiaryDart_Name">dardos incendiarios</string>
    <string name="IncendiaryDart_Info">El pico en cada uno de estos dardos está diseñado para fijarlo a su objetivo, mientras que los compuestos inestables atados a su longitud estallaron en llamas brillantes.</string>
-
-
    <!--  STRINGS OF Javelin CLASS  -->
    <string name="Javelin_Name">jabalina</string>
    <string name="Javelin_Info">Esta longitud de metal se pondera para mantener la punta en la punta más importante, ya que navega por el aire.</string>
-
-
    <!--  STRINGS OF Shuriken CLASS  -->
    <string name="Shuriken_Name">shuriken</string>
    <string name="Shuriken_Info">Piezas en forma de estrella, de metal con cuchillas afiladas hacen daño significativo cuando golpean un objetivo. Ellos pueden ser lanzadas a muy alta velocidad.</string>
-
-
    <!--  STRINGS OF Tamahawk CLASS  -->
    <string name="Tamahawk_Name">tomahawk</string>
    <string name="Tamahawk_Info">Esta hacha de lanzamiento no es tan pesado, pero aún requiere de fuerza significativa para ser utilizado con eficacia.</string>
