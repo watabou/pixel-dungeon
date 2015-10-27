@@ -73,7 +73,7 @@
    <string name="Char_StaSlowed">slowed</string>
    <string name="Char_StaMind">mind</string>
    <string name="Char_StaVision">vision</string>
-   <string name="Char_StaParalysed">paralysed</string>
+   <string name="Char_StaParalysed">paralyzed</string>
    <string name="Char_StaFrightened">frightened</string>
    <string name="Char_StaRooted">rooted</string>
    <string name="Char_StaCrippled">crippled</string>
@@ -93,7 +93,7 @@
    <string name="Hero_Wait">...</string>
    <string name="Hero_Search">search</string>
    <string name="Hero_StaBurning">You catch fire!</string>
-   <string name="Hero_StaParalysis">You are paralysed!</string>
+   <string name="Hero_StaParalysis">You are paralyzed!</string>
    <string name="Hero_StaPoison">You are poisoned!</string>
    <string name="Hero_StaOoze">Caustic ooze eats your flesh. Wash away it!</string>
    <string name="Hero_StaRoots">You can\'t move!</string>
@@ -137,7 +137,7 @@
        <item >Huntresses start with a unique upgradeable boomerang.</item>
        <item >Huntresses are proficient with missile weapons and get a damage bonus for excessive strength when using them.</item>
        <item >Huntresses gain more health from dewdrops.</item>
-       <item >Huntresses sense neighbouring monsters even if they are hidden behind obstacles.</item>
+       <item >Huntresses sense neighboring monsters even if they are hidden behind obstacles.</item>
    </string-array>
    <!--  STRINGS OF HeroSubClass CLASS  -->
    <string name="HeroSubClass_NameGlad">gladiator</string>
@@ -410,7 +410,7 @@
    <!--  STRINGS OF WndStory CLASS  -->
    <string name="WndStory_Sewers">The Dungeon lies right beneath the City, its upper levels actually constitute the City\'s sewer system. Being nominally a part of the City, these levels are not that dangerous. No one will call it a safe place, but at least you won\'t need to deal with evil magic here.</string>
    <string name="WndStory_Prision">Many years ago an underground prison was built here for the most dangerous criminals. At the time it seemed like a very clever idea, because this place indeed was very hard to escape. But soon dark miasma started to permeate from below, driving prisoners and guards insane. In the end the prison was abandoned, though some convicts were left locked up here.</string>
-   <string name="WndStory_Caves">The caves, which stretch down under the abandoned prison, are sparcely populated. They lie too deep to be exploited by the City and they are too poor in minerals to interest the dwarves. In the past there was a trade outpost somewhere here on the route between these two states, but it has perished since the decline of Dwarven Metropolis. Only omnipresent gnolls and subterranean animals dwell here now.</string>
+   <string name="WndStory_Caves">The caves, which stretch down under the abandoned prison, are sparsely populated. They lie too deep to be exploited by the City and they are too poor in minerals to interest the dwarves. In the past there was a trade outpost somewhere here on the route between these two states, but it has perished since the decline of Dwarven Metropolis. Only omnipresent gnolls and subterranean animals dwell here now.</string>
    <string name="WndStory_Metropolis">Dwarven Metropolis was once the greatest of dwarven city-states. In its heyday the mechanized army of dwarves has successfully repelled the invasion of the old god and his demon army. But it is said, that the returning warriors have brought seeds of corruption with them, and that victory was the beginning of the end for the underground kingdom.</string>
    <string name="WndStory_Halls">In the past these levels were the outskirts of Metropolis. After the costly victory in the war with the old god dwarves were too weakened to clear them of remaining demons. Gradually demons have tightened their grip on this place and now it\'s called Demon Halls.\n\nVery few adventurers have ever descended this far...</string>
    <!--  STRINGS OF WndTradeItem CLASS  -->
@@ -449,7 +449,7 @@
    <!--  STRINGS OF Amulet CLASS  -->
    <string name="Amulet_Name">Amulet of Yendor</string>
    <string name="Amulet_ACEnd">END THE GAME</string>
-   <string name="Amulet_Info">The Amulet of Yendor is the most powerful known artifact of unknown origin. It is said that the amulet is able to fulfil any wish if its owner\'s will-power is strong enough to \"persuade\" it to do it.</string>
+   <string name="Amulet_Info">The Amulet of Yendor is the most powerful known artifact of unknown origin. It is said that the amulet is able to fulfill any wish if its owner\'s will-power is strong enough to \"persuade\" it to do it.</string>
    <!--  STRINGS OF Ankh CLASS  -->
    <string name="Ankh_Name">Ankh</string>
    <string name="Ankh_Info">The ancient symbol of immortality grants an ability to return to life after death. Upon resurrection all non-equipped items are lost.</string>
@@ -493,7 +493,7 @@
    <string name="LloidsBeacon_ACReturn">RETURN</string>
    <string name="LloidsBeacon_Info">Lloyd\'s beacon is an intricate magic device, that allows you to return to a place you have already been.</string>
    <string name="LloidsBeacon_Preventing">Strong magic aura of this place prevents you from using the lloyd\'s beacon!</string>
-   <string name="LloidsBeacon_Creatures">Psychic aura of neighbouring creatures doesn\'t allow you to use the lloyd\'s beacon at this moment.</string>
+   <string name="LloidsBeacon_Creatures">Psychic aura of neighboring creatures doesn\'t allow you to use the lloyd\'s beacon at this moment.</string>
    <string name="LloidsBeacon_Return">The lloyd\'s beacon is successfully set at your current location, now you can return here anytime.</string>
    <string name="LloidsBeacon_Set">\n\nThis beacon was set somewhere on the level %d of Pixel Dungeon.</string>
    <!--  STRINGS OF TomeOfMastery CLASS  -->
@@ -609,7 +609,7 @@
    <string name="ScaleArmor_Desc">The metal scales sewn onto a leather vest create a flexible, yet protective armor.</string>
    <!--  STRINGS OF WarriorArmor CLASS  -->
    <string name="WarriorArmor_Name">warrior suit of armor</string>
-   <string name="WarriorArmor_Desc">While this armor looks heavy, it allows a warrior to perform heroic leap towards a targeted location, slamming down to stun all neighbouring enemies.</string>
+   <string name="WarriorArmor_Desc">While this armor looks heavy, it allows a warrior to perform heroic leap towards a targeted location, slamming down to stun all neighboring enemies.</string>
    <string name="WarriorArmor_ACSpecial">HEROIC LEAP</string>
    <string name="WarriorArmor_NotWarrior">Only warriors can use this armor!</string>
    <string name="WarriorArmor_Prompt">Choose direction to leap</string>
@@ -1011,7 +1011,7 @@
    <string name="WandOfFlock_Name">Wand of Flock</string>
    <string name="WandOfFlock_Info">A flick of this wand summons a flock of magic sheep, creating temporary impenetrable obstacle.</string>
    <string name="WandOfFlock_SheepName">sheep</string>
-   <string name="WandOfFlock_SheepInfo">This is a magic sheep. What\'s so magical about it? You can\'t kill it. It will stand there until it magcially fades away, all the while chewing cud with a blank stare.</string>
+   <string name="WandOfFlock_SheepInfo">This is a magic sheep. What\'s so magical about it? You can\'t kill it. It will stand there until it magically fades away, all the while chewing cud with a blank stare.</string>
    <string-array name="WandOfFlock_SheepBaa">
        <item >Baa!</item>
        <item >Baa?</item>
@@ -1259,7 +1259,7 @@
    <string name="Ooze_Info">Caustic ooze</string>
    <string name="Ooze_Death">%s killed you...</string>
    <!--  STRINGS OF Paralysis CLASS  -->
-   <string name="Paralysis_Info">Paralysed</string>
+   <string name="Paralysis_Info">Paralyzed</string>
    <!--  STRINGS OF Poison CLASS  -->
    <string name="Poison_Info">Poisoned</string>
    <string name="Poison_Death">You died from poison...</string>
@@ -1323,7 +1323,7 @@
    <string name="DM300_Desc">This machine was created by the Dwarves several centuries ago. Later, Dwarves started to replace machines with golems, elementals and even demons. Eventually it led their civilization to the decline. The DM-300 and similar machines were typically used for construction and mining, and in some cases, for city defense.</string>
    <string name="DM300_Info1">DM-300 repairs itself!</string>
    <string name="DM300_Info2">Mission failed. Shutting down.</string>
-   <string name="DM300_Info3">Unauthorised personnel detected.</string>
+   <string name="DM300_Info3">Unauthorized personnel detected.</string>
    <!--  STRINGS OF Elemental CLASS  -->
    <string name="Elemental_Name">fire elemental</string>
    <string name="Elemental_Desc">Wandering fire elementals are a byproduct of summoning greater entities. They are too chaotic in their nature to be controlled by even the most powerful demonologist.</string>
@@ -1584,7 +1584,7 @@
    <string name="Halls_TileStatue">Pillar</string>
    <string name="Halls_TileDescWater">It looks like lava, but it\'s cold and probably safe to touch.</string>
    <string name="Halls_TileDescStatue">The pillar is made of real humanoid skulls. Awesome.</string>
-   <string name="Halls_TileDescBookshelf">Books in ancient languages smoulder in the bookshelf.</string>
+   <string name="Halls_TileDescBookshelf">Books in ancient languages smolder in the bookshelf.</string>
    <!--  STRINGS OF LastLevel CLASS  -->
    <string name="LastLevel_TileWater">Cold lava</string>
    <string name="LastLevel_TileGrass">Embermoss</string>
