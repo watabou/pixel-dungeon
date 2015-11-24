@@ -27,7 +27,7 @@
    <string name="StartScene_Load">Cargar juego</string>
    <string name="StartScene_New">Nuevo juego</string>
    <string name="StartScene_Erase">Borrar partida actual</string>
-   <string name="StartScene_Depth">Profundidad: %1$d, level: %2$d</string>
+   <string name="StartScene_Depth">Profund.: %1$d, level: %2$d</string>
    <string name="StartScene_Really">Realmente quieres borrar la partida actual?</string>
    <string name="StartScene_Warning">Tu progreso será eliminado.</string>
    <string name="StartScene_Yes">Si, empezar de nuevo</string>

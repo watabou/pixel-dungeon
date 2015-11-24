@@ -79,7 +79,7 @@ public class AboutScene extends PixelScene {
 		add( txtTra );
 		
 		txtTra.x = link.x;
-		txtTra.y = link.y + link.height()+txtTra.height();
+		txtTra.y = link.y + (link.height()*2);
 		
 		BitmapTextMultiline lnkTra = createMultiline( TRANSLATE_LNK, 8 );
 		lnkTra.maxWidth = Math.min( Camera.main.width, 120 );

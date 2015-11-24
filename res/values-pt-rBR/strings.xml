@@ -27,7 +27,7 @@
    <string name="StartScene_Load">Carregar Jogo</string>
    <string name="StartScene_New">Novo Jogo</string>
    <string name="StartScene_Erase">Apagar jogo atual</string>
-   <string name="StartScene_Depth">Profundidade: %1$d, level: %2$d</string>
+   <string name="StartScene_Depth">Profund.: %1$d, level: %2$d</string>
    <string name="StartScene_Really">Você realmente quer começar um novo jogo?</string>
    <string name="StartScene_Warning">O seu progresso no jogo atual será apagado.</string>
    <string name="StartScene_Yes">Sim, iniciar novo jogo</string>

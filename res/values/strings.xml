@@ -176,8 +176,8 @@
    <string name="Badges_LevelReached4">Level 24 reached</string>
    <string name="Badges_AllPotions">All potions identified</string>
    <string name="Badges_AllScrolls">All scrolls identified</string>
-   <string name="Badges_AllRings">All rings identified"</string>
-   <string name="Badges_AllWands">All wands identified"</string>
+   <string name="Badges_AllRings">All rings identified</string>
+   <string name="Badges_AllWands">All wands identified</string>
    <string name="Badges_AllItems">All potions, scrolls, rings &amp; wands identified</string>
    <!-- <string name="Badges_BagSeed"></string> -->
    <!-- <string name="Badges_BagSroll"></string> -->
@@ -368,7 +368,7 @@
        <item >Português (Brasil),pt_BR,1</item>
        <item >Deutsch (Soon),de,0</item>
        <item >Nederlands (Soon),nl,0</item>
-       <item >Russian (Soon),ru,0</item>
+       <item >Русский (Soon),ru,0</item>
    </string-array>
    <!--  STRINGS OF WndRanking CLASS  -->
    <string name="WndRanking_Error">Unable to load additional information</string>

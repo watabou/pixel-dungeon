@@ -369,7 +369,7 @@
    <string name="WndRanking_StaHealth">Zdrowie</string>
    <string name="WndRanking_StaStr">Siła</string>
    <string name="WndRanking_StaDuration">Czas Gry</string>
-   <string name="WndRanking_StaDepth">Najdalszy odwiedzony poziom</string>
+   <string name="WndRanking_StaDepth">Maksymalna głębokość</string>
    <string name="WndRanking_StaEnemies">Zabite Potwory</string>
    <string name="WndRanking_StaGold">Zebrane Złoto</string>
    <string name="WndRanking_StaFood">Zjedzone pożywienie</string>
