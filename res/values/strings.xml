@@ -366,9 +366,9 @@
        <item >Français (France),fr,1</item>
        <item >Polski,pl,1</item>
        <item >Português (Brasil),pt_BR,1</item>
+       <item >Русский,ru,1</item>
        <item >Deutsch (Soon),de,0</item>
        <item >Nederlands (Soon),nl,0</item>
-       <item >Русский (Soon),ru,0</item>
    </string-array>
    <!--  STRINGS OF WndRanking CLASS  -->
    <string name="WndRanking_Error">Unable to load additional information</string>
