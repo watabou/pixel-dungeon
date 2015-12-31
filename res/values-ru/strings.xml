@@ -14,7 +14,7 @@
    <string name="AboutScene_Txt">Программирование &amp; графика: Watabou\nМузыка: Cube_Code\n\nРазработчики этой игры вдохновлялись Brogue от Brian Walker. Вы можете сыграть в неё на Windows, Mac OS или Linux - она классная! ;)\n\nПосетите официальный сайт игры для дополнительной информации:</string>
    <string name="AboutScene_Lnk">pixeldungeon.watabou.ru</string>
    <string name="AboutScene_Translate">Перевод: Georgiy Danilov, Mikhael Danilov, rodriformiga</string><!--  Write here the translation credits.  -->
-   <string name="AboutScene_TranslateLnk">rodriformiga@gmail.com;nyrdsofficial@gmail.com</string><!--  Write here the e-mail to contat for translator  -->
+   <string name="AboutScene_TranslateLnk">rodriformiga@gmail.com; nyrdsofficial@gmail.com</string><!--  Write here the e-mail to contat for translator  -->
    <string name="AboutScene_TranslateSnd">Отправить E-Mail</string><!--  Write here the "Send E-mail" title of the window  -->
    <!--  STRINGS OF RankingsScene CLASS  -->
    <string name="RankingsScene_Title">Лучшие Результаты</string>
@@ -326,7 +326,7 @@
    <string name="WndGame_Ranking">Рекорды</string>
    <string name="WndGame_Start">Начать Новую Игру</string>
    <string name="WndGame_menu">Главное Меню</string>
-   <string name="WndGame_Exit">Покинуть Pixel Dungeon</string>
+   <string name="WndGame_Exit">Выход игры</string>
    <string name="WndGame_Return">Вернутся в Игру</string>
    <!--  STRINGS OF WndHero CLASS  -->
    <string name="WndHero_Stats">Параметры</string>

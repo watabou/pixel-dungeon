@@ -88,7 +88,7 @@ public class GameLog extends Component implements Signal.Listener<String> {
 			lastEntry.text( lastMessage.length() == 0 ? text : lastMessage + " " + text );
 			lastEntry.measure();
 
-			entries.get( entries.size() - 1 ).text = lastEntry.text();
+			entries.get( Math.max(entries.size() - 1, 0) ).text = lastEntry.text();
 			
 		} else {
 			
