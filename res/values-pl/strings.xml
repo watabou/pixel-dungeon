@@ -18,7 +18,7 @@
    <string name="AboutScene_TranslateSnd">Wyślij e-mail</string><!--  Write here the "Send E-mail" title of the window  -->
    <!--  STRINGS OF RankingsScene CLASS  -->
    <string name="RankingsScene_Title">Najlepsi z Najlepszych</string>
-   <string name="RankingsScene_Total">Do tej pory rozegrano gier:</string>
+   <string name="RankingsScene_Total">Wszystkich Mecze wygrane/Rozegrane:\u0020</string>
    <string name="RankingsScene_NoGames">Nie zagrano jeszcze ani razu</string>
    <string name="RankingsScene_NoInfo">Brak dodatkowych informacji</string>
    <!--  STRINGS OF BadgesScene CLASS  -->
