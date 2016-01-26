@@ -367,6 +367,7 @@
        <item >Polski,pl,1</item>
        <item >Português (Brasil),pt_BR,1</item>
        <item >Русский,ru,1</item>
+       <item >中文(Soon),zh_TW,0</item>
        <item >Deutsch (Soon),de,0</item>
        <item >Nederlands (Soon),nl,0</item>
    </string-array>
