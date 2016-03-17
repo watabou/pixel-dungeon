@@ -50,7 +50,7 @@ Following valid characters:
 ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`
 abcdefghijklmnopqrstuvwxyz{|}~\u007F
 àáâäãąèéêëęìíîïòóôöõùúûüñńçćłśźż
-ÀÁÂÄÃĄÈÉÊËĘÌÍÎÏÒÓÔÖÕÙÚÛÜÑŃÇĆŁŚŹŻº
+ÀÁÂÄÃĄÈÉÊËĘÌÍÎÏÒÓÔÖÕÙÚÛÜÑŃÇĆŁŚŹŻºß
 Б ГДЖЗИЙЛ  П УФЦЧШЩЪЫЬЭЮЯ
 бвгджзийлмнптуфцчшщъыьэюя
 ```
