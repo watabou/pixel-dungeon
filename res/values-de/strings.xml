@@ -326,7 +326,7 @@
    <string name="WndGame_Ranking">Rangliste</string>
    <string name="WndGame_Start">Neues Spiel starten</string>
    <string name="WndGame_menu">Hauptmenü</string>
-   <string name="WndGame_Exit">Pixel Dungeon verlassen</string>
+   <string name="WndGame_Exit">Spiel Beenden</string>
    <string name="WndGame_Return">Zurück zum Spiel</string>
    <!--  STRINGS OF WndHero CLASS  -->
    <string name="WndHero_Stats">Werte</string>
@@ -387,7 +387,7 @@
    <string name="WndSettings_ZoomIn">+</string>
    <string name="WndSettings_ZoomOut">-</string>
    <string name="WndSettings_ZoomDef">Standardzoom</string>
-   <string name="WndSettings_ScaleUp">Benutzeroberfläche vergrößern</string>
+   <string name="WndSettings_ScaleUp">UI vergrößern</string>
    <string name="WndSettings_Immersive">Immersionsmodus</string>
    <string name="WndSettings_Language">Sprache</string>
    <string name="WndSettings_Music">Musik</string>
@@ -931,7 +931,7 @@
    <string name="ScrollOfTeleportation_Teleport">In einem Nu waren sie an eine andere Stelle des Levels teleportiert.</string>
    <string name="ScrollOfTeleportation_NoTeleport">Starke magische Aura dieses Ortes verhindert, dass Sie teleportieren!</string>
    <!--  STRINGS OF ScrollOfTerror CLASS  -->
-   <string name="ScrollOfTerror_Name">Scroll of Schrecken</string>
+   <string name="ScrollOfTerror_Name">Schriftrolle der Schrecken</string>
    <string name="ScrollOfTerror_Info">Ein Blitz des roten Lichtes werden alle Kreaturen in Ihr Blickfeld mit dem Terror zu überwältigen, und sie werden zu drehen und zu fliehen. Angriff auf einen fliehenden Feind wird den Effekt zu zerstreuen.</string>
    <string name="ScrollOfTerror_Info1">Die Schriftrolle gibt einen brillanten Blitz der rotes Licht</string>
    <string name="ScrollOfTerror_Info2">Die Schriftrolle gibt eine brillante Flash von rotem Licht und das %s flieht!</string>
@@ -1616,22 +1616,22 @@
       <item >Denken Sie daran, dass die Anhebung Ihre Stärke ist nicht der einzige Weg, um eine bessere Ausrüstung zugreifen. Sie können in die andere Richtung zu gehen, Senkung der Festigkeitsanforderung mit der Schriftrolle der Aktualisierung.</item>
       <item >Sie können Ihre Gold in Geschäften auf tieferen Ebenen des Dungeons zu verbringen. Die erste ist in der 6. Etage.</item>
       <item >Passen sie von Goo!</item>
-      <item >Pixel-Mart - alles, was Sie für ein erfolgreiches Abenteuer brauchen!</item>
+      <item >Geschäft Pixel. Alles, was Sie für ein erfolgreiches Abenteuer brauchen!</item>
       <item >Identifizieren Sie Ihre Tränke und Schriftrollen so bald wie möglich. Setzen Sie es nicht aus, um den Moment, als Sie tatsächlich benötigen.</item>
       <item >Hunger tut nicht weh, aber verhungern tut weh.</item>
       <item >Überraschungsangriff hat eine bessere Chance zu treffen. Zum Beispiel können Sie Ihre Feinde hinter einer geschlossenen Tür überfallen, wenn Sie wissen, dass es sich nähert.</item>
       <item >Lassen Sie sich nicht die Tengu aus!</item>
-      <item >Pixel-Mart. Geld ausgeben. Lebe länger.</item>
+      <item >Geschäft Pixel. Geld ausgeben. Lebe länger.</item>
       <item >Wenn Sie durch mehrere Monster gleichzeitig angegriffen werden, versuchen, hinter einer Tür zurückzuziehen.</item>
       <item >Wenn Sie brennen, Sie können nicht das Feuer im Wasser, während schweben.</item>
       <item >Es hat keinen Sinn, die über mehr als ein Ankh zur gleichen Zeit, weil Sie sie auf Wiederbelebung zu verlieren.</item>
       <item >ACHTUNG! Schwere Maschinen können zu Verletzungen, Verlust von Gliedmaßen oder zum Tod führen!</item>
-      <item >Pixel-Mart. Ein sichereres Leben im Kerker.</item>
+      <item >Geschäft Pixel. Ein sichereres Leben im Kerker.</item>
       <item >Wenn Sie eine verzauberte Waffe zu aktualisieren, gibt es eine Chance, dass Zauber zerstören.</item>
       <item >Waffen und Rüstungen verschlechtern schneller als Zauberstäbe und Ringe, aber es gibt mehr Möglichkeiten, um sie zu beheben.</item>
       <item >Die einzige Möglichkeit, einen Schriftrolle der Auswischen zu erhalten, ist es als ein Geschenk aus dem Kerker Geister zu erhalten.</item>
       <item >Keine Waffen in Anwesenheit von Seiner Majestät erlaubt!</item>
-      <item >Pixel-Mart. Sonderpreise für Dämonenjäger!</item>
+      <item >Geschäft Pixel. Sonderpreise für Dämonenjäger!</item>
    </string-array>
 
 
