@@ -30,7 +30,7 @@ import com.watabou.utils.Callback;
 public class WandOfSlowness extends Wand {
 
 	{
-		name = "Wand of Slowness";
+		name = "Bacchetta della Lentezza";
 	}
 
 	@Override
@@ -42,7 +42,7 @@ public class WandOfSlowness extends Wand {
 
 		} else {
 			
-			GLog.i( "nothing happened" );
+			GLog.i( "non e' successo nulla" );
 			
 		}
 	}
@@ -55,7 +55,7 @@ public class WandOfSlowness extends Wand {
 	@Override
 	public String desc() {
 		return 
-			"This wand will cause a creature to move and attack " +
-			"at half its ordinary speed until the effect ends";
+			"Questa bacchetta causera' la diminuzione a meta' della velocita' d'attacco e di movimento " +
+			"fino alla fine dell'effetto.";
 	}
 }

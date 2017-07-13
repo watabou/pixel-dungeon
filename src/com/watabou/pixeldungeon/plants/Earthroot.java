@@ -31,8 +31,8 @@ import com.watabou.utils.Bundle;
 public class Earthroot extends Plant {
 
 	private static final String TXT_DESC = 
-		"When a creature touches an Earthroot, its roots " +
-		"create a kind of natural armor around it.";
+		"Quando una creatura tocca una Earthroot, le sue radici " +
+		"creano una specie di armatura naturale intorno ad esso.";
 	
 	{
 		image = 5;
@@ -62,7 +62,7 @@ public class Earthroot extends Plant {
 		{
 			plantName = "Earthroot";
 			
-			name = "seed of " + plantName;
+			name = "seme di " + plantName;
 			image = ItemSpriteSheet.SEED_EARTHROOT;
 			
 			plantClass = Earthroot.class;

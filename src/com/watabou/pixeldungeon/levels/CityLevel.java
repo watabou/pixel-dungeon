@@ -95,9 +95,9 @@ public class CityLevel extends RegularLevel {
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.WATER:
-			return "Suspiciously colored water";
+			return "Acqua di colore sospetto";
 		case Terrain.HIGH_GRASS:
-			return "High blooming flowers";
+			return "Alti fori sbocciati";
 		default:
 			return super.tileName( tile );
 		}
@@ -107,19 +107,19 @@ public class CityLevel extends RegularLevel {
 	public String tileDesc(int tile) {
 		switch (tile) {
 		case Terrain.ENTRANCE:
-			return "A ramp leads up to the upper depth.";
+			return "Una rampa porta ad un livello piu' alto.";
 		case Terrain.EXIT:
-			return "A ramp leads down to the lower depth.";
+			return "Una rampa porta ad un livello piu' basso.";
 		case Terrain.WALL_DECO:
 		case Terrain.EMPTY_DECO:
-			return "Several tiles are missing here.";
+			return "Diverse piastrelle mancano qui.";
 		case Terrain.EMPTY_SP:
-			return "Thick carpet covers the floor.";
+			return "Un tappeto spesso ricopre il pavimento.";
 		case Terrain.STATUE:
 		case Terrain.STATUE_SP:
-			return "The statue depicts some dwarf standing in a heroic stance.";
+			return "La statua raffigura qualche nano in una posa eroica.";
 		case Terrain.BOOKSHELF:
-			return "The rows of books on different disciplines fill the bookshelf.";
+			return "File di libri di differenti materie riempiono lo scaffale.";
 		default:
 			return super.tileDesc( tile );
 		}

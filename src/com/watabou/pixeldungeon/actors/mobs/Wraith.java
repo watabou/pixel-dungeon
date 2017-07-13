@@ -39,7 +39,7 @@ public class Wraith extends Mob {
 	private int level;
 	
 	{
-		name = "wraith";
+		name = "spettro";
 		spriteClass = WraithSprite.class;
 		
 		HP = HT = 1;
@@ -81,7 +81,7 @@ public class Wraith extends Mob {
 	
 	@Override
 	public String defenseVerb() {
-		return "evaded";
+		return "evitato";
 	}
 	
 	@Override
@@ -93,8 +93,8 @@ public class Wraith extends Mob {
 	@Override
 	public String description() {
 		return
-			"A wraith is a vengeful spirit of a sinner, whose grave or tomb was disturbed. " +
-			"Being an ethereal entity, it is very hard to hit with a regular weapon.";
+			"Uno spettro e' lo spirito iroso di un peccatore, di cui viene disturbata la tomba. " +
+			"Essendo un'entita' eterea, e' veramente difficile colpirlo con un'arma normale.";
 	}
 	
 	public static void spawnAround( int pos ) {

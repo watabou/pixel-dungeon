@@ -27,12 +27,12 @@ import com.watabou.pixeldungeon.windows.WndOptions;
 
 public abstract class InventoryScroll extends Scroll {
 
-	protected String inventoryTitle = "Select an item";
+	protected String inventoryTitle = "Seleziona un oggetto";
 	protected WndBag.Mode mode = WndBag.Mode.ALL;
 	
-	private static final String TXT_WARNING	= "Do you really want to cancel this scroll usage? It will be consumed anyway.";
-	private static final String TXT_YES		= "Yes, I'm positive";
-	private static final String TXT_NO		= "No, I changed my mind";
+	private static final String TXT_WARNING	= "Vuoi davvero annullare l'uso di questa pergamena? Verra' consumata ugualmente.";
+	private static final String TXT_YES		= "Si, ovviamente";
+	private static final String TXT_NO		= "No, ho cambiato idea";
 	
 	@Override
 	protected void doRead() {

@@ -40,11 +40,11 @@ import com.watabou.utils.Random;
 
 public class Chasm {
 	
-	private static final String TXT_CHASM	= "Chasm";
-	private static final String TXT_YES		= "Yes, I know what I'm doing";
-	private static final String TXT_NO		= "No, I changed my mind";
+	private static final String TXT_CHASM	= "Vuoto";
+	private static final String TXT_YES		= "Si, so cosa faccio";
+	private static final String TXT_NO		= "No, ho cambiato idea";
 	private static final String TXT_JUMP 	= 
-		"Do you really want to jump into the chasm? You can probably die.";
+		"Vuoi davvero saltare nel vuoto? Potresti morire.";
 	
 	public static boolean jumpConfirmed = false;
 	
@@ -97,7 +97,7 @@ public class Chasm {
 				Badges.validateDeathFromFalling();
 				
 				Dungeon.fail( Utils.format( ResultDescriptions.FALL, Dungeon.depth ) );
-				GLog.n( "You fell to death..." );
+				GLog.n( "Ti sei spiaccicato a terra..." );
 			}
 		} );
 	}

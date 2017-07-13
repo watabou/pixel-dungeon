@@ -28,7 +28,7 @@ import com.watabou.utils.Random;
 
 public class Fire extends Weapon.Enchantment {
 
-	private static final String TXT_BLAZING	= "blazing %s";
+	private static final String TXT_BLAZING	= "%s in fiamme";
 	
 	private static ItemSprite.Glowing ORANGE = new ItemSprite.Glowing( 0xFF4400 );
 	

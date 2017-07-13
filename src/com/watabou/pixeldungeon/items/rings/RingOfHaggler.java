@@ -24,7 +24,7 @@ import com.watabou.pixeldungeon.items.Item;
 public class RingOfHaggler extends Ring {
 
 	{
-		name = "Ring of Haggler";
+		name = "Anello della Negoziazione";
 	}
 	
 	@Override
@@ -59,11 +59,10 @@ public class RingOfHaggler extends Ring {
 	@Override
 	public String desc() {
 		return isKnown() ?
-			"In fact this ring doesn't provide any magic effect, but it demonstrates " +
-			"to shopkeepers and vendors, that the owner of the ring is a member of " +
-			"The Thieves' Guild. Usually they are glad to give a discount in exchange " +
-			"for temporary immunity guarantee. Upgrading this ring won't give any additional " +
-			"bonuses." :
+			"In  realta' questo anello non ha nessun potere magico, ma mostra ai venditori " +
+			"che il proprietario e' un membro della Gilda dei Ladri. " +
+			"Spesso sono felici di fare degli sconti in cambio " +
+			"di una immunita' temporanea. Migliorare quest'anello non ti dara' nessun bonus aggiuntivo." :
 			super.desc();
 	}
 	

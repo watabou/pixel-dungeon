@@ -34,7 +34,7 @@ import com.watabou.utils.Random;
 public class Elemental extends Mob {
 
 	{
-		name = "fire elemental";
+		name = "elementale di fuoco";
 		spriteClass = ElementalSprite.class;
 		
 		HP = HT = 65;
@@ -91,8 +91,8 @@ public class Elemental extends Mob {
 	@Override
 	public String description() {
 		return
-			"Wandering fire elementals are a byproduct of summoning greater entities. " +
-			"They are too chaotic in their nature to be controlled by even the most powerful demonologist.";
+			"Gli elementali di fuoco erranti sono un sottoprodotto dell'invocazione di entita' maggiori. " +
+			"Sono troppo caotici per loro natura da essere controllati anche dal piu' esperto dei demonologhi.";
 	}
 	
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();

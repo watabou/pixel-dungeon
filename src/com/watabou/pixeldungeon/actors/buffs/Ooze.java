@@ -26,7 +26,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class Ooze extends Buff {
 	
-	private static final String TXT_HERO_KILLED = "%s killed you...";
+	private static final String TXT_HERO_KILLED = "%s ti ha ucciso...";
 	
 	public int damage	= 1;
 	
@@ -37,7 +37,7 @@ public class Ooze extends Buff {
 	
 	@Override
 	public String toString() {
-		return "Caustic ooze";
+		return "Melma corrosiva";
 	}
 	
 	@Override

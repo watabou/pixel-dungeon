@@ -33,7 +33,7 @@ public class WndInfoCell extends Window {
 	
 	private static final int WIDTH = 120;
 	
-	private static final String TXT_NOTHING	= "There is nothing here.";
+	private static final String TXT_NOTHING	= "Non c'e' nulla qui.";
 	
 	public WndInfoCell( int cell ) {
 		

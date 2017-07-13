@@ -38,15 +38,15 @@ import com.watabou.pixeldungeon.windows.WndChooseWay;
 
 public class TomeOfMastery extends Item {
 
-	private static final String TXT_BLINDED	= "You can't read while blinded";
+	private static final String TXT_BLINDED	= "Non puoi leggere mentre sei accecato";
 	
 	public static final float TIME_TO_READ = 10;
 	
-	public static final String AC_READ	= "READ";
+	public static final String AC_READ	= "LEGGI";
 	
 	{
 		stackable = false;
-		name = Dungeon.hero != null && Dungeon.hero.subClass != HeroSubClass.NONE ? "Tome of Remastery" : "Tome of Mastery";
+		name = Dungeon.hero != null && Dungeon.hero.subClass != HeroSubClass.NONE ? "Tomo della Rimaestria" : "Tomo della Maestria";
 		image = ItemSpriteSheet.MASTERY;
 		
 		unique = true;
@@ -109,9 +109,9 @@ public class TomeOfMastery extends Item {
 	@Override
 	public String info() {
 		return 
-			"This worn leather book is not that thick, but you feel somehow, " +
-			"that you can gather a lot from it. Remember though that reading " +
-			"this tome may require some time.";
+			"Questo libro rivestito di pelle non e' molto spesso, ma senti come se " +
+			"potessi imparare molto da esso. Ricorda pero' che leggere " +
+			"questo tomo potrebbe richiedere un po' di tempo.";
 	}
 	
 	private void read( Hero hero, HeroSubClass sc1, HeroSubClass sc2 ) {
@@ -138,7 +138,7 @@ public class TomeOfMastery extends Item {
 		
 		SpellSprite.show( curUser, SpellSprite.MASTERY );
 		curUser.sprite.emitter().burst( Speck.factory( Speck.MASTERY ), 12 );
-		GLog.w( "You have chosen the way of the %s!", Utils.capitalize( way.title() ) );
+		GLog.w( "Hai scelto la strada del %s!", Utils.capitalize( way.title() ) );
 		
 		if (way == HeroSubClass.BERSERKER && curUser.HP <= curUser.HT * Fury.LEVEL) {
 			Buff.affect( curUser, Fury.class );

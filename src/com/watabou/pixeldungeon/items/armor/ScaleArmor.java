@@ -23,7 +23,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class ScaleArmor extends Armor {
 
 	{
-		name = "scale armor";
+		name = "armatura a scaglie";
 		image = ItemSpriteSheet.ARMOR_SCALE;
 	}
 	
@@ -34,6 +34,6 @@ public class ScaleArmor extends Armor {
 	@Override
 	public String desc() {
 		return 
-			"The metal scales sewn onto a leather vest create a flexible, yet protective armor.";
+			"Le scaglie metalliche applicate su una veste di pelle, creano un'armatura flessibile e altrettanto protettiva.";
 	}
 }

@@ -22,7 +22,7 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 public class PotionOfExperience extends Potion {
 
 	{
-		name = "Potion of Experience";
+		name = "Pozione dell'Esperienza";
 	}
 	
 	@Override
@@ -34,8 +34,8 @@ public class PotionOfExperience extends Potion {
 	@Override
 	public String desc() {
 		return
-			"The storied experiences of multitudes of battles reduced to liquid form, " +
-			"this draught will instantly raise your experience level.";
+			"L'esperienza collezionata nella moltitudine delle battaglie ridotta a forma liquida. " +
+			"Questo composto aumentera' immediatamente il tuo livello d'esperienza.";
 	}
 	
 	@Override

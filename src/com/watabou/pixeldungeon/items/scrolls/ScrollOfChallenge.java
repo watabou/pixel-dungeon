@@ -33,7 +33,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 public class ScrollOfChallenge extends Scroll {
 
 	{
-		name = "Scroll of Challenge";
+		name = "Pergamena della Sfida";
 	}
 	
 	@Override
@@ -56,7 +56,7 @@ public class ScrollOfChallenge extends Scroll {
 			}
 		}
 		
-		GLog.w( "The scroll emits a challenging roar that echoes throughout the dungeon!" );
+		GLog.w( "La pergamena emette un ruggito che risuona per tutto il dungeon attirando l'attenzione di tutti!" );
 		setKnown();
 		
 		curUser.sprite.centerEmitter().start( Speck.factory( Speck.SCREAM ), 0.3f, 3 );		
@@ -69,7 +69,7 @@ public class ScrollOfChallenge extends Scroll {
 	@Override
 	public String desc() {
 		return 
-			"When read aloud, this scroll will unleash a challenging roar " +
-			"that will awaken all monsters and alert them to the reader's location.";
+			"Quando viene letta ad alta voce, rilascia un ruggito che sveglia ogni mostro " +
+			"e indica loro la posizione del lettore.";
 	}
 }

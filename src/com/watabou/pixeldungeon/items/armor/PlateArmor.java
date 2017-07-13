@@ -23,7 +23,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class PlateArmor extends Armor {
 
 	{
-		name = "plate armor";
+		name = "armatura a placche";
 		image = ItemSpriteSheet.ARMOR_PLATE;
 	}
 	
@@ -34,7 +34,7 @@ public class PlateArmor extends Armor {
 	@Override
 	public String desc() {
 		return 
-			"Enormous plates of metal are joined together into a suit that provides " +
-			"unmatched protection to any adventurer strong enough to bear its staggering weight.";
+			"Enormi placche di metallo unite insieme in una armatura che garantisce una protezione ineguagliabile " +
+			"ad ogni avventuriero abbastanza forte da riuscire a sostenere il suo peso.";
 	}
 }

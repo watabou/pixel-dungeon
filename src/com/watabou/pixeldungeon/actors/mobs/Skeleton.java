@@ -35,10 +35,10 @@ import com.watabou.utils.Random;
 
 public class Skeleton extends Mob {
 
-	private static final String TXT_HERO_KILLED = "You were killed by the explosion of bones...";
+	private static final String TXT_HERO_KILLED = "Sei stato ucciso da un'esplosione di ossa...";
 	
 	{
-		name = "skeleton";
+		name = "scheletro";
 		spriteClass = SkeletonSprite.class;
 		
 		HP = HT = 25;
@@ -106,15 +106,15 @@ public class Skeleton extends Mob {
 	
 	@Override
 	public String defenseVerb() {
-		return "blocked";
+		return "bloccato";
 	}
 	
 	@Override
 	public String description() {
 		return
-			"Skeletons are composed of corpses bones from unlucky adventurers and inhabitants of the dungeon, " +
-			"animated by emanations of evil magic from the depths below. After they have been " +
-			"damaged enough, they disintegrate in an explosion of bones.";
+			"Gli scheletri sono composti di ossa dei cadaveri degli sfortunati avventurieri e degli abitanti del dungeon, " +
+			"animati dalle emanazioni di magia oscura dalle profondita' del dungeonn. Dopo che sono stati " +
+			"danneggiati abbastanza, si disintregano in un'esplosione di ossa.";
 	}
 	
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();

@@ -24,12 +24,12 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class IronKey extends Key {
 
-	private static final String TXT_FROM_DEPTH = "iron key from depth %d";
+	private static final String TXT_FROM_DEPTH = "chiave di ferro del livello %d";
 
 	public static int curDepthQuantity = 0;
 	
 	{
-		name = "iron key";
+		name = "chiave di ferro";
 		image = ItemSpriteSheet.IRON_KEY;
 	}
 	
@@ -57,7 +57,7 @@ public class IronKey extends Key {
 	@Override
 	public String info() {
 		return 
-			"The notches on this ancient iron key are well worn; its leather lanyard " +
-			"is battered by age. What door might it open?";
+			"Le incisioni su questa antica chiave di ferro sono ben rivestite; il suo cordoncino di pelle " +
+			"e' corroso dal tempo. Che porta potrebbe aprire?";
 	}
 }

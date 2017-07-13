@@ -36,7 +36,7 @@ import com.watabou.utils.Random;
 public class Piranha extends Mob {
 	
 	{
-		name = "giant piranha";
+		name = "piranha gigante";
 		spriteClass = PiranhaSprite.class;
 
 		baseSpeed = 2f;
@@ -124,8 +124,8 @@ public class Piranha extends Mob {
 	@Override
 	public String description() {
 		return
-			"These carnivorous fish are not natural inhabitants of underground pools. " +
-			"They were bred specifically to protect flooded treasure vaults.";
+			"Questi pesci carnivori non sono abitanti naturali delle pozze sotterranee. " +
+			"Sono stati allevati proprio per proteggere i tesori del sottosuolo.";
 	}
 	
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();

@@ -33,7 +33,7 @@ public class GasesImmunity extends FlavourBuff {
 	
 	@Override
 	public String toString() {
-		return "Immune to gases";
+		return "Immune al gas";
 	}
 	
 	public static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();

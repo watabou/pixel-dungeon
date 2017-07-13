@@ -54,8 +54,8 @@ public class Shuriken extends MissileWeapon {
 	@Override
 	public String desc() {
 		return 
-			"Star-shaped pieces of metal with razor-sharp blades do significant damage " +
-			"when they hit a target. They can be thrown at very high rate.";
+			"Pezzi di metallo a forma di stella con lame taglienti come rasoi che danneggiano molto " +
+			"quando colpiscono un bersaglio. Possono essere lanciati ad una velocita' veramente alta.";
 	}
 	
 	@Override

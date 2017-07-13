@@ -30,7 +30,7 @@ import com.watabou.utils.Random;
 
 public class Displacement extends Glyph {
 
-	private static final String TXT_DISPLACEMENT	= "%s of displacement";
+	private static final String TXT_DISPLACEMENT	= "%s del dislocamento";
 	
 	private static ItemSprite.Glowing BLUE = new ItemSprite.Glowing( 0x66AAFF );
 	

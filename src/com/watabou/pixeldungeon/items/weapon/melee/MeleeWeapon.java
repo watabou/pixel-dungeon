@@ -90,79 +90,78 @@ public class MeleeWeapon extends Weapon {
 		int lvl = visiblyUpgraded();
 		String quality = lvl != 0 ? 
 			(lvl > 0 ? 
-				(isBroken() ? "broken" : "upgraded") : 
-				"degraded") : 
+				(isBroken() ? "rotta" : "migliorata") : 
+				"indebolita") : 
 			"";
 		info.append( p );
-		info.append( "This " + name + " is " + Utils.indefinite( quality ) );
-		info.append( " tier-" + tier + " melee weapon. " );
+		info.append( "Questa e' una" + name + quality + " e ");
+		info.append( "un'arma da corpo a corpo. " );
 		
 		if (levelKnown) {
 			int min = min();
 			int max = max();
-			info.append( "Its average damage is " + (min + (max - min) / 2) + " points per hit. " );
+			info.append( "Il suo danno medio e' di " + (min + (max - min) / 2) + " punti d'attacco. " );
 		} else {
 			int min = min0();
 			int max = max0();
 			info.append( 
-				"Its typical average damage is " + (min + (max - min) / 2) + " points per hit " +
-				"and usually it requires " + typicalSTR() + " points of strength. " );
+				"Il suo danno medio e' di " + (min + (max - min) / 2) + " punti d'attacco " +
+				"e di solito richiede " + typicalSTR() + " punti di forza. " );
 			if (typicalSTR() > Dungeon.hero.STR()) {
-				info.append( "Probably this weapon is too heavy for you. " );
+				info.append( "Probabilmente quest'arma e' troppo pesante per te." );
 			}
 		}
 		
 		if (DLY != 1f) {
-			info.append( "This is a rather " + (DLY < 1f ? "fast" : "slow") );
+			info.append( "Questa e' un'arma piuttosto " + (DLY < 1f ? "veloce" : "lenta") );
 			if (ACU != 1f) {
 				if ((ACU > 1f) == (DLY < 1f)) {
-					info.append( " and ");
+					info.append( " e ");
 				} else {
-					info.append( " but ");
+					info.append( " ma ");
 				}
-				info.append( ACU > 1f ? "accurate" : "inaccurate" );
+				info.append( ACU > 1f ? "precisa." : "imprecisa." );
 			}
-			info.append( " weapon. ");
 		} else if (ACU != 1f) {
-			info.append( "This is a rather " + (ACU > 1f ? "accurate" : "inaccurate") + " weapon. " );
+			info.append( "Questa e' un'arma piuttosto " + (ACU > 1f ? "precisa." : "imprecisa."));
 		}
 		switch (imbue) {
 		case SPEED:
-			info.append( "It was balanced to make it faster. " );
+			info.append( "E' stata bilanciata per essere piu' veloce. " );
 			break;
 		case ACCURACY:
-			info.append( "It was balanced to make it more accurate. " );
+			info.append( "E' stata bilanciata per essere piu' precisa. " );
 			break;
 		case NONE:
 		}
 		
 		if (enchantment != null) {
-			info.append( "It is enchanted." );
+			info.append( "E' incantata." );
 		}
 		
 		if (levelKnown && Dungeon.hero.belongings.backpack.items.contains( this )) {
 			if (STR > Dungeon.hero.STR()) {
 				info.append( p );
 				info.append( 
-					"Because of your inadequate strength the accuracy and speed " +
-					"of your attack with this " + name + " is decreased." );
+					"A causa della tua forza inadeguata la precisione e la velocita' " +
+					"dei tuoi attacchi sono diminuite." );
 			}
 			if (STR < Dungeon.hero.STR()) {
 				info.append( p );
 				info.append( 
-					"Because of your excess strength the damage " +
-					"of your attack with this " + name + " is increased." );
+					"A causa della tua forza eccessiva " +
+					"della tua forza la precisione e la velocita' sono aumentate." );
 			}
 		}
 		
 		if (isEquipped( Dungeon.hero )) {
 			info.append( p );
-			info.append( "You hold the " + name + " at the ready" + 
-				(cursed ? ", and because it is cursed, you are powerless to let go." : ".") ); 
+			info.append( "Stai tenendo " + name + " al momento" + 
+				(cursed ? ", e a causa della maledizione, non puoi lasciarla." : ".") ); 
 		} else {
 			if (cursedKnown && cursed) {
 				info.append( p );
-				info.append( "You can feel a malevolent magic lurking within " + name +"." );
+				info.append( "Puoi percepire una parvenza di magia oscura scorrere in " + name +"." );
 			}
 		}
 		

@@ -46,32 +46,32 @@ public class WndStory extends Window {
 	
 	static {
 		CHAPTERS.put( ID_SEWERS, 
-		"The Dungeon lies right beneath the City, its upper levels actually constitute the City's sewer system. " +
-		"Being nominally a part of the City, these levels are not that dangerous. No one will call it a safe place, " +
-		"but at least you won't need to deal with evil magic here." );
+		"Il Dungeon giace nelle fondamento della Citta', il suo livello piu' superficiale e' costuitito proprio dalle fognature della Citta'. " +
+		"Essendo, almeno per il nome, una parte della Citta', questi livelli non sono pericolosi. Nessuno lo chiamerebbe un posto sicuro, " +
+		"ma almeno non avrai a che fare con della magia nera qui." );
 		
 		CHAPTERS.put( ID_PRISON, 
-		"Many years ago an underground prison was built here for the most dangerous criminals. At the time it seemed " +
-		"like a very clever idea, because this place indeed was very hard to escape. But soon dark miasma started to permeate " +
-		"from below, driving prisoners and guards insane. In the end the prison was abandoned, though some convicts " +
-		"were left locked up here." );
+		"Molti anni fa una prigione sotterranea fu costruita qui per rinchiudere i criminali piu' pericolosi. Al momento sembrava " +
+		"proprio una bella idea, perche' da questo posto e' veramente difficile scappare. Ma presto aura malvagia inizio' ad arrivare dalle profondita', " +
+		"facendo diventare pazzi prigionieri e guardie. Infine la prigione fu abbandonata, anche se qualche " +
+		"prigioniero potrebbe essere stato lasciato bloccato qui giu'." );
 		
 		CHAPTERS.put( ID_CAVES, 
-		"The caves, which stretch down under the abandoned prison, are sparcely populated. They lie too deep to be exploited " +
-		"by the City and they are too poor in minerals to interest the dwarves. In the past there was a trade outpost " +
-		"somewhere here on the route between these two states, but it has perished since the decline of Dwarven Metropolis. " +
-		"Only omnipresent gnolls and subterranean animals dwell here now." );
+		"Le caverne, che iniziano appena sotto l'abbandonata prigione, sono scarsamente popolate. Troppo in basso da essere esplorate dagli abitanti  " +
+		"della Citta' e troppo poveri di minerali per interessare ai nani. Nel passato c'erano posti di vendita " +
+		" da qualche parte sulla strada tra questi due regni, ma sono scomparsi con la caduta della Metropoli Nanica. " +
+		"Solo gnomi onnipresenti ed animali sotterranei popolano questi posti." );
 		
 		CHAPTERS.put( ID_METROPOLIS, 
-		"Dwarven Metropolis was once the greatest of dwarven city-states. In its heyday the mechanized army of dwarves " +
-		"has successfully repelled the invasion of the old god and his demon army. But it is said, that the returning warriors " +
-		"have brought seeds of corruption with them, and that victory was the beginning of the end for the underground kingdom." );
+		"La Metropoli Nanica era una delle piu' grandi citta'-stato dei nani. Nei suoi anni migliori l'esercito meccanizzato nanico " +
+		"svento' l'attacco degli dei anziani e del loro esercito demoniaco. Ma si dice, che i guerrieri ritornati " +
+		"portarono semi del caos con loro, e che quella vittoria fu solo l'inizio della fine d quel sotterraneo regno." );
 		
 		CHAPTERS.put( ID_HALLS,
-		"In the past these levels were the outskirts of Metropolis. After the costly victory in the war with the old god " +
-		"dwarves were too weakened to clear them of remaining demons. Gradually demons have tightened their grip on this place " +
-		"and now it's called Demon Halls.\n\n" +
-		"Very few adventurers have ever descended this far..." );
+		"Nel passato questi livelli erano le periferie della Metropoli. Dopo la costosa vittoria contro gli dei anziani " +
+		"i nani erano troppo indeboliti per ripulirle dai demoni rimasti. Piano piano i demoni allungarono le loro grinfie su questo luogo " +
+		"ed ora vengono chiamate Sale Demoniache.\n\n" +
+		"Veramente pochi avventurieri scesero fin qui giu'..." );
 	};
 	
 	private BitmapTextMultiline tf;

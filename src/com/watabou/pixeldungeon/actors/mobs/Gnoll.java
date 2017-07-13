@@ -26,7 +26,7 @@ import com.watabou.utils.Random;
 public class Gnoll extends Mob {
 	
 	{
-		name = "gnoll scout";
+		name = "gnoll esploratore";
 		spriteClass = GnollSprite.class;
 		
 		HP = HT = 12;
@@ -63,7 +63,7 @@ public class Gnoll extends Mob {
 	@Override
 	public String description() {
 		return
-			"Gnolls are hyena-like humanoids. They dwell in sewers and dungeons, venturing up to raid the surface from time to time. " +
-			"Gnoll scouts are regular members of their pack, they are not as strong as brutes and not as intelligent as shamans.";
+			"Gli Gnoll sono umanoidi simili alle iene. Questi abitano nelle fogne e nei dungeon, avventurandosi fino in superficie a razziarla di tanto in tanto. " +
+			"Gli Gnoll esploratori sono membri normali del loro branco, non sono forti quanto i bruti e non sono intelligenti quanto gli sciamani.";
 	}
 }

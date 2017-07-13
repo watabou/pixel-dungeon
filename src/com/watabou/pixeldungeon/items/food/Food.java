@@ -36,14 +36,14 @@ public class Food extends Item {
 
 	private static final float TIME_TO_EAT	= 3f;
 	
-	public static final String AC_EAT	= "EAT";
+	public static final String AC_EAT	= "MANGIA";
 	
 	public float energy = Hunger.HUNGRY;
-	public String message = "That food tasted delicious!";
+	public String message = "Era favoloso!";
 	
 	{
 		stackable = true;
-		name = "ration of food";
+		name = "razione di cibo";
 		image = ItemSpriteSheet.RATION;
 	}
 	
@@ -99,8 +99,8 @@ public class Food extends Item {
 	@Override
 	public String info() {
 		return 
-			"Nothing fancy here: dried meat, " +
-			"some biscuits - things like that.";
+			"Niente cibo-spazzatura  qui dentro: carne secca, " +
+			"qualche biscotto, cose del genere.";
 	}
 	
 	@Override

@@ -44,11 +44,11 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndRanking extends WndTabbed {
 	
-	private static final String TXT_ERROR		= "Unable to load additional information";
+	private static final String TXT_ERROR		= "Impossibile caricare altre info";
 	
 	private static final String TXT_STATS	= "Stats";
-	private static final String TXT_ITEMS	= "Items";
-	private static final String TXT_BADGES	= "Badges";
+	private static final String TXT_ITEMS	= "Oggetti";
+	private static final String TXT_BADGES	= "Distintivi";
 	
 	private static final int WIDTH			= 112;
 	private static final int HEIGHT			= 134;
@@ -143,22 +143,22 @@ public class WndRanking extends WndTabbed {
 		
 		private static final int GAP	= 4;
 		
-		private static final String TXT_TITLE	= "Level %d %s";
+		private static final String TXT_TITLE	= "Livello %d %s";
 		
-		private static final String TXT_CHALLENGES	= "Challenges";
+		private static final String TXT_CHALLENGES	= "Sfide";
 		
-		private static final String TXT_HEALTH	= "Health";
-		private static final String TXT_STR		= "Strength";
+		private static final String TXT_HEALTH	= "Salute";
+		private static final String TXT_STR		= "Forza";
 		
-		private static final String TXT_DURATION	= "Game Duration";
+		private static final String TXT_DURATION	= "Durata";
 		
-		private static final String TXT_DEPTH	= "Maximum Depth";
-		private static final String TXT_ENEMIES	= "Mobs Killed";
-		private static final String TXT_GOLD	= "Gold Collected";
+		private static final String TXT_DEPTH	= "Profondita' Max";
+		private static final String TXT_ENEMIES	= "Mob Uccisi";
+		private static final String TXT_GOLD	= "Oro Collezionato";
 		
-		private static final String TXT_FOOD	= "Food Eaten";
-		private static final String TXT_ALCHEMY	= "Potions Cooked";
-		private static final String TXT_ANKHS	= "Ankhs Used";
+		private static final String TXT_FOOD	= "Cibo Mangiato";
+		private static final String TXT_ALCHEMY	= "Pozioni Preparate";
+		private static final String TXT_ANKHS	= "Miky Usati";
 		
 		public StatsTab() {
 			super();

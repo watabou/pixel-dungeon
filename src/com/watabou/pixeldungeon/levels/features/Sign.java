@@ -31,45 +31,45 @@ import com.watabou.pixeldungeon.windows.WndMessage;
 public class Sign {
 
 	private static final String TXT_DEAD_END = 
-		"What are you doing here?!";
+		"Che stai facendo qui?!";
 	
 	private static final String[] TIPS = {
-		"Don't overestimate your strength, use weapons and armor you can handle.",
-		"Not all doors in the dungeon are visible at first sight. If you are stuck, search for hidden doors.",
-		"Remember, that raising your strength is not the only way to access better equipment. You can go " +
-			"the other way, lowering its strength requirement with Scrolls of Upgrade.",
-		"You can spend your gold in shops on deeper levels of the dungeon. The first one is on the 6th level.",
+		"Non sopravvalutare la tua forza, usa armi e armature che puoi gestire.",
+		"Non tutte le porte nel dungeon sono visibili a prima vista. Se sei bloccato, cerca porte nascoste.",
+		"Ricorda, aumentaere la forza non e' l'unico modo per usufruire di equipaggiamenti migliori. Puoi " +
+			"invece, abbassare la forza richiesta con la Pergamena del Potenziamento.",
+		"Puoi spendere il tuo oro nei negozi piu' in basso nel dungeon. Il primo e' al sesto livello.",
 			
-		"Beware of Goo!",
+		"Stai attento al Goo!",
 		
-		"Pixel-Mart - all you need for successful adventure!",
-		"Identify your potions and scrolls as soon as possible. Don't put it off to the moment " +
-			"when you actually need them.",
-		"Being hungry doesn't hurt, but starving does hurt.",
-		"Surprise attack has a better chance to hit. For example, you can ambush your enemy behind " +
-			"a closed door when you know it is approaching.",
+		"Pixel-Mart - Tutto quel che ti serve per una grande avventura!",
+		"Identifica le tue pozioni e pergamene il prima possibile. Non buttarli " +
+			"quando ti servono.",
+		"Essere affamati non ti ferisce, ma essere molto affamati si.",
+		"Gli attacchi a sorpresa hanno piu' possibilita' di colpire. Per esempio, puoi tendere un'imboscata ai tuoi nemici " +
+			"dietro una porta chiusa quando si avvicinano.",
 		
-		"Don't let The Tengu out!",
+		"Non lasciare scappare il Tengu !",
 		
-		"Pixel-Mart. Spend money. Live longer.",
-		"When you're attacked by several monsters at the same time, try to retreat behind a door.",
-		"If you are burning, you can't put out the fire in the water while levitating.",
-		"There is no sense in possessing more than one Ankh at the same time, because you will lose them upon resurrecting.",
+		"Pixel-Mart. Spendi soldi. vivi piu' a lungo.",
+		"Quando sei attaccato da piu' mostri insieme, prova a ritirarti dietro una porta.",
+		"Se vai a fuoco, non puoi spegnere le fiamme in acqua mentre leviti.",
+		"Non ha senso avere piu' Miky allo stesso tempo, perche' li perderai risorgendo.",
 		
-		"DANGER! Heavy machinery can cause injury, loss of limbs or death!",
+		"ATTENZIONE! Macchinari pesanti possono causare ferite permanenti, perdita di arti o la morte!",
 		
-		"Pixel-Mart. A safer life in dungeon.",
-		"When you upgrade an enchanted weapon, there is a chance to destroy that enchantment.",
-		"Weapons and armors deteriorate faster than wands and rings, but there are more ways to fix them.",
-		"The only way to obtain a Scroll of Wipe Out is to receive it as a gift from the dungeon spirits.",
+		"Pixel-Mart. Per una vita piu' sicura nel dungeon.",
+		"Quando migliori un'arma incantata, c'e' la possibilita' di distruggere l'incantamento.",
+		"Armi e armature deteriorano piu' velocemente di bacchette e anelli, ma ci sono piu' modi per ripararle.",
+		"L'unico modo per ottenere la Pergamena degli Spiriti e' ottenerla come regalo dagli spiriti del dungeon.",
 		
-		"No weapons allowed in the presence of His Majesty!",
+		"Le armi non sono ammesse in presenza di Sua Maesta'!",
 		
-		"Pixel-Mart. Special prices for demon hunters!"
+		"Pixel-Mart. Prezzi speciali per cacciatori di demoni!"
 	};
 	
 	private static final String TXT_BURN =
-		"As you try to read the sign it bursts into greenish flames.";
+		"Non appena hai provato a leggere questo cartello, e' bruciato in un fuoco verdastro.";
 	
 	public static void read( int pos ) {
 		

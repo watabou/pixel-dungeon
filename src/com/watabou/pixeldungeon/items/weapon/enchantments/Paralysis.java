@@ -26,7 +26,7 @@ import com.watabou.utils.Random;
 
 public class Paralysis extends Weapon.Enchantment {
 
-	private static final String TXT_STUNNING = "stunning %s";
+	private static final String TXT_STUNNING = "%s stupefacente";
 	
 	private static ItemSprite.Glowing YELLOW = new ItemSprite.Glowing( 0xCCAA44 );
 	

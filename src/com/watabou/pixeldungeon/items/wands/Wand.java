@@ -51,14 +51,14 @@ public abstract class Wand extends KindOfWeapon {
 	
 	public static final String AC_ZAP	= "ZAP";
 	
-	private static final String TXT_WOOD	= "This thin %s wand is warm to the touch. Who knows what it will do when used?";
-	private static final String TXT_DAMAGE	= "When this wand is used as a melee weapon, its average damage is %d points per hit.";
-	private static final String TXT_WEAPON	= "You can use this wand as a melee weapon.";
+	private static final String TXT_WOOD	= "Questa sottile bacchetta di sottile legno di  %s e' tiepida al tocco. Chisssa' cosa fara' se usata?";
+	private static final String TXT_DAMAGE	= "Quando questa bacchetta viene usata come arma da corpo a corpo, il suo danno medio e' di %d punti ogni colpo.";
+	private static final String TXT_WEAPON	= "Puoi usare questa bacchetta come arma da corpo a corpo.";
 			
-	private static final String TXT_FIZZLES		= "your wand fizzles; it must be out of charges for now";
-	private static final String TXT_SELF_TARGET	= "You can't target yourself";
+	private static final String TXT_FIZZLES		= "la tua bacchetta ha fatto uno strano rumore; deve essere scarica al momento";
+	private static final String TXT_SELF_TARGET	= "Non puoi mirare a te stesso";
 	
-	private static final String TXT_IDENTIFY	= "You are now familiar enough with your %s.";
+	private static final String TXT_IDENTIFY	= "Hai abbastanza familiarita' con la tua %s.";
 	
 	private static final float TIME_TO_ZAP	= 1f;
 	
@@ -88,7 +88,7 @@ public abstract class Wand extends KindOfWeapon {
 		WandOfAvalanche.class
 	};
 	private static final String[] woods = 
-		{"holly", "yew", "ebony", "cherry", "teak", "rowan", "willow", "mahogany", "bamboo", "purpleheart", "oak", "birch"};
+		{"agrifoglio", "tasso", "ebano", "ciliegio", "palma", "pino", "salice", "mogano", "bambu'", "quercia", "mandorlo", "betulla"};
 	private static final Integer[] images = {
 		ItemSpriteSheet.WAND_HOLLY, 
 		ItemSpriteSheet.WAND_YEW, 
@@ -252,7 +252,7 @@ public abstract class Wand extends KindOfWeapon {
 		}
 		
 		if (isBroken()) {
-			sb.insert( 0, "broken " );
+			sb.insert( 0, "rotta " );
 		}
 		
 		return sb.toString();
@@ -260,7 +260,7 @@ public abstract class Wand extends KindOfWeapon {
 	
 	@Override
 	public String name() {
-		return isKnown() ? name : wood + " wand";
+		return isKnown() ? name : "bacchetta di " + wood;
 	}
 	
 	@Override
@@ -456,7 +456,7 @@ public abstract class Wand extends KindOfWeapon {
 		
 		@Override
 		public String prompt() {
-			return "Choose direction to zap";
+			return "Scegli la direzione dove vuoi colpire";
 		}
 	};
 	

@@ -22,7 +22,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class BattleAxe extends MeleeWeapon {
 
 	{
-		name = "battle axe";
+		name = "ascia da battaglia";
 		image = ItemSpriteSheet.BATTLE_AXE;
 	}
 	
@@ -32,6 +32,6 @@ public class BattleAxe extends MeleeWeapon {
 	
 	@Override
 	public String desc() {
-		return "The enormous steel head of this battle axe puts considerable heft behind each stroke.";
+		return "L'enorme lama di questa ascia da battaglia ha un notevole peso dietro ogni colpo.";
 	}
 }

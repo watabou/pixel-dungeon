@@ -52,7 +52,7 @@ public class King extends Mob {
 	private static final int MAX_ARMY_SIZE	= 5;
 	
 	{
-		name = Dungeon.depth == Statistics.deepestFloor ? "King of Dwarves" : "undead King of Dwarves";
+		name = Dungeon.depth == Statistics.deepestFloor ? "Re dei Nani" : "Re dei Nani non-morto";
 		spriteClass = KingSprite.class;
 		
 		HP = HT = 300;
@@ -64,7 +64,7 @@ public class King extends Mob {
 	
 	private boolean nextPedestal = true;
 	
-	private static final String PEDESTAL = "pedestal";
+	private static final String PEDESTAL = "piedistallo";
 	
 	@Override
 	public void storeInBundle( Bundle bundle ) {
@@ -95,7 +95,7 @@ public class King extends Mob {
 	
 	@Override
 	public String defenseVerb() {
-		return "parried";
+		return "parato";
 	}
 	
 	@Override
@@ -144,7 +144,7 @@ public class King extends Mob {
 		
 		Badges.validateBossSlain();
 		
-		yell( "You cannot kill me, " + Dungeon.hero.heroClass.title() + "... I am... immortal..." );
+		yell( "Non puoi uccidermi, " + Dungeon.hero.heroClass.title() + "... Sono... immortale..." );
 	}
 	
 	private int maxArmySize() {
@@ -192,22 +192,22 @@ public class King extends Mob {
 			} while (dist < undeadsToSummon);
 		}
 		
-		yell( "Arise, slaves!" );
+		yell( "Rivelatevi, schiavi!" );
 	}
 	
 	@Override
 	public void notice() {
 		super.notice();
-		yell( "How dare you!" );
+		yell( "Come ti permetti!?" );
 	}
 	
 	@Override
 	public String description() {
 		return
-			"The last king of dwarves was known for his deep understanding of processes of life and death. " +
-			"He has persuaded members of his court to participate in a ritual, that should have granted them " +
-			"eternal youthfulness. In the end he was the only one, who got it - and an army of undead " +
-			"as a bonus.";
+			"L'ultimo re dei nani era famoso per la sua profonda conoscenza dei processi della vita e della morte. " +
+			"Ha persuaso i membri della sua corte a partecipare ad un rituale, che avrebbe garantito loro " +
+			"l'eterna giovinezza. Alla fine pero' lui fu l'unico che la ottenne - con un esercito di non-morti " +
+			"in omaggio.";
 	}
 	
 	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();
@@ -239,7 +239,7 @@ public class King extends Mob {
 		public static int count = 0;
 		
 		{
-			name = "undead dwarf";
+			name = "nano non-morto";
 			spriteClass = UndeadSprite.class;
 			
 			HP = HT = 28;
@@ -305,14 +305,14 @@ public class King extends Mob {
 		
 		@Override
 		public String defenseVerb() {
-			return "blocked";
+			return "bloccato";
 		}
 		
 		@Override
 		public String description() {
 			return
-				"These undead dwarves, risen by the will of the King of Dwarves, were members of his court. " +
-				"They appear as skeletons with a stunning amount of facial hair.";
+				"Questi nani non-morti, risvegliati dalla volonta' del Re dei Nani, erano membri della sua corte. " +
+				"Appaiono come scheletri con una barba sorprendentemente folta.";
 		}
 		
 		private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();

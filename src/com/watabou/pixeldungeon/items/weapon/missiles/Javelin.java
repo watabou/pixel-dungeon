@@ -27,7 +27,7 @@ import com.watabou.utils.Random;
 public class Javelin extends MissileWeapon {
 
 	{
-		name = "javelin";
+		name = "giavellotto";
 		image = ItemSpriteSheet.JAVELIN;
 		
 		STR = 15;
@@ -61,8 +61,7 @@ public class Javelin extends MissileWeapon {
 	@Override
 	public String desc() {
 		return 
-			"This length of metal is weighted to keep the spike " +
-			"at its tip foremost as it sails through the air.";
+			"Questo lungo giavellotto di metallo e' perfetto per perforare il bersaglio anceh da lunghe distanze.";
 	}
 	
 	@Override

@@ -48,7 +48,7 @@ public class Invisibility extends FlavourBuff {
 	
 	@Override
 	public String toString() {
-		return "Invisible";
+		return "Invisibile";
 	}
 	
 	public static void dispel() {

@@ -56,7 +56,7 @@ import com.watabou.utils.Random;
 public class Ghost extends NPC {
 
 	{
-		name = "sad ghost";
+		name = "fantasma triste";
 		spriteClass = GhostSprite.class;
 		
 		flying = true;
@@ -77,7 +77,7 @@ public class Ghost extends NPC {
 	
 	@Override
 	public String defenseVerb() {
-		return "evaded";
+		return "evitato";
 	}
 	
 	@Override
@@ -114,8 +114,8 @@ public class Ghost extends NPC {
 	@Override
 	public String description() {
 		return 
-			"The ghost is barely visible. It looks like a shapeless " +
-			"spot of faint light with a sorrowful face.";
+			"Il fantasma si vede a malapena. E' come una piccola luce fluttuante con " +
+			"un viso pieno di dolore.";
 	}
 	
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();
@@ -354,17 +354,17 @@ public class Ghost extends NPC {
 	
 	private static final QuestHandler roseQuest = new QuestHandler() {
 		private static final String TXT_ROSE1	=
-			"Hello adventurer... Once I was like you - strong and confident... " +
-			"And now I'm dead... But I can't leave this place... Not until I have my _dried rose_... " +
-			"It's very important to me... Some monster stole it from my body...";
+			"Ciao avventuriero... Una volta ero come te - forte e coraggioso... " +
+			"E ora sono morto... Ma non posso lasciare questo posto... Non finche' riavro' la mia _rosa secca_... " +
+			"E' vramente importante per me... Qualche mostro l'ha rubata dal mio cadavere...";
 		
 		private static final String TXT_ROSE2	=
-			"Please... Help me... _Find the rose_...";
+			"Per favore... Aiutami... _Trova la rosa_...";
 		
 		private static final String TXT_ROSE3	= 
-			"Yes! Yes!!! This is it! Please give it to me! " +
-			"And you can take one of these items, maybe they " +
-			"will be useful to you in your journey...";
+			"Si! Si!!! E' lei! Per favore dammela! " +
+			"E potrai prendere uno di questi oggetti, magari " +
+			"ti saranno utili nel tuo viaggio...";
 
 		public void interact( Ghost ghost ) {
 			if (Quest.given) {
@@ -388,17 +388,17 @@ public class Ghost extends NPC {
 	
 	private static final QuestHandler ratQuest = new QuestHandler() {
 		private static final String TXT_RAT1	=
-			"Hello adventurer... Once I was like you - strong and confident... " +
-			"And now I'm dead... But I can't leave this place... Not until I have my revenge... " +
-			"Slay the _fetid rat_, that has taken my life...";
+			"Ciao avventuriero... Una volta ero come te - forte e coraggioso... " +
+			"E ora sono morto... Ma non posso lasciare questo posto... Non finche' non avro' la mia vendetta... " +
+			"Uccidi il _ratto fetido_, lui ha preso la mia vita...";
 			
 		private static final String TXT_RAT2	=
-			"Please... Help me... _Slay the abomination_...";
+			"Per favore... Aiutami... _Uccidi quell'abominio_...";
 		
 		private static final String TXT_RAT3	= 
-			"Yes! The ugly creature is slain and I can finally rest... " +
-			"Please take one of these items, maybe they " +
-			"will be useful to you in your journey...";
+			"Si! Quella orribile creatura e' morta e io posso finalmente riposare... " +
+			"Prendi uno di questi oggetti, magari " +
+			"ti saranno utili nel tuo viaggio...";
 		
 		public void interact( Ghost ghost ) {
 			if (Quest.given) {
@@ -422,16 +422,16 @@ public class Ghost extends NPC {
 	
 	private static final QuestHandler curseQuest = new QuestHandler() {
 		private static final String TXT_CURSE1 =
-			"Hello adventurer... Once I was like you - strong and confident... " +
-			"And now I'm dead... But I can't leave this place, as I am bound by a horrid curse... " +
-			"Please... Help me... _Destroy the curse_...";
+			"Ciao avventuriero... Una volta ero come te - forte e coraggioso... " +
+			"E ora sono morto... Ma non posso lasciare questo posto, finche' sono imprigionato da un'orrida maledizione... " +
+			"Per favore... Aiutami... _Spezza la maledizione_...";
 		private static final String TXT_CURSE2 =
-			"Thank you, %s! The curse is broken and I can finally rest... " +
-			"Please take one of these items, maybe they " +
-			"will be useful to you in your journey...";
+			"Grazie, %s! La maledizione e' spezzata e posso finalmente riposare... " +
+			"Prendi uno di questi oggetti, magari " +
+			"ti saranno utili nel tuo viaggio...";
 		
-		private static final String TXT_YES	= "Yes, I will do it for you";
-		private static final String TXT_NO	= "No, I can't help you";
+		private static final String TXT_YES	= "Si, ti aiutero'";
+		private static final String TXT_NO	= "No, non posso aiutarti";
 		
 		public void interact( final Ghost ghost ) {
 			if (Quest.given) {

@@ -34,7 +34,7 @@ import com.watabou.utils.Random;
 public class Spinner extends Mob {
 	
 	{
-		name = "cave spinner";
+		name = "filatore delle caverne";
 		spriteClass = SpinnerSprite.class;
 		
 		HP = HT = 50;
@@ -97,8 +97,8 @@ public class Spinner extends Mob {
 	@Override
 	public String description() {		
 		return 
-			"These greenish furry cave spiders try to avoid direct combat, preferring to wait in the distance " +
-			"while their victim, entangled in the spinner's excreted cobweb, slowly dies from their poisonous bite.";
+			"Questo verdognolo ragno peloso delle caverne tenta di evitare il combattimento ravvicinato, perferendo aspettare a distanza " +
+			"mentre la sua vittima, rimane incastrato nella ragnatela, morendo lentamente avvelenato dal suo morso.";
 	}
 	
 	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();

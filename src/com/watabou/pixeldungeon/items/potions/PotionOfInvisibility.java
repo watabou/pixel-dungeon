@@ -31,23 +31,23 @@ public class PotionOfInvisibility extends Potion {
 	private static final float ALPHA	= 0.4f;
 	
 	{
-		name = "Potion of Invisibility";
+		name = "Pozione dell'Invisibilita'";
 	}
 	
 	@Override
 	protected void apply( Hero hero ) {
 		setKnown();
 		Buff.affect( hero, Invisibility.class, Invisibility.DURATION );
-		GLog.i( "You see your hands turn invisible!" );
+		GLog.i( "Vedi le tue mani diventare invisibili!" );
 		Sample.INSTANCE.play( Assets.SND_MELD );
 	}
 	
 	@Override
 	public String desc() {
 		return
-			"Drinking this potion will render you temporarily invisible. While invisible, " +
-			"enemies will be unable to see you. Attacking an enemy, as well as using a wand or a scroll " +
-			"before enemy's eyes, will dispel the effect.";
+			"Bere questa pozione ti rendera' temporaneamente invisibile. Mentre sei invisibile, " +
+			"i nemici non ti vedranno. Attaccare un nemico, anche con una bacchetta o con una pergamena, " +
+			"davanti i suoi occhi, fara' sparire l'effetto.";
 	}
 	
 	@Override

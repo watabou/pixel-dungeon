@@ -45,6 +45,6 @@ public class Roots extends FlavourBuff {
 	
 	@Override
 	public String toString() {
-		return "Rooted";
+		return "Immobilizzato";
 	}
 }

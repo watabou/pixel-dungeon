@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.items.rings;
 public class RingOfHerbalism extends Ring {
 
 	{
-		name = "Ring of Herbalism";
+		name = "Anello della Natura";
 	}
 	
 	@Override
@@ -31,7 +31,7 @@ public class RingOfHerbalism extends Ring {
 	@Override
 	public String desc() {
 		return isKnown() ?
-			"This ring increases your chance to gather dew and seeds from trampled grass." :
+			"Quest'anello ti permette di trovare piu' gocce di rugiada e semi nell'erba alta." :
 			super.desc();
 	}
 	

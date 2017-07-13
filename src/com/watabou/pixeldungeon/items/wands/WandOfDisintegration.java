@@ -36,7 +36,7 @@ import com.watabou.utils.Random;
 public class WandOfDisintegration extends Wand {
 
 	{
-		name = "Wand of Disintegration";
+		name = "Bacchetta della Disintegrazione";
 		hitChars = false;
 	}
 	
@@ -108,7 +108,7 @@ public class WandOfDisintegration extends Wand {
 	@Override
 	public String desc() {
 		return
-			"This wand emits a beam of destructive energy, which pierces all creatures in its way. " +
-			"The more targets it hits, the more damage it inflicts to each of them.";
+			"Questa bacchetta emette un fascio di energia distruttiva, che colpisce ogni creatura nella sua strada. " +
+			"Piu' saranno i nemici che colpisce, piu' saranno i danni inflitti ad ognuno di loro.";
 	}
 }

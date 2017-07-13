@@ -107,14 +107,14 @@ public class HallsLevel extends RegularLevel {
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.WATER:
-			return "Cold lava";
+			return "Lava fredda";
 		case Terrain.GRASS:
-			return "Embermoss";
+			return "Muschio infernale";
 		case Terrain.HIGH_GRASS:
-			return "Emberfungi";
+			return "Funghi infernale";
 		case Terrain.STATUE:
 		case Terrain.STATUE_SP:
-			return "Pillar";
+			return "Pilastro";
 		default:
 			return super.tileName( tile );
 		}
@@ -124,12 +124,12 @@ public class HallsLevel extends RegularLevel {
 	public String tileDesc(int tile) {
 		switch (tile) {
 		case Terrain.WATER:
-			return "It looks like lava, but it's cold and probably safe to touch.";
+			return "Sembra lava, ma e' fredda e probabilmente sicura da toccare.";
 		case Terrain.STATUE:
 		case Terrain.STATUE_SP:
-			return "The pillar is made of real humanoid skulls. Awesome."; 
+			return "Il pilastro e' fatto di veri teschi umanoidi. Fantastico."; 
 		case Terrain.BOOKSHELF:
-			return "Books in ancient languages smoulder in the bookshelf.";
+			return "I libri, scritti in lingue antiche, sono ricoperti di polvere nello scaffale.";
 		default:
 			return super.tileDesc( tile );
 		}

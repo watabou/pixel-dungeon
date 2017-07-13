@@ -31,11 +31,11 @@ import com.watabou.pixeldungeon.windows.WndOptions;
 
 abstract public class MissileWeapon extends Weapon {
 
-	private static final String TXT_MISSILES	= "Missile weapon";
-	private static final String TXT_YES			= "Yes, I know what I'm doing";
-	private static final String TXT_NO			= "No, I changed my mind";
+	private static final String TXT_MISSILES	= "Arma da lancio";
+	private static final String TXT_YES			= "Si, so cosa faccio";
+	private static final String TXT_NO			= "No, ho cambiato idea";
 	private static final String TXT_R_U_SURE	= 
-		"Do you really want to equip it as a melee weapon?";
+		"Vuoi davvero utilizzarlo come arma da corpo a corpo?";
 	
 	{
 		stackable = true;
@@ -122,23 +122,23 @@ abstract public class MissileWeapon extends Weapon {
 		
 		int min = min();
 		int max = max();
-		info.append( "\n\nAverage damage of this weapon equals to " + (min + (max - min) / 2) + " points per hit. " );
+		info.append( "\n\nIl danno medio di quest'arma e' di " + (min + (max - min) / 2) + " punti ogni colpo. " );
 		
 		if (Dungeon.hero.belongings.backpack.items.contains( this )) {
 			if (STR > Dungeon.hero.STR()) {
 				info.append( 
-					"Because of your inadequate strength the accuracy and speed " +
-					"of your attack with this " + name + " is decreased." );
+						"A causa della tua forza inadeguata la precisione e la velocita' " +
+						"dei tuoi attacchi sono diminuite." );
 			}
 			if (STR < Dungeon.hero.STR()) {
 				info.append( 
-					"Because of your excess strength the damage " +
-					"of your attack with this " + name + " is increased." );
+						"A causa della tua forza eccessiva " +
+						"della tua forza la precisione e la velocita' sono aumentate." );
 			}
 		}
 		
 		if (isEquipped( Dungeon.hero )) {
-			info.append( "\n\nYou hold the " + name + " at the ready." ); 
+			info.append( "\n\nStai tenendo " + name + " in mano al momento." ); 
 		}
 		
 		return info.toString();

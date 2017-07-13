@@ -29,7 +29,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndClass extends WndTabbed {
 	
-	private static final String TXT_MASTERY	= "Mastery";
+	private static final String TXT_MASTERY	= "Maestria";
 	
 	private static final int WIDTH			= 110;
 	

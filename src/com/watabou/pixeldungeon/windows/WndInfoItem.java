@@ -29,20 +29,20 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class WndInfoItem extends Window {
 	
-	private static final String TXT_CHEST			= "Chest";
-	private static final String TXT_LOCKED_CHEST	= "Locked chest";
-	private static final String TXT_CRYSTAL_CHEST	= "Crystal chest";
-	private static final String TXT_TOMB			= "Tomb";
-	private static final String TXT_SKELETON		= "Skeletal remains";
-	private static final String TXT_WONT_KNOW		= "You won't know what's inside until you open it!";
-	private static final String TXT_NEED_KEY		= TXT_WONT_KNOW + " But to open it you need a golden key.";
-	private static final String TXT_INSIDE			= "You can see %s inside, but to open the chest you need a golden key.";
+	private static final String TXT_CHEST			= "Forziere";
+	private static final String TXT_LOCKED_CHEST	= "Forziere chiuso";
+	private static final String TXT_CRYSTAL_CHEST	= "Forziere di cristallo";
+	private static final String TXT_TOMB			= "Tomba";
+	private static final String TXT_SKELETON		= "Resti d'ossa";
+	private static final String TXT_WONT_KNOW		= "Non saprai cosa c'e' dentro finche' non lo aprirai!";
+	private static final String TXT_NEED_KEY		= TXT_WONT_KNOW + " Ma hai bisogno della chiave.";
+	private static final String TXT_INSIDE			= "Puoi scorgere %s all'interno, ma hai bisogno della chiave per aprire il forziere.";
 	private static final String TXT_OWNER	= 
-		"This ancient tomb may contain something useful, " +
-		"but its owner will most certainly object to checking.";
+		"Questa vecchia tomba potrebbe contenere qualcosa di utile, " +
+		"ma il suo proprietario obiettera' sicuramente se lo cerchi.";
 	private static final String TXT_REMAINS	= 
-		"This is all that's left from one of your predecessors. " +
-		"Maybe it's worth checking for any valuables.";
+		"Questo e' quello che rimane di un tuo precedessore. " +
+		"Forse vale la pena dare un'occhiata.";
 	
 	private static final float GAP	= 2;
 	

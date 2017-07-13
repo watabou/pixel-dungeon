@@ -39,10 +39,10 @@ public class Shaman extends Mob implements Callback {
 
 	private static final float TIME_TO_ZAP	= 2f;
 	
-	private static final String TXT_LIGHTNING_KILLED = "%s's lightning bolt killed you...";
+	private static final String TXT_LIGHTNING_KILLED = "il fulmine scagliato da %s ti ha ucciso...";
 	
 	{
-		name = "gnoll shaman";
+		name = "gnoll sciamano";
 		spriteClass = ShamanSprite.class;
 		
 		HP = HT = 18;
@@ -127,9 +127,9 @@ public class Shaman extends Mob implements Callback {
 	@Override
 	public String description() {
 		return
-			"The most intelligent gnolls can master shamanistic magic. Gnoll shamans prefer " +
-			"battle spells to compensate for lack of might, not hesitating to use them " +
-			"on those who question their status in a tribe.";
+			"Gli gnoll piu' intelligenti possono imparare l'arte magica degli sciamani. Gli gnoll sciamani preferiscono " +
+			"incantesimi da battaglia per compensare la loro forza, non esitando di usarli " +
+			"su chiumque si chieda quale sia il loro ruolo nella tribu'.";
 	}
 	
 	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();

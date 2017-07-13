@@ -35,6 +35,6 @@ public class Blindness extends FlavourBuff {
 	
 	@Override
 	public String toString() {
-		return "Blinded";
+		return "Cieco";
 	}
 }

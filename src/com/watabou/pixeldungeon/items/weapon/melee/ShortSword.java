@@ -33,21 +33,21 @@ import com.watabou.pixeldungeon.windows.WndBag;
 
 public class ShortSword extends MeleeWeapon {
 	
-	public static final String AC_REFORGE	= "REFORGE";
+	public static final String AC_REFORGE	= "RIFORGIA";
 	
-	private static final String TXT_SELECT_WEAPON	= "Select a weapon to upgrade";
+	private static final String TXT_SELECT_WEAPON	= "Seleziona un'arma da potenziare";
 	
 	private static final String TXT_REFORGED = 
-		"you reforged the short sword to upgrade your %s";
+		"hai riforgiato la spada corta per migliorare: %s";
 	private static final String TXT_NOT_BOOMERANG = 
-		"you can't upgrade a boomerang this way";
+		"non puoi migliorare un boomerang in questo modo";
 	
 	private static final float TIME_TO_REFORGE	= 2f;
 	
 	private boolean  equipped;
 	
 	{
-		name = "short sword";
+		name = "spada corta";
 		image = ItemSpriteSheet.SHORT_SWORD;
 	}
 	
@@ -97,7 +97,7 @@ public class ShortSword extends MeleeWeapon {
 	@Override
 	public String desc() {
 		return 
-			"It is indeed quite short, just a few inches longer, than a dagger.";
+			"E' certamente una spada piu' lunga, giusto qualche centimetro, di un pugnale.";
 	}
 	
 	private final WndBag.Listener itemSelector = new WndBag.Listener() {

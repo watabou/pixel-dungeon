@@ -20,25 +20,25 @@ package com.watabou.pixeldungeon;
 public class ResultDescriptions {
 
 	// Mobs 
-	public static final String MOB	= "Killed by %s on level %d";
-	public static final String BOSS	= "Killed by the %s on level %d";
+	public static final String MOB	= "Ucciso da %s nel livello %d";
+	public static final String BOSS	= "Ucciso dal %s nel livello %d";
 	
 	// Items
-	public static final String WAND		= "Killed by your own %s on level %d";
-	public static final String GLYPH	= "Killed by the %s on level %d";
-	public static final String BOMB		= "Killed by an explosion of a bomb on level %d";
+	public static final String WAND		= "Ucciso dalla tua %s nel livello %d";
+	public static final String GLYPH	= "Ucciso da %s nel livello %d";
+	public static final String BOMB		= "Ucciso dall'esplosione di una bomba nel livello %d";
 	
 	// Dungeon features
-	public static final String TRAP	= "Killed by discharge of %s on level %d";
+	public static final String TRAP	= "Ucciso dall'attivazione di %s nel livello %d";
 	
 	// Debuffs & blobs
-	public static final String BURNING	= "Burned to death on level %d";
-	public static final String HUNGER	= "Starved to death on level %d";
-	public static final String POISON	= "Died from poison on level %d";
-	public static final String GAS		= "Died from toxic gas on level %d";
-	public static final String BLEEDING	= "Bled to death on level %d";
-	public static final String OOZE		= "Killed by a caustic ooze on level %d";
-	public static final String FALL		= "Fell to death on level %d";
+	public static final String BURNING	= "Bruciato vivo nel livello %d";
+	public static final String HUNGER	= "Morto per la fame nel livello %d";
+	public static final String POISON	= "Morto avvelenato nel livello %d";
+	public static final String GAS		= "Morto per il gas tossico nel livello %d";
+	public static final String BLEEDING	= "Morto per sanguinamento nel livello %d";
+	public static final String OOZE		= "Ucciso dalla melma corrosiva nel livello %d";
+	public static final String FALL		= "Morto per una caduta nel livello %d";
 	
-	public static final String WIN	= "Obtained the Amulet of Yendor";
+	public static final String WIN	= "Ottenuto l'Amuleto di Yendor";
 }
