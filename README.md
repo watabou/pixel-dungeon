@@ -26,7 +26,7 @@ By grouping all the strings of the game, it becomes possible to take advantage o
 
 
 -----
-#####To translate the game in [Transifex](https://www.transifex.com/pixel-dungeon/pixel-1/)
+##### To translate the game in [Transifex](https://www.transifex.com/pixel-dungeon/pixel-1/)
 
 * You can make or help translate the online game, accessed the website:
   * https://www.transifex.com/pixel-dungeon/pixel-1/
@@ -35,10 +35,10 @@ By grouping all the strings of the game, it becomes possible to take advantage o
 
 
 -----
-#####To translate the game in Eclipse:
+##### To translate the game in Eclipse:
 
-1. Copy the contents of the folder ```/res/values``` to a new directory with the corresponding site to be translated like as ```/res/values-fr``` for a translation into French.
-2. After making the copy, simply translating the content of all tags within the ```strings.xml``` file in your new directory.
+1. Copy the contents of the folder [/res/values](res/values/) to a new directory with the corresponding site to be translated like as [/res/values-fr](res/values-fr) for a translation into French.
+2. After making the copy, simply translating the content of all tags within the [strings.xml](res/values/strings.xml) file in your new directory.
 3. After that, please test your game translated. :wink::video_game:
 
 -----
