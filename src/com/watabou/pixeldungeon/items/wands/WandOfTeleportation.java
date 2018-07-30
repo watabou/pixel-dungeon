@@ -30,7 +30,7 @@ import com.watabou.utils.Callback;
 public class WandOfTeleportation extends Wand {
 
 	{
-		name = "Wand of Teleportation";
+		name = "Bacchetta del Teletrasporto";
 	}
 
 	@Override
@@ -63,13 +63,13 @@ public class WandOfTeleportation extends Wand {
 				ch.pos = pos;
 				ch.sprite.place( ch.pos );
 				ch.sprite.visible = Dungeon.visible[pos];
-				GLog.i( curUser.name + " teleported " + ch.name + " to somewhere" );
+				GLog.i( curUser.name + " ha teletrasportato " + ch.name + " da qualche parte" );
 				
 			}
 
 		} else {
 			
-			GLog.i( "nothing happened" );
+			GLog.i( "non e' successo nulla" );
 			
 		}
 	}
@@ -82,7 +82,7 @@ public class WandOfTeleportation extends Wand {
 	@Override
 	public String desc() {
 		return
-			"A blast from this wand will teleport a creature against " +
-			"its will to a random place on the current level.";
+			"Un colpo di questa bacchetta teletrasportera' una creatura contro la sua volonta' " +
+			"in un luogo a caso nel livello corrente.";
 	}
 }

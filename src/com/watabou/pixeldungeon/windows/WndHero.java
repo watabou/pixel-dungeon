@@ -41,11 +41,11 @@ public class WndHero extends WndTabbed {
 	private static final String TXT_STATS	= "Stats";
 	private static final String TXT_BUFFS	= "Buffs";
 	
-	private static final String TXT_EXP		= "Experience";
-	private static final String TXT_STR		= "Strength";
-	private static final String TXT_HEALTH	= "Health";
-	private static final String TXT_GOLD	= "Gold Collected";
-	private static final String TXT_DEPTH	= "Maximum Depth";
+	private static final String TXT_EXP		= "Esperienza";
+	private static final String TXT_STR		= "Forza";
+	private static final String TXT_HEALTH	= "Salute";
+	private static final String TXT_GOLD	= "Oro Raccolto";
+	private static final String TXT_DEPTH	= "Profondita' Max";
 	
 	private static final int WIDTH		= 100;
 	private static final int TAB_WIDTH	= 40;
@@ -92,9 +92,9 @@ public class WndHero extends WndTabbed {
 	
 	private class StatsTab extends Group {
 		
-		private static final String TXT_TITLE		= "Level %d %s";
-		private static final String TXT_CATALOGUS	= "Catalogus";
-		private static final String TXT_JOURNAL		= "Journal";
+		private static final String TXT_TITLE		= "Livello %d %s";
+		private static final String TXT_CATALOGUS	= "Catalogo";
+		private static final String TXT_JOURNAL		= "Diario";
 		
 		private static final int GAP = 5;
 		

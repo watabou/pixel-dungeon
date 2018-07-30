@@ -38,15 +38,15 @@ public class InterlevelScene extends PixelScene {
 
 	private static final float TIME_TO_FADE = 0.3f;
 	
-	private static final String TXT_DESCENDING	= "Descending...";
-	private static final String TXT_ASCENDING	= "Ascending...";
-	private static final String TXT_LOADING		= "Loading...";
-	private static final String TXT_RESURRECTING= "Resurrecting...";
-	private static final String TXT_RETURNING	= "Returning...";
-	private static final String TXT_FALLING		= "Falling...";
+	private static final String TXT_DESCENDING	= "Scendendo...";
+	private static final String TXT_ASCENDING	= "Salendo...";
+	private static final String TXT_LOADING		= "Caricando...";
+	private static final String TXT_RESURRECTING= "Risorgendo...";
+	private static final String TXT_RETURNING	= "Ritornando...";
+	private static final String TXT_FALLING		= "Cadendo...";
 	
-	private static final String ERR_FILE_NOT_FOUND	= "File not found. For some reason.";
-	private static final String ERR_GENERIC			= "Something went wrong..."	;	
+	private static final String ERR_FILE_NOT_FOUND	= "File non trovato. Per qualche ragione.";
+	private static final String ERR_GENERIC			= "Qualcosa e' andato storto..."	;	
 	
 	public static enum Mode {
 		DESCEND, ASCEND, CONTINUE, RESURRECT, RETURN, FALL, NONE

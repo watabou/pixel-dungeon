@@ -63,7 +63,7 @@ public class Golem extends Mob {
 	
 	@Override
 	public String defenseVerb() {
-		return "blocked";
+		return "bloccato";
 	}
 	
 	@Override
@@ -76,9 +76,9 @@ public class Golem extends Mob {
 	@Override
 	public String description() {
 		return
-			"The Dwarves tried to combine their knowledge of mechanisms with their newfound power of elemental binding. " +
-			"They used spirits of earth as the \"soul\" for the mechanical bodies of golems, which were believed to be " +
-			"most controllable of all. Despite this, the tiniest mistake in the ritual could cause an outbreak.";
+			"I Nani provarono a combinare la loro conoscenza dei meccanismi con il loro potere della fusione degli elementi. " +
+			"Usarono gli spiriti della terra come \"anima\" per i corpi meccanici dei golem, che si credeva fossero " +
+			"i piu' controllabili di tutti. Nonostante cio', un minimo errore nel rituale potrebbe causare la rivolta del golem.";
 	}
 	
 	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();

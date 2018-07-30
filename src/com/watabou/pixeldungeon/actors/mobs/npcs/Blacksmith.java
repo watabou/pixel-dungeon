@@ -45,30 +45,30 @@ import com.watabou.utils.Random;
 public class Blacksmith extends NPC {
 
 	private static final String TXT_GOLD_1 =
-		"Hey human! Wanna be useful, eh? Take dis pickaxe and mine me some _dark gold ore_, _15 pieces_ should be enough. " +
-		"What do you mean, how am I gonna pay? You greedy...\n" +
-		"Ok, ok, I don't have money to pay, but I can do some smithin' for you. Consider yourself lucky, " +
-		"I'm the only blacksmith around.";
+		"Hey umano! Voi esse' d'aiuto, eh? Prendi 'sto piccone e trovame un po' de _oro oscuro grezzo_, _15 pezzi_ dovrebbero basta'. " +
+		"Che intendi, dovrei pagatte? Tutti avari voi altri...\n" +
+		"Ok, ok, Non ho sordi pe' pagatte, ma posso forgiatte qualcosa. Considerate fortunato, " +
+		"so' l'unico fabbro nei dintorni.";
 	private static final String TXT_BLOOD_1 =
-		"Hey human! Wanna be useful, eh? Take dis pickaxe and _kill a bat_ wit' it, I need its blood on the head. " +
-		"What do you mean, how am I gonna pay? You greedy...\n" +
-		"Ok, ok, I don't have money to pay, but I can do some smithin' for you. Consider yourself lucky, " +
-		"I'm the only blacksmith around.";
+		"Hey umano! Voi esse' d'aiuto, eh? Prendi 'sto piccone e uccidime _un pipistrello_, me serve il suo sangue. " +
+		"Che intendi, dovrei pagatte? Tutti avari voi altri...\n" +
+		"Ok, ok, Non ho sordi pe' pagatte, ma posso forgiatte qualcosa. Considerate fortunato, " +
+		"so' l'unico fabbro nei dintorni.";
 	private static final String TXT2 =
-		"Are you kiddin' me? Where is my pickaxe?!";
+		"Me prendi in giro? Dove hai messo il mio piccone?!";
 	private static final String TXT3 =
-		"Dark gold ore. 15 pieces. Seriously, is it dat hard?";
+		"Oro oscuro grezzo. 15 pezzi. Davvero, e' cosi' difficile?";
 	private static final String TXT4 =
-		"I said I need bat blood on the pickaxe. Chop chop!";
+		"Ho detto che me serve sangue de pipistrello sul piccone. Datte 'na mossa!";
 	private static final String TXT_COMPLETED =
-		"Oh, you have returned... Better late dan never.";
+		"Oh, sei tornato... meglio tardi che mai.";
 	private static final String TXT_GET_LOST =
-		"I'm busy. Get lost!";
+		"Sono occupato. Scio'!";
 	
-	private static final String TXT_LOOKS_BETTER	= "your %s certainly looks better now";
+	private static final String TXT_LOOKS_BETTER	= "%s ha un aspetto migliore ora";
 	
 	{
-		name = "troll blacksmith";
+		name = "fabbro troll";
 		spriteClass = BlacksmithSprite.class;
 	}
 	
@@ -164,27 +164,27 @@ public class Blacksmith extends NPC {
 	public static String verify( Item item1, Item item2 ) {
 		
 		if (item1 == item2) {
-			return "Select 2 different items, not the same item twice!";
+			return "Seleziona 2 oggetti differenti, non lo stesso due volte!";
 		}
 		
 		if (item1.getClass() != item2.getClass()) {
-			return "Select 2 items of the same type!";
+			return "Seleziona 2 oggetti dello stesso tipo!";
 		}
 		
 		if (!item1.isIdentified() || !item2.isIdentified()) {
-			return "I need to know what I'm working with, identify them first!";
+			return "Devo sapere con che sto lavorando, identificali prima!";
 		}
 		
 		if (item1.cursed || item2.cursed) {
-			return "I don't work with cursed items!";
+			return "Non lavoro con roba maledetta!";
 		}
 		
 		if (item1.level() < 0 || item2.level() < 0) {
-			return "It's a junk, the quality is too poor!";
+			return "E' uno schifo, la qualita' fa schifo!";
 		}
 		
 		if (!item1.isUpgradable() || !item2.isUpgradable()) {
-			return "I can't reforge these items!";
+			return "Non posso riforgiarli!";
 		}
 		
 		return null;
@@ -244,8 +244,8 @@ public class Blacksmith extends NPC {
 	@Override
 	public String description() {
 		return 
-			"This troll blacksmith looks like all trolls look: he is tall and lean, and his skin resembles stone " +
-			"in both color and texture. The troll blacksmith is tinkering with unproportionally small tools.";
+			"Questo fabbro troll assomiglia a ogni altro troll; E' alto e magro, e la sua pelle sembra pietra " +
+			"sia nel colore che nella forma. Il fabbro sta inappropiatamente lavorando con piccoli strumenti .";
 	}
 
 	public static class Quest {

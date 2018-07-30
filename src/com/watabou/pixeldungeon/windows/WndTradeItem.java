@@ -40,15 +40,15 @@ public class WndTradeItem extends Window {
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 16;
 	
-	private static final String TXT_SALE		= "FOR SALE: %s - %dg";
-	private static final String TXT_BUY			= "Buy for %dg";
-	private static final String TXT_SELL		= "Sell for %dg";
-	private static final String TXT_SELL_1		= "Sell 1 for %dg";
-	private static final String TXT_SELL_ALL	= "Sell all for %dg";
-	private static final String TXT_CANCEL		= "Never mind";
+	private static final String TXT_SALE		= "IN VENDITA: %s - %dg";
+	private static final String TXT_BUY			= "Compra a %dg";
+	private static final String TXT_SELL		= "Vendi a %dg";
+	private static final String TXT_SELL_1		= "Vendi 1 a %dg";
+	private static final String TXT_SELL_ALL	= "Vendi tutto a %dg";
+	private static final String TXT_CANCEL		= "Lascia stare";
 	
-	private static final String TXT_SOLD	= "You've sold your %s for %dg";
-	private static final String TXT_BOUGHT	= "You've bought %s for %dg";
+	private static final String TXT_SOLD	= "Hai venduto il tuo %s per %dg";
+	private static final String TXT_BOUGHT	= "Hai comprato %s per %dg";
 	
 	private WndBag owner;
 	

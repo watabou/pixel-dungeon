@@ -42,10 +42,10 @@ import com.watabou.utils.Callback;
 
 public class WandOfReach extends Wand {
 
-	private static final String TXT_YOU_NOW_HAVE	= "You have magically transported %s into your backpack"; 
+	private static final String TXT_YOU_NOW_HAVE	= "Hai magicamente trasportato nella tua borsa: %s"; 
 	
 	{
-		name = "Wand of Reach";
+		name = "Bacchetta del Raggiungimento";
 		hitChars = false;
 	}
 	
@@ -129,8 +129,8 @@ public class WandOfReach extends Wand {
 	@Override
 	public String desc() {
 		return
-			"This utility wand can be used to grab objects from a distance and to switch places with enemies. " +
-			"Waves of magic force radiated from it will affect all cells on their way triggering traps, " +
-			"trampling high vegetation, opening closed doors and closing open ones.";
+			"Questa bacchetta puo' essere utilizzata per raccogliere oggetti da distanza e cambiare posto con i nemici. " +
+			"Onde di energia radiano da essa attivando tutte le trappole dove in cui passano, " +
+			"tagliando l'alta vegetazione, aprendo le porte chiuse e chiudendo quelle aperte.";
 	}
 }

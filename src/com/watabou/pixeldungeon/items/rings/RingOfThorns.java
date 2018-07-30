@@ -24,7 +24,7 @@ import com.watabou.pixeldungeon.items.Item;
 public class RingOfThorns extends Ring {
 
 	{
-		name = "Ring of Thorns";
+		name = "Anello delle Spine";
 	}
 	
 	@Override
@@ -59,9 +59,9 @@ public class RingOfThorns extends Ring {
 	@Override
 	public String desc() {
 		return isKnown() ?
-			"Though this ring doesn't provide real thorns, an enemy that attacks you " +
-			"will itself be wounded by a fraction of the damage that it inflicts. " +
-			"Upgrading this ring won't give any additional bonuses." :
+			"In effetti quest'anello non ha realmente delle spine, ma un nemico che ti attacca " +
+			"verra' ferito da una parte dei suoi stessi danni inflitti. " +
+			"Potenziare quest'anello non ti dara' nessun bonus aggiuntivo." :
 			super.desc();
 	}
 	

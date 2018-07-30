@@ -31,7 +31,7 @@ import com.watabou.utils.Random;
 
 public class Shock extends Weapon.Enchantment {
 
-	private static final String TXT_SHOCKING	= "shocking %s";
+	private static final String TXT_SHOCKING	= "%s scioccante";
 	
 	@Override
 	public boolean proc( Weapon weapon, Char attacker, Char defender, int damage ) {

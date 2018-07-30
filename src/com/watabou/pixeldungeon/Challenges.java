@@ -28,13 +28,13 @@ public class Challenges {
 	public static final int NO_SCROLLS			= 64;
 	
 	public static final String[] NAMES = {
-		"On diet",
-		"Faith is my armor",
-		"Pharmacophobia",
-		"Barren land",
-		"Swarm intelligence",
-		"Into darkness",
-		"Forbidden runes"
+		"A dieta",
+		"La fede e' la mia armatura",
+		"Farmacofobia",
+		"Terra sterile",
+		"Intelligenza dello sciame",
+		"Nell'oscurita'",
+		"Rune proibite"
 	};
 	
 	public static final int[] MASKS = {

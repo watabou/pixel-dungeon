@@ -39,10 +39,10 @@ public class Warlock extends Mob implements Callback {
 	
 	private static final float TIME_TO_ZAP	= 1f;
 	
-	private static final String TXT_SHADOWBOLT_KILLED = "%s's shadow bolt killed you...";
+	private static final String TXT_SHADOWBOLT_KILLED = "la scossa oscura dello %s ti ha ucciso...";
 	
 	{
-		name = "dwarf warlock";
+		name = "nano stregone";
 		spriteClass = WarlockSprite.class;
 		
 		HP = HT = 70;
@@ -128,9 +128,9 @@ public class Warlock extends Mob implements Callback {
 	@Override
 	public String description() {
 		return
-			"When dwarves' interests have shifted from engineering to arcane arts, " +
-			"warlocks have come to power in the city. They started with elemental magic, " +
-			"but soon switched to demonology and necromancy.";
+			"Quando gli interessi dei nani versero dall'ingegneria alle arti arcane, " +
+			"gli stregoni presero potere nella citta'. Iniziarono con magia elementale, " +
+			"ma presto la sostituirono con demonologia e necromanzia.";
 	}
 	
 	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();

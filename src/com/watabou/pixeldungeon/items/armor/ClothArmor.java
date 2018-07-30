@@ -23,7 +23,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class ClothArmor extends Armor {
 
 	{	
-		name = "cloth armor";
+		name = "maglia di stoffa";
 		image = ItemSpriteSheet.ARMOR_CLOTH;
 	}
 	
@@ -33,6 +33,6 @@ public class ClothArmor extends Armor {
 	
 	@Override
 	public String desc() {
-		return "This lightweight armor offers basic protection.";
+		return "Quest'armatura leggera offre una protezione basilare.";
 	}
 }

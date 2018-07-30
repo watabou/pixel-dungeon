@@ -30,12 +30,12 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class PhantomFish extends Item {
 	
-	private static final String AC_EAT	= "EAT";
+	private static final String AC_EAT	= "MANGIA";
 	
 	private static final float TIME_TO_EAT	= 2f;
 	
 	{
-		name = "phantom fish";
+		name = "pesce fantasma";
 		image = ItemSpriteSheet.PHANTOM;
 
 		unique = true;
@@ -59,7 +59,7 @@ public class PhantomFish extends Item {
 			Sample.INSTANCE.play( Assets.SND_EAT );
 			Sample.INSTANCE.play( Assets.SND_MELD );
 			
-			GLog.i( "You see your hands turn invisible!" );
+			GLog.i( "Vedi le tue mani diventare invisibili!" );
 			Buff.affect( hero, Invisibility.class, Invisibility.DURATION );
 			
 			hero.spend( TIME_TO_EAT );
@@ -84,7 +84,7 @@ public class PhantomFish extends Item {
 	@Override
 	public String info() {
 		return
-			"You can barely see this tiny translucent fish in the air. " +
-			"In the water it becomes effectively invisible.";
+			"Puoi difficilmente scorgere questo pesce traslucido in aria. " +
+			"In acqua diventa effettivamente invisibile.";
 	}
 }

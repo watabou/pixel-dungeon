@@ -30,8 +30,8 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class Fadeleaf extends Plant {
 
 	private static final String TXT_DESC = 
-		"Touching a Fadeleaf will teleport any creature " +
-		"to a random place on the current level.";
+		"Toccare una Fadeleaf teletrasportera' ogni creatura " +
+		"in un posto casuale del livello corrente.";
 	
 	{
 		image = 6;
@@ -82,7 +82,7 @@ public class Fadeleaf extends Plant {
 		{
 			plantName = "Fadeleaf";
 			
-			name = "seed of " + plantName;
+			name = "seme di " + plantName;
 			image = ItemSpriteSheet.SEED_FADELEAF;
 			
 			plantClass = Fadeleaf.class;

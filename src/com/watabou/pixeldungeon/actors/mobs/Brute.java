@@ -31,10 +31,10 @@ import com.watabou.utils.Random;
 
 public class Brute extends Mob {
 
-	private static final String TXT_ENRAGED = "%s becomes enraged!";
+	private static final String TXT_ENRAGED = "%s si inferocisce!";
 	
 	{
-		name = "gnoll brute";
+		name = "gnoll bruto";
 		spriteClass = BruteSprite.class;
 		
 		HP = HT = 40;
@@ -81,7 +81,7 @@ public class Brute extends Mob {
 			spend( TICK );
 			if (Dungeon.visible[pos]) {
 				GLog.w( TXT_ENRAGED, name );
-				sprite.showStatus( CharSprite.NEGATIVE, "enraged" );
+				sprite.showStatus( CharSprite.NEGATIVE, "inferocito" );
 			}
 		}
 	}
@@ -89,8 +89,8 @@ public class Brute extends Mob {
 	@Override
 	public String description() {
 		return
-			"Brutes are the largest, strongest and toughest of all gnolls. When severely wounded, " +
-			"they go berserk, inflicting even more damage to their enemies.";
+			"I Bruti sono i piu' larghi, forti e robusti di tutti gli gnoll. Quando feriti gravemente, " +
+			"vanno su tutte le furie, infliggendo ancora piu' danno ai loro nemici.";
 	}
 	
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();

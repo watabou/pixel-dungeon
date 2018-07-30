@@ -34,12 +34,12 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class MageArmor extends ClassArmor {	
 	
-	private static final String AC_SPECIAL = "MOLTEN EARTH"; 
+	private static final String AC_SPECIAL = "FONDITERRA"; 
 	
-	private static final String TXT_NOT_MAGE	= "Only mages can use this armor!";
+	private static final String TXT_NOT_MAGE	= "Solo i maghi possono usare questa armatura!";
 	
 	{
-		name = "mage robe";
+		name = "tunica da mago";
 		image = ItemSpriteSheet.ARMOR_MAGE;
 	}
 	
@@ -51,8 +51,8 @@ public class MageArmor extends ClassArmor {
 	@Override
 	public String desc() {
 		return
-			"Wearing this gorgeous robe, a mage can cast a spell of molten earth: all the enemies " +
-			"in his field of view will be set on fire and unable to move at the same time.";
+			"Indossando questa magnifica tunica, un mago puo' lanciare un incantesimo \"fonditerra\": tutti i nemici " +
+			"nel suo campo visivo andranno a fuoco e saranno impossibilitati a muoversi contemporaneamente.";
 	}
 	
 	@Override

@@ -26,7 +26,7 @@ import com.watabou.pixeldungeon.sprites.ItemSprite.Glowing;
 
 public class AutoRepair extends Glyph {
 
-	private static final String TXT_AUTO_REPAIR	= "%s of auto-repair";
+	private static final String TXT_AUTO_REPAIR	= "%s dell'autoriparazione";
 
 	private static Glowing GRAY = new Glowing( 0xCC8888 );
 	

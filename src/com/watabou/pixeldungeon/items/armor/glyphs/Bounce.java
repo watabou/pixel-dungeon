@@ -29,7 +29,7 @@ import com.watabou.utils.Random;
 
 public class Bounce extends Glyph {
 
-	private static final String TXT_BOUNCE	= "%s of bounce";
+	private static final String TXT_BOUNCE	= "%s del balzo";
 	
 	@Override
 	public int proc( Armor armor, Char attacker, Char defender, int damage) {

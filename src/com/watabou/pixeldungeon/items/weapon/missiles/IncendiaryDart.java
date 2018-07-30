@@ -33,7 +33,7 @@ import com.watabou.utils.Random;
 public class IncendiaryDart extends MissileWeapon {
 
 	{
-		name = "incendiary dart";
+		name = "dardo incendiario";
 		image = ItemSpriteSheet.INCENDIARY_DART;
 		
 		STR = 12;
@@ -83,8 +83,8 @@ public class IncendiaryDart extends MissileWeapon {
 	@Override
 	public String desc() {
 		return 
-			"The spike on each of these darts is designed to pin it to its target " +
-			"while the unstable compounds strapped to its length burst into brilliant flames.";
+			"La punta di questi dardi sono disegnati per rimanere attaccati al bersaglio " +
+			"mentre il composto instabile reagisce con la composizione chimica del corpo del bersaglio e prende fuoco.";
 	}
 	
 	@Override

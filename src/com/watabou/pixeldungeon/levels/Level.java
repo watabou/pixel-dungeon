@@ -91,7 +91,7 @@ public abstract class Level implements Bundlable {
 	
 	protected static final float TIME_TO_RESPAWN	= 50;
 	
-	private static final String TXT_HIDDEN_PLATE_CLICKS = "A hidden pressure plate clicks!";
+	private static final String TXT_HIDDEN_PLATE_CLICKS = "Una pedana a pressione nascosta ha scattato!";
 	
 	public static boolean resizingNeeded;
 	public static int loadedMapSize;
@@ -896,7 +896,7 @@ public abstract class Level implements Bundlable {
 		
 		switch (tile) {
 		case Terrain.CHASM:
-			return "Chasm";
+			return "Vuoto";
 		case Terrain.EMPTY:
 		case Terrain.EMPTY_SP:
 		case Terrain.EMPTY_DECO:
@@ -906,68 +906,68 @@ public abstract class Level implements Bundlable {
 		case Terrain.SECRET_POISON_TRAP:
 		case Terrain.SECRET_ALARM_TRAP:
 		case Terrain.SECRET_LIGHTNING_TRAP:
-			return "Floor";
+			return "Pavimento";
 		case Terrain.GRASS:
-			return "Grass";
+			return "Erba";
 		case Terrain.WATER:
-			return "Water";
+			return "Acqua";
 		case Terrain.WALL:
 		case Terrain.WALL_DECO:
 		case Terrain.SECRET_DOOR:
-			return "Wall";
+			return "Muro";
 		case Terrain.DOOR:
-			return "Closed door";
+			return "Porta chiusa";
 		case Terrain.OPEN_DOOR:
-			return "Open door";
+			return "Porta aperta";
 		case Terrain.ENTRANCE:
-			return "Depth entrance";
+			return "Entrata";
 		case Terrain.EXIT:
-			return "Depth exit";
+			return "Uscita";
 		case Terrain.EMBERS:
-			return "Embers";
+			return "Braci";
 		case Terrain.LOCKED_DOOR:
-			return "Locked door";
+			return "Porta bloccata";
 		case Terrain.PEDESTAL:
-			return "Pedestal";
+			return "Piedistallo";
 		case Terrain.BARRICADE:
-			return "Barricade";
+			return "Barricata";
 		case Terrain.HIGH_GRASS:
-			return "High grass";
+			return "Erba alta";
 		case Terrain.LOCKED_EXIT:
-			return "Locked depth exit";
+			return "Uscita bloccata";
 		case Terrain.UNLOCKED_EXIT:
-			return "Unlocked depth exit";
+			return "Uscita sbloccata";
 		case Terrain.SIGN:
-			return "Sign";
+			return "Cartello";
 		case Terrain.WELL:
-			return "Well";
+			return "Pozzo";
 		case Terrain.EMPTY_WELL:
-			return "Empty well";
+			return "Pozzo vuoto";
 		case Terrain.STATUE:
 		case Terrain.STATUE_SP:
-			return "Statue";
+			return "Statua";
 		case Terrain.TOXIC_TRAP:
-			return "Toxic gas trap";
+			return "Trappola gas tossico";
 		case Terrain.FIRE_TRAP:
-			return "Fire trap";
+			return "Trappola fuoco";
 		case Terrain.PARALYTIC_TRAP:
-			return "Paralytic gas trap";
+			return "Trappola gas paralizzante";
 		case Terrain.POISON_TRAP:
-			return "Poison dart trap";
+			return "Trappola dardo avvelenato";
 		case Terrain.ALARM_TRAP:
-			return "Alarm trap";
+			return "Trappola allarme";
 		case Terrain.LIGHTNING_TRAP:
-			return "Lightning trap";
+			return "Trappola fulminante";
 		case Terrain.GRIPPING_TRAP:
-			return "Gripping trap";
+			return "Trappola presa";
 		case Terrain.SUMMONING_TRAP:
-			return "Summoning trap";
+			return "Trappola evocazione";
 		case Terrain.INACTIVE_TRAP:
-			return "Triggered trap";
+			return "Trappola innescata";
 		case Terrain.BOOKSHELF:
-			return "Bookshelf";
+			return "Libreria";
 		case Terrain.ALCHEMY:
-			return "Alchemy pot";
+			return "Pentolone dell'alchimia ";
 		default:
 			return "???";
 		}
@@ -977,26 +977,26 @@ public abstract class Level implements Bundlable {
 		
 		switch (tile) {
 		case Terrain.CHASM:
-			return "You can't see the bottom.";
+			return "Non puoi vedere il fondo.";
 		case Terrain.WATER:
-			return "In case of burning step into the water to extinguish the fire.";
+			return "Nel caso andassi a fuoco vai nell'acqua per estinguere le fiamme.";
 		case Terrain.ENTRANCE:
-			return "Stairs lead up to the upper depth.";
+			return "Le scale portano ad un livello piu' alto.";
 		case Terrain.EXIT:
 		case Terrain.UNLOCKED_EXIT:
-			return "Stairs lead down to the lower depth.";
+			return "Le scale portano ad un livello piu' basso.";
 		case Terrain.EMBERS:
-			return "Embers cover the floor.";
+			return "Delle braci coprono il terreno.";
 		case Terrain.HIGH_GRASS:
-			return "Dense vegetation blocks the view.";
+			return "Densa vegetazione blocca la visuale.";
 		case Terrain.LOCKED_DOOR:
-			return "This door is locked, you need a matching key to unlock it.";
+			return "Questa porta e' chiusa, hai bisogno della chiave per aprirla.";
 		case Terrain.LOCKED_EXIT:
-			return "Heavy bars block the stairs leading down.";
+			return "Sbarre bloccano la via per i piani inferiori.";
 		case Terrain.BARRICADE:
-			return "The wooden barricade is firmly set but has dried over the years. Might it burn?";
+			return "La barricata di legno e' fermata a terra ma si e' seccata durante gli anni. Brucera'?";
 		case Terrain.SIGN:
-			return "You can't read the text from here.";
+			return "Non puoi leggere da qui.";
 		case Terrain.TOXIC_TRAP:
 		case Terrain.FIRE_TRAP:
 		case Terrain.PARALYTIC_TRAP:
@@ -1005,16 +1005,16 @@ public abstract class Level implements Bundlable {
 		case Terrain.LIGHTNING_TRAP:
 		case Terrain.GRIPPING_TRAP:
 		case Terrain.SUMMONING_TRAP:
-			return "Stepping onto a hidden pressure plate will activate the trap.";
+			return "Camminando sulla pedana a pressione attiverai la trappola.";
 		case Terrain.INACTIVE_TRAP:
-			return "The trap has been triggered before and it's not dangerous anymore.";
+			return "La trappola e' stata attivata prima e non e' piu' pericolosa.";
 		case Terrain.STATUE:
 		case Terrain.STATUE_SP:
-			return "Someone wanted to adorn this place, but failed, obviously.";
+			return "Qualcuno ha tentato di abbellire questo posto, ma ha fallito, ovviamente.";
 		case Terrain.ALCHEMY:
-			return "Drop some seeds here to cook a potion.";
+			return "Metti qualche seme qui per creare una pozione.";
 		case Terrain.EMPTY_WELL:
-			return "The well has run dry.";
+			return "Il pozzo si e' inaridito.";
 		default:
 			if (tile >= Terrain.WATER_TILES) {
 				return tileDesc( Terrain.WATER );

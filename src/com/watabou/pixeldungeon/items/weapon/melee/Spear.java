@@ -22,7 +22,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class Spear extends MeleeWeapon {
 
 	{
-		name = "spear";
+		name = "lancia";
 		image = ItemSpriteSheet.SPEAR;
 	}
 	
@@ -32,6 +32,6 @@ public class Spear extends MeleeWeapon {
 	
 	@Override
 	public String desc() {
-		return "A slender wooden rod tipped with sharpened iron.";
+		return "Una sottile asta di legno con una punta d'acciaio affilata.";
 	}
 }

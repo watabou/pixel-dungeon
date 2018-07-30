@@ -28,11 +28,11 @@ import com.watabou.pixeldungeon.windows.WndBag;
 
 public class ScrollOfEnchantment extends InventoryScroll {
 
-	private static final String TXT_GLOWS	= "your %s glows in the dark";
+	private static final String TXT_GLOWS	= "%s brilla nell'oscurita'";
 	
 	{
-		name = "Scroll of Enchantment";
-		inventoryTitle = "Select an enchantable item";
+		name = "Pergamena dell'Incantamento";
+		inventoryTitle = "Seleziona un oggetto da incantare";
 		mode = WndBag.Mode.ENCHANTABLE;
 	}
 	
@@ -61,7 +61,7 @@ public class ScrollOfEnchantment extends InventoryScroll {
 	@Override
 	public String desc() {
 		return
-			"This scroll is able to imbue a weapon or an armor " +
-			"with a random enchantment, granting it a special power.";
+			"Questa pergamena e' capace di infondere in un'arma o un'armatura " +
+			"un incantamento casuale, garantendole una capacita' speciale.";
 	}
 }

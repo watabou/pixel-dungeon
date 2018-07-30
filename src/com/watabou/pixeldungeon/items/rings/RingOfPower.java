@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.items.rings;
 public class RingOfPower extends Ring {
 	
 	{
-		name = "Ring of Power";
+		name = "Anello della Potenza";
 	}
 	
 	@Override
@@ -31,8 +31,8 @@ public class RingOfPower extends Ring {
 	@Override
 	public String desc() {
 		return isKnown() ?
-			"Your wands will become more powerful in the energy field " +
-			"that radiates from this ring. Degraded rings of power will instead weaken your wands." :
+			"Le tue bacchette diverranno piu' potenti grazie al campo di energia emesso " +
+			"da questo anello. Anelli della potenza indeboliti invece, le renderanno piu' scarse." :
 			super.desc();
 	}
 	

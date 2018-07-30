@@ -32,7 +32,7 @@ import com.watabou.utils.Callback;
 public class WandOfAmok extends Wand {
 
 	{
-		name = "Wand of Amok";
+		name = "Bacchetta della Follia";
 	}
 
 	@Override
@@ -48,7 +48,7 @@ public class WandOfAmok extends Wand {
 
 		} else {
 			
-			GLog.i( "nothing happened" );
+			GLog.i( "non e' successo nulla" );
 			
 		}
 	}
@@ -61,7 +61,7 @@ public class WandOfAmok extends Wand {
 	@Override
 	public String desc() {
 		return
-			"The purple light from this wand will make the target run amok " +
-			"attacking random creatures in its vicinity.";
+			"La luce violetta che scaturisce da questa bacchetta fara' impazzire il bersaglio " +
+			"facendolo attaccare casualmente le creature circostanti.";
 	}
 }

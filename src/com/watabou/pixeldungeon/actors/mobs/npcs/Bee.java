@@ -32,7 +32,7 @@ import com.watabou.utils.Random;
 public class Bee extends NPC {
 	
 	{
-		name = "golden bee";
+		name = "ape dorata";
 		spriteClass = BeeSprite.class;
 		
 		viewDistance = 4;
@@ -117,8 +117,8 @@ public class Bee extends NPC {
 	@Override
 	public String description() {
 		return
-			"Despite their small size, golden bees tend " +
-			"to protect their master fiercely. They don't live long though.";
+			"Nonostante la loro piccola dimensione, le api dorate tendono " +
+			"a proteggere il loro proprietario fieramente. Comunque non hanno una vita mediamente lunga.";
 	}
 
 	@Override
@@ -176,7 +176,7 @@ public class Bee extends NPC {
 		
 		@Override
 		public String status() {
-			return Utils.format( "This %s is wandering", name );
+			return Utils.format( "%s sta vagando", name );
 		}
 	}
 }

@@ -40,7 +40,7 @@ import com.watabou.utils.Random;
 public class WandOfFirebolt extends Wand {
 
 	{
-		name = "Wand of Firebolt";
+		name = "Bacchetta della Palla di Fuoco";
 	}
 	
 	@Override
@@ -67,7 +67,7 @@ public class WandOfFirebolt extends Wand {
 			
 			if (ch == curUser && !ch.isAlive()) {
 				Dungeon.fail( Utils.format( ResultDescriptions.WAND, name, Dungeon.depth ) );
-				GLog.n( "You killed yourself with your own Wand of Firebolt..." );
+				GLog.n( "Ti sei ucciso con la tua stessa Bacchetta della Palla di Fuoco..." );
 			}
 		}
 	}
@@ -80,7 +80,7 @@ public class WandOfFirebolt extends Wand {
 	@Override
 	public String desc() {
 		return
-			"This wand unleashes bursts of magical fire. It will ignite " +
-			"flammable terrain, and will damage and burn a creature it hits.";
+			"Questa bacchetta rilascia un fuoco magico. Il quale inciendera' " +
+			"terreni infiammabili, e ferira' e bruciera' i nemici che colpisce.";
 	}
 }

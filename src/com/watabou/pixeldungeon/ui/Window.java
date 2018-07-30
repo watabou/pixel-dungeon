@@ -122,6 +122,7 @@ public class Window extends Group implements Signal.Listener<Key> {
 		destroy();
 	}
 	
+	
 	@Override
 	public void destroy() {
 		super.destroy();
@@ -152,4 +153,5 @@ public class Window extends Group implements Signal.Listener<Key> {
 	
 	public void onMenuPressed() {
 	}
+	
 }

@@ -29,7 +29,7 @@ public class CurareDart extends MissileWeapon {
 	public static final float DURATION	= 3f;
 	
 	{
-		name = "curare dart";
+		name = "dardo paralizzante";
 		image = ItemSpriteSheet.CURARE_DART;
 		
 		STR = 14;
@@ -63,8 +63,8 @@ public class CurareDart extends MissileWeapon {
 	@Override
 	public String desc() {
 		return 
-			"These little evil darts don't do much damage but they can paralyze " +
-			"the target leaving it helpless and motionless for some time.";
+			"Questi piccoli dardi malvagi non fanno molto danno ma possono paralizzare " +
+			"il bersaglio lasciandolo li' immobile e senza aiuti per un po' di tempo.";
 	}
 	
 	@Override

@@ -35,7 +35,7 @@ import com.watabou.utils.Random;
 public class CursePersonification extends Mob {
 
 	{
-		name = "curse personification";
+		name = "maledizione personificata";
 		spriteClass = CursePersonificationSprite.class;
 		
 		HP = HT = 10 + Dungeon.depth * 3;
@@ -109,8 +109,8 @@ public class CursePersonification extends Mob {
 	@Override
 	public String description() {
 		return
-			"This creature resembles the sad ghost, but it swirls with darkness. " +
-			"Its face bears an expression of despair.";
+			"Questa creatura somiglia al fantasma triste, ma si aggira nell'oscurita'. " +
+			"Il suo viso presenta un'espressione di disperazione.";
 	}
 	
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();

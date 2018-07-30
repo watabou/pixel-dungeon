@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.items.rings;
 public class RingOfHaste extends Ring {
 
 	{
-		name = "Ring of Haste";
+		name = "Anello della Fretta";
 	}
 	
 	@Override
@@ -31,7 +31,7 @@ public class RingOfHaste extends Ring {
 	@Override
 	public String desc() {
 		return isKnown() ?
-			"This ring accelerates the wearer's flow of time, allowing one to perform all actions a little faster." :
+			"Quest'anello accelera il flusso temporale del possessore, permettendogli di compiere tutte le azioni un po' piu' velocemente." :
 			super.desc();
 	}
 	

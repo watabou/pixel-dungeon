@@ -39,7 +39,7 @@ import com.watabou.utils.Random;
 
 public class BadgesScene extends PixelScene {
 	
-	private static final String TXT_TITLE = "Your Badges";
+	private static final String TXT_TITLE = "I Tuoi Distintivi";
 	
 	@Override
 	public void create() {

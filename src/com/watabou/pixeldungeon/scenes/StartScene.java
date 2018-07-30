@@ -42,34 +42,42 @@ import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.RedButton;
+import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndChallenges;
 import com.watabou.pixeldungeon.windows.WndClass;
 import com.watabou.pixeldungeon.windows.WndMessage;
 import com.watabou.pixeldungeon.windows.WndOptions;
+import com.watabou.pixeldungeon.windows.WndName;
 import com.watabou.utils.Callback;
+
 
 public class StartScene extends PixelScene {
 
+	static StartScene scene;
 	private static final float BUTTON_HEIGHT	= 24;
 	private static final float GAP				= 2;
 	
-	private static final String TXT_LOAD	= "Load Game";
-	private static final String TXT_NEW		= "New Game";
+	private static final String TXT_LOAD	= "Carica Partita";
+	private static final String TXT_NEW		= "Nuova Partita";
 	
-	private static final String TXT_ERASE		= "Erase current game";
-	private static final String TXT_DPTH_LVL	= "Depth: %d, level: %d";
+	private static final String TXT_ERASE		= "Cancella la partita";
+	private static final String TXT_DPTH_LVL	= "Profondita': %d, lvl: %d";
 	
-	private static final String TXT_REALLY	= "Do you really want to start new game?";
-	private static final String TXT_WARNING	= "Your current game progress will be erased.";
-	private static final String TXT_YES		= "Yes, start new game";
-	private static final String TXT_NO		= "No, return to main menu";
+	private static final String TXT_REALLY	= "Vuoi davvero iniziare una nuova partita?";
+	private static final String TXT_WARNING	= "I tuoi progressi verranno cancellati.";
+	private static final String TXT_YES		= "Si, inizia una nuova partita";
+	private static final String TXT_NO		= "No, ritorna al menu' principale";
 	
-	private static final String TXT_UNLOCK	= "To unlock this character class, slay the 3rd boss with any other class";
+	private static final String TXT_UNLOCK	= "Per sbloccare questo personaggio, sconfiggi il terzo boss con un personaggio qualsiasi";
 	
 	private static final String TXT_WIN_THE_GAME = 
-		"To unlock \"Challenges\", win the game with any character class.";
+		"Per sbloccare \"Sfide\", finisci il gioco con un personaggio qualsiasi.";
 	
+	public static void show( Window wnd ) {
+		scene.add( wnd );
+	}
+		
 	private static final float WIDTH_P	= 116;
 	private static final float HEIGHT_P	= 220;
 	
@@ -126,6 +134,7 @@ public class StartScene extends PixelScene {
 		buttonX = left;
 		buttonY = bottom - BUTTON_HEIGHT;
 		
+		
 		btnNewGame = new GameButton( TXT_NEW ) {
 			@Override
 			protected void onClick() {
@@ -133,14 +142,20 @@ public class StartScene extends PixelScene {
 					StartScene.this.add( new WndOptions( TXT_REALLY, TXT_WARNING, TXT_YES, TXT_NO ) {
 						@Override
 						protected void onSelect( int index ) {
+							
 							if (index == 0) {
-								startNewGame();
+								
+									StartScene.this.add(new WndName());
+							
+								
 							}
 						}
 					} );
 					
 				} else {
-					startNewGame();
+					StartScene.this.add(new WndName());
+					
+
 				}
 			}
 		};
@@ -297,7 +312,7 @@ public class StartScene extends PixelScene {
 		}
 	}
 	
-	private void startNewGame() {
+	public static void startNewGame() {
 
 		Dungeon.hero = null;
 		InterlevelScene.mode = InterlevelScene.Mode.DESCEND;
@@ -399,7 +414,7 @@ public class StartScene extends PixelScene {
 				highlighted = BASIC_HIGHLIGHTED;
 			}
 			
-			name.text( cl.name() );
+			name.text( cl.className() );
 			name.measure();
 			name.hardlight( normal );
 			

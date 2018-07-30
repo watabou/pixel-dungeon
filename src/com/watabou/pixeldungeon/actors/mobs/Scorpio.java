@@ -36,7 +36,7 @@ import com.watabou.utils.Random;
 public class Scorpio extends Mob {
 	
 	{
-		name = "scorpio";
+		name = "scorpione";
 		spriteClass = ScorpioSprite.class;
 		
 		HP = HT = 95;
@@ -100,8 +100,8 @@ public class Scorpio extends Mob {
 	@Override
 	public String description() {
 		return
-			"These huge arachnid-like demonic creatures avoid close combat by all means, " +
-			"firing crippling serrated spikes from long distances.";
+			"Queste enormi creature demoniache simili ad aracnidi evitano del tutto combattimenti ravvicinati, " +
+			"sparando spine taglienti da lunghe distanza.";
 	}
 	
 	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();

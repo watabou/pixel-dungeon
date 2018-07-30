@@ -27,7 +27,7 @@ import com.watabou.utils.Random;
 
 abstract public class KindOfWeapon extends EquipableItem {
 
-	private static final String TXT_EQUIP_CURSED	= "you wince as your grip involuntarily tightens around your %s";
+	private static final String TXT_EQUIP_CURSED	= "sussulti appena la tua presa viene vincolata involontariamente attorno a %s";
 	
 	protected static final float TIME_TO_EQUIP = 1f;
 	

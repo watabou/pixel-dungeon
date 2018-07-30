@@ -24,7 +24,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class ScrollHolder extends Bag {
 
 	{
-		name = "scroll holder";
+		name = "porta pergamene";
 		image = ItemSpriteSheet.HOLDER;
 		
 		size = 12;
@@ -43,7 +43,7 @@ public class ScrollHolder extends Bag {
 	@Override
 	public String info() {
 		return
-			"You can place any number of scrolls into this tubular container. " +
-			"It saves room in your backpack and protects scrolls from fire.";
+			"Puoi tenere ogni numero di pergamene in questo contenitore ignifugo. " +
+			"Salva spazio nella tua borsa e protegge le pergamene dal fuoco.";
 	}
 }

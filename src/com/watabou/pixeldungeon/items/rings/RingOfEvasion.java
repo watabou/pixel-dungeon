@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.items.rings;
 public class RingOfEvasion extends Ring {
 
 	{
-		name = "Ring of Evasion";
+		name = "Anello dell'Elusione";
 	}
 	
 	@Override
@@ -31,7 +31,7 @@ public class RingOfEvasion extends Ring {
 	@Override
 	public String desc() {
 		return isKnown() ?
-			"This ring increases your chance to dodge enemy attack." :
+			"Quest'anello aumenta le tue probabilita' di schivare un attacco nemico." :
 			super.desc();
 	}
 	

@@ -351,7 +351,7 @@ public class PrisonBossLevel extends RegularLevel {
 	public String tileName( int tile ) {
 		switch (tile) {
 		case Terrain.WATER:
-			return "Dark cold water.";
+			return "Oscura acqua fredda.";
 		default:
 			return super.tileName( tile );
 		}
@@ -361,7 +361,7 @@ public class PrisonBossLevel extends RegularLevel {
 	public String tileDesc(int tile) {
 		switch (tile) {
 		case Terrain.EMPTY_DECO:
-			return "There are old blood stains on the floor.";
+			return "C'e' de sangue secco sul pavimento.";
 		default:
 			return super.tileDesc( tile );
 		}

@@ -90,7 +90,7 @@ public class DM300 extends Mob {
 			sprite.emitter().burst( ElmoParticle.FACTORY, 5 );
 			
 			if (Dungeon.visible[step] && Dungeon.hero.isAlive()) {
-				GLog.n( "DM-300 repairs itself!" );
+				GLog.n( "Il DM-300 si ripara da solo!" );
 			}
 		}
 
@@ -132,21 +132,21 @@ public class DM300 extends Mob {
 		
 		Badges.validateBossSlain();
 		
-		yell( "Mission failed. Shutting down." );
+		yell( "Missione fallita. Arresto del sistema." );
 	}
 	
 	@Override
 	public void notice() {
 		super.notice();
-		yell( "Unauthorised personnel detected." );
+		yell( "Individuato personale non autorizzato." );
 	}
 	
 	@Override
 	public String description() {
 		return
-			"This machine was created by the Dwarves several centuries ago. Later, Dwarves started to replace machines with " +
-			"golems, elementals and even demons. Eventually it led their civilization to the decline. The DM-300 and similar " +
-			"machines were typically used for construction and mining, and in some cases, for city defense.";
+			"Questa macchina fu creata dai Nani parecchi anni fa. In seguito, i Nani iniziarono a rimpiazzare le macchine con " +
+			"golem, elementali e anche demoni. Col tempo cio' porto' la loro civilta' al declino. Il DM-300 e macchine " +
+			"simili erano usate tipicamente per le construzioni e le miniere, e in alcuni casi, per la difesa della citta'.";
 	}
 	
 	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();

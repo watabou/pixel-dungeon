@@ -40,14 +40,14 @@ import com.watabou.utils.Random;
 
 public class ScrollOfWipeOut extends Item {
 
-	private static final String TXT_BLINDED	= "You can't read a scroll while blinded";
+	private static final String TXT_BLINDED	= "Non puoi leggere una pergamena se sei cieco";
 	
-	public static final String AC_READ	= "READ";
+	public static final String AC_READ	= "LEGGI";
 	
 	protected static final float TIME_TO_READ	= 1f;
 	
 	{
-		name = "Scroll of Wipe Out";
+		name = "Pergamena degli Spiriti";
 		image = ItemSpriteSheet.SCROLL_WIPE_OUT;
 		
 		stackable = true;		
@@ -127,8 +127,8 @@ public class ScrollOfWipeOut extends Item {
 	@Override
 	public String desc() {
 		return
-			"Read this scroll to unleash the wrath of the dungeon spirits, killing everything on the current level. " +
-			"Well, almost everything. Some of the more powerful creatures may be not affected.";
+			"Leggi questa pergamena per rilasciare l'ira degli spiriti del dungeon, uccidendo ogni essere vivente sul livello corrente. " +
+			"Beh, quasi tutti. Alcune creature molto potenti potrebbero non risentirne.";
 	}
 	
 	@Override

@@ -44,9 +44,9 @@ import com.watabou.utils.Random;
 
 public abstract class Mob extends Char {
 	
-	private static final String	TXT_DIED	= "You hear something died in the distance";
+	private static final String	TXT_DIED	= "Hai sentito qualcosa che spirava il suo ultimo respiro in lontananza";
 	
-	protected static final String	TXT_ECHO	= "echo of ";
+	protected static final String	TXT_ECHO	= "rimbombo di ";
 	
 	protected static final String TXT_NOTICE1	= "?!";
 	protected static final String TXT_RAGE		= "#$%^";
@@ -407,7 +407,7 @@ public abstract class Mob extends Char {
 	}
 	
 	public String description() {
-		return "Real description is coming soon!";
+		return "La descrizione arrivera' a breve!";
 	}
 	
 	public void notice() {
@@ -425,7 +425,7 @@ public abstract class Mob extends Char {
 	
 	private class Sleeping implements AiState {
 		
-		public static final String TAG	= "SLEEPING";
+		public static final String TAG	= "ADDORMENTATO";
 		
 		@Override
 		public boolean act( boolean enemyInFOV, boolean justAlerted ) {
@@ -459,13 +459,13 @@ public abstract class Mob extends Char {
 		
 		@Override
 		public String status() {
-			return Utils.format( "This %s is sleeping", name );
+			return Utils.format( "%s sta dormendo", name );
 		}
 	}
 	
 	private class Wandering implements AiState {
 		
-		public static final String TAG	= "WANDERING";
+		public static final String TAG	= "ERRANTE";
 		
 		@Override
 		public boolean act( boolean enemyInFOV, boolean justAlerted ) {
@@ -496,13 +496,13 @@ public abstract class Mob extends Char {
 		
 		@Override
 		public String status() {
-			return Utils.format( "This %s is wandering", name );
+			return Utils.format( "%s sta vagando", name );
 		}
 	}
 	
 	private class Hunting implements AiState {
 		
-		public static final String TAG	= "HUNTING";
+		public static final String TAG	= "ALLERTATO";
 		
 		@Override
 		public boolean act( boolean enemyInFOV, boolean justAlerted ) {
@@ -535,13 +535,13 @@ public abstract class Mob extends Char {
 		
 		@Override
 		public String status() {
-			return Utils.format( "This %s is hunting", name );
+			return Utils.format( "%s sta cacciando", name );
 		}
 	}
 	
 	protected class Fleeing implements AiState {
 		
-		public static final String TAG	= "FLEEING";
+		public static final String TAG	= "IN VOLO";
 		
 		@Override
 		public boolean act( boolean enemyInFOV, boolean justAlerted ) {
@@ -570,13 +570,13 @@ public abstract class Mob extends Char {
 		
 		@Override
 		public String status() {
-			return Utils.format( "This %s is fleeing", name );
+			return Utils.format( "%s sta volando", name );
 		}
 	}
 	
 	private class Passive implements AiState {
 		
-		public static final String TAG	= "PASSIVE";
+		public static final String TAG	= "INATTIVO";
 		
 		@Override
 		public boolean act( boolean enemyInFOV, boolean justAlerted ) {
@@ -587,7 +587,7 @@ public abstract class Mob extends Char {
 		
 		@Override
 		public String status() {
-			return Utils.format( "This %s is passive", name );
+			return Utils.format( "%s e' calmo", name );
 		}
 	}
 }

@@ -38,7 +38,7 @@ import com.watabou.utils.Random;
 public class Swarm extends Mob {
 
 	{
-		name = "swarm of flies";
+		name = "sciame di mosche";
 		spriteClass = SwarmSprite.class;
 		
 		HP = HT = 80;
@@ -53,7 +53,7 @@ public class Swarm extends Mob {
 	
 	int generation	= 0;
 	
-	private static final String GENERATION	= "generation";
+	private static final String GENERATION	= "generazione";
 	
 	@Override
 	public void storeInBundle( Bundle bundle ) {
@@ -114,7 +114,7 @@ public class Swarm extends Mob {
 	
 	@Override
 	public String defenseVerb() {
-		return "evaded";
+		return "evitato";
 	}
 	
 	private Swarm split() {
@@ -139,7 +139,7 @@ public class Swarm extends Mob {
 	@Override
 	public String description() {
 		return
-			"The deadly swarm of flies buzzes angrily. Every non-magical attack " +
-			"will split it into two smaller but equally dangerous swarms.";
+			"Lo sciame mortale di mosche ronza ferocemente. Ogni attacco non magico " +
+			"lo dividera' in due sciami piu' piccoli ma equamente pericolosi.";
 	}
 }

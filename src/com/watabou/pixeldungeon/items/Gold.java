@@ -34,13 +34,13 @@ import com.watabou.utils.Random;
 
 public class Gold extends Item {
 
-	private static final String TXT_COLLECT	= "Collect gold coins to spend them later in a shop.";
-	private static final String TXT_INFO	= "A pile of %d gold coins. " + TXT_COLLECT;
-	private static final String TXT_INFO_1	= "One gold coin. " + TXT_COLLECT;
+	private static final String TXT_COLLECT	= "Colleziona oro da spendere in futuro nei negozi.";
+	private static final String TXT_INFO	= "Una pila di %d monete d'oro. " + TXT_COLLECT;
+	private static final String TXT_INFO_1	= "Una moneta d'oro. " + TXT_COLLECT;
 	private static final String TXT_VALUE	= "%+d";
 	
 	{
-		name = "gold";
+		name = "oro";
 		image = ItemSpriteSheet.GOLD;
 		stackable = true;
 	}
@@ -102,7 +102,7 @@ public class Gold extends Item {
 		return this;
 	}
 	
-	private static final String VALUE	= "value";
+	private static final String VALUE	= "valore";
 	
 	@Override
 	public void storeInBundle( Bundle bundle ) {

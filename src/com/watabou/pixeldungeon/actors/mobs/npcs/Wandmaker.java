@@ -55,7 +55,7 @@ import com.watabou.utils.Random;
 public class Wandmaker extends NPC {
 
 	{	
-		name = "old wandmaker";
+		name = "vecchio bacchettaio";
 		spriteClass = WandmakerSprite.class;
 	}
 	
@@ -72,7 +72,7 @@ public class Wandmaker extends NPC {
 	
 	@Override
 	public String defenseVerb() {
-		return "absorbed";
+		return "assorbito";
 	}
 	
 	@Override
@@ -101,8 +101,8 @@ public class Wandmaker extends NPC {
 	@Override
 	public String description() {
 		return 
-			"This old but hale gentleman wears a slightly confused " +
-			"expression. He is protected by a magic shield.";
+			"Questo vecchio ma arzillo gentiluomo ha un'espressione un po' confusa. " +
+			"Viene protetto da uno scudo magico.";
 	}
 	
 	public static class Quest {
@@ -293,12 +293,12 @@ public class Wandmaker extends NPC {
 	private static final QuestHandler berryQuest = new QuestHandler() {
 		{
 			txtQuest1 = 
-				"Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient - " +
-				"a _Rotberry seed_. Being a magic user, I'm quite able to defend myself against local monsters, " +
-				"but I'm getting lost in no time, it's very embarrassing. Probably you could help me? I would be " +
-				"happy to pay for your service with one of my best wands.";
+				"Oh, che piacevola sorpresa incontrare una persona decente in questo posto! Sonmo qui per cercare un raro ingrediente - " +
+				"un _seme di Rotberry_. Essendo un mago, sono abbastanza bravo a difendermi, " +
+				"ma mi sono subito perso, e' veramente imbarazzante. Potresti aiutarmi? Sarei " +
+				"felice di ripagare i tuoi servigi con una delle mie migliori bacchette.";
 			txtQuest2 = 
-				"Any luck with a _Rotberry seed_, %s? No? Don't worry, I'm not in a hurry.";
+				"Hai trovato qualche _seme di Rotberry_, %s? No? Non preoccuparti, non ho fretta.";
 		}
 
 		@Override
@@ -319,12 +319,13 @@ public class Wandmaker extends NPC {
 	private static final QuestHandler dustQuest = new QuestHandler() {
 		{
 			txtQuest1 = 
-				"Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient - " +
-				"_corpse dust_. It can be gathered from skeletal remains and there is an ample number of them in the dungeon. " +
-				"Being a magic user, I'm quite able to defend myself against local monsters, but I'm getting lost in no time, " +
-				"it's very embarrassing. Probably you could help me? I would be happy to pay for your service with one of my best wands.";
+				"Oh, che piacevola sorpresa incontrare una persona decente in questo posto! Sonmo qui per cercare un raro ingrediente - " +
+				"della _polvere di cadavere_. Puoi prenderla dai resti delle ossa che trovi spesso nel dungeon. " +
+				"Essendo un mago, sono abbastanza bravo a difendermi, " +
+				"ma mi sono subito perso, e' veramente imbarazzante. Potresti aiutarmi? Sarei " +
+				"felice di ripagare i tuoi servigi con una delle mie migliori bacchette.";
 			txtQuest2 = 
-				"Any luck with _corpse dust_, %s? Bone piles are the most obvious places to look.";
+				"Trovato della _polvere di cadavere_, %s? Le pila di ossa sono il luogo piu' ovvio dove guardare.";
 		}
 		
 		@Override
@@ -359,12 +360,13 @@ public class Wandmaker extends NPC {
 	private static final QuestHandler fishQuest = new QuestHandler() {
 		{
 			txtQuest1 = 
-				"Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient: " +
-				"a _phantom fish_. You can catch it with your bare hands, but it's very hard to notice in the water. " +
-				"Being a magic user, I'm quite able to defend myself against local monsters, but I'm getting lost in no time, " +
-				"it's very embarrassing. Probably you could help me? I would be happy to pay for your service with one of my best wands.";
+				"Oh, che piacevola sorpresa incontrare una persona decente in questo posto! Sonmo qui per cercare un raro ingrediente - " +
+				"un _pesce fantasma_. Puoi prenderlo a mani nude, ma e' veramente difficile da vedere nell'acqua. " +
+				"Essendo un mago, sono abbastanza bravo a difendermi, " +
+				"ma mi sono subito perso, e' veramente imbarazzante. Potresti aiutarmi? Sarei " +
+				"felice di ripagare i tuoi servigi con una delle mie migliori bacchette.";
 			txtQuest2 = 
-				"Any luck with a _phantom fish_, %s? You may want to try searching for it in one of the local pools.";
+				"Trovato un _pesce fantasma_, %s? Perche' non provi a cercarlo nelle pozze d'acqua qui intorno.";
 		}
 		
 		@Override

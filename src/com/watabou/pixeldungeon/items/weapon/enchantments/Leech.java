@@ -27,7 +27,7 @@ import com.watabou.utils.Random;
 
 public class Leech extends Weapon.Enchantment {
 
-	private static final String TXT_VAMPIRIC	= "vampiric %s";
+	private static final String TXT_VAMPIRIC	= "%s vampirico";
 	
 	private static ItemSprite.Glowing RED = new ItemSprite.Glowing( 0x660022 );
 	

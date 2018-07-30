@@ -33,13 +33,13 @@ import com.watabou.utils.Random;
 
 public class Thief extends Mob {
 
-	protected static final String TXT_STOLE	= "%s stole %s from you!";
-	protected static final String TXT_CARRIES	= "\n\n%s is carrying a _%s_. Stolen obviously.";
+	protected static final String TXT_STOLE	= "%s ti ha rubato %s !";
+	protected static final String TXT_CARRIES	= "\n\n%s porta _%s_. Rubato ovviamente.";
 	
 	public Item item;
 	
 	{
-		name = "crazy thief";
+		name = "ladro pazzo";
 		spriteClass = ThiefSprite.class;
 		
 		HP = HT = 20;
@@ -135,9 +135,9 @@ public class Thief extends Mob {
 	@Override
 	public String description() {
 		String desc =
-			"Deeper levels of the dungeon have always been a hiding place for all kinds of criminals. " +
-			"Not all of them could keep a clear mind during their extended periods so far from daylight. Long ago, " +
-			"these crazy thieves and bandits have forgotten who they are and why they steal.";
+			"I livelli piu' bassi del dungeon sono sempre stati un nascondiglio per tutti i tipi di criminali. " +
+			"Non tutti riescono a mantenere una mente lucida per tutto il periodo lontani dalla luce del sole. Tempo fa, " +
+			"questi ladri e banditi dimenticarono chi sono e perche' rubano.";
 		
 		if (item != null) {
 			desc += String.format( TXT_CARRIES, Utils.capitalize( this.name ), item.name() );

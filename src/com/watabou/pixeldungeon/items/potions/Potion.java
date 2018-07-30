@@ -39,16 +39,16 @@ import com.watabou.utils.Bundle;
 
 public class Potion extends Item {
 	
-	public static final String AC_DRINK	= "DRINK";
+	public static final String AC_DRINK	= "BEVI";
 	
-	private static final String TXT_HARMFUL		= "Harmful potion!";
-	private static final String TXT_BENEFICIAL	= "Beneficial potion";
-	private static final String TXT_YES			= "Yes, I know what I'm doing";
-	private static final String TXT_NO			= "No, I changed my mind";
+	private static final String TXT_HARMFUL		= "Pozione dannosa!";
+	private static final String TXT_BENEFICIAL	= "Pozione benefica";
+	private static final String TXT_YES			= "Si, so quel che faccio";
+	private static final String TXT_NO			= "No, ho cambiato idea";
 	private static final String TXT_R_U_SURE_DRINK = 
-		"Are you sure you want to drink it? In most cases you should throw such potions at your enemies.";
+		"Sicuro di volerla bere? Nella maggiorparte dei casi dovresti lanciare pozioni del genere ai nemici.";
 	private static final String TXT_R_U_SURE_THROW = 
-		"Are you sure you want to throw it? In most cases it makes sense to drink it.";
+		"Sicuro di volerla lanciare? Nella maggiorparte dei casi ha senso provare a bere queste pozioni.";
 	
 	private static final float TIME_TO_DRINK = 1f;
 	
@@ -67,8 +67,8 @@ public class Potion extends Item {
 		PotionOfFrost.class
 	};
 	private static final String[] colors = {
-		"turquoise", "crimson", "azure", "jade", "golden", "magenta", 
-		"charcoal", "ivory", "amber", "bistre", "indigo", "silver"};
+		"turchese", "cremisi", "azzurra", "verde giada", "dorata", "magenta", 
+		"nera", "grigio avorio", "giallo ambra", "bistro", "indaco", "argentata"};
 	private static final Integer[] images = {
 		ItemSpriteSheet.POTION_TURQUOISE, 
 		ItemSpriteSheet.POTION_CRIMSON, 
@@ -214,7 +214,7 @@ public class Potion extends Item {
 	
 	public void shatter( int cell ) {
 		if (Dungeon.visible[cell]) {
-			GLog.i( "The flask shatters and " + color() + " liquid splashes harmlessly" );
+			GLog.i( "La fiaschetta si frantuma e della soluzione " + color() + " schizza dannosamente" );
 			Sample.INSTANCE.play( Assets.SND_SHATTER );
 			splash( cell );
 		}
@@ -244,15 +244,15 @@ public class Potion extends Item {
 	
 	@Override
 	public String name() {
-		return isKnown() ? name : color + " potion";
+		return isKnown() ? name : "pozione " + color ;
 	}
 	
 	@Override
 	public String info() {
 		return isKnown() ?
 			desc() :
-			"This flask contains a swirling " + color + " liquid. " +
-			"Who knows what it will do when drunk or thrown?";
+			"Questa fiaschetta contiene dell'acqua " + color + " che vortica nel contenitore. " +
+			"Chissa' cosa succede se bevuta o lanciata?";
 	}
 	
 	@Override

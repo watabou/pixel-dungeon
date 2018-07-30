@@ -53,10 +53,10 @@ import com.watabou.utils.PointF;
 
 public class Item implements Bundlable {
 
-	private static final String TXT_PACK_FULL	= "Your pack is too full for the %s";
+	private static final String TXT_PACK_FULL	= "Il tuo zaino e' troppo pieno per %s";
 	
-	private static final String TXT_BROKEN		= "Because of frequent use, your %s has broken.";
-	private static final String TXT_GONNA_BREAK	= "Because of frequent use, your %s is going to break soon.";
+	private static final String TXT_BROKEN		= "A causa dell'uso frequente, %s si e' rotto.";
+	private static final String TXT_GONNA_BREAK	= "A causa dell'uso frequente, %s si rompera' presto.";
 	
 	private static final String TXT_TO_STRING		= "%s";
 	private static final String TXT_TO_STRING_X		= "%s x%d";
@@ -69,8 +69,8 @@ public class Item implements Bundlable {
 	protected static final float TIME_TO_PICK_UP	= 1.0f;
 	protected static final float TIME_TO_DROP		= 0.5f;
 	
-	public static final String AC_DROP		= "DROP";
-	public static final String AC_THROW		= "THROW";
+	public static final String AC_DROP		= "GETTA";
+	public static final String AC_THROW		= "LANCIA";
 	
 	public String defaultAction;
 	
@@ -588,7 +588,7 @@ public class Item implements Bundlable {
 		}
 		@Override
 		public String prompt() {
-			return "Choose direction of throw";
+			return "Scegli la direzione del lancio";
 		}
 	};
 }

@@ -23,7 +23,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class CorpseDust extends Item {
 	
 	{
-		name = "corpse dust";
+		name = "polvere di cadavere";
 		image = ItemSpriteSheet.DUST;
 		
 		cursed = true;
@@ -45,7 +45,7 @@ public class CorpseDust extends Item {
 	@Override
 	public String info() {
 		return
-			"The ball of corpse dust doesn't differ outwardly from a regular dust ball. However, " +
-			"you know somehow that it's better to get rid of it as soon as possible.";
+			"La palla di polvere di cadavere non differisce molto esteriormente da una normale palla di polvere. Comunque, " +
+			"sai che e' meglio sbarazzarsene al piu' presto.";
 	}
 }

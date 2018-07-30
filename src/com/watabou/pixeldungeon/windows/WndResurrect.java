@@ -31,9 +31,9 @@ import com.watabou.pixeldungeon.ui.Window;
 
 public class WndResurrect extends Window {
 	
-	private static final String TXT_MESSAGE	= "You died, but you were given another chance to win this dungeon. Will you take it?";
-	private static final String TXT_YES		= "Yes, I will fight!";
-	private static final String TXT_NO		= "No, I give up";
+	private static final String TXT_MESSAGE	= "Sei morto, ma hai un'altra chance di vincere questo dungeon. Vuoi sfruttarla?";
+	private static final String TXT_YES		= "Si, combattero'!";
+	private static final String TXT_NO		= "No, rinuncio";
 	
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 20;

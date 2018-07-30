@@ -29,7 +29,7 @@ import com.watabou.utils.Random;
 
 public class Horror extends Weapon.Enchantment {
 
-	private static final String TXT_ELDRITCH	= "eldritch %s";
+	private static final String TXT_ELDRITCH	= "%s sovrumana";
 	
 	private static ItemSprite.Glowing GREY = new ItemSprite.Glowing( 0x222222 );
 	

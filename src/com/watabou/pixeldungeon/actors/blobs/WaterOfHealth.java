@@ -36,7 +36,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 public class WaterOfHealth extends WellWater {
 
 	private static final String TXT_PROCCED =
-		"As you take a sip, you feel your wounds heal completely.";
+		"Non appena assaggi un sorso, senti le tue ferite guarire completamente.";
 	
 	@Override
 	protected boolean affectHero( Hero hero ) {
@@ -78,7 +78,7 @@ public class WaterOfHealth extends WellWater {
 	@Override
 	public String tileDesc() {
 		return 
-			"Power of health radiates from the water of this well. " +
-			"Take a sip from it to heal your wounds and satisfy hunger.";
+			"Il potere della rigenerazione scorre nell'acqua di questo pozzo. " +
+			"Assapora un sorso per curare tutte le tue ferite e sfamare la tua fame.";
 	}
 }

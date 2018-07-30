@@ -43,12 +43,12 @@ public class WarriorArmor extends ClassArmor {
 	private static int LEAP_TIME	= 1;
 	private static int SHOCK_TIME	= 3;
 	
-	private static final String AC_SPECIAL = "HEROIC LEAP"; 
+	private static final String AC_SPECIAL = "COLPO IN SALTO"; 
 	
-	private static final String TXT_NOT_WARRIOR	= "Only warriors can use this armor!";
+	private static final String TXT_NOT_WARRIOR	= "Solo i guerrieri possono indossarla!";
 	
 	{
-		name = "warrior suit of armor";
+		name = "armatura da guerriero";
 		image = ItemSpriteSheet.ARMOR_WARRIOR;
 	}
 	
@@ -75,8 +75,8 @@ public class WarriorArmor extends ClassArmor {
 	@Override
 	public String desc() {
 		return
-			"While this armor looks heavy, it allows a warrior to perform heroic leap towards " +
-			"a targeted location, slamming down to stun all neighbouring enemies.";
+			"Questa armatura sembra pesante, ma invece permette a un guerriero di effettuare un attacco in salto " +
+			"verso una posizione desiderata, lasciando storditi tutti i nemici vicini.";
 	}
 	
 	protected static CellSelector.Listener leaper = new  CellSelector.Listener() {
@@ -124,7 +124,7 @@ public class WarriorArmor extends ClassArmor {
 		
 		@Override
 		public String prompt() {
-			return "Choose direction to leap";
+			return "Scegli una direzione dove saltare";
 		}
 	};
 }

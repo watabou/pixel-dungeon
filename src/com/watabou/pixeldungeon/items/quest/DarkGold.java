@@ -23,7 +23,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class DarkGold extends Item {
 	
 	{
-		name = "dark gold ore";
+		name = "oro grezzo oscuro";
 		image = ItemSpriteSheet.ORE;
 		
 		stackable = true;
@@ -43,8 +43,8 @@ public class DarkGold extends Item {
 	@Override
 	public String info() {
 		return
-			"This metal is called dark not because of its color (it doesn't differ from the normal gold), " +
-			"but because it melts under the daylight, making it useless on the surface.";
+			"Questo metallo e' chiamato oscuro non per il suo colore (non e' molto diverso dal normale oro), " +
+			"ma perche' fonde a contatto con la luce del sole, rendendolo inutilizzabile in superficie.";
 	}
 	
 	@Override

@@ -29,7 +29,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 
 public class Firebloom extends Plant {
 
-	private static final String TXT_DESC = "When something touches a Firebloom, it bursts into flames.";
+	private static final String TXT_DESC = "Quando qualcosa tocca una Firebloom, prende fuoco.";
 	
 	{
 		image = 0;
@@ -56,7 +56,7 @@ public class Firebloom extends Plant {
 		{
 			plantName = "Firebloom";
 			
-			name = "seed of " + plantName;
+			name = "seme di " + plantName;
 			image = ItemSpriteSheet.SEED_FIREBLOOM;
 			
 			plantClass = Firebloom.class;

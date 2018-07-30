@@ -26,7 +26,7 @@ import com.watabou.utils.Random;
 public class Crab extends Mob {
 
 	{
-		name = "sewer crab";
+		name = "granchio di fogna";
 		spriteClass = CrabSprite.class;
 		
 		HP = HT = 15;
@@ -57,7 +57,7 @@ public class Crab extends Mob {
 	
 	@Override
 	public String defenseVerb() {
-		return "parried";
+		return "parato";
 	}
 	
 	@Override
@@ -69,8 +69,8 @@ public class Crab extends Mob {
 	@Override
 	public String description() {
 		return
-			"These huge crabs are at the top of the food chain in the sewers. " +
-			"They are extremely fast and their thick exoskeleton can withstand " +
-			"heavy blows.";
+			"Questi granchi giganteschi sono alla cima della catena alimentare delle fogne. " +
+			"Sono estremamente veloci e il loro esoscheletro robusto puo' resistere " +
+			"a colpi pesanti.";
 	}
 }

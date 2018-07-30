@@ -35,10 +35,10 @@ import com.watabou.utils.Random;
 
 public class Honeypot extends Item {
 	
-	public static final String AC_SHATTER	= "SHATTER";
+	public static final String AC_SHATTER	= "FRANTUMA";
 	
 	{
-		name = "honeypot";
+		name = "vaso di miele";
 		image = ItemSpriteSheet.HONEYPOT;
 		defaultAction = AC_THROW;
 		stackable = true;
@@ -131,6 +131,6 @@ public class Honeypot extends Item {
 	@Override
 	public String info() {
 		return
-			"There is not much honey in this small honeypot, but there is a golden bee there and it doesn't want to leave it.";
+			"Non c'e' abbastanza miele in questo vasetto di miele, ma c'e' un'ape dorata e non se ne vuole andare.";
 	}
 }

@@ -35,20 +35,20 @@ public class DewVial extends Item {
 
 	private static final int MAX_VOLUME	= 10;
 	
-	private static final String AC_DRINK	= "DRINK";
+	private static final String AC_DRINK	= "BEVI";
 	
 	private static final float TIME_TO_DRINK = 1f;
 	
 	private static final String TXT_VALUE	= "%+dHP";
 	private static final String TXT_STATUS	= "%d/%d";
 	
-	private static final String TXT_AUTO_DRINK	= "The dew vial was emptied to heal your wounds.";
-	private static final String TXT_COLLECTED	= "You collected a dewdrop into your dew vial.";
-	private static final String TXT_FULL		= "Your dew vial is full!";
-	private static final String TXT_EMPTY		= "Your dew vial is empty!";
+	private static final String TXT_AUTO_DRINK	= "La fiala per rugiada e' stata svuotata per curare le tue ferite.";
+	private static final String TXT_COLLECTED	= "Hai messo la goccia nella tua fiala per rugiada.";
+	private static final String TXT_FULL		= "La tua fiala per rugiada e' piena!";
+	private static final String TXT_EMPTY		= "La tua fiala per rugiada e' vuota!";
 	
 	{
-		name = "dew vial";
+		name = "fiala per rugiada";
 		image = ItemSpriteSheet.VIAL;
 		
 		defaultAction = AC_DRINK;
@@ -175,9 +175,9 @@ public class DewVial extends Item {
 	@Override
 	public String info() {
 		return 
-			"You can store excess dew in this tiny vessel for drinking it later. " +
-			"If the vial is full, in a moment of deadly peril the dew will be " +
-			"consumed automatically.";
+			"Puoi conservare le gocce in eccesso in questa piccola fiala per berle dopo. " +
+			"Se la fiala e' piena, in un momento di grande pericolo, " +
+			"verra' consumata automaticamente.";
 	}
 	
 	@Override

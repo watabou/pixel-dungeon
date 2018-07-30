@@ -20,7 +20,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 public class Rotberry extends Plant {
 	
 	private static final String TXT_DESC = 
-		"Berries of this shrub taste like sweet, sweet death.";
+		"Le bacche di questo arbusto di Rotberry sanno di dolce... dolce morte.";
 	
 	{
 		image = 7;
@@ -49,7 +49,7 @@ public class Rotberry extends Plant {
 		{
 			plantName = "Rotberry";
 			
-			name = "seed of " + plantName;
+			name = "seme di " + plantName;
 			image = ItemSpriteSheet.SEED_ROTBERRY;
 			
 			plantClass = Rotberry.class;

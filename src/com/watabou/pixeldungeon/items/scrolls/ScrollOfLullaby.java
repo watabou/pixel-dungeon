@@ -31,7 +31,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 public class ScrollOfLullaby extends Scroll {
 
 	{
-		name = "Scroll of Lullaby";
+		name = "Pergamena di Morfeo";
 	}
 	
 	@Override
@@ -55,13 +55,13 @@ public class ScrollOfLullaby extends Scroll {
 		
 		switch (count) {
 		case 0:
-			GLog.i( "The scroll utters a soothing melody." );
+			GLog.i( "La pergamena pronuncia una melodia rilassante." );
 			break;
 		case 1:
-			GLog.i( "The scroll utters a soothing melody and the " + affected.name + " falls asleep!" );
+			GLog.i( "La pergamena pronuncia una melodia rilassante e " + affected.name + " cade in un sonno profondo!" );
 			break;
 		default:
-			GLog.i( "The scroll utters a soothing melody and the monsters fall asleep!" );
+			GLog.i( "La pergamena pronuncia una melodia rilassante e tutti i mostri cadono addormentati!" );
 		}
 		setKnown();
 		
@@ -71,8 +71,8 @@ public class ScrollOfLullaby extends Scroll {
 	@Override
 	public String desc() {
 		return
-			"A soothing melody will put all creatures in your field of view into a deep sleep, " +
-			"giving you a chance to flee or make a surprise attack on them.";
+			"Una dolce melodia che portera' tutti i mostri che vedi nel mondo dei sogni, " +
+			"dandoti la possibilita' di scappare o di colpire di nascosto.";
 	}
 	
 	@Override

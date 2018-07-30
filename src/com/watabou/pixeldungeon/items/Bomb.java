@@ -38,7 +38,7 @@ import com.watabou.utils.Random;
 public class Bomb extends Item {
 	
 	{
-		name = "bomb";
+		name = "bomba";
 		image = ItemSpriteSheet.BOMB;
 		defaultAction = AC_THROW;
 		stackable = true;
@@ -78,7 +78,7 @@ public class Bomb extends Item {
 								Buff.prolong( ch, Paralysis.class, 2 );
 							} else if (ch == Dungeon.hero) {
 								Dungeon.fail( Utils.format( ResultDescriptions.BOMB, Dungeon.depth ) );
-								GLog.n( "You killed yourself with a bomb..." );
+								GLog.n( "Ti sei ucciso con una bomba... idiota..." );
 							}
 						}
 					}
@@ -115,6 +115,6 @@ public class Bomb extends Item {
 	@Override
 	public String info() {
 		return
-			"This is a relatively small bomb, filled with black powder. Conveniently, its fuse is lit automatically when the bomb is thrown.";
+			"Questa e' una bomba relativamente piccola, piena di polvere nera. Convenientemente, esplode appena lanciata.";
 	}
 }

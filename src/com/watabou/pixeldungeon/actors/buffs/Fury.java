@@ -41,6 +41,6 @@ public class Fury extends Buff {
 	
 	@Override
 	public String toString() {
-		return "Fury";
+		return "Furia";
 	}
 }

@@ -32,13 +32,13 @@ import com.watabou.pixeldungeon.ui.Window;
 
 public class WndGame extends Window {
 	
-	private static final String TXT_SETTINGS	= "Settings";
-	private static final String TXT_CHALLEGES	= "Challenges";
-	private static final String TXT_RANKINGS	= "Rankings";
-	private static final String TXT_START		= "Start New Game";
-	private static final String TXT_MENU		= "Main Menu";
-	private static final String TXT_EXIT		= "Exit Game";
-	private static final String TXT_RETURN		= "Return to Game";
+	private static final String TXT_SETTINGS	= "Impostazioni";
+	private static final String TXT_CHALLEGES	= "Sfide";
+	private static final String TXT_RANKINGS	= "Risultati";
+	private static final String TXT_START		= "Inizia Nuova Partita";
+	private static final String TXT_MENU		= "Menu Principale";
+	private static final String TXT_EXIT		= "Chiudi il Gioco";
+	private static final String TXT_RETURN		= "Ritorna al Gioco";
 	
 	private static final int WIDTH		= 120;
 	private static final int BTN_HEIGHT	= 20;

@@ -46,6 +46,6 @@ public int object = 0;
 	
 	@Override
 	public String toString() {
-		return "Zeroed in";
+		return "Concentrato sul bersaglio";
 	}
 }
