@@ -178,7 +178,7 @@ public class Badges {
 	}
 	
 	private static final String BADGES_FILE	= "badges.dat";
-	private static final String BADGES		= "badges";
+	private static final String BADGES              = "badges";
 	
 	private static HashSet<Badge> restore( Bundle bundle ) {
 		HashSet<Badge> badges = new HashSet<Badge>();
