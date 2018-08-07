@@ -38,7 +38,7 @@ import com.watabou.utils.Random;
 public class WandOfLightning extends Wand {
 
 	{
-		name = "Wand of Lightning";
+		name = "Bacchetta del fulmine";
 	}
 	
 	private ArrayList<Char> affected = new ArrayList<Char>();
@@ -51,7 +51,7 @@ public class WandOfLightning extends Wand {
 		// Everything is processed in fx() method
 		if (!curUser.isAlive()) {
 			Dungeon.fail( Utils.format( ResultDescriptions.WAND, name, Dungeon.depth ) );
-			GLog.n( "You killed yourself with your own Wand of Lightning..." );
+			GLog.n( "Ti sei ucciso con la tua Bacchetta del Fulmine" );
 		}
 	}
 	
@@ -111,7 +111,7 @@ public class WandOfLightning extends Wand {
 	@Override
 	public String desc() {
 		return
-			"This wand conjures forth deadly arcs of electricity, which deal damage " +
-			"to several creatures standing close to each other.";
+			"Questa bacchetta fa apparire quattro mortali archi di elettricita', che danneggieranno " +
+			"alcune creature che si trovano vicine l'un l'altra.";
 	}
 }

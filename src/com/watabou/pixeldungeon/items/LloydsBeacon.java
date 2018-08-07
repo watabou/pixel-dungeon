@@ -37,30 +37,30 @@ import com.watabou.utils.Bundle;
 public class LloydsBeacon extends Item {
 
 	private static final String TXT_PREVENTING = 
-		"Strong magic aura of this place prevents you from using the lloyd's beacon!";
+		"La forte aura magica di questo posto ti impedisce di usare il Bacon di Miriam!";
 	
 	private static final String TXT_CREATURES = 
-		"Psychic aura of neighbouring creatures doesn't allow you to use the lloyd's beacon at this moment.";
+		"L'aura psichica delle creature nelle vicinanze non ti permette di usare il Bacon di Miriam in questo momento.";
 	
 	private static final String TXT_RETURN = 
-		"The lloyd's beacon is successfully set at your current location, now you can return here anytime.";
+		"Il Bacon di Miriam e' stato posizionato con successo nel luogo in cui ti trovi, ora puoi ritornare qui ogni volta che lo desideri.";
 			
 	private static final String TXT_INFO =
-		"Lloyd's beacon is an intricate magic device, that allows you to return to a place you have already been.";
+		"Il Bacon di Miriam e' un complesso dispostivo magico, che ti permette di ritornare in un luogo dove sei gia' stato.";
 	
 	private static final String TXT_SET = 
-		"\n\nThis beacon was set somewhere on the level %d of Pixel Dungeon.";
+		"\n\nIl Bacon e' stato posizionato da qualche parte nel livello %d di Pixel Dungeon.";
 	
 	public static final float TIME_TO_USE = 1;
 	
-	public static final String AC_SET		= "SET";
-	public static final String AC_RETURN	= "RETURN";
+	public static final String AC_SET		= "POSIZIONA";
+	public static final String AC_RETURN	= "RITORNA";
 	
 	private int returnDepth	= -1;
 	private int returnPos;
 	
 	{
-		name = "lloyd's beacon";
+		name = "bacon di miriam";
 		image = ItemSpriteSheet.BEACON;
 		
 		unique = true;

@@ -23,15 +23,15 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class OverpricedRation extends Food {
 
 	{
-		name = "overpriced food ration";
+		name = "razione di cibo molto cara";
 		image = ItemSpriteSheet.OVERPRICED;
 		energy = Hunger.STARVING - Hunger.HUNGRY;
-		message = "That food tasted ok.";
+		message = "Non era male.";
 	}
 	
 	@Override
 	public String info() {
-		return "It looks exactly like a standard ration of food but smaller.";
+		return "Uguale ad una razione di cibo normale ma piu' piccola.";
 	}
 	
 	@Override

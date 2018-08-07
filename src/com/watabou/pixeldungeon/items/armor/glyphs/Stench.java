@@ -30,7 +30,7 @@ import com.watabou.utils.Random;
 
 public class Stench extends Glyph {
 
-	private static final String TXT_STENCH	= "%s of stench";
+	private static final String TXT_STENCH	= "%s del fetore";
 	
 	private static ItemSprite.Glowing GREEN = new ItemSprite.Glowing( 0x22CC44 );
 	

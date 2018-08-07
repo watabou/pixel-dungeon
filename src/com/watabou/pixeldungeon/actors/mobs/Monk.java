@@ -34,10 +34,10 @@ import com.watabou.utils.Random;
 
 public class Monk extends Mob {
 
-	public static final String TXT_DISARM	= "%s has knocked the %s from your hands!";
+	public static final String TXT_DISARM	= "%s ti ha tolto %s dalle mani!";
 	
 	{
-		name = "dwarf monk";
+		name = "monaco nano";
 		spriteClass = MonkSprite.class;
 		
 		HP = HT = 70;
@@ -72,7 +72,7 @@ public class Monk extends Mob {
 	
 	@Override
 	public String defenseVerb() {
-		return "parried";
+		return "parato";
 	}
 	
 	@Override
@@ -103,8 +103,8 @@ public class Monk extends Mob {
 	@Override
 	public String description() {
 		return
-			"These monks are fanatics, who devoted themselves to protecting their city's secrets from all aliens. " +
-			"They don't use any armor or weapons, relying solely on the art of hand-to-hand combat.";
+			"Questi monaci sono fanatici, che hanno impartito a se stessi di proteggere i segreti delle loro citta' da qualsiasi estraneo. " +
+			"Non usano ne' armi ne' armature, rispettando la tradizione del combattimento a mani nude.";
 	}
 	
 	private static final HashSet<Class<?>> IMMUNITIES = new HashSet<Class<?>>();

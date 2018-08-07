@@ -37,7 +37,7 @@ import com.watabou.utils.Random;
 public class Statue extends Mob {
 	
 	{
-		name = "animated statue";
+		name = "statua animata";
 		spriteClass = StatueSprite.class;
 
 		EXP = 0;
@@ -60,7 +60,7 @@ public class Statue extends Mob {
 		defenseSkill = 4 + Dungeon.depth;
 	}
 	
-	private static final String WEAPON	= "weapon";
+	private static final String WEAPON	= "arma";
 	
 	@Override
 	public void storeInBundle( Bundle bundle ) {
@@ -144,8 +144,8 @@ public class Statue extends Mob {
 	@Override
 	public String description() {
 		return
-			"You would think that it's just another ugly statue of this dungeon, but its red glowing eyes give itself away. " +
-			"While the statue itself is made of stone, the _" + weapon.name() + "_, it's wielding, looks real.";
+			"Potresti pensare che questa sia un'altra brutta statua del dungeon, ma i suo occhi rossi brillanti te lo fanno scordare. " +
+			"Mentre la statua stessa e' fatta di pietra, la _" + weapon.name() + "_, che sta tenendo, sembra reale.";
 	}
 	
 	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();

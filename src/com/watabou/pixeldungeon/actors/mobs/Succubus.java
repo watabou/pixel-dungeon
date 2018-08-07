@@ -43,7 +43,7 @@ public class Succubus extends Mob {
 	private int delay = 0;
 	
 	{
-		name = "succubus";
+		name = "succubo";
 		spriteClass = SuccubusSprite.class;
 		
 		HP = HT = 80;
@@ -116,8 +116,8 @@ public class Succubus extends Mob {
 	@Override
 	public String description() {
 		return
-			"The succubi are demons that look like seductive (in a slightly gothic way) girls. Using its magic, the succubus " +
-			"can charm a hero, who will become unable to attack anything until the charm wears off.";
+			"I succubi sono demoni che sembrano delle seducenti (in un significato prettamente gotico) ragazze. Usando la sua magia, il succubo " +
+			"puo' ammaliare l'eroe, che non sara' capace di attaccare nulla finche' l'attrazione non svanisce.";
 	}
 	
 	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();

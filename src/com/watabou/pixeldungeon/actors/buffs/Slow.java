@@ -32,7 +32,7 @@ public class Slow extends FlavourBuff {
 	
 	@Override
 	public String toString() {
-		return "Slowed";
+		return "Rallentato";
 	}
 
 	public static float duration( Char ch ) {

@@ -24,7 +24,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class WandHolster extends Bag {
 
 	{
-		name = "wand holster";
+		name = "fondina per bacchette";
 		image = ItemSpriteSheet.HOLSTER;
 		
 		size = 12;
@@ -64,7 +64,7 @@ public class WandHolster extends Bag {
 	@Override
 	public String info() {
 		return
-			"This slim holder is made of leather of some exotic animal. " +
-			"It allows to compactly carry up to " + size + " wands.";
+			"Questa sottile fondina e' fatta con pelle di qualche aniamle esotico. " +
+			"Ti permette di portare fino a " + size + " bacchette.";
 	}
 }

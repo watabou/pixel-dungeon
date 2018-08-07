@@ -61,8 +61,8 @@ public class Tamahawk extends MissileWeapon {
 	@Override
 	public String desc() {
 		return 
-			"This throwing axe is not that heavy, but it still " +
-			"requires significant strength to be used effectively.";
+			"Quest'ascia da lancio non e' molto pesante, ma serve sempre " +
+			"molta forza per riuscire ad usarla per bene.";
 	}
 	
 	@Override

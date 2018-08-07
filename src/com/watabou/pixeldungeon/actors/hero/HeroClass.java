@@ -38,84 +38,87 @@ import com.watabou.utils.Bundle;
 
 public enum HeroClass {
 
-	WARRIOR( "warrior" ), MAGE( "mage" ), ROGUE( "rogue" ), HUNTRESS( "huntress" );
-	
+	WARRIOR( "guerriero", "GUERRIERO"), MAGE( "mago", "MAGO" ), ROGUE( "rogue", "ROGUE" ), HUNTRESS( "cacciatrice", "CACCIATRICE" );
+
 	private String title;
+
+	private String className;
 	
-	private HeroClass( String title ) {
+	private HeroClass( String title, String className ) {
 		this.title = title;
+		this.className = className;
 	}
-	
+
 	public static final String[] WAR_PERKS = {
-		"Warriors start with 11 points of Strength.",
-		"Warriors start with a unique short sword. This sword can be later \"reforged\" to upgrade another melee weapon.",
-		"Warriors are less proficient with missile weapons.",
-		"Any piece of food restores some health when eaten.",
-		"Potions of Strength are identified from the beginning.",
+		"I guerrieri iniziano con 11 punti di Forza.",
+		"I guerrieri iniziano con un'unica spada corta. Questa spada puo' essere \"riforgiata\" per migliorare un'altra arma da corpo a corpo.",
+		"I guerrieri sono poco competenti con le armi da tiro.",
+		"Ciasciuna razione di cibo restuisce un po' di salute quando consumata.",
+		"Le Pozioni di Forza sono identificati sin dall'inizio.",
 	};
-	
+
 	public static final String[] MAG_PERKS = {
-		"Mages start with a unique Wand of Magic Missile. This wand can be later \"disenchanted\" to upgrade another wand.",
-		"Mages recharge their wands faster.",
-		"When eaten, any piece of food restores 1 charge for all wands in the inventory.",
-		"Mages can use wands as a melee weapon.",
-		"Scrolls of Identify are identified from the beginning."
+		"I maghi iniziano con un'unica Bacchetta del Dardo Incantato. Questa bacchetta puo' essere successivamente \"disincantata\" per migliorare un'altra bacchetta.",
+		"I maghi ricaricano le loro bacchette piu' velocemente.",
+		"Quando mangiato, ciascuna razione di cibo restutisce 1 carica per tutte le bacchette nell'inventario.",
+		"I maghi possono usare le bacchette come armi da corpo a corpo.",
+		"Le Pergamene dell'Identificazione sono identificate sin dall'inizio."
 	};
-	
+
 	public static final String[] ROG_PERKS = {
-		"Rogues start with a Ring of Shadows+1.",
-		"Rogues identify a type of a ring on equipping it.",
-		"Rogues are proficient with light armor, dodging better while wearing one.",
-		"Rogues are proficient in detecting hidden doors and traps.",
-		"Rogues can go without food longer.",
-		"Scrolls of Magic Mapping are identified from the beginning."
+		"I furfanti iniziano con un Anello delle Tenebre+1.",
+		"I furfanti identificano un tipo di anello equipaggiandolo.",
+		"I furfanti sono migliori con armature leggere, schivando meglio gli attacchi quando ne indossano una.",
+		"I furfanti sono esperti nel individuare porte nascoste e trappole.",
+		"I furfanti possono resistere senza cibo piu' a lungo.",
+		"Le Pergamene della Mappatura Magica sono identificate sin dall'inizio."
 	};
-	
+
 	public static final String[] HUN_PERKS = {
-		"Huntresses start with 15 points of Health.",
-		"Huntresses start with a unique upgradeable boomerang.",
-		"Huntresses are proficient with missile weapons and get a damage bonus for excessive strength when using them.",
-		"Huntresses gain more health from dewdrops.",
-		"Huntresses sense neighbouring monsters even if they are hidden behind obstacles."
+		"Le cacciatrici iniziano con 15 punti di Salute.",
+		"Le cacciatrici iniziano con un unico boomerang migliorabile.",
+		"Le cacciatrici sono migliori con armi da tiro e ottengono un danno aggiuntivo quando le usano.",
+		"Le cacciatrici guadagnano piu' salute dalle gocce di rugiada.",
+		"Le cacciatrici avvertono i mostri nelle vicinanze anche se questi sono nascosti dietro gli ostacoli."
 	};
-	
+
 	public void initHero( Hero hero ) {
-		
+
 		hero.heroClass = this;
-		
+
 		initCommon( hero );
-		
+
 		switch (this) {
 		case WARRIOR:
 			initWarrior( hero );
 			break;
-			
+
 		case MAGE:
 			initMage( hero );
 			break;
-			
+
 		case ROGUE:
 			initRogue( hero );
 			break;
-			
+
 		case HUNTRESS:
 			initHuntress( hero );
 			break;
 		}
-		
+
 		if (Badges.isUnlocked( masteryBadge() )) {
 			new TomeOfMastery().collect();
 		}
-		
+
 		hero.updateAwareness();
 	}
-	
+
 	private static void initCommon( Hero hero ) {
 		(hero.belongings.armor = new ClothArmor()).identify();
 		new Food().identify().collect();
 		new Keyring().collect();
 	}
-	
+
 	public Badges.Badge masteryBadge() {
 		switch (this) {
 		case WARRIOR:
@@ -129,58 +132,62 @@ public enum HeroClass {
 		}
 		return null;
 	}
-	
+
 	private static void initWarrior( Hero hero ) {
 		hero.STR = hero.STR + 1;
-		
+
 		(hero.belongings.weapon = new ShortSword()).identify();
 		new Dart( 8 ).identify().collect();
-		
+
 		QuickSlot.primaryValue = Dart.class;
-		
+
 		new PotionOfStrength().setKnown();
 	}
-	
-	private static void initMage( Hero hero ) {	
+
+	private static void initMage( Hero hero ) {
 		(hero.belongings.weapon = new Knuckles()).identify();
-		
+
 		WandOfMagicMissile wand = new WandOfMagicMissile();
 		wand.identify().collect();
-		
+
 		QuickSlot.primaryValue = wand;
-		
+
 		new ScrollOfIdentify().setKnown();
 	}
-	
+
 	private static void initRogue( Hero hero ) {
 		(hero.belongings.weapon = new Dagger()).identify();
 		(hero.belongings.ring1 = new RingOfShadows()).upgrade().identify();
 		new Dart( 8 ).identify().collect();
-		
+
 		hero.belongings.ring1.activate( hero );
-		
+
 		QuickSlot.primaryValue = Dart.class;
-		
+
 		new ScrollOfMagicMapping().setKnown();
 	}
-	
+
 	private static void initHuntress( Hero hero ) {
-		
+
 		hero.HP = (hero.HT -= 5);
-		
+
 		(hero.belongings.weapon = new Dagger()).identify();
 		Boomerang boomerang = new Boomerang();
 		boomerang.identify().collect();
-		
+
 		QuickSlot.primaryValue = boomerang;
 	}
-	
+
 	public String title() {
 		return title;
 	}
 	
+	public String className() {
+		return className;
+	}
+
 	public String spritesheet() {
-		
+
 		switch (this) {
 		case WARRIOR:
 			return Assets.WARRIOR;
@@ -191,12 +198,12 @@ public enum HeroClass {
 		case HUNTRESS:
 			return Assets.HUNTRESS;
 		}
-		
+
 		return null;
 	}
-	
+
 	public String[] perks() {
-		
+
 		switch (this) {
 		case WARRIOR:
 			return WAR_PERKS;
@@ -207,16 +214,16 @@ public enum HeroClass {
 		case HUNTRESS:
 			return HUN_PERKS;
 		}
-		
+
 		return null;
 	}
 
 	private static final String CLASS	= "class";
-	
+
 	public void storeInBundle( Bundle bundle ) {
 		bundle.put( CLASS, toString() );
 	}
-	
+
 	public static HeroClass restoreInBundle( Bundle bundle ) {
 		String value = bundle.getString( CLASS );
 		return value.length() > 0 ? valueOf( value ) : ROGUE;

@@ -28,7 +28,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 public class ScrollOfRecharging extends Scroll {
 
 	{
-		name = "Scroll of Recharging";
+		name = "Pergamena della Ricarica";
 	}
 	
 	@Override
@@ -41,10 +41,10 @@ public class ScrollOfRecharging extends Scroll {
 		Invisibility.dispel();
 		
 		if (count > 0) {
-			GLog.i( "a surge of energy courses through your pack, recharging your wand" + (count > 1 ? "s" : "") );
+			GLog.i( "una sferzata di energia attraversa il tuo zaino, ricaricando " + (count > 1 ? "le tue bacchette." : "la tua bacchetta.") );
 			SpellSprite.show( curUser, SpellSprite.CHARGE );
 		} else {
-			GLog.i( "a surge of energy courses through your pack, but nothing happens" );
+			GLog.i( "una sferzata di energia attraversa il tuo zaino, ma non e' succeso nulla." );
 		}
 		setKnown();
 		
@@ -54,8 +54,8 @@ public class ScrollOfRecharging extends Scroll {
 	@Override
 	public String desc() {
 		return
-			"The raw magical power bound up in this parchment will, when released, " +
-			"recharge all of the reader's wands to full power.";
+			"Il potere magico rinchiuso in questa pergamena, quando viene rilasciato, " +
+			"ricarica completamente tutte le bacchette del lettore.";
 	}
 	
 	public static void charge( Hero hero ) {

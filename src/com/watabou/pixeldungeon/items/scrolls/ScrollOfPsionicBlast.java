@@ -31,7 +31,7 @@ import com.watabou.utils.Random;
 public class ScrollOfPsionicBlast extends Scroll {
 
 	{
-		name = "Scroll of Psionic Blast";
+		name = "Pergamena del Raggio Psionico";
 	}
 	
 	@Override
@@ -60,9 +60,9 @@ public class ScrollOfPsionicBlast extends Scroll {
 	@Override
 	public String desc() {
 		return
-			"This scroll contains destructive energy, that can be psionically channeled to inflict a " +
-			"massive damage to all creatures within a field of view. An accompanying flash of light will " +
-			"temporarily blind everybody in the area of effect including the reader of the scroll.";
+			"Qeusta pergamena contiene un'energia distruttiva, che puo' essere incanalata per infliggere " +
+			"grandi danni a tutte le creature nel tuo raggio visivo. Un raggio luminoso accechera' " +
+			"temporaneamente tutti nell'area d'effetto incluso il lettore della pergamena.";
 	}
 	
 	@Override

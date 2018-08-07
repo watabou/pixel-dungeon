@@ -52,7 +52,7 @@ import com.watabou.utils.Random;
 
 public class Heap implements Bundlable {
 
-	private static final String TXT_MIMIC = "This is a mimic!";
+	private static final String TXT_MIMIC = "E' un mimic!";
 	
 	private static final int SEEDS_TO_POTION = 3;
 	

@@ -111,22 +111,22 @@ import com.watabou.utils.Random;
 
 public class Hero extends Char {
 	
-	private static final String TXT_LEAVE = "One does not simply leave Pixel Dungeon.";
+	private static final String TXT_LEAVE = "Nessuno scappa facilmente da Pixel Dungeon.";
 	
-	private static final String TXT_LEVEL_UP = "level up!";
+	private static final String TXT_LEVEL_UP = "Level up!";
 	private static final String TXT_NEW_LEVEL = 
-		"Welcome to level %d! Now you are healthier and more focused. " +
-		"It's easier for you to hit enemies and dodge their attacks.";
+		"Benvenuto al livello %d! ora hai piu' salute e sei piu' concentrato. " +
+		"Sara' piu' facile colpire i nemici e schivare i loro attacchi.";
 	
-	public static final String TXT_YOU_NOW_HAVE	= "You now have %s";
+	public static final String TXT_YOU_NOW_HAVE	= "Adesso hai %s";
 	
-	private static final String TXT_SOMETHING_ELSE	= "There is something else here";
-	private static final String TXT_LOCKED_CHEST	= "This chest is locked and you don't have matching key";
-	private static final String TXT_LOCKED_DOOR		= "You don't have a matching key";
-	private static final String TXT_NOTICED_SMTH	= "You noticed something";
+	private static final String TXT_SOMETHING_ELSE	= "C'e' qualcos'altro qui";
+	private static final String TXT_LOCKED_CHEST	= "Questo forziere e' chiuso e non hai la chiave";
+	private static final String TXT_LOCKED_DOOR		= "Non hai la chiave";
+	private static final String TXT_NOTICED_SMTH	= "Hai notato qualcosa";
 	
 	private static final String TXT_WAIT	= "...";
-	private static final String TXT_SEARCH	= "search";
+	private static final String TXT_SEARCH	= "ispeziona";
 	
 	public static final int STARTING_STR = 10;
 	
@@ -168,7 +168,7 @@ public class Hero extends Char {
 	
 	public Hero() {
 		super();
-		name = "you";
+		name = "il tuo eroe";
 		
 		HP = HT = 20;
 		STR = STARTING_STR;
@@ -1079,33 +1079,33 @@ public class Hero extends Char {
 		
 		if (sprite != null) {
 			if (buff instanceof Burning) {
-				GLog.w( "You catch fire!" );
+				GLog.w( "Hai preso fuoco!" );
 				interrupt();
 			} else if (buff instanceof Paralysis) {
-				GLog.w( "You are paralysed!" );
+				GLog.w( "Sei paralizzato!" );
 				interrupt();
 			} else if (buff instanceof Poison) {
-				GLog.w( "You are poisoned!" );
+				GLog.w( "Sei avvelenato!" );
 				interrupt();
 			} else if (buff instanceof Ooze) {
-				GLog.w( "Caustic ooze eats your flesh. Wash away it!" );
+				GLog.w( "La melma corrosiva sta consumando la tua carne. Lavala via!" );
 			} else if (buff instanceof Roots) {
-				GLog.w( "You can't move!" );
+				GLog.w( "Non puoi muoverti!" );
 			} else if (buff instanceof Weakness) {
-				GLog.w( "You feel weakened!" );
+				GLog.w( "Ti senti stanco!" );
 			} else if (buff instanceof Blindness) {
-				GLog.w( "You are blinded!" );
+				GLog.w( "Sei cieco!" );
 			} else if (buff instanceof Fury) {
-				GLog.w( "You become furious!" );
-				sprite.showStatus( CharSprite.POSITIVE, "furious" );
+				GLog.w( "Sei furioso!" );
+				sprite.showStatus( CharSprite.POSITIVE, "furioso" );
 			} else if (buff instanceof Charm) {
-				GLog.w( "You are charmed!" );
+				GLog.w( "Sei ammaliato!" );
 			}  else if (buff instanceof Cripple) {
-				GLog.w( "You are crippled!" );
+				GLog.w( "Sei storpio!" );
 			} else if (buff instanceof Bleeding) {
-				GLog.w( "You are bleeding!" );
+				GLog.w( "Stai sanguinando!" );
 			} else if (buff instanceof Vertigo) {
-				GLog.w( "Everything is spinning around you!" );
+				GLog.w( "Hai le vertigini!" );
 				interrupt();
 			}
 			

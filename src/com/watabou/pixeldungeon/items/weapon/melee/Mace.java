@@ -22,7 +22,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class Mace extends MeleeWeapon {
 
 	{
-		name = "mace";
+		name = "mazza";
 		image = ItemSpriteSheet.MACE;
 	}
 	
@@ -32,6 +32,6 @@ public class Mace extends MeleeWeapon {
 	
 	@Override
 	public String desc() {
-		return "The iron head of this weapon inflicts substantial damage.";
+		return "La testa d'acciaio di quest'arma infligge sostanziali danni.";
 	}
 }

@@ -40,10 +40,10 @@ import com.watabou.utils.Random;
 
 public class Eye extends Mob {
 	
-	private static final String TXT_DEATHGAZE_KILLED = "%s's deathgaze killed you...";
+	private static final String TXT_DEATHGAZE_KILLED = "Lo sguardo della morte dell'%s ti ha ucciso...";
 	
 	{
-		name = "evil eye";
+		name = "occhio malvagio";
 		spriteClass = EyeSprite.class;
 		
 		HP = HT = 100;
@@ -146,8 +146,8 @@ public class Eye extends Mob {
 	@Override
 	public String description() {
 		return
-			"One of this demon's other names is \"orb of hatred\", because when it sees an enemy, " +
-			"it uses its deathgaze recklessly, often ignoring its allies and wounding them.";
+			"Uno degli altri nomi di questi demoni e' \"sfera dell'odio\", perche' quando vede un nemico, " +
+			"usa il suo sguardo mortale incoscientemente, spesso ignorando i suoi alleati e ferendoli.";
 	}
 	
 	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();

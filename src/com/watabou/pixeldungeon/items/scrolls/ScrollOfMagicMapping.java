@@ -31,10 +31,10 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class ScrollOfMagicMapping extends Scroll {
 
-	private static final String TXT_LAYOUT = "You are now aware of the level layout.";
+	private static final String TXT_LAYOUT = "Ora sei a conoscenza della composizione di tutto il livello.";
 	
 	{
-		name = "Scroll of Magic Mapping";
+		name = "Pergamena della Mappatura Magica";
 	}
 	
 	@Override
@@ -87,9 +87,9 @@ public class ScrollOfMagicMapping extends Scroll {
 	@Override
 	public String desc() {
 		return
-			"When this scroll is read, an image of crystal clarity will be etched into your memory, " +
-			"alerting you to the precise layout of the level and revealing all hidden secrets. " +
-			"The locations of items and creatures will remain unknown.";
+			"Quando questa pergamena viene letta, un'immagine cristallina ti torna alla mente, " +
+			"indicandoti la composizione precisa del livello, rivelandoti anche i suoi segreti. " +
+			"Le posizioni degli oggetti e delle creature rimarranno nascoste.";
 	}
 	
 	@Override

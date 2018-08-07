@@ -25,7 +25,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 public class PotionOfMight extends PotionOfStrength {
 
 	{
-		name = "Potion of Might";
+		name = "Pozione del Vigore";
 	}
 	
 	@Override
@@ -35,8 +35,8 @@ public class PotionOfMight extends PotionOfStrength {
 		hero.STR++;
 		hero.HT += 5;
 		hero.HP += 5;
-		hero.sprite.showStatus( CharSprite.POSITIVE, "+1 str, +5 ht" );
-		GLog.p( "Newfound strength surges through your body." );
+		hero.sprite.showStatus( CharSprite.POSITIVE, "+1 forza, +5 ht" );
+		GLog.p( "Nuova forza scorre attraverso il tuo corpo." );
 		
 		Badges.validateStrengthAttained();
 	}
@@ -44,8 +44,8 @@ public class PotionOfMight extends PotionOfStrength {
 	@Override
 	public String desc() {
 		return
-			"This powerful liquid will course through your muscles, permanently " +
-			"increasing your strength by one point and health by five points.";
+			"Questo potente liquido scorrera' attraverso i tuoi muscoli, aumentando permanentemente " +
+			"la tua forza di un punto e la tua salute di cinque punti.";
 	}
 	
 	@Override

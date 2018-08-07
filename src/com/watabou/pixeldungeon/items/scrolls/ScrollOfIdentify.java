@@ -26,8 +26,8 @@ import com.watabou.pixeldungeon.windows.WndBag;
 public class ScrollOfIdentify extends InventoryScroll {
 
 	{
-		name = "Scroll of Identify";
-		inventoryTitle = "Select an item to identify";
+		name = "Pergamena dell'Identificazione";
+		inventoryTitle = "Seleziona un oggetto da identificare";
 		mode = WndBag.Mode.UNIDENTIFED;
 	}
 	
@@ -37,7 +37,7 @@ public class ScrollOfIdentify extends InventoryScroll {
 		curUser.sprite.parent.add( new Identification( curUser.sprite.center().offset( 0, -16 ) ) );
 		
 		item.identify();
-		GLog.i( "It is " + item );
+		GLog.i( "E' " + item );
 		
 		Badges.validateItemLevelAquired( item );
 	}
@@ -45,7 +45,7 @@ public class ScrollOfIdentify extends InventoryScroll {
 	@Override
 	public String desc() {
 		return
-			"Permanently reveals all of the secrets of a single item.";
+			"Rivela permanentemente i segreti di un oggetto.";
 	}
 	
 	@Override

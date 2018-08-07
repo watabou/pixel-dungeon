@@ -32,17 +32,19 @@ import com.watabou.pixeldungeon.ui.Archs;
 import com.watabou.pixeldungeon.ui.ExitButton;
 import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.ui.Window;
+import com.watabou.pixeldungeon.Badges;
 
 public class AboutScene extends PixelScene {
 
 	private static final String TXT = 
-		"Code & graphics: Watabou\n" +
-		"Music: Cube_Code\n\n" + 
-		"This game is inspired by Brian Walker's Brogue. " +
-		"Try it on Windows, Mac OS or Linux - it's awesome! ;)\n\n" +
-		"Please visit official website for additional info:";
+		"Codici & grafica: Watabou\n" +
+		"Musica: Cube_Code\n" + 
+		"Traduzione: Simone & Miriam\n\n" +
+		"Questo gioco e' ispirato a Brogue di Brian Walker. " +
+		"Prova l'originale di Watabou ;)\n\n" +
+		"Link Play Store:";
 	
-	private static final String LNK = "pixeldungeon.watabou.ru";
+	private static final String LNK = "play.google.com";
 	
 	@Override
 	public void create() {
@@ -68,7 +70,8 @@ public class AboutScene extends PixelScene {
 		TouchArea hotArea = new TouchArea( link ) {
 			@Override
 			protected void onClick( Touch touch ) {
-				Intent intent = new Intent( Intent.ACTION_VIEW, Uri.parse( "http://" + LNK ) );
+				Badges.validateSupporter();
+				Intent intent = new Intent( Intent.ACTION_VIEW, Uri.parse( "http://" + LNK + "/store/apps/details?id=com.watabou.pixeldungeon") );
 				Game.instance.startActivity( intent );
 			}
 		};

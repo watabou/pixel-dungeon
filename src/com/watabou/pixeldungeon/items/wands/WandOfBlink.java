@@ -31,7 +31,7 @@ import com.watabou.utils.Callback;
 public class WandOfBlink extends Wand {
 
 	{
-		name = "Wand of Blink";
+		name = "Bacchetta dello Scatto";
 	}
 	
 	@Override
@@ -76,7 +76,7 @@ public class WandOfBlink extends Wand {
 	@Override
 	public String desc() {
 		return
-			"This wand will allow you to teleport in the chosen direction. " +
-			"Creatures and inanimate obstructions will block the teleportation.";
+			"Questa bacchetta ti permette di teletrasportarti in una direzione scelta da te. " +
+			"Creature e ostacoli inanimati bloccheranno l'effetto.";
 	}
 }

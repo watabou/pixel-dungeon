@@ -53,6 +53,6 @@ public class Light extends FlavourBuff {
 	
 	@Override
 	public String toString() {
-		return "Illuminated";
+		return "Luminoso";
 	}
 }

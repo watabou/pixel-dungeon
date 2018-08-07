@@ -22,7 +22,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class Dagger extends MeleeWeapon {
 	
 	{
-		name = "dagger";
+		name = "pugnale";
 		image = ItemSpriteSheet.DAGGER;
 	}
 	
@@ -32,6 +32,6 @@ public class Dagger extends MeleeWeapon {
 	
 	@Override
 	public String desc() {
-		return "A simple iron dagger with a well worn wooden handle.";
+		return "Un semplice pugnale di ferro con un manico ben rivestito in legno.";
 	}
 }

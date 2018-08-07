@@ -27,7 +27,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class Dreamweed extends Plant {
 
 	private static final String TXT_DESC = 
-		"Upon touching a Dreamweed it secretes a glittering cloud of confusing gas.";
+		"Appena toccata una Dreamweed rilascia una nuvola di gas confusionale.";
 	
 	{
 		image = 3;
@@ -52,7 +52,7 @@ public class Dreamweed extends Plant {
 		{
 			plantName = "Dreamweed";
 			
-			name = "seed of " + plantName;
+			name = "seme di " + plantName;
 			image = ItemSpriteSheet.SEED_DREAMWEED;
 			
 			plantClass = Dreamweed.class;

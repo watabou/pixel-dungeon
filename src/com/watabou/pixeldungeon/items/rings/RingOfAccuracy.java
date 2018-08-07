@@ -20,7 +20,7 @@ package com.watabou.pixeldungeon.items.rings;
 public class RingOfAccuracy extends Ring {
 
 	{
-		name = "Ring of Accuracy";
+		name = "Anello della Precisione";
 	}
 	
 	@Override
@@ -31,7 +31,7 @@ public class RingOfAccuracy extends Ring {
 	@Override
 	public String desc() {
 		return isKnown() ?
-			"This ring increases your chance to hit the enemy." :
+			"Quest'anello aumenta le tue probabilita' di colpire il nemico." :
 			super.desc();
 	}
 	

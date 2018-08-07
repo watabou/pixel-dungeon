@@ -31,7 +31,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 public class ScrollOfTerror extends Scroll {
 
 	{
-		name = "Scroll of Terror";
+		name = "Pergamena del Terrore";
 	}
 	
 	@Override
@@ -54,13 +54,13 @@ public class ScrollOfTerror extends Scroll {
 		
 		switch (count) {
 		case 0:
-			GLog.i( "The scroll emits a brilliant flash of red light" );
+			GLog.i( "La pergamena emette un flash rosso brillante." );
 			break;
 		case 1:
-			GLog.i( "The scroll emits a brilliant flash of red light and the " + affected.name + " flees!" );
+			GLog.i( "La pergamena emette un flash rosso brillante e " + affected.name + " scappa via!" );
 			break;
 		default:
-			GLog.i( "The scroll emits a brilliant flash of red light and the monsters flee!" );
+			GLog.i( "La pergamena emette un flash rosso brillante e tutti i mostri si danno alla fuga!" );
 		}
 		setKnown();
 		
@@ -70,8 +70,8 @@ public class ScrollOfTerror extends Scroll {
 	@Override
 	public String desc() {
 		return
-			"A flash of red light will overwhelm all creatures in your field of view with terror, " +
-			"and they will turn and flee. Attacking a fleeing enemy will dispel the effect.";
+			"Un flash rosso fara' sobbalzare di paura  tutte le creature nel tuo campo visivo, " +
+			"e scapperanno via. Attaccare un nemico in fuga fara' scomparire l'effetto.";
 	}
 	
 	@Override

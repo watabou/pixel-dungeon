@@ -37,13 +37,13 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class RogueArmor extends ClassArmor {
 	
-	private static final String TXT_FOV 		= "You can only jump to an empty location in your field of view";
-	private static final String TXT_NOT_ROGUE	= "Only rogues can use this armor!";
+	private static final String TXT_FOV 		= "Puoi saltare in una qualsiasi cella libera nel tuo campo visivo";
+	private static final String TXT_NOT_ROGUE	= "Solo i rogue possono usarla!";
 	
-	private static final String AC_SPECIAL = "SMOKE BOMB"; 
+	private static final String AC_SPECIAL = "FUMOGENO"; 
 	
 	{
-		name = "rogue garb";
+		name = "veste da furfante";
 		image = ItemSpriteSheet.ARMOR_ROGUE;
 	}
 	
@@ -70,8 +70,8 @@ public class RogueArmor extends ClassArmor {
 	@Override
 	public String desc() {
 		return 
-			"Wearing this dark garb, a rogue can perform a trick, that is called \"smoke bomb\" " +
-			"(though no real explosives are used): he blinds enemies who could see him and jumps aside.";
+			"Indossando questo abito scuro, un furfante puo'scomparire, con dei \"fumogeni\" " +
+			"(in verita' non vengono utilizzati veri esplosivi): acceca i suoi nemici che lo possono vedere e salta via.";
 	}
 	
 	protected static CellSelector.Listener teleporter = new  CellSelector.Listener() {
@@ -110,7 +110,7 @@ public class RogueArmor extends ClassArmor {
 		
 		@Override
 		public String prompt() {
-			return "Choose a location to jump to";
+			return "Seleziona una direzione dove saltare";
 		}
 	};
 }

@@ -38,7 +38,7 @@ import com.watabou.utils.Random;
 public class WandOfFlock extends Wand {
 
 	{
-		name = "Wand of Flock";
+		name = "Bacchetta del Gregge";
 	}
 	
 	@Override
@@ -101,7 +101,7 @@ public class WandOfFlock extends Wand {
 	@Override
 	public String desc() {
 		return 
-			"A flick of this wand summons a flock of magic sheep, creating temporary impenetrable obstacle.";
+			"Un colpo di questa bacchetta invoca un gregge di pecore magiche, creando temporaneamente un ostacolo impenetrabile.";
 	}
 	
 	public static class Sheep extends NPC {
@@ -109,7 +109,7 @@ public class WandOfFlock extends Wand {
 		private static final String[] QUOTES = {"Baa!", "Baa?", "Baa.", "Baa..."};
 		
 		{
-			name = "sheep";
+			name = "pecora";
 			spriteClass = SheepSprite.class;
 		}
 		
@@ -139,8 +139,8 @@ public class WandOfFlock extends Wand {
 		@Override
 		public String description() {
 			return 
-				"This is a magic sheep. What's so magical about it? You can't kill it. " +
-				"It will stand there until it magcially fades away, all the while chewing cud with a blank stare.";
+				"Questa e' una pecora magica. Che c'e' di tanto magico? Non puoi ucciderla. " +
+				"Rimarra' li' finche' non scomparira' magicamente, masticando erba tutto il tempo con uno sguardo perso.";
 		}
 
 		@Override

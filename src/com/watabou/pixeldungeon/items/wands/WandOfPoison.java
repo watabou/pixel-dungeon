@@ -30,7 +30,7 @@ import com.watabou.utils.Callback;
 public class WandOfPoison extends Wand {
 
 	{
-		name = "Wand of Poison";
+		name = "Bacchetta del Veleno";
 	}
 	
 	@Override
@@ -42,7 +42,7 @@ public class WandOfPoison extends Wand {
 			
 		} else {
 			
-			GLog.i( "nothing happened" );
+			GLog.i( "non e' successo nulla" );
 			
 		}
 	}
@@ -55,9 +55,8 @@ public class WandOfPoison extends Wand {
 	@Override
 	public String desc() {
 		return
-			"The vile blast of this twisted bit of wood will imbue its target " +
-			"with a deadly venom. A creature that is poisoned will suffer periodic " +
-			"damage until the effect ends. The duration of the effect increases " +
-			"with the level of the staff.";
+			"Il raggio di questo piccolo pezzo di legno pervade il berasaglio " +
+			"con un veleno mortale. Una creaturas avvelenata soffrira' periodicamente finche' non finisce l'effetto." +
+			"La durata dell'effetto aumenta con il livello del bastone.";
 	}
 }

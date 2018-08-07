@@ -43,12 +43,12 @@ public class Ring extends EquipableItem {
 	private static final float TIME_TO_EQUIP = 1f;
 	
 	private static final String TXT_IDENTIFY = 
-		"you are now familiar enough with your %s to identify it. It is %s.";
+		"ha familiarizzato abbastanza con %s da identificarlo. E' un %s.";
 	
-	private static final String TXT_UNEQUIP_TITLE = "Unequip one ring";
+	private static final String TXT_UNEQUIP_TITLE = "Togli un anello";
 	private static final String TXT_UNEQUIP_MESSAGE = 
-		"You can only wear two rings at a time. " +
-		"Unequip one of your equipped rings.";
+		"Puoi indossare solo due anelli alla volta. " +
+		"Togli uno degli anelli che indossi.";
 	
 	protected Buff buff;
 	
@@ -67,7 +67,7 @@ public class Ring extends EquipableItem {
 		RingOfThorns.class
 	};
 	private static final String[] gems = 
-		{"diamond", "opal", "garnet", "ruby", "amethyst", "topaz", "onyx", "tourmaline", "emerald", "sapphire", "quartz", "agate"};
+		{"diamante", "opale", "granato", "rubino", "ametista", "topazio", "onice", "tormalina", "smeraldo", "zaffiro", "quarzo", "agata"};
 	private static final Integer[] images = {
 		ItemSpriteSheet.RING_DIAMOND, 
 		ItemSpriteSheet.RING_OPAL, 
@@ -163,7 +163,7 @@ public class Ring extends EquipableItem {
 			cursedKnown = true;
 			if (cursed) {
 				equipCursed( hero );
-				GLog.n( "your " + this + " tightens around your finger painfully" );
+				GLog.n( "il tuo " + this + " si stringe spaventosamente intorno al tuo dito" );
 			}
 			
 			hero.spendAndNext( TIME_TO_EQUIP );
@@ -257,32 +257,32 @@ public class Ring extends EquipableItem {
 	public String toString() {
 		return 
 			levelKnown && isBroken() ? 
-				"broken " + super.toString() : 
+				super.toString() + " rotto" : 
 				super.toString();
 	}
 	
 	@Override
 	public String name() {
-		return isKnown() ? name : gem + " ring";
+		return isKnown() ? name : "anello con " + gem;
 	}
 	
 	@Override
 	public String desc() {
 		return 
-			"This metal band is adorned with a large " + gem + " gem " +
-			"that glitters in the darkness. Who knows what effect it has when worn?";
+			"Quest'anello di metallo e' adornato con una grande gemma di " + gem +
+			" che brilla al buio. Chissa' che effetti avra' se indossato?";
 	}
 	
 	@Override
 	public String info() {
 		if (isEquipped( Dungeon.hero )) {
 			
-			return desc() + "\n\n" + "The " + name() + " is on your finger" + 
-				(cursed ? ", and because it is cursed, you are powerless to remove it." : "." );
+			return desc() + "\n\n" + "Indossi un " + name() + 
+				(cursed ? ", e poiche' e' maledetto, non puoi rimuoverlo." : "." );
 			
 		} else if (cursed && cursedKnown) {
 			
-			return desc() + "\n\nYou can feel a malevolent magic lurking within the " + name() + ".";
+			return desc() + "\n\nPuoi percepire una parvenza di magia oscura scorrere nell'" + name() + ".";
 			
 		} else {
 			
@@ -345,7 +345,7 @@ public class Ring extends EquipableItem {
 	
 	public class RingBuff extends Buff {
 		
-		private static final String TXT_KNOWN = "This is a %s"; 
+		private static final String TXT_KNOWN = "E' un %s"; 
 		
 		public int level;
 		public RingBuff() {

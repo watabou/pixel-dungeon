@@ -28,13 +28,13 @@ import com.watabou.pixeldungeon.utils.GLog;
 public class ScrollOfTeleportation extends Scroll {
 
 	public static final String TXT_TELEPORTED = 
-		"In a blink of an eye you were teleported to another location of the level.";
+		"In un batter d'occhio sei stato teletrasportato in un altro luogo del livello.";
 	
 	public static final String TXT_NO_TELEPORT = 
-		"Strong magic aura of this place prevents you from teleporting!";
+		"La forza aura magica di questo posto ti impedisce di teletrasportarti";
 	
 	{
-		name = "Scroll of Teleportation";
+		name = "Pergamena del Teletrasporto";
 	}
 	
 	@Override
@@ -78,10 +78,10 @@ public class ScrollOfTeleportation extends Scroll {
 	@Override
 	public String desc() {
 		return
-			"The spell on this parchment instantly transports the reader " +
-			"to a random location on the dungeon level. It can be used " +
-			"to escape a dangerous situation, but the unlucky reader might " +
-			"find himself in an even more dangerous place.";
+			"L'incantesimo di questa pergamena teletrasportera' immediatamente il lettore " +
+			"in un luogo casuale del livello attuale. Puo' essere usata " +
+			"per scappare da situazioni pericolose, ma sfortunatamente ci si potrebbe trovare in " +
+			"situazioni peggiori.";
 	}
 	
 	@Override

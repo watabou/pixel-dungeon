@@ -31,7 +31,7 @@ public class Dewdrop extends Item {
 	private static final String TXT_VALUE	= "%+dHP";
 	
 	{
-		name = "dewdrop";
+		name = "goccia di rugiada";
 		image = ItemSpriteSheet.DEWDROP;
 		
 		stackable = true;
@@ -70,6 +70,6 @@ public class Dewdrop extends Item {
 	
 	@Override
 	public String info() {
-		return "A crystal clear dewdrop.";
+		return "Una goccia di rugiada cristallizzata.";
 	}
 }

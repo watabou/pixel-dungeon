@@ -34,7 +34,7 @@ public class ScrollOfMirrorImage extends Scroll {
 	private static final int NIMAGES	= 3;
 	
 	{
-		name = "Scroll of Mirror Image";
+		name = "Pergamena della Scomposizione";
 	}
 	
 	@Override
@@ -75,6 +75,6 @@ public class ScrollOfMirrorImage extends Scroll {
 	@Override
 	public String desc() {
 		return 
-			"The incantation on this scroll will create illusionary twins of the reader, which will chase his enemies.";
+			"L'incantesimo di questa pergamena creera' delle illusioni con le fattezze del lettore, che confonderanno il nemico.";
 	}
 }

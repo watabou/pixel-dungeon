@@ -26,10 +26,10 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public abstract class EquipableItem extends Item {
 
-	private static final String TXT_UNEQUIP_CURSED	= "You can't remove cursed %s!";
+	private static final String TXT_UNEQUIP_CURSED	= "Non puoi rimuovere %s, perche' ha una maledizione!";
 	
-	public static final String AC_EQUIP		= "EQUIP";
-	public static final String AC_UNEQUIP	= "UNEQUIP";
+	public static final String AC_EQUIP		= "USA";
+	public static final String AC_UNEQUIP	= "TOGLI";
 	
 	@Override
 	public void execute( Hero hero, String action ) {

@@ -30,12 +30,12 @@ import com.watabou.pixeldungeon.utils.GLog;
 public class ScrollOfRemoveCurse extends Scroll {
 
 	private static final String TXT_PROCCED	= 
-		"Your pack glows with a cleansing light, and a malevolent energy disperses.";
+		"Il tuo zaino brilla di una luce ripulitrice, e dell'energia malvagia scompare.";
 	private static final String TXT_NOT_PROCCED	= 
-		"Your pack glows with a cleansing light, but nothing happens.";
+		"Il tuo zaino brilla di una luce ripulitrice, ma non succede nulla.";
 	
 	{
-		name = "Scroll of Remove Curse";
+		name = "Pergamena dell'Esorcismo";
 	}
 	
 	@Override
@@ -68,9 +68,9 @@ public class ScrollOfRemoveCurse extends Scroll {
 	@Override
 	public String desc() {
 		return
-			"The incantation on this scroll will instantly strip from " +
-			"the reader's weapon, armor, rings and carried items any evil " +
-			"enchantments that might prevent the wearer from removing them.";
+			"L'incantesimo di questa pergamena togliera' immediatamente " +
+			"da armi, anelli, armature e ogni altro oggetto del lettore ogni maligna maledizione " +
+			"che poteva impedire al propietario di sbarazzarsene.";
 	}
 	
 	public static boolean uncurse( Hero hero, Item... items ) {

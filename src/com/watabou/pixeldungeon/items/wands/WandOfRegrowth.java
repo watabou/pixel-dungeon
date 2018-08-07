@@ -33,7 +33,7 @@ import com.watabou.utils.Callback;
 public class WandOfRegrowth extends Wand {
 
 	{
-		name = "Wand of Regrowth";
+		name = "Bacchetta della Ricrescita";
 	}
 	
 	@Override
@@ -66,7 +66,7 @@ public class WandOfRegrowth extends Wand {
 			
 		} else {
 			
-			GLog.i( "nothing happened" );
+			GLog.i( "non e' successo nulla" );
 			
 		}
 	}
@@ -79,6 +79,6 @@ public class WandOfRegrowth extends Wand {
 	@Override
 	public String desc() {
 		return
-			"\"When life ceases new life always begins to grow... The eternal cycle always remains!\"";
+			"\"Quando la vita cessa, nuove vite iniziano... Il ciclo eterno non cessa mai!\"";
 	}
 }

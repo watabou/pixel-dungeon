@@ -34,7 +34,7 @@ import com.watabou.utils.Bundle;
 
 public class QuickSlot extends Button implements WndBag.Listener {
 
-	private static final String TXT_SELECT_ITEM = "Select an item for the quickslot";
+	private static final String TXT_SELECT_ITEM = "Seleziona un oggetto per lo slot";
 	
 	private static QuickSlot primary;
 	private static QuickSlot secondary;

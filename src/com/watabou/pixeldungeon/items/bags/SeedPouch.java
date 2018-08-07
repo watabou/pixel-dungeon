@@ -24,7 +24,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class SeedPouch extends Bag {
 
 	{
-		name = "seed pouch";
+		name = "portasemi";
 		image = ItemSpriteSheet.POUCH;
 		
 		size = 8;
@@ -43,6 +43,6 @@ public class SeedPouch extends Bag {
 	@Override
 	public String info() {
 		return
-			"This small velvet pouch allows you to store any number of seeds in it. Very convenient.";
+			"Questo portasemi bluastro ti permette di conservare ogni numero di semi. Molto conveniente.";
 	}
 }

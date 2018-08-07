@@ -62,14 +62,14 @@ import com.watabou.utils.Random;
 
 public abstract class Char extends Actor {
 
-	protected static final String TXT_HIT		= "%s hit %s";
-	protected static final String TXT_KILL		= "%s killed you...";
-	protected static final String TXT_DEFEAT	= "%s defeated %s";
+	protected static final String TXT_HIT		= "%s ha colpito %s";
+	protected static final String TXT_KILL		= "%s ti ha ucciso...";
+	protected static final String TXT_DEFEAT	= "%s ha sconfitto %s";
 	
-	private static final String TXT_YOU_MISSED	= "%s %s your attack";
-	private static final String TXT_SMB_MISSED	= "%s %s %s's attack";
+	private static final String TXT_YOU_MISSED	= "%s ha %s il tuo attacco";
+	private static final String TXT_SMB_MISSED	= "%s ha %s l'attacco di %s";
 	
-	private static final String TXT_OUT_OF_PARALYSIS	= "The pain snapped %s out of paralysis";
+	private static final String TXT_OUT_OF_PARALYSIS	= "il dolore ha fatto uscire %s dalla paralisi";
 	
 	public int pos = 0;
 	
@@ -225,7 +225,7 @@ public abstract class Char extends Actor {
 	}
 	
 	public String defenseVerb() {
-		return "dodged";
+		return "schivato";
 	}
 	
 	public int dr() {
@@ -357,45 +357,45 @@ public abstract class Char extends Actor {
 			if (buff instanceof Poison) {
 				
 				CellEmitter.center( pos ).burst( PoisonParticle.SPLASH, 5 );
-				sprite.showStatus( CharSprite.NEGATIVE, "poisoned" );
+				sprite.showStatus( CharSprite.NEGATIVE, "avvelenato" );
 				
 			} else if (buff instanceof Amok) {
 				
-				sprite.showStatus( CharSprite.NEGATIVE, "amok" );
+				sprite.showStatus( CharSprite.NEGATIVE, "folle" );
 
 			} else if (buff instanceof Slow) {
 
-				sprite.showStatus( CharSprite.NEGATIVE, "slowed" );
+				sprite.showStatus( CharSprite.NEGATIVE, "rallentato" );
 				
 			} else if (buff instanceof MindVision) {
 				
-				sprite.showStatus( CharSprite.POSITIVE, "mind" );
-				sprite.showStatus( CharSprite.POSITIVE, "vision" );
+				sprite.showStatus( CharSprite.POSITIVE, "visione" );
+				sprite.showStatus( CharSprite.POSITIVE, "magica" );
 				
 			} else if (buff instanceof Paralysis) {
 
 				sprite.add( CharSprite.State.PARALYSED );
-				sprite.showStatus( CharSprite.NEGATIVE, "paralysed" );
+				sprite.showStatus( CharSprite.NEGATIVE, "paralizzato" );
 				
 			} else if (buff instanceof Terror) {
 				
-				sprite.showStatus( CharSprite.NEGATIVE, "frightened" );
+				sprite.showStatus( CharSprite.NEGATIVE, "terrorizzato" );
 				
 			} else if (buff instanceof Roots) {
 				
-				sprite.showStatus( CharSprite.NEGATIVE, "rooted" );
+				sprite.showStatus( CharSprite.NEGATIVE, "immobilizzato" );
 				
 			} else if (buff instanceof Cripple) {
 
-				sprite.showStatus( CharSprite.NEGATIVE, "crippled" );
+				sprite.showStatus( CharSprite.NEGATIVE, "storpio" );
 				
 			} else if (buff instanceof Bleeding) {
 
-				sprite.showStatus( CharSprite.NEGATIVE, "bleeding" );
+				sprite.showStatus( CharSprite.NEGATIVE, "sanguinamento" );
 				
 			} else if (buff instanceof Vertigo) {
 
-				sprite.showStatus( CharSprite.NEGATIVE, "dizzy" );
+				sprite.showStatus( CharSprite.NEGATIVE, "vertiginoso" );
 				
 			} else if (buff instanceof Sleep) {
 				sprite.idle();
@@ -409,7 +409,7 @@ public abstract class Char extends Actor {
 				sprite.add( CharSprite.State.FROZEN );
 			} else if (buff instanceof Invisibility) {
 				if (!(buff instanceof Shadows)) {
-					sprite.showStatus( CharSprite.POSITIVE, "invisible" );
+					sprite.showStatus( CharSprite.POSITIVE, "invisibile" );
 				}
 				sprite.add( CharSprite.State.INVISIBLE );
 			}

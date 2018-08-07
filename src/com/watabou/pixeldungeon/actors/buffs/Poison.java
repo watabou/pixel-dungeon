@@ -58,7 +58,7 @@ public class Poison extends Buff implements Hero.Doom {
 	
 	@Override
 	public String toString() {
-		return "Poisoned";
+		return "Avvelenato";
 	}
 	
 	@Override
@@ -91,6 +91,6 @@ public class Poison extends Buff implements Hero.Doom {
 		Badges.validateDeathFromPoison();
 		
 		Dungeon.fail( Utils.format( ResultDescriptions.POISON, Dungeon.depth ) );
-		GLog.n( "You died from poison..." );
+		GLog.n( "Sei morto avvelenato..." );
 	}
 }

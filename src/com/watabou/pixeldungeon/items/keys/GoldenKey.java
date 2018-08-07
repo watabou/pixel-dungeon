@@ -22,14 +22,14 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class GoldenKey extends Key {
 	
 	{
-		name = "golden key";
+		name = "chiave dorata";
 		image = ItemSpriteSheet.GOLDEN_KEY;
 	}
 	
 	@Override
 	public String info() {
 		return 
-			"The notches on this golden key are tiny and intricate. " +
-			"Maybe it can open some chest lock?";
+			"Le incisioni su questa chiave dorata sono minuscole e intricate. " +
+			"Forse aprira' qualche forziere chiuso?";
 	}
 }

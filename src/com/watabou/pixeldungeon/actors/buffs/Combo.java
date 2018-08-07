@@ -24,7 +24,7 @@ import com.watabou.pixeldungeon.utils.GLog;
 
 public class Combo extends Buff {
 	
-	private static String TXT_COMBO = "%d hit combo!";
+	private static String TXT_COMBO = "Combo da %d colpi!";
 	
 	public int count = 0;
 	

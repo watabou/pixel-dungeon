@@ -30,6 +30,6 @@ public class Cripple extends FlavourBuff {
 	
 	@Override
 	public String toString() {
-		return "Crippled";
+		return "Storpio";
 	}
 }

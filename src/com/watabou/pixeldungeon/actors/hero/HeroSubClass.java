@@ -23,32 +23,32 @@ public enum HeroSubClass {
 
 	NONE( null, null ),
 	
-	GLADIATOR( "gladiator", 
-		"A successful attack with a melee weapon allows the _Gladiator_ to start a combo, " +
-		"in which every next successful hit inflicts more damage." ),
+	GLADIATOR( "gladiatore", 
+		"Un attacco riuscito con un'arma da corpo a corpo permette al _Gladiatore_ di iniziare una combo, " +
+		"nella quale ogni attacco successivo infligge danno maggiore." ),
 	BERSERKER( "berserker", 
-		"When severely wounded, the _Berserker_ enters a state of wild fury " +
-		"significantly increasing his damage output." ),
+		"Quando gravemente ferito, il _Berserker_ entra in uno stato di furia selvaggia " +
+		"aumentando di molto l'attacco." ),
 	
-	WARLOCK( "warlock", 
-		"After killing an enemy the _Warlock_ consumes its soul. " +
-		"It heals his wounds and satisfies his hunger." ),
-	BATTLEMAGE( "battlemage", 
-		"When fighting with a wand in his hands, the _Battlemage_ inflicts additional damage depending " +
-		"on the current number of charges. Every successful hit restores 1 charge to this wand." ),
+	WARLOCK( "stregone", 
+		"Dopo aver ucciso un nemico lo _Stregone_ consuma la sua anima. " +
+		"Curando le sue ferite e soddisfacendo la sua fame." ),
+	BATTLEMAGE( "magoguerriero", 
+		"Quando combatte con una bacchetta in mano, il _Magguerriero_ infligge altri danni addizionali che dipedendono " +
+		"dal numero corrente di cariche. Ogni attacco mandato a segno restituisce 1 carica alla bacchetta." ),
 	
-	ASSASSIN( "assassin", 
-		"When performing a surprise attack, the _Assassin_ inflicts additional damage to his target." ),
+	ASSASSIN( "assassino", 
+		"Quando effettua un attacco a sorpresa,  l'_Assassino_ infligge danni addizionali al bersaglio." ),
 	FREERUNNER( "freerunner", 
-		"The _Freerunner_ can move almost twice faster, than most of the monsters. When he " +
-		"is running, the Freerunner is much harder to hit. For that he must be unencumbered and not starving." ),
+		"Il _Freerunner_ puo' muoversi almeno il doppio piu' veloce, che la maggiorparte dei mostri. Quando " +
+		"corre, il Freerunner e' piu' difficile da colpire. Per questo non dovrebbe essere appesantito e affamato." ),
 		
-	SNIPER( "sniper", 
-		"_Snipers_ are able to detect weak points in an enemy's armor, " +
-		"effectively ignoring it when using a missile weapon." ),
-	WARDEN( "warden", 
-		"Having a strong connection with forces of nature gives _Wardens_ an ability to gather dewdrops and " +
-		"seeds from plants. Also trampling a high grass grants them a temporary armor buff." );
+	SNIPER( "cecchino", 
+		"I _Cecchini_ riescono a trovare i punti deboli nelle armature nemiche, " +
+		"annullandole quando utilizzano armi da lancio." ),
+	WARDEN( "guardiano", 
+		"Avere un forte legame con la natura da' al _Guardiano_ un abilita' di conservare gocce di rugiada " +
+		"e semi dalle piante. Inoltre fermarsi su dell'erba alta garantisce loro un bonus di armatura temporanea." );
 	
 	private String title;
 	private String desc;

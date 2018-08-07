@@ -31,7 +31,7 @@ import com.watabou.utils.Random;
 
 public class Potential extends Glyph {
 
-	private static final String TXT_POTENTIAL	= "%s of potential";
+	private static final String TXT_POTENTIAL	= "%s del voltaggio";
 	
 	private static ItemSprite.Glowing BLUE = new ItemSprite.Glowing( 0x66CCEE );
 	

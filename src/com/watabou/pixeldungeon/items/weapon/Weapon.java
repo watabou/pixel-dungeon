@@ -37,12 +37,12 @@ abstract public class Weapon extends KindOfWeapon {
 	private static final int HITS_TO_KNOW	= 20;
 	
 	private static final String TXT_IDENTIFY		= 
-		"You are now familiar enough with your %s to identify it. It is %s.";
+		"Ora hai abbastanza familiarita' con %s per identificarlo. E' %s.";
 	private static final String TXT_INCOMPATIBLE	= 
-		"Interaction of different types of magic has negated the enchantment on this weapon!";
+		"L'interazione di diversi tipi di magia ha negato incantamento di quest'arma!";
 	
 	private static final String TXT_TO_STRING	= "%s :%d";
-	private static final String TXT_BROKEN		= "broken %s :%d";
+	private static final String TXT_BROKEN		= "%s rotto :%d";
 	
 	public int		STR	= 10;
 	public float	ACU	= 1;

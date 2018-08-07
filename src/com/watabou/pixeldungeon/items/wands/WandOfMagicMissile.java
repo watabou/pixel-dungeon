@@ -38,19 +38,19 @@ import com.watabou.utils.Random;
 
 public class WandOfMagicMissile extends Wand {
 
-	public static final String AC_DISENCHANT	= "DISENCHANT";
+	public static final String AC_DISENCHANT	= "DISINCANTA";
 	
-	private static final String TXT_SELECT_WAND	= "Select a wand to upgrade";
+	private static final String TXT_SELECT_WAND	= "Seleziona una bacchetta da potenziare";
 	
 	private static final String TXT_DISENCHANTED = 
-		"you disenchanted the Wand of Magic Missile and used its essence to upgrade your %s";
+		"hai disincantato la Bacchetta del Dardo Incantato e usato la sua essenza per migliorare la tua %s";
 	
 	private static final float TIME_TO_DISENCHANT	= 2f;
 	
 	private boolean disenchantEquipped;
 	
 	{
-		name = "Wand of Magic Missile";
+		name = "Bacchetta del Dardo Incantato";
 		image = ItemSpriteSheet.WAND_MAGIC_MISSILE;
 	}
 	
@@ -76,7 +76,7 @@ public class WandOfMagicMissile extends Wand {
 			
 			if (ch == curUser && !ch.isAlive()) {
 				Dungeon.fail( Utils.format( ResultDescriptions.WAND, name, Dungeon.depth ) );
-				GLog.n( "You killed yourself with your own Wand of Magic Missile..." );
+				GLog.n( "Ti sei ucciso con la tua Bacchetta del Dardo Incantato..." );
 			}
 		}
 	}
@@ -120,7 +120,7 @@ public class WandOfMagicMissile extends Wand {
 	@Override
 	public String desc() {
 		return
-			"This wand launches missiles of pure magical energy, dealing moderate damage to a target creature.";
+			"Questa bacchetta lancia dardi di pura enrgia magica, che dispensano danni moderati ad una creatura bersaglio.";
 	}
 	
 	private final WndBag.Listener itemSelector = new WndBag.Listener() {

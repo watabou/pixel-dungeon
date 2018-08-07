@@ -23,14 +23,14 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class Pasty extends Food {
 
 	{
-		name = "pasty";
+		name = "pasticcio";
 		image = ItemSpriteSheet.PASTY;
 		energy = Hunger.STARVING;
 	}
 	
 	@Override
 	public String info() {
-		return "This is authentic Cornish pasty with traditional filling of beef and potato.";
+		return "Un autentico pasticcio della Cornovaglia con tradizionale ripieno di manzo e patate.";
 	}
 	
 	@Override

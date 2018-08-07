@@ -50,6 +50,6 @@ public class Levitation extends FlavourBuff {
 	
 	@Override
 	public String toString() {
-		return "Levitating";
+		return "Levitazione";
 	}
 }

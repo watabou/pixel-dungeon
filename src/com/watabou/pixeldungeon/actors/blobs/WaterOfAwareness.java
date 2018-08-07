@@ -39,9 +39,9 @@ import com.watabou.pixeldungeon.utils.GLog;
 public class WaterOfAwareness extends WellWater {
 
 	private static final String TXT_PROCCED =
-		"As you take a sip, you feel the knowledge pours into your mind. " +
-		"Now you know everything about your equipped items. Also you sense " +
-		"all items on the level and know all its secrets.";
+		"Non appena assaggi un sorso, senti la conoscenza affiorare alla tua mente. " +
+		"Ora sai tutto dei tuoi strumenti equipaggiati. E percepisci " +
+		"tutti gli oggetti del livello e conosci tutti i suoi segreti.";
 	
 	@Override
 	protected boolean affectHero( Hero hero ) {
@@ -102,7 +102,7 @@ public class WaterOfAwareness extends WellWater {
 	@Override
 	public String tileDesc() {
 		return 
-			"Power of knowledge radiates from the water of this well. " +
-			"Take a sip from it to reveal all secrets of equipped items.";
+			"Il potere della conoscenza scorre nell'acqua di questo pozzo. " +
+			"Assapora un sorso per rivelare tutti i segreti dei tuoi oggetti equipaggiati.";
 	}
 }

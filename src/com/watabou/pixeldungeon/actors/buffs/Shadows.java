@@ -90,7 +90,7 @@ public class Shadows extends Invisibility {
 	
 	@Override
 	public String toString() {
-		return "Shadowmelded";
+		return "Fuso con le ombre";
 	}
 	
 }

@@ -22,7 +22,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class Sword extends MeleeWeapon {
 	
 	{
-		name = "sword";
+		name = "spada";
 		image = ItemSpriteSheet.SWORD;
 	}
 	
@@ -32,6 +32,6 @@ public class Sword extends MeleeWeapon {
 	
 	@Override
 	public String desc() {
-		return "The razor-sharp length of steel blade shines reassuringly.";
+		return "La tagliente lunghezza della lama d'acciaio brilla rassicurantemente.";
 	}
 }

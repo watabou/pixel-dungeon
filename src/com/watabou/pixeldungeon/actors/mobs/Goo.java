@@ -46,7 +46,7 @@ public class Goo extends Mob {
 	private static final float PUMP_UP_DELAY	= 2f;
 	
 	{
-		name = Dungeon.depth == Statistics.deepestFloor ? "Goo" : "spawn of Goo";
+		name = Dungeon.depth == Statistics.deepestFloor ? "Goo" : "tana del Goo";
 		
 		HP = HT = 80;
 		EXP = 10;
@@ -165,7 +165,7 @@ public class Goo extends Mob {
 			
 			if (Dungeon.visible[pos]) {
 				sprite.showStatus( CharSprite.NEGATIVE, "!!!" );
-				GLog.n( "Goo is pumping itself up!" );
+				GLog.n( "Il Goo si sta pompando!" );
 			}
 				
 			return true;
@@ -215,8 +215,8 @@ public class Goo extends Mob {
 	@Override
 	public String description() {
 		return
-			"Little known about The Goo. It's quite possible that it is not even a creature, but rather a " +
-			"conglomerate of substances from the sewers that gained rudiments of free will.";
+			"Poche informazioni abbiamo sul Goo. E' alquanto probabile che non isa neanche una creatura, ma piuttosto " +
+			"un conglomerato di sostanze delle fogne che gli consentono di avere una volonta' propria.";
 	}
 	
 	private static final HashSet<Class<?>> RESISTANCES = new HashSet<Class<?>>();

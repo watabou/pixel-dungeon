@@ -27,10 +27,10 @@ import com.watabou.pixeldungeon.utils.Utils;
 
 public class ImpShopkeeper extends Shopkeeper {
 
-	private static final String TXT_GREETINGS = "Hello, friend!";
+	private static final String TXT_GREETINGS = "Hey, amico!";
 	
 	{
-		name = "ambitious imp";
+		name = "imp ambizioso";
 		spriteClass = ImpSprite.class;
 	}
 	
@@ -65,7 +65,7 @@ public class ImpShopkeeper extends Shopkeeper {
 	@Override
 	public String description() {
 		return 
-			"Imps are lesser demons. They are notable for neither their strength nor their magic talent. " +
-			"But they are quite smart and sociable, and many of imps prefer to live and do business among non-demons.";
+			"Gli imp sono demoni piu' piccoli. Non sono famosi per la loro forza o per le loro arti magiche, " +
+			"ma sono abbastanza svegli e chiacchieroni. Molti imp preferiscono non vivere insieme ad altri demoni.";
 	}
 }

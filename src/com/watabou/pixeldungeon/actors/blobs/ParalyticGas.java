@@ -47,6 +47,6 @@ public class ParalyticGas extends Blob {
 	
 	@Override
 	public String tileDesc() {
-		return "A cloud of paralytic gas is swirling here.";
+		return "Una nuvola di gas paralizzante fluttua nell'aria.";
 	}
 }

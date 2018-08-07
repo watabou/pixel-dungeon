@@ -33,7 +33,7 @@ public class Weakness extends FlavourBuff {
 	
 	@Override
 	public String toString() {
-		return "Weakened";
+		return "Indebolito";
 	}
 	
 	@Override

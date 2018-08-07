@@ -30,7 +30,7 @@ import com.watabou.utils.Bundle;
 
 public class Sungrass extends Plant {
 
-	private static final String TXT_DESC = "Sungrass is renowned for its sap's healing properties.";
+	private static final String TXT_DESC = "I Sungrass sono famosi per le loro miracolose doti curative.";
 	
 	{
 		image = 4;
@@ -59,7 +59,7 @@ public class Sungrass extends Plant {
 		{
 			plantName = "Sungrass";
 			
-			name = "seed of " + plantName;
+			name = "seme di " + plantName;
 			image = ItemSpriteSheet.SEED_SUNGRASS;
 			
 			plantClass = Sungrass.class;

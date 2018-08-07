@@ -28,6 +28,6 @@ public class Rage extends FlavourBuff {
 	
 	@Override
 	public String toString() {
-		return "Blinded with rage";
+		return "Accecato dalla rabbia";
 	}
 }

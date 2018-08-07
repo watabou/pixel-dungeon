@@ -23,7 +23,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class MailArmor extends Armor {
 
 	{
-		name = "mail armor";
+		name = "armatura a maglie";
 		image = ItemSpriteSheet.ARMOR_MAIL;
 	}
 	
@@ -34,6 +34,6 @@ public class MailArmor extends Armor {
 	@Override
 	public String desc() {
 		return 
-			"Interlocking metal links make for a tough but flexible suit of armor.";
+			"Armatura con maglie di metallo collegate per renderla piu' resistente e flessibile.";
 	}
 }

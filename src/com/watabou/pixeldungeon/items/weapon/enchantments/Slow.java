@@ -26,7 +26,7 @@ import com.watabou.utils.Random;
 
 public class Slow extends Weapon.Enchantment {
 
-	private static final String TXT_CHILLING = "chilling %s";
+	private static final String TXT_CHILLING = "%s agghiacciante";
 	
 	private static ItemSprite.Glowing BLUE = new ItemSprite.Glowing( 0x0044FF );
 	

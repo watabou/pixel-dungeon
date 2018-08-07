@@ -23,7 +23,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 public class LeatherArmor extends Armor {
 
 	{	
-		name = "leather armor";
+		name = "armatura di pelle";
 		image = ItemSpriteSheet.ARMOR_LEATHER;
 	}
 	
@@ -33,6 +33,6 @@ public class LeatherArmor extends Armor {
 	
 	@Override
 	public String desc() {
-		return "Armor made from tanned monster hide. Not as light as cloth armor but provides better protection.";
+		return "Armatura fatta con la pelle dei mostri. Non luminosa come quella di stoffa ma da' piu' protezione.";
 	}
 }
