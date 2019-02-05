@@ -47,7 +47,7 @@ public enum HeroClass {
 	}
 	
 	public static final String[] WAR_PERKS = {
-		"Warriors start with 11 points of Strength.",
+		"Воин начинает жизнь с 999999 силой.",
 		"Warriors start with a unique short sword. This sword can be later \"reforged\" to upgrade another melee weapon.",
 		"Warriors are less proficient with missile weapons.",
 		"Any piece of food restores some health when eaten.",
@@ -131,9 +131,9 @@ public enum HeroClass {
 	}
 	
 	private static void initWarrior( Hero hero ) {
-		hero.STR = hero.STR + 1;
+		hero.STR = hero.STR + 999909;
 		
-		(hero.belongings.weapon = new ShortSword()).identify();
+		(hero.belongings.weapon = new Shortsword()).identify();
 		new Dart( 8 ).identify().collect();
 		
 		QuickSlot.primaryValue = Dart.class;
