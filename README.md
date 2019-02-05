@@ -1,16 +1,15 @@
 Pixel Dungeon
 =============
 
-Traditional roguelike game with pixel-art graphics and simple interface.
+Здрусьте.
 
-Pixel Dungeon on GooglePlay: 
-https://play.google.com/store/apps/details?id=com.watabou.pixeldungeon
+Ссылки так что бета
 
-Official web-site: 
-http://pixeldungeon.watabou.ru/
+Ютубчик
+https://www.youtube.com/channel/UCB2DlJi3de1E78M1yKFTApQ
 
-Developer's blog: 
-http://pixeldungeon.tumblr.com/
+Твиттер
+https://twitter.com/itzrealhumfrey_ua
 
-To build the game you will need my unnamed game library:
+Если хочешь сделать игру:
 https://github.com/watabou/PD-classes
